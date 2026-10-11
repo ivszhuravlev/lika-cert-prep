@@ -3,7 +3,7 @@ from pathlib import Path
 
 from study.bank import find_module, load_modules, parse_number
 from study.cli import check
-from study.engine import Progress, grade_number, ordered, road_prompt
+from study.engine import Progress, grade_number, ordered, road_blocks, road_prompt
 from study.telegram_bot import russian
 from study.translate import Translator
 
@@ -45,6 +45,33 @@ class StudyTest(unittest.TestCase):
         for _ in range(3):
             progress.record(item.id, True)
         self.assertNotEqual(ordered(module.items, progress, ear_only=True)[0].id, item.id)
+
+    def test_module_quiz_is_not_one_card(self):
+        module = find_module(load_modules(ROOT), "m43")
+        self.assertIsNotNone(module)
+        self.assertGreaterEqual(len(module.items), 20)
+        progress = Progress(Path("/tmp/lika-m43-order.json"))
+        if progress.path.exists():
+            progress.path.unlink()
+        progress = Progress(progress.path)
+        queue = ordered(module.items, progress)
+        self.assertEqual(queue[0].id, module.items[0].id)
+        self.assertNotEqual(queue[0].id, queue[1].id)
+        self.assertGreater(len({item.id for item in queue}), 1)
+
+    def test_each_road_block_is_one_telegram_message(self):
+        progress = Progress(Path("/tmp/lika-road-fit.json"))
+        if progress.path.exists():
+            progress.path.unlink()
+        progress = Progress(progress.path)
+        for module in load_modules(ROOT):
+            if not module.items:
+                continue
+            blocks = road_blocks(module, progress)
+            for block in blocks:
+                self.assertLessEqual(len(block), 4000)
+                self.assertLessEqual(len(block), 4096)
+                self.assertTrue(block.startswith("Скопируй это сообщение целиком"))
 
 
 class Echo:

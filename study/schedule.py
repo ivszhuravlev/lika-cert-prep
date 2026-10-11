@@ -85,7 +85,6 @@ def order_items(
 
     misses.sort(key=wrong_then_id)
     due.sort(key=due_then_id)
-    fresh.sort(key=lambda item: item.id)
     ahead.sort(key=due_then_id)
     mastered.sort(key=due_then_id)
     return misses + due + fresh + ahead + mastered

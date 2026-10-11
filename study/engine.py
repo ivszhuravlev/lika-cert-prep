@@ -160,8 +160,8 @@ def road_messages(module: Module, progress: Progress, per_block: int = 8) -> lis
     ]
 
 
-def road_blocks(module: Module, progress: Progress, *, limit: int = 3800) -> list[str]:
-    """One paste per block. Each string fits in a single Telegram message."""
+def road_blocks(module: Module, progress: Progress, *, limit: int = 4000) -> list[str]:
+    """One paste per block. Each string is one Telegram message (limit 4096)."""
     items = [item for item in ordered(module.items, progress, ear_only=True) if rank(item, progress)[0] < 2]
     if len(items) < 4:
         items = ordered(module.items, progress, ear_only=True)

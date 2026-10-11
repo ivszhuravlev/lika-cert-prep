@@ -60,18 +60,30 @@ class Telegram:
             raise RuntimeError(body.get("description", method))
         return body["result"]
 
-    def send(self, chat_id: int, text: str, *, keyboard: list | None = None) -> None:
+    def send(
+        self,
+        chat_id: int,
+        text: str,
+        *,
+        keyboard: list | None = None,
+        inline: list | None = None,
+    ) -> None:
         rows = None
         if keyboard:
             rows = keyboard if keyboard and isinstance(keyboard[0], list) else [[label] for label in keyboard]
-        for chunk in _chunks(text):
+        parts = _chunks(text)
+        for index, chunk in enumerate(parts):
             payload: dict = {"chat_id": chat_id, "text": chunk}
-            if rows:
-                payload["reply_markup"] = json.dumps({"keyboard": rows, "resize_keyboard": True})
+            if index == len(parts) - 1:
+                if inline:
+                    payload["reply_markup"] = json.dumps({"inline_keyboard": inline})
+                elif rows:
+                    payload["reply_markup"] = json.dumps({"keyboard": rows, "resize_keyboard": True})
             self.call("sendMessage", payload)
 
 
-def _chunks(text: str, size: int = 3500) -> list[str]:
+def _chunks(text: str, size: int = 4096) -> list[str]:
+    """Split only past Telegram's hard limit. A road block must stay under it."""
     if len(text) <= size:
         return [text or "Пусто."]
     parts = []
@@ -86,8 +98,14 @@ class Session:
     def __init__(self, path: Path):
         self.path = path
         self.chats: dict[str, dict] = {}
+        self.offset = 0
         if path.exists():
-            self.chats = json.loads(path.read_text(encoding="utf-8"))
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(data, dict) and "chats" in data:
+                self.chats = data["chats"]
+                self.offset = int(data.get("offset") or 0)
+            elif isinstance(data, dict):
+                self.chats = data
 
     def get(self, chat_id: int) -> dict:
         return self.chats.setdefault(
@@ -97,7 +115,10 @@ class Session:
 
     def save(self) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.path.write_text(json.dumps(self.chats, ensure_ascii=False, indent=2), encoding="utf-8")
+        self.path.write_text(
+            json.dumps({"offset": self.offset, "chats": self.chats}, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
 
 
 def module_list() -> str:
@@ -212,20 +233,27 @@ def ask_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> Non
             tg.send(chat_id, place(state, module, "в дорогу") + "\n\nБлоки кончились.", keyboard=keys(state))
             state["mode"] = ""
             return
-        tg.send(chat_id, blocks[index])
+        block = blocks[index]
+        if len(block) > 4096:
+            tg.send(chat_id, "Блок не влез в одно сообщение. Его не режу. Напиши ещё раз «В дорогу».")
+            print(f"road {module.code} block {index + 1} OVER {len(block)}", flush=True)
+            return
+        tg.send(chat_id, block)
         state["road_i"] = index + 1
+        print(f"road {module.code} block {index + 1}/{len(blocks)} chars={len(block)} messages=1", flush=True)
         if index + 1 < len(blocks):
             tg.send(
                 chat_id,
-                place(state, module, f"блок {index + 1} из {len(blocks)} уже выше")
-                + "\n\nСкопируй верхнее сообщение целиком. Это короткое не копируй.\nСледующий блок — кнопка «Следующий блок».",
-                keyboard=keys(state, ["Следующий блок"]),
+                f"Блок {index + 1} из {len(blocks)} — это сообщение выше.\n"
+                "Скопируй его целиком в ChatGPT.\n"
+                "Следующий блок пришлю только по кнопке. Это короткое не копируй.",
+                inline=[[{"text": "Дальше", "callback_data": "road_next"}]],
             )
         else:
             tg.send(
                 chat_id,
-                place(state, module, f"блок {index + 1} из {len(blocks)}, последний")
-                + "\n\nСкопируй верхнее сообщение. Дальше блоков нет.",
+                f"Блок {index + 1} из {len(blocks)}, последний.\n"
+                "Скопируй сообщение выше. Дальше блоков нет.",
                 keyboard=keys(state),
             )
         return
@@ -271,7 +299,7 @@ def ask_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> Non
     kind = "число, без вариантов" if numeric_mode else "четыре варианта, напиши букву"
     tg.send(
         chat_id,
-        place(state, module, f"{item.lesson} · {kind}")
+        place(state, module, f"вопрос {index + 1} из {len(pool)} · {item.lesson} · {kind}")
         + "\n\n"
         + question_text(item, progress, state, numeric=numeric_mode)
         + "\n\n"
@@ -317,13 +345,26 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
         if not state.get("module"):
             tg.send(chat_id, "Тема не выбрана. Напиши номер или название из списка, либо нажми «К темам».")
             return
-        state["mode"] = MODES[low]
-        state["cursor"] = 0
-        state["item_id"] = ""
-        state["road_i"] = 0
+        new_mode = MODES[low]
+        if state.get("mode") == new_mode and state.get("item_id") and new_mode != "road":
+            module = find_module(load_modules(), state["module"])
+            total = len(module.items) if module else 0
+            tg.send(
+                chat_id,
+                f"Этот вопрос уже на экране. В модуле {total} вопросов, не один. Напиши ответ — пришлю следующий.",
+            )
+            return
+        if state.get("mode") != new_mode:
+            state["cursor"] = 0
+            state["item_id"] = ""
+            state["lesson"] = ""
+            state["road_i"] = 0
+        elif new_mode == "road":
+            state["road_i"] = 0
+        state["mode"] = new_mode
         ask_next(tg, chat_id, state, progress)
         return
-    if low == "следующий блок" and state.get("mode") == "road":
+    if low in {"следующий блок", "дальше"} and state.get("mode") == "road":
         ask_next(tg, chat_id, state, progress)
         return
     if low == "дальше" and state.get("mode") == "theory":
@@ -337,6 +378,9 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
         state["module"] = module.code
         state["mode"] = ""
         state["item_id"] = ""
+        state["lesson"] = ""
+        state["cursor"] = 0
+        state["road_i"] = 0
         tg.send(chat_id, f"Тема: {module.title}.\nТеперь режим: Теория, Задачи, Квиз, Вместе или В дорогу.", keyboard=keys(state))
         return
     item_id = state.get("item_id") or ""
@@ -365,6 +409,10 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
     if found:
         state["module"] = found.code
         state["mode"] = ""
+        state["item_id"] = ""
+        state["lesson"] = ""
+        state["cursor"] = 0
+        state["road_i"] = 0
         tg.send(chat_id, f"Тема: {found.title}.\nТеперь режим: Теория, Задачи, Квиз, Вместе или В дорогу.", keyboard=keys(state))
         return
     tg.send(chat_id, "Не разобрала. /start покажет модули.")
@@ -378,7 +426,7 @@ def main() -> None:
     print(f"listening as @{me.get('username')}", flush=True)
     progress = Progress(default_progress_path())
     session = Session(repo_root() / "progress" / "telegram_state.json")
-    offset = 0
+    offset = session.offset
     while True:
         try:
             updates = tg.call("getUpdates", {"timeout": 25, "offset": offset})
@@ -388,12 +436,31 @@ def main() -> None:
             continue
         for update in updates:
             offset = int(update["update_id"]) + 1
+            session.offset = offset
+            callback = update.get("callback_query") or {}
+            if callback:
+                message = callback.get("message") or {}
+                chat = message.get("chat") or {}
+                chat_id = int(chat["id"]) if chat else 0
+                try:
+                    tg.call("answerCallbackQuery", {"callback_query_id": callback["id"]})
+                    if chat_id and callback.get("data") == "road_next":
+                        state = session.get(chat_id)
+                        if state.get("mode") == "road":
+                            ask_next(tg, chat_id, state, progress)
+                        else:
+                            tg.send(chat_id, "Сначала открой «В дорогу» в выбранной теме.")
+                except Exception as exc:
+                    print(f"callback error: {exc}", flush=True)
+                session.save()
+                continue
             message = update.get("message") or {}
             chat = message.get("chat") or {}
             text = message.get("text")
             if not chat or not text:
                 continue
             chat_id = int(chat["id"])
+            print(f"in {chat_id} {text[:80]!r}", flush=True)
             state = session.get(chat_id)
             try:
                 handle(tg, chat_id, text, state, progress)
