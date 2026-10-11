@@ -21,10 +21,9 @@ from study.engine import (
     grade_number,
     ordered,
     problems,
-    render_question,
-    render_reveal,
     road_prompt,
 )
+from study.translate import Translator
 
 LABELS = {"exam": "Что спрашивают", "work": "Формула и пример", "trap": "Где срываются"}
 MODES = {
@@ -61,13 +60,14 @@ class Telegram:
             raise RuntimeError(body.get("description", method))
         return body["result"]
 
-    def send(self, chat_id: int, text: str, *, keyboard: list[str] | None = None) -> None:
+    def send(self, chat_id: int, text: str, *, keyboard: list | None = None) -> None:
+        rows = None
+        if keyboard:
+            rows = keyboard if keyboard and isinstance(keyboard[0], list) else [[label] for label in keyboard]
         for chunk in _chunks(text):
             payload: dict = {"chat_id": chat_id, "text": chunk}
-            if keyboard:
-                payload["reply_markup"] = json.dumps(
-                    {"keyboard": [[label] for label in keyboard], "resize_keyboard": True}
-                )
+            if rows:
+                payload["reply_markup"] = json.dumps({"keyboard": rows, "resize_keyboard": True})
             self.call("sendMessage", payload)
 
 
@@ -109,6 +109,68 @@ def module_list() -> str:
 
 
 KEYBOARD = ["Теория", "Задачи", "Квиз", "Вместе", "В дорогу"]
+_translator: Translator | None = None
+
+
+MODE_TITLE = {
+    "theory": "теория",
+    "problems": "задача",
+    "quiz": "квиз",
+    "mixed": "вместе",
+    "road": "в дорогу",
+}
+
+
+def keys(state: dict, extra: list[str] | None = None) -> list[list[str]]:
+    toggle = "English" if state.get("ru") else "По-русски"
+    rows = [
+        ["Теория", "Задачи"],
+        ["Квиз", "Вместе"],
+        ["В дорогу", toggle],
+        ["К темам"],
+    ]
+    if extra:
+        rows.insert(0, extra)
+    return rows
+
+
+def place(state: dict, module, what: str) -> str:
+    number = str(int(module.code[1:]))
+    mode = MODE_TITLE.get(state.get("mode") or "", "меню")
+    return f"Модуль {number} · {module.title}\nСейчас: {mode} · {what}"
+
+
+def russian(state: dict, text: str) -> str:
+    if not state.get("ru"):
+        return text
+    global _translator
+    if _translator is None:
+        _translator = Translator()
+    return _translator(text)
+
+
+def question_text(item, progress: Progress, state: dict, *, numeric: bool) -> str:
+    lines: list[str] = []
+    if progress.get(item.id).get("last") == "wrong":
+        lines.extend(["Снова: прошлая попытка мимо.", ""])
+    lines.extend([item.lesson, "", russian(state, item.stem)])
+    if not numeric:
+        lines.append("")
+        for letter in "ABCD":
+            lines.append(f"{letter}. {russian(state, item.choices[letter])}")
+    return "\n".join(lines)
+
+
+def reveal_text(grade, state: dict, *, numeric: bool) -> str:
+    if grade.ok:
+        head = "Верно."
+    elif numeric:
+        head = "Не сошлось."
+    else:
+        head = "Мимо."
+    letter, _, rest = grade.expected.partition(". ")
+    shown = f"{letter}. {russian(state, rest)}" if rest else grade.expected
+    return f"{head} В банке: {shown}\nРазбор: {russian(state, grade.why)}"
 
 
 def ask_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> None:
@@ -119,30 +181,35 @@ def ask_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> Non
     mode = state["mode"]
     if mode == "theory":
         if not module.chunks:
-            tg.send(chat_id, "Теории по этому модулю ещё нет.", keyboard=KEYBOARD)
+            tg.send(chat_id, "Теории по этому модулю ещё нет.", keyboard=keys(state))
             return
         index = int(state.get("cursor", 0))
         if index >= len(module.chunks):
-            tg.send(chat_id, "Урок кончился. Можно выбрать другой режим.", keyboard=KEYBOARD)
+            tg.send(chat_id, "Урок кончился. Можно выбрать другой режим.", keyboard=keys(state))
             state["mode"] = ""
             return
         chunk = module.chunks[index]
         state["cursor"] = index + 1
         tg.send(
             chat_id,
-            f"{chunk.lesson}\n{LABELS.get(chunk.kind, chunk.kind)}\n\n{chunk.text}\n\nДальше — «дальше».",
-            keyboard=KEYBOARD + ["дальше"],
+            f"{place(state, module, chunk.lesson + ' · ' + LABELS.get(chunk.kind, chunk.kind))}\n\n"
+            f"{russian(state, chunk.text)}\n\n"
+            "Дальше — кнопка «дальше». К списку модулей — «К темам».",
+            keyboard=keys(state, ["дальше"]),
         )
         return
     if mode == "road":
         prompt = road_prompt(module, progress)
         if not prompt:
-            tg.send(chat_id, "В этом модуле нет слуховых вопросов.", keyboard=KEYBOARD)
+            tg.send(chat_id, "В этом модуле нет слуховых вопросов.", keyboard=keys(state))
             return
         tg.send(
             chat_id,
-            "Скопируй это в новый голосовой чат. Задачи на лист туда не входят.\n\n" + prompt,
-            keyboard=KEYBOARD,
+            "Скопируй это в новый голосовой чат. Задачи на лист туда не входят.\n\n"
+            + place(state, module, "промпт для дороги")
+            + "\n\n"
+            + prompt,
+            keyboard=keys(state),
         )
         state["mode"] = ""
         return
@@ -161,7 +228,11 @@ def ask_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> Non
                 state["phase"] = "quiz"
                 state["left"] = 3
                 state["item_id"] = ""
-                tg.send(chat_id, f"{chunk.lesson}\n\n{chunk.text}", keyboard=KEYBOARD)
+                tg.send(
+                    chat_id,
+                    f"{place(state, module, chunk.lesson + ' · абзац теории')}\n\n{russian(state, chunk.text)}",
+                    keyboard=keys(state),
+                )
                 ask_next(tg, chat_id, state, progress)
                 return
         pool = ordered(module.items, progress)
@@ -172,15 +243,26 @@ def ask_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> Non
         pool = ordered(module.items, progress)
         numeric = False
     if not pool:
-        tg.send(chat_id, "В этом режиме вопросов нет.", keyboard=KEYBOARD)
+        tg.send(chat_id, "В этом режиме вопросов нет.", keyboard=keys(state))
         return
     index = int(state.get("cursor", 0)) % len(pool)
     item = pool[index]
     state["cursor"] = index + 1
     state["item_id"] = item.id
     state["lesson"] = item.lesson
-    hint = "Напиши число." if numeric else "Напиши букву A, B, C или D."
-    tg.send(chat_id, render_question(item, progress, numeric=numeric) + "\n\n" + hint, keyboard=KEYBOARD)
+    numeric_mode = mode == "problems"
+    hint = "Напиши число." if numeric_mode else "Напиши букву A, B, C или D."
+    kind = "число, без вариантов" if numeric_mode else "четыре варианта, напиши букву"
+    tg.send(
+        chat_id,
+        place(state, module, f"{item.lesson} · {kind}")
+        + "\n\n"
+        + question_text(item, progress, state, numeric=numeric_mode)
+        + "\n\n"
+        + hint
+        + "\nК списку модулей — «К темам».",
+        keyboard=keys(state),
+    )
     if mode == "mixed":
         state["left"] = int(state.get("left", 1)) - 1
         if state["left"] <= 0:
@@ -190,6 +272,26 @@ def ask_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> Non
 def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progress) -> None:
     raw = text.strip()
     low = raw.lower()
+    if low in {"к темам", "темы", "назад", "меню", "/themes"}:
+        state["module"] = ""
+        state["mode"] = ""
+        state["item_id"] = ""
+        state["phase"] = ""
+        tg.send(chat_id, "Список модулей.\n\n" + module_list())
+        return
+    if low in {"по-русски", "по русски"}:
+        state["ru"] = True
+        tg.send(
+            chat_id,
+            "Дальше теория, задачи, квиз и вместе идут по-русски. "
+            "Числа и термины экзамена не меняются. Буква ответа сверяется с банком.",
+            keyboard=keys(state),
+        )
+        return
+    if low == "english":
+        state["ru"] = False
+        tg.send(chat_id, "Дальше текст банка по-английски.", keyboard=keys(state))
+        return
     if low in {"/start", "/help", "старт"}:
         state["module"] = ""
         state["mode"] = ""
@@ -212,7 +314,7 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
         state["module"] = module.code
         state["mode"] = ""
         state["item_id"] = ""
-        tg.send(chat_id, f"{module.title}. Теория, задачи, квиз, вместе или в дорогу.", keyboard=KEYBOARD)
+        tg.send(chat_id, f"{module.title}. Теория, задачи, квиз, вместе или в дорогу.", keyboard=keys(state))
         return
     item_id = state.get("item_id") or ""
     if item_id and state.get("mode") in {"quiz", "problems", "mixed"}:
@@ -229,14 +331,18 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
             return
         progress.record(item.id, grade.ok)
         state["item_id"] = ""
-        tg.send(chat_id, render_reveal(grade, numeric=numeric))
+        tg.send(
+            chat_id,
+            place(state, module, item.lesson + " · разбор") + "\n\n" + reveal_text(grade, state, numeric=numeric),
+            keyboard=keys(state),
+        )
         ask_next(tg, chat_id, state, progress)
         return
     found = find_module(load_modules(), raw)
     if found:
         state["module"] = found.code
         state["mode"] = ""
-        tg.send(chat_id, f"{found.title}. Теория, задачи, квиз, вместе или в дорогу.", keyboard=KEYBOARD)
+        tg.send(chat_id, f"{found.title}. Теория, задачи, квиз, вместе или в дорогу.", keyboard=keys(state))
         return
     tg.send(chat_id, "Не разобрала. /start покажет модули.")
 
