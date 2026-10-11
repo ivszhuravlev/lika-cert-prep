@@ -498,6 +498,8 @@ t = 2.20 \text{ min}
 
 **Wrong turns.** Full field length as the opposite side. Radians reported as degrees. Sine and tangent swapped for a large angle, where they are not equal.
 
+**Traps.** Write opposite (half-field) and adjacent (SAD or SSD) on the triangle before you take the arctan. The full field length doubles the angle.
+
 **Sources.** Khan and Gibbons for the divergence triangle. The clinical use is the breast match in this module.
 
 ### Entrance dose and exit dose

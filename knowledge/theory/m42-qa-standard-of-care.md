@@ -167,7 +167,7 @@ at the same MU, same energy, same cone, at the calibration depth.
 
 **Given.** A physician has prescribed 2.0 Gy × 25 fractions. A colleague suggests the dosimetrist “just change it” to 1.8 Gy × 28 fractions so the total looks the same.
 
-**Arithmetic.** \(2.0 \times 25 = 50.0\) Gy. \(1.8 \times 28 = 50.4\) Gy. The physical totals differ by 0.4 Gy. Biologically they also differ because the fraction size changed (EQD2, module 38). With \(\alpha/\beta = 3\) Gy, EQD2 of the first course is 50 Gy only if you wrongly treat 2 Gy fractions as already EQD2, which they are: \(d_f = 2\), so EQD2 = 50 Gy. The second course is
+**Arithmetic.** \(2.0 \times 25 = 50.0\) Gy. \(1.8 \times 28 = 50.4\) Gy. The physical totals differ by 0.4 Gy. Biologically they also differ because the fraction size changed (EQD2, module 38). The first course is already 2 Gy per fraction, so its EQD2 is 50 Gy. The second course, with \(\alpha/\beta = 3\) Gy, is
 
 \[
 50.4 \times \frac{1.8+3}{2+3} = 50.4 \times \frac{4.8}{5} = 50.4 \times 0.96 = 48.4 \text{ Gy EQD2}
