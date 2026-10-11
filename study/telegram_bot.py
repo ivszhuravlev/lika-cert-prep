@@ -23,7 +23,7 @@ from study.engine import (
     problems,
     road_prompt,
 )
-from study.translate import Translator
+from study.translate import Translator, _same_english
 
 LABELS = {"exam": "Что спрашивают", "work": "Формула и пример", "trap": "Где срываются"}
 MODES = {
@@ -146,7 +146,10 @@ def russian(state: dict, text: str) -> str:
     global _translator
     if _translator is None:
         _translator = Translator()
-    return _translator(text)
+    out = _translator(text)
+    if _same_english(text, out):
+        return "Перевод не получился, оставляю английский.\n\n" + text
+    return out
 
 
 def question_text(item, progress: Progress, state: dict, *, numeric: bool) -> str:
