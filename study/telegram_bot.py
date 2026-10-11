@@ -258,7 +258,7 @@ def main() -> None:
             time.sleep(3)
             continue
         for update in updates:
-            offset = int(update["offset"]) + 1
+            offset = int(update["update_id"]) + 1
             message = update.get("message") or {}
             chat = message.get("chat") or {}
             text = message.get("text")
