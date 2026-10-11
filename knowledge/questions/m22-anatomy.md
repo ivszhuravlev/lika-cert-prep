@@ -1,211 +1,269 @@
-# Module 22 — Cross-sectional anatomy
+# Module 22 — Cross-sectional Anatomy
 
-Original practice items for CMD preparation. Not retired MDCB items and not a commercial quiz.
-
-Every stem describes the slice in words. The answer has to follow from that description.
+Original items. Each stem contains the landmark, so the structure can be named from the description. Radiologic orientation: on an axial image viewed from the feet, the patient’s right is on the image left, and anterior is at the top.
 
 ## Anatomy List
 
 ### Q1
-Stem: An axial slice is taken at the sternal angle, where the trachea has just divided into the main bronchi. Against the left anterolateral surface of the vertebral body is a round vessel larger than the azygos. The azygos vein is on the patient's right, beside the vertebral body, arching forward. What is the large vessel on the patient's left of the vertebral body?
-A. Superior vena cava
-B. Descending thoracic aorta
-C. Right pulmonary artery
-D. Internal mammary artery
-Answer: B
-Objective: III.4
-Why: Answer B. At the carina, about T4, the descending aorta has already passed off the arch and sits just to the patient's left of the vertebral body. The superior vena cava is on the patient's right, anterior to the right main bronchus, which is where the azygos empties. The right pulmonary artery crosses toward the right lung and is not the left paravertebral vessel. The internal mammary arteries are tiny paired vessels just behind the sternum, not against the spine.
-
-### Q2
-Stem: An axial slice through the heart shows four chambers. One chamber is the most posterior and sits directly in front of the esophagus. One chamber forms most of the anterior surface, just behind the sternum. Which chamber is the posterior one, and which is the anterior one?
-A. Posterior left ventricle, anterior right atrium
-B. Posterior left atrium, anterior right ventricle
-C. Posterior right atrium, anterior left atrium
-D. Posterior right ventricle, anterior left ventricle
-Answer: B
-Objective: III.4
-Why: Answer B. On an axial slice the left atrium is the most posterior chamber, immediately anterior to the esophagus, which is why left-atrial enlargement can press on the esophagus. The right ventricle lies immediately behind the sternum and forms most of the anterior surface. The left ventricle forms the left border and the apex. The right atrium is on the patient's right. Swapping left atrium and left ventricle is the usual error: the left ventricle is lateral and inferior, not the chamber against the esophagus.
-
-### Q3
-Stem: Three structures pass through the diaphragm. One passes at about T8, in the central tendon, to the patient's right of the midline. One passes at about T10, through the muscular diaphragm, just left of the midline and anterior to the aorta. One passes at about T12, behind the diaphragm, to the patient's left of the midline. Which structure is at T8, which is at T10, and which is at T12?
-A. T8 aorta, T10 inferior vena cava, T12 esophagus
-B. T8 inferior vena cava, T10 esophagus, T12 aorta
-C. T8 esophagus, T10 aorta, T12 inferior vena cava
-D. All three pass at T10, and the levels in the stem are surface landmarks only
-Answer: B
-Objective: III.4
-Why: Answer B. The inferior vena cava pierces the central tendon at about T8, on the patient's right. The esophagus passes through the muscular diaphragm at about T10, anterior to the aorta and slightly left. The aorta passes behind the diaphragm at about T12, on the patient's left, accompanied by the thoracic duct. A memory line that keeps the order is "vena cava at 8, esophagus at 10, aorta at 12." The right hemidiaphragm also sits higher than the left because of the liver, which is a separate fact from these three openings.
-
-### Q4
-Stem: A sagittal description of the spinal canal says the cord proper tapers to a conus at about L1, and the nerve roots continue as the cauda equina. A craniospinal field, however, is extended to about S2. Why is S2 the relevant inferior border for that field even though the cord ends near L1?
-A. The cord regenerates down to S2 during radiotherapy
-B. The thecal sac, which contains CSF around the cauda equina, typically ends near S2; craniospinal fields cover the sac, not only the cord
-C. S2 is the carina
-D. The conus is at S2 and the cauda equina is inside the skull
-Answer: B
-Objective: III.4
-Why: Answer B. The spinal cord, as solid neural tissue, ends at the conus near L1 to L2. Below that, the cauda equina is nerve roots inside the thecal sac. Medulloblastoma and other craniospinal indications seed through the cerebrospinal fluid, so the field follows the sac down to about S2 rather than stopping at the conus. Stopping at L1 would miss the lower sac. S2 is not the carina; the carina is at about T4.
-
-### Q5
-Stem: On an axial slice just below the inguinal ligament, from lateral to medial, the structures in the femoral triangle are a nerve, then a pulsatile vessel, then a compressible vessel, then a space, then nodes. Which vessel is immediately medial to the artery, and where are the nodes relative to that vessel?
-A. The femoral vein is immediately medial to the femoral artery, and the inguinal nodes are medial to the vein
-B. The femoral vein is lateral to the nerve, and the nodes are inside the artery
-C. The femoral artery is the most medial structure, with the nodes lateral to the nerve
-D. There is no vein in the femoral triangle; the medial vessel is the aorta
+Stem: An axial chest slice shows the airway changing from one round black lumen into two. The esophagus lies posterior, between the airway and the vertebral body. A round thick-walled vessel sits on the patient’s left of the spine. What is that vessel, and about what level is the slice?
+A. Descending aorta, at about the carina (T4–T5)
+B. IVC, because every round vessel beside the airway is the vena cava
+C. Right ventricle, described as the most posterior cardiac chamber
+D. Abdominal aorta at the L4 bifurcation
 Answer: A
 Objective: III.4
-Why: Answer A. The femoral triangle order from lateral to medial is nerve, artery, vein, empty space, lymph (NAVEL). The vessel just medial to the femoral artery is the femoral vein. The inguinal nodes lie medial to the vein, which is why a groin field for vulvar cancer is centered medial to the femoral vessels rather than on the nerve. The aorta is in the abdomen and does not enter the femoral triangle. Reversing medial and lateral puts the nodes on the wrong side of the field.
+Why: The trachea divides at the carina around T4–T5, behind the sternal angle, so one lumen becomes two. At that level the descending aorta is the round vessel on the patient’s left of the spine. The esophagus is posterior, usually slightly left, between the airway and the vertebral body. The IVC is the patient’s right-sided vessel. The right ventricle is the anterior cardiac chamber. The abdominal aorta bifurcates near L4, which is not this chest slice.
+
+### Q2
+Stem: On an axial slice through the cardiac chambers, one chamber lies against the esophagus and the descending aorta. It is the most posterior chamber, and the pulmonary veins enter it. Which chamber is it?
+A. Right ventricle
+B. Right atrium
+C. Left ventricle
+D. Left atrium
+Answer: D
+Objective: III.4
+Why: The most posterior chamber is the left atrium. The pulmonary veins enter it, and the esophagus and descending aorta lie behind it. The right ventricle is the most anterior chamber, immediately behind the sternum. The right atrium forms the patient’s right heart border and receives the vena cava. The left ventricle forms the patient’s left border and the apex and has the thick wall.
+
+### Q3
+Stem: An upper-abdominal axial slice shows a large homogeneous organ filling the patient’s right upper quadrant under the right hemidiaphragm, with a vessel embedded in its posterior portion. A smaller organ lies posterolateral in the patient’s left upper quadrant, against the ribs and the left hemidiaphragm, lateral and posterior to stomach air. Which organs are these?
+A. Liver on the patient’s right and spleen on the patient’s left
+B. Spleen on the patient’s right and liver on the patient’s left
+C. Right and left kidneys
+D. Prostate and rectum
+Answer: A
+Objective: III.4
+Why: The liver is the large organ in the patient’s right upper quadrant, and the intrahepatic IVC sits in the posterior liver. The spleen is the smaller organ posterolateral on the patient’s left, above and lateral to the left kidney, with stomach air medial and anterior to it. Kidneys are retroperitoneal, lower, against the psoas. Prostate and rectum are in the pelvis.
+
+### Q4
+Stem: Both kidneys lie retroperitoneal against the psoas, from about T12 to L3, with the hilum facing medially. The liver fills the space above the right kidney. Which height relationship is the usual one?
+A. The right kidney usually sits lower than the left
+B. The right kidney usually sits higher than the left
+C. The two kidneys sit at the same height because both touch the psoas
+D. The right kidney is inside the liver parenchyma and is therefore higher
+Answer: A
+Objective: III.4
+Why: The right kidney usually sits lower because the liver occupies the space above it. The left kidney sits closer to the spleen and the stomach. Adrenal glands cap the upper poles anteromedially. A para-aortic nodal volume at the renal hilum is medial to the kidneys, not inside them. The hilum faces medially, toward the great vessels.
+
+### Q5
+Stem: On an abdominal slice, a round thick-walled vessel lies just in front of the vertebral body on the patient’s left of midline and divides at about L4. An oval thinner-walled vessel lies on the patient’s right of midline and is more anterior at renal levels. Name those two vessels in that order.
+A. IVC, then aorta
+B. Aorta, then IVC
+C. Aorta, then aorta
+D. Portal vein inside the liver, then a hepatic vein
+Answer: B
+Objective: III.4
+Why: The abdominal aorta is the patient’s left of midline, round and thick-walled, and it bifurcates into the common iliac arteries at about L4. The IVC is the patient’s right of midline, oval and thinner, more anterior than the aorta at renal levels, and it is formed from the common iliac veins at about L5. Higher up it runs in a groove through the posterior liver. A vessel inside the liver is the IVC or a hepatic vein, not the left-sided round vessel against the spine.
+
+### Q6
+Stem: A male pelvic slice shows a midline gland around the urethra, inferior to the bladder and posterior to the pubic symphysis. A midline structure that may contain air or stool lies immediately behind that gland. Round bones sit lateral and slightly posterior, in the acetabula. Name the gland, the structure behind it, and the bones.
+A. Bladder, prostate, and sacral lymph nodes
+B. Prostate, rectum, and femoral heads
+C. Seminal vesicles, bladder, and pelvic nodes
+D. Rectum, prostate, and the pubic symphysis as the only bone
+Answer: B
+Objective: III.4
+Why: The prostate is midline, inferior to the bladder, anterior to the rectum, and posterior to the pubic symphysis. The rectum is the organ immediately behind it, wrapped by mesorectal fat. The femoral heads are the round bones lateral in the acetabulum. They are bone, not nodes. Seminal vesicles form the bow-tie on the slice just above the prostate, posterior to the bladder. The bladder, when urine-filled, is anterior and midline.
+
+### Q7
+Stem: At about C1, soft tissue wraps the posterior mandibular ramus, lateral and posterior to the ramus, in front of the mastoid and the ear. A different gland lies more anterior and inferior, under the body of the mandible and above the hyoid. Which description is the parotid?
+A. The gland under the body of the mandible
+B. The tissue at the ramus and the ear
+C. Both glands, because both are lateral in the neck
+D. The soft tissue inside the spinal canal at C1
+Answer: B
+Objective: III.4
+Why: The parotid is at about C1, lateral and posterior to the mandibular ramus, in front of the mastoid and the ear. The retromandibular vein is the imaging landmark used to discuss superficial versus deep lobe. The facial nerve runs through the gland and is not seen as a line on CT. The submandibular gland is under the mandibular body, above the hyoid, in nodal level IB. The spinal cord is inside the canal, not in the lateral face.
+
+### Q8
+Stem: On an axial slice through the supraclavicular fossa, a soft-tissue bundle lies between the anterior and middle scalene muscles, posterior to the clavicle, above the first rib and the lung apex, with the subclavian artery. What is that bundle?
+A. Spinal cord still inside the canal
+B. Level IA submental nodes
+C. Brachial plexus
+D. Prostate
+Answer: C
+Objective: III.4
+Why: Brachial plexus roots leave the foramina from C5 through T1, pass between the anterior and middle scalene muscles, cross above the first rib with the subclavian artery, and form cords around the axillary artery. On this slice that bundle is the plexus. It has already left the canal. Level IA is midline between the anterior digastric muscles, from the mandible to the hyoid. The prostate is in the pelvis.
+
+### Q9
+Stem: An axial image is displayed as viewed from the feet, with anterior at the top. A structure is on the image left. Which side of the patient is that?
+A. The patient’s right
+B. The patient’s left
+C. Inferior, because image left always means the feet
+D. The posterior midline
+Answer: A
+Objective: III.4
+Why: Viewed from the feet, the patient’s right is on the image left and anterior is at the top. Image left is the patient’s right. It is not a superior-inferior coordinate and it is not the posterior midline. Swapping the sides places the liver and the spleen on the wrong quadrants.
+
+### Q10
+Stem: In the anterior midline neck, the cartilage just below the thyroid cartilage is the only complete ring. On an axial slice its posterior lamina is broad, like a signet. Soft tissue at the airway slit beside the thyroid cartilage, which is open posteriorly, marks the true vocal cords. A contour labeled “cord” has been drawn at the hyoid. Which cartilage is the complete ring, and is the hyoid contour at cord level?
+A. Epiglottis; the hyoid contour is correct
+B. Thyroid cartilage; it is a complete ring
+C. Cricoid cartilage; a cord contour at the hyoid is too high
+D. Hyoid bone; it is the complete ring at the true cords
+Answer: C
+Objective: III.4
+Why: The cricoid is the only complete laryngeal ring, immediately below the thyroid cartilage, with a broad posterior lamina. The thyroid cartilage is the shield, open posteriorly, at the level of the true cords. The epiglottis is higher, a thin soft-tissue curve at the base of the tongue. False cords sit above the ventricles. A cord contour at the hyoid is too high. Lateral air pockets beside the larynx are the pyriform sinuses of the hypopharynx, not the glottis.
 
 ## Lymph Node Anatomy (Only if you have time)
 
 ### Q1
-Stem: Cervical lymph node levels are being contoured. Level II runs from the skull base down to the hyoid. Level III runs from the hyoid down to the bottom of the cricoid. Level IV runs from the cricoid to the clavicle. A node described as lying beside the internal jugular vein, inferior to the cricoid and superior to the clavicle, is in which level?
-A. Level II
-B. Level III
-C. Level IV
-D. Level Ia
-Answer: C
-Objective: III.4
-Why: Answer C. The hyoid and the cricoid are the axial landmarks that split the jugular chain. Above the hyoid is level II. Between hyoid and cricoid is level III. Below the cricoid, along the lower jugular vein to the clavicle, is level IV. Level Ia is the submental triangle, between the anterior bellies of the digastric muscles, under the chin, not a low jugular node. A node at the cricoid cartilage itself is the border between III and IV and should be assigned with the atlas the clinic uses, but a node clearly inferior to the cricoid is level IV.
-
-### Q2
-Stem: Level II is split by the spinal accessory nerve into IIA, anteromedial to the nerve, and IIB, posterolateral to it. A node sits posterior to the spinal accessory nerve and superior to the hyoid, behind the internal jugular vein. Which sublevel is it?
-A. Level Ib
-B. Level IIb
-C. Level VIa
-D. Level IIa only, because every node above the hyoid and beside the jugular vein is IIa
-Answer: B
-Objective: III.4
-Why: Answer B. Above the hyoid and along the upper jugular chain is level II. The spinal accessory nerve divides it: nodes posterior to that nerve are IIB, and nodes anterior or medial to it are IIA. Level Ib is the submandibular space, anterior to the posterior edge of the submandibular gland, not behind the accessory nerve. Level VI is the anterior midline compartment between the carotids, from the hyoid to the sternum. Calling every high jugular node IIA misses the IIB station that sits behind the nerve and is easy to under-contour.
-
-### Q3
-Stem: The anterior neck compartment between the carotid arteries, from the hyoid down to the sternal notch, contains the prelaryngeal, pretracheal, and paratracheal nodes. What level is this, and which primary sites make it relevant?
-A. Level V; it is the posterior triangle and it is treated for nasopharynx only
-B. Level VI; it is relevant for thyroid, larynx, hypopharynx, and cervical esophagus
-C. Level Ia; it is the submental space above the hyoid only
-D. The retropharyngeal space at C1
-Answer: B
-Objective: III.4
-Why: Answer B. Level VI is the anterior compartment: midline, between the carotids, from the hyoid to the top of the sternum. It includes the Delphian (prelaryngeal) node and the paratracheal nodes that sit beside the trachea and esophagus. Those nodes are in the elective volume for many thyroid, laryngeal, hypopharyngeal, and cervical esophageal cancers. Level V is the posterior triangle, behind the sternocleidomastoid. Level Ia is submental and is above this compartment. Retropharyngeal nodes are posterior to the pharynx at the skull base, not between the carotids in the low neck.
-
-### Q4
-Stem: Axillary nodes are divided by the pectoralis minor. Level I is lateral to the muscle, level II is behind it, and level III is medial to it, toward the apex. A node located between the pectoralis minor and the chest wall, directly behind the muscle, is which level?
-A. Level I
-B. Level II
-C. Level III
-D. An internal mammary node
-Answer: B
-Objective: III.4
-Why: Answer B. Pectoralis minor is the landmark. Nodes lateral to its lateral border are level I, the largest and usually first-echelon group. Nodes behind the muscle are level II. Nodes medial to its medial border, in the apex, are level III. Internal mammary nodes are not in the axilla; they lie beside the sternum in the first three intercostal spaces, along the internal mammary vessels. A Rotter node between pectoralis major and minor is a separate interpectoral node and is not the node described behind pectoralis minor against the chest wall.
-
-### Q5
-Stem: The anal canal is divided by the dentate line. A tumor whose bulk is above the dentate line, and a tumor of the anal verge below it, do not drain the same way. Which drainage matches which site?
-A. Above the dentate line: mesorectal and internal iliac nodes. Below the dentate line and the verge: inguinal nodes
-B. Above the dentate line: inguinal nodes only. Below: para-aortic nodes only
-C. Both drain only to the axillary nodes
-D. Neither region has lymphatics; the dentate line is a vascular structure in the neck
+Stem: Nodes lie in the midline between the anterior bellies of the digastric muscles, from the mandible down to the hyoid. Which neck level is that?
+A. IA
+B. III
+C. V
+D. VI
 Answer: A
 Objective: III.4
-Why: Answer A. The dentate line is the watershed in the anal canal. Mucosa above it drains along the rectum to mesorectal and internal iliac nodes. Skin and mucosa below it, including the anal verge, drain to the inguinal nodes, like the perineum. A field for a low anal or verge cancer that omits the groin can miss the first nodes. A mid-rectal tumor does not automatically need the groin. The dentate line is not a cervical landmark.
+Why: Level IA is the submental group: midline, between the anterior digastrics, from the mandible to the hyoid. Level IB is lateral to IA, around the submandibular gland, from the mandible to the hyoid. Level III follows the internal jugular vein from the hyoid to the bottom of the cricoid. Level V is the posterior triangle, behind the sternocleidomastoid and in front of the trapezius. Level VI is the anterior compartment between the carotids, in front of the trachea.
+
+### Q2
+Stem: Nodes lie posterior to the sternocleidomastoid and anterior to the trapezius, from the skull base down to the cricoid. They are labeled level IIB because they are posterior. What level are they?
+A. IIB, extending to the trapezius
+B. VA
+C. IA
+D. VI
+Answer: B
+Objective: III.4
+Why: Level II runs from the skull base to the hyoid around the upper internal jugular vein. IIA is anterior and medial to the spinal accessory nerve. IIB is posterior to that nerve, and the posterior edge of level II is the posterior sternocleidomastoid, not the trapezius. Behind the sternocleidomastoid and in front of the trapezius is level V. From the skull base to the cricoid that posterior triangle is VA. VB continues from the cricoid to the clavicle. IA and VI are anterior midline levels.
+
+### Q3
+Stem: Nodes follow the internal jugular vein, deep to the sternocleidomastoid, from the hyoid down to the bottom of the cricoid. Which level is that?
+A. II
+B. III
+C. IV
+D. VI
+Answer: B
+Objective: III.4
+Why: Level III is the middle jugular chain: hyoid to the bottom of the cricoid, along the internal jugular vein, deep to the sternocleidomastoid. Level II is from the skull base down to the hyoid. Level IV continues from the cricoid down to the clavicle along the lower internal jugular vein. Level VI is midline between the carotid arteries, in front of the trachea, not along the jugular vein.
+
+### Q4
+Stem: One low-neck node is posterior to the sternocleidomastoid and anterior to the trapezius, between the cricoid and the clavicle. Another is midline, between the carotid arteries, in front of the trachea. Which levels are those two, in that order?
+A. IV and IV
+B. VB and VI
+C. III and III
+D. IIA and IA
+Answer: B
+Objective: III.4
+Why: Level IV is the lower jugular chain along the internal jugular vein from the cricoid to the clavicle, under the sternocleidomastoid. Posterior to that muscle is level V, and from the cricoid to the clavicle that posterior triangle is VB. The midline compartment between the carotids, from the hyoid toward the suprasternal notch, is level VI: prelaryngeal, pretracheal, and paratracheal nodes. Level IIA is high, anterior to the spinal accessory nerve. Level IA stops at the hyoid between the digastrics.
+
+### Q5
+Stem: Nodes lie beside the abdominal aorta from about the renal vessels down to the aortic bifurcation. Inferior to the bifurcation they follow the common iliac vessels until those vessels split into internal and external iliac vessels. Name the two chains in that craniocaudal order.
+A. Inguinal, then obturator
+B. Para-aortic, then common iliac
+C. External iliac, then inguinal
+D. Presacral, then femoral heads
+Answer: B
+Objective: III.4
+Why: Para-aortic nodes sit beside the abdominal aorta from about the renal vessels to the bifurcation. They matter for cervix, endometrium, and seminoma when the protocol includes them. Common iliac nodes follow the common iliac vessels from the bifurcation to the split into internal and external iliac. Inguinal nodes are below the inguinal ligament. Obturator nodes are low on the pelvic sidewall, medial to the obturator internus. Presacral nodes are midline, anterior to the sacrum. Femoral heads are bone.
+
+### Q6
+Stem: One chain runs anterolateral in the pelvis along the external iliac vessels toward the inguinal ligament. A second runs posterior and medial along the internal iliac vessels on the pelvic sidewall. A third sits low on that sidewall, medial to the obturator internus. Name them in that order.
+A. Internal iliac, para-aortic, inguinal
+B. External iliac, internal iliac, obturator
+C. Common iliac, presacral, level V
+D. Inguinal, inguinal, inguinal
+Answer: B
+Objective: III.4
+Why: External iliac nodes are anterolateral along the external iliac vessels. Internal iliac, or hypogastric, nodes are posterior and medial along the internal iliac vessels. Obturator nodes lie medial to the obturator internus and are included with the internal and external chains in a typical pelvic nodal CTV. Para-aortic nodes are abdominal. Inguinal nodes are in the groin, below the inguinal ligament. Level V is a neck level in the posterior triangle.
+
+### Q7
+Stem: A prostate nodal CTV is specified as obturator, external iliac, internal iliac, and common iliac nodes, plus presacral nodes. Which addition does not belong on that standard prostate volume?
+A. The presacral nodes the protocol already requested
+B. Inguinal nodes below the inguinal ligament, and the femoral heads contoured as nodes
+C. Nodes along the named iliac vessels
+D. A volume that follows vessels rather than the pelvic bone
+Answer: B
+Objective: III.4
+Why: When prostate nodes are treated, the CTV follows the obturator and the external, internal, and common iliac vessels, plus presacral nodes when the protocol asks. Inguinal nodes lie in the groin, below the inguinal ligament, along the femoral vessels. They are included for vulva, distal vagina, anal margin, and some penile cases. They are not part of a standard prostate nodal volume. Femoral heads are bone. Nodes follow vessels.
+
+### Q8
+Stem: Nodes in the superior mediastinum, below the sternal notch, are pulled into the level IV contour because they are near the clavicle. What is the distinction?
+A. Level IV is the lower jugular chain along the internal jugular vein down to the clavicle; superior mediastinal nodes below the sternal notch are not level IV
+B. Level IV is the posterior triangle, so mediastinal nodes below the notch belong in VA
+C. Anything near the clavicle is level IA
+D. Those mediastinal nodes are inguinal nodes
+Answer: A
+Objective: III.4
+Why: Level IV runs from the cricoid to the clavicle along the lower internal jugular vein. Superior mediastinal nodes below the sternal notch are sometimes called level VII. Being near the clavicle does not move them into level IV. The posterior triangle is level V. Level IA is submental, between the digastrics, above the hyoid. Inguinal nodes are in the groin.
 
 ## Anatomy Quiz
 
 ### Q1
-Stem: At the level of the carina the esophagus is described as lying immediately posterior to the airway, slightly to the patient's left of midline, between the airway and the vertebral body. The descending aorta is further to the patient's left. What structure occupies that posterior midline position?
-A. The superior vena cava
-B. The esophagus
-C. The right atrium
-D. The thyroid gland
-Answer: B
+Stem: A slice just above the prostate shows a bow-tie of soft tissue posterior to the bladder and anterior to the rectum. The gland surrounding the prostatic urethra is not on this slice. What is the bow-tie?
+A. Seminal vesicles
+B. Femoral heads
+C. Parotid glands
+D. The cricoid cartilage
+Answer: A
 Objective: III.4
-Why: Answer B. The stem places a soft-tissue tube directly behind the carina and slightly left of midline, with the aorta lateral to it. That tube is the esophagus. The superior vena cava is anterior and to the patient's right. The right atrium is a cardiac chamber, inferior to this slice. The thyroid is in the neck, draped on the larynx and upper trachea, not at the carina. This relationship is why a mid-esophageal tumor sits against the left atrium more inferiorly and against the airway at this level.
+Why: Seminal vesicles sit just above the prostate, posterior to the bladder and anterior to the rectum, often as a bow-tie on the axial slice. The prostate is inferior to that slice, midline around the urethra. Femoral heads are the round bones lateral in the acetabulum. The parotid is lateral to the mandibular ramus at about C1. The cricoid is the complete ring of the larynx.
 
 ### Q2
-Stem: A slice at C1, posterior to the nasal cavity and inferior to the sphenoid sinus, shows a midline airway with a recess just posterolateral to the opening of the Eustachian tube. A node is described medial to the internal carotid artery at this level, behind the pharyngeal wall. What recess is that, and what node is medial to the carotid here?
-A. Pyriform sinus; level IV node
-B. Fossa of Rosenmüller in the nasopharynx; a lateral retropharyngeal node
-C. Vallecula; level Ia node
-D. Glottis; Delphian node
+Stem: A vessel is embedded in the posterior portion of the large homogeneous organ that fills the patient’s right upper quadrant. It is labeled abdominal aorta. What vessel belongs in that description?
+A. Abdominal aorta
+B. IVC or a hepatic vein
+C. Descending aorta on the patient’s left of the thoracic spine
+D. External iliac artery at the inguinal ligament
 Answer: B
 Objective: III.4
-Why: Answer B. The nasopharynx lies at about C1, behind the nasal cavity and below the skull base. The fossa of Rosenmüller is the lateral recess behind the torus of the Eustachian tube and is a common origin of nasopharyngeal carcinoma. The lateral retropharyngeal nodes sit medial to the carotid at this level, posterior to the pharynx. The pyriform sinus is hypopharynx, lower, beside the larynx. The vallecula is oropharynx, at the base of the tongue. The Delphian node is midline and prelaryngeal, at the cricoid region, not at C1.
+Why: The organ filling the patient’s right upper quadrant under the hemidiaphragm is the liver. A vessel inside the posterior liver is the IVC or a hepatic vein. The abdominal aorta is round and thick-walled, on the patient’s left of the lumbar vertebral body, outside the liver. The descending aorta is the left-of-spine vessel in the chest. External iliac vessels are anterolateral in the pelvis.
 
 ### Q3
-Stem: The pancreatic head is described as sitting in the C-loop of the duodenum, to the patient's right of the midline. The tail extends toward the hilum of the spleen, to the patient's left. The portal vein forms behind the neck from the splenic vein and the superior mesenteric vein. A tumor in the head will obstruct which nearby ductal structure first, and on which side of the patient is the head?
-A. The head is on the patient's left and compresses the splenic flexure only
-B. The head is on the patient's right, inside the duodenal C-loop, and a mass there compresses the common bile duct
-C. The head is midline at L4 and compresses the urethra
-D. The head is in the spleen and compresses the left ureter
-Answer: B
+Stem: The patient’s left heart border and the cardiac apex are a thick-walled chamber. The patient’s right heart border is the chamber that receives the superior and inferior vena cava. Name the left-border chamber and the right-border chamber.
+A. Left ventricle and right atrium
+B. Right ventricle and left atrium
+C. Left atrium and right ventricle
+D. Right ventricle and right ventricle
+Answer: A
 Objective: III.4
-Why: Answer B. The duodenal C-loop frames the pancreatic head on the patient's right. The common bile duct passes through or immediately beside that head on its way to the ampulla, so a head mass presents with biliary obstruction. The tail points at the splenic hilum on the patient's left, and the superior mesenteric artery crosses anterior to the third part of the duodenum near the midline. The head is not in the spleen and it is not a pelvic structure at L4.
+Why: The left ventricle forms the patient’s left border and the apex and has the thick wall. The right atrium forms the patient’s right border and receives the venae cavae. The right ventricle is the most anterior chamber, immediately behind the sternum. The left atrium is the most posterior chamber, receiving the pulmonary veins, with the esophagus behind it.
 
 ### Q4
-Stem: The celiac trunk is described at about T12, the superior mesenteric artery at about L1, the renal arteries at about L1 to L2, and the inferior mesenteric artery at about L3. The aorta bifurcates at about L4. A node labeled "para-aortic at the origin of the inferior mesenteric artery" is nearest which vertebral level?
-A. T4
-B. T12
-C. L3
-D. S2
-Answer: C
+Stem: Soft tissue borders an anterior midline airway slit at the thyroid cartilage, which is open posteriorly. Separate air pockets lie lateral to the larynx. A structure labeled cord is drawn at the hyoid. Which reading fits these landmarks?
+A. The thyroid-cartilage slit is true-cord level, the lateral air pockets are pyriform sinuses, and the hyoid contour is too high for cord
+B. The hyoid is true-cord level, and the thyroid cartilage is below the cricoid
+C. The lateral air pockets are the glottis, and the midline slit is the esophagus
+D. The thyroid cartilage is the complete cricoid ring
+Answer: A
 Objective: III.4
-Why: Answer C. The inferior mesenteric artery leaves the front of the aorta at about L3. A para-aortic node at that origin is an L3 node, inferior to the renal hilum and superior to the aortic bifurcation at L4. T12 is the celiac level, just below the aortic hiatus. T4 is the carina. S2 is the inferior end of the thecal sac, far below the abdominal aorta. Testicular and cervical para-aortic fields are drawn against these vertebral landmarks, so swapping L3 for L1 moves the field off the stated vessel.
+Why: True vocal cords sit at the thyroid cartilage, the shield that is open posteriorly, with the arytenoids posterior. Pyriform sinuses are lateral air pockets and belong to the hypopharynx, not the glottis. The epiglottis is the thin curve at the base of the tongue, above this level. The cricoid, the only complete ring, is immediately below the thyroid cartilage. A cord contour at the hyoid is too high.
 
 ### Q5
-Stem: The prostate is described as inferior to the bladder and anterior to the rectum. The seminal vesicles lie posterior and superior to the prostate, between the bladder and the rectum. A contour that the planner calls "rectum" actually includes a paired structure immediately posterior to the bladder and superior to the prostate, and it excludes the midline lumen against the sacrum. What did the contour capture?
-A. The femoral heads
-B. The seminal vesicles, not the rectum
-C. The external iliac nodes
-D. The seminal vesicles are anterior to the pubic symphysis, so this description cannot match them
+Stem: Soft tissue between the anterior and middle scalene muscles, in the supraclavicular fossa, posterior to the clavicle and above the lung apex, is labeled spinal cord. What is the structure?
+A. Spinal cord
+B. Brachial plexus
+C. Level VI nodes
+D. Rectum
 Answer: B
 Objective: III.4
-Why: Answer B. The structure posterior to the bladder, superior to the prostate, and in front of the rectum is the pair of seminal vesicles. The rectum is the midline lumen directly anterior to the sacrum and posterior to both the prostate and the vesicles. Including the vesicles in the rectal contour makes the rectal DVH look heavily dosed and can force the optimizer to carve dose out of the vesicles, which may be part of the target. The femoral heads are lateral, at the acetabula. External iliac nodes follow the pelvic sidewall vessels, lateral to this midline stack.
+Why: The spinal cord is inside the canal. After the roots leave the foramina from C5 to T1, the brachial plexus lies between the scalenes, above the first rib with the subclavian artery, posterior to the clavicle, over the lung apex. Level VI is midline, between the carotids, in front of the trachea. The rectum is the posterior midline structure in the male pelvis, behind the prostate.
 
 ### Q6
-Stem: Pelvic nodes are described as follows. One chain follows the external iliac vessels along the pelvic sidewall. One chain follows the internal iliac vessels deeper in the pelvis. One group lies medial to the obturator internus, beside the acetabulum. One group lies directly anterior to the sacrum. A prostate lymphatic volume that omits the group medial to the obturator internus has skipped which nodes?
-A. Obturator nodes
-B. Inguinal nodes
-C. Retropharyngeal nodes
-D. Axillary level II nodes
-Answer: A
+Stem: Nodes are described as midline, between the carotid arteries, in front of the trachea, from the hyoid toward the suprasternal notch. Which level is that?
+A. III
+B. IV
+C. V
+D. VI
+Answer: D
 Objective: III.4
-Why: Answer A. The obturator nodes sit on the sidewall of the true pelvis, medial to the obturator internus and near the acetabulum, and they are a first-echelon station for the prostate and the cervix. They are not the same as the external iliac chain higher on the sidewall, the internal iliac chain, or the presacral nodes in front of the sacrum. Inguinal nodes are below the inguinal ligament and are not the routine prostate drainage. Retropharyngeal and axillary nodes are not in the pelvis.
+Why: That anterior compartment is level VI: prelaryngeal (Delphian), pretracheal, and paratracheal nodes. It is not one of levels I through V. Level III is middle jugular, from hyoid to cricoid along the internal jugular vein. Level IV continues along the lower jugular vein to the clavicle. Level V is the posterior triangle, posterior to the sternocleidomastoid and anterior to the trapezius.
 
 ### Q7
-Stem: The cavernous sinus is described on either side of the sella. The internal carotid artery runs through it. Cranial nerves III, IV, V1, and V2 travel in its lateral wall. One cranial nerve runs inside the sinus, just lateral to the carotid, and is not embedded in that lateral wall. Which nerve is the free one, and what lies immediately inferior to the pituitary in the sella?
-A. Cranial nerve II is free in the sinus; the maxillary sinus is immediately inferior
-B. Cranial nerve VI is free in the sinus; the sphenoid sinus is immediately inferior to the sella
-C. Cranial nerve VII is free in the sinus; the nasopharynx is immediately superior
-D. Cranial nerve XII is free in the sinus; the orbits are medial to the sella
+Stem: Nodes lie in the groin, below the inguinal ligament, along the femoral vessels. The volume being drawn is a standard prostate nodal CTV. Do these groin nodes belong in it?
+A. Yes; every prostate nodal volume includes the groin
+B. No; inguinal nodes are not part of a standard prostate nodal volume
+C. Yes; the femoral heads are these nodes
+D. Yes; groin nodes along the femoral vessels are the para-aortic chain
 Answer: B
 Objective: III.4
-Why: Answer B. Cranial nerve VI (abducens) crosses the cavernous sinus next to the carotid rather than in the lateral wall with III, IV, and the first two divisions of V. It is the nerve most exposed to a cavernous mass or to a high dose beside the carotid. The pituitary sits in the sella, the optic chiasm is superior, the cavernous sinuses are lateral, and the sphenoid sinus is immediately inferior. Cranial nerve II is the optic nerve, superior and anterior, not inside the cavernous sinus. The facial nerve and hypoglossal nerve do not take this path.
+Why: Inguinal nodes sit below the inguinal ligament along the femoral vessels. They are included for vulva, distal vagina, anal margin, and some penile cases. A standard prostate nodal CTV follows obturator, external iliac, internal iliac, and common iliac vessels, plus presacral nodes when the protocol asks. It does not enter the groin. Femoral heads are the lateral bones in the acetabula. Para-aortic nodes are beside the abdominal aorta.
 
 ### Q8
-Stem: The thoracic duct is described as ascending through the mediastinum and emptying into the venous angle on one side of the neck, at the junction of the internal jugular and subclavian veins. A contour of the low neck shows a duct terminus on the patient's left, behind the clavicle. Which side is the correct terminus, and which statement about the other side is appropriate?
-A. The thoracic duct terminates on the patient's left; the patient's right side has a smaller right lymphatic duct, not the thoracic duct
-B. The thoracic duct terminates on the patient's right, into the superior vena cava at T8
-C. The thoracic duct terminates in both groins
-D. The thoracic duct is the esophagus and terminates at the stomach
-Answer: A
-Objective: III.4
-Why: Answer A. The thoracic duct is the main lymph trunk. It ascends from the cisterna chyli, runs through the mediastinum, and empties at the left venous angle, where the left internal jugular vein meets the left subclavian vein. The right lymphatic duct is a short, separate trunk on the patient's right. A contour or a field note that places the thoracic-duct terminus on the right has the side wrong. It does not drain to the groins, and it is not the esophagus, although the two run near each other in the posterior mediastinum.
-
-### Q9
-Stem: An oropharyngeal slice is described at the hyoid: the base of tongue is anterior, the vallecula is the midline space at the tongue base, and the epiglottis is posterior to that space. A hypopharyngeal slice lower down shows a recess on each side of the larynx, shaped like a pear, with the larynx medial and the thyroid cartilage lateral. What is that lower paired recess?
-A. Fossa of Rosenmüller
-B. Pyriform sinus
-C. Maxillary sinus
-D. Fourth ventricle
+Stem: The axial slice is below the bladder neck and does not show the bow-tie seminal vesicles. A midline gland surrounds the urethra. An air-containing structure is immediately posterior. Round bones sit lateral in the acetabula. The anterior midline bone is the pubic symphysis. What is immediately posterior to the gland, and what are the lateral bones?
+A. Bladder, and the bones are lymph nodes
+B. Rectum, and the bones are femoral heads
+C. Seminal vesicles, and the bones are the cricoid
+D. Spleen, and the bones are the liver
 Answer: B
 Objective: III.4
-Why: Answer B. The pyriform sinuses are the paired hypopharyngeal recesses beside the larynx, a common origin of hypopharyngeal cancer, and they drain to levels II through IV and to level VI. They are inferior to the oropharynx. The fossa of Rosenmüller is nasopharyngeal, at C1. The maxillary sinus is anterior, in the face, lateral to the nasal cavity. The fourth ventricle is in the posterior fossa of the brain, between the brainstem and the cerebellum, not beside the thyroid cartilage.
-
-### Q10
-Stem: Internal mammary nodes are described as lying in the first three intercostal spaces, about 2 to 3 cm lateral to the sternal edge, along a paired artery and vein on the inner chest wall. A breast field note says the internal mammary chain is "in the axilla, lateral to pectoralis minor." What is wrong with that note?
-A. Nothing; the internal mammary chain is axillary level I
-B. The internal mammary chain is parasternal, not axillary; the nodes lateral to pectoralis minor are axillary level I
-C. The internal mammary chain is in the groin
-D. The internal mammary chain is the thoracic duct terminus on the right
-Answer: B
-Objective: III.4
-Why: Answer B. Internal mammary (internal thoracic) nodes follow the internal mammary vessels along the sternum, a few centimeters lateral to the midline, deep to the chest wall. They are relevant for medial and node-positive breast cancers. Axillary level I is lateral to pectoralis minor and is a different station. Placing the internal mammary target in the axilla irradiates the wrong nodal bed and misses the parasternal one. The chain is not inguinal and it is not the thoracic duct.
+Why: On a slice below the seminal vesicles, the midline gland around the urethra is the prostate. The rectum is directly posterior and may contain air or stool. The femoral heads are the round bones laterally, seated in the acetabula. The pubic symphysis is the anterior midline bone. Seminal vesicles are the bow-tie on the slice above the prostate. This low, the abdominal aorta has bifurcated; the iliac vessels are the nodal landmarks. Spleen and liver are upper-abdominal organs.
