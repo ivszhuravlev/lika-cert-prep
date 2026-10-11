@@ -104,12 +104,14 @@ class MenuTest(unittest.TestCase):
     def test_theory_next_and_end(self):
         self.say("3")
         sent = self.say("Теория")
-        number, _, mode, lesson = header_of(sent[-1]["text"])
+        self.assertEqual(len(sent), 2)
+        number, _, mode, lesson = header_of(sent[0]["text"])
         self.assertEqual((number, mode), ("3", "теория"))
         self.assertNotEqual(lesson, "урок не выбран")
-        self.assertIn(["Дальше"], sent[-1]["keyboard"])
-        self.assertIn(["К темам"], sent[-1]["keyboard"])
-        self.assertIn("Что спрашивают", sent[-1]["text"])
+        self.assertIn("Блок 1 из", sent[1]["text"])
+        self.assertLess(len(sent[1]["text"]), 500)
+        self.assertIn(["Дальше"], sent[1]["keyboard"])
+        self.assertIn(["К темам"], sent[1]["keyboard"])
         seen = {lesson}
         ended = None
         for _ in range(8):
@@ -117,11 +119,12 @@ class MenuTest(unittest.TestCase):
             number, _, mode, lesson = header_of(sent[-1]["text"])
             self.assertEqual((number, mode), ("3", "теория"))
             self.assertIn(["К темам"], sent[-1]["keyboard"])
-            if "кончилась" in sent[-1]["text"]:
+            if any("кончилась" in piece["text"] for piece in sent):
                 ended = sent[-1]
                 break
             seen.add(lesson)
             self.assertIn(["Дальше"], sent[-1]["keyboard"])
+            self.assertLess(len(sent[-1]["text"]), 500)
         self.assertIsNotNone(ended)
         self.assertGreaterEqual(len(seen), 2)
         self.assertNotIn(["Дальше"], ended["keyboard"])
@@ -209,6 +212,12 @@ class MenuTest(unittest.TestCase):
         sent = self.say("Предыдущий")
         self.assertEqual(self.state["item_id"], item.id)
         self.assertIn("Вопрос 1 из", sent[-1]["text"])
+        sent = self.say("где я")
+        self.assertIn("последний решённый — вопрос 1", sent[-1]["text"])
+        self.assertLess(len(sent[-1]["keyboard"]), 8)
+        sent = self.say("вопрос 2")
+        self.assertIn("Вопрос 2 из", sent[-1]["text"])
+        self.assertNotEqual(self.state["item_id"], item.id)
 
     def test_mode_switch_and_start_do_not_grade(self):
         self.say("3")
@@ -236,17 +245,19 @@ class MenuTest(unittest.TestCase):
         module = self.module("3")
         self.say("3")
         sent = self.say("Вместе")
-        self.assertGreaterEqual(len(sent), 2)
+        self.assertEqual(len(sent), 2)
         _, _, mode, lesson = header_of(sent[0]["text"])
         self.assertEqual(mode, "вместе")
         self.assertEqual(lesson, module.chunks[0].lesson)
-        _, _, mode, q_lesson = header_of(sent[1]["text"])
-        self.assertEqual((mode, q_lesson), ("вместе", lesson))
+        self.assertIn("Абзац 1 из", sent[1]["text"])
+        self.assertLess(len(sent[1]["text"]), 500)
+        self.assertIn(["Дальше"], sent[1]["keyboard"])
         stems = [item.stem for item in module.items if item.lesson == lesson]
-        self.assertTrue(any(stem in sent[1]["text"] for stem in stems))
-        self.assertIn(["A", "B", "C", "D"], sent[1]["keyboard"])
+        self.assertFalse(any(stem in sent[1]["text"] for stem in stems))
+        sent = self.say("Дальше")
+        self.assertTrue(any(stem in sent[0]["text"] for stem in stems))
+        self.assertIn(["A", "B", "C", "D"], sent[0]["keyboard"])
         self.assertIn(["К темам"], sent[0]["keyboard"])
-        self.assertIn(["К темам"], sent[1]["keyboard"])
 
     def test_road_header_and_letter_is_not_an_answer(self):
         module = self.module("3")
@@ -260,6 +271,8 @@ class MenuTest(unittest.TestCase):
         self.assertLess(paste["text"].find("Сейчас:"), paste["text"].find("Скопируй"))
         self.assertIn(f"### 1. {lesson}", paste["text"])
         self.assertEqual(header_of(note["text"])[2], "в дорогу")
+        self.assertIn("Блок 1 из", note["text"])
+        self.assertLess(len(note["text"]), 500)
         self.assertIn(["К темам"], paste["keyboard"])
         self.assertIn(["К темам"], note["keyboard"])
         self.assertEqual((["Следующий блок"] in note["keyboard"]), len(blocks) > 1)

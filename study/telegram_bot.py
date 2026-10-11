@@ -59,9 +59,10 @@ HOME = (
     "Теория — текст урока, кнопка «Дальше».\n"
     "Задачи — в ответ число.\n"
     "Квиз — в ответ буква A, B, C или D.\n"
-    "Вместе — абзац, потом вопросы.\n"
+    "Вместе — абзац теории, потом вопросы к нему.\n"
     "В дорогу — блок для голосового чата, здесь на него не отвечают.\n"
-    "«К темам» — список модулей."
+    "«К темам» — список модулей.\n"
+    "«Где я» — последний решённый квиз и задача. «Вопрос 12» открывает этот номер."
 )
 _CYR = str.maketrans(
     {
@@ -308,6 +309,34 @@ def frame(state: dict, module, lesson: str, body: str, hint: str) -> str:
     return f"{header(state, module, name)}\n\n{body.strip()}\n\n— {mode} · {name}. {hint}"
 
 
+def brief(state: dict, module, lesson: str, line: str) -> str:
+    return f"{header(state, module, lesson)}\n\n{line.strip()}"
+
+
+def body_pages(head: str, body: str, limit: int = 3900) -> list[str]:
+    """Split a lesson so each Telegram bubble is one complete piece."""
+    text = body.strip() or "Пусто."
+    room = limit - len(head) - 2
+    if room < 700:
+        room = 700
+    if len(head) + 2 + len(text) <= limit:
+        return [text]
+    pages: list[str] = []
+    rest = text
+    while rest:
+        if len(rest) <= room:
+            pages.append(rest)
+            break
+        cut = rest.rfind("\n\n", 0, room)
+        if cut < room // 3:
+            cut = rest.rfind("\n", 0, room)
+        if cut < room // 3:
+            cut = room
+        pages.append(rest[:cut].rstrip())
+        rest = rest[cut:].lstrip("\n")
+    return pages
+
+
 def current_module(state: dict):
     code = state.get("module") or ""
     if not code:
@@ -429,31 +458,42 @@ def show_chunk(
     chunk,
     *,
     next_button: bool,
-    action: str,
+    stamp: str,
     preface: str = "",
 ) -> None:
     state["lesson"] = chunk.lesson
     state["item_id"] = ""
-    bits = [preface, action, russian(state, chunk.text)]
-    body = "\n\n".join(bit for bit in bits if bit)
-    row = ["Дальше"] if next_button else None
+    body = russian(state, chunk.text)
+    if preface:
+        body = preface.strip() + "\n\n" + body
+    head = header(state, module, chunk.lesson)
+    pages = body_pages(head, body)
+    page = int(state.get("page") or 0)
+    if page < 0 or page >= len(pages):
+        page = 0
+    state["page"] = page
     if next_button and state.get("mode") == "mixed":
         placeholder = "Вместе: кнопка Дальше"
     elif next_button:
         placeholder = PH_THEORY
     else:
-        placeholder = PH_MIXED if state.get("mode") == "mixed" else PH_HOME
+        placeholder = PH_HOME
     deliver(
         tg,
         chat_id,
-        frame(
-            state,
-            module,
-            chunk.lesson,
-            body,
-            "Дальше или К темам" if next_button else "К темам — к списку",
-        ),
-        keyboard=keys(state, row),
+        f"{head}\n\n{pages[page]}",
+        keyboard=keys(state),
+        placeholder=placeholder,
+    )
+    if len(pages) > 1:
+        line = f"{stamp}, часть {page + 1} из {len(pages)}.\nКнопка «Дальше»."
+    else:
+        line = f"{stamp}.\nКнопка «Дальше»."
+    deliver(
+        tg,
+        chat_id,
+        brief(state, module, chunk.lesson, line),
+        keyboard=keys(state, ["Дальше"] if next_button else None),
         placeholder=placeholder,
     )
 
@@ -514,7 +554,6 @@ def reshow(tg: Telegram, chat_id: int, state: dict, progress: Progress, preface:
         index = int(state.get("chunk_at", 0)) - 1
         if 0 <= index < len(module.chunks):
             chunk = module.chunks[index]
-            label = LABELS.get(chunk.kind, chunk.kind)
             show_chunk(
                 tg,
                 chat_id,
@@ -522,7 +561,7 @@ def reshow(tg: Telegram, chat_id: int, state: dict, progress: Progress, preface:
                 module,
                 chunk,
                 next_button=True,
-                action=f"Теория. Сейчас блок «{label}». «Дальше» — следующий кусок.",
+                stamp=f"Блок {index + 1} из {len(module.chunks)}",
                 preface=preface,
             )
             return True
@@ -602,7 +641,7 @@ def step_theory(tg: Telegram, chat_id: int, state: dict, module) -> None:
         return
     chunk = module.chunks[index]
     state["chunk_at"] = index + 1
-    label = LABELS.get(chunk.kind, chunk.kind)
+    state["page"] = 0
     show_chunk(
         tg,
         chat_id,
@@ -610,7 +649,7 @@ def step_theory(tg: Telegram, chat_id: int, state: dict, module) -> None:
         module,
         chunk,
         next_button=True,
-        action=f"Теория. Сейчас блок «{label}». «Дальше» — следующий кусок.",
+        stamp=f"Блок {index + 1} из {len(module.chunks)}",
     )
 
 
@@ -675,21 +714,13 @@ def step_road(tg: Telegram, chat_id: int, state: dict, module, progress: Progres
     )
     state["road_i"] = index + 1
     if more:
-        body = (
-            f"Выше блок {index + 1} из {len(blocks)}. Скопируй его целиком в новый голосовой чат. "
-            "В этом боте на блок не отвечают.\n"
-            "«Следующий блок» — следующий. «К темам» — список модулей."
-        )
+        line = f"Блок {index + 1} из {len(blocks)}.\nСкопируй сообщение выше.\nКнопка «Следующий блок»."
     else:
-        body = (
-            f"Выше последний блок, {index + 1} из {len(blocks)}. Скопируй его целиком в новый голосовой чат. "
-            "В этом боте на блок не отвечают.\n"
-            "«К темам» — список модулей."
-        )
+        line = f"Блок {index + 1} из {len(blocks)}, последний.\nСкопируй сообщение выше."
     deliver(
         tg,
         chat_id,
-        frame(state, module, lesson, body, "К темам — к списку"),
+        brief(state, module, lesson, line),
         keyboard=keys(state, row),
         placeholder=PH_ROAD,
     )
@@ -703,24 +734,24 @@ def step_mixed_paragraph(tg: Telegram, chat_id: int, state: dict, module, progre
     state["item_id"] = ""
     state["cursor"] = 0
     same = [item for item in ordered(module.items, progress) if item.lesson == chunk.lesson]
-    label = LABELS.get(chunk.kind, chunk.kind)
+    total = len(module.chunks)
+    shown = index + 1
     if same:
         state["phase"] = "quiz"
         state["left"] = min(3, len(same))
+        state["page"] = 0
         show_chunk(
             tg,
             chat_id,
             state,
             module,
             chunk,
-            next_button=False,
-            action=(
-                f"Вместе. Сейчас абзац «{label}». Следующее сообщение — вопрос. "
-                "«К темам» — список модулей."
-            ),
+            next_button=True,
+            stamp=f"Абзац {shown} из {total}. Дальше — вопрос",
         )
-        return True
+        return False
     state["phase"] = "read"
+    state["page"] = 0
     show_chunk(
         tg,
         chat_id,
@@ -728,10 +759,7 @@ def step_mixed_paragraph(tg: Telegram, chat_id: int, state: dict, module, progre
         module,
         chunk,
         next_button=True,
-        action=(
-            f"Вместе. Сейчас абзац «{label}». Вопросов к этому уроку нет. "
-            "«Дальше» — следующий абзац."
-        ),
+        stamp=f"Абзац {shown} из {total}. Дальше — следующий абзац",
     )
     return False
 
@@ -784,8 +812,7 @@ def ask_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> Non
         return
     if mode == "mixed" and state.get("phase") != "quiz":
         if module.chunks:
-            if step_mixed_paragraph(tg, chat_id, state, module, progress):
-                step_question(tg, chat_id, state, module, progress)
+            step_mixed_paragraph(tg, chat_id, state, module, progress)
             return
         state["phase"] = "quiz"
     step_question(tg, chat_id, state, module, progress)
@@ -847,6 +874,24 @@ def explain_road(tg: Telegram, chat_id: int, state: dict, progress: Progress) ->
 
 def on_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> None:
     if state.get("mode") == "theory":
+        module = current_module(state)
+        index = int(state.get("chunk_at", 0)) - 1
+        if module is not None and 0 <= index < len(module.chunks):
+            chunk = module.chunks[index]
+            head = header(state, module, chunk.lesson)
+            pages = body_pages(head, russian(state, chunk.text))
+            if int(state.get("page") or 0) + 1 < len(pages):
+                state["page"] = int(state.get("page") or 0) + 1
+                show_chunk(
+                    tg,
+                    chat_id,
+                    state,
+                    module,
+                    chunk,
+                    next_button=True,
+                    stamp=f"Блок {index + 1} из {len(module.chunks)}",
+                )
+                return
         ask_next(tg, chat_id, state, progress)
         return
     module = current_module(state)
@@ -864,7 +909,12 @@ def on_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> None
             )
             return
     if state.get("mode") == "mixed":
-        state["phase"] = ""
+        if module is None:
+            show_topics(tg, chat_id, state, "Сначала номер модуля.")
+            return
+        if state.get("phase") == "quiz":
+            step_question(tg, chat_id, state, module, progress)
+            return
         ask_next(tg, chat_id, state, progress)
         return
     if module is not None:
@@ -957,8 +1007,19 @@ def take_answer(tg: Telegram, chat_id: int, raw: str, state: dict, progress: Pro
             return
         grade = grade_choice(item, letter or raw)
     progress.record(item.id, grade.ok)
+    done = state.get("last_done")
+    if not isinstance(done, dict):
+        done = {}
+        state["last_done"] = done
+    done[f"{state.get('module')}:{state.get('mode')}"] = {
+        "id": item.id,
+        "n": int(state.get("cursor", 0)) + 1,
+        "lesson": item.lesson,
+        "ok": grade.ok,
+    }
     state["item_id"] = ""
     nav = ["Предыдущий", "Следующий"] if state.get("mode") in {"quiz", "problems"} else None
+    action = ["Дальше"] if state.get("mode") == "mixed" else None
     deliver(
         tg,
         chat_id,
@@ -967,13 +1028,65 @@ def take_answer(tg: Telegram, chat_id: int, raw: str, state: dict, progress: Pro
             module,
             item.lesson,
             "Разбор ответа.\n\n" + reveal_text(grade, state, numeric=numeric),
-            "Предыдущий или Следующий" if nav else "К темам — к списку",
+            "Предыдущий или Следующий" if nav else "Дальше или К темам",
         ),
+        keyboard=keys(state, action, nav),
+        placeholder=PH_HOME,
+    )
+
+
+def jump_number(low: str) -> int | None:
+    parts = low.split()
+    if len(parts) == 2 and parts[0] in {"вопрос", "задача"} and parts[1].isdigit():
+        return int(parts[1])
+    return None
+
+
+def show_mark(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> None:
+    module = current_module(state)
+    if module is None:
+        show_topics(tg, chat_id, state, "Сначала номер модуля.")
+        return
+    done = state.get("last_done") if isinstance(state.get("last_done"), dict) else {}
+    lines = []
+    for mode, title in (("quiz", "Квиз"), ("problems", "Задачи")):
+        row = done.get(f"{module.code}:{mode}") or {}
+        if row:
+            mark = "верно" if row.get("ok") else "мимо"
+            lines.append(f"{title}: последний решённый — вопрос {row.get('n')}, {row.get('lesson')}, {mark}.")
+        else:
+            lines.append(f"{title}: в этом модуле ещё ничего не решено.")
+    if state.get("mode") in {"quiz", "problems"} and state.get("deck"):
+        lines.append(f"Сейчас открыт вопрос {int(state.get('cursor', 0)) + 1} из {len(state['deck'])}.")
+    lines.append("По одному — кнопки «Предыдущий» и «Следующий». На номер напиши «вопрос 12».")
+    nav = ["Предыдущий", "Следующий"] if state.get("mode") in {"quiz", "problems"} else None
+    deliver(
+        tg,
+        chat_id,
+        brief(state, module, state.get("lesson") or PENDING, "\n".join(lines)),
         keyboard=keys(state, nav=nav),
         placeholder=PH_HOME,
     )
-    if state.get("mode") == "mixed":
-        ask_next(tg, chat_id, state, progress)
+
+
+def jump_question(tg: Telegram, chat_id: int, state: dict, progress: Progress, number: int) -> None:
+    module = current_module(state)
+    if module is None or state.get("mode") not in {"quiz", "problems"}:
+        show_mark(tg, chat_id, state, progress)
+        return
+    pool = question_deck(state, module, progress)
+    if not pool or number < 1 or number > len(pool):
+        deliver(
+            tg,
+            chat_id,
+            brief(state, module, state.get("lesson") or PENDING, f"В этом списке вопросы 1–{len(pool)}."),
+            keyboard=keys(state, nav=["Предыдущий", "Следующий"]),
+            placeholder=PH_HOME,
+        )
+        return
+    state["cursor"] = number - 1
+    state["item_id"] = ""
+    step_question(tg, chat_id, state, module, progress)
 
 
 def lost(tg: Telegram, chat_id: int, state: dict) -> None:
@@ -1027,6 +1140,27 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
             return
         enter_mode(state, new_mode)
         ask_next(tg, chat_id, state, progress)
+        return
+    if low in {"где я", "последний"}:
+        show_mark(tg, chat_id, state, progress)
+        return
+    number = jump_number(low)
+    if number is not None:
+        if state.get("mode") in {"quiz", "problems"}:
+            jump_question(tg, chat_id, state, progress, number)
+        else:
+            module = current_module(state)
+            text = "Номер открывается в квизе или задачах. Сначала эта кнопка, потом «вопрос 12»."
+            if module is None:
+                show_topics(tg, chat_id, state, text)
+            else:
+                deliver(
+                    tg,
+                    chat_id,
+                    brief(state, module, state.get("lesson") or PENDING, text),
+                    keyboard=keys(state),
+                    placeholder=PH_HOME,
+                )
         return
     if low in {"предыдущий", "предыдущий вопрос", "следующий", "следующий вопрос"}:
         move_question(tg, chat_id, state, progress, -1 if low.startswith("предыдущий") else 1)
