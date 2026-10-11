@@ -90,7 +90,7 @@ The cycle is G1, S, G2, and M, plus G0 for cells that have left the cycle.
 
 - **M**, mitosis, is the most sensitive phase. Late **G2** is sensitive with it.
 - **Late S** is the most resistant phase.
-- **G1** length varies widely. Early G1 is relatively sensitive; a long G1 holds many cells in a more resistant state.
+- **G1** length varies widely. Early G1 is relatively resistant. Sensitivity rises toward the end of a long G1. A long G1 therefore holds many cells in that resistant early stretch, not in a sensitive one.
 - **G0** cells are out of cycle until they are recruited.
 
 The four Rs of fractionation:
@@ -111,6 +111,7 @@ The gestational window of highest risk for radiation-related cognitive injury is
 **Traps**
 
 - Answering “late S” as the most sensitive phase. Late S is the most resistant. M is the most sensitive.
+- Calling early G1 the sensitive part of G1. Early G1 is resistant. Sensitivity rises late in G1.
 - Listing repopulation as a reason to insert an unplanned break.
 - Assuming the plain EQD2 has already accounted for a two-week delay. It has not.
 - Treating all normal tissues as serial and quoting only a max dose for lung or liver.

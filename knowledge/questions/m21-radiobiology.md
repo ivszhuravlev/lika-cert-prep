@@ -136,6 +136,16 @@ Answer: A
 Objective: III.3
 Why: The gestational window of highest risk for radiation-related cognitive injury is about 8-15 weeks. Weeks 0-7 come before that window. The period after 25 weeks comes after it. Equal risk in every week would make the dates irrelevant, and this teaching does not do that.
 
+### Q8
+Stem: A cell population has a long G1. Which part of that G1 is the resistant stretch?
+A. Early G1. Sensitivity rises toward the end of G1
+B. Early G1 is the sensitive stretch, and late G1 is resistant
+C. All of G1 matches the sensitivity of mitosis
+D. G1 has no sensitivity change; only S phase matters
+Answer: A
+Objective: III.3
+Why: Early G1 is relatively resistant. Sensitivity rises toward the end of a long G1. A long G1 therefore holds many cells in that resistant early stretch. Mitosis is the sensitive phase. Late S is the resistant phase of DNA synthesis, which is a different part of the cycle.
+
 ## BEDs
 
 ### Q1

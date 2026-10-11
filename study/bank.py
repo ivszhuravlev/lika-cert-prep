@@ -427,9 +427,10 @@ def load_modules(root: Path | None = None) -> list[Module]:
             codes.add(path.name.split("-", 1)[0])
     modules: list[Module] = []
     for code in sorted(codes):
-        theory = next(theory_dir.glob(f"{code}-*.md"), None) if theory_dir.exists() else None
-        questions = next(question_dir.glob(f"{code}-*.md"), None) if question_dir.exists() else None
-        sample = theory or questions
+        theory_paths = sorted(theory_dir.glob(f"{code}-*.md")) if theory_dir.exists() else []
+        question_paths = sorted(question_dir.glob(f"{code}-*.md")) if question_dir.exists() else []
+        theory = theory_paths[0] if theory_paths else None
+        sample = theory or (question_paths[0] if question_paths else None)
         slug = sample.stem.split("-", 1)[1] if sample else code
         title = slug.replace("-", " ").title()
         if theory and theory.exists():
@@ -439,8 +440,10 @@ def load_modules(root: Path | None = None) -> list[Module]:
         module = Module(code=code, slug=slug, title=title)
         if theory and theory.exists():
             module.chunks = parse_theory(code, theory.read_text(encoding="utf-8"))
-        if questions and questions.exists():
-            module.items = parse_questions(code, questions.read_text(encoding="utf-8"))
+        items = []
+        for questions in question_paths:
+            items.extend(parse_questions(code, questions.read_text(encoding="utf-8")))
+        module.items = items
         modules.append(module)
     return modules
 
