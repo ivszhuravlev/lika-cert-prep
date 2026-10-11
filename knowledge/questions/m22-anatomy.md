@@ -307,3 +307,43 @@ D. Cricoid cartilage
 Answer: B
 Objective: III.4
 Why: At about C1 the soft tissue lateral and posterior to the mandibular ramus, anterior to the mastoid and the ear, is the parotid. The submandibular gland is farther anterior and inferior, under the mandibular body and above the hyoid. The spinal cord is inside the canal, not on the lateral face. The cricoid is the complete ring in the anterior midline neck, below the thyroid cartilage, not beside the ramus.
+
+### Q30
+Stem: The axial slice is not in this item. The picture is missing. For a head-first supine scan displayed as if looking from the feet, which orientation rule is applied before any structure is named?
+A. Image left is the patient's left, and anterior is at the bottom
+B. Image left is the patient's left, and anterior is at the top
+C. Image left is the patient's right, and anterior is at the top
+D. Image left is the patient's right, and anterior is at the bottom
+Answer: C
+Objective: III.4
+Why: On an axial image viewed from the feet, the patient's right is on the image left and anterior is at the top. Naming image left as the patient's left puts the contour on the wrong side. A missing picture does not change that display rule.
+
+### Q31
+Stem: The upper-abdomen slice is not in this item. The picture is missing. Which rule names the organs under the two hemidiaphragms?
+A. The large homogeneous organ in the patient's right upper quadrant is the liver, and the smaller posterolateral organ on the patient's left is the spleen
+B. Image left is the liver, so the liver is on the patient's left
+C. The spleen is the large organ in the patient's right upper quadrant
+D. Both are kidneys, and the right kidney is the higher one
+Answer: A
+Objective: III.4
+Why: The liver is the large organ in the patient's right upper quadrant, under the right hemidiaphragm. The spleen is smaller and posterolateral on the patient's left, against the left hemidiaphragm and the ribs. On a feet-up display, image left is the patient's right, which is the liver's side. That display fact is not a reason to call the liver left-sided. The right kidney usually sits lower than the left because the liver occupies the space above it.
+
+### Q32
+Stem: The male pelvic slice is not in this item. The picture is missing. Which rule places the air-containing structure and the lateral bones relative to the midline gland that surrounds the urethra?
+A. The bladder is immediately posterior to the gland, and the lateral bones are inguinal nodes
+B. The seminal vesicles are the air column immediately posterior to the gland on this low slice
+C. The femoral heads are the air-containing structure, and the rectum is the anterior midline bone
+D. The rectum is the air-containing structure immediately posterior to the gland, and the round lateral bones are the femoral heads
+Answer: D
+Objective: III.4
+Why: The prostate surrounds the urethra and lies posterior to the pubic symphysis. The rectum is immediately posterior and may contain air. The femoral heads are the round bones in the acetabula. They are bone, not nodes. The bladder is anterior and superior. The seminal vesicles are the bow-tie on the slice above the gland, and they are soft tissue, not the air column.
+
+### Q33
+Stem: The neck slice is not in this item. The picture is missing. Which rule separates the parotid, the submandibular gland, and the brachial plexus?
+A. The parotid is under the mandibular body above the hyoid, and the plexus is inside the spinal canal
+B. The parotid wraps the mandibular ramus in front of the mastoid and the ear; the submandibular gland is under the mandibular body; the plexus has left the foramina and sits in the scalene gap
+C. The submandibular gland is at C1 beside the ear, and the parotid is the complete cricoid ring
+D. The two glands are one structure, and the plexus is the cricoid
+Answer: B
+Objective: III.4
+Why: At about C1 the parotid is lateral and posterior to the mandibular ramus, in front of the mastoid and the ear. The submandibular gland is farther anterior and inferior, under the mandibular body and above the hyoid. The brachial plexus has already left the canal. On a supraclavicular slice it is the soft-tissue bundle between the scalene muscles, posterior to the clavicle, not a structure inside the canal. The cricoid is the complete ring in the anterior midline neck.

@@ -105,3 +105,63 @@ D. The medical record number is stored only in HL7, never in a DICOM header
 Answer: B
 Objective: III.9
 Why: Answer B. The Patient Name attribute is only one identifier. Medical record number, birth date, accession number, device serial numbers, and even burned-in pixels on a radiograph can identify a person. DICOM has a de-identification profile that lists what to remove, keep, or replace. Clearing the name and exporting the rest is not anonymization. Dose calculation does not need the date of birth in the header. Identifiers are present in DICOM headers; they are not exclusive to HL7.
+
+### Q20
+Stem: The receiving system shows beams and monitor units and an empty contour list. The CT series and the RT Plan imported. Which object is missing, or is pointing at another series?
+A. RT Dose, because contours are stored only in the dose grid
+B. RT Image, because a digitally reconstructed radiograph is the contour object
+C. The RT Structure Set
+D. The CT Image, because an empty contour list means the voxels never arrived
+Answer: C
+Objective: III.9
+Why: Answer C. Contours live in the RT Structure Set, which references the CT series they were drawn on. Beams and monitor units can arrive in the RT Plan without that object. RT Dose is the three-dimensional dose grid. An RT Image is a projection, a digitally reconstructed radiograph or a portal. A CT that is present does not create the contours.
+
+### Q21
+Stem: An imported dose grid sits 2.5 cm superior to the planning CT origin along the patient axis. Pixel spacing along that axis is 1.0 mm. How many pixels is the shift, and what is the fix?
+A. 25 pixels; restore the shared frame and recheck a point dose, and do not move the patient until the wash covers the tattoos
+B. 2.5 pixels, and accept the histogram because the import message said complete
+C. 250 pixels, from treating the 1.0 mm spacing as if it were 1.0 cm
+D. 0 pixels, because a file that opens forces the dose origin onto the CT origin
+Answer: A
+Objective: II.1
+Why: Answer A. 2.5 cm / 0.1 cm = 25 pixels. A completed transfer is not a checked frame. A dose grid translated along the patient scores the wrong anatomy. A couch shift that makes the pictures look aligned treats the wrong coordinates.
+
+### Q22
+Stem: A planning CT and an MRI are exported together. The spatial-registration object that held the rigid transform between their frames of reference is not in the transfer. Both series open. What can still be wrong?
+A. The CT voxels are deleted when the registration object is dropped
+B. MRI signal is converted to Hounsfield units by the missing object, so fusion is no longer needed
+C. Only an RT Image can be displaced; an MRI stays locked to the CT origin
+D. The MRI can sit on the wrong origin relative to the CT even though both series imported
+Answer: D
+Objective: II.1
+Why: Answer D. That object stores the transform between two frames of reference. Without it, each series can open in its own frame and the MRI can be drawn in the wrong place on the CT. A successful import does not prove the frames match. MRI values are not Hounsfield units.
+
+### Q23
+Stem: A cone-beam series is stored as a CT-class image and sent to the planning system. Which statement matches what that object is?
+A. It is the commissioned planning CT, because the image class says CT
+B. It can be stored in the CT class and is still not the commissioned planning dataset used for dose
+C. It is an RT Dose object, so the pixel values are gray
+D. Its numbers are the simulator density table by definition
+Answer: B
+Objective: III.9
+Why: Answer B. A cone-beam or a megavoltage CT may be stored as a CT-class image. The class does not make it the simulator scan the planning calculation was commissioned on. Scatter and an unvalidated density relationship remain. The dose grid is a different object.
+
+### Q24
+Stem: A teaching-file export keeps the pixels and removes the Frame of Reference UID and the SOP Instance UIDs. The case still opens. What can that strip do?
+A. Nothing; those identifiers are display labels and do not connect objects
+B. It turns the RT Plan into an RT Image
+C. It is required before a point dose can be compared
+D. It can unlink the dose, the contours, and the CT, so the objects may open displaced or unattached
+Answer: D
+Objective: III.9
+Why: Answer D. The Frame of Reference UID is the coordinate contract, and SOP Instance UIDs are what the structure set and the dose point at. Clearing them is a different failure from clearing the patient name. Repair the identifiers. Do not nudge the anatomy until it looks right and then calculate.
+
+### Q25
+Stem: The import window says the transfer is complete. Which review is still required before anyone plans or treats from the received objects?
+A. Patient orientation, the isocenter against the simulation document, fraction dose and fraction count against the prescription, and a point dose against the system that exported the plan
+B. None; a complete message already certifies orientation, isocenter, fractionation, and point dose
+C. Only the color assigned to the cord
+D. Only that the RT Image carries the Hounsfield units
+Answer: A
+Objective: II.1
+Why: Answer A. DICOM makes the objects readable. It does not decide that they are the approved plan. Head-first versus feet-first, the isocenter, the fractionation, and a point dose are checked after the window says complete. Contour color is not that check, and an RT Image is not the Hounsfield volume.

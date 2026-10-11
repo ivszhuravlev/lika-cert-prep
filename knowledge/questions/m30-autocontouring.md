@@ -105,3 +105,63 @@ D. System B's correct laterality lowers its Dice by definition
 Answer: B
 Objective: III.10
 Why: Answer B. A mean is pulled by the typical case. Three serious failures in 30 patients can leave the average looking better for the system that is smoother on the easy majority. Prostate included inside the rectum is exactly the error that makes an optimizer "spare" the rectum by cutting the target, or that hides rectal dose. Acceptance testing has to look at the worst cases and at clinical failure modes, not only at mean Dice. One bad region does not force the whole-organ Dice to zero if the rest of the volume still overlaps.
+
+### Q20
+Stem: A physician cord is 10 cm³. The model cord is 10 cm³. The overlap is 8 cm³. What is the Dice coefficient, and what does that score fail to locate?
+A. 0.40, and the score shows that the missed 2 cm³ is outside the field
+B. 1.00, because the two volumes are equal
+C. 0.80, and the score does not say whether the unshared 2 cm³ of cord is in the high dose
+D. 8 cm³, because Dice is the overlap volume
+Answer: C
+Objective: III.10
+Why: Answer C. Dice = 2 × 8 / (10 + 10) = 16/20 = 0.80. Equal volumes are not a perfect overlap. The unshared portion of each contour is 2 cm³. If the physician's unshared 2 cm³ is the piece inside the field, a constraint on the model contour can pass while the physician contour fails. The score does not identify that piece.
+
+### Q21
+Stem: The physician's seminal-vesicle contour is 40 cm³. The model contour is 30 cm³ and lies entirely inside it, so the overlap is 30 cm³. What is Dice, and what is still missing?
+A. About 0.86, and the model never covers the other 10 cm³
+B. 0.75, from 30/40 alone
+C. 1.00, because the model is entirely inside the physician contour
+D. 0.30, because the overlap is 30 cm³
+Answer: A
+Objective: III.10
+Why: Answer A. Dice = 2 × 30 / (40 + 30) = 60/70 = 0.86. A score that looks strong can still miss 40 − 30 = 10 cm³. If that 10 cm³ is distal seminal vesicle or inferior cord, the histogram on the model is the wrong organ. Sitting inside the physician contour is not complete coverage.
+
+### Q22
+Stem: Which description is threshold segmentation, rather than an atlas warp or a trained model?
+A. Library contours are deformed onto today's CT
+B. A network trained on many scans predicts a label for each voxel
+C. A physician draws the gross target from the MRI
+D. Voxels are kept inside a Hounsfield window, which is how lung, external air, and cortical bone are often grown
+Answer: D
+Objective: III.10
+Why: Answer D. Threshold and region growing keep voxels inside a Hounsfield window. An atlas deforms a library patient's contours. A trained model predicts a label from many examples. A physician target is not an automatic method. The window fails when contrast, atelectasis, an airway, or a metal streak crosses it.
+
+### Q23
+Stem: A model draws a right kidney on a patient whose right kidney was removed. The left kidney looks reasonable. What is the correct use of the right-sided contour?
+A. Keep it; a model cannot label an organ that is absent
+B. Delete it. The model does not know the kidney is gone unless the image and the training set taught that pattern, and the empty side is checked
+C. Keep it and assign the missing kidney the density of cortical bone
+D. Keep it as the gross target, because an absent organ is a target by definition
+Answer: B
+Objective: III.10
+Why: Answer B. A network copies patterns it was trained on and can fill in a kidney the patient does not have. The empty side is part of the review. That contour is not bone and it is not a target.
+
+### Q24
+Stem: Organs at risk were edited and saved. At a later replan the system reloads the original model structure set and the edits are gone. What is the reloaded set?
+A. The reviewed set, because a reload prefers the edited contours
+B. Acceptable when the original Dice was above 0.80
+C. The unedited draft. Planning has to use the reviewed contours
+D. Safe, because the edits are stored in the dose grid and a reload cannot drop them
+Answer: C
+Objective: III.10
+Why: Answer C. Edited contours replace the automatic ones for planning. Reloading the unedited model undoes that review. A Dice threshold does not put the edits back, and contours are not stored in the dose grid.
+
+### Q25
+Stem: A constraint template looks for the structure name Parotid_L. The model wrote Lt Parotid. The gland is on the correct side and the shape is acceptable. What fails when the template runs?
+A. Nothing. A template matches laterality by color, not by name
+B. The template mirrors the gland onto the other side to force the name
+C. The Dice score renames the structure to Parotid_L
+D. The name does not match, so the parotid objective may never attach even though the gland is the correct organ
+Answer: D
+Objective: III.10
+Why: Answer D. A template recognizes an organ by the name it was built for. A correct shape under a different string can be skipped by the objective list. Color and Dice do not rename it. The name is corrected after the side has been checked.

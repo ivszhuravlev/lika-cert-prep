@@ -105,3 +105,63 @@ D. The magnet removes the bremsstrahlung contamination, so the energy should be 
 Answer: B
 Objective: III.13
 Why: Answer B. Nine MeV electrons have a practical range near 9/2 = 4.5 cm in water, which is why that energy was a candidate for a chest wall. A dense metal port is not water. It stops and backscatters electrons, so the tissue distal to the port can be cold while the upstream surface gets extra backscatter. The port has to be contoured, the shadow considered in the plan, and a different energy, a photon plan, or a port-aware arrangement discussed if the cold spot covers target. The magnet does not collimate the beam into a uniform skin boost, and it does not clean up photon contamination.
+
+### Q20
+Stem: A pacemaker contour lies outside the calculated grid. The planning system reports 0 Gy to the generator for a 6 MV pelvic course. What is that 0 Gy?
+A. A measured out-of-field dose
+B. Proof the device is under every management band in the cardiac-device report
+C. A neutron dose, so the energy can be raised to 18 MV
+D. Not an estimate. The grid never reached the device, so the grid is extended or the dose is measured
+Answer: D
+Objective: III.13
+Why: Answer D. A displayed 0 Gy from a contour outside the grid has not scored leakage and patient scatter. Out-of-field dose is a weak point of many algorithms. The number brought to the device report is an estimate that includes that region, or a measurement. It is not a reason to add a neutron-producing energy.
+
+### Q21
+Stem: One memorized generator limit, 2 Gy, is applied to every pacemaker and every defibrillator. What is wrong with that habit?
+A. Nothing. The cardiac-device report replaced dependence and vendor guidance with a single 2 Gy ceiling
+B. The report combines pacing dependence with the estimated device dose. One gray value is not the limit for every generator
+C. The 2 Gy figure applies only when the energy is 18 MV
+D. Defibrillators are exempt from any dose estimate
+Answer: B
+Objective: III.13
+Why: Answer B. Management scales with how dependent the patient is and with the dose that device is expected to receive. Confirm the category in the report for that generator. Two gray is not a universal ceiling, and 5 Gy is not a universal safe dose. Energy above about 10 MV is a separate neutron problem.
+
+### Q22
+Stem: Three gold prostate markers are contoured as the gross target, and the energy is raised from 6 MV to 18 MV because the markers are high-Z. Which statement matches their use?
+A. They are a localization surrogate, not the gross target. They perturb dose locally and are not a reason to raise the photon energy
+B. They are the gross target, and 18 MV is required so the markers do not cast a shadow
+C. They replace a rectal spacer and are overridden as air
+D. A bony match is preferred, because the markers cannot move relative to the gland
+Answer: A
+Objective: III.13
+Why: Answer A. Markers represent the target when the protocol says they do. They are not the tumor volume. High-Z seeds perturb dose in a small region. Neutrons from 18 MV are not the remedy. A bony match can look acceptable while the gland and the seeds have moved.
+
+### Q23
+Stem: Hydrogel between the prostate and the rectum is contoured as rectum. Its CT appearance is near soft tissue, and that contour is overridden to air. What is the error?
+A. None. Spacer gel is air and is part of the rectum
+B. None. The gel is a lead shield, and air is a conservative override
+C. The gel is its own structure, near water or soft tissue. It is not rectum, air, or metal
+D. The override is required because gel has the density of cortical bone
+Answer: C
+Objective: III.13
+Why: Answer C. Contour the spacer as its own structure. Do not assign it to rectum or to prostate, and do not override it as air or as metal. It works by distance. It does not stop the beam the way lead does.
+
+### Q24
+Stem: A rectal constraint was met only because spacer gel held about 1 cm between the prostate and the rectum. On a later scan the gel has been absorbed and the gap is gone. What follows?
+A. The original rectal histogram still describes the anatomy now being treated
+B. Loss of the gel lowers the rectal dose with no new calculation
+C. Absorption of the gel is a change in beam energy
+D. The plan that passed because of the gap does not still pass when the gap is gone. The geometry is rechecked
+Answer: D
+Objective: III.13
+Why: Answer D. Spacer gel can shift or be absorbed. A gap that shrinks is a change in anatomy. Rectal dose that depended on that centimeter of separation is not the dose on the later scan. Absorption is not an energy change, and it does not by itself spare the rectum.
+
+### Q25
+Stem: A cochlear implant sits beside a head-and-neck target. The stem prints no gray limit for that implant. Which planning behavior fits?
+A. Treat through it at 18 MV, because only cardiac devices have a neutron concern
+B. Keep it out of the primary beam, avoid neutron-producing energies, follow the vendor instruction, and do not invent a gray limit
+C. Contour it as a fiducial and match the isocenter to the implant instead of to the target
+D. Override it to air so the dose to the device becomes zero
+Answer: B
+Objective: III.13
+Why: Answer B. A cochlear implant, a deep-brain stimulator, or a pain pump is the same class of problem as other electronics: out of the primary beam, energy at or below about 10 MV unless qualified guidance says otherwise, the vendor's instruction, and a documented check. A number the stem did not give is not a limit to invent. An air override does not remove the hardware, and the implant is not the localization surrogate.
