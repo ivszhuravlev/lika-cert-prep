@@ -94,7 +94,7 @@ C. 12 MeV electrons cannot backscatter, so the eyelid dose falls to zero
 D. Eye shields are used only for total-body photon irradiation, never for electrons
 Answer: B
 Objective: III.6
-Why: Answer B. An internal eye shield protects the globe only if the electron energy is low enough that the shield stops the beam. At higher energy, electrons reach the shield and high-Z backscatter raises the dose to the conjunctiva and eyelid, which can be worse than the unshielded dose. Clinical internal shields are therefore restricted to low energies, commonly 6 MeV and below. Removing the degrader to chase thicker disease moves the beam out of that safe range; thicker plaques need a different field design, not a hotter energy behind the same shield.
+Why: Answer B. An internal eye shield protects the globe only if the electron energy is low enough that the shield stops the beam. At higher energy, electrons reach the shield and high-Z backscatter raises the dose to the conjunctiva and eyelid, which can be worse than the unshielded dose. Clinical internal shields are therefore restricted to low energies, about 9 MeV and below. Removing the degrader to chase thicker disease moves the beam out of that safe range; thicker plaques need a different field design, not a hotter energy behind the same shield.
 
 ### Q5
 Stem: The six patient positions in a classic total skin electron technique are used at an extended source-to-skin distance. Why six positions instead of a single anterior-posterior pair?

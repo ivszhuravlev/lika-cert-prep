@@ -212,7 +212,7 @@ Place values left of the point: 32, 16, 8, 4, 2, 1 for six bits. Right of the po
 - Binary place values in both directions, including a fraction such as 0.625 = 0.101, with the addition check.
 - A mixed SAD MU: equivalent square, then interpolation, then TMR in the denominator, wedge in the denominator, calibration stated, PDD kept out.
 - The wedge-omitted underdose on that same chain (delivered/prescribed = WF).
-- Electron energy from the author named in the stem: Khan-style 90% and about \(E/4\), Bentel-style 80% and about \(E/3\), plus about 2 MeV/cm, range about \(E/2\) cm, and lead about \(E/2\) mm.
+- Electron energy from the author named in the stem: Khan 90% about \(E/3.2\) and 80% about \(E/2.8\); Bentel 90% about \(E/4\) and 80% about \(E/3\); plus about 2 MeV/cm, range about \(E/2\) cm, and lead about \(E/2\) mm.
 - One memory pass across the course: NCRP 116 limits, two HVLs transmit 25%, point A is 2 cm by 2 cm, Monte Carlo at interfaces, pencil beam weak in lung, dosimetrist does not prescribe, RO-ILS is voluntary.
 
 A short mixed review, if you do nothing else in this module: write Mayneord’s two squared brackets and say “inverse square only”; write the SSD MU with PDD and the SAD MU with TMR on separate lines; write permanent-implant dose as initial dose rate × 1.443 × half-life; write \(H = \sum w_R D\) and the NCRP lens as 150 mSv when the stem says NCRP.

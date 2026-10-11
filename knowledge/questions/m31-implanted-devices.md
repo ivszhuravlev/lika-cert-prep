@@ -97,7 +97,7 @@ Objective: III.13
 Why: Answer B. Continuous glucose monitors and insulin pumps are implantable or wearable electronics with dose limits far below a therapeutic fraction. Direct irradiation can damage the sensor or the pump and can make the reading wrong at the moment it is most needed. They should be out of the primary beam if the anatomy allows, the patient needs a non-irradiated way to check glucose, and the device clinic should be involved when the manufacturer's limit will be exceeded. Raising the energy adds neutrons, which is the wrong direction for electronics. The pump is not a target surrogate.
 
 ### Q5
-Stem: A postmastectomy chest wall will be treated with 9 MeV electrons. The reconstruction includes a tissue expander with a dense magnetic port on the chest wall, inside the electron field. Using Khan's rule that the practical range is about E/2 in centimeters, what is the main dosimetric concern at the port?
+Stem: A postmastectomy chest wall will be treated with 9 MeV electrons. The reconstruction includes a tissue expander with a dense magnetic port on the chest wall, inside the electron field. Using the practical-range rule of about E/2 in centimeters, what is the main dosimetric concern at the port?
 A. The port is nearly transparent to 9 MeV electrons, so the chest wall under it receives the same dose as the surrounding tissue
 B. The high-Z port attenuates and backscatters electrons; tissue in its shadow can be underdosed, and the practical range of about 4.5 cm does not describe the path through metal
 C. The port focuses electrons and doubles the skin dose uniformly across the whole chest wall

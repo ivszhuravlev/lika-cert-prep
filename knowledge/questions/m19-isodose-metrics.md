@@ -4,8 +4,8 @@ Original practice items for CMD preparation. Not retired MDCB items and not a co
 
 Rules used in the electron items, stated so the arithmetic can be checked:
 
-- Khan: 90% depth ≈ E/4 cm, 80% depth ≈ E/3 cm, practical range Rp ≈ E/2 cm.
-- Bentel: 90% depth ≈ E/3.2 cm, 80% depth ≈ E/2.8 cm.
+- Khan: 90% depth ≈ E/3.2 cm, 80% depth ≈ E/2.8 cm, practical range Rp ≈ E/2 cm.
+- Bentel: 90% depth ≈ E/4 cm, 80% depth ≈ E/3 cm.
 - Energy loss in water ≈ 2 MeV/cm.
 - E is the nominal energy in MeV and depths are in centimeters of water.
 
@@ -19,7 +19,7 @@ C. 8 MeV
 D. 4 MeV, because the practical range consumes the whole beam at E/4
 Answer: C
 Objective: I.3
-Why: Answer C. Multiply path length by the rule-of-thumb stopping rate: 4.0 cm × 2 MeV/cm = 8 MeV removed. Remaining energy is 16 − 8 = 8 MeV. This is an average clinical approximation; the spectrum is broad and the most probable energy falls roughly linearly, but the exam arithmetic is 2 MeV/cm. A loss of 1 MeV/cm would leave 12 MeV, which is not the rule. The E/4 depth is the approximate 90% dose depth, not the depth where energy reaches zero. Energy is essentially exhausted near the practical range, which for 16 MeV is about 8 cm, not 4 cm.
+Why: Answer C. Multiply path length by the rule-of-thumb stopping rate: 4.0 cm × 2 MeV/cm = 8 MeV removed. Remaining energy is 16 − 8 = 8 MeV. This is an average clinical approximation; the spectrum is broad and the most probable energy falls roughly linearly, but the exam arithmetic is 2 MeV/cm. A loss of 1 MeV/cm would leave 12 MeV, which is not the rule. The E/4 depth is Bentel's approximate 90% dose depth, not the depth where energy reaches zero. Energy is essentially exhausted near the practical range, which for 16 MeV is about 8 cm, not 4 cm.
 
 ### Q2
 Stem: Using Rp ≈ E/2, what is the practical range of a 15 MeV electron beam in water, and what does that range mean?
@@ -29,7 +29,7 @@ C. 3.75 cm; this is the depth where half the energy remains
 D. 30 cm; practical range is 2E
 Answer: A
 Objective: I.3
-Why: Answer A. E/2 for 15 MeV is 15/2 = 7.5 cm. The practical range is where the electron percent-depth-dose curve, extrapolated, meets the bremsstrahlung tail. Past that depth the remaining dose is photon contamination, not electrons. The 90% depth on Khan's rule would be 15/4 = 3.75 cm, which is answer C's number used for the wrong endpoint. Doubling the energy gives a photon-like path, not an electron range.
+Why: Answer A. E/2 for 15 MeV is 15/2 = 7.5 cm. The practical range is where the electron percent-depth-dose curve, extrapolated, meets the bremsstrahlung tail. Past that depth the remaining dose is photon contamination, not electrons. Bentel's 90% depth would be 15/4 = 3.75 cm. Khan's 90% depth is 15/3.2 ≈ 4.7 cm. Answer C uses Bentel's 90% number for the wrong endpoint. Doubling the energy gives a photon-like path, not an electron range.
 
 ### Q3
 Stem: For a 12 MeV beam, what 90% depth and what 80% depth does Khan's rule predict?
@@ -37,9 +37,9 @@ A. 90% at 4.0 cm and 80% at 3.0 cm
 B. 90% at 3.0 cm and 80% at 4.0 cm
 C. 90% at 6.0 cm and 80% at 12 cm
 D. 90% at 3.75 cm and 80% at 4.3 cm
-Answer: B
+Answer: D
 Objective: I.3
-Why: Answer B. Khan places the 90% isodose at E/4 and the 80% isodose at E/3. For 12 MeV, E/4 = 3.0 cm and E/3 = 4.0 cm. The 80% point is deeper than the 90% point because percent depth dose is falling on the distal side of the electron curve. Answer A swaps those two depths. Answer C uses E/2 and E, which are not the therapeutic isodoses. Answer D is Bentel's approximation: 12/3.2 = 3.75 cm for 90% and 12/2.8 ≈ 4.3 cm for 80%. Those are a different author's rules.
+Why: Answer D. Khan places the 90% isodose at E/3.2 and the 80% isodose at E/2.8. For 12 MeV, 12/3.2 = 3.75 cm and 12/2.8 ≈ 4.3 cm. The 80% point is deeper than the 90% point because percent depth dose is falling on the distal side of the electron curve. Answer B is Bentel: E/4 = 3.0 cm and E/3 = 4.0 cm. Answer A swaps Bentel's two depths. Answer C uses E/2 and E, which are not the therapeutic isodoses.
 
 ### Q4
 Stem: How does surface dose of an electron beam change as the nominal energy is raised from 6 MeV to 20 MeV?
@@ -69,9 +69,9 @@ A. Khan 12 MeV, Bentel about 9.6 MeV; Khan asks for the higher energy
 B. Khan 9.6 MeV, Bentel 12 MeV; Bentel asks for the higher energy
 C. Both rules require 6 MeV, because both set the 90% depth at E/2
 D. Khan 3 MeV and Bentel 3.2 MeV, because the depth is multiplied by neither factor
-Answer: A
+Answer: B
 Objective: I.3
-Why: Answer A. Khan: 90% depth ≈ E/4, so E ≈ 4 × 3.0 = 12 MeV. Check: 12/4 = 3.0 cm. Bentel: 90% depth ≈ E/3.2, so E ≈ 3.2 × 3.0 = 9.6 MeV. A nominal 10 MeV beam would satisfy Bentel (10/3.2 = 3.1 cm, just past 3.0 cm) and would fail Khan (10/4 = 2.5 cm, short of 3.0 cm). The planning consequence is that quoting "the" electron rule without naming the author changes the energy by one nominal step. Answer B swaps the authors. E/2 is the practical range, about 6 cm at 12 MeV, not the 90% depth.
+Why: Answer B. Khan: 90% depth ≈ E/3.2, so E ≈ 3.2 × 3.0 = 9.6 MeV. Check: 9.6/3.2 = 3.0 cm. Bentel: 90% depth ≈ E/4, so E ≈ 4 × 3.0 = 12 MeV. A nominal 10 MeV beam satisfies Khan (10/3.2 = 3.1 cm) and fails Bentel (10/4 = 2.5 cm). Quoting the electron rule without naming the author changes the energy by one nominal step. Answer A swaps the authors. E/2 is the practical range, about 6 cm at 12 MeV, not the 90% depth.
 
 ### Q2
 Stem: A 9 MeV beam is selected using Khan's rules. What are the approximate 90% depth, 80% depth, and practical range?
@@ -79,9 +79,9 @@ A. 2.25 cm, 3.0 cm, and 4.5 cm
 B. 3.6 cm, 3.2 cm, and 9 cm
 C. 4.5 cm, 2.25 cm, and 3.0 cm
 D. 2.8 cm, 3.2 cm, and 4.5 cm
-Answer: A
+Answer: D
 Objective: I.3
-Why: Answer A. E/4 = 9/4 = 2.25 cm for the 90% depth. E/3 = 9/3 = 3.0 cm for the 80% depth. E/2 = 9/2 = 4.5 cm for the practical range. The three numbers get deeper in that order: 90%, then 80%, then the end of the electron component. Answer C uses the right magnitudes in the wrong order. Bentel would put the 90% depth at 9/3.2 ≈ 2.8 cm and the 80% depth at 9/2.8 ≈ 3.2 cm, which is answer D mixed with the correct practical range. Those are not Khan's depths.
+Why: Answer D. Khan: 90% at 9/3.2 ≈ 2.8 cm, 80% at 9/2.8 ≈ 3.2 cm, practical range 9/2 = 4.5 cm. The three numbers get deeper in that order. Answer A is Bentel: 9/4 = 2.25 cm and 9/3 = 3.0 cm, with the same practical range. Answer C puts the practical range first.
 
 ### Q3
 Stem: A 12 MeV electron field is abutted on the skin to a 6 MV photon field. Which junction pattern is the one to look for on the plan?
@@ -116,15 +116,15 @@ Why: Answer B. The shielding rule of thumb is millimeters of lead ≈ E/2, so 12
 ### Q6
 Stem: An internal eye shield is proposed under the eyelid for a 16 MeV electron lid treatment so the globe can be protected. Why is that shield a poor match to this energy?
 A. Internal shields are safe at 16 MeV because backscatter falls as energy rises
-B. At this energy, electrons reach the high-Z shield and backscatter into the eyelid; internal shields are restricted to low energies, typically about 6 MeV and below
+B. At this energy, electrons reach the high-Z shield and backscatter into the eyelid; internal shields are restricted to low energies, about 9 MeV and below
 C. 16 MeV electrons stop in 1 mm of tissue, so no shield is needed
 D. The shield converts the beam to photons and removes the need for a cutout
 Answer: B
 Objective: III.7
-Why: Answer B. An internal shield works only when the electron energy is low enough that the shield actually stops the beam. Sixteen MeV electrons have a practical range near 8 cm in water and will reach a thin lid shield. Electrons hitting lead or tungsten scatter back into the eyelid and conjunctiva and can raise that dose above the unshielded dose. Internal shields are therefore limited to low energy, commonly 6 MeV and below. A 16 MeV lid field needs a different technique, not a deeper shield of the same kind. The practical range is not 1 mm.
+Why: Answer B. An internal shield works only when the electron energy is low enough that the shield actually stops the beam. Sixteen MeV electrons have a practical range near 8 cm in water and will reach a thin lid shield. Electrons hitting lead or tungsten scatter back into the eyelid and conjunctiva and can raise that dose above the unshielded dose. Internal shields are therefore limited to low energy, about 9 MeV and below. A 16 MeV lid field needs a different technique, not a deeper shield of the same kind. The practical range is not 1 mm.
 
 ### Q7
-Stem: A 12 MeV beam with no bolus places the 90% isodose at about 3.0 cm in water by Khan's rule. A 1.0 cm tissue-equivalent bolus is added and the energy is unchanged. Where is the 90% isodose relative to the patient's skin?
+Stem: A 12 MeV beam with no bolus places the 90% isodose at about 3.0 cm in water by Bentel's rule. A 1.0 cm tissue-equivalent bolus is added and the energy is unchanged. Where is the 90% isodose relative to the patient's skin?
 A. Still at 3.0 cm, because bolus only changes output
 B. At about 2.0 cm, because 1.0 cm of the range is spent in the bolus
 C. At the skin surface exactly, for any bolus thickness

@@ -37,7 +37,7 @@ Bentel: E / 4 ≥ 3, so E ≥ 12 MeV. At 12 MeV, Bentel’s 90% depth is 12 / 4 
 
 Practical range at 12 MeV: 12 / 2 = 6 cm. A structure at 7 cm is past the electrons and sees only bremsstrahlung. A structure at 4 cm is still in the electron beam: remaining energy ≈ 12 − (2 MeV/cm × 4 cm) = 4 MeV.
 
-If the stem says Khan, 12 MeV is the first common energy that clears 3 cm, and 9 MeV does not. If the stem says Bentel, 12 MeV is the minimum and it lands exactly on 3 cm. Report the rule with the energy.
+If the stem says Khan, the minimum is 9.6 MeV, so a 10 MeV beam clears 3 cm (10/3.2 = 3.1 cm) and 9 MeV does not (9/3.2 = 2.8 cm). If the stem says Bentel, 12 MeV is the minimum and it lands exactly on 3 cm. Report the rule with the energy.
 
 Photon side of the same idea: a midline pelvic point on a large patient is a penetration problem. An 18 MV parallel-opposed pair spares the subcutaneous tissue relative to 6 MV and exits more. Once the plan is a multi-arc 6 MV VMAT, the energy choice has already been made for modulation and neutrons, and the arcs replace the high-energy laterals.
 

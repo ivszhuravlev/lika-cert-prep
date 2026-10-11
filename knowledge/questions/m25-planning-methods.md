@@ -35,14 +35,14 @@ Objective: III.7
 Why: Answer B. Photoneutrons appear in high-Z linac components once the photon energy is above about 10 MV. TG-203 therefore keeps cardiac implantable devices on beams of 10 MV or below even when the generator is outside the aperture. If 6 MV through a large separation is too hot laterally, the planner adds fields, changes beam angles, or uses a modulated plan at allowed energies. Electrons will not reach a pelvic midline. Cobalt-60 is about 1.25 MV and does not solve a 28 cm separation by being "above the neutron threshold"; it is below that threshold.
 
 ### Q4
-Stem: An electron energy is being chosen for a posterior cervical boost. The deepest target point that must sit on the 90% isodose is at 3.0 cm of water-equivalent depth. Using Khan's approximation that the 90% depth in centimeters is E/4, what energy is required?
+Stem: An electron energy is being chosen for a posterior cervical boost. The deepest target point that must sit on the 90% isodose is at 3.0 cm of water-equivalent depth. Using Bentel's approximation that the 90% depth in centimeters is E/4, what energy is required?
 A. 6 MeV, because 6/4 = 1.5 cm
 B. 9 MeV, because 9/4 = 2.25 cm
 C. 12 MeV, because 12/4 = 3.0 cm
 D. 15 MeV, because the 90% depth is E/2 = 7.5 cm and 15 MeV is the next energy above 3 cm
 Answer: C
 Objective: III.7
-Why: Answer C. Khan's planning rule puts the 90% isodose at about E/4 centimeters. Setting E/4 = 3.0 gives E = 12 MeV. Check: 12/4 = 3.0 cm, which lands on the distal target. Six MeV reaches 90% at about 1.5 cm and 9 MeV at about 2.25 cm, both short of 3 cm. The E/2 rule is the practical range, not the 90% depth; using it as if it were the therapeutic isodose would pick an energy that is hot and too penetrating. Bentel's 90% approximation (about E/3.2) would give 3.2 × 3.0 = 9.6 MeV, so a 10 MeV beam would look adequate under Bentel and inadequate under Khan. The stem asked for Khan.
+Why: Answer C. Bentel's planning rule puts the 90% isodose at about E/4 centimeters. Setting E/4 = 3.0 gives E = 12 MeV. Check: 12/4 = 3.0 cm, which lands on the distal target. Six MeV reaches 90% at about 1.5 cm and 9 MeV at about 2.25 cm, both short of 3 cm. The E/2 rule is the practical range, not the 90% depth. Khan's 90% approximation (about E/3.2) would give 3.2 × 3.0 = 9.6 MeV, so a 10 MeV beam would look adequate under Khan (10/3.2 = 3.1 cm) and inadequate under Bentel (10/4 = 2.5 cm). The stem asked for Bentel.
 
 ### Q5
 Stem: A chest-wall electron field of 9 MeV is aimed at a thin chest wall that is 1.5 cm of soft tissue, then lung. The planning CT assigns the lung a relative density of 0.25. Using a practical range of E/2 and the 2 MeV/cm rule only as a check, about how far into the lung can the electrons still travel?

@@ -327,14 +327,14 @@ Objective: III.8
 Why: The set is V50 < 50, V60 < 35, V65 < 25, V70 < 20, V75 < 15, read together. V60 = 38% exceeds 35% by 38 − 35 = 3 percentage points, so the set is not met. The others pass: 44 < 50, 20 < 25, 16 < 20, and 10 < 15. V75 at 10% is under 15%. One passing volume does not replace the whole set.
 
 ### Q28
-Stem: Using Khan's rule of thumb, the depth of the 80% electron isodose in cm is about E/3. For 12 MeV, what is that depth?
+Stem: Using Bentel's rule of thumb, the depth of the 80% electron isodose in cm is about E/3. For 12 MeV, what is that depth?
 A. 4 cm
 B. 6 cm
 C. 3 cm
 D. 12 cm
 Answer: A
 Objective: III.1
-Why: 80% depth ≈ 12 / 3 = 4 cm. Practical range ≈ 12 / 2 = 6 cm. 90% depth ≈ 12 / 4 = 3 cm. Energy loss is about 2 MeV/cm. Correct choice: 4 cm. 6 cm is E/2, the practical range, not the 80% depth. 3 cm is E/4, closer to the 90% depth rule. 12 cm would be 1 cm per MeV, far beyond the electron range.
+Why: Bentel's 80% depth ≈ 12 / 3 = 4 cm. Practical range ≈ 12 / 2 = 6 cm. Bentel's 90% depth ≈ 12 / 4 = 3 cm. Khan's 80% depth for the same beam is 12/2.8 ≈ 4.3 cm, not this item. Correct choice: 4 cm. 6 cm is E/2, the practical range. 3 cm is Bentel's 90% depth. 12 cm would be 1 cm per MeV, far beyond the electron range.
 
 ### Q29
 Stem: Practice exam 1. Use the electron lead-shield rule of thumb, thickness in mm about equal to E/2 where E is in MeV. How much lead for a 16 MeV beam?
