@@ -160,6 +160,50 @@ def road_messages(module: Module, progress: Progress, per_block: int = 8) -> lis
     ]
 
 
+def road_blocks(module: Module, progress: Progress, *, limit: int = 3800) -> list[str]:
+    """One paste per block. Each string fits in a single Telegram message."""
+    items = [item for item in ordered(module.items, progress, ear_only=True) if rank(item, progress)[0] < 2]
+    if len(items) < 4:
+        items = ordered(module.items, progress, ear_only=True)
+    items = items[:24]
+    if not items:
+        return []
+    groups: list[list] = []
+    current: list = []
+    for item in items:
+        trial = current + [item]
+        if current and len(_render_road_block(module, trial, 1, 99)) > limit:
+            groups.append(current)
+            current = [item]
+        else:
+            current = trial
+    if current:
+        groups.append(current)
+    total = len(groups)
+    return [_render_road_block(module, group, index, total) for index, group in enumerate(groups, start=1)]
+
+
+def _render_road_block(module: Module, items: list, index: int, total: int) -> str:
+    lines = [
+        f"Скопируй это сообщение целиком в новый чат. Блок {index} из {total}.",
+        "",
+        ROAD_RULES,
+        "",
+        f"Модуль: {module.title}.",
+        "Здесь только этот блок. Начни с вопроса 1. Вопросов из других блоков здесь нет.",
+        "",
+    ]
+    for number, item in enumerate(items, start=1):
+        lines.append(f"### {number}. {item.lesson}")
+        lines.append(item.stem)
+        for letter in "ABCD":
+            lines.append(f"{letter}. {item.choices[letter]}")
+        lines.append(f"Верно: {item.answer}. {item.answer_text}")
+        lines.append(f"Why: {item.why}")
+        lines.append("")
+    return "\n".join(lines).rstrip()
+
+
 def road_prompt(module: Module, progress: Progress, per_block: int = 8) -> str:
     """One paste for a voice chat. Answers sit in the pack; the rules say to wait."""
     messages = road_messages(module, progress, per_block)

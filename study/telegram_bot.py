@@ -21,7 +21,7 @@ from study.engine import (
     grade_number,
     ordered,
     problems,
-    road_prompt,
+    road_blocks,
 )
 from study.translate import Translator, _same_english
 
@@ -202,19 +202,32 @@ def ask_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> Non
         )
         return
     if mode == "road":
-        prompt = road_prompt(module, progress)
-        if not prompt:
-            tg.send(chat_id, "В этом модуле нет слуховых вопросов.", keyboard=keys(state))
+        blocks = road_blocks(module, progress)
+        if not blocks:
+            tg.send(chat_id, place(state, module, "в дорогу") + "\n\nВ этом модуле нет слуховых вопросов.", keyboard=keys(state))
+            state["mode"] = ""
             return
-        tg.send(
-            chat_id,
-            "Скопируй это в новый голосовой чат. Задачи на лист туда не входят.\n\n"
-            + place(state, module, "промпт для дороги")
-            + "\n\n"
-            + prompt,
-            keyboard=keys(state),
-        )
-        state["mode"] = ""
+        index = int(state.get("road_i", 0))
+        if index >= len(blocks):
+            tg.send(chat_id, place(state, module, "в дорогу") + "\n\nБлоки кончились.", keyboard=keys(state))
+            state["mode"] = ""
+            return
+        tg.send(chat_id, blocks[index])
+        state["road_i"] = index + 1
+        if index + 1 < len(blocks):
+            tg.send(
+                chat_id,
+                place(state, module, f"блок {index + 1} из {len(blocks)} уже выше")
+                + "\n\nСкопируй верхнее сообщение целиком. Это короткое не копируй.\nСледующий блок — кнопка «Следующий блок».",
+                keyboard=keys(state, ["Следующий блок"]),
+            )
+        else:
+            tg.send(
+                chat_id,
+                place(state, module, f"блок {index + 1} из {len(blocks)}, последний")
+                + "\n\nСкопируй верхнее сообщение. Дальше блоков нет.",
+                keyboard=keys(state),
+            )
         return
     if mode == "problems":
         pool = problems(ordered(module.items, progress))
@@ -307,9 +320,15 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
         state["mode"] = MODES[low]
         state["cursor"] = 0
         state["item_id"] = ""
+        state["road_i"] = 0
+        ask_next(tg, chat_id, state, progress)
+        return
+    if low == "следующий блок" and state.get("mode") == "road":
         ask_next(tg, chat_id, state, progress)
         return
     if low == "дальше" and state.get("mode") == "theory":
+        ask_next(tg, chat_id, state, progress)
+        return
         ask_next(tg, chat_id, state, progress)
         return
     module = find_module(load_modules(), raw) if not state.get("item_id") or low[:1] not in "abcd" else None
