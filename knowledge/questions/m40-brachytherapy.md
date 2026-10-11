@@ -35,7 +35,7 @@ Objective: V.1
 Why: I-125 permanent seeds emit low-energy photons and stay in the prostate. Total dose uses the mean life, 1.443 × half-life, because the source is never removed. Correct choice: Low-energy photon seeds left in place. That is Ir-192 HDR, not a permanent seed implant. Cs-137 LDR tubes are temporary implants. Co-60 teletherapy is an external beam.
 
 ### Q4
-Stem: An Ir-192 HDR source had a calibration activity of 10 Ci. Activity at calibration was 10 Ci. Elapsed time is 14 days. Half-life is 73.8 days. Remaining activity = A0 × (1/2)^(t/T½). What activity remains?
+Stem: An Ir-192 HDR source had a calibration activity of 10 Ci. Elapsed time is 14 days. The half-life is 73.8 days. What activity remains?
 A. 8.77 Ci
 B. 8.10 Ci
 C. 5.00 Ci
@@ -77,7 +77,7 @@ Objective: V.2
 Why: LDR is about 0.4–2 Gy/h, medium dose rate sits between that and HDR, and HDR is above 12 Gy/h. An Ir-192 afterloader is HDR. Correct choice: Above 12 Gy/h. That range is LDR. That is far below even LDR. That middle band is medium dose rate, not HDR.
 
 ### Q3
-Stem: HDR cylinder course, tumor α/β = 10 Gy. Four fractions. A course is 4 fractions of 7 Gy. Use α/β = 10 Gy. EQD2 = BED / (1 + 2/(α/β)), with BED = n×d×(1 + d/(α/β)). What is the EQD2?
+Stem: An HDR cylinder course is 4 fractions of 7 Gy. Tumor α/β = 10 Gy. What is the EQD2?
 A. 47.6 Gy
 B. 28.0 Gy
 C. 39.7 Gy
@@ -213,7 +213,7 @@ Why: A tube that is too long or on the wrong channel puts the dwells in the wron
 ## Secondary/Independent Calculations
 
 ### Q1
-Stem: Independent check. Decay the HDR source strength before comparing dwell times. Activity at calibration was 8.5 Ci. Elapsed time is 21 days. Half-life is 73.8 days. Remaining activity = A0 × (1/2)^(t/T½). What activity remains?
+Stem: Independent check. Decay the HDR source strength before comparing dwell times. Activity at calibration was 8.5 Ci. Elapsed time is 21 days. The half-life is 73.8 days. What activity remains?
 A. 6.08 Ci
 B. 6.98 Ci
 C. 4.25 Ci
@@ -223,7 +223,7 @@ Objective: V.6
 Why: Number of half-lives = 21/73.8 = 0.2846. Fraction remaining = (1/2)^(0.2846) = 0.8210. Activity = 8.5 × 0.8210 = 6.9785 Ci, reported as 6.98 Ci. The same fraction is e^(−ln(2) × t/T½) = e^(−0.6931 × 0.2846) = 0.8210. A linear model A0×(1−t/T½) gives 6.08 Ci and is not radioactive decay. Assuming a full half-life has passed and taking half of A0 gives 4.25 Ci. Using the mean life (1.443×T½) in place of the half-life inside (1/2)^(t/T) gives 7.41 Ci. Decay itself is e^(−t/mean life), which is the same as (1/2)^(t/T½), so the mean life does not belong in that exponent as a substitute half-life.
 
 ### Q2
-Stem: Independent check. Air-kerma strength was 41200 U at calibration. Activity at calibration was 41200 U. Elapsed time is 7 days. Half-life is 73.8 days. Remaining activity = A0 × (1/2)^(t/T½). What activity remains?
+Stem: Independent check. Air-kerma strength at calibration was 41200 U. Elapsed time is 7 days. The half-life is 73.8 days. What activity remains?
 A. 38578 U
 B. 37292 U
 C. 20600 U
@@ -233,7 +233,7 @@ Objective: V.6
 Why: Number of half-lives = 7/73.8 = 0.0949. Fraction remaining = (1/2)^(0.0949) = 0.9364. Activity = 41200 × 0.9364 = 38578.4021 U, reported as 38578 U. The same fraction is e^(−ln(2) × t/T½) = e^(−0.6931 × 0.0949) = 0.9364. A linear model A0×(1−t/T½) gives 37292 U and is not radioactive decay. Assuming a full half-life has passed and taking half of A0 gives 20600 U. Using the mean life (1.443×T½) in place of the half-life inside (1/2)^(t/T) gives 39365 U. Decay itself is e^(−t/mean life), which is the same as (1/2)^(t/T½), so the mean life does not belong in that exponent as a substitute half-life.
 
 ### Q3
-Stem: Independent check. I-125 point, all TG-43 factors given. TG-43 point: air-kerma strength Sk = 2.5 U, dose-rate constant Λ = 0.965 cGy/(h·U), geometry function ratio G/G0 = 1, radial dose function g(r) = 0.94, anisotropy F = 0.97. Dose rate = Sk × Λ × (G/G0) × g(r) × F. What is the dose rate?
+Stem: Independent check of an I-125 point. Air-kerma strength Sk = 2.5 U, dose-rate constant Λ = 0.965 cGy/(h·U), geometry function ratio G/G0 = 1, radial dose function g(r) = 0.94, and anisotropy F = 0.97. What is the dose rate?
 A. 2.27 cGy/h
 B. 2.20 cGy/h
 C. 2.34 cGy/h
@@ -243,7 +243,7 @@ Objective: V.6
 Why: Substitute 2.5 × 0.965 = 2.4125. × 1 = 2.4125. × 0.94 = 2.2677. × 0.97 = 2.1997 cGy/h, reported as 2.20 cGy/h. Leaving out anisotropy is a common independent-check miss when the point is not on the transverse axis, where F is not 1. Dropping anisotropy gives 2.27 cGy/h. Using only Sk × Λ × F and dropping geometry and radial dose gives 2.34 cGy/h. Stopping after Sk × Λ gives 2.41 cGy/h.
 
 ### Q4
-Stem: Independent check. Off-axis HDR point with anisotropy not equal to 1. TG-43 point: air-kerma strength Sk = 10 U, dose-rate constant Λ = 1.115 cGy/(h·U), geometry function ratio G/G0 = 0.9, radial dose function g(r) = 0.99, anisotropy F = 0.88. Dose rate = Sk × Λ × (G/G0) × g(r) × F. What is the dose rate?
+Stem: Independent check of an off-axis HDR point. Air-kerma strength Sk = 10 U, dose-rate constant Λ = 1.115 cGy/(h·U), geometry function ratio G/G0 = 0.9, radial dose function g(r) = 0.99, and anisotropy F = 0.88. What is the dose rate?
 A. 9.93 cGy/h
 B. 9.81 cGy/h
 C. 9.71 cGy/h
@@ -253,7 +253,7 @@ Objective: V.6
 Why: Substitute 10 × 1.115 = 11.1500. × 0.9 = 10.0350. × 0.99 = 9.9346. × 0.88 = 8.7425 cGy/h, reported as 8.74 cGy/h. Leaving out anisotropy is a common independent-check miss when the point is not on the transverse axis, where F is not 1. Dropping anisotropy gives 9.93 cGy/h. Using only Sk × Λ × F and dropping geometry and radial dose gives 9.81 cGy/h. Dropping the geometry ratio gives 9.71 cGy/h.
 
 ### Q5
-Stem: Independent check of a permanent implant total dose. A permanent I-125 implant has initial dose rate 7 cGy/h and half-life 59.4 days. Total dose to complete decay = dose rate × 1.443 × half-life, with the half-life converted to hours so the units match the dose rate. What is the total dose, to the nearest cGy?
+Stem: Independent check of a permanent implant. A permanent I-125 implant has an initial dose rate of 7 cGy/h and a half-life of 59.4 days. What is the total dose to complete decay, to the nearest cGy?
 A. 6916 cGy
 B. 14400 cGy
 C. 9979 cGy
@@ -263,7 +263,7 @@ Objective: V.6
 Why: 1.443 × half-life is the mean life. The source is never removed, so the total dose is initial dose rate times mean life, not times half-life and not times 0.693. Mean life = 1.443 × 59.4 = 85.7142 days = 85.7142 × 24 = 2057.1408 hours. Total dose = 7 cGy/h × 2057.1408 h = 14400.0 cGy, reported as 14400 cGy. In one line: 7 × 1.443 × 59.4 × 24 = 14400.0. Replacing 1.443 with 0.693 uses ln(2) instead of the mean-life factor 1/ln(2) and gives 6916 cGy. Multiplying dose rate by the half-life in hours but forgetting the 1.443 mean-life factor gives 9979 cGy. Forgetting to convert days to hours (omitting ×24) gives 600 cGy, which is numerically a dose rate times a day-count and is far too small.
 
 ### Q6
-Stem: Independent check. Dose rate is per hour. A permanent Pd-103 implant has initial dose rate 10 cGy/h and half-life 17 days. Total dose to complete decay = dose rate × 1.443 × half-life, with the half-life converted to hours so the units match the dose rate. What is the total dose, to the nearest cGy?
+Stem: Independent check. A permanent Pd-103 implant has an initial dose rate of 10 cGy/h and a half-life of 17 days. What is the total dose to complete decay, to the nearest cGy?
 A. 5887 cGy
 B. 2827 cGy
 C. 4080 cGy
@@ -273,7 +273,7 @@ Objective: V.6
 Why: 1.443 × half-life is the mean life. The source is never removed, so the total dose is initial dose rate times mean life, not times half-life and not times 0.693. Mean life = 1.443 × 17 = 24.5310 days = 24.5310 × 24 = 588.7440 hours. Total dose = 10 cGy/h × 588.7440 h = 5887.4 cGy, reported as 5887 cGy. In one line: 10 × 1.443 × 17 × 24 = 5887.4. Replacing 1.443 with 0.693 uses ln(2) instead of the mean-life factor 1/ln(2) and gives 2827 cGy. Multiplying dose rate by the half-life in hours but forgetting the 1.443 mean-life factor gives 4080 cGy. Forgetting to convert days to hours (omitting ×24) gives 245 cGy, which is numerically a dose rate times a day-count and is far too small.
 
 ### Q7
-Stem: Independent check. Dose rate is already in cGy/day. Initial dose rate is 40 cGy/day and the half-life is 60 days. Total dose = dose rate × 1.443 × half-life. The dose rate is already per day, so do not convert the half-life to hours. What is the total dose to the nearest cGy?
+Stem: Independent check. The initial dose rate is 40 cGy/day and the half-life is 60 days. What is the total dose to complete decay, to the nearest cGy?
 A. 3463 cGy
 B. 1663 cGy
 C. 2400 cGy
@@ -283,7 +283,7 @@ Objective: V.6
 Why: Units already match, so mean life in days is 1.443 × 60 = 86.5800 days. Total = 40 × 1.443 × 60 = 40 × 86.5800 = 3463.20 cGy, reported as 3463 cGy. Using 0.693 instead of 1.443 gives 1663 cGy. Using the half-life with no mean-life factor gives 2400 cGy. Multiplying by an extra 24, as if the dose rate were per hour, gives 83117 cGy.
 
 ### Q8
-Stem: Independent check. Γ is stated per mCi, and 10000 mCi is the activity used here. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 10000 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Independent check. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 10000 mCi. Distance is 100 cm. What is the exposure rate?
 A. 469.00 R/h
 B. 4.69 R/h
 C. 4.69 mR/h
@@ -305,7 +305,7 @@ Objective: V.4
 Why: Net = post − background = 0.18 − 0.03 = 0.15 mR/h. A survey that forgets to subtract background overstates the implant. Correct choice: 0.15 mR/h. 0.18 includes background. Adding background instead of subtracting it gives 0.21. 0.03 is the background alone.
 
 ### Q2
-Stem: Bedside survey estimate. Activity and Γ are given. Distance is 100 cm. The exposure-rate constant Γ is 4.6 R·cm²/(mCi·h). Activity is 5000 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Bedside survey estimate. The exposure-rate constant Γ is 4.6 R·cm²/(mCi·h). Activity is 5000 mCi. Distance is 100 cm. What is the exposure rate?
 A. 2.30 R/h
 B. 230.00 R/h
 C. 2.30 mR/h
@@ -399,7 +399,7 @@ Why: License conditions require inventory and accountability. A missing source t
 ## Brachytherapy Quiz
 
 ### Q1
-Stem: Quiz. Decay Ir-192. Activity at calibration was 6.2 Ci. Elapsed time is 30 days. Half-life is 73.8 days. Remaining activity = A0 × (1/2)^(t/T½). What activity remains?
+Stem: Quiz. An Ir-192 source had a calibration activity of 6.2 Ci. Elapsed time is 30 days. The half-life is 73.8 days. What activity remains?
 A. 3.68 Ci
 B. 4.68 Ci
 C. 3.10 Ci
@@ -409,7 +409,7 @@ Objective: V.6
 Why: Number of half-lives = 30/73.8 = 0.4065. Fraction remaining = (1/2)^(0.4065) = 0.7544. Activity = 6.2 × 0.7544 = 4.6776 Ci, reported as 4.68 Ci. The same fraction is e^(−ln(2) × t/T½) = e^(−0.6931 × 0.4065) = 0.7544. A linear model A0×(1−t/T½) gives 3.68 Ci and is not radioactive decay. Assuming a full half-life has passed and taking half of A0 gives 3.10 Ci. Using the mean life (1.443×T½) in place of the half-life inside (1/2)^(t/T) gives 5.10 Ci. Decay itself is e^(−t/mean life), which is the same as (1/2)^(t/T½), so the mean life does not belong in that exponent as a substitute half-life.
 
 ### Q2
-Stem: Quiz. Permanent implant total dose. A permanent I-125 implant has initial dose rate 5 cGy/h and half-life 59.4 days. Total dose to complete decay = dose rate × 1.443 × half-life, with the half-life converted to hours so the units match the dose rate. What is the total dose, to the nearest cGy?
+Stem: Quiz. A permanent I-125 implant has an initial dose rate of 5 cGy/h and a half-life of 59.4 days. What is the total dose to complete decay, to the nearest cGy?
 A. 10286 cGy
 B. 4940 cGy
 C. 7128 cGy
@@ -419,7 +419,7 @@ Objective: V.6
 Why: 1.443 × half-life is the mean life. The source is never removed, so the total dose is initial dose rate times mean life, not times half-life and not times 0.693. Mean life = 1.443 × 59.4 = 85.7142 days = 85.7142 × 24 = 2057.1408 hours. Total dose = 5 cGy/h × 2057.1408 h = 10285.7 cGy, reported as 10286 cGy. In one line: 5 × 1.443 × 59.4 × 24 = 10285.7. Replacing 1.443 with 0.693 uses ln(2) instead of the mean-life factor 1/ln(2) and gives 4940 cGy. Multiplying dose rate by the half-life in hours but forgetting the 1.443 mean-life factor gives 7128 cGy. Forgetting to convert days to hours (omitting ×24) gives 429 cGy, which is numerically a dose rate times a day-count and is far too small.
 
 ### Q3
-Stem: Quiz. Γ = 8.25 R·cm²/(mCi·h), activity 10 mCi, distance 50 cm. The exposure-rate constant Γ is 8.25 R·cm²/(mCi·h). Activity is 10 mCi. Distance is 50 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Quiz. The exposure-rate constant Γ is 8.25 R·cm²/(mCi·h). Activity is 10 mCi. Distance is 50 cm. What is the exposure rate?
 A. 1.650 R/h
 B. 0.033 R/h
 C. 0.033 mR/h
@@ -429,7 +429,7 @@ Objective: V.6
 Why: Substitute 8.25 × 10 / (50)^2 = 82.5 / 2500 = 0.033000 R/h, reported as 0.033 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 1.650 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.033 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.008 R/h.
 
 ### Q4
-Stem: Quiz. Three HDR fractions of 8 Gy, α/β = 10 Gy. Find BED. A course is 3 fractions of 8 Gy. Use α/β = 10 Gy. BED = n × d × (1 + d/(α/β)). What is the BED?
+Stem: Quiz. An HDR course is 3 fractions of 8 Gy. Use α/β = 10 Gy. What is the BED?
 A. 24.0 Gy
 B. 54.0 Gy
 C. 36.0 Gy
@@ -439,7 +439,7 @@ Objective: V.6
 Why: Physical dose = 3 × 8 = 24 Gy. Relative effectiveness = 1 + 8/10 = 1 + 0.8000 = 1.8000. BED = 24 × 1.8000 = 43.20 Gy, reported as 43.2 Gy. EQD2 would divide this BED by (1 + 2/(α/β)) = 1.2000, giving 36.00 Gy. That is a different question. Stopping at the physical dose gives 24.0 Gy and omits the fraction-size term. Inverting the fraction-size term to 1+(α/β)/d gives 54.0 Gy. Reporting the EQD2 (36.0 Gy) answers a different quantity than BED.
 
 ### Q5
-Stem: Quiz. Same three fractions. Find EQD2, not BED. A course is 3 fractions of 8 Gy. Use α/β = 10 Gy. EQD2 = BED / (1 + 2/(α/β)), with BED = n×d×(1 + d/(α/β)). What is the EQD2?
+Stem: Quiz. The same HDR course is 3 fractions of 8 Gy. Use α/β = 10 Gy. What is the EQD2?
 A. 36.0 Gy
 B. 43.2 Gy
 C. 24.0 Gy
@@ -449,7 +449,7 @@ Objective: V.6
 Why: Physical dose = 3 × 8 = 24 Gy. BED = 24 × (1 + 8/10) = 24 × 1.8000 = 43.20 Gy. The 2 Gy denominator factor is 1 + 2/10 = 1.2000. EQD2 = 43.20 / 1.2000 = 36.00 Gy, reported as 36.0 Gy. If the fraction size is already 2 Gy, EQD2 equals the physical dose for any α/β. Here the fraction size is 8 Gy, so that shortcut applies only when d = 2. Stopping at the BED and not dividing by (1+2/(α/β)) gives 43.2 Gy. Reporting only the physical dose gives 24.0 Gy. Using α/β = 3 Gy instead of 10 Gy gives 52.8 Gy.
 
 ### Q6
-Stem: Quiz. TG-43 with a radial dose function below 1. TG-43 point: air-kerma strength Sk = 1.8 U, dose-rate constant Λ = 1 cGy/(h·U), geometry function ratio G/G0 = 1, radial dose function g(r) = 0.9, anisotropy F = 1. Dose rate = Sk × Λ × (G/G0) × g(r) × F. What is the dose rate?
+Stem: Quiz. TG-43 point with a radial dose function below 1. Air-kerma strength Sk = 1.8 U, dose-rate constant Λ = 1 cGy/(h·U), geometry function ratio G/G0 = 1, radial dose function g(r) = 0.9, and anisotropy F = 1. What is the dose rate?
 A. 1.80 cGy/h
 B. 2.00 cGy/h
 C. 1.46 cGy/h
@@ -481,7 +481,7 @@ Why: Point A belongs to intracavitary cervical brachytherapy. It is 2 cm superio
 ## Brachytherapy Calculations
 
 ### Q1
-Stem: Calculation. Initial dose rate 8 cGy/h. A permanent I-125 implant has initial dose rate 8 cGy/h and half-life 59.4 days. Total dose to complete decay = dose rate × 1.443 × half-life, with the half-life converted to hours so the units match the dose rate. What is the total dose, to the nearest cGy?
+Stem: Calculation. A permanent I-125 implant has an initial dose rate of 8 cGy/h and a half-life of 59.4 days. What is the total dose to complete decay, to the nearest cGy?
 A. 7904 cGy
 B. 11405 cGy
 C. 16457 cGy
@@ -491,7 +491,7 @@ Objective: V.6
 Why: 1.443 × half-life is the mean life. The source is never removed, so the total dose is initial dose rate times mean life, not times half-life and not times 0.693. Mean life = 1.443 × 59.4 = 85.7142 days = 85.7142 × 24 = 2057.1408 hours. Total dose = 8 cGy/h × 2057.1408 h = 16457.1 cGy, reported as 16457 cGy. In one line: 8 × 1.443 × 59.4 × 24 = 16457.1. Replacing 1.443 with 0.693 uses ln(2) instead of the mean-life factor 1/ln(2) and gives 7904 cGy. Multiplying dose rate by the half-life in hours but forgetting the 1.443 mean-life factor gives 11405 cGy. Forgetting to convert days to hours (omitting ×24) gives 686 cGy, which is numerically a dose rate times a day-count and is far too small.
 
 ### Q2
-Stem: Calculation. Half-life 9.7 days, dose rate per hour. A permanent Cs-131 implant has initial dose rate 12 cGy/h and half-life 9.7 days. Total dose to complete decay = dose rate × 1.443 × half-life, with the half-life converted to hours so the units match the dose rate. What is the total dose, to the nearest cGy?
+Stem: Calculation. A permanent Cs-131 implant has an initial dose rate of 12 cGy/h and a half-life of 9.7 days. What is the total dose to complete decay, to the nearest cGy?
 A. 1936 cGy
 B. 4031 cGy
 C. 2794 cGy
@@ -501,7 +501,7 @@ Objective: V.6
 Why: 1.443 × half-life is the mean life. The source is never removed, so the total dose is initial dose rate times mean life, not times half-life and not times 0.693. Mean life = 1.443 × 9.7 = 13.9971 days = 13.9971 × 24 = 335.9304 hours. Total dose = 12 cGy/h × 335.9304 h = 4031.2 cGy, reported as 4031 cGy. In one line: 12 × 1.443 × 9.7 × 24 = 4031.2. Replacing 1.443 with 0.693 uses ln(2) instead of the mean-life factor 1/ln(2) and gives 1936 cGy. Multiplying dose rate by the half-life in hours but forgetting the 1.443 mean-life factor gives 2794 cGy. Forgetting to convert days to hours (omitting ×24) gives 168 cGy, which is numerically a dose rate times a day-count and is far too small.
 
 ### Q3
-Stem: Calculation. Short half-life, dose rate per hour. A permanent Au-198 implant has initial dose rate 20 cGy/h and half-life 2.7 days. Total dose to complete decay = dose rate × 1.443 × half-life, with the half-life converted to hours so the units match the dose rate. What is the total dose, to the nearest cGy?
+Stem: Calculation. A permanent Au-198 implant has an initial dose rate of 20 cGy/h and a half-life of 2.7 days. What is the total dose to complete decay, to the nearest cGy?
 A. 898 cGy
 B. 1296 cGy
 C. 78 cGy
@@ -511,7 +511,7 @@ Objective: V.6
 Why: 1.443 × half-life is the mean life. The source is never removed, so the total dose is initial dose rate times mean life, not times half-life and not times 0.693. Mean life = 1.443 × 2.7 = 3.8961 days = 3.8961 × 24 = 93.5064 hours. Total dose = 20 cGy/h × 93.5064 h = 1870.1 cGy, reported as 1870 cGy. In one line: 20 × 1.443 × 2.7 × 24 = 1870.1. Replacing 1.443 with 0.693 uses ln(2) instead of the mean-life factor 1/ln(2) and gives 898 cGy. Multiplying dose rate by the half-life in hours but forgetting the 1.443 mean-life factor gives 1296 cGy. Forgetting to convert days to hours (omitting ×24) gives 78 cGy, which is numerically a dose rate times a day-count and is far too small.
 
 ### Q4
-Stem: Calculation. I-125 dose rate given per day. Initial dose rate is 25 cGy/day and the half-life is 59.4 days. Total dose = dose rate × 1.443 × half-life. The dose rate is already per day, so do not convert the half-life to hours. What is the total dose to the nearest cGy?
+Stem: Calculation. An I-125 source has an initial dose rate of 25 cGy/day and a half-life of 59.4 days. What is the total dose to complete decay, to the nearest cGy?
 A. 1029 cGy
 B. 1485 cGy
 C. 51429 cGy
@@ -521,7 +521,7 @@ Objective: V.6
 Why: Units already match, so mean life in days is 1.443 × 59.4 = 85.7142 days. Total = 25 × 1.443 × 59.4 = 25 × 85.7142 = 2142.86 cGy, reported as 2143 cGy. Using 0.693 instead of 1.443 gives 1029 cGy. Using the half-life with no mean-life factor gives 1485 cGy. Multiplying by an extra 24, as if the dose rate were per hour, gives 51429 cGy.
 
 ### Q5
-Stem: Calculation. Decay air-kerma strength. Activity at calibration was 37000 U. Elapsed time is 14 days. Half-life is 73.8 days. Remaining activity = A0 × (1/2)^(t/T½). What activity remains?
+Stem: Calculation. Air-kerma strength at calibration was 37000 U. Elapsed time is 14 days. The half-life is 73.8 days. What activity remains?
 A. 29981 U
 B. 18500 U
 C. 32441 U
@@ -531,7 +531,7 @@ Objective: V.6
 Why: Number of half-lives = 14/73.8 = 0.1897. Fraction remaining = (1/2)^(0.1897) = 0.8768. Activity = 37000 × 0.8768 = 32441.1143 U, reported as 32441 U. The same fraction is e^(−ln(2) × t/T½) = e^(−0.6931 × 0.1897) = 0.8768. A linear model A0×(1−t/T½) gives 29981 U and is not radioactive decay. Assuming a full half-life has passed and taking half of A0 gives 18500 U. Using the mean life (1.443×T½) in place of the half-life inside (1/2)^(t/T) gives 33777 U. Decay itself is e^(−t/mean life), which is the same as (1/2)^(t/T½), so the mean life does not belong in that exponent as a substitute half-life.
 
 ### Q6
-Stem: Calculation. Full TG-43 product. TG-43 point: air-kerma strength Sk = 5 U, dose-rate constant Λ = 1.11 cGy/(h·U), geometry function ratio G/G0 = 0.85, radial dose function g(r) = 0.96, anisotropy F = 0.91. Dose rate = Sk × Λ × (G/G0) × g(r) × F. What is the dose rate?
+Stem: Calculation. TG-43 point: air-kerma strength Sk = 5 U, dose-rate constant Λ = 1.11 cGy/(h·U), geometry function ratio G/G0 = 0.85, radial dose function g(r) = 0.96, and anisotropy F = 0.91. What is the dose rate?
 A. 4.53 cGy/h
 B. 4.12 cGy/h
 C. 5.05 cGy/h
@@ -541,7 +541,7 @@ Objective: V.6
 Why: Substitute 5 × 1.11 = 5.5500. × 0.85 = 4.7175. × 0.96 = 4.5288. × 0.91 = 4.1212 cGy/h, reported as 4.12 cGy/h. Leaving out anisotropy is a common independent-check miss when the point is not on the transverse axis, where F is not 1. Dropping anisotropy gives 4.53 cGy/h. Using only Sk × Λ × F and dropping geometry and radial dose gives 5.05 cGy/h. Dropping the geometry ratio gives 4.85 cGy/h.
 
 ### Q7
-Stem: Calculation. Exposure rate at 50 cm. Activity is already in mCi. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 8000 mCi. Distance is 50 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Calculation. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 8000 mCi. Distance is 50 cm. What is the exposure rate?
 A. 750.40 R/h
 B. 15.01 R/h
 C. 0.02 R/h
@@ -551,7 +551,7 @@ Objective: V.6
 Why: Substitute 4.69 × 8000 / (50)^2 = 37520 / 2500 = 15.008000 R/h, reported as 15.01 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 750.40 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.02 R/h. Doubling the distance inside the square (a 2× distance error) gives 3.75 R/h.
 
 ### Q8
-Stem: Calculation. Five HDR fractions of 6 Gy, α/β = 10 Gy. A course is 5 fractions of 6 Gy. Use α/β = 10 Gy. EQD2 = BED / (1 + 2/(α/β)), with BED = n×d×(1 + d/(α/β)). What is the EQD2?
+Stem: Calculation. An HDR course is 5 fractions of 6 Gy. Use α/β = 10 Gy. What is the EQD2?
 A. 40.0 Gy
 B. 48.0 Gy
 C. 30.0 Gy
@@ -563,7 +563,7 @@ Why: Physical dose = 5 × 6 = 30 Gy. BED = 30 × (1 + 6/10) = 30 × 1.6000 = 48.
 ## Brachytherapy Calculations Quiz
 
 ### Q1
-Stem: Calculations quiz. A permanent Pd-103 implant has initial dose rate 6 cGy/h and half-life 17 days. Total dose to complete decay = dose rate × 1.443 × half-life, with the half-life converted to hours so the units match the dose rate. What is the total dose, to the nearest cGy?
+Stem: Calculations quiz. A permanent Pd-103 implant has an initial dose rate of 6 cGy/h and a half-life of 17 days. What is the total dose to complete decay, to the nearest cGy?
 A. 1696 cGy
 B. 2448 cGy
 C. 3532 cGy
@@ -573,7 +573,7 @@ Objective: V.6
 Why: 1.443 × half-life is the mean life. The source is never removed, so the total dose is initial dose rate times mean life, not times half-life and not times 0.693. Mean life = 1.443 × 17 = 24.5310 days = 24.5310 × 24 = 588.7440 hours. Total dose = 6 cGy/h × 588.7440 h = 3532.5 cGy, reported as 3532 cGy. In one line: 6 × 1.443 × 17 × 24 = 3532.5. Replacing 1.443 with 0.693 uses ln(2) instead of the mean-life factor 1/ln(2) and gives 1696 cGy. Multiplying dose rate by the half-life in hours but forgetting the 1.443 mean-life factor gives 2448 cGy. Forgetting to convert days to hours (omitting ×24) gives 147 cGy, which is numerically a dose rate times a day-count and is far too small.
 
 ### Q2
-Stem: Calculations quiz. A permanent I-125 implant has initial dose rate 4 cGy/h and half-life 59.4 days. Total dose to complete decay = dose rate × 1.443 × half-life, with the half-life converted to hours so the units match the dose rate. What is the total dose, to the nearest cGy?
+Stem: Calculations quiz. A permanent I-125 implant has an initial dose rate of 4 cGy/h and a half-life of 59.4 days. What is the total dose to complete decay, to the nearest cGy?
 A. 3952 cGy
 B. 8229 cGy
 C. 5702 cGy
@@ -583,7 +583,7 @@ Objective: V.6
 Why: 1.443 × half-life is the mean life. The source is never removed, so the total dose is initial dose rate times mean life, not times half-life and not times 0.693. Mean life = 1.443 × 59.4 = 85.7142 days = 85.7142 × 24 = 2057.1408 hours. Total dose = 4 cGy/h × 2057.1408 h = 8228.6 cGy, reported as 8229 cGy. In one line: 4 × 1.443 × 59.4 × 24 = 8228.6. Replacing 1.443 with 0.693 uses ln(2) instead of the mean-life factor 1/ln(2) and gives 3952 cGy. Multiplying dose rate by the half-life in hours but forgetting the 1.443 mean-life factor gives 5702 cGy. Forgetting to convert days to hours (omitting ×24) gives 343 cGy, which is numerically a dose rate times a day-count and is far too small.
 
 ### Q3
-Stem: Calculations quiz. A short decay interval. Activity at calibration was 9.4 Ci. Elapsed time is 10 days. Half-life is 73.8 days. Remaining activity = A0 × (1/2)^(t/T½). What activity remains?
+Stem: Calculations quiz. Activity at calibration was 9.4 Ci. Elapsed time is 10 days. The half-life is 73.8 days. What activity remains?
 A. 8.56 Ci
 B. 8.13 Ci
 C. 4.70 Ci
@@ -593,7 +593,7 @@ Objective: V.6
 Why: Number of half-lives = 10/73.8 = 0.1355. Fraction remaining = (1/2)^(0.1355) = 0.9104. Activity = 9.4 × 0.9104 = 8.5573 Ci, reported as 8.56 Ci. The same fraction is e^(−ln(2) × t/T½) = e^(−0.6931 × 0.1355) = 0.9104. A linear model A0×(1−t/T½) gives 8.13 Ci and is not radioactive decay. Assuming a full half-life has passed and taking half of A0 gives 4.70 Ci. Using the mean life (1.443×T½) in place of the half-life inside (1/2)^(t/T) gives 8.81 Ci. Decay itself is e^(−t/mean life), which is the same as (1/2)^(t/T½), so the mean life does not belong in that exponent as a substitute half-life.
 
 ### Q4
-Stem: Calculations quiz. Activity at calibration was 25000 U. Elapsed time is 40 days. Half-life is 73.8 days. Remaining activity = A0 × (1/2)^(t/T½). What activity remains?
+Stem: Calculations quiz. Activity at calibration was 25000 U. Elapsed time is 40 days. The half-life is 73.8 days. What activity remains?
 A. 11450 U
 B. 12500 U
 C. 17170 U
@@ -603,7 +603,7 @@ Objective: V.6
 Why: Number of half-lives = 40/73.8 = 0.5420. Fraction remaining = (1/2)^(0.5420) = 0.6868. Activity = 25000 × 0.6868 = 17170.3884 U, reported as 17170 U. The same fraction is e^(−ln(2) × t/T½) = e^(−0.6931 × 0.5420) = 0.6868. A linear model A0×(1−t/T½) gives 11450 U and is not radioactive decay. Assuming a full half-life has passed and taking half of A0 gives 12500 U. Using the mean life (1.443×T½) in place of the half-life inside (1/2)^(t/T) gives 19269 U. Decay itself is e^(−t/mean life), which is the same as (1/2)^(t/T½), so the mean life does not belong in that exponent as a substitute half-life.
 
 ### Q5
-Stem: Calculations quiz. Γ = 3.26, activity 20 mCi, distance 20 cm. The exposure-rate constant Γ is 3.26 R·cm²/(mCi·h). Activity is 20 mCi. Distance is 20 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Calculations quiz. The exposure-rate constant Γ is 3.26 R·cm²/(mCi·h). Activity is 20 mCi. Distance is 20 cm. What is the exposure rate?
 A. 0.163 R/h
 B. 3.260 R/h
 C. 0.163 mR/h
@@ -613,7 +613,7 @@ Objective: V.6
 Why: Substitute 3.26 × 20 / (20)^2 = 65.2 / 400 = 0.163000 R/h, reported as 0.163 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 3.260 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.163 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.041 R/h.
 
 ### Q6
-Stem: Calculations quiz. Γ = 13.07, activity 5 mCi, distance 100 cm. The exposure-rate constant Γ is 13.07 R·cm²/(mCi·h). Activity is 5 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Calculations quiz. The exposure-rate constant Γ is 13.07 R·cm²/(mCi·h). Activity is 5 mCi. Distance is 100 cm. What is the exposure rate?
 A. 0.0065 R/h
 B. 0.6535 R/h
 C. 0.0065 mR/h
@@ -623,7 +623,7 @@ Objective: V.6
 Why: Substitute 13.07 × 5 / (100)^2 = 65.35 / 10000 = 0.006535 R/h, reported as 0.0065 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 0.6535 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.0065 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.0016 R/h.
 
 ### Q7
-Stem: Calculations quiz. TG-43 point: air-kerma strength Sk = 4.2 U, dose-rate constant Λ = 0.965 cGy/(h·U), geometry function ratio G/G0 = 0.78, radial dose function g(r) = 1, anisotropy F = 0.95. Dose rate = Sk × Λ × (G/G0) × g(r) × F. What is the dose rate?
+Stem: Calculations quiz. TG-43 point: air-kerma strength Sk = 4.2 U, dose-rate constant Λ = 0.965 cGy/(h·U), geometry function ratio G/G0 = 0.78, radial dose function g(r) = 1, and anisotropy F = 0.95. What is the dose rate?
 A. 3.16 cGy/h
 B. 3.85 cGy/h
 C. 3.00 cGy/h
@@ -633,7 +633,7 @@ Objective: V.6
 Why: Substitute 4.2 × 0.965 = 4.0530. × 0.78 = 3.1613. × 1 = 3.1613. × 0.95 = 3.0033 cGy/h, reported as 3.00 cGy/h. Leaving out anisotropy is a common independent-check miss when the point is not on the transverse axis, where F is not 1. Dropping anisotropy gives 3.16 cGy/h. Using only Sk × Λ × F and dropping geometry and radial dose gives 3.85 cGy/h. Stopping after Sk × Λ gives 4.05 cGy/h.
 
 ### Q8
-Stem: Calculations quiz. BED for 4 × 7 Gy, α/β = 10. A course is 4 fractions of 7 Gy. Use α/β = 10 Gy. BED = n × d × (1 + d/(α/β)). What is the BED?
+Stem: Calculations quiz. An HDR course is 4 fractions of 7 Gy. Use α/β = 10 Gy. What is the BED?
 A. 28.0 Gy
 B. 68.0 Gy
 C. 39.7 Gy
@@ -645,7 +645,7 @@ Why: Physical dose = 4 × 7 = 28 Gy. Relative effectiveness = 1 + 7/10 = 1 + 0.7
 ## Exposure Rate Calculation Tutorial
 
 ### Q1
-Stem: Tutorial. 10 Ci converted already to 10000 mCi, at 100 cm. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 10000 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Tutorial. A 10 Ci source has already been converted to 10000 mCi. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Distance is 100 cm. What is the exposure rate?
 A. 469.00 R/h
 B. 4.69 R/h
 C. 4.69 mR/h
@@ -655,7 +655,7 @@ Objective: V.6
 Why: Substitute 4.69 × 10000 / (100)^2 = 46900 / 10000 = 4.690000 R/h, reported as 4.69 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 469.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 4.69 mR/h. Doubling the distance inside the square (a 2× distance error) gives 1.17 R/h.
 
 ### Q2
-Stem: Tutorial. Same source at 50 cm. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 10000 mCi. Distance is 50 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Tutorial. The same source has exposure-rate constant Γ of 4.69 R·cm²/(mCi·h) and activity 10000 mCi. Distance is 50 cm. What is the exposure rate?
 A. 938.00 R/h
 B. 0.02 R/h
 C. 18.76 R/h
@@ -665,7 +665,7 @@ Objective: V.6
 Why: Substitute 4.69 × 10000 / (50)^2 = 46900 / 2500 = 18.760000 R/h, reported as 18.76 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 938.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.02 R/h. Doubling the distance inside the square (a 2× distance error) gives 4.69 R/h.
 
 ### Q3
-Stem: Tutorial. Same source at 200 cm. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 10000 mCi. Distance is 200 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Tutorial. The same source has exposure-rate constant Γ of 4.69 R·cm²/(mCi·h) and activity 10000 mCi. Distance is 200 cm. What is the exposure rate?
 A. 1.173 R/h
 B. 234.500 R/h
 C. 0.001 R/h
@@ -675,7 +675,7 @@ Objective: V.6
 Why: Substitute 4.69 × 10000 / (200)^2 = 46900 / 40000 = 1.172500 R/h, reported as 1.173 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 234.500 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.001 R/h. Doubling the distance inside the square (a 2× distance error) gives 0.293 R/h.
 
 ### Q4
-Stem: Tutorial. Classic radium-equivalent constant stated as 8.25, 10 mCi at 1 m. The exposure-rate constant Γ is 8.25 R·cm²/(mCi·h). Activity is 10 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Tutorial. A classic radium-equivalent constant is used at 1 m. The exposure-rate constant Γ is 8.25 R·cm²/(mCi·h). Activity is 10 mCi. Distance is 100 cm. What is the exposure rate?
 A. 0.8250 R/h
 B. 0.0083 R/h
 C. 0.0083 mR/h
@@ -685,7 +685,7 @@ Objective: V.6
 Why: Substitute 8.25 × 10 / (100)^2 = 82.5 / 10000 = 0.008250 R/h, reported as 0.0083 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 0.8250 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.0083 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.0021 R/h.
 
 ### Q5
-Stem: Tutorial. Move that source to 25 cm. The exposure-rate constant Γ is 8.25 R·cm²/(mCi·h). Activity is 10 mCi. Distance is 25 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Tutorial. Move that source to 25 cm. The exposure-rate constant Γ is 8.25 R·cm²/(mCi·h). Activity is 10 mCi. Distance is 25 cm. What is the exposure rate?
 A. 3.300 R/h
 B. 0.132 mR/h
 C. 0.132 R/h
@@ -695,7 +695,7 @@ Objective: V.6
 Why: Substitute 8.25 × 10 / (25)^2 = 82.5 / 625 = 0.132000 R/h, reported as 0.132 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 3.300 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.132 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.033 R/h.
 
 ### Q6
-Stem: Tutorial. Γ = 3.26, 100 mCi, 50 cm. The exposure-rate constant Γ is 3.26 R·cm²/(mCi·h). Activity is 100 mCi. Distance is 50 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Tutorial. The exposure-rate constant Γ is 3.26 R·cm²/(mCi·h). Activity is 100 mCi. Distance is 50 cm. What is the exposure rate?
 A. 6.520 R/h
 B. 0.130 R/h
 C. 0.130 mR/h
@@ -705,7 +705,7 @@ Objective: V.6
 Why: Substitute 3.26 × 100 / (50)^2 = 326 / 2500 = 0.130400 R/h, reported as 0.130 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 6.520 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.130 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.033 R/h.
 
 ### Q7
-Stem: Tutorial. Γ = 13.07, 2 mCi, 30 cm. The exposure-rate constant Γ is 13.07 R·cm²/(mCi·h). Activity is 2 mCi. Distance is 30 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Tutorial. The exposure-rate constant Γ is 13.07 R·cm²/(mCi·h). Activity is 2 mCi. Distance is 30 cm. What is the exposure rate?
 A. 0.8713 R/h
 B. 0.0290 mR/h
 C. 0.0073 R/h
@@ -715,7 +715,7 @@ Objective: V.6
 Why: Substitute 13.07 × 2 / (30)^2 = 26.14 / 900 = 0.029044 R/h, reported as 0.0290 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 0.8713 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.0290 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.0073 R/h.
 
 ### Q8
-Stem: Tutorial. Γ = 4.60, 2500 mCi, 100 cm. The exposure-rate constant Γ is 4.6 R·cm²/(mCi·h). Activity is 2500 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
+Stem: Tutorial. The exposure-rate constant Γ is 4.6 R·cm²/(mCi·h). Activity is 2500 mCi. Distance is 100 cm. What is the exposure rate?
 A. 115.00 R/h
 B. 1.15 mR/h
 C. 0.29 R/h
