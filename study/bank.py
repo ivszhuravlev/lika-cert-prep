@@ -22,13 +22,95 @@ RECALL_RE = re.compile(
     r"which of the following|mode of decay|decays by",
     re.IGNORECASE,
 )
-SECTION_RE = re.compile(r"^\*\*(.+?)\*\*\s*$", re.MULTILINE)
 CHOICE_RE = re.compile(r"^([A-D])\.\s*(.*)$")
-SCI_RE = re.compile(
-    r"(-?\d+(?:\.\d+)?)\s*[x×*]\s*10\^?\s*(-?\d+)",
-    re.IGNORECASE,
+# A thousands group is exactly three digits. A comma with any other width is a decimal,
+# so 1,5 is 1.5 and 1,500 is 1500.
+_NUMBER = re.compile(
+    r"""
+    [+-]?
+    (?:
+        \d{1,3}(?:[ \u00a0\u202f]\d{3})+(?:[.,]\d+)?
+        |
+        \d+(?:,\d{3})+(?:\.\d+)?
+        |
+        \d+[.,]\d+
+        |
+        \d+
+        |
+        [.,]\d+
+    )
+    (?:[eE][+-]?\d+)?
+    (?:\s*[xX*]\s*10\^?\(?\s*[+-]?\d+\s*\)?)?
+    """,
+    re.VERBOSE,
 )
-NUM_RE = re.compile(r"-?\d+(?:\.\d+)?")
+_WORDS = re.compile(r"[A-Za-z]{2,}")
+_UNITS = {
+    "bq",
+    "cc",
+    "cgy",
+    "ci",
+    "cm",
+    "day",
+    "days",
+    "deg",
+    "degree",
+    "degrees",
+    "dimensionless",
+    "eqd2",
+    "ev",
+    "fx",
+    "gbq",
+    "gy",
+    "hour",
+    "hours",
+    "hr",
+    "hrs",
+    "hvl",
+    "hz",
+    "kbq",
+    "kev",
+    "kg",
+    "khz",
+    "km",
+    "mbq",
+    "mci",
+    "mev",
+    "mg",
+    "mhz",
+    "min",
+    "mins",
+    "minute",
+    "minutes",
+    "mm",
+    "mr",
+    "ms",
+    "msv",
+    "mu",
+    "mus",
+    "mv",
+    "nm",
+    "pm",
+    "rad",
+    "rem",
+    "sec",
+    "second",
+    "seconds",
+    "sv",
+    "tvl",
+    "uci",
+    "ug",
+    "usv",
+    "year",
+    "years",
+    "yr",
+    "yrs",
+}
+_KINDS = {
+    "exam": ("what the exam expects", "core facts", "skills this quiz checks"),
+    "work": ("formulas", "formula", "worked example"),
+    "trap": ("traps", "usual wrong turn", "wrong turns"),
+}
 
 
 @dataclass
@@ -80,20 +162,103 @@ def repo_root() -> Path:
     return Path(__file__).resolve().parents[1]
 
 
-def parse_number(text: str) -> float | None:
-    cleaned = (
-        text.replace("−", "-")
-        .replace("–", "-")
-        .replace("×", "x")
-        .replace("·", "x")
-    )
-    sci = SCI_RE.search(cleaned)
+def _prepare(text: str) -> str:
+    return text.replace("−", "-").replace("–", "-").replace("×", "x").replace("·", "x")
+
+
+def _glued(text: str, start: int, end: int) -> bool:
+    """A digit inside Co-60, A0, or 2ab is part of the name, not a value."""
+    if start > 0 and text[start - 1].isalpha():
+        return True
+    if end < len(text) and text[end].isalpha():
+        return True
+    if start >= 2 and text[start - 1] == "-" and text[start - 2].isalpha():
+        return True
+    return False
+
+
+def _literals(text: str):
+    cleaned = _prepare(text)
+    for match in _NUMBER.finditer(cleaned):
+        token = match.group(0).rstrip()
+        if not token:
+            continue
+        end = match.start() + len(token)
+        if _glued(cleaned, match.start(), end):
+            continue
+        yield cleaned, match.start(), end, token
+
+
+def _token_value(token: str) -> float | None:
+    text = token.strip()
+    power = 0
+    sci = re.search(r"\s*[xX*]\s*10\^?\(?\s*([+-]?\d+)\s*\)?\s*$", text)
     if sci:
-        return float(sci.group(1)) * (10 ** int(sci.group(2)))
-    match = NUM_RE.search(cleaned)
-    if not match:
+        power = int(sci.group(1))
+        text = text[: sci.start()].strip()
+    exp = 0
+    exp_match = re.search(r"[eE]([+-]?\d+)$", text)
+    if exp_match:
+        exp = int(exp_match.group(1))
+        text = text[: exp_match.start()]
+    if not text:
         return None
-    return float(match.group(0))
+    sign = 1
+    if text[0] in "+-":
+        sign = -1 if text[0] == "-" else 1
+        text = text[1:]
+    text = text.replace(" ", "").replace("\u00a0", "").replace("\u202f", "")
+    if not text:
+        return None
+    if "," in text and "." in text:
+        if text.rfind(",") > text.rfind("."):
+            text = text.replace(".", "").replace(",", ".")
+        else:
+            text = text.replace(",", "")
+    elif "," in text:
+        groups = text.split(",")
+        if (
+            len(groups) >= 2
+            and groups[0].isdigit()
+            and all(len(part) == 3 and part.isdigit() for part in groups[1:])
+        ):
+            text = "".join(groups)
+        else:
+            text = groups[0] + "." + "".join(groups[1:])
+    if text.startswith("."):
+        text = "0" + text
+    try:
+        return sign * float(text) * (10**exp) * (10**power)
+    except ValueError:
+        return None
+
+
+def parse_number(text: str) -> float | None:
+    for _cleaned, _start, _end, token in _literals(text):
+        value = _token_value(token)
+        if value is not None:
+            return value
+    return None
+
+
+def _is_quantity(text: str, start: int, end: int) -> bool:
+    """A computed choice leads with its value. A sentence that mentions a digit does not."""
+    before = _WORDS.findall(text[:start])
+    after = [word for word in _WORDS.findall(text[end:]) if word.lower() not in _UNITS]
+    if len(before) > 3:
+        return False
+    if before and len(after) > 1:
+        return False
+    return True
+
+
+def computed_number(text: str) -> float | None:
+    """The choice's computed value, or None for a sentence or a symbol such as Co-60."""
+    for cleaned, start, end, token in _literals(text):
+        if not _is_quantity(cleaned, start, end):
+            return None
+        return _token_value(token)
+    return None
 
 
 def channel_for(lesson: str, stem: str) -> str:
@@ -108,30 +273,47 @@ def channel_for(lesson: str, stem: str) -> str:
     return "ear"
 
 
+def _paragraphs(body: str) -> list[str]:
+    return [part.strip() for part in re.split(r"\n[ \t]*\n", body.strip()) if part.strip()]
+
+
+def _heading_name(paragraph: str) -> str | None:
+    bold = re.fullmatch(r"\*\*(.+?)\*\*", paragraph)
+    if bold:
+        return bold.group(1).strip()
+    hashed = re.fullmatch(r"#{1,6}\s+(.+)", paragraph)
+    if hashed:
+        return hashed.group(1).strip()
+    return None
+
+
+def _kind_of(name: str, current: str) -> str:
+    key = name.strip().lower().rstrip(".:").strip()
+    for kind, names in _KINDS.items():
+        if key in names:
+            return kind
+    return current
+
+
 def _lesson_chunks(lesson: str, body: str) -> list[Chunk]:
-    matches = list(SECTION_RE.finditer(body))
-    if not matches:
-        text = body.strip()
-        return [Chunk(lesson, "exam", text)] if text else []
-    sections: list[tuple[str, str]] = []
-    for index, match in enumerate(matches):
-        start = match.end()
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
-        sections.append((match.group(1).strip().lower(), body[start:end].strip()))
-    groups = {
-        "exam": ("what the exam expects", "core facts", "skills this quiz checks"),
-        "work": ("formulas", "formula", "worked example"),
-        "trap": ("traps", "usual wrong turn"),
-    }
-    built: list[Chunk] = []
-    for kind, names in groups.items():
-        parts = [text for name, text in sections if name in names and text]
-        if parts:
-            built.append(Chunk(lesson, kind, "\n\n".join(parts)))
-    if built:
-        return built
-    text = body.strip()
-    return [Chunk(lesson, "exam", text)] if text else []
+    """One chunk per paragraph. A bare heading stays with the paragraph it introduces."""
+    paragraphs = _paragraphs(body)
+    if not paragraphs:
+        return []
+    chunks: list[Chunk] = []
+    pending: list[str] = []
+    kind = "exam"
+    for paragraph in paragraphs:
+        name = _heading_name(paragraph)
+        if name is not None:
+            kind = _kind_of(name, kind)
+            pending.append(paragraph)
+            continue
+        chunks.append(Chunk(lesson, kind, "\n\n".join([*pending, paragraph])))
+        pending = []
+    if pending:
+        chunks.append(Chunk(lesson, kind, "\n\n".join(pending)))
+    return chunks
 
 
 def parse_theory(code: str, text: str) -> list[Chunk]:
@@ -228,7 +410,7 @@ def _parse_item(code: str, lesson: str, block: list[str]) -> Item | None:
         answer=answer,
         objective=objective,
         why=" ".join(why_lines).strip(),
-        number=parse_number(answer_text),
+        number=computed_number(answer_text),
         channel=channel_for(lesson, stem),
     )
 

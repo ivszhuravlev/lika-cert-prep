@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 
-from study.bank import Item, Module, parse_number, repo_root
+from study.bank import Item, Module, computed_number, parse_number, repo_root
 from study.schedule import apply_review, order_items
 
 
@@ -17,6 +17,7 @@ class Grade:
     expected: str
     why: str
     number: float | None
+    parsed: float | None = None
 
 
 class Progress:
@@ -67,7 +68,12 @@ def ordered(items: list[Item], progress: Progress, *, ear_only: bool = False) ->
 
 
 def problems(items: list[Item]) -> list[Item]:
-    return [item for item in items if item.channel == "paper" and item.number is not None]
+    """Paper items whose key is a computed number. A sentence or a symbol such as Co-60 is not one."""
+    return [
+        item
+        for item in items
+        if item.channel == "paper" and computed_number(item.answer_text) is not None
+    ]
 
 
 def close_enough(got: float, want: float) -> bool:
@@ -107,14 +113,36 @@ def render_reveal(grade: Grade, *, numeric: bool) -> str:
     return f"{head} В банке: {grade.expected}\nРазбор: {grade.why}"
 
 
+def _as_close_to_wrong_choice(item: Item, got: float) -> bool:
+    """True when a distractor's number is at least as near as the key."""
+    want = item.number
+    if want is None:
+        return False
+    gap = abs(got - want)
+    for letter, text in item.choices.items():
+        if letter == item.answer:
+            continue
+        other = computed_number(text)
+        if other is None:
+            continue
+        scale = max(1.0, abs(got), abs(want), abs(other))
+        if abs(other - want) <= 1e-9 * scale:
+            continue
+        if abs(got - other) <= gap + 1e-9 * scale:
+            return True
+    return False
+
+
 def grade_number(item: Item, raw: str) -> Grade:
     if item.number is None:
         return Grade(False, item.answer_text, item.why, None)
     got = parse_number(raw)
     ok = got is not None and close_enough(got, item.number)
+    if ok and got is not None and _as_close_to_wrong_choice(item, got):
+        ok = False
     if not ok and raw.strip().lower() == item.answer_text.lower():
         ok = True
-    return Grade(ok, item.answer_text, item.why, item.number)
+    return Grade(ok, item.answer_text, item.why, item.number, parsed=got)
 
 
 ROAD_RULES = "\n".join(

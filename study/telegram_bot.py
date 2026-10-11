@@ -390,7 +390,11 @@ def question_body(item, progress: Progress, state: dict, *, numeric: bool) -> st
     return "\n".join(lines)
 
 
-def reveal_text(grade, state: dict, *, numeric: bool) -> str:
+def _parsed_label(value: float) -> str:
+    return f"{value:.10g}"
+
+
+def reveal_text(grade, state: dict, *, numeric: bool, echo: bool = True) -> str:
     if grade.ok:
         head = "Верно."
     elif numeric:
@@ -402,7 +406,13 @@ def reveal_text(grade, state: dict, *, numeric: bool) -> str:
     else:
         letter, sep, rest = grade.expected.partition(". ")
         shown = f"{letter}. {russian(state, rest)}" if sep else grade.expected
-    return f"{head} В банке: {shown}\nРазбор: {russian(state, grade.why)}"
+    why = russian(state, grade.why)
+    base = f"{head} В банке: {shown}\nРазбор: {why}"
+    parsed = getattr(grade, "parsed", None)
+    if not (numeric and echo and parsed is not None):
+        return base
+    echoed = f"{head} Прочитано: {_parsed_label(parsed)}.\nВ банке: {shown}\nРазбор: {why}"
+    return echoed
 
 
 def deliver(
@@ -1020,16 +1030,16 @@ def take_answer(tg: Telegram, chat_id: int, raw: str, state: dict, progress: Pro
     state["item_id"] = ""
     nav = ["Предыдущий", "Следующий"] if state.get("mode") in {"quiz", "problems"} else None
     action = ["Дальше"] if state.get("mode") == "mixed" else None
+    hint = "Предыдущий или Следующий" if nav else "Дальше или К темам"
+    body = "Разбор ответа.\n\n" + reveal_text(grade, state, numeric=numeric)
+    text = frame(state, module, item.lesson, body, hint)
+    if len(text) > 4096:
+        body = "Разбор ответа.\n\n" + reveal_text(grade, state, numeric=numeric, echo=False)
+        text = frame(state, module, item.lesson, body, hint)
     deliver(
         tg,
         chat_id,
-        frame(
-            state,
-            module,
-            item.lesson,
-            "Разбор ответа.\n\n" + reveal_text(grade, state, numeric=numeric),
-            "Предыдущий или Следующий" if nav else "Дальше или К темам",
-        ),
+        text,
         keyboard=keys(state, action, nav),
         placeholder=PH_HOME,
     )
