@@ -77,14 +77,14 @@ Objective: III.7
 Why: Answer A. From the previous normalization, isocenter is 180/0.95 ≈ 189.5 cGy. A point at 108% of isocenter receives 1.08 × 189.5. First, 1.08 × 190 = 205.2, and 1.08 × 0.5 = 0.54, so 1.08 × 189.5 = 204.66 cGy, about 204.7 cGy. Relative to the prescription, 204.7/180 = 1.137, or about 114% of 180 cGy. The arithmetic identity is 108/95 = 1.137. B would be correct only if 100% had been defined as the prescription rather than as isocenter. Subtracting percentages and multiplying 0.95 by 108 do not produce a dose.
 
 ### Q3
-Stem: A three-dimensional plan reports the ICRU reference point at isocenter as 100% of the prescription, the PTV minimum as 93%, and a point outside the PTV as 110%. ICRU 50/62 guidance for this style of plan was to keep the PTV between 95% and 107% of the prescription. Which finding is outside that window?
+Stem: A three-dimensional plan reports the ICRU reference point at isocenter as 100% of the prescription, the PTV minimum as 93%, and the PTV maximum as 110%. ICRU 50/62 guidance for this style of plan was to keep the PTV between 95% and 107% of the prescription. Which finding is outside that window?
 A. The reference point at 100%
-B. Both the 93% PTV minimum and the 110% point are outside the 95% to 107% window
-C. Only a point inside the PTV can violate the window, so 110% outside the PTV is compliant by definition
+B. Both the 93% PTV minimum and the 110% PTV maximum are outside the 95% to 107% window
+C. Only dose outside the PTV can violate the window, so a PTV maximum of 110% is compliant
 D. 93% is acceptable because the window is 90% to 110%
 Answer: B
 Objective: III.11
-Why: Answer B. For three-dimensional conformal planning, ICRU 50 and 62 asked that the dose to the PTV lie between 95% and 107% of the prescribed dose, with the prescription reported at the ICRU reference point. A PTV minimum of 93% is a cold spot inside the target, below 95%. A point at 110% exceeds 107%. Whether that 110% point is also a clinically significant hot spot depends on its location and size: ICRU 50 called a hot spot a volume outside the PTV receiving more than 100% of the specified dose, and treated it as significant when its minimum diameter reached about 15 mm. The reference point at 100% is the definition of the prescription in this normalization, not a violation. The window is not 90% to 110%.
+Why: Answer B. For three-dimensional conformal planning, ICRU 50 and 62 asked that the dose to the PTV lie between 95% and 107% of the prescribed dose, reported at the ICRU reference point. The PTV minimum of 93% is below 95%. The PTV maximum of 110% is above 107%. Both ends are outside the window. The reference point at 100% is the prescription, not a violation. A hot spot in the separate ICRU 50 sense is a volume outside the PTV that receives more than 100% of the specified dose, treated as significant when its minimum diameter reaches about 15 mm. That test is not what this stem reports, because the 110% here is inside the PTV. The window is not 90% to 110%.
 
 ### Q4
 Stem: An intensity-modulated plan is prescribed to cover 95% of the PTV with the prescription dose. The reporting follows ICRU 83. Which dose-volume values replace a single ICRU reference-point dose as the description of the PTV?

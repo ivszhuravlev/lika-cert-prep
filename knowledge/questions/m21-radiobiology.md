@@ -1,295 +1,291 @@
 # Module 21 — Radiobiology
 
-Original practice items for CMD preparation. Not retired MDCB items and not a commercial quiz.
-
-BED = n × d × (1 + d / (α/β)), where n is the number of fractions and d is the dose per fraction.
-EQD2 = BED / (1 + 2 / (α/β)).
-When the dose per fraction is already 2 Gy, EQD2 equals the total physical dose.
+Original items. α/β values are the teaching numbers named in the stem. Surviving-fraction coefficients are a teaching pair, not a measured tumor.
 
 ## Cell Survival Curve
 
 ### Q1
-Stem: A cell-survival curve is plotted as the log of surviving fraction against dose. The linear-quadratic model is S = exp(−αD − βD²). At a low dose per fraction, which term dominates cell kill, and which term grows faster as the dose per fraction rises?
-A. The βD² term dominates at low dose; the αD term grows faster as dose rises
-B. The linear αD term dominates at low dose; the quadratic βD² term contributes a larger share as the dose per fraction rises
-C. Both terms are independent of dose
-D. The curve is a straight line through the origin on a linear plot for low-LET radiation, with no shoulder
-Answer: B
+Stem: Low-LET survival is written S = exp(−αD − βD²), with a shoulder at low dose. What does the shoulder represent?
+A. Accumulation and repair of sublethal damage
+B. A Bragg peak at the end of a proton range
+C. Survival falling to zero in a step at one half-life
+D. Absence of repair at every dose
+Answer: A
 Objective: III.3
-Why: Answer B. The ratio of the quadratic contribution to the linear contribution inside the exponent is (βD²)/(αD) = D/(α/β). When D is much smaller than α/β, the linear term dominates. When D is large, the square term dominates. That is why raising the dose per fraction hurts tissues with a small α/β (late tissues, and prostate) more than tissues with a large α/β. Low-LET photon curves have a shoulder on a semi-log plot. A straight line through the origin, with little shoulder, is the high-LET shape.
+Why: The shoulder is sublethal damage. If the dose is split and time is allowed for repair, more cells survive than if the same total is given at once, because the βD² term does not cross the gap between fractions. A Bragg peak is a proton depth-dose shape. Radioactive half-life is not the shape of this curve.
 
 ### Q2
-Stem: On the exponential tail of a multi-target survival curve, D0 is 1.5 Gy. Survival at one point on that tail is 10%. What dose increment, along the same tail, reduces survival from 10% to 3.7%?
-A. 0.37 Gy
-B. 1.5 Gy
-C. 3.0 Gy
-D. 15 Gy
-Answer: B
+Stem: In the linear-quadratic model, α/β in gray is the dose at which:
+A. The linear contribution αD and the quadratic contribution βD² are equal
+B. Surviving fraction is always 50%
+C. The photon oxygen enhancement ratio equals 1
+D. Tumor repopulation has exactly doubled the cell number
+Answer: A
 Objective: III.3
-Why: Answer B. D0, the mean lethal dose, is the dose that reduces survival to 37% of its previous value on the straight portion of a semi-log survival curve. The ratio 3.7/10 = 0.37, so the step from 10% to 3.7% is exactly one D0. The increment is 1.5 Gy, not 0.37 Gy and not a new total dose of 15 Gy. D0 is not the quasithreshold dose Dq, which describes the width of the shoulder rather than the slope of the tail.
+Why: Set αD = βD² and the dose that solves it is D = α/β. A large α/β means the linear term dominates and fractionation changes the effect less. A small α/β means dose per fraction matters more. α/β is not a surviving fraction, not an oxygen enhancement ratio, and not a repopulation time.
 
 ### Q3
-Stem: Two photon survival curves are drawn for the same cells. Curve A has a wide shoulder. Curve B becomes much steeper and loses the shoulder when the same cells are irradiated with neutrons. What changed?
-A. Neutrons lowered the LET, so more sublethal damage can be repaired and the shoulder widens
-B. Neutrons raised the LET; more of the damage is irreparable single-track injury, the α term effectively increases, and repair between fractions matters less
-C. The neutron curve is shallower because RBE is less than 1
-D. A shoulder appears only for high-LET radiation
+Stem: No α/β is printed. You must still name the teaching values for late cord injury, generic tumor control, and prostate. Which set matches?
+A. Cord ≈ 10 Gy, generic tumor ≈ 3 Gy, prostate ≈ 10 Gy
+B. Cord ≈ 3 Gy, generic tumor ≈ 10 Gy, prostate often ≈ 1.5 Gy
+C. All three equal 2 Gy
+D. All three equal 1.1, the clinical proton RBE
 Answer: B
 Objective: III.3
-Why: Answer B. Neutrons (and the distal end of a heavy-ion track) have a high linear energy transfer. Dense ionization produces damage that a cell repairs poorly, which straightens the survival curve and increases RBE above 1. Fractionation, which exists to let normal cells repair sublethal damage between photon fractions, buys less protection when the shoulder is already gone. Low-LET photons are the curves with the shoulder. RBE greater than 1 means less dose is required for the same effect, so the neutron curve is steeper, not shallower.
+Why: Late-responding tissue is taught at about 3 Gy. Early-responding tissue and most tumors are taught at about 10 Gy. Prostate is the usual low exception, often near 1.5 Gy. If a stem prints a value, use that value. Swapping 3 and 10 applies the late number to a tumor question or the tumor number to a cord question. 1.1 is a proton RBE, not an α/β.
 
 ### Q4
-Stem: The oxygen enhancement ratio is the dose in hypoxia divided by the dose in air that produces the same cell kill. For photons it is about 2.5 to 3. For high-LET radiation it moves closer to 1. What does a ratio of 3 mean in the clinic?
-A. Hypoxic cells are more sensitive than oxygenated cells
-B. About three times as much photon dose is required under hypoxia as under oxygen for the same kill; oxygen "fixes" indirect free-radical damage
-C. Oxygen protects cells by scavenging every direct ionization
-D. The ratio is 3 for neutrons and 1 for photons
-Answer: B
+Stem: α = 0.20 Gy^−1 and β = 0.02 Gy^−2. What is αD + βD² for one fraction of 6 Gy?
+A. 0.78
+B. 1.20
+C. 1.56
+D. 1.92
+Answer: D
 Objective: III.3
-Why: Answer B. Most photon damage is indirect, through free radicals. Oxygen makes that chemical damage permanent, so well-oxygenated cells die at a lower dose. If the oxygen enhancement ratio is 3, the hypoxic dose for the same survival is three times the oxic dose. Tumors with hypoxic regions are relatively resistant to a single photon fraction, which is one reason fractionation helps: reoxygenation between fractions brings those cells back to a sensitive state. High-LET damage is more often direct, so oxygen matters less and the ratio falls toward 1. The ratio is not higher for neutrons than for photons.
+Why: αD = 0.20 × 6 = 1.20. D² = 36, so βD² = 0.02 × 36 = 0.72. The sum is 1.20 + 0.72 = 1.92. One fraction of 3 Gy is 0.20 × 3 + 0.02 × 9 = 0.60 + 0.18 = 0.78. Two such fractions with full repair add to 0.78 + 0.78 = 1.56. Dropping βD² leaves only 1.20.
 
 ### Q5
-Stem: α/β is 10 Gy for an early-responding tissue and 3 Gy for a late-responding tissue. At which dose per fraction are the linear and quadratic contributions equal for the late tissue, and what does the smaller α/β imply?
-A. Equal at 10 Gy; the late tissue is less sensitive to fraction size than the early tissue
-B. Equal at 3 Gy; the late tissue's survival curve bends more, so large fractions increase late injury relative to early injury
-C. Equal at 2 Gy for every tissue, because EQD2 uses 2 Gy
-D. Equal at 0 Gy, because α and β are doses
+Stem: With α = 0.20 Gy^−1 and β = 0.02 Gy^−2, compare a single 6 Gy fraction with two 3 Gy fractions separated by full repair. Which leaves more survivors?
+A. The single 6 Gy, because its exponent 1.92 is larger
+B. The two 3 Gy fractions, because the summed exponent 1.56 is smaller than 1.92
+C. They match, because both deliver 6 Gy
+D. The single 6 Gy, because βD² is smaller when the fraction is larger
 Answer: B
 Objective: III.3
-Why: Answer B. By definition, αD equals βD² when D equals α/β. For the late tissue that dose is 3 Gy. Below 3 Gy the linear term dominates; above 3 Gy the quadratic term dominates. A smaller α/β means the quadratic term takes over sooner, so the tissue is more punished by a large dose per fraction. That is the biological reason conventional fractionation (about 2 Gy) spares late normal tissue relative to a tumor with α/β near 10, and why hypofractionation needs a small volume and a steep gradient. EQD2 is a conversion, not the definition of α/β.
+Why: One 3 Gy fraction has αD + βD² = 0.20 × 3 + 0.02 × 9 = 0.78. Two fractions with full repair sum to 1.56. One 6 Gy fraction is 0.20 × 6 + 0.02 × 36 = 1.20 + 0.72 = 1.92. Surviving fraction is exp(−exponent), so the smaller exponent, 1.56, leaves more survivors. The quadratic piece is 0.72 for 6 Gy at once and only 0.18 for each 3 Gy fraction. Equal total dose does not equal equal kill.
+
+### Q6
+Stem: On a cell-survival plot, D0 is:
+A. The prescription dose for the course
+B. The dose that reduces survival to 37% (1/e) along the straight logarithmic portion
+C. The clinical proton RBE of 1.1
+D. The prostate α/β, about 1.5 Gy
+Answer: B
+Objective: III.3
+Why: D0 is the slope dose on the exponential portion of the curve. One D0 along that line leaves 1/e, about 37%, of those cells. Dq measures shoulder width, and n is the extrapolation number where the straight portion would meet the survival axis at zero dose. D0 is not a prescription. Clinical protons are low LET with a generic RBE of 1.1. Prostate α/β is a fractionation parameter, not D0.
 
 ## Cell Cycle
 
 ### Q1
-Stem: Cells in which phase of the cycle are the most radiosensitive, and cells in which phase are the most resistant?
-A. Most sensitive in late S; most resistant in mitosis
-B. Most sensitive in mitosis and late G2; most resistant in late S
-C. Sensitivity is identical in G1, S, G2, and M for photons
-D. Most sensitive in G0; most resistant in M
-Answer: B
-Objective: III.3
-Why: Answer B. Mitosis, and the late G2 period just before it, is the most sensitive part of the cycle. Late S, when DNA has been replicated and repair is effective, is the most resistant. G0 cells are not uniformly the most sensitive; quiescent cells can repair potentially lethal damage. A survival curve measured on an asynchronous population is an average over these phases, which is one reason a single fraction does not sterilize every cell that the average curve appears to kill.
-
-### Q2
-Stem: After a photon fraction, the surviving cells are enriched in late S. Over the next several hours many of them progress into G2 and M. What is the name of this "R," and how can it increase kill from the next fraction?
-A. Repopulation; the resistant survivors divide and the next fraction is less effective
-B. Redistribution (reassortment); survivors move out of the resistant phase into a sensitive phase before the next fraction
-C. Reoxygenation; S-phase cells lose oxygen as they enter mitosis
-D. Repair; progression into G2 restores the original shoulder within minutes
-Answer: B
-Objective: III.3
-Why: Answer B. Redistribution is one of the four Rs (repair, redistribution, repopulation, reoxygenation). A dose selectively kills the sensitive phases, so the survivors are biased toward late S. As those cells continue around the cycle they re-enter G2 and M and become sensitive again. A later fraction then kills cells that would have been resistant immediately after the first dose. That is not repopulation, which adds new cells and works against control, and it is not repair, which decreases the effect of a second fraction given too soon.
-
-### Q3
-Stem: A head-and-neck course is prolonged by 7 unplanned days. The stem of the protocol states that, past the lag period, tumor control is lost at about 0.6 Gy per extra day. How much extra dose does that factor assign to the break, and which R is this?
-A. 7 × 0.6 = 4.2 Gy; repopulation
-B. 7 × 0.6 = 4.2 Gy; repair of sublethal damage, which requires a longer gap to be less complete
-C. 0.6 / 7 = 0.09 Gy; reoxygenation
-D. No extra dose; overall time does not matter for a tumor with a high α/β
+Stem: Which phase statement matches the usual teaching?
+A. Mitosis is the most sensitive phase, and late S is the most resistant
+B. Late S is the most sensitive phase, and mitosis is the most resistant
+C. G0 is the most sensitive phase because those cells are out of cycle
+D. The cycle order is M, S, G2, G1, and there is no G0
 Answer: A
 Objective: III.3
-Why: Answer A. Accelerated repopulation in head-and-neck squamous cell carcinoma is why overall time is part of the prescription. Using the factor the stem supplied, 7 × 0.6 = 4.2 Gy of dose-equivalent is lost to new tumor cells during the break. Making the gap longer would only help if the problem were incomplete repair between two fractions on the same day. Here the days are added to the course, so more time means more repopulation, not more repair. A high α/β does not turn off proliferation.
+Why: The cycle is G1, S, G2, and M. G0 cells have left the cycle until they are recruited. Mitosis, together with late G2, is the most sensitive portion. Late S is the most resistant. Early G1 is relatively sensitive, while a long G1 holds many cells in a more resistant state. Calling late S the sensitive phase swaps the pair the exam asks for.
+
+### Q2
+Stem: A twice-daily schedule leaves about 6 hours between fractions. Which R is that interval aimed at, as a teaching assumption?
+A. Repopulation across a gap of weeks
+B. Repair of sublethal damage
+C. Reoxygenation alone, with repair excluded
+D. A required break so the tumor can grow before the next fraction
+Answer: B
+Objective: III.3
+Why: Repair of sublethal damage is the shoulder on the survival curve. About 6 hours is the common teaching interval for substantial repair when a twice-daily course is planned. The interval a protocol actually requires is the one written in that protocol. Repopulation is division of survivors during a longer gap. Reoxygenation is a separate R. An unplanned break favors the tumor.
+
+### Q3
+Stem: Two head-and-neck schedules have the same EQD2. One is completed in 6 weeks. The other has an unplanned 2-week interruption. What does the plain EQD2 comparison leave out?
+A. Nothing; equal EQD2 already includes overall time
+B. Repopulation during the gap
+C. A benefit, because an unplanned break improves head-and-neck control
+D. A change of α/β from 10 Gy to 3 Gy caused by the calendar
+Answer: B
+Objective: III.3
+Why: The basic formula EQD2 = D (d + α/β) / (2 + α/β) assumes full repair between fractions and does not subtract repopulation. Head and neck cancer is the classic site where a gap hurts, especially after the first weeks. Equal EQD2 with different overall times is not the same biological treatment. The calendar does not rewrite α/β.
 
 ### Q4
-Stem: Sublethal damage repair after a photon fraction is largely complete by about 6 hours. A twice-daily schedule leaves a 3 hour gap. What is the effect on normal tissue relative to a 6 hour gap?
-A. The shorter gap allows more repair, so late effects fall
-B. Repair is incomplete, so the second fraction adds to residual injury and the biologically effective dose is higher than the complete-repair formula predicts
-C. The gap affects tumors only; normal-tissue repair is instant
-D. A 3 hour gap converts low-LET radiation into high-LET radiation
+Stem: As LET rises from photons toward high-LET particles, before the overkill region, what happens to the oxygen enhancement ratio and the shoulder?
+A. The oxygen enhancement ratio rises toward 3 and the shoulder widens
+B. The oxygen enhancement ratio falls toward 1 and the shoulder shrinks
+C. Both stay fixed, because LET is only a name for exposure
+D. Every particle takes the photon oxygen enhancement ratio of about 3 and the proton RBE of 1.1 at the same time
 Answer: B
 Objective: III.3
-Why: Answer B. The linear-quadratic BED formula used in the BED section assumes full repair between fractions. That assumption is reasonable at about 6 hours and is not reasonable at 3 hours. Residual sublethal damage makes the pair behave like a larger single dose, which is particularly costly for late-responding normal tissue. Twice-daily head-and-neck and total-body schedules therefore specify a minimum interfraction interval of about 6 hours. The gap does not change the LET of the beam.
+Why: For photons the oxygen enhancement ratio is about 2.5 to 3: hypoxia requires that many times more dose for the same effect. As LET rises, RBE rises, the shoulder shrinks, and the oxygen enhancement ratio falls toward 1 because the damage depends less on oxygen. Past a peak in LET, RBE falls again from overkill. Clinical protons remain low LET. Their generic RBE of 1.1 is not the photon oxygen enhancement ratio and it is not a neutron RBE.
 
 ### Q5
-Stem: Which list correctly matches the four Rs to the problem each one addresses in fractionated radiotherapy?
-A. Repair: tumor growth during a long course. Repopulation: hypoxic cells regaining oxygen. Reoxygenation: sublethal damage. Redistribution: movement into a sensitive phase
-B. Repair: sublethal damage between fractions. Redistribution: movement from resistant to sensitive phases. Repopulation: new cell division, especially in a prolonged course. Reoxygenation: hypoxic survivors becoming oxygenated
-C. All four Rs describe repair; the other names are synonyms
-D. Reoxygenation is the reason a single fraction is always better than 30 fractions
+Stem: How do redistribution and reoxygenation affect a fractionated tumor course?
+A. Survivors move from resistant phases into sensitive phases, and hypoxic survivors can become better oxygenated as the tumor shrinks
+B. Fractionation stops repair in the tumor and leaves repair intact only on paper
+C. They remove any need to choose an α/β
+D. They are two names for the hinge angle of a wedged pair
+Answer: A
+Objective: III.3
+Why: Redistribution, also called reassortment, lets cells that survived in a resistant phase such as late S move into a sensitive phase before the next fraction. Reoxygenation lets hypoxic cells that survived become better oxygenated as the tumor shrinks and blood flow reaches them. Repair is the separate R that operates in the gap. None of the four Rs is a wedge angle, and none of them replaces α/β in the BED formula.
+
+### Q6
+Stem: Which scoring rule matches the organ?
+A. Lung is scored only by a maximum dose to a point, and cord is scored only by mean dose
+B. Cord and brainstem are scored at the high-dose end; lung and liver are scored by mean dose or by volume
+C. One numeric limit from memory fits every organ and every fractionation
+D. Parotid is serial and spinal cord is parallel
 Answer: B
 Objective: III.3
-Why: Answer B. Repair of sublethal injury in late normal tissues is the benefit of splitting a dose into fractions. Redistribution moves tumor cells that survived in a resistant phase into a sensitive one. Repopulation is usually a cost, because tumor cells (and early-reacting mucosa) divide during a long course. Reoxygenation restores sensitivity to cells that were hypoxic during the previous fraction. A single fraction gives up repair, redistribution, and reoxygenation together. A fifth R sometimes added to the list is intrinsic radiosensitivity, which fractionation does not remove.
+Why: A serial organ loses function when a small segment is destroyed, so the high-dose end dominates for cord, brainstem, and optic pathway. A parallel organ loses function in proportion to the subunit killed, so mean dose and volume dominate for lung, liver, kidney, and parotid. The number you apply is still the one in the named source. Swapping the ends of the DVH answers a different question from the one the organ asks.
 
 ## BEDs
 
 ### Q1
-Stem: A course delivers 30 Gy in 10 fractions of 3 Gy. For a tumor with α/β = 10 Gy, what are the BED and the EQD2?
-A. BED 39 Gy10 and EQD2 32.5 Gy
-B. BED 60 Gy10 and EQD2 36 Gy
-C. BED 30 Gy10 and EQD2 30 Gy
-D. BED 32.5 Gy10 and EQD2 39 Gy
-Answer: A
+Stem: A course is 45 Gy in 15 fractions. For late effects, α/β = 3 Gy. What is the EQD2?
+A. 45 Gy
+B. 54 Gy
+C. 48.8 Gy
+D. 90 Gy
+Answer: B
 Objective: III.3
-Why: Answer A. BED = total dose × (1 + d/(α/β)) = 30 × (1 + 3/10) = 30 × 1.3 = 39 Gy10. EQD2 divides that BED by the relative effectiveness of 2 Gy fractions: 1 + 2/10 = 1.2. EQD2 = 39 / 1.2 = 32.5 Gy. The same physical schedule with α/β = 3 Gy would give BED = 30 × (1 + 3/3) = 30 × 2 = 60 Gy3 and EQD2 = 60 / (1 + 2/3) = 60 / (5/3) = 36 Gy. That pair is answer B, but it is the late-tissue result, not the α/β = 10 result the question asked for. Swapping BED and EQD2 produces answer D.
+Why: d = 45/15 = 3 Gy. EQD2 = 45 × (3 + 3) / (2 + 3) = 45 × 6/5 = 54 Gy. Reporting 45 Gy treats every physical gray as if it were already a 2 Gy fraction. With α/β = 10, EQD2 = 45 × (3 + 10) / 12 = 45 × 13/12 = 48.75 Gy, about 48.8 Gy, which is the generic tumor result. The late BED is 45 × (1 + 3/3) = 45 × 2 = 90 Gy, and that BED is not the EQD2.
 
 ### Q2
-Stem: The same 30 Gy in 10 fractions of 3 Gy is scored for a late-responding tissue with α/β = 3 Gy. What is the BED?
-A. 39 Gy3
-B. 36 Gy3
-C. 60 Gy3
-D. 90 Gy3
-Answer: C
-Objective: III.3
-Why: Answer C. BED = 30 × (1 + 3/3) = 30 × (1 + 1) = 30 × 2 = 60 Gy3. The relative effectiveness is 2, twice the physical dose, because the dose per fraction equals α/β. The EQD2 is not the BED: EQD2 = 60 / (5/3) = 36 Gy, which is the trap in B. Thirty-nine Gy3 is the BED of this schedule at α/β = 10, not at α/β = 3. Ninety would be 30 × (1 + 3/1), which invents an α/β of 1 Gy.
-
-### Q3
-Stem: Sixteen fractions of 3 Gy deliver 48 Gy. For α/β = 10 Gy, what is the BED?
-A. 48 Gy10
-B. 52 Gy10
-C. 62.4 Gy10
-D. 72 Gy10
-Answer: C
-Objective: III.3
-Why: Answer C. BED = 48 × (1 + 3/10) = 48 × 1.3. Forty-eight times 1 is 48, and 48 × 0.3 = 14.4, so BED = 62.4 Gy10. The EQD2 is 62.4 / 1.2 = 52 Gy, which is answer B and is not the BED. The physical dose, 48 Gy, is not a BED unless the fraction size is vanishingly small. Seventy-two Gy10 would be the BED of 60 Gy in 2 Gy fractions (60 × 1.2), a different schedule.
-
-### Q4
-Stem: Compare 78 Gy in 39 fractions of 2 Gy with 60 Gy in 20 fractions of 3 Gy, for a late tissue with α/β = 3 Gy. What is the EQD2 of the 60 Gy course, and how does it compare with 78 Gy?
-A. EQD2 is 72 Gy, which is lower than 78 Gy
-B. EQD2 is 77.1 Gy, which is higher than 78 Gy
-C. EQD2 is 60 Gy, because hypofractionation does not change EQD2
-D. EQD2 is 120 Gy, the BED rather than the EQD2
+Stem: The same 45 Gy in 15 fractions is scored for a generic tumor with α/β = 10 Gy. What is the BED?
+A. 58.5 Gy
+B. 90 Gy
+C. 48.8 Gy
+D. 45 Gy
 Answer: A
 Objective: III.3
-Why: Answer A. For any schedule already given at 2 Gy per fraction, EQD2 equals the physical dose, so 78 Gy in 39 fractions has EQD2 = 78 Gy. For 60 Gy in 20 fractions, BED = 60 × (1 + 3/3) = 60 × 2 = 120 Gy3. EQD2 = 120 / (1 + 2/3) = 120 / (5/3) = 120 × 3/5 = 72 Gy. Seventy-two is lower than 78, so at α/β = 3 the conventional course is the hotter late-tissue regimen. The often-quoted prostate comparison uses α/β near 1.5 Gy, where 60 Gy in 20 fractions has BED = 60 × (1 + 3/1.5) = 60 × 3 = 180 Gy and EQD2 = 180 / (1 + 2/1.5) = 180 / (7/3) = 180 × 3/7 ≈ 77.1 Gy, almost equal to 78. That 77.1 Gy figure is the wrong α/β for this question. One hundred twenty is the BED, not the EQD2.
+Why: d = 3 Gy. BED = 45 × (1 + 3/10) = 45 × 1.3 = 58.5 Gy. The bridge check is EQD2 = 58.5 / (1 + 2/10) = 58.5 / 1.2 = 48.75 Gy, which matches 45 × (3 + 10) / 12 = 48.75 Gy. Ninety gray is the late BED at α/β = 3, from 45 × (1 + 1) = 90. 48.8 Gy is that tumor EQD2 rounded, not the BED. Forty-five gray is the physical dose.
 
-### Q5
-Stem: An organ previously received 50.4 Gy in 28 fractions of 1.8 Gy. A new plan would add 24 Gy in 12 fractions of 2 Gy. Using α/β = 3 Gy and assuming full repair and no time discount, what is the cumulative EQD2?
-A. 74.4 Gy, the sum of the physical doses
-B. 48.4 Gy, the first course only
-C. 72.4 Gy
-D. 80.6 Gy, the BED of the first course
-Answer: C
-Objective: III.3
-Why: Answer C. First course: BED = 50.4 × (1 + 1.8/3) = 50.4 × (1 + 0.6) = 50.4 × 1.6. Fifty times 1.6 is 80, and 0.4 × 1.6 is 0.64, so BED = 80.64 Gy3. EQD2 = 80.64 / (5/3) = 80.64 × 3/5. Eighty point six four times 0.6 is 48.384 Gy. Second course: the fraction size is 2 Gy, so EQD2 = 24 Gy. Cumulative EQD2 = 48.384 + 24 = 72.384 Gy, which is 72.4 Gy. Adding the physical doses, 50.4 + 24 = 74.4 Gy, ignores that 1.8 Gy fractions are slightly gentler, at α/β = 3, than 2 Gy fractions. Eighty point six four is the first-course BED, not an EQD2.
-
-### Q6
-Stem: A single 8 Gy fraction is given for a painful metastasis. For a late tissue with α/β = 3 Gy, what is the BED?
-A. 8 Gy3
-B. 14.4 Gy3
-C. 17.6 Gy3
-D. 29.3 Gy3
+### Q3
+Stem: A course is 24 Gy in 3 fractions. For a generic tumor, α/β = 10 Gy. What is the EQD2?
+A. 24 Gy
+B. 43.2 Gy
+C. 52.8 Gy
+D. 36 Gy
 Answer: D
 Objective: III.3
-Why: Answer D. BED = 8 × (1 + 8/3) = 8 × (1 + 2.667) = 8 × (11/3) = 88/3 = 29.333 Gy3, about 29.3 Gy3. The same single fraction at α/β = 10 Gy would be 8 × (1 + 8/10) = 8 × 1.8 = 14.4 Gy10, which is answer B and is the tumor BED, not the late BED. The late EQD2 is 29.333 / (5/3) = 29.333 × 0.6 = 17.6 Gy, answer C. The physical dose, 8 Gy, is neither the BED nor the EQD2. The quadratic term is large because the entire dose arrives in one fraction: 8/3 is much greater than 2/3.
+Why: d = 24/3 = 8 Gy. EQD2 = 24 × (8 + 10) / (2 + 10) = 24 × 18/12 = 36 Gy. BED at this α/β is 24 × (1 + 8/10) = 24 × 1.8 = 43.2 Gy, and 43.2 / 1.2 = 36 Gy, the same EQD2. Late α/β = 3 gives EQD2 = 24 × (8 + 3) / 5 = 24 × 11/5 = 52.8 Gy. Twenty-four gray is the physical dose.
 
-### Q7
-Stem: A cord point receives 2.5 Gy per fraction for 20 fractions, a physical dose of 50 Gy. The limit is an EQD2 of 50 Gy at α/β = 2 Gy. Does this point satisfy the limit, and what is its EQD2?
-A. Yes; the physical dose is 50 Gy, so the EQD2 is 50 Gy
-B. No; EQD2 is 56.25 Gy, which exceeds 50 Gy
-C. No; EQD2 is 112.5 Gy
-D. Yes; EQD2 is 45 Gy because 2.5 Gy fractions are gentler than 2 Gy fractions at α/β = 2
-Answer: B
+### Q4
+Stem: For 24 Gy in 3 fractions, compare late tissue at α/β = 3 Gy with a generic tumor at α/β = 10 Gy. Which statement is correct?
+A. Late EQD2 is 52.8 Gy, which is higher than the tumor EQD2 of 36 Gy
+B. Late EQD2 is 36 Gy and tumor EQD2 is 52.8 Gy
+C. Both EQD2 values equal 24 Gy
+D. Late EQD2 is 88 Gy
+Answer: A
 Objective: III.3
-Why: Answer B. BED = 50 × (1 + 2.5/2) = 50 × (1 + 1.25) = 50 × 2.25 = 112.5 Gy2. For α/β = 2 Gy, the EQD2 divisor is 1 + 2/2 = 2. EQD2 = 112.5 / 2 = 56.25 Gy. That exceeds a 50 Gy EQD2 limit even though the physical dose is exactly 50 Gy, because 2.5 Gy fractions are harsher than 2 Gy fractions when α/β is 2. Answer C stops at the BED. Answer D has the fraction-size effect backward: a dose per fraction above 2 Gy raises, rather than lowers, the EQD2 relative to the physical dose for any finite α/β.
+Why: d = 8 Gy. Late EQD2 = 24 × (8 + 3) / (2 + 3) = 24 × 11/5 = 52.8 Gy. Tumor EQD2 = 24 × (8 + 10) / 12 = 24 × 18/12 = 36 Gy. The larger fraction raises the late EQD2 more than the generic-tumor EQD2. The late BED is 24 × (1 + 8/3) = 24 × 11/3 = 88 Gy. That 88 Gy is a BED, not the late EQD2. Dividing 88 by (1 + 2/3) = 5/3 gives 88 × 3/5 = 52.8 Gy again.
 
-### Q8
-Stem: How many fractions of 5 Gy produce a tumor BED of 90 Gy when α/β = 10 Gy, and what physical dose is that?
-A. 10 fractions, 50 Gy
-B. 12 fractions, 60 Gy
-C. 15 fractions, 75 Gy
-D. 18 fractions, 90 Gy
-Answer: B
+### Q5
+Stem: A prostate course is 36.25 Gy in 5 fractions. The stem sets α/β = 1.5 Gy. What is the EQD2?
+A. 90.6 Gy
+B. 52.1 Gy
+C. 36.3 Gy
+D. 211.5 Gy
+Answer: A
 Objective: III.3
-Why: Answer B. One 5 Gy fraction has relative effectiveness 1 + 5/10 = 1.5, so its BED is 5 × 1.5 = 7.5 Gy10. The number of fractions is 90 / 7.5 = 12. The physical dose is 12 × 5 = 60 Gy. Check: 60 × 1.5 = 90 Gy10. Ten fractions would be 75 Gy10, not 90. Eighteen fractions of 5 Gy would be a physical dose of 90 Gy and a BED of 135 Gy10, which confuses the physical dose with the BED. Fifteen fractions give 75 × 1.5 = 112.5 Gy10.
+Why: d = 36.25/5 = 7.25 Gy. EQD2 = 36.25 × (7.25 + 1.5) / (2 + 1.5) = 36.25 × 8.75 / 3.5. Because 8.75/3.5 = 2.5, EQD2 = 36.25 × 2.5 = 90.625 Gy, which is 90.6 Gy. Using α/β = 10 instead gives 36.25 × (7.25 + 10) / 12 = 36.25 × 17.25 / 12 = 36.25 × 1.4375 = 52.1 Gy. 36.3 Gy is the physical dose rounded. BED at α/β = 1.5 is 36.25 × (1 + 7.25/1.5) = 36.25 × (35/6) = 211.5 Gy, and 211.5 / (1 + 2/1.5) = 211.5 / (7/3) = 211.5 × 3/7 = 90.6 Gy.
 
-### Q9
-Stem: A head-and-neck BED calculated without a time correction is 84 Gy10 for 70 Gy in 35 fractions at α/β = 10 Gy. The protocol then subtracts 0.6 Gy10 per day for 5 extra days of repopulation. What is the corrected BED?
-A. 84 Gy10, because repopulation is already inside α/β
-B. 87 Gy10
-C. 81 Gy10
-D. 84 − 5 × 2 = 74 Gy10, using the dose per fraction instead of 0.6
+### Q6
+Stem: Whole breast is prescribed 42.5 Gy in 16 fractions. For late effects, α/β = 3 Gy. What is the EQD2?
+A. 42.5 Gy
+B. 44.8 Gy
+C. 48.1 Gy
+D. 80.1 Gy
 Answer: C
 Objective: III.3
-Why: Answer C. Confirm the uncorrected BED: 70 × (1 + 2/10) = 70 × 1.2 = 84 Gy10. The time term is given as 0.6 Gy10 per extra day, so 5 × 0.6 = 3.0 Gy10 is subtracted. Corrected BED = 84 − 3 = 81 Gy10. Adding the time term would mean the break increased cell kill, which is the wrong direction for repopulation. Replacing 0.6 with the 2 Gy fraction size invents a correction the protocol did not state. This subtraction is only as good as the 0.6 Gy10 per day the protocol supplied; it is not a universal constant to invent on a different disease.
+Why: d = 42.5/16 = 2.656 Gy. EQD2 = 42.5 × (2.656 + 3) / (2 + 3) = 42.5 × 5.656 / 5 = 240.38 / 5 = 48.08 Gy, which is 48.1 Gy. With α/β = 10, EQD2 = 42.5 × (2.656 + 10) / 12 = 42.5 × 12.656 / 12 = 537.88 / 12 = 44.8 Gy. Forty-two and a half gray is the physical dose. The late BED is 42.5 × (1 + 2.656/3) = 42.5 × 1.885 = 80.1 Gy. Dividing that BED by (1 + 2/3) = 5/3 returns 80.1 × 3/5 = 48.1 Gy.
+
+### Q7
+Stem: External beam is 50.4 Gy in 28 fractions. An illustrative HDR course is 6 Gy × 5. Both are converted at α/β = 10 Gy and then added. What is the sum EQD2?
+A. 89.6 Gy
+B. 80.4 Gy
+C. 102.4 Gy
+D. 49.6 Gy
+Answer: A
+Objective: III.3
+Why: External-beam d = 50.4/28 = 1.8 Gy. EQD2 = 50.4 × (1.8 + 10) / 12 = 50.4 × 11.8 / 12 = 49.56 Gy. HDR physical dose is 6 × 5 = 30 Gy. EQD2 = 30 × (6 + 10) / 12 = 30 × 16/12 = 40 Gy. Sum at α/β = 10: 49.56 + 40 = 89.56 Gy, or 89.6 Gy. Adding the physical doses gives 50.4 + 30 = 80.4 Gy. At α/β = 3 the external-beam EQD2 is 50.4 × (1.8 + 3) / 5 = 50.4 × 4.8 / 5 = 48.38 Gy and the HDR EQD2 is 30 × (6 + 3) / 5 = 30 × 9/5 = 54 Gy, summing to 102.4 Gy. That late sum is a different α/β and is not the tumor total. 49.6 Gy is the external-beam piece alone.
+
+### Q8
+Stem: A course is 30 Gy in 5 fractions. For late effects, α/β = 3 Gy. What is the EQD2?
+A. 30 Gy
+B. 40 Gy
+C. 54 Gy
+D. 90 Gy
+Answer: C
+Objective: III.3
+Why: d = 30/5 = 6 Gy. EQD2 = 30 × (6 + 3) / (2 + 3) = 30 × 9/5 = 54 Gy. BED = 30 × (1 + 6/3) = 30 × 3 = 90 Gy, and 90 / (1 + 2/3) = 90 × 3/5 = 54 Gy. With α/β = 10, EQD2 = 30 × (6 + 10) / 12 = 30 × 16/12 = 40 Gy and BED = 30 × (1 + 6/10) = 30 × 1.6 = 48 Gy. Forty gray is that tumor EQD2. Thirty gray is the physical dose. Ninety gray is the late BED.
 
 ## Radiobiology Quiz
 
 ### Q1
-Stem: A protocol offers hyperfractionation: 1.15 Gy twice daily, with at least 6 hours between fractions, to a higher total dose than 2 Gy daily. Which normal-tissue goal is this designed to achieve?
-A. Increase late effects on purpose, because late tissues have a high α/β
-B. Spare late-responding tissue, which has a low α/β, by using a smaller dose per fraction, while the higher total dose still controls a tumor with a higher α/β
-C. Finish the course in fewer calendar days than conventional fractionation, which is the definition of hyperfractionation
-D. Remove the need for a gap between the two daily fractions
-Answer: B
+Stem: A note calls late S the most radiosensitive phase of the cell cycle. What is the correction?
+A. Late S is the most resistant phase; mitosis, with late G2, is the most sensitive
+B. Late S is sensitive, and G0 is more sensitive still
+C. Phase does not matter; survival is flat through the cycle
+D. The only sensitive point is the middle of a long G1
+Answer: A
 Objective: III.3
-Why: Answer B. Hyperfractionation uses a dose per fraction below 2 Gy so the quadratic term in a low-α/β late tissue stays small. The total dose is raised to keep tumor control, on the argument that a tumor with α/β near 10 loses less from the smaller fraction than the late tissue gains. The interval has to be long enough for repair, about 6 hours. Shortening the calendar time is accelerated fractionation, a different modification, and it tends to increase acute mucositis. The two ideas are sometimes combined, but a smaller fraction size is the hyperfractionation part.
+Why: Mitosis is the most sensitive phase, and late G2 is sensitive with it. Late S is the most resistant. G0 cells are out of cycle, not the peak of sensitivity. G1 length varies: early G1 is relatively sensitive, and a long G1 is more resistant. The order to remember is G1, S, G2, M.
 
 ### Q2
-Stem: Hypofractionation gives a larger dose per fraction in fewer fractions. For a prostate cancer with α/β near 1.5 Gy sitting inside late rectal tissue that also has a low α/β, why can a shorter course still be rational?
-A. Because any increase in fraction size spares the rectum more than the tumor when both have a low α/β
-B. Because the tumor's low α/β means it is not spared by 2 Gy fractions the way a high-α/β tumor would be, so fewer larger fractions can match tumor BED, provided the rectal volume in the high dose is small
-C. Because α/β near 1.5 Gy means fractionation does not change BED at all
-D. Because hypofractionation lowers the BED of a 3 Gy fraction below the BED of a 2 Gy fraction for the same total dose
-Answer: B
+Stem: What are the four Rs of fractionation?
+A. Repair, repopulation, redistribution, and reoxygenation
+B. Range, RBE, registration, and re-scan
+C. Reflection, refraction, rotation, and replay
+D. Repair and repopulation only, plus the 80% and 20% penumbra
+Answer: A
 Objective: III.3
-Why: Answer B. Classical fractionation assumes the tumor α/β is higher than the late-normal α/β. Prostate cancer is unusual: its α/β is estimated near 1.5 to 3 Gy, similar to late rectum. Two gray fractions then do not preferentially spare the tumor's BED. A moderately hypofractionated course can keep a similar tumor EQD2 with a lower total physical dose, which is the 60 Gy in 20 fractions versus 78 Gy in 39 fractions comparison. The rectum still has a low α/β, so the high dose per fraction is only tolerable if the volume of rectum at that dose is limited by conformal planning. For the same total physical dose, a larger fraction size raises BED; it does not lower it.
+Why: Repair fixes sublethal damage between fractions. Repopulation is division of survivors, which a treatment gap allows. Redistribution moves survivors from resistant phases toward sensitive phases. Reoxygenation improves oxygenation of hypoxic cells that survived. An interval of hours is about repair. A gap of weeks is about repopulation. Range and image registration are not these four Rs.
 
 ### Q3
-Stem: The therapeutic ratio is tumor control probability divided by the normal-tissue complication probability, in conceptual terms. Fractionation at about 2 Gy improves that ratio, relative to a single large fraction, under which condition?
-A. When the tumor α/β is higher than the late-normal α/β, so late injury falls more than tumor kill does as the fraction size is reduced
-B. When the tumor α/β is lower than the late-normal α/β
-C. Only when the beam is changed from photons to neutrons
-D. Fractionation never changes the therapeutic ratio, only the total dose does
-Answer: A
+Stem: A schedule is 20 Gy in 5 fractions. Late tissue has α/β = 3 Gy. What is the EQD2?
+A. 20 Gy
+B. 23.3 Gy
+C. 28 Gy
+D. 46.7 Gy
+Answer: C
 Objective: III.3
-Why: Answer A. Reducing the dose per fraction removes more of the quadratic kill in the tissue with the smaller α/β. If that tissue is the late normal tissue and the tumor has a larger α/β, the normal tissue is spared more than the tumor, and the total dose can be raised until tumor control is acceptable. That improvement is the therapeutic ratio argument for conventional fractionation. It weakens or reverses if the tumor α/β is as low as the normal tissue's. Neutrons, with less repair, reduce the benefit of fractionation rather than create it.
+Why: d = 20/5 = 4 Gy. EQD2 = 20 × (4 + 3) / (2 + 3) = 20 × 7/5 = 28 Gy. At α/β = 10, EQD2 = 20 × (4 + 10) / 12 = 20 × 14/12 = 23.3 Gy. The late BED is 20 × (1 + 4/3) = 20 × 7/3 = 46.7 Gy, and 46.7 × 3/5 = 28 Gy. Twenty gray is the physical dose.
 
 ### Q4
-Stem: A neutron dose of 2 Gy has an RBE of 3 for a stated late effect relative to photons. What photon dose produces about the same biological effect, and why is a photon BED formula not applied to the raw 2 Gy?
-A. 2/3 Gy; the neutron dose is already a photon dose
-B. About 6 Gy of photons; the physical neutron dose must be scaled by RBE before it is compared with a photon tolerance
-C. 2 Gy of photons, because RBE cancels in the BED formula
-D. 5 Gy of photons, because RBE is added to the dose
+Stem: A single fraction of 8 Gy is converted with α/β = 10 Gy. What is the EQD2?
+A. 17.6 Gy
+B. 12 Gy
+C. 8 Gy
+D. 14.4 Gy
 Answer: B
 Objective: III.3
-Why: Answer B. RBE is the ratio of a reference photon dose to the test-radiation dose for the same effect. If the RBE is 3, 2 Gy of neutrons corresponds to about 2 × 3 = 6 Gy of photons for that endpoint. Putting the unscaled 2 Gy into a photon BED formula treats the neutron fraction as if it were a 2 Gy photon fraction and understates the injury. Proton prescriptions avoid this mistake by stating Gy (RBE) with RBE = 1.1. Adding RBE to the dose (2 + 3 = 5) is not the definition.
+Why: EQD2 = 8 × (8 + 10) / (2 + 10) = 8 × 18/12 = 12 Gy. Late α/β = 3 gives 8 × (8 + 3) / 5 = 8 × 11/5 = 17.6 Gy. The physical dose is 8 Gy. BED at α/β = 10 is 8 × (1 + 8/10) = 8 × 1.8 = 14.4 Gy, and 14.4 / 1.2 = 12 Gy. The stem asked for EQD2 at α/β = 10, which is 12 Gy.
 
 ### Q5
-Stem: The law of Bergonié and Tribondeau relates radiosensitivity to proliferation and differentiation. Which statement agrees with that law, and which cell is the classic exception?
-A. Slowly dividing, highly differentiated cells are the most sensitive; lymphocytes are the most resistant cells in the body
-B. Rapidly dividing, poorly differentiated cells are more sensitive; mature lymphocytes are a major exception because they die readily by apoptosis despite being differentiated
-C. Radiosensitivity depends only on oxygen and not on mitotic rate
-D. The law says postmitotic cells such as muscle and nerve are more sensitive than intestinal crypt cells
+Stem: A course is 60 Gy in 30 fractions. What is the EQD2 at α/β = 3 Gy and at α/β = 10 Gy?
+A. 100 Gy and 72 Gy
+B. 60 Gy and 60 Gy
+C. 72 Gy and 65 Gy
+D. 36 Gy and 32.5 Gy
 Answer: B
 Objective: III.3
-Why: Answer B. The historical law says cells are more radiosensitive when they are undifferentiated, when they have a long mitotic future, and when they are actively dividing. That fits intestinal crypts, basal skin, and many tumors, and it fits the resistance of muscle and nerve. Lymphocytes break the rule: they are highly differentiated and still extremely sensitive, through apoptosis. The law is a tendency, not a substitute for a measured α/β or a tolerance dose.
+Why: d = 60/30 = 2 Gy. EQD2 = 60 × (2 + α/β) / (2 + α/β) = 60 Gy at every α/β, including 3 Gy and 10 Gy. Late BED = 60 × (1 + 2/3) = 60 × 5/3 = 100 Gy, which is not the EQD2. Thirty gray in 10 fractions, a different course, has late EQD2 = 30 × 6/5 = 36 Gy and tumor EQD2 = 30 × 13/12 = 32.5 Gy.
 
 ### Q6
-Stem: Potentially lethal damage repair is most associated with which condition after irradiation?
-A. Cells that are allowed to remain in a quiescent state before being forced to divide, so some injuries that would have been lethal are repaired
-B. A second fraction delivered 3 hours later, which is sublethal damage repair only
-C. Immediate plating of cells so they must attempt mitosis at once, which maximizes this repair
-D. High-LET irradiation, where this repair is largest
-Answer: A
+Stem: For 45 Gy in 15 fractions the late BED at α/β = 3 Gy is 90 Gy, and the tumor BED at α/β = 10 Gy is 58.5 Gy. What is the sum 90 + 58.5?
+A. A valid combined BED of 148.5 Gy
+B. Not a usable BED; the two numbers were computed at different α/β values
+C. The EQD2 of both tissues
+D. The physical dose to set on the machine
+Answer: B
 Objective: III.3
-Why: Answer A. Potentially lethal damage is injury that becomes lethal if the cell tries to divide at once, and that can be repaired if division is delayed, as in a quiescent or density-inhibited population. Sublethal damage repair is the rejoining of injuries between two split doses and is the process that creates the fractionation benefit and the shoulder. Forcing immediate mitosis does not give time for potentially lethal damage repair. High-LET damage is less available for either kind of repair.
+Why: BED at α/β = 3 is 45 × (1 + 3/3) = 45 × 2 = 90 Gy. BED at α/β = 10 is 45 × (1 + 3/10) = 45 × 1.3 = 58.5 Gy. Adding 90 + 58.5 = 148.5 mixes two α/β values and does not produce a biological dose. EQD2 values may be added only when they share one α/β. Neither BED is the physical dose of 45 Gy, and neither is the EQD2 (54 Gy late, 48.75 Gy at α/β = 10).
 
 ### Q7
-Stem: A tumor contains a hypoxic fraction. It is treated with 30 photon fractions rather than one fraction of the same total dose. Besides repair of normal tissues, which tumor-specific R is the reason the later fractions can kill cells the first fraction spared?
-A. Repopulation of hypoxic cells, which makes them more numerous and more sensitive
-B. Reoxygenation of cells that were hypoxic during the first fraction
-C. Redistribution is impossible in a hypoxic tumor
-D. Converting the photons to a higher LET by fractionation
+Stem: For 54 Gy in 3 fractions and late α/β = 3 Gy, the EQD2 is 226.8 Gy. How should that result be used?
+A. As proof the cord received 226.8 Gy in 2 Gy fractions, so a conventional cord limit applies directly
+B. As the linear-quadratic result, while the stereotactic plan is judged by the stereotactic constraint source and the protocol
+C. As the physical isocenter dose to deliver on the next fraction
+D. As the tumor EQD2 at α/β = 10, which equals the same 226.8 Gy
 Answer: B
 Objective: III.3
-Why: Answer B. Cells that are hypoxic at the moment of a fraction are relatively resistant (oxygen enhancement ratio about 2.5 to 3 for photons). After the well-oxygenated cells die, oxygen reaches some of the survivors before the next fraction. That is reoxygenation, and a single-fraction treatment never gets it. Repopulation increases the number of clonogens and works against control. Fractionation does not change the LET of the photon beam. Redistribution can still occur; it is a separate R, not the oxygen one.
+Why: d = 54/3 = 18 Gy. Late EQD2 = 54 × (18 + 3) / (2 + 3) = 54 × 21/5 = 226.8 Gy. Late BED = 54 × (1 + 18/3) = 54 × 7 = 378 Gy. At α/β = 10, EQD2 = 54 × (18 + 10) / 12 = 54 × 28/12 = 126 Gy, not 226.8 Gy. The quadratic model is being used far above the fraction size it was built on. Stereotactic organ limits belong to the stereotactic source and the protocol. 226.8 Gy is not the physical dose.
 
 ### Q8
-Stem: Two schedules deliver the same physical dose of 50 Gy. Schedule A uses 2 Gy fractions. Schedule B uses 5 Gy fractions. For α/β = 3 Gy, which schedule has the higher BED, and by how much?
-A. They have the same BED because the physical dose is the same
-B. Schedule B is higher: BED 133.3 Gy3 versus 83.3 Gy3
-C. Schedule A is higher: BED 100 Gy3 versus 50 Gy3
-D. Schedule B is higher by the ratio of the fraction sizes only, a factor of 2.5, so its BED is 2.5 × 50 = 125 Gy3
+Stem: Which set of radiobiology labels is consistent?
+A. Clinical protons are high LET with RBE about 3, and the photon oxygen enhancement ratio is about 1
+B. Clinical protons are low LET with generic RBE 1.1; the photon oxygen enhancement ratio is about 2.5 to 3; high-LET oxygen enhancement ratio is closer to 1
+C. RBE, oxygen enhancement ratio, and LET are three names for α/β
+D. Neutrons and photons are both assigned RBE 1.1
 Answer: B
 Objective: III.3
-Why: Answer B. Schedule A: BED = 50 × (1 + 2/3) = 50 × 5/3 = 250/3 = 83.3 Gy3. Schedule B: BED = 50 × (1 + 5/3) = 50 × (8/3) = 400/3 = 133.3 Gy3. The same physical dose is more damaging to a low-α/β tissue when it is given in larger fractions. The EQD2 values are 83.3 / (5/3) = 50 Gy for schedule A, as required for 2 Gy fractions, and 133.3 / (5/3) = 80 Gy for schedule B. Multiplying 50 by 5/2 = 125 skips the proper relative-effectiveness term 1 + d/(α/β).
-
-### Q9
-Stem: A planner adds the DVH mean doses from two courses in gray and calls the sum a cumulative BED. The first course was 2 Gy per fraction and the second was 4 Gy per fraction, both to the same organ with α/β = 3 Gy. What is wrong with that sum?
-A. Nothing; BED is the sum of physical mean doses
-B. The 4 Gy course contributes more biological dose per gray than the 2 Gy course, so physical grays cannot be added; each course needs its own EQD2 before the totals are added
-C. The 2 Gy course contributes more biological dose per gray, so it should be weighted double
-D. BED addition is valid only when the second course uses a higher energy
-Answer: B
-Objective: III.3
-Why: Answer B. Relative effectiveness is 1 + d/(α/β). For 2 Gy and α/β = 3, it is 1 + 2/3 = 5/3 ≈ 1.67. For 4 Gy it is 1 + 4/3 = 7/3 ≈ 2.33. Each gray of the second course is worth more biologically than each gray of the first. The correct accumulation, ignoring time and partial recovery, converts each course to EQD2 (or to BED in the same units) and then adds. Adding the mean doses treats a 4 Gy fraction as if it were a 2 Gy fraction. Energy does not enter the linear-quadratic formula.
+Why: The generic clinical proton RBE used for prescribing is 1.1, and those protons are low LET. RBE is reference dose divided by test dose for the same effect. Photon oxygen enhancement ratio is about 2.5 to 3. High-LET radiation has an oxygen enhancement ratio closer to 1 and little shoulder. The factor 1.1 is not a neutron RBE and it is not an α/β.

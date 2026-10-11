@@ -161,14 +161,14 @@ Why: Answer A. A Gamma Knife shot is an isocentric exposure: the sources focus t
 ## Special Treatment Procedures Quiz
 
 ### Q1
-Stem: Intraoperative electron therapy is delivered in a single fraction through a sterile cone placed on the tumor bed in the operating room. The cord lies 3 cm deep to the surface of the bed. Using the rule that the practical range in centimeters is about half the electron energy in MeV, which energy keeps the practical range from reaching the cord?
-A. 12 MeV, because the practical range is about 6 cm
-B. 6 MeV, because the practical range is about 3 cm, so a lower energy or added bolus is required if the cord must be spared at 3 cm
-C. 20 MeV, because the practical range is about 2 cm
-D. 6 MV photons, because a photon percent depth dose stops at 3 cm
+Stem: Intraoperative electron therapy is delivered in a single fraction through a sterile cone on the tumor bed. The cord is 3 cm deep to that surface. Which statement uses the rule that the practical range in centimeters is about half the energy in MeV?
+A. 12 MeV stops at about 3 cm, so the cord is beyond the practical range
+B. 6 MeV has a practical range of about 3 cm and therefore reaches a cord at 3 cm; 12 MeV reaches about 6 cm and 20 MeV about 10 cm, so sparing that cord takes a lower energy or bolus
+C. 20 MeV has a practical range of about 2 cm
+D. 6 MV photons stop at 3 cm, so a photon beam is the one that spares the cord
 Answer: B
 Objective: III.6
-Why: Answer B. Practical range Rp is about E/2 in centimeters of water. For 6 MeV, Rp is about 3 cm, which lands on the cord rather than stopping short of it, so the planner would choose a still lower energy or add bolus if the prescription depth is only the first centimeter of the bed. For 12 MeV, Rp is about 6 cm, which goes well past a cord at 3 cm. For 20 MeV, Rp is about 10 cm, not 2 cm. Megavoltage photons do not stop at 3 cm; they continue through the patient. Intraoperative electrons are chosen precisely because the range can be matched to the bed and then ended.
+Why: Answer B. Practical range Rp is about E/2 in centimeters of water. At 6 MeV, Rp is about 3 cm, which lands on the cord rather than stopping short of it. At 12 MeV, Rp is about 6 cm. At 20 MeV, Rp is about 10 cm, not 2 cm. If the prescription depth is only the first centimeter of the bed, the cord at 3 cm is spared by a lower energy or by bolus that uses up range before the patient, not by going up in energy. Megavoltage photons do not stop at 3 cm. Intraoperative electrons are chosen because the range can be matched to the bed and then ended.
 
 ### Q2
 Stem: Which total-body accessory is matched to the correct purpose?
