@@ -116,6 +116,33 @@ class TranslationTest(unittest.TestCase):
         out = translator("half-life is 73.8 days")
         self.assertIn("73.8", out)
         self.assertIn("Радиоактивность", out)
+        self.assertIn("half-life", out)
+
+    def test_changed_number_or_term_stays_english(self):
+        import study.telegram_bot as bot
+
+        path = Path("/tmp/lika-ru-changed.json")
+        if path.exists():
+            path.unlink()
+
+        class Change:
+            def complete(self, messages, max_tokens=500):
+                return "Радиоактивность. half-life 80"
+
+        class DropTerm:
+            def complete(self, messages, max_tokens=500):
+                return "Период полураспада равен 73.8 суткам"
+
+        source = "half-life is 73.8 days"
+        bot._translator = Translator(Change(), path)
+        try:
+            shown = russian({"ru": True}, source)
+        finally:
+            bot._translator = None
+        self.assertTrue(shown.startswith("Перевод не получился"))
+        self.assertIn("73.8", shown)
+        self.assertNotIn("80", shown)
+        self.assertEqual(Translator(DropTerm(), path)(source), source)
 
 
 if __name__ == "__main__":
