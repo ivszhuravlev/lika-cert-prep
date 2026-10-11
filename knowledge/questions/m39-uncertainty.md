@@ -53,3 +53,13 @@ D. 0.60 cm
 Answer: D
 Objective: IV.6
 Why: Extra path = thickness × (wrong density − tissue density) = 3.0 × (1.20 − 1.00) = 3.0 × 0.20 = 0.60 cm. That extra 0.60 cm is fictitious attenuation and should be removed by overriding the contrast. Correct choice: 0.60 cm. 3.0 × 1.20 = 3.60 cm is the whole contrast path, not the extra above tissue. 1.20 is the density, not the added centimeters. 3.00 cm would be the extra only if the override density were 2.00.
+
+### Q6
+Stem: Cord dose sampled every 2 mm is 48.0, 51.0, 54.2, 50.5, and 47.0 Gy. A 6 mm grid keeps only 48.0 Gy and 50.5 Gy. What maximum is reported, and by how much is the peak missed?
+A. 50.5 Gy reported, peak missed by 3.7 Gy
+B. 54.2 Gy reported, peak missed by 0 Gy
+C. 48.0 Gy reported, peak missed by 6.2 Gy
+D. 51.0 Gy reported, the mean of the five samples
+Answer: A
+Objective: IV.6
+Why: The coarse grid never lands on 54.2 Gy. The higher of the two kept points is 50.5 Gy. The miss is 54.2 − 50.5 = 3.7 Gy. Reporting 54.2 assumes the fine samples were kept. 48.0 is the other kept point, and 54.2 − 48.0 = 6.2 Gy overstates the miss if the algorithm reports the maximum of the calculated points.

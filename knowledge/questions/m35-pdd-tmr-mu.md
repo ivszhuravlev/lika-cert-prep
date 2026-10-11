@@ -597,3 +597,13 @@ D. 28.0 Gy
 Answer: C
 Objective: IV.3
 Why: Course 1 physical = 25×2 = 50 Gy. BED1 = 50×(1+2/3) = 50×1.6667 = 83.33 Gy. EQD2_1 = 83.33/(1+2/3) = 83.33/1.6667 = 50.00 Gy. Course 2 physical = 5×4 = 20 Gy. BED2 = 20×(1+4/3) = 20×2.3333 = 46.67 Gy. EQD2_2 = 46.67/1.6667 = 28.00 Gy. Sum = 50.00 + 28.00 = 78.00 Gy, reported as 78.0 Gy. Adding physical doses only (50+20) gives 70.0 Gy. Adding BEDs and calling the sum an EQD2 gives 130.0 Gy. Reporting only the second course gives 28.0 Gy.
+
+### Q20
+Stem: Calibration is 1.000 cGy/MU at dmax for 10×10 at SAD 100 cm. The setup is SSD 100 cm, dmax is 1.5 cm, PDD is 67%, and the tumor dose is 200 cGy. Every other factor is 1. How many MU?
+A. 298.5
+B. 307.5
+C. 200.0
+D. 189.4
+Answer: B
+Objective: IV.1
+Why: The machine is calibrated at SAD 100, so the SSD setup is not at the calibration distance. The inverse-square factor from SAD to SSD+dmax is (100/101.5)^2 = 0.9707. MU = 200 / (0.67 × 0.9707) = 307.5. Dropping that factor gives 200/0.67 = 298.5, which is the trap when the stem says SSD 100 and the calibration was SAD 100. 189.4 multiplies by 0.9707 instead of dividing.

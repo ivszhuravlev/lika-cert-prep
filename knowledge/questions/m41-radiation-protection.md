@@ -120,13 +120,13 @@ Why: Primary barriers intercept the useful beam and are thicker. Secondary barri
 
 ### Q2
 Stem: Vault design numbers are given so the transmission can be computed. Design limit P = 4e-05 Gy/week at the protected point, distance d = 5 m from the target, workload W = 200 Gy/week at 1 m, use factor U = 1, occupancy T = 0.5. Required primary transmission B = P d² / (W U T). What is B?
-A. 1.000e-05 Gy/week
-B. 5.000e-06 Gy/week
-C. 4.000e-07 Gy/week
-D. 1.000e+05 Gy/week
+A. 1.000e-05, dimensionless
+B. 5.000e-06, dimensionless
+C. 4.000e-07, dimensionless
+D. 1.000e+05, dimensionless
 Answer: A
 Objective: VI.3
-Why: d² = 5² = 25. WUT = 200 × 1 × 0.5 = 100. P × d² = 4e-05 × 25 = 0.001. B = 0.001 / 100 = 1e-05 Gy/week of transmission (dimensionless), reported as 1.000e-05 Gy/week. A smaller B means a thicker barrier. Forgetting occupancy makes the barrier calculation too pessimistic or too thin depending on whether T is below 1; here T is 0.5, so dropping it changes B. Dropping occupancy T gives 5.000e-06 Gy/week. Dropping d² gives 4.000e-07 Gy/week. Inverting the formula gives 1.000e+05 Gy/week, which is greater than 1 and cannot be a required transmission for a shielded vault.
+Why: d² = 5² = 25. WUT = 200 × 1 × 0.5 = 100. P × d² = 4e-05 × 25 = 0.001. B = 0.001 / 100 = 1e-05. Transmission is dimensionless: the Gy/week in P and in W cancel. A smaller B means a thicker barrier. Dropping occupancy T gives 5.000e-06. Dropping d² gives 4.000e-07. Inverting the formula gives 1.000e+05, which is greater than 1 and cannot be a required transmission.
 
 ### Q3
 Stem: The barrier calculation required a transmission of 1×10^−5. The required transmission is 10^−5. How many tenth-value layers is that? Each TVL multiplies transmission by 0.1.
@@ -212,13 +212,13 @@ Why: Excess = 62 − 50 = 12 mSv. The cumulative age guidance is a separate chec
 
 ### Q6
 Stem: Quiz. Compute primary transmission B. Design limit P = 0.00025 Gy/week at the protected point, distance d = 4 m from the target, workload W = 200 Gy/week at 1 m, use factor U = 0.25, occupancy T = 0.8. Required primary transmission B = P d² / (W U T). What is B?
-A. 8.000e-05 Gy/week
-B. 6.250e-06 Gy/week
-C. 1.000e-04 Gy/week
-D. 1.000e+04 Gy/week
+A. 8.000e-05, dimensionless
+B. 6.250e-06, dimensionless
+C. 1.000e-04, dimensionless
+D. 1.000e+04, dimensionless
 Answer: C
 Objective: VI.3
-Why: d² = 4² = 16. WUT = 200 × 0.25 × 0.8 = 40. P × d² = 0.00025 × 16 = 0.004. B = 0.004 / 40 = 0.0001 Gy/week of transmission (dimensionless), reported as 1.000e-04 Gy/week. A smaller B means a thicker barrier. Forgetting occupancy makes the barrier calculation too pessimistic or too thin depending on whether T is below 1; here T is 0.8, so dropping it changes B. Dropping occupancy T gives 8.000e-05 Gy/week. Dropping d² gives 6.250e-06 Gy/week. Inverting the formula gives 1.000e+04 Gy/week, which is greater than 1 and cannot be a required transmission for a shielded vault.
+Why: d² = 4² = 16. WUT = 200 × 0.25 × 0.8 = 40. P × d² = 0.00025 × 16 = 0.004. B = 0.004 / 40 = 0.0001. Transmission is dimensionless. A smaller B means a thicker barrier. Dropping occupancy T gives 8.000e-05. Dropping d² gives 6.250e-06. Inverting the formula gives 1.000e+04, which is greater than 1 and cannot be a required transmission.
 
 ### Q7
 Stem: Quiz. A door is thickened by exactly two HVL. What percent is transmitted? A shield is exactly two HVL thick in a narrow beam. What percent of the incident intensity is transmitted?

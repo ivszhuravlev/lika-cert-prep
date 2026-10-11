@@ -166,6 +166,16 @@ Answer: B
 Objective: IV.3
 Why: Each term is how far that field's edge diverges from its central axis over depth d. Field 1: (14/2) × (8/100) = 7 × 0.0800 = 0.5600 cm. Field 2: (30/2) × (8/100) = 15 × 0.0800 = 1.2000 cm. Gap = 0.5600 + 1.2000 = 1.7600 cm, reported as 1.76 cm. A gap that is too small overlaps the beams at depth (hot). A gap that is too large leaves a cold strip. Dropping the 1/2 and using the full field length gives 3.52 cm, twice the divergence of each edge. Keeping only the larger of the two contributions gives 1.20 cm and leaves the other field's divergence unmatched. Inverting d/SSD into SSD/d gives 275.00 cm, which has the wrong units behavior and is far too large to be a skin gap.
 
+### Q20
+Stem: Both match edges are half-beam blocked on the central axis. What skin gap makes those edges meet at depth?
+A. (L/2)×(d/SSD) for each field, added
+B. 0 cm
+C. 1 cm, as a standard match gap
+D. The collimator angle in centimeters
+Answer: B
+Objective: IV.3
+Why: A jaw on the central axis does not diverge. The two central-axis edges already meet at every depth, so the skin gap is 0 cm. Using (L/2)×(d/SSD) opens a cold strip. A 1 cm gap is not a universal match. A collimator angle is not a gap.
+
 ## Couch/Collimator Divergence Tutorial
 
 ### Q1
@@ -246,7 +256,7 @@ C. 10°
 D. 45°
 Answer: A
 Objective: IV.3
-Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may rotate the collimator for a different border, such as the posterior chest-wall edge, but that is a separate jaw. The superior match itself needs no extra couch kick when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
+Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may kick the couch for a different border, such as the posterior chest-wall edge. The superior match itself needs no extra collimator rotation when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
 
 ## Couch/Collimator Divergence Mini-Quiz
 
@@ -328,12 +338,12 @@ C. 10°
 D. 45°
 Answer: A
 Objective: IV.3
-Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may rotate the collimator for a different border, such as the posterior chest-wall edge, but that is a separate jaw. The superior match itself needs no extra couch kick when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
+Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may kick the couch for a different border, such as the posterior chest-wall edge. The superior match itself needs no extra collimator rotation when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
 
 ## Breast Tangent Calculation Tutorial
 
 ### Q1
-Stem: Breast tutorial. Collimator rotation so the posterior borders are coplanar. Jaw opening is the transverse width. SAD is 100 cm and the jaw opening that diverges at the posterior chest-wall border of a tangent is 20 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast tutorial. Couch kick so the posterior borders are coplanar and do not dive into lung. Jaw opening is the transverse width. SAD is 100 cm and the jaw opening that diverges at the posterior chest-wall border of a tangent is 20 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 11.3°
 B. 84.3°
 C. 0.10°
@@ -373,7 +383,7 @@ Objective: IV.3
 Why: Half the opening is 18/2 = 9 cm. The opposite-over-adjacent ratio is 9/100 = 0.0900. θ = arctan(0.0900) = 5.14°, which rounds to 5.1°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(18/100), gives 10.2°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/9) gives 84.9°. Reporting the ratio 0.0900 as though it were already in degrees gives 0.09°.
 
 ### Q5
-Stem: Breast tutorial. Longer tangent, couch angle. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 22 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast tutorial. Longer tangent, collimator angle for the superior match. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 22 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 12.4°
 B. 83.7°
 C. 6.3°
@@ -390,7 +400,7 @@ C. 45°
 D. 0°
 Answer: D
 Objective: IV.3
-Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may rotate the collimator for a different border, such as the posterior chest-wall edge, but that is a separate jaw. The superior match itself needs no extra couch kick when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
+Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may kick the couch for a different border, such as the posterior chest-wall edge. The superior match itself needs no extra collimator rotation when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
 
 ### Q7
 Stem: Breast tutorial. If the collimator is not rotated, how far does the posterior edge walk in a plane 10 cm past isocenter? At isocenter the field edge is 8 cm from the central axis. SAD is 100 cm. How much farther from the central axis is that same edge in a plane 10 cm beyond isocenter? Extra divergence = (half-width at isocenter) × (distance past isocenter) / SAD.
@@ -435,7 +445,7 @@ Objective: IV.3
 Why: Half the opening is 28/2 = 14 cm. The opposite-over-adjacent ratio is 14/100 = 0.1400. θ = arctan(0.1400) = 7.97°, which rounds to 8.0°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(28/100), gives 15.6°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/14) gives 82.0°. Reporting the ratio 0.1400 as though it were already in degrees gives 0.14°.
 
 ### Q3
-Stem: Breast calculation. Couch angle. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 15 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast calculation. Collimator angle for the superior match. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 15 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 8.5°
 B. 85.7°
 C. 0.08°
@@ -544,7 +554,7 @@ C. 45°
 D. 0°
 Answer: D
 Objective: IV.3
-Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may rotate the collimator for a different border, such as the posterior chest-wall edge, but that is a separate jaw. The superior match itself needs no extra couch kick when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
+Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may kick the couch for a different border, such as the posterior chest-wall edge. The superior match itself needs no extra collimator rotation when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
 
 ### Q6
 Stem: Breast mini-quiz. SAD 80 cm. SAD is 80 cm and the jaw opening that diverges at the posterior border of a tangent is 24 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
@@ -575,6 +585,26 @@ D. 3.7°
 Answer: D
 Objective: IV.3
 Why: Half the opening is 13/2 = 6.5 cm. The opposite-over-adjacent ratio is 6.5/100 = 0.0650. θ = arctan(0.0650) = 3.72°, which rounds to 3.7°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(13/100), gives 7.4°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/6.5) gives 86.3°. Reporting the ratio 0.0650 as though it were already in degrees gives 0.07°.
+
+### Q20
+Stem: The supraclavicular field is half-beam blocked inferiorly. The tangent length, superior to inferior, is 20 cm at SAD 100 cm. Which rotation removes superior-border divergence, and what is the angle?
+A. Couch kick, 5.7°
+B. Collimator, 5.7°
+C. Collimator, 11.3°
+D. No rotation, because a half-beam supraclavicular field still diverges
+Answer: B
+Objective: IV.3
+Why: The superior–inferior length belongs to the collimator. Half the length is 10 cm. θ = arctan(10/100) = 5.71°, about 5.7°. The couch kick uses the posterior width, not this length. arctan(20/100) = 11.3° forgets the half-field. A half-beam supraclavicular border does not diverge; the tangent collimator is what lines up to it.
+
+### Q21
+Stem: Isocentric tangents have a posterior opening of 16 cm at SAD 100 cm. Which rotation keeps that posterior border out of lung, and what is the angle?
+A. Collimator, 4.6°
+B. Couch kick, 9.1°
+C. Couch kick, 4.6°
+D. Couch kick, 0°, because the collimator angle already covers every border
+Answer: C
+Objective: IV.3
+Why: The posterior width belongs to the couch kick. Half the opening is 8 cm. φ = arctan(8/100) = 4.57°, about 4.6°. The collimator is the superior match, a different rotation. arctan(16/100) = 9.1° uses the full opening.
 
 ## Transmission, HVL, Linear Attenuation Coefficient
 
@@ -1089,6 +1119,16 @@ D. 1.95 min
 Answer: D
 Objective: IV.3
 Why: True dose rate = (131.2−35.2)/(2−0.5) = 96/1.5 = 64 cGy/min. Timer error = 35.2/64 − 0.5 = 0.5500 − 0.5 = 0.0500 min. Set time = 128/64 − 0.0500 = 2.0000 − 0.0500 = 1.9500 min, reported as 1.95 min. The positive timer error means the source delivered extra dose during motion, so the set time is shorter than dose/rate. Ignoring timer error and setting dose/rate gives 2.00 min, which overdoses by the transit contribution. Adding the timer error instead of subtracting it gives 2.05 min and overdoses further. Using R1/t1 = 35.2/0.5 = 70.4000 cGy/min as the dose rate folds the transit dose into the rate and then still subtracting tau gives 1.77 min.
+
+### Q20
+Stem: A cobalt unit reads 80 cGy on a 1.00 min setting and 180 cGy on a 2.00 min setting. What timer setting delivers 200 cGy?
+A. 1.80 min
+B. 2.00 min
+C. 2.20 min
+D. 2.40 min
+Answer: C
+Objective: IV.3
+Why: The extra 100 cGy in the second minute is the true dose rate, 100 cGy/min. The 1.00 min setting delivered 80 cGy, so beam-on time was 0.80 min and the timer error is 0.80 − 1.00 = −0.20 min. Dose = 100 × (set time − 0.20). For 200 cGy, set time − 0.20 = 2.00, so the setting is 2.20 min. A 2.00 min setting delivers 180 cGy. This is the usual cobalt case: the shutter steals time, so the set time is longer than dose/rate.
 
 ## Trigonometry
 

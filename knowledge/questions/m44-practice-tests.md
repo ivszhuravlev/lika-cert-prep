@@ -594,7 +594,7 @@ Objective: IV.3
 Why: The source is not a point, so the diaphragm casts a partial shadow that grows as you move away from the diaphragm. Substitute 1.6 × (85 + 12 − 42) / 42 = 1.6 × (55) / 42 = 1.6 × 1.3095 = 2.0952 cm, reported as 2.10 cm. This geometric width is not the physical penumbra. Physical penumbra is the 80% to 20% dose distance, usually quoted at dmax. Dropping the depth and using (SSD-SDD), which is the surface penumbra gives 1.64 cm. Forgetting to subtract SDD inside the parentheses gives 3.70 cm. Forgetting to multiply by the source diameter gives 1.31 cm.
 
 ### Q10
-Stem: Practice exam 2. Breast collimator angle. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 17 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Practice exam 2. Breast couch kick. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 17 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 9.6°
 B. 85.1°
 C. 0.09°

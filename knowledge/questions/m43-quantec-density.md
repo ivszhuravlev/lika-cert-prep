@@ -136,6 +136,16 @@ Answer: B
 Objective: III.8
 Why: The peritoneal correlate is V45 < 195 cc. Excess = 210 − 195 = 15 cc. The loop correlate is V15 < 120 cc, and 210 − 120 = 90 cc would be the wrong subtraction because these are not loop contours. Calling V45 met would be 0 cc over. Quoting 210 cc reports the DVH volume, not the excess.
 
+### Q9
+Stem: A three-fraction spine plan gives the cord a point dose of 23 Gy and a dose of 16 Gy to 0.35 cm³. TG-101 lists a point maximum of 21.9 Gy and a 0.35 cm³ limit of 18 Gy for three fractions. What fails?
+A. Both values fail
+B. The 0.35 cm³ dose fails, and the point dose does not
+C. The point dose fails, and 16 Gy does not fail 18 Gy
+D. Neither fails, because the conventional cord limit is 50 Gy
+Answer: C
+Objective: III.8
+Why: 23 Gy is above the 21.9 Gy point maximum, so the point dose fails. 16 Gy is under 18 Gy, so the 0.35 cm³ value does not fail. The 50 Gy conventional limit is the wrong table for three-fraction SBRT.
+
 ## Physical Density of Materials
 
 ### Q1

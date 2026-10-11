@@ -53,3 +53,13 @@ D. That the dose grid had a finite spacing
 Answer: A
 Objective: IV.5
 Why: A smooth accumulated DVH is an output of the map you gave it. Overlap scores and pretty curves do not prove the vectors are right, especially after weight loss or in the abdomen. Correct choice: That the registration was accurate. A mean can be computed from any map, accurate or not. The DVH existing shows a dose was sampled. It does not validate the vectors. Every clinical grid has a spacing. Smoothness does not audit it.
+
+### Q6
+Stem: After a trustworthy deformable registration, an organ with α/β = 3 Gy has already received 40 Gy in 2 Gy fractions and will receive 30 Gy in 10 fractions of 3 Gy. What is the biological sum?
+A. 70 Gy
+B. 76 Gy EQD2
+C. 66 Gy EQD2
+D. 106 Gy, the sum of the two BEDs
+Answer: B
+Objective: IV.5
+Why: The first course is already in 2 Gy fractions, so its EQD2 is 40 Gy. The second course: EQD2 = 30 × (3+3)/(2+3) = 30 × 6/5 = 36 Gy. The biological sum is 40 + 36 = 76 Gy EQD2. Adding the physical doses gives 70 Gy and ignores fraction size. 66 Gy uses (3+3)/(3+3) or a similar slip. Adding BEDs, 40×(1+2/3)=66.7 and 30×(1+3/3)=60, sums to about 127, not an EQD2.
