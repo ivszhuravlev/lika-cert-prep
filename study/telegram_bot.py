@@ -315,7 +315,7 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
         return
     if low in MODES:
         if not state.get("module"):
-            tg.send(chat_id, "Сначала модуль.\n\n" + module_list())
+            tg.send(chat_id, "Тема не выбрана. Напиши номер или название из списка, либо нажми «К темам».")
             return
         state["mode"] = MODES[low]
         state["cursor"] = 0
@@ -329,14 +329,15 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
     if low == "дальше" and state.get("mode") == "theory":
         ask_next(tg, chat_id, state, progress)
         return
-        ask_next(tg, chat_id, state, progress)
+    if low in {"дальше", "следующий блок"}:
+        tg.send(chat_id, "Сейчас это не к чему применить. Сначала выбери тему и режим.")
         return
     module = find_module(load_modules(), raw) if not state.get("item_id") or low[:1] not in "abcd" else None
     if module is not None and low not in {"a", "b", "c", "d"}:
         state["module"] = module.code
         state["mode"] = ""
         state["item_id"] = ""
-        tg.send(chat_id, f"{module.title}. Теория, задачи, квиз, вместе или в дорогу.", keyboard=keys(state))
+        tg.send(chat_id, f"Тема: {module.title}.\nТеперь режим: Теория, Задачи, Квиз, Вместе или В дорогу.", keyboard=keys(state))
         return
     item_id = state.get("item_id") or ""
     if item_id and state.get("mode") in {"quiz", "problems", "mixed"}:
@@ -364,7 +365,7 @@ def handle(tg: Telegram, chat_id: int, text: str, state: dict, progress: Progres
     if found:
         state["module"] = found.code
         state["mode"] = ""
-        tg.send(chat_id, f"{found.title}. Теория, задачи, квиз, вместе или в дорогу.", keyboard=keys(state))
+        tg.send(chat_id, f"Тема: {found.title}.\nТеперь режим: Теория, Задачи, Квиз, Вместе или В дорогу.", keyboard=keys(state))
         return
     tg.send(chat_id, "Не разобрала. /start покажет модули.")
 
