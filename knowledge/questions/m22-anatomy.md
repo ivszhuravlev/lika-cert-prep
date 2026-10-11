@@ -267,3 +267,43 @@ D. Spleen, and the bones are the liver
 Answer: B
 Objective: III.4
 Why: On a slice below the seminal vesicles, the midline gland around the urethra is the prostate. The rectum is directly posterior and may contain air or stool. The femoral heads are the round bones laterally, seated in the acetabula. The pubic symphysis is the anterior midline bone. Seminal vesicles are the bow-tie on the slice above the prostate. This low, the abdominal aorta has bifurcated; the iliac vessels are the nodal landmarks. Spleen and liver are upper-abdominal organs.
+
+### Q20
+Stem: Axial male pelvis, head-first supine, displayed as if looking from the feet. A midline gland surrounds the urethra and lies posterior to the anterior midline bone. An air-containing structure lies immediately posterior to that gland. What is the air-containing structure?
+A. Bladder
+B. Seminal vesicles
+C. Rectum
+D. Prostate
+Answer: C
+Objective: III.4
+Why: The midline gland around the urethra, posterior to the pubic symphysis, is the prostate. Head-first supine does not move that relationship: anterior stays anterior. The air-containing structure immediately posterior to the gland is the rectum. The bladder is the fluid-filled organ anterior and superior to the gland. Seminal vesicles are the bow-tie on the slice above the gland, between bladder and rectum, and they are soft tissue rather than the air column. The prostate is the gland itself, not the structure behind it.
+
+### Q21
+Stem: Axial upper abdomen, head-first supine. Stomach air sits medial and anterior to a smaller organ that is posterolateral on the patient’s left, against the left hemidiaphragm and the ribs, and superior and lateral to the left kidney. What is that smaller organ?
+A. Liver
+B. Stomach
+C. Left kidney
+D. Spleen
+Answer: D
+Objective: III.4
+Why: The smaller organ posterolateral on the patient’s left, under the left hemidiaphragm and against the ribs, with stomach air medial and anterior to it, is the spleen. It sits superior and lateral to the left kidney, so the kidney is the neighbor below it, not the organ being described. The liver is the large homogeneous organ in the patient’s right upper quadrant. The stomach is the air-containing neighbor, medial and anterior, not the solid organ beside that air.
+
+### Q22
+Stem: Axial upper abdomen, head-first supine, displayed as if looking from the patient’s feet toward the head. On the image left is a large homogeneous organ under the hemidiaphragm. A vessel lies in the posterior part of that organ. What is the organ on image left, and on which side of the patient does it sit?
+A. Liver, on the patient’s right
+B. Spleen, on the patient’s left
+C. Spleen, on the patient’s right
+D. Liver, on the patient’s left
+Answer: A
+Objective: III.4
+Why: An axial image viewed from the feet places the patient’s right on the image left. The large organ under the right hemidiaphragm is the liver. The vessel in its posterior portion is the IVC or a hepatic vein, which marks the liver rather than a left-sided organ. The spleen is the smaller posterolateral organ on the patient’s left, which is image right on this display. Putting the liver on the patient’s left swaps the radiologic orientation.
+
+### Q23
+Stem: Axial neck, head-first supine, at about C1. Soft tissue wraps lateral and posterior to the mandibular ramus and sits anterior to the mastoid and the ear. It is subcutaneous on the lateral face. What is it?
+A. Submandibular gland
+B. Parotid gland
+C. Spinal cord
+D. Cricoid cartilage
+Answer: B
+Objective: III.4
+Why: At about C1 the soft tissue lateral and posterior to the mandibular ramus, anterior to the mastoid and the ear, is the parotid. The submandibular gland is farther anterior and inferior, under the mandibular body and above the hyoid. The spinal cord is inside the canal, not on the lateral face. The cricoid is the complete ring in the anterior midline neck, below the thyroid cartilage, not beside the ramus.

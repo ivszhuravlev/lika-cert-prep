@@ -146,6 +146,66 @@ Answer: C
 Objective: III.8
 Why: 23 Gy is above the 21.9 Gy point maximum, so the point dose fails. 16 Gy is under 18 Gy, so the 0.35 cm³ value does not fail. The 50 Gy conventional limit is the wrong table for three-fraction SBRT.
 
+### Q20
+Stem: Conventional fractionation prostate plan. Rectum DVH: V50 = 46%, V60 = 34%, V65 = 27%, V70 = 19%, V75 = 12%. The QUANTEC set is V50 < 50, V60 < 35, V65 < 25, V70 < 20, V75 < 15. Which conclusion matches that set?
+A. The set is met, because four bins pass and a 2-point V65 miss does not count
+B. V50 fails, because 46 is 4 percentage points under 50
+C. The set is not met; only V65 fails, by 2 percentage points
+D. V75 fails, because 12 is under 15
+Answer: C
+Objective: III.8
+Why: V50: 46 < 50, pass, and 50 − 46 = 4 percentage points under. V60: 34 < 35, pass. V65: 27 − 25 = 2 percentage points over, so this bin fails. V70: 19 < 20, pass. V75: 12 < 15, pass, and 15 − 12 = 3 percentage points under. One failed bin fails the set. A value under its limit is a pass, so V50 and V75 do not fail.
+
+### Q21
+Stem: Three-fraction spine SBRT. The cord point dose is 20.4 Gy and the dose to 0.35 cm³ is 19.2 Gy. TG-101 lists a three-fraction cord point maximum of 21.9 Gy and a 0.35 cm³ limit of 18 Gy. What fails?
+A. The point dose fails by 1.5 Gy, and the 0.35 cm³ dose passes
+B. The 0.35 cm³ dose fails by 1.2 Gy, and the point dose is 1.5 Gy under its maximum
+C. Both fail, because three fractions are scored with the conventional 50 Gy cord limit
+D. Neither fails
+Answer: B
+Objective: III.8
+Why: Point dose: 21.9 − 20.4 = 1.5 Gy under 21.9 Gy, so the point dose passes. Volume: 19.2 − 18.0 = 1.2 Gy over the 0.35 cm³ limit, so that value fails. The conventional 50 Gy cord correlate is a different fractionation. Both values would fail only if the point dose were also above 21.9 Gy.
+
+### Q22
+Stem: Two cord plans are scored with TG-101. The one-fraction plan has a point dose of 15.0 Gy and 11.0 Gy to 0.35 cm³; the one-fraction limits are a point maximum of 14 Gy and a 0.35 cm³ limit of 10 Gy. The five-fraction plan has a point dose of 28.0 Gy and 24.5 Gy to 0.35 cm³; the five-fraction limits are a point maximum of 30 Gy and a 0.35 cm³ limit of 23 Gy. Which statement is correct?
+A. One fraction: only the point dose fails, by 1 Gy. Five fractions: only the point dose fails, by 2 Gy
+B. One fraction: only the 0.35 cm³ dose fails, by 1 Gy. Five fractions: the point dose fails
+C. Neither plan fails if both are compared with the three-fraction limits of 21.9 Gy and 18 Gy
+D. One fraction: the point dose fails by 1.0 Gy and the 0.35 cm³ dose fails by 1.0 Gy. Five fractions: the point dose is 2.0 Gy under 30 Gy, and the 0.35 cm³ dose fails by 1.5 Gy
+Answer: D
+Objective: III.8
+Why: One fraction: 15.0 − 14 = 1.0 Gy over the point maximum, and 11.0 − 10 = 1.0 Gy over the 0.35 cm³ limit, so both fail. Five fractions: 30 − 28.0 = 2.0 Gy under the point maximum, so the point dose passes, and 24.5 − 23 = 1.5 Gy over the 0.35 cm³ limit, so the volume fails. Scoring either plan on the three-fraction row is the wrong fractionation. That row would hide the one-fraction failures, because 15.0 < 21.9 and 11.0 < 18, and it is still the wrong table for five fractions even though 28.0 − 21.9 = 6.1 and 24.5 − 18 = 6.5.
+
+### Q23
+Stem: One-fraction SRS. The optic-pathway point dose is 12.5 Gy. TG-101 lists a one-fraction optic-pathway point maximum of 10 Gy. By how many Gy does the stated point dose exceed that maximum?
+A. 2.5 Gy
+B. 0 Gy, because 12.5 Gy is under the one-fraction cord point maximum of 14 Gy
+C. 12.5 Gy
+D. 10 Gy
+Answer: A
+Objective: III.8
+Why: Excess = 12.5 − 10 = 2.5 Gy. The one-fraction cord point maximum is a different organ: 14 − 12.5 = 1.5 Gy under 14 Gy does not clear the optic-pathway maximum. Quoting 12.5 Gy reports the point dose. Quoting 10 Gy reports the maximum. The conventional optic estimate near 55 Gy is the wrong fractionation.
+
+### Q24
+Stem: Three-fraction SRS. The brainstem point dose is 26.1 Gy. TG-101 lists a three-fraction brainstem point maximum of 23.1 Gy. By how many Gy does the stated point dose exceed that maximum?
+A. 4.2 Gy
+B. 3.0 Gy
+C. 0 Gy
+D. 23.1 Gy
+Answer: B
+Objective: III.8
+Why: Excess = 26.1 − 23.1 = 3.0 Gy. Subtracting the three-fraction cord point maximum instead gives 26.1 − 21.9 = 4.2 Gy, which is the wrong organ. Calling the brainstem maximum met would be 0 Gy over. Quoting 23.1 Gy reports the three-fraction maximum, not the excess.
+
+### Q25
+Stem: Five-fraction SBRT. The brachial plexus point dose is 33.5 Gy. TG-101 lists a five-fraction brachial plexus point maximum of 30.5 Gy. By how many Gy does the stated point dose exceed that maximum?
+A. 3.5 Gy, from 33.5 − 30, using the five-fraction cord point maximum
+B. 0 Gy
+C. 30.5 Gy
+D. 3.0 Gy
+Answer: D
+Objective: III.8
+Why: Excess = 33.5 − 30.5 = 3.0 Gy. The five-fraction cord point maximum is a different organ: 33.5 − 30 = 3.5 Gy is the wrong subtraction. Calling the plexus maximum met would be 0 Gy over. Quoting 30.5 Gy reports the five-fraction maximum, not the excess.
+
 ## Physical Density of Materials
 
 ### Q1

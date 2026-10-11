@@ -515,6 +515,46 @@ Answer: B
 Objective: III.1
 Why: Answer B. The RTOG conformity index is the volume of the prescription isodose divided by the target volume: 24/20 = 1.20. A value of 1 would mean those volumes match. A value above 1 means the prescription cloud is larger than the PTV, which is this plan. The index does not by itself say whether the extra 4 cm³ is hanging off one side while part of the PTV is missed. Here 1 cm³ of PTV is outside the prescription (20 − 19), so coverage is not perfect even though the index is only moderately above 1. The ratio 19/24 is closer to a coverage fraction of the prescription cloud, and it is not the RTOG definition.
 
+### Q20
+Stem: The cord limit in use is a maximum of 50 Gy. The cumulative DVH of the contoured cord reports a maximum of 44 Gy. On one axial slice the canal was never contoured, and the isodose display shows 54 Gy inside that canal. Which conclusion is justified?
+A. The cord meets the limit, because 50 − 44 = 6 Gy of margin and a DVH maximum already includes every slice
+B. The contoured cord is 6 Gy under 50 Gy, but the DVH contains only contoured voxels; the uncontoured slice is 4 Gy over 50 Gy and does not move the histogram
+C. The DVH maximum already reports the excess 54 − 44 = 10 Gy
+D. A differential DVH adds the missing slice and a cumulative DVH does not
+Answer: B
+Objective: III.1
+Why: Answer B. 50 − 44 = 6 Gy, so the maximum of the contoured cord is under the limit. Both cumulative and differential histograms use only voxels inside the structure, so an uncontoured canal slice never enters the curve. On that slice, 54 − 50 = 4 Gy over the limit. The 10 Gy gap, 54 − 44, is the difference between the isodose on the missing slice and the DVH of a different set of voxels. Changing the plot type does not draw the missing contour.
+
+### Q21
+Stem: Every structure that has an optimization objective meets its DVH limit. The parotid mean objective is 26 Gy and the parotid DVH mean is 24 Gy. The esophagus is contoured and has no objective. The isodose display shows 70 Gy inside the esophagus. The prescription is 60 Gy. What has the objective list missed?
+A. A parotid failure of 24 − 26 = −2 Gy
+B. That the esophagus DVH maximum must equal 60 Gy because that is the prescription
+C. Nothing; a structure with no objective cannot contain dose
+D. A 70 Gy esophagus hotspot the optimizer was not asked to limit, 10 Gy above the prescription, while the parotid objective is still 2 Gy under its own limit
+Answer: D
+Objective: III.12
+Why: Answer D. An objective constrains only the structure it is attached to. The parotid mean meets its limit: 26 − 24 = 2 Gy under 26 Gy. The esophagus had no objective, so 70 Gy inside it does not turn the objective list red. Relative to the prescription, 70 − 60 = 10 Gy above 60 Gy. That region is visible on the isodose display and on an esophagus DVH if one is computed. Dose is deposited whether or not an objective exists, and a negative parotid margin is not a failure.
+
+### Q22
+Stem: On a single axial slice the 95% isodose wraps the PTV and the plan is called conformal from that slice. The PTV is 40 cm³. Over the whole target, the prescription-isodose volume is 52 cm³ and 38 cm³ of the PTV lies inside it. D95 equals the prescription dose, so the coverage objective is met. Which reading is justified?
+A. One conformal slice plus a met D95 proves the prescription isodose matches the PTV on every slice
+B. The RTOG conformity index is 38/40 = 0.95, so the plan is too tight to be conformal
+C. D95 can meet the coverage objective while the prescription cloud is still larger than the PTV and part of the PTV is missed; one slice does not locate that miss
+D. The conformity index is 52 − 40 = 12, and a difference of 12 cm³ is a perfect score
+Answer: C
+Objective: III.1
+Why: Answer C. D95 at the prescription dose means at least 95% of the PTV is covered. Here 38/40 = 0.95, so the coverage objective can be met while 40 − 38 = 2 cm³ of PTV is outside the prescription isodose. The RTOG conformity index is 52/40 = 1.30, not 38/40 and not the difference 52 − 40 = 12. Spill outside the PTV is 52 − 38 = 14 cm³. The net volume gap is 14 − 2 = 12 cm³, which hides both the spill and the miss. A Paddick index would be 38² / (40 × 52) = 1444/2080 = 0.694, not 1. The slice that looks wrapped does not show those 2 cm³ and 14 cm³ on the other slices.
+
+### Q23
+Stem: A PTV of 50 cm³ has a minimum DVH objective of D90 at the prescription dose, and D90 equals that dose. The prescription-isodose volume is also 50 cm³. The overlap of the PTV and the prescription isodose is 45 cm³. On the isodose display the prescription cloud is shifted off one side of the PTV. Which conclusion matches the numbers?
+A. The RTOG index is 50/50 = 1, and D90 can still be met, while 5 cm³ of PTV is outside the prescription isodose and 5 cm³ of that isodose is outside the PTV
+B. An index of 1 and a met D90 mean the prescription isodose and the PTV occupy the same space
+C. The conformity index is 45/50 = 0.90, so the D90 objective cannot have been met
+D. The missed 5 cm³ is the entire prescription-isodose volume
+Answer: A
+Objective: III.1
+Why: Answer A. The RTOG conformity index is prescription-isodose volume divided by PTV volume: 50/50 = 1. That equality is size only. Overlap is 45 cm³, so 50 − 45 = 5 cm³ of PTV is missed and 50 − 45 = 5 cm³ of the prescription cloud sits outside the PTV. D90 covers 90% of 50 cm³, which is 45 cm³, so a D90 objective can be met at the same time the cloud is shifted. The ratio 45/50 = 0.90 is the coverage fraction, not the RTOG index, and it is exactly the coverage D90 describes. Paddick’s index is 45² / (50 × 50) = 2025/2500 = 0.81, which records the shift that an index of 1 does not.
+
 ## Target Volume Definitions, Isodose Distributions, and Dose Metrics Quiz
 
 ### Q1
