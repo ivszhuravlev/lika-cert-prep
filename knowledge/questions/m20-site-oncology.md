@@ -136,6 +136,86 @@ Answer: B
 Objective: III.2
 Why: Schedules to recognize for peripheral lung include 54 Gy in 3, 50 Gy in 5, and 48 Gy in 4. Central and ultracentral targets use a milder dose specified by the protocol. Confirm that dose in the named protocol. Whole-brain palliation is 30 Gy in 10. Eight gray once is bone palliation. The familiar peripheral number is the wrong number for the ultracentral geometry.
 
+### Q20
+Stem: Squamous cell carcinoma of the anal canal is planned for definitive treatment. Which description is the recognition plan?
+A. 6 MV three-field photons, 25 Gy in 5 fractions, mesorectum only and no inguinal nodes, limited by the femoral heads
+B. 6 MV photon IMRT or VMAT with chemotherapy, often about 54 Gy in 30 fractions to gross disease, elective pelvic and inguinal nodes included, limited by small bowel and perineal skin
+C. 6 MV stereotactic photons, 54 Gy in 3 fractions, no elective nodes, limited by the chest wall
+D. Megavoltage photons, 45 Gy in 25 fractions, pelvic nodes and no inguinal field, chemotherapy omitted, limited by small bowel
+Answer: B
+Objective: III.2
+Why: Anal canal squamous cell carcinoma is recognized as definitive chemoradiation. The target is concave, so 6 MV IMRT or VMAT is the usual technique, and the elective volume includes pelvic and inguinal nodes. Often about 54 Gy in 30 fractions of 1.8 Gy is the gross-disease total for T3, T4, or node-positive disease. A node-negative T2 primary is often nearer 50.4 Gy in 28 fractions, still with chemotherapy and inguinal coverage. Small bowel and perineal skin limit the plan. Treat the dose as a recognition total. The signed prescription is the patient's dose. Twenty-five gray in 5 fractions is preoperative rectum. Fifty-four gray in 3 fractions is a peripheral lung stereotactic total. Forty-five gray in 25 fractions without chemotherapy and without inguinal nodes leaves out both the anal dose and the anal nodal volume.
+
+### Q21
+Stem: Muscle-invasive bladder cancer is planned for organ preservation after a maximal transurethral resection. Which description is the recognition plan?
+A. 6 MV photon IMRT, 25 Gy in 5 fractions to the bladder, elective inguinal nodes included, limited by perineal skin
+B. Opposed lateral 6 MV photons, about 63 Gy in 28 fractions, no pelvic nodes and no pelvic match, limited by the arytenoids
+C. En face 9 MeV electrons to the anterior bladder wall, 8 Gy in 1 fraction, no pelvic nodes, limited by the skin surface
+D. 6 MV photon IMRT or VMAT with chemotherapy, about 64 Gy in 32 fractions to the bladder, pelvic nodes only when the protocol includes them, limited by small bowel
+Answer: D
+Objective: III.2
+Why: Bladder preservation is chemoradiation. About 64 Gy in 32 fractions is 2 Gy per fraction, delivered with 6 MV IMRT or VMAT to the bladder. Elective pelvic nodes are included only when the protocol says so. Small bowel limits the high dose. Treat the dose as a recognition total. The signed prescription is the patient's dose. A hypofractionated bladder course near 55 Gy in 20 fractions is another recognition schedule and is still chemoradiation limited by small bowel. Twenty-five gray in 5 with inguinal nodes is the wrong site and the wrong nodal volume. About 63 Gy with opposed laterals and no nodes is early glottic larynx. Nine MeV electrons stop in a few centimeters and do not treat the bladder, and 8 Gy once is bone palliation.
+
+### Q22
+Stem: Postoperative endometrial cancer is planned for pelvic radiotherapy and a vaginal-cuff boost. Which description is the recognition plan?
+A. 6 MV photon IMRT with chemotherapy, about 54 Gy in 30 fractions, pelvic and inguinal nodes, no brachytherapy, limited by perineal skin
+B. Megavoltage photons, 45 Gy in 25 fractions to the pelvic nodes, cuff left at the external-beam dose, no brachytherapy, limited by the kidneys
+C. 6 MV IMRT or a megavoltage four-field box, 45 Gy in 25 fractions covering the pelvic nodes, then vaginal-cuff brachytherapy, limited by small bowel, rectum, and bladder
+D. 6 MV photon cranial fields matched to a posterior spine field, junction feathered, 36 Gy on the cord, no cuff treatment, limited by the kidneys
+Answer: C
+Objective: III.2
+Why: Postoperative endometrium in this stem is pelvic external beam plus a cuff boost. Forty-five gray in 25 fractions is 1.8 Gy per fraction to the pelvic nodes, by 6 MV IMRT or a megavoltage four-field box, then vaginal-cuff brachytherapy with a cylinder. Small bowel, rectum, and bladder limit the plan. The 45 Gy external-beam total sits in the same recognition bin as cervix external beam. The endometrial boost here is the cuff cylinder. Treat the dose as a recognition total. The signed prescription is the patient's dose. Stopping at 45 Gy leaves out the cuff boost. About 54 Gy with inguinal nodes is anal canal chemoradiation. A feathered cranial-spinal junction is craniospinal irradiation.
+
+### Q23
+Stem: Early glottic larynx cancer, limited to one vocal cord, is planned for definitive radiotherapy. Which description is the recognition plan?
+A. Opposed lateral 6 MV photons, about 63 Gy in 28 fractions, no elective nodes and no supraclavicular match, limited by the arytenoids
+B. 6 MV photon IMRT with chemotherapy, about 70 Gy in 35 fractions, elective bilateral neck nodes matched to a supraclavicular field, limited by the parotids
+C. 18 MV opposed laterals, about 63 Gy in 28 fractions, elective neck nodes included, no match stated, limited by the lung
+D. 6 MV involved-site photons, 20 to 30 Gy at about 2 Gy per fraction, mediastinal nodes only, no laryngeal match, limited by the heart
+Answer: A
+Objective: III.2
+Why: Early glottic cancer is a small-field photon plan. Opposed lateral 6 MV beams to about 63 Gy in 28 fractions give 63/28 = 2.25 Gy per fraction. Elective nodes are omitted, and there is no supraclavicular match. The arytenoids limit the posterior dose. Eighteen MV deepens dmax, and the thin anterior neck plus the airway can leave the anterior commissure underdosed. Treat the dose as a recognition total. The signed prescription is the patient's dose. About 70 Gy to the bilateral neck with chemotherapy is comprehensive head-and-neck treatment for gross disease that carries nodal risk. Twenty to 30 Gy to mediastinal nodes is involved-site Hodgkin treatment.
+
+### Q24
+Stem: Locally advanced pancreatic cancer is planned for definitive radiotherapy. Which description is the recognition plan?
+A. 6 MV three-field photons, 25 Gy in 5 fractions, treated like short-course rectum, no motion management and no duodenal objective, limited by the femoral heads
+B. 6 MV stereotactic photons, 54 Gy in 3 fractions, elective inguinal nodes, limited by the chest wall
+C. 6 MV photon IMRT, either chemoradiation to about 50.4 Gy in 28 fractions with elective nodes when the protocol includes them, or stereotactic body radiotherapy, often in five fractions, to the gross target with motion management and no elective nodes; the duodenum limits both
+D. Opposed lateral 6 MV photons, about 63 Gy in 28 fractions, no abdominal nodes and no abdominal match, limited by the arytenoids
+Answer: C
+Objective: III.2
+Why: Pancreas has two recognition regimens, and neither is short-course rectum. Conventional treatment is 6 MV IMRT chemoradiation to about 50.4 Gy in 28 fractions of 1.8 Gy, with elective nodes when the protocol includes them. The stereotactic alternative is often five fractions to the gross target, with motion management, and it does not add elective nodes. The duodenum limits both. Treat either dose as a recognition total. The signed prescription is the patient's dose. Twenty-five gray in 5 fractions is preoperative rectum. Fifty-four gray in 3 fractions is a peripheral lung stereotactic total. About 63 Gy with opposed laterals is early glottic larynx.
+
+### Q25
+Stem: Early-stage Hodgkin lymphoma is planned for involved-site radiotherapy after chemotherapy. The original disease was in the mediastinum and the neck. Which description is the recognition plan?
+A. 6 MV anterior-posterior photons, a full mantle to 40 Gy, uninvolved axillary and cervical sites included, lung and larynx blocks, limited by the bladder
+B. 6 MV involved-site photons, IMRT or an anterior-posterior pair, often 20 to 30 Gy at about 2 Gy per fraction to the originally involved nodes only, with no match onto uninvolved mantle sites, limited by heart, lungs, and breast
+C. 6 MV photon IMRT with chemotherapy, about 54 Gy in 30 fractions, elective inguinal nodes, limited by perineal skin
+D. 6 MV tangential photons matched to a supraclavicular field, 50 Gy in 25 fractions plus a cavity boost, limited by the brachial plexus
+Answer: B
+Objective: III.2
+Why: After chemotherapy, involved-site radiotherapy treats the nodes that originally contained disease. The technique is 6 MV photons, IMRT or an anterior-posterior pair, and the volume is not matched out onto uninvolved mantle sites. Favorable early disease is often 20 Gy in 10 fractions. Unfavorable early disease is often 30 Gy in 15 fractions. Both are about 2 Gy per fraction and sit in the 20 to 30 Gy range. Heart, lungs, and breast limit a mediastinal field. Treat the dose as a recognition total. The signed prescription is the patient's dose. A mantle to 40 Gy is the historical large field. About 54 Gy with inguinal nodes is anal canal chemoradiation. Tangents plus a supraclavicular match and a cavity boost are breast treatment.
+
+### Q26
+Stem: Left-sided breast cancer is planned for whole-breast radiotherapy, regional nodes, and a cavity boost. Which description is the recognition plan?
+A. 18 MV tangents alone, 40 Gy in 15 fractions, no supraclavicular field and no boost, limited by the contralateral breast
+B. 6 MV tangents matched by a half-beam to a supraclavicular field, 30 Gy in 10 fractions, no cavity boost, limited by the lenses
+C. En face 6 MeV electrons to the breast and the nodal volume, 54 Gy in 3 fractions, no photon match, limited by the duodenum
+D. 6 MV tangential photons matched, by a half-beam or a single isocenter, to a supraclavicular nodal field, about 50 Gy in 25 fractions or 40 Gy in 15 fractions, plus a sequential electron or photon cavity boost of about 10 Gy, limited by the heart, the ipsilateral lung, and the brachial plexus
+Answer: D
+Objective: III.2
+Why: Node-positive breast treatment is tangents plus a nodal field plus a boost. Six MV photons are the usual tangent energy. The supraclavicular match is made non-divergent with a half-beam block or a single isocenter. Recognition fractionation is about 50 Gy in 25 fractions, or 40 Gy in 15 fractions, and then a sequential cavity boost of about 10 Gy with electrons or photons. On a left-sided case the heart, including the left anterior descending region, limits the tangents, the ipsilateral lung limits the tangents and the nodal field, and the brachial plexus limits the supraclavicular field. Treat the dose as a recognition total. The signed prescription is the patient's dose. Eighteen MV increases skin sparing and lateral disequilibrium next to lung, so it is a poor default for this target. Thirty gray in 10 fractions is whole-brain or bone palliation. Six MeV electrons do not cover a breast and a nodal volume, and 54 Gy in 3 fractions is a peripheral lung stereotactic total.
+
+### Q27
+Stem: Medulloblastoma is planned for craniospinal irradiation. Which description is the recognition plan?
+A. 6 MV photon cranial fields matched to a posterior spine field, junction feathered through the course, about 23.4 to 36 Gy at 1.8 Gy per fraction along the cord, then a boost off the cord to about 54 Gy, limited by the cord at the match and by the kidneys
+B. 6 MV whole-brain opposed laterals, 30 Gy in 10 fractions, no spine field and no junction, limited by the lenses
+C. 6 MV posterior spine field only, 54 Gy in 30 fractions prescribed along the whole cord, no cranial match, limited by the scalp
+D. 6 MV involved-site photons, 20 to 30 Gy to the mediastinal nodes, no craniospinal junction, limited by breast tissue
+Answer: A
+Objective: III.2
+Why: Photon craniospinal irradiation matches 6 MV cranial fields to a posterior spine field and feathers that junction by moving it through the course, so a match hotspot is not left on one cord segment. Average-risk recognition is about 23.4 Gy to the axis, which is 23.4/1.8 = 13 fractions. High-risk recognition is about 36 Gy, which is 36/1.8 = 20 fractions. The primary is then boosted to about 54 Gy, and 54/1.8 = 30 fractions at the primary, with that boost kept off the cord so the cord stays at the lower axis dose. The kidneys limit the spine field. A tall patient may also feather a second, spine-to-spine junction. Treat the dose as a recognition total. The signed prescription is the patient's dose. Thirty gray in 10 fractions to the whole brain is palliation and has no spinal match. Putting 54 Gy along the whole cord gives the cord the boost dose. Twenty to 30 Gy to mediastinal nodes is involved-site Hodgkin treatment.
+
 ## Oncology Quiz
 
 ### Q1

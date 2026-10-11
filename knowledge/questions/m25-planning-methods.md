@@ -313,3 +313,83 @@ D. Neutron shielding thickness in the vault wall
 Answer: B
 Objective: III.7
 Why: Answer B. A photon PTV expands the target geometrically so that setup error still leaves the CTV inside the high dose. A proton beam has an additional error: the range. Stopping power, not just the geometric outline, decides where the distal falloff sits. Robust optimization computes the dose under shifted setups and under scaled densities (a few percent of the range) and penalizes a plan that only looks good in the nominal case. That is not a photon flatness check, not a radiobiology solver, and not a vault calculation.
+
+### Q20
+Stem: An inverse plan uses an equivalent uniform dose objective on the spinal cord. Which value of the volume-effect parameter a puts that equivalent dose near the maximum?
+A. a = 1, because that setting is the mean dose and the cord is scored by its mean
+B. A large negative a, because a negative a approaches the maximum dose
+C. A large positive a, because a large positive a approaches the maximum dose
+D. a = 1 on the cord and a large positive a on the lung, so the serial organ takes the mean
+Answer: C
+Objective: III.12
+Why: Answer C. Niemierko's equivalent uniform dose uses a to decide which end of the distribution dominates. A large positive a approaches the maximum. That is the end that matters for a serial organ such as the cord, where a small hot region can cause myelopathy. a = 1 reproduces the mean and would allow a hot voxel if the average stayed low. A large negative a approaches the minimum. That setting is for cold spots in a tumor. Assigning a = 1 to the cord and a large positive a to the lung gives the serial organ the mean and the parallel organ the maximum.
+
+### Q21
+Stem: The lung objective requested for this plan is the mean dose. Which equivalent-uniform-dose parameter reproduces the mean?
+A. A large positive a, the setting that pulls a cord objective toward the maximum
+B. A large negative a, so the lung is scored by its coldest voxel
+C. The cord's large positive a, copied onto the lung so the lung is scored like a serial organ
+D. a = 1, because a = 1 is the mean dose
+Answer: D
+Objective: III.12
+Why: Answer D. At a = 1, Niemierko's equivalent uniform dose is the arithmetic mean. That matches a parallel organ such as lung when the protocol asked for mean lung dose. A large positive a approaches the maximum and would treat one hot voxel in the lung as if the lung were cord. A large negative a approaches the minimum and does not report the mean. The lung does not borrow the cord parameter.
+
+### Q22
+Stem: A rectal protocol constraint is a maximum: no more than 15% of the rectum may receive 70 Gy or more. The optimizer is instead given a minimum dose-volume objective that at least 15% of the rectum must receive at least 70 Gy. What will that line do?
+A. It enforces the protocol, because 15% and 70 Gy are the same numbers either way
+B. It is a coverage goal: the line fails until 15% of the rectum reaches 70 Gy, so it drives dose onto the rectum
+C. It protects the cord, because every minimum dose-volume line is a serial-organ maximum
+D. It sets the lung equivalent uniform dose to a = 1
+Answer: B
+Objective: III.12
+Why: Answer B. A maximum dose-volume objective on an organ at risk says no more than a stated volume may exceed a stated dose. A minimum dose-volume objective says at least that volume must reach that dose, which is how target coverage is written. A rectum whose 70 Gy volume is near zero meets the protocol maximum and fails the loaded minimum, so the optimizer is pushed to add rectal dose. Sharing the numbers 15% and 70 Gy does not keep the direction. The line is not a cord limit, and it does not set a lung mean.
+
+### Q23
+Stem: The protocol wants planning-target coverage written as a minimum: D95 at least 70 Gy. The objective that was loaded is a maximum: D95 at most 70 Gy. What can the optimizer report as a pass?
+A. A cold target. Doses below 70 Gy still satisfy a maximum, so the coverage the protocol asked for is not enforced
+B. Only a target whose D95 is at least 70 Gy, because a maximum and a minimum are the same constraint
+C. A cord whose equivalent uniform dose uses a large negative a
+D. A 115% hotspot in the larynx, because a target maximum is stored on the larynx
+Answer: A
+Objective: III.12
+Why: Answer A. A minimum on a target pushes D95 up to the requested dose. A maximum is satisfied by doses at or below that dose, including a cold target. Loading the maximum where the protocol wanted the minimum lets the optimizer underdose the planning target and still pass the line. Coverage of 95% of the volume by at least 70 Gy is the sentence that was requested. The cord parameter and a laryngeal hotspot are separate objectives.
+
+### Q24
+Stem: An inverse plan is scored only on the objectives that were entered: planning-target coverage, a cord maximum, and a parotid mean. All three are met. A 115% hotspot sits in the larynx, and the larynx had no objective. What does the score fail to protect?
+A. Nothing. A perfect score on the entered objectives means every structure is within tolerance
+B. The cord, because a large positive a always moves the hotspot onto the spinal cord
+C. The lung mean, because a = 1 cannot be computed when any structure lacks an objective
+D. The larynx. A structure with no objective can hold the hotspot while every scored structure still passes
+Answer: D
+Objective: III.12
+Why: Answer D. The optimizer spends its effort on the structures and objectives it was given. A larynx with no objective can carry a 115% hotspot, and the score on the planning target, the cord, and the parotid can still look excellent. The slices show where that hotspot sits. Meeting the cord maximum does not move the hotspot into the cord, and a missing laryngeal objective does not stop a mean from being computed for the lung.
+
+### Q25
+Stem: Two planning tools are offered for the same head-and-neck case. Tool 1 builds a surface of plans on which sparing more cord worsens target coverage, and the physician chooses the compromise. Tool 2 predicts an achievable organ dose-volume histogram from a library of prior patients with similar geometry and turns that prediction into objectives. Which names fit?
+A. Tool 1 is a knowledge-based model and tool 2 is a template, because a library of old plans is the tradeoff surface
+B. Tool 1 is multicriteria optimization and tool 2 is a knowledge-based model
+C. Both are equivalent uniform dose with a = 1, and neither uses a library or a tradeoff surface
+D. Tool 1 is a minimum dose-volume objective on the cord and tool 2 is a maximum dose-volume objective on the planning target
+Answer: B
+Objective: III.7
+Why: Answer B. Multicriteria optimization builds a Pareto surface. No plan on that surface improves one objective without worsening another, and a person chooses the compromise. A knowledge-based model predicts a dose-volume histogram from this patient's geometry compared with a library, then hands that prediction to the optimizer as objectives. The library is not the tradeoff surface. Neither tool is the parameter a, and neither tool is a minimum or maximum dose-volume line by itself.
+
+### Q26
+Stem: A physician moves along a multicriteria surface and stops on a plan with a lower parotid mean. At that point the cord maximum is above the protocol limit. What is true of the point that was chosen?
+A. It is allowed, because every plan on the surface meets the protocol
+B. It is the knowledge-based prediction, because a library mean stays under the cord limit
+C. It is a real tradeoff on the surface, and the protocol still forbids it; the protocol picks the point
+D. It is repaired by changing the cord from a large positive a to a = 1, which removes the maximum
+Answer: C
+Objective: III.12
+Why: Answer C. A multicriteria surface is a set of tradeoffs. Sparing more parotid can raise the cord, and some of those plans fail a constraint the protocol still requires. Navigation does not waive the limit. A knowledge-based prediction is a different tool. It is not the surface being navigated. Changing the cord objective from a large positive a to a = 1 scores the mean and hides the maximum the protocol asked for.
+
+### Q27
+Stem: A left-breast class-solution template is loaded for a right-sided cancer. The beams still enter through the left breast, and the heart objective still runs as if the left breast were the target. What is wrong?
+A. The template stores one side and one set of tradeoffs. It keeps treating the left side until the geometry and the objectives are changed
+B. Nothing is wrong. A template mirrors its beams when the prescription says right
+C. The knowledge-based model inside every template uses a = 1 on the heart, so the beams cannot stay on the left
+D. Multicriteria navigation reflects the beams across midline before the first optimization
+Answer: A
+Objective: III.7
+Why: Answer A. A template loads the beam arrangement and the objectives it was built for. A left-breast class solution does not read laterality and flip. The right breast is the target, so left-sided beams and a left-breast heart objective treat the wrong side. A knowledge-based model is a separate tool, and a = 1 does not correct the side. Multicriteria navigation explores tradeoffs for the beams it was given. It does not mirror them.
