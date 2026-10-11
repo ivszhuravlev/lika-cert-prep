@@ -1,323 +1,323 @@
-# Module 34 — Effects of beam modifying devices
+# Module 34. Effects of beam modifying devices
 
-Original items. When an MU is computed, the linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm, unless the stem states a different calibration. Wedge factor is dose with the wedge divided by dose open, at the same MU. Wedge angle for a symmetric pair is 90° minus half the hinge angle.
+Original CMD practice items. Not retired MDCB questions and not a commercial quiz.
 
 ## Wedges
 
 ### Q1
-Stem: A wedge factor is measured as 0.620. Which statement matches that number?
-A. The wedge angle is 62°
-B. At the same MU, the wedged dose is 0.620 times the open dose
-C. The wedge belongs in the numerator of the MU
-D. The factor is the hinge angle in radians
-Answer: B
+Stem: Which way does a physical wedge tilt the isodose curves?
+A. Toward the heel (thick end)
+B. Toward the toe (thin end)
+C. They stay perpendicular to the central axis
+D. They tilt only if the hinge angle is 90°
+Answer: A
 Objective: IV.2
-Why: WF = dose with the wedge / dose open, same MU, same point. 0.620 is a transmission, not an angle. In the MU it sits in the denominator because each MU delivers less dose when the wedge is in the beam.
+Why: The heel attenuates more, so a given isodose line sits closer to the surface under the heel and deeper under the toe. The line therefore tilts toward the thick end. Correct choice: Toward the heel (thick end). Dose is higher under the toe, so the isodose for a given value reaches deeper on the toe side and the curve tilts toward the heel. That is the open-beam description at the central axis, before the wedge tilt. The tilt is the wedge angle. The hinge is how two wedged beams are arranged, not the condition for a tilt to exist.
 
 ### Q2
-Stem: The prescription is 200 cGy at the calibration point. The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. Every other factor is 1. A physical wedge with WF = 0.600 is in the beam, and the MU was computed with no wedge factor. What dose is delivered?
-A. 200 cGy
-B. 333 cGy
-C. 120 cGy
-D. 80 cGy
-Answer: C
+Stem: For a sloping surface that is thin on the left, where does the heel of a tissue-compensating wedge belong?
+A. Over the thick side
+B. Over the thin side
+C. Always on the gantry-right, regardless of the slope
+D. At the central axis only
+Answer: B
 Objective: IV.2
-Why: Omitting WF sets MU = 200 / 1.0 = 200. The wedge is still in the beam, so dose = 200 × 1.0 × 0.600 = 120 cGy. That is 120/200 = 0.60 of the prescription. The correct MU would have been 200 / 0.600 = 333 MU, and 333 × 0.600 = 200 cGy. 80 cGy is the shortfall (200 − 120), not the delivered dose.
+Why: The thin side would otherwise be hot because less tissue covers it. The thick end of the wedge (heel) goes over that thin side so both sides move toward the same dose. Correct choice: Over the thin side. The thick side already has more tissue attenuation. Putting the heel there makes the gradient worse. Heel placement follows the missing tissue, not the gantry label. A wedge is a gradient across the field, not a central-axis filter alone.
 
 ### Q3
-Stem: The same calibration is used: 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. Prescription 200 cGy, WF = 0.600, and every other factor is 1. The MU was computed with the wedge factor, but the wedge was never inserted. What dose is delivered?
-A. 120 cGy
-B. 200 cGy
-C. 333 cGy
-D. 600 cGy
+Stem: A physical 45° wedge is measured at the calculation depth. Under the same MU and geometry, the chamber reads 120 with the wedge removed and 78 with the wedge in place. What is the wedge factor (dose with wedge divided by dose without wedge)?
+A. 1.538
+B. 0.350
+C. 0.650
+D. 0.825
 Answer: C
 Objective: IV.2
-Why: MU = 200 / 0.600 = 333.3. With the wedge absent, each MU delivers the open 1.0 cGy, so dose = 333.3 × 1.0 = 333 cGy. 333/200 = 1/0.600. 120 cGy is the opposite error (wedge in, factor omitted). 600 cGy multiplies by 1/0.6 a second time.
+Why: Wedge factor = reading with wedge / reading without wedge. Substitute 78 / 120 = 0.6500, reported as 0.650. Inverting the ratio (open/wedged) gives 1.538, which is greater than 1 and cannot be a physical wedge factor for a metal wedge that only attenuates. Using the fractional difference (open−wedged)/open gives 0.350, which is the attenuated fraction, not the transmitted factor. Averaging the open and wedged readings and then dividing by the open reading gives 0.825, which is not the transmission.
 
 ### Q4
-Stem: A wedge tilts the isodose curves. The hot side of that tilted distribution is:
-A. The thick side of the wedge
-B. The thin side of the wedge
-C. Always the central axis, independent of the wedge
-D. The side where bolus was placed
+Stem: A dynamic wedge and a physical wedge can share the same nominal wedge angle. Which statement is still true?
+A. A dynamic wedge has wedge factor 1 because no metal is in the beam
+B. Each still needs its own wedge factor in the MU
+C. The physical-wedge factor can be copied to the dynamic wedge
+D. Wedge factor is independent of depth for every physical wedge
 Answer: B
 Objective: IV.2
-Why: The wedge attenuates more on the thick side, so the isodoses tilt and the higher dose is toward the thin side. The wedge angle is that isodose tilt, not the slope of the metal. Bolus is a separate modifier and is not what defines the wedge hot side.
+Why: Whether the gradient comes from metal or from jaw motion, the calculation point sees fewer cGy per MU than the open beam. The MU formula needs the factor measured for that device, depth, and field. Correct choice: Each still needs its own wedge factor in the MU. The jaws spend more time covering the heel side, so dose per MU still falls and the factor is not 1. The factors differ. The dynamic wedge is produced by jaw motion, not by the same attenuation map. Physical wedge factors do change with depth and field size. Using the factor at the wrong depth is a real MU error.
 
 ### Q5
-Stem: Which modifier pulls dmax toward the skin and raises skin dose, without being a wedge factor?
-A. A dynamic wedge
-B. Bolus
-C. An enhanced dynamic wedge angle
-D. Mid-leaf MLC transmission used as WF
+Stem: Which factor is the wedge factor?
+A. Dose without the wedge divided by dose with the wedge
+B. Dose with the wedge divided by dose without the wedge
+C. The wedge angle divided by 60°
+D. 1 minus the wedge angle over 90°
 Answer: B
 Objective: IV.2
-Why: Bolus is tissue-equivalent thickness on the skin. It shifts dmax toward the surface and increases skin dose. A dynamic or enhanced dynamic wedge still tilts isodoses and still needs a wedge factor in the MU. Leaf transmission is a small leakage fraction, not bolus.
+Why: By definition the wedge factor is the transmitted fraction: dose with wedge / dose open, same MU and geometry. It is the number in the MU denominator. The MU multiplier is 1 over that factor. Correct choice: Dose with the wedge divided by dose without the wedge. That ratio is greater than 1 and is the MU multiplier, not the wedge factor itself. The angle names the isodose tilt. It is not the transmission. That expression is not a measured transmission.
 
 ## Wedge Factor Calculation Tutorial
 
 ### Q1
-Stem: 100 MU open delivers 98.0 cGy at a point. The same 100 MU with the wedge delivers 58.8 cGy. What is the wedge factor?
-A. 1.667
-B. 0.600
-C. 0.588
-D. 39.2
-Answer: B
+Stem: Tutorial measurement at 10 cm depth, 10×10 cm, 6 MV. Under the same MU and geometry, the chamber reads 100 with the wedge removed and 65 with the wedge in place. What is the wedge factor (dose with wedge divided by dose without wedge)?
+A. 0.650
+B. 1.538
+C. 0.350
+D. 0.825
+Answer: A
 Objective: IV.2
-Why: WF = 58.8 / 98.0 = 0.600. Check: 98.0 × 0.600 = 58.8. 1.667 is 98.0 / 58.8, which is 1/WF. 0.588 divides 58.8 by 100 MU and ignores the open reading. 39.2 is the cGy difference, not a factor.
+Why: Wedge factor = reading with wedge / reading without wedge. Substitute 65 / 100 = 0.6500, reported as 0.650. Inverting the ratio (open/wedged) gives 1.538, which is greater than 1 and cannot be a physical wedge factor for a metal wedge that only attenuates. Using the fractional difference (open−wedged)/open gives 0.350, which is the attenuated fraction, not the transmitted factor. Averaging the open and wedged readings and then dividing by the open reading gives 0.825, which is not the transmission.
 
 ### Q2
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. The calculation point is that calibration point. WF = 0.600 and no other modifier is in the beam. How many MU deliver 180 cGy?
-A. 108 MU
-B. 180 MU
-C. 300 MU
-D. 450 MU
-Answer: C
+Stem: Tutorial measurement for a 60° physical wedge. Under the same MU and geometry, the chamber reads 86.4 with the wedge removed and 54 with the wedge in place. What is the wedge factor (dose with wedge divided by dose without wedge)?
+A. 1.600
+B. 0.375
+C. 0.813
+D. 0.625
+Answer: D
 Objective: IV.2
-Why: MU = 180 / (1.0 × 0.600) = 300. Check: 300 × 0.600 = 180 cGy. 108 cGy would be the dose if 180 MU were set with the wedge still in (180 × 0.600). 180 MU omits the factor. 450 MU divides by 0.4.
+Why: Wedge factor = reading with wedge / reading without wedge. Substitute 54 / 86.4 = 0.6250, reported as 0.625. Inverting the ratio (open/wedged) gives 1.600, which is greater than 1 and cannot be a physical wedge factor for a metal wedge that only attenuates. Using the fractional difference (open−wedged)/open gives 0.375, which is the attenuated fraction, not the transmitted factor. Averaging the open and wedged readings and then dividing by the open reading gives 0.813, which is not the transmission.
 
 ### Q3
-Stem: Open dose for 80 MU is 80.0 cGy. Wedged dose for 80 MU is 48.0 cGy. The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm, and the point is that calibration point. How many MU deliver 240 cGy with the wedge in the beam?
-A. 144 MU
-B. 240 MU
-C. 400 MU
-D. 667 MU
-Answer: C
+Stem: Tutorial measurement for a shallow 30° wedge. Under the same MU and geometry, the chamber reads 200 with the wedge removed and 150 with the wedge in place. What is the wedge factor (dose with wedge divided by dose without wedge)?
+A. 0.750
+B. 1.333
+C. 0.250
+D. 0.875
+Answer: A
 Objective: IV.2
-Why: WF = 48.0 / 80.0 = 0.600. MU = 240 / (1.0 × 0.600) = 400. Check: 400 × 0.600 = 240 cGy. 144 is 240 × 0.600, the dose from 240 MU with the wedge left in. 667 divides by an inverted factor (240 × 1/0.36).
+Why: Wedge factor = reading with wedge / reading without wedge. Substitute 150 / 200 = 0.7500, reported as 0.750. Inverting the ratio (open/wedged) gives 1.333, which is greater than 1 and cannot be a physical wedge factor for a metal wedge that only attenuates. Using the fractional difference (open−wedged)/open gives 0.250, which is the attenuated fraction, not the transmitted factor. Averaging the open and wedged readings and then dividing by the open reading gives 0.875, which is not the transmission.
 
 ### Q4
-Stem: At the same MU, open dose is 120 cGy and wedged dose is 90 cGy. What is WF, and what fraction of an intended dose is delivered if that factor is left out of the MU while the wedge stays in the beam?
-A. WF = 0.75, and the patient receives 75% of the intended dose
-B. WF = 1.33, and the patient receives 133% of the intended dose
-C. WF = 0.75, and the patient receives 133% of the intended dose
-D. WF = 30, because 120 − 90 = 30
-Answer: A
-Objective: IV.2
-Why: WF = 90 / 120 = 0.75. Omitting it sets the MU as if the beam were open. The wedge still transmits 0.75, so delivered/prescribed = 0.75. 1.33 is 120/90. The 30 cGy difference is not a factor.
-
-### Q5
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. WF = 0.500 at the calibration point and every other factor is 1. The plan asks for 150 cGy with the wedge in the beam. How many MU are required?
-A. 75 MU
-B. 150 MU
-C. 300 MU
-D. 450 MU
-Answer: C
-Objective: IV.2
-Why: MU = 150 / 0.500 = 300. Check: 300 × 0.500 = 150 cGy. 75 MU would deliver 37.5 cGy with the wedge in. 150 MU omits WF and delivers 75 cGy. 450 MU uses a factor of 1/3.
-
-### Q6
-Stem: A wedge factor measured at 6 MV is 0.65. The same physical wedge at 18 MV has a measured factor of 0.72. A 6 MV MU calculation should use:
-A. 0.65
-B. 0.72
-C. 0.65 × 0.72 = 0.468
-D. (0.65 + 0.72) / 2 = 0.685
-Answer: A
-Objective: IV.2
-Why: The factor belongs to the energy, field, and depth at which it was measured. The 6 MV beam uses 0.65. Averaging or multiplying the two energies invents a third beam. 0.72 is the 18 MV measurement.
-
-### Q7
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. Prescription 100 cGy at that point, WF = 0.800, wedge in the beam, all other factors 1. If the planner multiplies by WF instead of dividing, how many MU are set, and what dose is actually delivered?
-A. 80 MU are set and 64 cGy is delivered
-B. 125 MU are set and 100 cGy is delivered
-C. 80 MU are set and 100 cGy is delivered
-D. 125 MU are set and 80 cGy is delivered
-Answer: A
-Objective: IV.2
-Why: The wrong MU is 100 × 0.800 = 80. With the wedge in the beam, dose = 80 × 0.800 = 64 cGy. The correct MU is 100 / 0.800 = 125, and 125 × 0.800 = 100 cGy. Putting WF in the numerator underdoses a second time because the wedge is still physically present.
-
-### Q8
-Stem: Two readings are taken at different MU. Open: 50 MU gives 49.0 cGy. Wedged: 100 MU gives 58.8 cGy. What is the wedge factor after both readings are scaled to the same MU?
-A. 1.20
-B. 0.600
-C. 0.294
-D. 1.667
+Stem: Tutorial. The wedge was in the beam and the MU were open-beam MU. The monitor units were calculated for an open beam to deliver 200 cGy at the calculation point. A wedge with wedge factor 0.65 was actually left in the beam. What dose is delivered at that point?
+A. 200.0 cGy
+B. 130.0 cGy
+C. 307.7 cGy
+D. 70.0 cGy
 Answer: B
 Objective: IV.2
-Why: Scale the open reading to 100 MU: 49.0 × (100/50) = 98.0 cGy. WF = 58.8 / 98.0 = 0.600. 1.20 is 58.8/49.0 without matching the MU. 0.294 is 58.8/200, an invented denominator. 1.667 is 98/58.8, the reciprocal of the factor.
+Why: The open-beam MU already assume wedge factor 1. With the wedge in the beam every MU is attenuated by the wedge factor, so delivered dose = intended dose × wedge factor. Substitute 200 × 0.65 = 130.00 cGy, reported as 130.0 cGy. The plan underdoses; it does not overdose. Leaving the dose at 200.0 cGy is the open-beam number and ignores the wedge that was in the beam. Dividing by the wedge factor (200/0.65 = 307.7 cGy) is what you do to the MU to restore dose, not what the patient received from the uncorrected MU. Multiplying by (1−wedge factor) treats the factor as if only the attenuated fraction remained in a subtraction sense and gives 70.0 cGy.
+
+### Q5
+Stem: Tutorial. A different wedge factor, same omission error. The monitor units were calculated for an open beam to deliver 180 cGy at the calculation point. A wedge with wedge factor 0.72 was actually left in the beam. What dose is delivered at that point?
+A. 180.0 cGy
+B. 250.0 cGy
+C. 129.6 cGy
+D. 50.4 cGy
+Answer: C
+Objective: IV.2
+Why: The open-beam MU already assume wedge factor 1. With the wedge in the beam every MU is attenuated by the wedge factor, so delivered dose = intended dose × wedge factor. Substitute 180 × 0.72 = 129.60 cGy, reported as 129.6 cGy. The plan underdoses; it does not overdose. Leaving the dose at 180.0 cGy is the open-beam number and ignores the wedge that was in the beam. Dividing by the wedge factor (180/0.72 = 250.0 cGy) is what you do to the MU to restore dose, not what the patient received from the uncorrected MU. Multiplying by (1−wedge factor) treats the factor as if only the attenuated fraction remained in a subtraction sense and gives 50.4 cGy.
+
+### Q6
+Stem: Tutorial. Restore the dose by changing the MU. Open-beam monitor units for this field are 250 MU. The wedge factor is 0.7. What MU should be set so the calculation point still receives the open-beam dose, with the wedge in the beam?
+A. 357.1 MU
+B. 175.0 MU
+C. 250.0 MU
+D. 833.3 MU
+Answer: A
+Objective: IV.2
+Why: The wedge lowers dose per MU, so the MU must increase by 1/wedge factor. Substitute 250 / 0.7 = 357.14 MU, reported as 357.1 MU. Multiplying the open MU by the wedge factor (250×0.7 = 175.0 MU) would underdose a second time. Keeping 250.0 MU omits the wedge factor while the wedge is used. Dividing by (1−wedge factor) uses the complement of the factor and gives 833.3 MU.
+
+### Q7
+Stem: Tutorial. 30° wedge, open MU already known. Open-beam monitor units for this field are 312 MU. The wedge factor is 0.78. What MU should be set so the calculation point still receives the open-beam dose, with the wedge in the beam?
+A. 400.0 MU
+B. 243.4 MU
+C. 312.0 MU
+D. 1418.2 MU
+Answer: A
+Objective: IV.2
+Why: The wedge lowers dose per MU, so the MU must increase by 1/wedge factor. Substitute 312 / 0.78 = 400.00 MU, reported as 400.0 MU. Multiplying the open MU by the wedge factor (312×0.78 = 243.4 MU) would underdose a second time. Keeping 312.0 MU omits the wedge factor while the wedge is used. Dividing by (1−wedge factor) uses the complement of the factor and gives 1418.2 MU.
+
+### Q8
+Stem: Tutorial. A heavily attenuating 60° wedge left in by mistake. The monitor units were calculated for an open beam to deliver 240 cGy at the calculation point. A wedge with wedge factor 0.55 was actually left in the beam. What dose is delivered at that point?
+A. 132.0 cGy
+B. 240.0 cGy
+C. 436.4 cGy
+D. 108.0 cGy
+Answer: A
+Objective: IV.2
+Why: The open-beam MU already assume wedge factor 1. With the wedge in the beam every MU is attenuated by the wedge factor, so delivered dose = intended dose × wedge factor. Substitute 240 × 0.55 = 132.00 cGy, reported as 132.0 cGy. The plan underdoses; it does not overdose. Leaving the dose at 240.0 cGy is the open-beam number and ignores the wedge that was in the beam. Dividing by the wedge factor (240/0.55 = 436.4 cGy) is what you do to the MU to restore dose, not what the patient received from the uncorrected MU. Multiplying by (1−wedge factor) treats the factor as if only the attenuated fraction remained in a subtraction sense and gives 108.0 cGy.
 
 ## Wedge and Hinge Angle
 
 ### Q1
-Stem: Two beams form a hinge of 120°. For a symmetric wedged pair, what wedge angle flattens the distribution?
-A. 60°
-B. 30°
-C. 120°
-D. 90°
-Answer: B
-Objective: IV.2
-Why: Wedge angle = 90° − (hinge/2) = 90 − 60 = 30°. 60° is the hinge halved, or 180 − 120. The formula is for a symmetric pair, not a single wedge against an open field. A 60° wedge on a 120° hinge over-tilts the isodoses.
-
-### Q2
-Stem: A symmetric pair uses 45° wedges. What hinge angle matches that pair?
-A. 45°
-B. 90°
-C. 135°
-D. 22.5°
-Answer: B
-Objective: IV.2
-Why: Hinge = 2(90 − wedge angle) = 2(90 − 45) = 90°. Check: 90 − (90/2) = 45°. 45° copies the wedge angle. 135° is 180 − 45. 22.5° halves the wedge angle.
-
-### Q3
-Stem: A symmetric pair uses 60° wedges. What hinge angle matches that pair?
-A. 60°
-B. 30°
-C. 120°
-D. 90°
+Stem: In the simple two-field model, how are wedge angle and hinge angle related?
+A. Wedge angle = 90° − (hinge angle)/2
+B. Wedge angle = hinge angle
+C. Wedge angle = 180° − hinge angle
+D. Wedge angle = hinge angle / 2
 Answer: A
 Objective: IV.2
-Why: Hinge = 2(90 − 60) = 2 × 30 = 60°. Check: wedge angle = 90 − (60/2) = 60°. 30° is half the hinge of a different pair. 120° is the hinge that calls for 30° wedges. 90° calls for 45° wedges.
+Why: Each wedge tilts its isodose by the wedge angle. Across the hinge the two tilts should cancel, which gives wedge = 90° − hinge/2, or hinge = 180° − 2 × wedge. Correct choice: Wedge angle = 90° − (hinge angle)/2. They are equal only in the special case of a 60° wedge and a 60° hinge, not in general. That drops the factor of one-half on the hinge. Half the hinge is the amount you subtract from 90°, not the wedge angle itself.
+
+### Q2
+Stem: A pair of 30° wedges. Two beams use a wedge angle of 30° each. Using hinge angle = 180° − 2 × wedge angle, what hinge angle makes the combined isodose as flat as this simple model predicts?
+A. 75.0°
+B. 150°
+C. 120°
+D. 60.0°
+Answer: C
+Objective: IV.2
+Why: The planning relation used here is hinge = 180° − 2 × wedge angle, because each wedge tilts the isodose by the wedge angle and the two tilts should cancel across the hinge. Substitute 180 − 2 × 30 = 180 − 60 = 120°. Mixing this up with wedge = 90 − hinge/2 and then halving the wedge angle gives 75.0°. Subtracting the wedge angle only once (180−30) gives 150°. Subtracting the wedge angle from 90° and calling that the hinge gives 60.0°.
+
+### Q3
+Stem: A pair of 45° wedges. Two beams use a wedge angle of 45° each. Using hinge angle = 180° − 2 × wedge angle, what hinge angle makes the combined isodose as flat as this simple model predicts?
+A. 67.5°
+B. 135°
+C. 90°
+D. 45.0°
+Answer: C
+Objective: IV.2
+Why: The planning relation used here is hinge = 180° − 2 × wedge angle, because each wedge tilts the isodose by the wedge angle and the two tilts should cancel across the hinge. Substitute 180 − 2 × 45 = 180 − 90 = 90°. Mixing this up with wedge = 90 − hinge/2 and then halving the wedge angle gives 67.5°. Subtracting the wedge angle only once (180−45) gives 135°. Subtracting the wedge angle from 90° and calling that the hinge gives 45.0°.
 
 ### Q4
-Stem: The hinge between two central axes is 100°. What wedge angle does the symmetric-pair formula give?
-A. 50°
-B. 40°
-C. 80°
-D. 100°
+Stem: An anterior oblique pair with a wide hinge. The hinge angle between two wedged beams is 120°. Using wedge angle = 90° − (hinge angle)/2, what wedge angle does this model call for?
+A. 60.0°
+B. 30.0°
+C. 120.0°
+D. 45.0°
 Answer: B
 Objective: IV.2
-Why: Wedge angle = 90 − (100/2) = 90 − 50 = 40°. 50° is half the hinge and skips the 90° complement. 80° is 180 − 100. The hinge itself is not the wedge angle.
+Why: Substitute 90 − (120)/2 = 90 − 60 = 30°, reported as 30.0°. Check the inverse relation: hinge = 180 − 2 × wedge = 180 − 2 × 30 = 120°. Subtracting the hinge from 180° runs the companion formula without the factor of 2. That mistake gives 60.0°. Reporting the hinge angle itself leaves the isodose-tilt conversion undone. That mistake gives 120.0°. Adding an extra 15° to the wedge angle is not part of the hinge relation. That mistake gives 45.0°.
 
 ### Q5
-Stem: A single 30° wedge is paired with an open beam, not with a second 30° wedge. Which statement is right?
-A. The hinge formula still forces the open beam to be treated as a 30° wedge
-B. The relation wedge angle = 90° − hinge/2 is for a symmetric wedged pair
-C. WF equals 0.30 because the wedge is 30°
-D. The hinge must be 30°
-Answer: B
+Stem: A planned hinge of 100°. The hinge angle between two wedged beams is 100°. Using wedge angle = 90° − (hinge angle)/2, what wedge angle does this model call for?
+A. 80.0°
+B. 100.0°
+C. 40.0°
+D. 50.0°
+Answer: C
 Objective: IV.2
-Why: The hinge formula assumes both wedges have the same angle. An open companion beam is a different geometry. A 30° label is the isodose tilt, not a wedge factor of 0.30. For a real 30° pair the matching hinge is 2(90 − 30) = 120°, not 30°.
+Why: Substitute 90 − (100)/2 = 90 − 50 = 40°, reported as 40.0°. Check the inverse relation: hinge = 180 − 2 × wedge = 180 − 2 × 40 = 100°. Subtracting the hinge from 180° runs the companion formula without the factor of 2. That mistake gives 80.0°. Reporting the hinge angle itself leaves the isodose-tilt conversion undone. That mistake gives 100.0°. Stopping at half the hinge never subtracts that half-angle from 90°. That mistake gives 50.0°.
 
 ## MLCs
 
 ### Q1
-Stem: A region blocked by an MLC would receive 200 cGy if it were open. Mid-leaf transmission is 1.5% (0.015). What dose is transmitted through the leaf?
-A. 3.0 cGy
-B. 30 cGy
-C. 197 cGy
-D. 1.5 cGy
-Answer: A
+Stem: What is the usual clinical consequence of MLC tongue-and-groove design?
+A. A hot streak equal to twice the leaf transmission
+B. Removal of all interleaf leakage
+C. A cold streak where adjacent leaves do not share the same open segment
+D. A change in wedge factor
+Answer: C
 Objective: IV.2
-Why: Dose = 200 × 0.015 = 3.0 cGy. Check: 200 × 0.01 = 2.0 and 200 × 0.005 = 1.0, so 2.0 + 1.0 = 3.0. 30 cGy uses 15%. 197 cGy subtracts 3 cGy from the open dose and answers the blocked primary, not the transmission. 1.5 cGy drops the 200.
+Why: The tongue on one leaf and the groove on the neighbor reduce leakage, but if one leaf shades a pixel that the adjacent segment thought was open, that pixel is underdosed. You see a cold streak. Correct choice: A cold streak where adjacent leaves do not share the same open segment. Tongue-and-groove is an underdose from interlocking edges, not a double transmission. The tongue reduces leakage. It does not make transmission zero, and the groove can cause a cold line. Tongue-and-groove is an MLC edge effect, not the wedge factor.
 
 ### Q2
-Stem: Mid-leaf transmission is 2.0% and the open dose in that region would be 180 cGy. What dose leaks through the leaf?
-A. 36 cGy
-B. 3.6 cGy
-C. 1.8 cGy
-D. 90 cGy
-Answer: B
+Stem: Rounded MLC leaf ends mainly change which quantity?
+A. Penumbra, which gets wider
+B. They make transmission zero
+C. They remove the need for an equivalent square
+D. They double the output factor
+Answer: A
 Objective: IV.2
-Why: 180 × 0.020 = 3.6 cGy. 36 cGy moves the decimal (20%). 1.8 cGy uses 1%. 90 cGy is half the open dose, a partial-transmission block, not a typical mid-leaf leak.
+Why: A rounded leaf end presents a varying thickness across the edge, so the 50% edge and the penumbra are broader than a focused block edge. Planning systems offset the leaf positions (dosimetric leaf gap) so the light field and the dose edge agree. Correct choice: Penumbra, which gets wider. Rounded ends still transmit, and the transmission is handled with an offset (dosimetric leaf gap), not by assuming zero transmission. Field-size scatter is a separate lookup. Rounding changes the edge, not a global factor of 2.
 
 ### Q3
-Stem: Interleaf leakage compared with mid-leaf transmission is generally:
-A. Lower, because the tongue-and-groove is a gap
-B. Higher than the mid-leaf figure
-C. Exactly equal to the wedge factor
-D. Zero, because leaves overlap by definition
+Stem: A point sits under closed MLC leaves. Leaf transmission is 1.5% and the open dose would have been 200 cGy. The open beam would deliver 200 cGy to the point. A partial-transmission block with transmission 0.015 covers that ray, and the MU are not increased. What dose gets through the block?
+A. 197.0 cGy
+B. 3.0 cGy
+C. 13333.3 cGy
+D. 200.0 cGy
 Answer: B
 Objective: IV.2
-Why: The gap between leaves leaks more than the middle of a leaf. Tongue-and-groove reduces that interleaf leak and can leave a cold stripe where adjacent segments do not cover the same way. Neither number is a wedge factor, and neither is zero.
+Why: Transmission is the fraction that passes. Dose = 200 × 0.015 = 3.00 cGy, reported as 3.0 cGy. Multiplying by (1−transmission) gives the removed dose 197.0 cGy, not the dose that remains. Dividing by transmission gives the MU adjustment 13333.3 cGy if you wanted the original dose through the block, which is not what these MU deliver. Ignoring the block leaves the dose at 200.0 cGy.
 
 ### Q4
-Stem: Rounded leaf ends shift the radiation edge relative to the light field. The commissioned parameter that lines those edges up is:
-A. The wedge angle
-B. The dosimetric leaf gap
-C. Mayneord F
-D. The hinge angle
-Answer: B
+Stem: Interleaf transmission is taken as 2.0% for this estimate, open dose 180 cGy, MU not increased. The open beam would deliver 180 cGy to the point. A partial-transmission block with transmission 0.02 covers that ray, and the MU are not increased. What dose gets through the block?
+A. 176.4 cGy
+B. 9000.0 cGy
+C. 180.0 cGy
+D. 3.6 cGy
+Answer: D
 Objective: IV.2
-Why: The leaf-gap parameter accounts for transmission through the rounded end so the light field and the radiation edge agree. A wrong gap is a systematic dose error on modulated plans. Wedge angle, Mayneord F, and hinge angle do not set the leaf end.
+Why: Transmission is the fraction that passes. Dose = 180 × 0.02 = 3.60 cGy, reported as 3.6 cGy. Multiplying by (1−transmission) gives the removed dose 176.4 cGy, not the dose that remains. Dividing by transmission gives the MU adjustment 9000.0 cGy if you wanted the original dose through the block, which is not what these MU deliver. Ignoring the block leaves the dose at 180.0 cGy.
 
 ### Q5
-Stem: A partial-transmission block is specified at 50% transmission. The open dose under that region would be 200 cGy. What dose does the block transmit?
-A. 3 cGy
-B. 100 cGy
-C. 50 cGy
-D. 150 cGy
-Answer: B
+Stem: Why is MLC transmission dose not the same thing as a Clarkson scatter correction?
+A. They are two names for the wedge factor
+B. Clarkson already includes leaf transmission
+C. Transmission is primary leakage through the leaves; Clarkson is phantom scatter from the open field
+D. Transmission replaces Sp
+Answer: C
 Objective: IV.2
-Why: 200 × 0.50 = 100 cGy. A 50% block is not an MLC mid-leaf leak of about 1–2% (that would be 200 × 0.015 = 3 cGy). 50 cGy uses the percent as if it were already the dose. 150 cGy is 200 × 0.75.
+Why: Under a closed leaf the patient still receives a small primary leakage dose, typically around 1–2% for a modern MLC, plus some scatter from the open part of the field. Clarkson computes that scatter geometry. It does not replace the transmission measurement. Correct choice: Transmission is primary leakage through the leaves; Clarkson is phantom scatter from the open field. Neither one is the wedge factor. Classic Clarkson sectors are open-phantom scatter, not MLC leakage. Sp is phantom scatter for the irradiated area. Leakage is an extra primary component under the leaves.
 
 ## Beam Modifying Devices Quiz
 
 ### Q1
-Stem: 100 MU open gives 110 cGy. 100 MU wedged gives 66 cGy. What is WF?
-A. 0.600
-B. 1.667
-C. 0.660
-D. 44
-Answer: A
+Stem: Quiz. Open-beam MU were delivered with a 0.62 wedge actually in the path. The monitor units were calculated for an open beam to deliver 200 cGy at the calculation point. A wedge with wedge factor 0.62 was actually left in the beam. What dose is delivered at that point?
+A. 200.0 cGy
+B. 322.6 cGy
+C. 76.0 cGy
+D. 124.0 cGy
+Answer: D
 Objective: IV.2
-Why: WF = 66 / 110 = 0.600. Check: 110 × 0.6 = 66. 1.667 is 110/66. 0.660 divides the wedged reading by 100 MU. 44 is the cGy difference.
+Why: The open-beam MU already assume wedge factor 1. With the wedge in the beam every MU is attenuated by the wedge factor, so delivered dose = intended dose × wedge factor. Substitute 200 × 0.62 = 124.00 cGy, reported as 124.0 cGy. The plan underdoses; it does not overdose. Leaving the dose at 200.0 cGy is the open-beam number and ignores the wedge that was in the beam. Dividing by the wedge factor (200/0.62 = 322.6 cGy) is what you do to the MU to restore dose, not what the patient received from the uncorrected MU. Multiplying by (1−wedge factor) treats the factor as if only the attenuated fraction remained in a subtraction sense and gives 76.0 cGy.
 
 ### Q2
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. WF = 0.700, point at calibration, all other factors 1, wedge in the beam. How many MU deliver 210 cGy?
-A. 147 MU
-B. 210 MU
-C. 300 MU
-D. 70 MU
-Answer: C
+Stem: Quiz. Compute the MU that restores dose for wedge factor 0.64. Open-beam monitor units for this field are 280 MU. The wedge factor is 0.64. What MU should be set so the calculation point still receives the open-beam dose, with the wedge in the beam?
+A. 179.2 MU
+B. 280.0 MU
+C. 777.8 MU
+D. 437.5 MU
+Answer: D
 Objective: IV.2
-Why: MU = 210 / 0.700 = 300. Check: 300 × 0.700 = 210 cGy. 147 is 210 × 0.700, the underdose if 210 MU are delivered through the wedge. 70 MU divides by 3.
+Why: The wedge lowers dose per MU, so the MU must increase by 1/wedge factor. Substitute 280 / 0.64 = 437.50 MU, reported as 437.5 MU. Multiplying the open MU by the wedge factor (280×0.64 = 179.2 MU) would underdose a second time. Keeping 280.0 MU omits the wedge factor while the wedge is used. Dividing by (1−wedge factor) uses the complement of the factor and gives 777.8 MU.
 
 ### Q3
-Stem: Prescription 250 cGy. Calibration is 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. WF = 0.500 was omitted and the wedge stayed in the beam. All other factors are 1. What dose is delivered?
-A. 250 cGy
-B. 500 cGy
-C. 125 cGy
-D. 62.5 cGy
-Answer: C
+Stem: Quiz. Find the wedge factor from the two chamber readings. Under the same MU and geometry, the chamber reads 95 with the wedge removed and 66.5 with the wedge in place. What is the wedge factor (dose with wedge divided by dose without wedge)?
+A. 0.700
+B. 1.429
+C. 0.300
+D. 0.850
+Answer: A
 Objective: IV.2
-Why: MU = 250 / 1 = 250. Dose = 250 × 0.500 = 125 cGy. Delivered/prescribed = 0.50, the wedge factor. 500 cGy is the overdose pattern if the factor had been included (MU = 500) and the wedge left out. 62.5 cGy applies the factor twice.
+Why: Wedge factor = reading with wedge / reading without wedge. Substitute 66.5 / 95 = 0.7000, reported as 0.700. Inverting the ratio (open/wedged) gives 1.429, which is greater than 1 and cannot be a physical wedge factor for a metal wedge that only attenuates. Using the fractional difference (open−wedged)/open gives 0.300, which is the attenuated fraction, not the transmitted factor. Averaging the open and wedged readings and then dividing by the open reading gives 0.850, which is not the transmission.
 
 ### Q4
-Stem: Hinge angle 80°. Symmetric wedged pair. What wedge angle does 90° − hinge/2 give?
-A. 40°
-B. 50°
-C. 80°
-D. 10°
-Answer: B
+Stem: Quiz. Hinge for 20° wedges. Two beams use a wedge angle of 20° each. Using hinge angle = 180° − 2 × wedge angle, what hinge angle makes the combined isodose as flat as this simple model predicts?
+A. 80.0°
+B. 160°
+C. 70.0°
+D. 140°
+Answer: D
 Objective: IV.2
-Why: 80/2 = 40, and 90 − 40 = 50°. 40° is only the half-hinge. 10° subtracts the whole hinge from 90. Check: hinge = 2(90 − 50) = 80°.
+Why: The planning relation used here is hinge = 180° − 2 × wedge angle, because each wedge tilts the isodose by the wedge angle and the two tilts should cancel across the hinge. Substitute 180 − 2 × 20 = 180 − 40 = 140°. Mixing this up with wedge = 90 − hinge/2 and then halving the wedge angle gives 80.0°. Subtracting the wedge angle only once (180−20) gives 160°. Subtracting the wedge angle from 90° and calling that the hinge gives 70.0°.
 
 ### Q5
-Stem: Hinge angle 140°. Symmetric pair. What wedge angle is required?
-A. 70°
-B. 40°
-C. 20°
-D. 50°
-Answer: C
+Stem: Quiz. Bolus on a 6 MV tangent. A 6 MV beam has dmax at 1.5 cm in water with no bolus. Water-equivalent bolus of 0.5 cm is added on the skin. Assume the buildup curve shifts toward the surface by the bolus thickness. Where is dmax relative to the skin?
+A. 2.0 cm below the skin
+B. 1.0 cm below the skin
+C. 1.5 cm below the skin
+D. 0.5 cm below the skin
+Answer: B
 Objective: IV.2
-Why: Wedge angle = 90 − (140/2) = 90 − 70 = 20°. 70° is half the hinge. 40° is 180 − 140. 50° belongs to a hinge of 80°.
+Why: Bolus fills in buildup, so the dose maximum moves to a shallower depth in the patient. Depth below skin = 1.5 − 0.5 = 1.00 cm, reported as 1.0 cm below the skin. Bolus also raises skin dose. It does not push dmax deeper. Adding the bolus thickness to dmax gives 2.0 cm below the skin and moves the peak the wrong way. Leaving dmax at 1.5 cm below the skin ignores the shift. Reporting only the bolus thickness gives 0.5 cm below the skin.
 
 ### Q6
-Stem: Open dose 250 cGy under a leaf. Mid-leaf transmission is 1.2% (0.012). What dose is under the leaf?
-A. 30 cGy
-B. 3.0 cGy
-C. 2.5 cGy
-D. 247 cGy
-Answer: B
+Stem: Quiz. A full centimeter of bolus on a 10 MV beam. A 10 MV beam has dmax at 2.5 cm in water with no bolus. Water-equivalent bolus of 1 cm is added on the skin. Assume the buildup curve shifts toward the surface by the bolus thickness. Where is dmax relative to the skin?
+A. 3.5 cm below the skin
+B. 2.5 cm below the skin
+C. 1.0 cm below the skin
+D. 1.5 cm below the skin
+Answer: D
 Objective: IV.2
-Why: 250 × 0.012 = 3.0 cGy. 30 cGy uses 12%. 2.5 cGy uses 1%. 247 cGy is the open dose minus the leak, which is not the transmitted dose the question asks for.
+Why: Bolus fills in buildup, so the dose maximum moves to a shallower depth in the patient. Depth below skin = 2.5 − 1 = 1.50 cm, reported as 1.5 cm below the skin. Bolus also raises skin dose. It does not push dmax deeper. Adding the bolus thickness to dmax gives 3.5 cm below the skin and moves the peak the wrong way. Leaving dmax at 2.5 cm below the skin ignores the shift. Reporting only the bolus thickness gives 1.0 cm below the skin.
 
 ### Q7
-Stem: A compensator is in the beam to replace missing tissue on a sloping surface. It should be treated as:
-A. A density override inside the patient
-B. A beam modifier with its own transmission, not a wedge angle and not a density override
-C. Bolus on the skin
-D. A hinge of 90°
-Answer: B
+Stem: Quiz. Brass compensator for a 4 cm missing-tissue gap. Missing tissue is 4 cm of relative density 1. Compensator relative density is 1.8. The compensator sits at SCD 40 cm and the skin is at SSD 100 cm. Use t = t_miss × (ρ_tissue/ρ_comp) × (SCD/SSD)^2. What compensator thickness is required along this ray?
+A. 0.36 cm
+B. 2.22 cm
+C. 0.64 cm
+D. 1.15 cm
+Answer: A
 Objective: IV.2
-Why: A compensator sits in the beam and reduces fluence according to its thickness and attenuation. It is not a CT density override, not bolus (which is on the skin and pulls dmax up), and not a wedged-pair hinge.
+Why: Density ratio = 1/1.8 = 0.5556. Distance scale = (40/100)^2 = 0.4000^2 = 0.1600. The compensator is closer to the source than the skin, so a thinner piece removes the diverging fluence that would have crossed the missing tissue; the (SCD/SSD)^2 term is that geometric thinning. t = 4 × 0.5556 × 0.1600 = 0.3556 cm, reported as 0.36 cm. Omitting the distance scale gives 2.22 cm, the thickness you would need if the compensator were at the skin. Omitting the density ratio gives 0.64 cm. Inverting the density ratio gives 1.15 cm.
 
 ### Q8
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. WF = 0.600 was used, so 400 MU were set for 180 cGy at the calibration point with TMR-style depth factor 0.750 also in the denominator (180 / (0.750 × 0.600) = 400). The wedge was not inserted. All other factors are 1 and the point is at the calibration distance. What dose is delivered?
-A. 180 cGy
-B. 108 cGy
-C. 300 cGy
-D. 400 cGy
-Answer: C
+Stem: Quiz. A 40% transmission block is left in and the MU are the open-beam MU. The open beam would deliver 220 cGy to the point. A partial-transmission block with transmission 0.4 covers that ray, and the MU are not increased. What dose gets through the block?
+A. 88.0 cGy
+B. 132.0 cGy
+C. 550.0 cGy
+D. 220.0 cGy
+Answer: A
 Objective: IV.2
-Why: With the wedge out, dose = 400 × 1.0 × 0.750 × 1 = 300 cGy. Check: 400 × 0.750 × 0.600 = 180 cGy only when the wedge is in. 300/180 = 1/0.600. 108 cGy is what 240 MU would deliver if the factor were omitted and the wedge stayed in (180/0.750 = 240, then 240 × 0.750 × 0.600 = 108). 400 cGy drops the TMR as well.
+Why: Transmission is the fraction that passes. Dose = 220 × 0.4 = 88.00 cGy, reported as 88.0 cGy. Multiplying by (1−transmission) gives the removed dose 132.0 cGy, not the dose that remains. Dividing by transmission gives the MU adjustment 550.0 cGy if you wanted the original dose through the block, which is not what these MU deliver. Ignoring the block leaves the dose at 220.0 cGy.

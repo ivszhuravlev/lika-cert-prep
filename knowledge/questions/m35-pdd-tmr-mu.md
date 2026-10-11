@@ -1,599 +1,599 @@
-# Module 35 — PDD, TMR, and MU Calcs
+# Module 35. PDD, TMR, and MU Calcs
 
-Original items. An SSD calculation uses PDD. An SAD calculation uses TMR. Every MU stem states the calibration: 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm, unless a different point is named. Mayneord F corrects inverse square inside a PDD only.
+Original CMD practice items. Not retired MDCB questions and not a commercial quiz.
 
 ## Interpolation Tutorial (No Formula)
 
 ### Q1
-Stem: A PDD table lists 67.5% at 10.0 cm and 64.3% at 11.0 cm. What is the linearly interpolated PDD at 10.4 cm?
-A. 67.5%
-B. 65.9%
-C. 66.22%
-D. 64.3%
-Answer: C
+Stem: No-formula drill. Field 10×10. A table lists TMR = 0.88 at 5 and TMR = 0.79 at 10. Linearly interpolate TMR at 8. No curve fit, just the straight fraction of the interval.
+A. 0.790
+B. 0.835
+C. 0.844
+D. 0.826
+Answer: D
 Objective: IV.3
-Why: The fraction is (10.4 − 10.0) / (11.0 − 10.0) = 0.40. The table drops 67.5 − 64.3 = 3.2. Then 0.40 × 3.2 = 1.28, and 67.5 − 1.28 = 66.22%. The average 65.9% would be the midpoint at 10.5 cm, not 10.4 cm.
+Why: The point 8 is (8−5)/(10−5) = 0.6000 of the way from 5 to 10. The table changes by -0.09 over that whole step. Change on this step = 0.6000 × (-0.09) = -0.0540. TMR = 0.88 + (-0.0540) = 0.8260, reported as 0.826. Using the nearer table entry without interpolating gives 0.790. Averaging the endpoints as if the point were midway gives 0.835. Measuring the fraction from the wrong end of the interval gives 0.844.
 
 ### Q2
-Stem: PDD is 85.0% at 5.0 cm and 82.4% at 6.0 cm. What is PDD at 5.2 cm?
-A. 84.48%
-B. 83.7%
-C. 85.0%
-D. 82.4%
+Stem: No-formula drill. The point is one quarter of the way across a 4 cm step. A table lists TMR = 0.912 at 6 and TMR = 0.864 at 10. Linearly interpolate TMR at 7. No curve fit, just the straight fraction of the interval.
+A. 0.900
+B. 0.912
+C. 0.888
+D. 0.876
 Answer: A
 Objective: IV.3
-Why: Fraction = (5.2 − 5.0) / (6.0 − 5.0) = 0.20. Drop = 85.0 − 82.4 = 2.6. Then 0.20 × 2.6 = 0.52, and 85.0 − 0.52 = 84.48%. Averaging the two rows gives 83.7%, which belongs at 5.5 cm.
+Why: The point 7 is (7−6)/(10−6) = 0.2500 of the way from 6 to 10. The table changes by -0.048 over that whole step. Change on this step = 0.2500 × (-0.048) = -0.0120. TMR = 0.912 + (-0.0120) = 0.9000, reported as 0.900. Using the nearer table entry without interpolating gives 0.912. Averaging the endpoints as if the point were midway gives 0.888. Measuring the fraction from the wrong end of the interval gives 0.876.
 
 ### Q3
-Stem: PDD is 72.0% at 8.0 cm and 67.0% at 10.0 cm. What is PDD at 8.5 cm?
-A. 69.5%
-B. 70.75%
-C. 71.0%
-D. 67.0%
-Answer: B
+Stem: No-formula drill. PDD versus field size at fixed depth. A table lists PDD = 67 % at 10 and PDD = 64.6 % at 15. Linearly interpolate PDD at 12. No curve fit, just the straight fraction of the interval.
+A. 67.00 %
+B. 65.80 %
+C. 65.56 %
+D. 66.04 %
+Answer: D
 Objective: IV.3
-Why: Fraction = (8.5 − 8.0) / (10.0 − 8.0) = 0.25. Drop = 5.0. Then 0.25 × 5.0 = 1.25, and 72.0 − 1.25 = 70.75%. The midpoint 69.5% is the value at 9.0 cm. Scaling 72 by 8.5/10 is not interpolation.
+Why: The point 12 is (12−10)/(15−10) = 0.4000 of the way from 10 to 15. The table changes by -2.4 over that whole step. Change on this step = 0.4000 × (-2.4) = -0.9600. PDD = 67 + (-0.9600) = 66.0400, reported as 66.04 %. Using the nearer table entry without interpolating gives 67.00 %. Averaging the endpoints as if the point were midway gives 65.80 %. Measuring the fraction from the wrong end of the interval gives 65.56 %.
 
 ### Q4
-Stem: PDD is 58.0% at 12.0 cm and 55.4% at 13.0 cm. What is PDD at 12.3 cm?
-A. 57.22%
-B. 56.7%
-C. 58.0%
-D. 55.4%
-Answer: A
+Stem: No-formula drill. Collimator scatter between two square fields. A table lists Sc = 1.012 at 4 and Sc = 1.028 at 8. Linearly interpolate Sc at 5. No curve fit, just the straight fraction of the interval.
+A. 1.012
+B. 1.016
+C. 1.020
+D. 1.024
+Answer: B
 Objective: IV.3
-Why: Fraction = 0.3 / 1.0 = 0.30. Drop = 58.0 − 55.4 = 2.6. Then 0.30 × 2.6 = 0.78, and 58.0 − 0.78 = 57.22%. The average 56.7% is the 12.5 cm value.
+Why: The point 5 is (5−4)/(8−4) = 0.2500 of the way from 4 to 8. The table changes by 0.016 over that whole step. Change on this step = 0.2500 × (0.016) = 0.0040. Sc = 1.012 + (0.0040) = 1.0160, reported as 1.016. Using the nearer table entry without interpolating gives 1.012. Averaging the endpoints as if the point were midway gives 1.020. Measuring the fraction from the wrong end of the interval gives 1.024.
 
 ### Q5
-Stem: PDD is 76.2% at 7.0 cm and 73.8% at 8.0 cm. What is PDD at 7.5 cm?
-A. 76.2%
-B. 74.6%
-C. 75.0%
-D. 73.8%
-Answer: C
+Stem: No-formula drill. A physical wedge factor was measured at two depths. Depth is in cm. A table lists wedge factor = 0.71 at 0 and wedge factor = 0.655 at 10. Linearly interpolate wedge factor at 4. No curve fit, just the straight fraction of the interval.
+A. 0.688
+B. 0.710
+C. 0.683
+D. 0.677
+Answer: A
 Objective: IV.3
-Why: 7.5 cm is midway, so the fraction is 0.50. Drop = 76.2 − 73.8 = 2.4. Then 0.50 × 2.4 = 1.2, and 76.2 − 1.2 = 75.0%. The same result is (76.2 + 73.8) / 2 = 75.0. That average is valid only because the depth is the midpoint.
+Why: The point 4 is (4−0)/(10−0) = 0.4000 of the way from 0 to 10. The table changes by -0.055 over that whole step. Change on this step = 0.4000 × (-0.055) = -0.0220. wedge factor = 0.71 + (-0.0220) = 0.6880, reported as 0.688. Using the nearer table entry without interpolating gives 0.710. Averaging the endpoints as if the point were midway gives 0.683. Measuring the fraction from the wrong end of the interval gives 0.677.
 
 ### Q6
-Stem: A TMR table lists 0.800 at 10 cm and 0.760 at 12 cm, same field size at the point. What is TMR at 11 cm?
-A. 0.800
-B. 0.780
-C. 0.760
-D. 0.820
-Answer: B
-Objective: IV.3
-Why: 11 cm is midway from 10 to 12, fraction 0.50. Drop = 0.040. Then 0.50 × 0.040 = 0.020, and 0.800 − 0.020 = 0.780. Adding the drop instead of subtracting it gives 0.820.
-
-### Q7
-Stem: Collimator scatter is 1.020 for a 10 cm equivalent square and 1.050 for 15 cm. What is Sc at 12 cm by linear interpolation?
-A. 1.020
-B. 1.035
-C. 1.032
-D. 1.050
+Stem: No-formula drill. Depth 16 cm sits between 10 and 20. A table lists TMR = 0.802 at 10 and TMR = 0.748 at 20. Linearly interpolate TMR at 16. No curve fit, just the straight fraction of the interval.
+A. 0.748
+B. 0.775
+C. 0.770
+D. 0.780
 Answer: C
 Objective: IV.3
-Why: Fraction = (12 − 10) / (15 − 10) = 0.40. Rise = 0.030. Then 0.40 × 0.030 = 0.012, and 1.020 + 0.012 = 1.032. The midpoint 1.035 belongs at 12.5 cm.
+Why: The point 16 is (16−10)/(20−10) = 0.6000 of the way from 10 to 20. The table changes by -0.054 over that whole step. Change on this step = 0.6000 × (-0.054) = -0.0324. TMR = 0.802 + (-0.0324) = 0.7696, reported as 0.770. Using the nearer table entry without interpolating gives 0.748. Averaging the endpoints as if the point were midway gives 0.775. Measuring the fraction from the wrong end of the interval gives 0.780.
+
+### Q7
+Stem: No-formula drill. Equivalent-square lookup between two columns. A table lists PDD = 71.2 % at 8 and PDD = 73.6 % at 12. Linearly interpolate PDD at 9. No curve fit, just the straight fraction of the interval.
+A. 71.20 %
+B. 72.40 %
+C. 71.80 %
+D. 73.00 %
+Answer: C
+Objective: IV.3
+Why: The point 9 is (9−8)/(12−8) = 0.2500 of the way from 8 to 12. The table changes by 2.4 over that whole step. Change on this step = 0.2500 × (2.4) = 0.6000. PDD = 71.2 + (0.6000) = 71.8000, reported as 71.80 %. Using the nearer table entry without interpolating gives 71.20 %. Averaging the endpoints as if the point were midway gives 72.40 %. Measuring the fraction from the wrong end of the interval gives 73.00 %.
 
 ### Q8
-Stem: PDD is 80.0% at 6 cm and 75.2% at 8 cm. Someone asks for 14 cm from those two rows only. What is the right action?
-A. Extrapolate and report 65.6%
-B. Do not treat a long extrapolation as the same linear step; get a table row that brackets 14 cm
-C. Average 80.0 and 75.2 and call it 14 cm
-D. Multiply 75.2 by 14/8
-Answer: B
+Stem: No-formula drill. Phantom scatter versus field size at depth. A table lists Sp = 0.96 at 3 and Sp = 0.99 at 7. Linearly interpolate Sp at 6. No curve fit, just the straight fraction of the interval.
+A. 0.990
+B. 0.975
+C. 0.968
+D. 0.983
+Answer: D
 Objective: IV.3
-Why: The fraction (14 − 6) / (8 − 6) = 4, which is outside 0 to 1. PDD is not linear over that stretch. The in-range step from 6 to 8 cm drops 4.8 over 2 cm, but quoting 80 − 4 × 4.8 = 60.8, or any other far extrapolation, is not the interpolation this lesson uses. The average 77.6% is the 7 cm estimate, not 14 cm.
+Why: The point 6 is (6−3)/(7−3) = 0.7500 of the way from 3 to 7. The table changes by 0.03 over that whole step. Change on this step = 0.7500 × (0.03) = 0.0225. Sp = 0.96 + (0.0225) = 0.9825, reported as 0.983. Using the nearer table entry without interpolating gives 0.990. Averaging the endpoints as if the point were midway gives 0.975. Measuring the fraction from the wrong end of the interval gives 0.968.
 
 ## PDD and TMR Calculation Tutorial
 
 ### Q1
-Stem: Percent depth dose is defined as:
-A. 100 × dose at depth / dose at dmax, at a fixed SSD
-B. Dose at depth / dose at dmax, at a fixed source-to-point distance
-C. Dose in tissue / dose in air
-D. An inverse-square factor with no attenuation
-Answer: A
+Stem: Tutorial. SSD setup, single beam, ask for the given dose. Tumor dose at depth is 180 cGy and the PDD at that depth is 75%. What given dose (dose at dmax) is required? Given dose = tumor dose / (PDD/100).
+A. 135.0 cGy
+B. 2.4 cGy
+C. 255.0 cGy
+D. 240.0 cGy
+Answer: D
 Objective: IV.3
-Why: PDD = 100 × D(d) / D(dmax) at fixed SSD, so the number is a percent and it already contains inverse square from dmax to depth. Choice B is TMR, a fraction at fixed source-to-point distance. Choice C is the idea of TAR. Inverse square alone is not a PDD.
+Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 180 / (75/100) = 180 / 0.7500 = 240.00 cGy, reported as 240.0 cGy. Equivalently 180 × 100 / 75 = 240.00 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 180 cGy were already the given dose) and gives 135.0 cGy. Dividing by the percent number 75 instead of by the fraction 0.7500 gives 2.4 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 255.0 cGy.
 
 ### Q2
-Stem: TMR at depth d for field size rd is:
-A. A percent that includes inverse square from the skin to the isocenter
-B. D(d) / D(dmax) at a fixed source-to-point distance
-C. Mayneord F
-D. The wedge factor
+Stem: Tutorial. A deeper point with a lower PDD. Tumor dose at depth is 200 cGy and the PDD at that depth is 67.5%. What given dose (dose at dmax) is required? Given dose = tumor dose / (PDD/100).
+A. 135.0 cGy
+B. 296.3 cGy
+C. 3.0 cGy
+D. 267.5 cGy
 Answer: B
 Objective: IV.3
-Why: TMR = D(d) / D(dmax) with the point held at a fixed distance from the source. Inverse square is not inside the TMR. The field size is the field at the point. Mayneord F and the wedge factor are different multipliers.
+Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 200 / (67.5/100) = 200 / 0.6750 = 296.30 cGy, reported as 296.3 cGy. Equivalently 200 × 100 / 67.5 = 296.30 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 200 cGy were already the given dose) and gives 135.0 cGy. Dividing by the percent number 67.5 instead of by the fraction 0.6750 gives 3.0 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 267.5 cGy.
 
 ### Q3
-Stem: A PDD at 10 cm depth, SSD 100 cm, is 67.0%. dmax is 1.5 cm. Estimate the PDD at the same depth for SSD 110 cm with Mayneord F.
-A. 66.1%
-B. 67.0%
-C. 67.9%
-D. 73.7%
-Answer: C
-Objective: IV.3
-Why: F = ((110 + 1.5) / (100 + 1.5))^2 × ((100 + 10) / (110 + 10))^2 = (111.5 / 101.5)^2 × (110 / 120)^2. 111.5 / 101.5 = 1.0985 and 1.0985^2 = 1.2067. 110 / 120 = 0.9167 and 0.9167^2 = 0.8403. F = 1.2067 × 0.8403 = 1.014. Then 67.0 × 1.014 = 67.9%. Inverting F gives about 66.1%. Dropping the squares gives about 67.5%, not 73.7%.
-
-### Q4
-Stem: The same 67.0% PDD (SSD 100 cm, depth 10 cm, dmax 1.5 cm) is moved to SSD 80 cm with Mayneord F. What PDD do you estimate?
-A. 69.6%
-B. 67.0%
-C. 64.5%
-D. 53.6%
-Answer: C
-Objective: IV.3
-Why: F = ((80 + 1.5) / (100 + 1.5))^2 × ((100 + 10) / (80 + 10))^2 = (81.5 / 101.5)^2 × (110 / 90)^2. 81.5 / 101.5 = 0.8030 and 0.8030^2 = 0.6448. 110 / 90 = 1.2222 and 1.2222^2 = 1.4938. F = 0.6448 × 1.4938 = 0.963. Then 67.0 × 0.963 = 64.5%. A shorter SSD makes the inverse-square piece inside the PDD steeper, so the percent falls. 69.6% is 67 / 0.963, the inverted factor.
-
-### Q5
-Stem: Table PDD is 70.0% at 10 cm depth for SSD 80 cm. dmax is 0.5 cm. Mayneord F to SSD 100 cm is 1.043. What PDD do you estimate at SSD 100 cm?
-A. 67.1%
-B. 70.0%
-C. 73.0%
-D. 80.5%
-Answer: C
-Objective: IV.3
-Why: 70.0 × 1.043 = 73.0%. Check: 73.0 / 1.043 = 70.0. Dividing the table PDD by F gives 70.0 / 1.043 = 67.1%, which applies the factor backwards. F = ((100.5)/(80.5))^2 × ((90)/(110))^2 corrects inverse square only and does not add scatter for the new SSD.
-
-### Q6
-Stem: PDD at 15 cm, SSD 100 cm, is 55.0%. dmax is 1.5 cm. Mayneord F from SSD 100 cm to SSD 120 cm is 1.040. What is the estimated PDD at SSD 120 cm?
-A. 52.9%
-B. 55.0%
-C. 57.2%
-D. 71.5%
-Answer: C
-Objective: IV.3
-Why: PDD(120) = 55.0 × 1.040 = 57.2%. Dividing gives 55.0 / 1.040 = 52.9%, which is the wrong direction for a longer SSD. 55.0 × 1.30 = 71.5% invents a factor the stem did not give. F here is inverse square only; scatter is still the SSD 100 cm scatter.
-
-### Q7
-Stem: An SSD tumor dose is 240 cGy where PDD is 60%. What given dose at dmax is required?
-A. 144 cGy
-B. 300 cGy
-C. 400 cGy
-D. 240 cGy
-Answer: C
-Objective: IV.3
-Why: Given dose = 240 / 0.60 = 400 cGy. Check: 400 × 0.60 = 240 cGy. Multiplying gives 144 cGy, the tumor dose if 240 cGy were already the given dose. Mayneord F is not part of this division, and a TMR is not added beside the PDD.
-
-### Q8
-Stem: On an SAD setup the dose at dmax is 400 cGy and the TMR is 0.600. What is the dose at depth?
-A. 240 cGy
-B. 400 cGy
-C. 667 cGy
-D. 160 cGy
+Stem: Tutorial. A shallow boost point. Tumor dose at depth is 160 cGy and the PDD at that depth is 80%. What given dose (dose at dmax) is required? Given dose = tumor dose / (PDD/100).
+A. 200.0 cGy
+B. 128.0 cGy
+C. 2.0 cGy
+D. 240.0 cGy
 Answer: A
 Objective: IV.3
-Why: 400 × 0.600 = 240 cGy. Check: 240 / 400 = 0.600. Dividing 400 / 0.600 = 667 cGy is the given-dose step and does not belong on a TMR. Mayneord F is not applied to this TMR. The 240 cGy can match an SSD tumor dose numerically; the fixed source-to-point distance does not match that SSD geometry.
+Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 160 / (80/100) = 160 / 0.8000 = 200.00 cGy, reported as 200.0 cGy. Equivalently 160 × 100 / 80 = 200.00 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 160 cGy were already the given dose) and gives 128.0 cGy. Dividing by the percent number 80 instead of by the fraction 0.8000 gives 2.0 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 240.0 cGy.
+
+### Q4
+Stem: Tutorial. Exit-depth estimate from a tabulated PDD. Given dose at dmax is 250 cGy. PDD at the exit depth is 39%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+A. 641.0 cGy
+B. 250.0 cGy
+C. 48.8 cGy
+D. 97.5 cGy
+Answer: D
+Objective: IV.3
+Why: Substitute 250 × (39/100) = 250 × 0.3900 = 97.50 cGy, reported as 97.5 cGy. Applying inverse square again would double-count the distance term that is already inside the PDD. This is still an estimate of dose at depth: the true exit surface has less backscatter than the full-phantom PDD table. Dividing by PDD/100 computes a given dose from a tumor dose and gives 641.0 cGy, which is the reverse of this question. Using the given dose itself as the exit dose gives 250.0 cGy. Halving the result as if two opposed beams each needed half, without being asked, gives 48.8 cGy.
+
+### Q5
+Stem: Tutorial. Another separation, PDD already includes inverse square. Given dose at dmax is 220 cGy. PDD at the exit depth is 42.5%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+A. 517.6 cGy
+B. 220.0 cGy
+C. 46.8 cGy
+D. 93.5 cGy
+Answer: D
+Objective: IV.3
+Why: Substitute 220 × (42.5/100) = 220 × 0.4250 = 93.50 cGy, reported as 93.5 cGy. Applying inverse square again would double-count the distance term that is already inside the PDD. This is still an estimate of dose at depth: the true exit surface has less backscatter than the full-phantom PDD table. Dividing by PDD/100 computes a given dose from a tumor dose and gives 517.6 cGy, which is the reverse of this question. Using the given dose itself as the exit dose gives 220.0 cGy. Halving the result as if two opposed beams each needed half, without being asked, gives 46.8 cGy.
+
+### Q6
+Stem: Tutorial. Build a PDD from TMR plus inverse square. Sp ratio is 1. TMR at depth 8 cm is 0.805 for the field size at that depth. SSD is 100 cm and dmax is 1.5 cm. Ignore the phantom-scatter ratio (treat Sp(rd)/Sp(r) as 1). PDD = 100 × TMR × [(SSD+dmax)/(SSD+depth)]^2. What is the PDD?
+A. 71.1 %
+B. 80.5 %
+C. 91.1 %
+D. 75.7 %
+Answer: A
+Objective: IV.3
+Why: Inverse-square piece = [(100+1.5)/(100+8)]^2 = (101.5/108)^2 = (0.9398)^2 = 0.8833. PDD = 100 × 0.805 × 0.8833 = 71.10%, reported as 71.1 %. Mayneord's F is this same inverse-square ratio applied when SSD changes; it is not a scatter correction. Here scatter was set to 1 on purpose. Dropping the inverse-square piece and reporting 100×TMR gives 80.5 %. Inverting the distance ratio (putting depth in the numerator) gives 91.1 %, which can exceed 100% and is a sign the distances were flipped. Using the distance ratio only once, without squaring, gives 75.7 %.
+
+### Q7
+Stem: Tutorial. Small SSD change, Mayneord only. PDD at 10 cm depth is 70% for SSD 100 cm. dmax is 1.5 cm. Estimate the PDD at the same depth for SSD 110 cm with the Mayneord F factor. Report PDD to the nearest 0.1%.
+A. 84.5 %
+B. 71.0 %
+C. 70.5 %
+D. 69.0 %
+Answer: B
+Objective: IV.3
+Why: Mayneord F is an inverse-square correction only. Scatter is assumed unchanged. F = [(SSD2+dm)/(SSD1+dm)]^2 × [(SSD1+d)/(SSD2+d)]^2 = [(110+1.5)/(100+1.5)]^2 × [(100+10)/(110+10)]^2 = (1.0985)^2 × (0.9167)^2 = 1.2068 × 0.8403 = 1.0140. PDD2 = 70 × 1.0140 = 70.98%, which rounds to 71.0 %. Keeping only the dmax ratio and dropping [(SSD1+d)/(SSD2+d)]^2 gives 84.5 %. Multiplying the two distance ratios once each, without squaring, gives 70.5 %. Swapping SSD1 and SSD2 reverses the extended-distance correction and gives 69.0 %.
+
+### Q8
+Stem: Tutorial. Interpolate PDD before you use it as a given-dose input on a later field. A table lists PDD = 66.2 % at 10 and PDD = 62 % at 20. Linearly interpolate PDD at 14. No curve fit, just the straight fraction of the interval.
+A. 66.20 %
+B. 64.10 %
+C. 63.68 %
+D. 64.52 %
+Answer: D
+Objective: IV.3
+Why: The point 14 is (14−10)/(20−10) = 0.4000 of the way from 10 to 20. The table changes by -4.2 over that whole step. Change on this step = 0.4000 × (-4.2) = -1.6800. PDD = 66.2 + (-1.6800) = 64.5200, reported as 64.52 %. Using the nearer table entry without interpolating gives 66.20 %. Averaging the endpoints as if the point were midway gives 64.10 %. Measuring the fraction from the wrong end of the interval gives 63.68 %.
 
 ## PDD and TMR Calculations
 
 ### Q1
-Stem: An SSD setup prescribes 200 cGy to the tumor where PDD = 80.0%. What is the given dose at dmax?
-A. 160 cGy
-B. 200 cGy
-C. 250 cGy
-D. 280 cGy
-Answer: C
+Stem: Calculation set. Midline dose requested, find dmax dose. Tumor dose at depth is 250 cGy and the PDD at that depth is 62%. What given dose (dose at dmax) is required? Given dose = tumor dose / (PDD/100).
+A. 403.2 cGy
+B. 155.0 cGy
+C. 4.0 cGy
+D. 312.0 cGy
+Answer: A
 Objective: IV.3
-Why: Given dose = tumor dose / (PDD/100) = 200 / 0.80 = 250 cGy. Check: 250 × 0.80 = 200 cGy at the tumor. Multiplying gives 160 cGy, which is the tumor dose you would get from a given dose of 200 cGy, the reverse question.
+Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 250 / (62/100) = 250 / 0.6200 = 403.23 cGy, reported as 403.2 cGy. Equivalently 250 × 100 / 62 = 403.23 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 250 cGy were already the given dose) and gives 155.0 cGy. Dividing by the percent number 62 instead of by the fraction 0.6200 gives 4.0 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 312.0 cGy.
 
 ### Q2
-Stem: Given dose at dmax on an SSD setup is 250 cGy. PDD at the tumor is 72%. What tumor dose is delivered?
-A. 180 cGy
-B. 250 cGy
-C. 347 cGy
-D. 322 cGy
+Stem: Calculation set. Superficial target, high PDD. Tumor dose at depth is 150 cGy and the PDD at that depth is 85.5%. What given dose (dose at dmax) is required? Given dose = tumor dose / (PDD/100).
+A. 175.4 cGy
+B. 128.3 cGy
+C. 1.8 cGy
+D. 235.5 cGy
 Answer: A
 Objective: IV.3
-Why: Tumor dose = 250 × 0.72 = 180 cGy. Check: 180 / 0.72 = 250 cGy given. Dividing 250 by 0.72 gives about 347 cGy, which treats 250 as the tumor dose. 250 × 1.29 is not this percent.
+Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 150 / (85.5/100) = 150 / 0.8550 = 175.44 cGy, reported as 175.4 cGy. Equivalently 150 × 100 / 85.5 = 175.44 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 150 cGy were already the given dose) and gives 128.3 cGy. Dividing by the percent number 85.5 instead of by the fraction 0.8550 gives 1.8 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 235.5 cGy.
 
 ### Q3
-Stem: On an SAD setup, dose at dmax at the isocenter distance is 250 cGy. TMR at the tumor is 0.800. What is the dose at the tumor?
-A. 200 cGy
-B. 250 cGy
-C. 312.5 cGy
-D. 180 cGy
+Stem: Calculation set. Deep spine point. Tumor dose at depth is 300 cGy and the PDD at that depth is 55%. What given dose (dose at dmax) is required? Given dose = tumor dose / (PDD/100).
+A. 545.5 cGy
+B. 165.0 cGy
+C. 5.5 cGy
+D. 355.0 cGy
 Answer: A
 Objective: IV.3
-Why: D(d) = 250 × 0.800 = 200 cGy. Check: 200 / 250 = 0.800. Dividing 250 by 0.800 gives 312.5 cGy, which is the given-dose operation from a PDD problem, not this TMR multiplication. The number 200 cGy can match an SSD example and still be a different setup: TMR holds source-to-point distance fixed.
+Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 300 / (55/100) = 300 / 0.5500 = 545.45 cGy, reported as 545.5 cGy. Equivalently 300 × 100 / 55 = 545.45 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 300 cGy were already the given dose) and gives 165.0 cGy. Dividing by the percent number 55 instead of by the fraction 0.5500 gives 5.5 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 355.0 cGy.
 
 ### Q4
-Stem: SAD setup. Dose at depth must be 180 cGy. TMR = 0.750. What dose is required at dmax, at the same source-to-point distance?
-A. 135 cGy
-B. 180 cGy
-C. 240 cGy
-D. 255 cGy
-Answer: C
-Objective: IV.3
-Why: D(dmax) = 180 / 0.750 = 240 cGy. Check: 240 × 0.750 = 180 cGy. Multiplying gives 135 cGy, the depth dose if 180 cGy were already the dmax dose.
-
-### Q5
-Stem: Tumor dose 160 cGy, SSD setup, PDD = 64%. What is the given dose at dmax?
-A. 102 cGy
-B. 160 cGy
-C. 224 cGy
-D. 250 cGy
-Answer: D
-Objective: IV.3
-Why: 160 / 0.64 = 250 cGy. Check: 250 × 0.64 = 160. Leaving PDD as 64 instead of 0.64 gives 160/64 = 2.5 cGy, a unit error. 160 × 0.64 = 102.4 cGy is the reverse multiplication.
-
-### Q6
-Stem: SAD setup. Dose at dmax is 300 cGy. TMR = 0.650. What is the dose at depth?
-A. 195 cGy
-B. 300 cGy
-C. 462 cGy
-D. 235 cGy
+Stem: Calculation set. Dose at 22 cm depth from the given dose. Given dose at dmax is 180 cGy. PDD at the exit depth is 36%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+A. 64.8 cGy
+B. 500.0 cGy
+C. 180.0 cGy
+D. 32.4 cGy
 Answer: A
 Objective: IV.3
-Why: 300 × 0.650 = 195 cGy. Check: 195 / 300 = 0.650. 300 / 0.650 = 461.5 cGy is the division used when 300 cGy is the tumor dose and you want dmax.
+Why: Substitute 180 × (36/100) = 180 × 0.3600 = 64.80 cGy, reported as 64.8 cGy. Applying inverse square again would double-count the distance term that is already inside the PDD. This is still an estimate of dose at depth: the true exit surface has less backscatter than the full-phantom PDD table. Dividing by PDD/100 computes a given dose from a tumor dose and gives 500.0 cGy, which is the reverse of this question. Using the given dose itself as the exit dose gives 180.0 cGy. Halving the result as if two opposed beams each needed half, without being asked, gives 32.4 cGy.
 
-### Q7
-Stem: A stem gives PDD = 80% for an SSD patient and a TMR of 0.800 for a different SAD patient. Which use is allowed?
-A. Put both 0.800 factors in one MU formula
-B. Use the PDD only on the SSD setup and the TMR only on the SAD setup
-C. Apply Mayneord F to the TMR because the percents match
-D. Call the TMR a given dose
+### Q5
+Stem: Calculation set. A shallower exit depth. Given dose at dmax is 200 cGy. PDD at the exit depth is 51%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+A. 392.2 cGy
+B. 102.0 cGy
+C. 200.0 cGy
+D. 51.0 cGy
 Answer: B
 Objective: IV.3
-Why: The percents can be numerically equal and still belong to different geometries. PDD includes inverse square along a fixed SSD. TMR does not. One formula does not contain both. Mayneord F is not applied to TMR.
+Why: Substitute 200 × (51/100) = 200 × 0.5100 = 102.00 cGy, reported as 102.0 cGy. Applying inverse square again would double-count the distance term that is already inside the PDD. This is still an estimate of dose at depth: the true exit surface has less backscatter than the full-phantom PDD table. Dividing by PDD/100 computes a given dose from a tumor dose and gives 392.2 cGy, which is the reverse of this question. Using the given dose itself as the exit dose gives 200.0 cGy. Halving the result as if two opposed beams each needed half, without being asked, gives 51.0 cGy.
 
-### Q8
-Stem: SSD setup. Tumor dose 210 cGy. PDD = 70%. What given dose at dmax produces that tumor dose?
-A. 147 cGy
-B. 210 cGy
-C. 280 cGy
-D. 300 cGy
+### Q6
+Stem: Calculation set. Extended SSD Mayneord. PDD at 15 cm depth is 54% for SSD 100 cm. dmax is 1.5 cm. Estimate the PDD at the same depth for SSD 130 cm with the Mayneord F factor. Report PDD to the nearest 0.1%.
+A. 90.6 %
+B. 57.0 %
+C. 55.5 %
+D. 51.1 %
+Answer: B
+Objective: IV.3
+Why: Mayneord F is an inverse-square correction only. Scatter is assumed unchanged. F = [(SSD2+dm)/(SSD1+dm)]^2 × [(SSD1+d)/(SSD2+d)]^2 = [(130+1.5)/(100+1.5)]^2 × [(100+15)/(130+15)]^2 = (1.2956)^2 × (0.7931)^2 = 1.6785 × 0.6290 = 1.0558. PDD2 = 54 × 1.0558 = 57.01%, which rounds to 57.0 %. Keeping only the dmax ratio and dropping [(SSD1+d)/(SSD2+d)]^2 gives 90.6 %. Multiplying the two distance ratios once each, without squaring, gives 55.5 %. Swapping SSD1 and SSD2 reverses the extended-distance correction and gives 51.1 %.
+
+### Q7
+Stem: Calculation set. 18 MV, dmax 3.0 cm, modest SSD change. PDD at 10 cm depth is 78.5% for SSD 100 cm. dmax is 3 cm. Estimate the PDD at the same depth for SSD 105 cm with the Mayneord F factor. Report PDD to the nearest 0.1%.
+A. 86.3 %
+B. 78.7 %
+C. 78.0 %
+D. 79.0 %
 Answer: D
 Objective: IV.3
-Why: 210 / 0.70 = 300 cGy. Check: 300 × 0.70 = 210 cGy. 210 × 0.70 = 147 cGy is the tumor dose from a given dose of 210 cGy. 280 cGy uses 0.75.
+Why: Mayneord F is an inverse-square correction only. Scatter is assumed unchanged. F = [(SSD2+dm)/(SSD1+dm)]^2 × [(SSD1+d)/(SSD2+d)]^2 = [(105+3)/(100+3)]^2 × [(100+10)/(105+10)]^2 = (1.0485)^2 × (0.9565)^2 = 1.0994 × 0.9149 = 1.0059. PDD2 = 78.5 × 1.0059 = 78.96%, which rounds to 79.0 %. Keeping only the dmax ratio and dropping [(SSD1+d)/(SSD2+d)]^2 gives 86.3 %. Multiplying the two distance ratios once each, without squaring, gives 78.7 %. Swapping SSD1 and SSD2 reverses the extended-distance correction and gives 78.0 %.
+
+### Q8
+Stem: Calculation set. SSD is 90 cm, not 100. TMR at depth 12 cm is 0.7 for the field size at that depth. SSD is 90 cm and dmax is 1.5 cm. Ignore the phantom-scatter ratio (treat Sp(rd)/Sp(r) as 1). PDD = 100 × TMR × [(SSD+dmax)/(SSD+depth)]^2. What is the PDD?
+A. 70.0 %
+B. 87.0 %
+C. 62.8 %
+D. 56.3 %
+Answer: D
+Objective: IV.3
+Why: Inverse-square piece = [(90+1.5)/(90+12)]^2 = (91.5/102)^2 = (0.8971)^2 = 0.8047. PDD = 100 × 0.7 × 0.8047 = 56.33%, reported as 56.3 %. Mayneord's F is this same inverse-square ratio applied when SSD changes; it is not a scatter correction. Here scatter was set to 1 on purpose. Dropping the inverse-square piece and reporting 100×TMR gives 70.0 %. Inverting the distance ratio (putting depth in the numerator) gives 87.0 %, which can exceed 100% and is a sign the distances were flipped. Using the distance ratio only once, without squaring, gives 62.8 %.
 
 ## PDD and TMR Quiz
 
 ### Q1
-Stem: PDD is 90.0% at 3.0 cm and 84.0% at 5.0 cm. What is the interpolated PDD at 4.0 cm?
-A. 87.0%
-B. 90.0%
-C. 86.4%
-D. 84.0%
-Answer: A
+Stem: Quiz. Do not multiply by the PDD. Tumor dose at depth is 186 cGy and the PDD at that depth is 73.2%. What given dose (dose at dmax) is required? Given dose = tumor dose / (PDD/100).
+A. 136.2 cGy
+B. 2.5 cGy
+C. 259.2 cGy
+D. 254.1 cGy
+Answer: D
 Objective: IV.3
-Why: 4.0 cm is midway, fraction 0.50. Drop = 6.0. Then 0.50 × 6.0 = 3.0, and 90.0 − 3.0 = 87.0%. Check: (90.0 + 84.0) / 2 = 87.0.
+Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 186 / (73.2/100) = 186 / 0.7320 = 254.10 cGy, reported as 254.1 cGy. Equivalently 186 × 100 / 73.2 = 254.10 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 186 cGy were already the given dose) and gives 136.2 cGy. Dividing by the percent number 73.2 instead of by the fraction 0.7320 gives 2.5 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 259.2 cGy.
 
 ### Q2
-Stem: PDD is 70.0% at 9.0 cm and 67.6% at 10.0 cm. What is PDD at 9.25 cm?
-A. 69.4%
-B. 68.8%
-C. 70.0%
-D. 67.6%
+Stem: Quiz. Another given-dose item. Tumor dose at depth is 210 cGy and the PDD at that depth is 64%. What given dose (dose at dmax) is required? Given dose = tumor dose / (PDD/100).
+A. 328.1 cGy
+B. 134.4 cGy
+C. 3.3 cGy
+D. 274.0 cGy
 Answer: A
 Objective: IV.3
-Why: Fraction = 0.25 / 1.0 = 0.25. Drop = 2.4. Then 0.25 × 2.4 = 0.60, and 70.0 − 0.60 = 69.4%. The average 68.8% is the 9.5 cm value.
+Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 210 / (64/100) = 210 / 0.6400 = 328.12 cGy, reported as 328.1 cGy. Equivalently 210 × 100 / 64 = 328.12 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 210 cGy were already the given dose) and gives 134.4 cGy. Dividing by the percent number 64 instead of by the fraction 0.6400 gives 3.3 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 274.0 cGy.
 
 ### Q3
-Stem: Mayneord F from the table SSD to the treatment SSD is 1.030. Table PDD is 66.0%. What PDD do you use?
-A. 64.1%
-B. 66.0%
-C. 68.0%
-D. 67.0%
-Answer: C
-Objective: IV.3
-Why: 66.0 × 1.030 = 67.98%, which is 68.0% to three significant figures. 66.0 / 1.030 = 64.1% inverts F. The factor corrects inverse square only, not scatter.
-
-### Q4
-Stem: Tumor dose 180 cGy, SSD, PDD = 75%. What is the given dose?
-A. 135 cGy
-B. 240 cGy
-C. 180 cGy
-D. 255 cGy
-Answer: B
-Objective: IV.3
-Why: 180 / 0.75 = 240 cGy. Check: 240 × 0.75 = 180. Multiplying gives 135 cGy.
-
-### Q5
-Stem: SAD. Dose at dmax is 240 cGy. TMR = 0.625. What is the dose at depth?
-A. 150 cGy
-B. 240 cGy
-C. 384 cGy
-D. 180 cGy
+Stem: Quiz. Exit estimate. Do not apply inverse square twice. Given dose at dmax is 240 cGy. PDD at the exit depth is 33.5%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+A. 80.4 cGy
+B. 716.4 cGy
+C. 240.0 cGy
+D. 40.2 cGy
 Answer: A
 Objective: IV.3
-Why: 240 × 0.625 = 150 cGy. Check: 0.625 = 5/8, and 240 × 5/8 = 150. 240 / 0.625 = 384 cGy divides instead of multiplying.
+Why: Substitute 240 × (33.5/100) = 240 × 0.3350 = 80.40 cGy, reported as 80.4 cGy. Applying inverse square again would double-count the distance term that is already inside the PDD. This is still an estimate of dose at depth: the true exit surface has less backscatter than the full-phantom PDD table. Dividing by PDD/100 computes a given dose from a tumor dose and gives 716.4 cGy, which is the reverse of this question. Using the given dose itself as the exit dose gives 240.0 cGy. Halving the result as if two opposed beams each needed half, without being asked, gives 40.2 cGy.
+
+### Q4
+Stem: Quiz. Cobalt PDD moved from 80 to 100 cm SSD. PDD at 12 cm depth is 52.4% for SSD 80 cm. dmax is 0.5 cm. Estimate the PDD at the same depth for SSD 100 cm with the Mayneord F factor. Report PDD to the nearest 0.1%.
+A. 81.7 %
+B. 53.7 %
+C. 49.8 %
+D. 55.1 %
+Answer: D
+Objective: IV.3
+Why: Mayneord F is an inverse-square correction only. Scatter is assumed unchanged. F = [(SSD2+dm)/(SSD1+dm)]^2 × [(SSD1+d)/(SSD2+d)]^2 = [(100+0.5)/(80+0.5)]^2 × [(80+12)/(100+12)]^2 = (1.2484)^2 × (0.8214)^2 = 1.5586 × 0.6747 = 1.0517. PDD2 = 52.4 × 1.0517 = 55.11%, which rounds to 55.1 %. Keeping only the dmax ratio and dropping [(SSD1+d)/(SSD2+d)]^2 gives 81.7 %. Multiplying the two distance ratios once each, without squaring, gives 53.7 %. Swapping SSD1 and SSD2 reverses the extended-distance correction and gives 49.8 %.
+
+### Q5
+Stem: Quiz. Interpolate, then remember a TMR is not a PDD. A table lists TMR = 0.86 at 5 and TMR = 0.74 at 15. Linearly interpolate TMR at 9. No curve fit, just the straight fraction of the interval.
+A. 0.860
+B. 0.800
+C. 0.812
+D. 0.788
+Answer: C
+Objective: IV.3
+Why: The point 9 is (9−5)/(15−5) = 0.4000 of the way from 5 to 15. The table changes by -0.12 over that whole step. Change on this step = 0.4000 × (-0.12) = -0.0480. TMR = 0.86 + (-0.0480) = 0.8120, reported as 0.812. Using the nearer table entry without interpolating gives 0.860. Averaging the endpoints as if the point were midway gives 0.800. Measuring the fraction from the wrong end of the interval gives 0.788.
 
 ### Q6
-Stem: Which formula is the SSD given-dose step?
-A. Tumor dose × (PDD/100)
-B. Tumor dose / (PDD/100)
-C. Tumor dose × TMR × PDD
-D. Tumor dose × Mayneord F × TMR
+Stem: Quiz. TMR to PDD with the inverse-square term. TMR at depth 11 cm is 0.75 for the field size at that depth. SSD is 100 cm and dmax is 1.5 cm. Ignore the phantom-scatter ratio (treat Sp(rd)/Sp(r) as 1). PDD = 100 × TMR × [(SSD+dmax)/(SSD+depth)]^2. What is the PDD?
+A. 75.0 %
+B. 62.7 %
+C. 89.7 %
+D. 68.6 %
 Answer: B
 Objective: IV.3
-Why: D(dmax) = Dtumor / (PDD/100). Multiplying by PDD/100 answers the tumor dose when dmax dose is known. TMR does not enter an SSD given-dose line.
+Why: Inverse-square piece = [(100+1.5)/(100+11)]^2 = (101.5/111)^2 = (0.9144)^2 = 0.8362. PDD = 100 × 0.75 × 0.8362 = 62.71%, reported as 62.7 %. Mayneord's F is this same inverse-square ratio applied when SSD changes; it is not a scatter correction. Here scatter was set to 1 on purpose. Dropping the inverse-square piece and reporting 100×TMR gives 75.0 %. Inverting the distance ratio (putting depth in the numerator) gives 89.7 %, which can exceed 100% and is a sign the distances were flipped. Using the distance ratio only once, without squaring, gives 68.6 %.
 
 ### Q7
-Stem: Field size for a TMR lookup is:
-A. The field on the skin, always
-B. The field at the calculation point
-C. The collimator setting plus 5 cm
-D. The blocked percent of the jaw area
+Stem: Quiz. The point is off axis. This is not an MU yet, only the dose. Central-axis dose at the calculation depth is 200 cGy and the off-axis ratio at the point of interest is 1.04. Off-axis dose = central-axis dose × off-axis ratio. What is the off-axis dose?
+A. 200.0 cGy
+B. 208.0 cGy
+C. 192.3 cGy
+D. 8.0 cGy
 Answer: B
 Objective: IV.3
-Why: TMR(d, rd) uses rd at the point because the source-to-point distance is fixed. A PDD table often uses the field on the skin. Percent blocked is not a field side for the TMR row.
+Why: The flattening filter makes dose off axis different from the central axis, especially at shallow depth (beam horns). Substitute 200 × 1.04 = 208.00 cGy, reported as 208.0 cGy. If the MU were calculated with off-axis ratio omitted (treated as 1) while the point is off axis, the delivered off-axis dose is the planned central-axis dose times the true ratio. Leaving the central-axis dose unchanged gives 200.0 cGy and drops the off-axis ratio. Dividing by the off-axis ratio gives 192.3 cGy. Multiplying by (ratio−1) only gives the small difference 8.0 cGy, not the dose.
 
 ### Q8
-Stem: SSD 100 cm PDD at 10 cm is 67%. A longer SSD, Mayneord only, does what to that PDD?
-A. It lowers the PDD, because scatter increases
-B. It raises the PDD slightly, because inverse-square falloff between dmax and depth is gentler
-C. It converts the PDD into a TMR of 0.67
-D. It leaves the PDD unchanged for any SSD
-Answer: B
+Stem: Quiz. High PDD, easy to reverse the division. Tumor dose at depth is 144 cGy and the PDD at that depth is 90%. What given dose (dose at dmax) is required? Given dose = tumor dose / (PDD/100).
+A. 129.6 cGy
+B. 1.6 cGy
+C. 234.0 cGy
+D. 160.0 cGy
+Answer: D
 Objective: IV.3
-Why: Both dmax and the depth point move farther from the source, so the inverse-square ratio between them moves closer to 1 and the PDD rises. The worked 100 cm to 110 cm case took 67.0% to about 67.9%. Scatter is not corrected by F, and the result is still a PDD, not a TMR.
+Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 144 / (90/100) = 144 / 0.9000 = 160.00 cGy, reported as 160.0 cGy. Equivalently 144 × 100 / 90 = 160.00 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 144 cGy were already the given dose) and gives 129.6 cGy. Dividing by the percent number 90 instead of by the fraction 0.9000 gives 1.6 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 234.0 cGy.
 
 ## Equivalent Square
 
 ### Q1
-Stem: An open field is 10 cm × 15 cm. What is the equivalent square side by 2ab/(a+b)?
-A. 12.0 cm
-B. 12.5 cm
-C. 12.25 cm
-D. 25 cm
-Answer: A
+Stem: Which formula is Sterling's equivalent square?
+A. (a+b)/2
+B. 2ab/(a+b)
+C. √(ab)
+D. 4ab/(a+b)
+Answer: B
 Objective: IV.3
-Why: 2 × 10 × 15 / (10 + 15) = 300 / 25 = 12.0 cm. The perimeter form agrees: area 150, perimeter 2(10+15) = 50, and 4 × 150 / 50 = 12.0 cm. The arithmetic mean is 12.5 cm. The square root of the area is about 12.25 cm. Neither replaces Sterling’s side.
+Why: Sterling's rectangle formula is 2ab/(a+b), identical to 4×area/perimeter. It estimates phantom scatter for a rectangle. It is not a block correction. Correct choice: 2ab/(a+b). That is the arithmetic mean of the sides, not the scatter-equivalent square. That is the geometric mean. That expression forgets the 2 in the perimeter and is twice the equivalent square.
 
 ### Q2
-Stem: A rectangle is 5 cm × 20 cm. What equivalent square side should be used for a scatter lookup?
-A. 12.5 cm
-B. 10.0 cm
-C. 8.0 cm
-D. 25 cm
-Answer: C
-Objective: IV.3
-Why: 2 × 5 × 20 / (5 + 20) = 200 / 25 = 8.0 cm. The mean (5+20)/2 = 12.5 cm. The square root of the area is 10.0 cm. The field is far from square, so the approximation is poorer, and the exam still wants 8.0 cm from the formula.
-
-### Q3
-Stem: Why is “25% of a 10 × 10 blocked, so the side is 7.5 cm” rejected?
-A. Because 10 × 0.75 is the Clarkson SAR
-B. Because block shape and position change scatter; an irregular field is a Clarkson problem, not a percent of the side
-C. Because equivalent square is 4A/P only for circles
-D. Because blocked fields use Mayneord F as the side length
-Answer: B
-Objective: IV.3
-Why: Sterling’s formula is for an open rectangle. Percent blocked does not locate the block. Clarkson separates primary and scatter by sector. 10 × 0.75 = 7.5 is a scaled side, and √75 ≈ 8.7 is a scaled area; neither is the sector sum.
-
-### Q4
-Stem: Jaws are 15 cm × 15 cm and a block trims the treated opening to 8 cm × 12 cm. Which field size is used for phantom scatter?
-A. 15 cm, because the jaws set every scatter factor
-B. The equivalent square of the treated opening, 9.6 cm
-C. 12 cm, the longer blocked side
-D. 8 cm, the shorter blocked side
-Answer: B
-Objective: IV.3
-Why: Jaws set collimator scatter Sc. The opening at the patient sets phantom scatter Sp. For the opening, 2 × 8 × 12 / (8 + 12) = 192 / 20 = 9.6 cm. Using 15 cm for Sp, or either raw side alone, reads the wrong row.
-
-### Q5
-Stem: The two forms 2ab/(a+b) and 4A/P disagree. The perimeter was taken as a+b instead of 2(a+b). For a 6 cm × 10 cm field, what wrong side appears, and what is the correct side?
-A. Wrong side 15 cm; correct side 7.5 cm
-B. Wrong side 7.5 cm; correct side 15 cm
-C. Both forms give 8 cm
-D. Wrong side 3.75 cm; correct side 7.5 cm
+Stem: Teaching example, elongated rectangle. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 10 × 20 cm rectangular field?
+A. 13.33 cm
+B. 15.00 cm
+C. 14.14 cm
+D. 26.67 cm
 Answer: A
 Objective: IV.3
-Why: Correct: 2 × 6 × 10 / (6+10) = 120 / 16 = 7.5 cm. Area = 60. If perimeter is wrongly a+b = 16, then 4A/P = 240/16 = 15 cm, twice the correct side. Using 2(a+b) = 32 gives 240/32 = 7.5 cm, and the forms agree.
+Why: Substitute 2 × 10 × 20 / (10+20) = 400 / 30 = 13.3333 cm, reported as 13.33 cm. The perimeter form gives the same result: 4 × 10 × 20 / [2 × (10+20)] = 800 / 60 = 13.3333 cm. The arithmetic mean (10+20)/2 = 15.00 cm is not the scatter-equivalent square. The geometric mean √(10×20) = 14.14 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 26.67 cm.
+
+### Q3
+Stem: Teaching example, a mild rectangle. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 8 × 12 cm rectangular field?
+A. 9.6 cm
+B. 10.0 cm
+C. 9.8 cm
+D. 19.2 cm
+Answer: A
+Objective: IV.3
+Why: Substitute 2 × 8 × 12 / (8+12) = 192 / 20 = 9.6000 cm, reported as 9.6 cm. The perimeter form gives the same result: 4 × 8 × 12 / [2 × (8+12)] = 384 / 40 = 9.6000 cm. The arithmetic mean (8+12)/2 = 10.0 cm is not the scatter-equivalent square. The geometric mean √(8×12) = 9.8 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 19.2 cm.
+
+### Q4
+Stem: A 15×20 cm field has a block over part of the portal. The open Sterling equivalent square is 17.1 cm. Someone multiplies 17.1 by the square root of the unblocked fraction. Why is that not the Clarkson answer?
+A. Because Sterling's formula already includes the block
+B. Because equivalent squares are only for electrons
+C. Blocked-area scaling is not a full scatter correction
+D. Because the factor 2ab/(a+b) is inverse square
+Answer: C
+Objective: IV.3
+Why: 2×15×20/(15+20) = 600/35 = 17.14 cm for the open rectangle. Multiplying by the square root of the remaining area only shrinks that number. Scatter depends on which part of the field is blocked. Correct choice: Blocked-area scaling is not a full scatter correction. Sterling used the open jaws, 15 and 20. The block never entered 2ab/(a+b). Rectangular photon fields use equivalent squares every day for TMR and output. The formula is a scatter-area estimate, not an inverse-square correction.
+
+### Q5
+Stem: Teaching example before the mini-quiz. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 6 × 15 cm rectangular field?
+A. 8.57 cm
+B. 10.50 cm
+C. 9.49 cm
+D. 17.14 cm
+Answer: A
+Objective: IV.3
+Why: Substitute 2 × 6 × 15 / (6+15) = 180 / 21 = 8.5714 cm, reported as 8.57 cm. The perimeter form gives the same result: 4 × 6 × 15 / [2 × (6+15)] = 360 / 42 = 8.5714 cm. The arithmetic mean (6+15)/2 = 10.50 cm is not the scatter-equivalent square. The geometric mean √(6×15) = 9.49 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 17.14 cm.
 
 ## Equivalent Square Calculation Mini-Quiz
 
 ### Q1
-Stem: Find the equivalent square of a 6 cm × 10 cm open field.
-A. 8.0 cm
-B. 7.5 cm
-C. 16 cm
-D. 7.7 cm
+Stem: Mini-quiz rectangle. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 4 × 16 cm rectangular field?
+A. 10.0 cm
+B. 6.4 cm
+C. 8.0 cm
+D. 12.8 cm
 Answer: B
 Objective: IV.3
-Why: 2 × 6 × 10 / (6 + 10) = 120 / 16 = 7.5 cm. Check: A = 60, P = 32, 4A/P = 240/32 = 7.5 cm. The mean is 8.0 cm. √60 ≈ 7.7 cm.
+Why: Substitute 2 × 4 × 16 / (4+16) = 128 / 20 = 6.4000 cm, reported as 6.4 cm. The perimeter form gives the same result: 4 × 4 × 16 / [2 × (4+16)] = 256 / 40 = 6.4000 cm. The arithmetic mean (4+16)/2 = 10.0 cm is not the scatter-equivalent square. The geometric mean √(4×16) = 8.0 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 12.8 cm.
 
 ### Q2
-Stem: Find the equivalent square of a 4 cm × 12 cm field.
+Stem: Mini-quiz long field. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 5 × 20 cm rectangular field?
 A. 8.0 cm
-B. 6.9 cm
-C. 6.0 cm
-D. 16 cm
-Answer: C
-Objective: IV.3
-Why: 2 × 4 × 12 / (4 + 12) = 96 / 16 = 6.0 cm. Check: A = 48, P = 32, 4A/P = 192/32 = 6.0 cm. The mean is 8.0 cm. √48 ≈ 6.9 cm.
-
-### Q3
-Stem: Find the equivalent square of a 7 cm × 21 cm field.
-A. 14.0 cm
-B. 12.1 cm
-C. 10.5 cm
-D. 28 cm
-Answer: C
-Objective: IV.3
-Why: 2 × 7 × 21 / (7 + 21) = 294 / 28 = 10.5 cm. Check: A = 147, P = 56, 4A/P = 588/56 = 10.5 cm. The mean is 14.0 cm. √147 ≈ 12.1 cm.
-
-### Q4
-Stem: Find the equivalent square of a 6 cm × 18 cm field.
-A. 12.0 cm
-B. 10.4 cm
-C. 9.0 cm
-D. 24 cm
-Answer: C
-Objective: IV.3
-Why: 2 × 6 × 18 / (6 + 18) = 216 / 24 = 9.0 cm. Check: A = 108, P = 48, 4A/P = 432/48 = 9.0 cm. The mean is 12.0 cm. √108 ≈ 10.4 cm.
-
-### Q5
-Stem: Find the equivalent square of a 4 cm × 20 cm field.
-A. 12.0 cm
-B. 8.9 cm
-C. 6.67 cm
-D. 24 cm
-Answer: C
-Objective: IV.3
-Why: 2 × 4 × 20 / (4 + 20) = 160 / 24 = 6.67 cm. Check: A = 80, P = 48, 4A/P = 320/48 = 6.67 cm. The mean is 12.0 cm. √80 ≈ 8.9 cm. The long narrow shape stretches the approximation; the formula result is still 6.67 cm.
-
-### Q6
-Stem: A 10 × 10 field has a corner block covering 20% of the area. Which side do you look up for scatter?
-A. 8.0 cm, because 10 × 0.80 = 8
-B. 8.9 cm, because √80 ≈ 8.9
-C. Neither; integrate scatter by Clarkson sectors
-D. 10 cm, because blocks never change phantom scatter
-Answer: C
-Objective: IV.3
-Why: Percent of area does not give 2ab/(a+b). The block’s position changes the sector radii. Clarkson adds primary TAR(d, 0) to the angle-weighted SAR. An open 10 × 10 is a 10 cm square only while it stays open.
-
-### Q7
-Stem: For a PDD table that expects the field on the skin, a 12 cm × 12 cm field at isocenter (SAD 100 cm, SSD 90 cm) has what skin field, and what equivalent square is that skin field if it is still square?
-A. Skin field 10.8 cm × 10.8 cm, equivalent square 10.8 cm
-B. Skin field 12 cm, because SSD does not change field size
-C. Skin field 13.3 cm, equivalent square 13.3 cm
-D. Equivalent square 24 cm
+B. 12.5 cm
+C. 10.0 cm
+D. 16.0 cm
 Answer: A
 Objective: IV.3
-Why: Field size scales with distance from the source. Skin is at 90 cm, isocenter at 100 cm, so the skin side is 12 × (90/100) = 10.8 cm. A square’s equivalent square is itself, 10.8 cm. Using 12 cm reads the isocenter field on a skin-field table. 12 × (100/90) = 13.3 cm magnifies the wrong way.
+Why: Substitute 2 × 5 × 20 / (5+20) = 200 / 25 = 8.0000 cm, reported as 8.0 cm. The perimeter form gives the same result: 4 × 5 × 20 / [2 × (5+20)] = 400 / 50 = 8.0000 cm. The arithmetic mean (5+20)/2 = 12.5 cm is not the scatter-equivalent square. The geometric mean √(5×20) = 10.0 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 16.0 cm.
 
-### Q8
-Stem: Rectangle 15 cm × 20 cm. Compute 2ab/(a+b).
-A. 17.5 cm
-B. 17.1 cm
-C. 17.3 cm
-D. 35 cm
+### Q3
+Stem: Mini-quiz. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 7 × 21 cm rectangular field?
+A. 14.0 cm
+B. 12.1 cm
+C. 21.0 cm
+D. 10.5 cm
+Answer: D
+Objective: IV.3
+Why: Substitute 2 × 7 × 21 / (7+21) = 294 / 28 = 10.5000 cm, reported as 10.5 cm. The perimeter form gives the same result: 4 × 7 × 21 / [2 × (7+21)] = 588 / 56 = 10.5000 cm. The arithmetic mean (7+21)/2 = 14.0 cm is not the scatter-equivalent square. The geometric mean √(7×21) = 12.1 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 21.0 cm.
+
+### Q4
+Stem: Mini-quiz. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 9 × 12 cm rectangular field?
+A. 10.50 cm
+B. 10.29 cm
+C. 10.39 cm
+D. 20.57 cm
 Answer: B
 Objective: IV.3
-Why: 2 × 15 × 20 / (15 + 20) = 600 / 35 = 17.14 cm, reported as 17.1 cm. Check: A = 300, P = 70, 4A/P = 1200/70 = 17.14 cm. The mean is 17.5 cm. √300 ≈ 17.3 cm.
+Why: Substitute 2 × 9 × 12 / (9+12) = 216 / 21 = 10.2857 cm, reported as 10.29 cm. The perimeter form gives the same result: 4 × 9 × 12 / [2 × (9+12)] = 432 / 42 = 10.2857 cm. The arithmetic mean (9+12)/2 = 10.50 cm is not the scatter-equivalent square. The geometric mean √(9×12) = 10.39 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 20.57 cm.
+
+### Q5
+Stem: Mini-quiz. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 6 × 10 cm rectangular field?
+A. 7.5 cm
+B. 8.0 cm
+C. 7.7 cm
+D. 15.0 cm
+Answer: A
+Objective: IV.3
+Why: Substitute 2 × 6 × 10 / (6+10) = 120 / 16 = 7.5000 cm, reported as 7.5 cm. The perimeter form gives the same result: 4 × 6 × 10 / [2 × (6+10)] = 240 / 32 = 7.5000 cm. The arithmetic mean (6+10)/2 = 8.0 cm is not the scatter-equivalent square. The geometric mean √(6×10) = 7.7 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 15.0 cm.
+
+### Q6
+Stem: Mini-quiz. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 8 × 18 cm rectangular field?
+A. 13.00 cm
+B. 12.00 cm
+C. 11.08 cm
+D. 22.15 cm
+Answer: C
+Objective: IV.3
+Why: Substitute 2 × 8 × 18 / (8+18) = 288 / 26 = 11.0769 cm, reported as 11.08 cm. The perimeter form gives the same result: 4 × 8 × 18 / [2 × (8+18)] = 576 / 52 = 11.0769 cm. The arithmetic mean (8+18)/2 = 13.00 cm is not the scatter-equivalent square. The geometric mean √(8×18) = 12.00 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 22.15 cm.
+
+### Q7
+Stem: Mini-quiz. A blocked portal still starts from this open-field Sterling value; do not scale by percent blocked. Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 12 × 18 cm rectangular field?
+A. 15.0 cm
+B. 14.7 cm
+C. 14.4 cm
+D. 28.8 cm
+Answer: C
+Objective: IV.3
+Why: Substitute 2 × 12 × 18 / (12+18) = 432 / 30 = 14.4000 cm, reported as 14.4 cm. The perimeter form gives the same result: 4 × 12 × 18 / [2 × (12+18)] = 864 / 60 = 14.4000 cm. The arithmetic mean (12+18)/2 = 15.0 cm is not the scatter-equivalent square. The geometric mean √(12×18) = 14.7 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 28.8 cm.
+
+### Q8
+Stem: Mini-quiz. Jaw order does not matter because a and b are symmetric in 2ab/(a+b). Use Sterling's formula, equivalent square = 2ab/(a+b), which is the same as 4 × area / perimeter. What is the equivalent square of a 14 × 6 cm rectangular field?
+A. 10.0 cm
+B. 9.2 cm
+C. 8.4 cm
+D. 16.8 cm
+Answer: C
+Objective: IV.3
+Why: Substitute 2 × 14 × 6 / (14+6) = 168 / 20 = 8.4000 cm, reported as 8.4 cm. The perimeter form gives the same result: 4 × 14 × 6 / [2 × (14+6)] = 336 / 40 = 8.4000 cm. The arithmetic mean (14+6)/2 = 10.0 cm is not the scatter-equivalent square. The geometric mean √(14×6) = 9.2 cm is a different average and is not Sterling's formula. Using 4ab/(a+b) forgets that the perimeter is 2(a+b), so it is twice the equivalent square and gives 16.8 cm.
 
 ## Everything you need to know about MUs
 
 ### Q1
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. SSD setup. SSD + dmax = 100 cm, so the inverse-square factor is 1. Sc = Sp = WF = TF = 1. PDD at the tumor is 70.0%. Tumor dose is 210 cGy. How many MU?
-A. 147 MU
-B. 210 MU
-C. 300 MU
-D. 70 MU
-Answer: C
+Stem: An isocentric calculation is calibrated to 1.000 cGy/MU at dmax for 10×10 at SAD 100 cm. Which depth factor belongs in the MU denominator?
+A. PDD
+B. Mayneord F
+C. HVL
+D. TMR
+Answer: D
 Objective: IV.3
-Why: MU = 210 / (1.0 × 0.700) = 300. Check: 300 × 0.700 = 210 cGy. The given dose at dmax is 210 / 0.70 = 300 cGy, and at 1.0 cGy/MU that is also 300 MU. There is no TMR in this SSD line.
+Why: At SAD the calibration point and the isocenter are the same distance from the source when the isocenter is at 100 cm. TMR is dose at depth divided by dose at dmax for that same point in space, so it is the depth factor that matches this calibration. Correct choice: TMR. PDD includes inverse square from the surface and belongs to SSD setups. Using it at SAD double-counts distance. F adjusts a PDD from one SSD to another. It is not the SAD depth factor. HVL is a shielding transmission step, not a tissue depth factor.
 
 ### Q2
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. SAD setup. The point is at isocenter, so (SAD/SPD)^2 = 1. Sc = Sp = WF = TF = 1. TMR = 0.800. Dose = 200 cGy. How many MU?
-A. 160 MU
-B. 200 MU
-C. 250 MU
-D. 300 MU
-Answer: C
+Stem: Calibration is 1.000 cGy/MU at dmax for 10×10 at SSD 100 cm, and the patient is treated at that same SSD. Which depth factor belongs in the MU formula?
+A. PDD
+B. TMR alone, with no inverse square
+C. Wedge factor in the numerator
+D. Equivalent square in cGy
+Answer: A
 Objective: IV.3
-Why: MU = 200 / 0.800 = 250. Check: 250 × 0.800 = 200 cGy. A 70% PDD from a different SSD patient does not belong in this denominator. 200 × 0.800 = 160 MU puts TMR in the numerator.
+Why: For an SSD setup matched to an SSD calibration, MU = dose / (1.000 × PDD/100 × Sc × Sp × wedge × tray). The PDD is a percent and must be turned into a fraction. Correct choice: PDD. TMR is the SAD quantity. At SSD the falloff from dmax is the PDD, which already contains inverse square. The wedge factor goes in the denominator because it reduces cGy per MU. The equivalent square is the lookup key for PDD, Sc, and Sp. It is not a dose by itself.
 
 ### Q3
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. Isocenter point, scatter and tray factors = 1, inverse square = 1. TMR = 0.750. WF = 0.600 and the wedge is in the beam. Dose = 180 cGy. How many MU?
-A. 240 MU
-B. 300 MU
-C. 400 MU
-D. 180 MU
-Answer: C
+Stem: Teaching. Put the off-axis ratio on a central-axis dose before anyone builds an MU. Central-axis dose at the calculation depth is 180 cGy and the off-axis ratio at the point of interest is 1.03. Off-axis dose = central-axis dose × off-axis ratio. What is the off-axis dose?
+A. 180.0 cGy
+B. 185.4 cGy
+C. 174.8 cGy
+D. 5.4 cGy
+Answer: B
 Objective: IV.3
-Why: MU = 180 / (0.750 × 0.600) = 180 / 0.450 = 400. Check: 400 × 0.750 × 0.600 = 180 cGy. Omitting WF gives 180 / 0.750 = 240 MU, and with the wedge still in the beam the dose is 240 × 0.450 = 108 cGy, which is 0.60 of 180 cGy.
+Why: The flattening filter makes dose off axis different from the central axis, especially at shallow depth (beam horns). Substitute 180 × 1.03 = 185.40 cGy, reported as 185.4 cGy. If the MU were calculated with off-axis ratio omitted (treated as 1) while the point is off axis, the delivered off-axis dose is the planned central-axis dose times the true ratio. Leaving the central-axis dose unchanged gives 180.0 cGy and drops the off-axis ratio. Dividing by the off-axis ratio gives 174.8 cGy. Multiplying by (ratio−1) only gives the small difference 5.4 cGy, not the dose.
 
 ### Q4
-Stem: On an SSD MU, Sc follows which aperture, and Sp follows which aperture?
-A. Both follow the blocked opening
-B. Sc follows the jaws; Sp and the PDD field follow the treated opening
-C. Sc follows the block; Sp follows the jaws
-D. Neither factor changes with field size
-Answer: B
+Stem: Teaching. Show what the patient gets when the wedge factor is left out of the MU and the wedge is in the beam. The monitor units were calculated for an open beam to deliver 200 cGy at the calculation point. A wedge with wedge factor 0.7 was actually left in the beam. What dose is delivered at that point?
+A. 140.0 cGy
+B. 200.0 cGy
+C. 285.7 cGy
+D. 60.0 cGy
+Answer: A
 Objective: IV.3
-Why: Collimator scatter is set by the jaw opening that the head sees. Phantom scatter and the depth-dose field are set by the aperture that actually irradiates the patient, including blocks. Swapping them reads the wrong row of each table.
+Why: The open-beam MU already assume wedge factor 1. With the wedge in the beam every MU is attenuated by the wedge factor, so delivered dose = intended dose × wedge factor. Substitute 200 × 0.7 = 140.00 cGy, reported as 140.0 cGy. The plan underdoses; it does not overdose. Leaving the dose at 200.0 cGy is the open-beam number and ignores the wedge that was in the beam. Dividing by the wedge factor (200/0.7 = 285.7 cGy) is what you do to the MU to restore dose, not what the patient received from the uncorrected MU. Multiplying by (1−wedge factor) treats the factor as if only the attenuated fraction remained in a subtraction sense and gives 60.0 cGy.
 
 ### Q5
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. SSD = 100 cm and dmax = 1.5 cm, so dmax is 101.5 cm from the source. Sc = Sp = WF = TF = 1. PDD = 67.0%. Tumor dose = 200 cGy. The inverse-square factor (100/101.5)^2 is 0.971. How many MU?
-A. 299 MU
-B. 308 MU
-C. 200 MU
-D. 134 MU
-Answer: B
+Stem: Sc and Sp are both 1.000, the field is the calibration 10×10, and there is no wedge or tray. What else must still be right for an SAD MU?
+A. The TMR for the depth and the field size at that depth
+B. Nothing. MU equals the dose in cGy
+C. A PDD near 100%
+D. The hinge angle
+Answer: A
 Objective: IV.3
-Why: ISF = (SAD / (SSD + dmax))^2 = (100/101.5)^2 = 0.971. MU = 200 / (0.670 × 0.971) = 200 / 0.650 = 308 MU. Check: 308 × 0.650 = 200 cGy. Leaving ISF out gives 200 / 0.670 = 299 MU, about 3% low. Inverting ISF uses (101.5/100)^2 and makes the MU too small.
+Why: Even with every scatter and modifier factor equal to 1, MU = dose / TMR for this calibration, because 1.000 cGy/MU is the dmax output, not the dose rate at depth. Correct choice: The TMR for the depth and the field size at that depth. MU equals dose only if TMR is also 1, which means the point is at dmax. PDD is the wrong family for this SAD calibration. Hinge angle chooses the beam geometry. It is not a multiplier in this open-beam MU.
 
 ## MU Calc Quiz
 
 ### Q1
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. SSD setup with SSD + dmax = 100 cm. Sc = 1.05, Sp = 1.00, PDD = 80%, WF = TF = 1. Dose = 168 cGy. How many MU?
-A. 168 MU
-B. 200 MU
-C. 210 MU
-D. 140 MU
-Answer: B
+Stem: Quiz. Open isocentric field, no tray, no wedge, on axis. Calibration is 1.000 cGy/MU at dmax for a 10×10 cm field at SAD 100 cm. Isocentric setup, dose 200 cGy at isocenter. TMR at that depth and field is 0.78. Sc = 1.02, Sp = 1.01, wedge factor = 1, tray factor = 1, off-axis ratio = 1. MU = dose / (1.000 × TMR × Sc × Sp × wedge factor × tray factor × off-axis ratio). Do not put a PDD in this SAD formula. What MU is required, to the nearest 0.1 MU?
+A. 256.4 MU
+B. 160.7 MU
+C. 2.6 MU
+D. 248.9 MU
+Answer: D
 Objective: IV.3
-Why: MU = 168 / (1.05 × 0.80) = 168 / 0.84 = 200. Check: 200 × 1.05 × 0.80 = 168 cGy. Dropping Sc gives 168 / 0.80 = 210 MU. Multiplying by the factors gives 168 × 0.84 = 141 MU.
+Why: The calibration point is dmax for 10×10 at SAD 100 cm, so the 1.000 cGy/MU is already at isocenter distance and TMR carries the depth. Denominator = 1.000 × 0.78 × 1.02 × 1.01 × 1 × 1 × 1. Stepwise: 1 × 0.78 = 0.78; × 1.02 = 0.7956; × 1.01 = 0.8036; × 1 = 0.8036; × 1 = 0.8036; × 1 = 0.8036. MU = 200 / 0.8036 = 248.89, reported as 248.9 MU. Putting the PDD in this denominator would treat an SAD setup like an SSD percent-depth setup and double-count inverse square, because TMR is already the SAD depth ratio. Leaving Sc and Sp out gives 256.4 MU. Multiplying the dose by the factor product instead of dividing gives 160.7 MU. Treating the TMR as if it were a percent depth dose gives 2.6 MU.
 
 ### Q2
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. SAD setup at isocenter. Sc = 1.00, Sp = 0.980, TMR = 0.700, WF = TF = 1. Dose = 137.2 cGy. How many MU?
-A. 196 MU
-B. 200 MU
-C. 250 MU
-D. 137 MU
-Answer: B
-Objective: IV.3
-Why: Denominator = 0.980 × 0.700 = 0.686. MU = 137.2 / 0.686 = 200. Check: 200 × 0.686 = 137.2 cGy. Using a PDD in place of this TMR would be a different geometry. 137.2 / 0.700 = 196 MU drops Sp.
-
-### Q3
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. Isocenter, all scatter and tray factors = 1, TMR = 0.850, WF = 0.650, wedge in the beam. Dose = 180 cGy. How many MU?
-A. 212 MU
-B. 277 MU
-C. 326 MU
-D. 180 MU
-Answer: C
-Objective: IV.3
-Why: MU = 180 / (0.850 × 0.650) = 180 / 0.5525 = 326 MU. Check: 326 × 0.5525 = 180 cGy. Omitting the wedge gives 180 / 0.850 = 212 MU, and the wedge would then deliver 212 × 0.5525 = 117 cGy, which is 0.65 × 180.
-
-### Q4
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. The calculation point is 105 cm from the source on an SAD setup. Sc = Sp = WF = TF = 1. TMR = 0.750. Dose = 200 cGy. (100/105)^2 = 0.907. How many MU?
-A. 267 MU
-B. 294 MU
-C. 242 MU
-D. 200 MU
-Answer: B
-Objective: IV.3
-Why: MU = 200 / (0.750 × 0.907) = 200 / 0.680 = 294 MU. Check: 294 × 0.680 = 200 cGy. Ignoring inverse square gives 200 / 0.750 = 267 MU. Inverting the distance ratio, (105/100)^2 = 1.103, gives 200 / (0.750 × 1.103) = 242 MU, which is too small because the point is farther than the calibration distance.
-
-### Q5
-Stem: Prescription 180 cGy. Calibration is 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. Isocenter, TMR = 0.750, WF = 0.600 was omitted, wedge remains in the beam, other factors 1. What dose is delivered?
-A. 180 cGy
-B. 108 cGy
-C. 240 cGy
-D. 300 cGy
-Answer: B
-Objective: IV.3
-Why: The omitted-factor MU is 180 / 0.750 = 240. Delivered dose = 240 × 0.750 × 0.600 = 108 cGy. And 108 / 180 = 0.600, the wedge factor. The correct MU is 400, and 400 × 0.450 = 180 cGy.
-
-### Q6
-Stem: Which line is an SSD monitor-unit formula?
-A. Dose / (output × Sc × Sp × TMR × WF × inverse square)
-B. Dose / (output × Sc × Sp × PDD/100 × WF × TF × ISF), with ISF = (SAD / (SSD + dmax))^2
-C. Dose × PDD × TMR
-D. Dose / (output × Mayneord F × TMR)
-Answer: B
-Objective: IV.3
-Why: SSD uses PDD and the inverse-square move from the SAD calibration point to the actual dmax location. SAD uses TMR and (SAD/SPD)^2. The two depth quantities are not multiplied together. Mayneord F is not an extra factor on top of a TMR.
-
-### Q7
-Stem: The linac is calibrated to 1.0 cGy/MU at dmax, 10×10 cm², SAD 100 cm. SSD + dmax = 100 cm. Jaws equivalent square give Sc = 1.040. The blocked opening gives Sp = 0.970 and PDD = 75%. WF = TF = 1. Dose = 200 cGy. How many MU?
-A. 264 MU
-B. 267 MU
-C. 200 MU
-D. 151 MU
+Stem: Quiz. Wedge and tray both in the beam. Leave either factor out and the dose is wrong. Calibration is 1.000 cGy/MU at dmax for a 10×10 cm field at SAD 100 cm. Isocentric setup, dose 180 cGy at isocenter. TMR at that depth and field is 0.8. Sc = 1.015, Sp = 1.008, wedge factor = 0.67, tray factor = 0.97, off-axis ratio = 1. MU = dose / (1.000 × TMR × Sc × Sp × wedge factor × tray factor × off-axis ratio). Do not put a PDD in this SAD formula. What MU is required, to the nearest 0.1 MU?
+A. 338.4 MU
+B. 226.7 MU
+C. 346.2 MU
+D. 95.7 MU
 Answer: A
 Objective: IV.3
-Why: Denominator = 1.040 × 0.970 × 0.750 = 0.7566. MU = 200 / 0.757 = 264 MU. Check: 264 × 0.757 = 200 cGy. Using the jaw field for Sp, or the block for Sc, changes this product. 200 × 0.757 = 151 puts the factors in the numerator.
+Why: The calibration point is dmax for 10×10 at SAD 100 cm, so the 1.000 cGy/MU is already at isocenter distance and TMR carries the depth. Denominator = 1.000 × 0.8 × 1.015 × 1.008 × 0.67 × 0.97 × 1. Stepwise: 1 × 0.8 = 0.8; × 1.015 = 0.8120; × 1.008 = 0.8185; × 0.67 = 0.5484; × 0.97 = 0.5319; × 1 = 0.5319. MU = 180 / 0.5319 = 338.38, reported as 338.4 MU. Putting the PDD in this denominator would treat an SAD setup like an SSD percent-depth setup and double-count inverse square, because TMR is already the SAD depth ratio. Leaving the wedge factor out of the denominator gives 226.7 MU. Leaving Sc and Sp out gives 346.2 MU. Multiplying the dose by the factor product instead of dividing gives 95.7 MU.
 
-### Q8
-Stem: A plan check finds PDD and TMR both written in the same denominator for one photon beam. What should the second checker do?
-A. Average the PDD fraction and the TMR
-B. Keep the depth factor that matches the setup: PDD for SSD, TMR for SAD, and delete the other
-C. Multiply both and also apply Mayneord F
-D. Replace both with the wedge factor
+### Q3
+Stem: Quiz. Off-axis point. The off-axis ratio is in the denominator with the other factors. Calibration is 1.000 cGy/MU at dmax for a 10×10 cm field at SAD 100 cm. Isocentric setup, dose 160 cGy at isocenter. TMR at that depth and field is 0.745. Sc = 1.03, Sp = 1.012, wedge factor = 1, tray factor = 1, off-axis ratio = 1.035. MU = dose / (1.000 × TMR × Sc × Sp × wedge factor × tray factor × off-axis ratio). Do not put a PDD in this SAD formula. What MU is required, to the nearest 0.1 MU?
+A. 199.1 MU
+B. 207.5 MU
+C. 128.6 MU
+D. 214.8 MU
+Answer: A
+Objective: IV.3
+Why: The calibration point is dmax for 10×10 at SAD 100 cm, so the 1.000 cGy/MU is already at isocenter distance and TMR carries the depth. Denominator = 1.000 × 0.745 × 1.03 × 1.012 × 1 × 1 × 1.035. Stepwise: 1 × 0.745 = 0.745; × 1.03 = 0.7673; × 1.012 = 0.7766; × 1 = 0.7766; × 1 = 0.7766; × 1.035 = 0.8037. MU = 160 / 0.8037 = 199.07, reported as 199.1 MU. Putting the PDD in this denominator would treat an SAD setup like an SSD percent-depth setup and double-count inverse square, because TMR is already the SAD depth ratio. Leaving Sc and Sp out gives 207.5 MU. Multiplying the dose by the factor product instead of dividing gives 128.6 MU. Dividing by TMR alone and dropping every other factor gives 214.8 MU.
+
+### Q4
+Stem: Quiz. SSD setup. Use PDD, not TMR. Calibration is 1.000 cGy/MU at dmax for a 10×10 cm field at SSD 100 cm, and this field is also treated at SSD 100 cm, so no extra inverse-square factor is applied. Tumor dose is 200 cGy. PDD at the point is 67%. Sc = 1.02, Sp = 1.01, wedge factor = 1, tray factor = 1. MU = dose / (1.000 × PDD/100 × Sc × Sp × wedge factor × tray factor). What MU is required, to the nearest 0.1 MU?
+A. 2.9 MU
+B. 289.8 MU
+C. 134.0 MU
+D. 298.5 MU
 Answer: B
 Objective: IV.3
-Why: One beam is either fixed-SSD or fixed source-to-point distance. Using both depth factors double-counts attenuation and mixes two geometries. Mayneord F does not repair that mix. The wedge factor, if a wedge is present, is an additional denominator term, not a substitute for PDD or TMR.
+Why: SSD math uses PDD, not TMR. The calibration is already at dmax for this SSD, and the PDD includes depth and inverse square from dmax down to the point. PDD as a fraction is 67/100 = 0.6700. Denominator = 0.6700 × 1.02 × 1.01 × 1 × 1 = 0.6902. MU = 200 / 0.6902 = 289.76, reported as 289.8 MU. Dividing by the PDD percent (67) instead of the fraction 0.6700 gives 2.9 MU. Multiplying the dose by PDD/100, which estimates tumor dose from a given dose rather than MU gives 134.0 MU. Dividing by PDD/100 and dropping Sc, Sp, wedge, and tray gives 298.5 MU.
+
+### Q5
+Stem: Quiz. SSD setup with a wedge. Calibration SSD matches the treatment SSD. Calibration is 1.000 cGy/MU at dmax for a 10×10 cm field at SSD 100 cm, and this field is also treated at SSD 100 cm, so no extra inverse-square factor is applied. Tumor dose is 180 cGy. PDD at the point is 74.5%. Sc = 1, Sp = 1, wedge factor = 0.72, tray factor = 1. MU = dose / (1.000 × PDD/100 × Sc × Sp × wedge factor × tray factor). What MU is required, to the nearest 0.1 MU?
+A. 3.4 MU
+B. 241.6 MU
+C. 335.6 MU
+D. 134.1 MU
+Answer: C
+Objective: IV.3
+Why: SSD math uses PDD, not TMR. The calibration is already at dmax for this SSD, and the PDD includes depth and inverse square from dmax down to the point. PDD as a fraction is 74.5/100 = 0.7450. Denominator = 0.7450 × 1 × 1 × 0.72 × 1 = 0.5364. MU = 180 / 0.5364 = 335.57, reported as 335.6 MU. Dividing by the PDD percent (74.5) instead of the fraction 0.7450 gives 3.4 MU. Dropping the wedge factor gives 241.6 MU. Multiplying the dose by PDD/100, which estimates tumor dose from a given dose rather than MU gives 134.1 MU.
+
+### Q6
+Stem: Quiz. MU were computed open. The wedge was in the beam. The monitor units were calculated for an open beam to deliver 186 cGy at the calculation point. A wedge with wedge factor 0.68 was actually left in the beam. What dose is delivered at that point?
+A. 186.0 cGy
+B. 126.5 cGy
+C. 273.5 cGy
+D. 59.5 cGy
+Answer: B
+Objective: IV.3
+Why: The open-beam MU already assume wedge factor 1. With the wedge in the beam every MU is attenuated by the wedge factor, so delivered dose = intended dose × wedge factor. Substitute 186 × 0.68 = 126.48 cGy, reported as 126.5 cGy. The plan underdoses; it does not overdose. Leaving the dose at 186.0 cGy is the open-beam number and ignores the wedge that was in the beam. Dividing by the wedge factor (186/0.68 = 273.5 cGy) is what you do to the MU to restore dose, not what the patient received from the uncorrected MU. Multiplying by (1−wedge factor) treats the factor as if only the attenuated fraction remained in a subtraction sense and gives 59.5 cGy.
+
+### Q7
+Stem: Quiz. Wedge, off-axis ratio below 1, and both scatter factors. Calibration is 1.000 cGy/MU at dmax for a 10×10 cm field at SAD 100 cm. Isocentric setup, dose 240 cGy at isocenter. TMR at that depth and field is 0.69. Sc = 1.04, Sp = 1.02, wedge factor = 0.61, tray factor = 1, off-axis ratio = 0.98. MU = dose / (1.000 × TMR × Sc × Sp × wedge factor × tray factor × off-axis ratio). Do not put a PDD in this SAD formula. What MU is required, to the nearest 0.1 MU?
+A. 334.6 MU
+B. 548.5 MU
+C. 581.8 MU
+D. 105.0 MU
+Answer: B
+Objective: IV.3
+Why: The calibration point is dmax for 10×10 at SAD 100 cm, so the 1.000 cGy/MU is already at isocenter distance and TMR carries the depth. Denominator = 1.000 × 0.69 × 1.04 × 1.02 × 0.61 × 1 × 0.98. Stepwise: 1 × 0.69 = 0.69; × 1.04 = 0.7176; × 1.02 = 0.7320; × 0.61 = 0.4465; × 1 = 0.4465; × 0.98 = 0.4376. MU = 240 / 0.4376 = 548.50, reported as 548.5 MU. Putting the PDD in this denominator would treat an SAD setup like an SSD percent-depth setup and double-count inverse square, because TMR is already the SAD depth ratio. Leaving the wedge factor out of the denominator gives 334.6 MU. Leaving Sc and Sp out gives 581.8 MU. Multiplying the dose by the factor product instead of dividing gives 105.0 MU.
+
+### Q8
+Stem: Quiz. Re-treatment hand check before a new MU set is approved. Sum EQD2, α/β = 3 Gy. Prior course: 25 × 2 Gy. New course: 5 × 4 Gy. Use α/β = 3 Gy for both. What is the sum of the two EQD2 values?
+A. 70.0 Gy
+B. 130.0 Gy
+C. 78.0 Gy
+D. 28.0 Gy
+Answer: C
+Objective: IV.3
+Why: Course 1 physical = 25×2 = 50 Gy. BED1 = 50×(1+2/3) = 50×1.6667 = 83.33 Gy. EQD2_1 = 83.33/(1+2/3) = 83.33/1.6667 = 50.00 Gy. Course 2 physical = 5×4 = 20 Gy. BED2 = 20×(1+4/3) = 20×2.3333 = 46.67 Gy. EQD2_2 = 46.67/1.6667 = 28.00 Gy. Sum = 50.00 + 28.00 = 78.00 Gy, reported as 78.0 Gy. Adding physical doses only (50+20) gives 70.0 Gy. Adding BEDs and calling the sum an EQD2 gives 130.0 Gy. Reporting only the second course gives 28.0 Gy.

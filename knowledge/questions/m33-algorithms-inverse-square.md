@@ -1,465 +1,465 @@
-# Module 33 — External beam dose calculation and algorithms
+# Module 33. External beam dose calculation and algorithms
 
-Original items. Source distances are from the source to the point. Depth is named separately and is added to SSD before inverse square. Clarkson weights use the fraction of a full circle.
+Original CMD practice items. Not retired MDCB questions and not a commercial quiz.
 
 ## Dose Calculation and Algorithms
 
 ### Q1
-Stem: An irregular mantle is planned by splitting the tissue-air ratio into a zero-area term and a scatter-air term, then adding them. Which method is that?
-A. A pencil-beam kernel with no lateral transport
-B. Clarkson sector integration
-C. A grid-based Boltzmann solver
-D. Mayneord F applied to a TMR
+Stem: A 3 cm lung slit sits in a 4×4 cm 6 MV field. Which dose algorithm is the weakest choice for the dose on the far side of that interface?
+A. Monte Carlo
+B. Pencil beam
+C. Linear Boltzmann solver (Acuros XB)
+D. Convolution/superposition
 Answer: B
 Objective: IV.1
-Why: Clarkson writes TAR(d, r) = TAR(d, 0) + SAR(d, r). The zero-area TAR is primary. The SAR is scatter, summed over sectors as SAR times the fraction of the circle. A pencil beam does not make that split. A Boltzmann solver transports particles. Mayneord F adjusts a PDD between two SSDs and is not a scatter integration.
+Why: Lateral electron equilibrium fails in a small field that crosses lung. A pencil beam spreads dose with a kernel that does not re-transport that lateral scatter, so the interface dose is the least trustworthy of these four. Convolution/superposition is better because the kernel is scaled by local density. Monte Carlo and a linear Boltzmann solver (Acuros XB) follow the transport through the interface. Correct choice: Pencil beam. Monte Carlo transports photons and electrons through the interface and is one of the stronger choices, not the weakest. A linear Boltzmann transport solver handles interface transport directly and is not the weak choice here. Convolution/superposition density-scales a kernel and is imperfect, but it is still stronger than a pencil beam at this interface.
 
 ### Q2
-Stem: Which algorithm is the weak choice in lung because heterogeneity is applied mostly along each ray and lateral scatter is poor?
-A. Monte Carlo with adequate histories
-B. Collapsed-cone superposition
-C. Pencil beam
-D. A grid-based Boltzmann solver with the correct material
+Stem: What does a Clarkson integration separate when the field shape is irregular?
+A. Mayneord F and wedge factor
+B. CT number and mass density
+C. Primary dose and scatter
+D. Hinge angle and wedge angle
 Answer: C
 Objective: IV.1
-Why: A pencil beam can stretch the path length and still fail to move energy sideways into or out of lung. Superposition and collapsed cone scale a scatter kernel. Monte Carlo and a Boltzmann solver transport radiation through the interface. Path-length correction alone does not make a pencil beam adequate in lung.
+Why: Clarkson averages scatter-air ratios over sectors and adds that scatter to the zero-area primary term. The method exists because an irregular block does not have the same scatter as a rectangle of the same area. Correct choice: Primary dose and scatter. Mayneord F is only an inverse-square PDD correction, and a wedge factor is a beam modifier, not what Clarkson splits. The CT-density table is a commissioning input, not the Clarkson split. Hinge and wedge angles describe how two wedged beams tilt isodose lines.
 
 ### Q3
-Stem: At a metal–tissue interface, which method handles buildup and backscatter best when the material is assigned correctly and the histories are adequate?
-A. Monte Carlo
-B. A correction-based hand calculation that only scales equivalent depth
-C. Percent of the field area that is blocked
-D. An open-beam PDD with no heterogeneity term
+Stem: A Mayneord F factor is applied to move a PDD from SSD 100 cm to SSD 110 cm. Which effect is inside F?
+A. Inverse square only
+B. A new phantom-scatter factor
+C. A heterogeneity correction
+D. Collimator backscatter
 Answer: A
 Objective: IV.1
-Why: Monte Carlo follows interactions, so interface buildup and backscatter from metal are in the histories. Equivalent depth is a path-length correction. Percent blocked is not a scatter calculation. An open-water PDD never sees the metal.
+Why: F = [(SSD2+dmax)/(SSD1+dmax)]^2 × [(SSD1+depth)/(SSD2+depth)]^2. Both pieces are distances from the source, so F is inverse square only. Correct choice: Inverse square only. F does not recompute scatter. Scatter is assumed unchanged, which is why a large SSD change makes F approximate. Nothing in F refers to density or CT number. Collimator scatter is an Sc problem, not Mayneord F.
 
 ### Q4
-Stem: At the depth of interest, TAR(d, 0) = 0.420. The field is two 180° sectors. One has SAR = 0.160 and the other has SAR = 0.240. What is the field TAR?
-A. 0.200
-B. 0.400
-C. 0.620
-D. 0.820
+Stem: A blocked portal is converted to an equivalent square by multiplying the open-field equivalent square by the square root of the unblocked area fraction. What is wrong with that step?
+A. The step forgot inverse square
+B. Clarkson ignores scatter, so the scaling is required
+C. Percent blocked area is not a full scatter correction
+D. Mayneord F already applied the block
 Answer: C
 Objective: IV.1
-Why: Each 180° sector is half a circle, so the weight is 0.5. SAR_field = 0.5(0.160) + 0.5(0.240) = 0.080 + 0.120 = 0.200. TAR = 0.420 + 0.200 = 0.620. 0.200 is scatter alone. 0.400 drops the primary to 0.200 and adds scatter. 0.820 adds the unweighted SARs (0.160 + 0.240) to 0.420.
+Why: Scatter at a point depends on where the open phantom sits around that point. Two blocks with the same area can shadow very different amounts of scatter. Scaling by the square root of the open fraction only resizes area. Correct choice: Percent blocked area is not a full scatter correction. Inverse square is not what this area scaling claims to estimate. Clarkson is the method that keeps scatter; the area scaling is the shortcut that loses it. Mayneord F changes SSD, not block shape.
 
 ### Q5
-Stem: Dose along a cord, sampled every 2 mm, reads 46.0, 49.5, 53.8, 50.1, and 46.4 Gy. A 6 mm grid keeps only the first and fourth samples. By how many gray does that grid under-report the peak?
-A. 3.7 Gy
-B. 4.3 Gy
-C. 7.8 Gy
-D. 0 Gy, because a DVH maximum is independent of grid size
-Answer: A
-Objective: IV.6
-Why: The fine-sample peak is 53.8 Gy. The coarse grid reports max(46.0, 50.1) = 50.1 Gy. The miss is 53.8 − 50.1 = 3.7 Gy. 4.3 Gy is 53.8 − 49.5, a neighboring fine sample that the coarse grid also skipped. 7.8 Gy subtracts 46.0 from 53.8. A DVH built on the coarse grid inherits 50.1 Gy and cannot prove the peak was resolved.
+Stem: Which description matches the algorithm class?
+A. Both methods are stored TAR lookups
+B. Superposition density-scales a kernel; Monte Carlo follows histories
+C. Pencil beam is a form of Monte Carlo
+D. Monte Carlo cannot report dose in lung
+Answer: B
+Objective: IV.1
+Why: Superposition takes incident energy fluence and spreads it with a kernel that is stretched or scaled by local density. Monte Carlo samples particle histories and scores dose. Neither one is a TAR table. Correct choice: Superposition density-scales a kernel; Monte Carlo follows histories. TAR lookups are correction-based tables, not superposition or Monte Carlo. A pencil beam is a kernel convolution, not a history-by-history transport. Monte Carlo is used in lung precisely because it can transport the disequilibrium.
 
 ## External beam Dose Calculation and Algorithms Quiz
 
 ### Q1
-Stem: Four 90° sectors have SAR values 0.100, 0.180, 0.220, and 0.140. What is the field SAR?
-A. 0.640
-B. 0.160
-C. 0.320
-D. 0.090
+Stem: An irregular 6 MV portal is split into four Clarkson sectors. Clarkson sectors have SARs 0.12, 0.18, 0.1, 0.16. Average them; do not sum them. Free-space dose at the point is 100 cGy. Scatter dose = (average SAR) × free-space dose. Primary dose in the phantom at the point is 80 cGy (already the zero-area contribution). Total dose = primary + scatter. What is the total dose?
+A. 98.0 cGy
+B. 94.0 cGy
+C. 14.0 cGy
+D. 136.0 cGy
 Answer: B
 Objective: IV.1
-Why: Each 90° sector is 90/360 = 0.25 of the circle. The SAR sum is 0.100 + 0.180 + 0.220 + 0.140 = 0.640. Field SAR = 0.25 × 0.640 = 0.160. 0.640 forgets the angular weight. 0.320 uses a weight of 0.5 as if each sector were a half-field. 0.090 is 0.640/7.1, not a sector fraction.
+Why: Average SAR = (0.12 + 0.18 + 0.1 + 0.16) / 4 = 0.56 / 4 = 0.1400. Scatter = 0.1400 × 100 = 14.00 cGy. Total = 80 + 14.00 = 94.00 cGy, reported as 94.0 cGy. Clarkson separates primary and scatter. A percent-blocked-area shortcut would not produce these sector SARs. Using the largest sector SAR instead of the average gives 98.0 cGy. Reporting only the scatter and dropping the primary gives 14.0 cGy. Summing the SARs instead of averaging them gives 136.0 cGy.
 
 ### Q2
-Stem: TAR(d, 0) = 0.500. Three 120° sectors have SAR = 0.210, 0.270, and 0.150. What is the field TAR?
-A. 0.210
-B. 0.630
-C. 0.710
-D. 1.130
-Answer: C
+Stem: A mantle-style blocked field is averaged over five Clarkson sectors. Clarkson sectors have SARs 0.2, 0.08, 0.14, 0.22, 0.11. Average them; do not sum them. Free-space dose at the point is 90 cGy. Scatter dose = (average SAR) × free-space dose. Primary dose in the phantom at the point is 65 cGy (already the zero-area contribution). Total dose = primary + scatter. What is the total dose?
+A. 84.8 cGy
+B. 13.5 cGy
+C. 132.5 cGy
+D. 78.5 cGy
+Answer: D
 Objective: IV.1
-Why: Each 120° sector is 120/360 = 1/3 of the circle. SAR_field = (0.210 + 0.270 + 0.150) / 3 = 0.630 / 3 = 0.210. TAR = 0.500 + 0.210 = 0.710. 0.210 is scatter alone. 0.630 adds the unweighted SAR sum to nothing and drops primary. 1.130 adds the unweighted sum 0.630 to the primary 0.500.
+Why: Average SAR = (0.2 + 0.08 + 0.14 + 0.22 + 0.11) / 5 = 0.75 / 5 = 0.1500. Scatter = 0.1500 × 90 = 13.50 cGy. Total = 65 + 13.50 = 78.50 cGy, reported as 78.5 cGy. Clarkson separates primary and scatter. A percent-blocked-area shortcut would not produce these sector SARs. Using the largest sector SAR instead of the average gives 84.8 cGy. Reporting only the scatter and dropping the primary gives 13.5 cGy. Summing the SARs instead of averaging them gives 132.5 cGy.
 
 ### Q3
-Stem: A serial-organ maximum on a 2 mm sample is 51.6 Gy. A 5 mm grid’s nearest samples are 48.4 Gy and 49.9 Gy. What maximum does the coarse grid report, and what peak did it miss?
-A. It reports 51.6 Gy and misses nothing
-B. It reports 49.9 Gy and misses 1.7 Gy
-C. It reports 48.4 Gy and misses 3.2 Gy
-D. It reports 49.2 Gy, the average of 48.4 and 49.9
-Answer: B
-Objective: IV.6
-Why: The grid stores the samples it hits. The higher stored sample is 49.9 Gy, not the average and not the unseen 51.6 Gy. Missed peak = 51.6 − 49.9 = 1.7 Gy. 51.6 − 48.4 = 3.2 Gy uses the lower neighbor. Averaging the two coarse samples gives (48.4 + 49.9) / 2 = 49.15 Gy, which is not how a maximum is taken.
+Stem: Convert a 6 MV TMR to PDD at the calibration SSD. TMR at depth 10 cm is 0.78 for the field size at that depth. SSD is 100 cm and dmax is 1.5 cm. Ignore the phantom-scatter ratio (treat Sp(rd)/Sp(r) as 1). PDD = 100 × TMR × [(SSD+dmax)/(SSD+depth)]^2. What is the PDD?
+A. 66.4 %
+B. 78.0 %
+C. 91.6 %
+D. 72.0 %
+Answer: A
+Objective: IV.1
+Why: Inverse-square piece = [(100+1.5)/(100+10)]^2 = (101.5/110)^2 = (0.9227)^2 = 0.8514. PDD = 100 × 0.78 × 0.8514 = 66.41%, reported as 66.4 %. Mayneord's F is this same inverse-square ratio applied when SSD changes; it is not a scatter correction. Here scatter was set to 1 on purpose. Dropping the inverse-square piece and reporting 100×TMR gives 78.0 %. Inverting the distance ratio (putting depth in the numerator) gives 91.6 %, which can exceed 100% and is a sign the distances were flipped. Using the distance ratio only once, without squaring, gives 72.0 %.
 
 ### Q4
-Stem: A blocked field covers 70% of a 10 × 10 cm² open field. Which statement is the scatter calculation the board is testing?
-A. The equivalent square is 7 cm because 0.70 × 10 = 7
-B. Scatter must be integrated by sector (Clarkson); percent blocked is not that integral
-C. The field is a 7 × 7 cm² square for both Sc and Sp
-D. PDD falls by 30% because 30% of the area is blocked
+Stem: Convert a 10 MV TMR to PDD. dmax is 2.5 cm for this beam. TMR at depth 15 cm is 0.64 for the field size at that depth. SSD is 100 cm and dmax is 2.5 cm. Ignore the phantom-scatter ratio (treat Sp(rd)/Sp(r) as 1). PDD = 100 × TMR × [(SSD+dmax)/(SSD+depth)]^2. What is the PDD?
+A. 64.0 %
+B. 50.8 %
+C. 80.6 %
+D. 57.0 %
 Answer: B
 Objective: IV.1
-Why: Clarkson weights each sector’s SAR by its angle over 2π. Area percent ignores where the block sits and how much scatter each radius contributes. 0.70 × 10 = 7 changes a side length, not a scatter integral. Jaws and the blocked opening also set different factors (Sc versus Sp). A 30% area block does not subtract 30 percentage points from PDD.
+Why: Inverse-square piece = [(100+2.5)/(100+15)]^2 = (102.5/115)^2 = (0.8913)^2 = 0.7944. PDD = 100 × 0.64 × 0.7944 = 50.84%, reported as 50.8 %. Mayneord's F is this same inverse-square ratio applied when SSD changes; it is not a scatter correction. Here scatter was set to 1 on purpose. Dropping the inverse-square piece and reporting 100×TMR gives 64.0 %. Inverting the distance ratio (putting depth in the numerator) gives 80.6 %, which can exceed 100% and is a sign the distances were flipped. Using the distance ratio only once, without squaring, gives 57.0 %.
 
 ### Q5
-Stem: Zero-area TAR at the depth is 0.360. A full circle has SAR = 0.250. A block removes a 90° sector whose SAR at that radius would have been 0.250, and the remaining radii are unchanged. What is the blocked-field TAR?
-A. 0.360
-B. 0.548
-C. 0.610
-D. 0.673
-Answer: B
+Stem: A 6 MV PDD was measured at the standard SSD and the setup will be extended. PDD at 12 cm depth is 63.5% for SSD 100 cm. dmax is 1.5 cm. Estimate the PDD at the same depth for SSD 115 cm with the Mayneord F factor. Report PDD to the nearest 0.1%.
+A. 83.7 %
+B. 64.3 %
+C. 65.1 %
+D. 62.0 %
+Answer: C
 Objective: IV.1
-Why: The removed sector is 90/360 = 0.25 of the circle, so the scatter removed is 0.25 × 0.250 = 0.0625. Remaining SAR = 0.250 − 0.0625 = 0.1875. TAR = 0.360 + 0.1875 = 0.5475, which is 0.548 Gy-free TAR units to three decimals. 0.610 is primary plus the full SAR (0.360 + 0.250). 0.673 adds the removed piece instead of subtracting it (0.610 + 0.0625). 0.360 drops all scatter.
+Why: Mayneord F is an inverse-square correction only. Scatter is assumed unchanged. F = [(SSD2+dm)/(SSD1+dm)]^2 × [(SSD1+d)/(SSD2+d)]^2 = [(115+1.5)/(100+1.5)]^2 × [(100+12)/(115+12)]^2 = (1.1478)^2 × (0.8819)^2 = 1.3174 × 0.7777 = 1.0246. PDD2 = 63.5 × 1.0246 = 65.06%, which rounds to 65.1 %. Keeping only the dmax ratio and dropping [(SSD1+d)/(SSD2+d)]^2 gives 83.7 %. Multiplying the two distance ratios once each, without squaring, gives 64.3 %. Swapping SSD1 and SSD2 reverses the extended-distance correction and gives 62.0 %.
 
 ### Q6
-Stem: A planner describes the model as “energy released in the patient is spread with a kernel that stretches when density falls.” Which family is that?
-A. Pencil beam
-B. Convolution/superposition
-C. Timer error on a cobalt unit
-D. Sterling’s equivalent square
+Stem: During an extended-distance setup the chamber stays at dmax and only the source distance changes. The value is 180.0 cGy/min at 100 cm from the source. What is it at 160 cm if only inverse square changes?
+A. 112.5 cGy/min
+B. 70.3 cGy/min
+C. 460.8 cGy/min
+D. 500.0 cGy/min
 Answer: B
 Objective: IV.1
-Why: Convolution and superposition, including collapsed cone, transport scatter with a kernel and stretch that kernel in low density. A pencil beam does not move that scatter sideways. Timer error and equivalent square are not dose engines.
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 180.0 × (100/160)^2 = 180.0 × (0.6250)^2 = 180.0 × 0.3906 = 70.3 cGy/min. Dropping the square and multiplying by the bare ratio 100/160 gives 112.5 cGy/min. Inverting the distances, (160/100)^2, gives 460.8 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (60 cm) as if it were the source distance gives 500.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q7
-Stem: Along a 2 mm cord sample the doses are 47.2, 50.0, 55.0, 51.4, and 48.0 Gy. A grid that keeps only 47.2 and 51.4 reports which maximum?
-A. 55.0 Gy
-B. 51.4 Gy
-C. 50.4 Gy
-D. 47.2 Gy
-Answer: B
-Objective: IV.6
-Why: The reported maximum is the larger stored sample, 51.4 Gy. The true peak 55.0 Gy sits between those samples. The miss is 55.0 − 51.4 = 3.6 Gy. 50.4 Gy is the average of 47.2 and 55.0 and is not a grid sample. 47.2 Gy is the lower stored sample.
+Stem: Which change improves interface dose in a small lung field the most?
+A. Switch from pencil beam to Monte Carlo
+B. Increase the dose grid from 2 mm to 5 mm
+C. Apply Mayneord F
+D. Replace the equivalent square with the arithmetic mean of the jaws
+Answer: A
+Objective: IV.1
+Why: The error is the transport model. Moving from a pencil beam to Monte Carlo changes how electrons leaving the lung interface are tracked. A coarser grid, a Mayneord factor, or an arithmetic-mean field size does not do that. Correct choice: Switch from pencil beam to Monte Carlo. A coarser grid adds sampling error. It does not fix a pencil-beam kernel. Mayneord F only rescales PDD for SSD. It does not move lateral scatter in lung. The average of the jaw settings is not even Sterling's equivalent square, and it does not restore electron equilibrium.
 
 ### Q8
-Stem: AAA, a pencil beam, and Monte Carlo are all available. The beam crosses lung next to mediastinum, and the question is interface dose. Rank them from strongest to weakest for that interface.
-A. Pencil beam, AAA, Monte Carlo
-B. Monte Carlo, AAA, pencil beam
-C. AAA, pencil beam, Monte Carlo
-D. All three are equivalent once the CT number is in the file
-Answer: B
+Stem: A convolution algorithm and a Monte Carlo algorithm disagree by 8% beyond a large air cavity in a 3×3 cm field. Which interpretation fits the methods?
+A. Trust Monte Carlo more at that cavity
+B. Trust the convolution result because it has no statistical noise
+C. Average them and call the average commissioned
+D. The disagreement is only inverse square
+Answer: A
 Objective: IV.1
-Why: Monte Carlo transports particles through the lung–tissue boundary. AAA has lateral kernels and is stronger than a pure pencil beam, but it is still an analytical model at a hard interface. A pencil beam’s lateral scatter is the weak step. A correct CT number does not make those three engines the same.
+Why: A small field over a large cavity loses side-scatter. Monte Carlo (or a Boltzmann solver) carries that loss. Convolution/superposition is better than a pencil beam but can still miss the cavity. Absence of noise does not make the convolution dose the reference. Correct choice: Trust Monte Carlo more at that cavity. Low noise is not the same as a correct transport model. Convolution can be precisely wrong at a cavity. An average hides a known transport failure. It is not a commissioning method. Inverse square is in both calculations. The 8% gap in a small field over air is lateral disequilibrium.
 
 ## Inverse Square Tutorial
 
 ### Q1
-Stem: A beam delivers 300 cGy/min at 100 cm from the source. Inverse square only, what is the dose rate at 200 cm?
-A. 150 cGy/min
-B. 75 cGy/min
-C. 1200 cGy/min
-D. 600 cGy/min
-Answer: B
-Objective: I.10
-Why: I2 = 300 × (100/200)^2 = 300 × (0.5)^2 = 300 × 0.25 = 75 cGy/min. 150 cGy/min uses the ratio once and does not square it. 1200 cGy/min inverts the distances and squares (300 × 4). 600 cGy/min inverts the ratio without squaring.
+Stem: A 6 MV output check is repeated farther from the source. The value is 200.0 cGy/min at 100 cm from the source. What is it at 150 cm if only inverse square changes?
+A. 133.3 cGy/min
+B. 450.0 cGy/min
+C. 800.0 cGy/min
+D. 88.9 cGy/min
+Answer: D
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 200.0 × (100/150)^2 = 200.0 × (0.6667)^2 = 200.0 × 0.4444 = 88.9 cGy/min. Dropping the square and multiplying by the bare ratio 100/150 gives 133.3 cGy/min. Inverting the distances, (150/100)^2, gives 450.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (50 cm) as if it were the source distance gives 800.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q2
-Stem: The dose rate is 120 cGy/min at 80 cm from the source. Inverse square only, what is the dose rate at 40 cm?
-A. 60 cGy/min
-B. 240 cGy/min
-C. 480 cGy/min
-D. 30 cGy/min
+Stem: A cobalt dose-rate constancy rig is moved from 80 cm to 100 cm. The value is 160.0 cGy/min at 80 cm from the source. What is it at 100 cm if only inverse square changes?
+A. 128.0 cGy/min
+B. 250.0 cGy/min
+C. 102.4 cGy/min
+D. 2560.0 cGy/min
 Answer: C
-Objective: I.10
-Why: I2 = 120 × (80/40)^2 = 120 × 2^2 = 120 × 4 = 480 cGy/min. 240 cGy/min forgets the square. 60 cGy/min halves the rate because the distance was halved, which is the wrong direction. 30 cGy/min applies (40/80)^2.
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 160.0 × (80/100)^2 = 160.0 × (0.8000)^2 = 160.0 × 0.6400 = 102.4 cGy/min. Dropping the square and multiplying by the bare ratio 80/100 gives 128.0 cGy/min. Inverting the distances, (100/80)^2, gives 250.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (20 cm) as if it were the source distance gives 2560.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q3
-Stem: 250 cGy is delivered at 100 cm from the source. The same beam-on time is used at 125 cm. Inverse square only, what dose is delivered?
-A. 160 cGy
-B. 200 cGy
-C. 312.5 cGy
-D. 390.6 cGy
-Answer: A
-Objective: I.10
-Why: Dose tracks dose rate at fixed time. D2 = 250 × (100/125)^2 = 250 × 0.8^2 = 250 × 0.64 = 160 cGy. 200 cGy is 250 × 0.8, unsquared. 312.5 cGy is 250 × (125/100)^2, the nearer point. 390.6 cGy is 250 / 0.64.
+Stem: A survey meter is moved from 1 m to 2 m from a patient under treatment. Readings are in mR/h, and the number is used here as a relative intensity. The value is 48.0 mR/h at 100 cm from the source. What is it at 200 cm if only inverse square changes?
+A. 24.0 mR/h
+B. 12.0 mR/h
+C. 192.0 mR/h
+D. 48.0 mR/h
+Answer: B
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 48.0 × (100/200)^2 = 48.0 × (0.5000)^2 = 48.0 × 0.2500 = 12.0 mR/h. Dropping the square and multiplying by the bare ratio 100/200 gives 24.0 mR/h. Inverting the distances, (200/100)^2, gives 192.0 mR/h and would raise the reading when the detector moves out. Using the gap between the two distances (100 cm) as if it were the source distance gives 48.0 mR/h, which is not a point on the beam axis from the source.
 
 ### Q4
-Stem: Dose rate at 100 cm from the source is 500 cGy/min. Inverse square only, what is the rate at 50 cm?
-A. 250 cGy/min
-B. 1000 cGy/min
-C. 125 cGy/min
-D. 2000 cGy/min
-Answer: D
-Objective: I.10
-Why: I2 = 500 × (100/50)^2 = 500 × 4 = 2000 cGy/min. 1000 cGy/min uses the unsquared ratio of 2. 250 cGy/min and 125 cGy/min move the point farther, not closer.
+Stem: An orthovoltage applicator is compared at two source distances. The value is 300.0 cGy/min at 60 cm from the source. What is it at 100 cm if only inverse square changes?
+A. 108.0 cGy/min
+B. 180.0 cGy/min
+C. 833.3 cGy/min
+D. 675.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 300.0 × (60/100)^2 = 300.0 × (0.6000)^2 = 300.0 × 0.3600 = 108.0 cGy/min. Dropping the square and multiplying by the bare ratio 60/100 gives 180.0 cGy/min. Inverting the distances, (100/60)^2, gives 833.3 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (40 cm) as if it were the source distance gives 675.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q5
-Stem: A point 200 cm from the source reads 64 cGy/min. Inverse square only, what is the rate at 100 cm?
-A. 32 cGy/min
-B. 128 cGy/min
-C. 16 cGy/min
-D. 256 cGy/min
-Answer: D
-Objective: I.10
-Why: I2 = 64 × (200/100)^2 = 64 × 4 = 256 cGy/min. Check: 256 × (100/200)^2 = 256 × 0.25 = 64. 128 cGy/min drops the square. 32 cGy/min and 16 cGy/min apply the farther-point factor.
+Stem: The same beam is measured closer to the source. The value is 120.0 cGy/min at 100 cm from the source. What is it at 80 cm if only inverse square changes?
+A. 187.5 cGy/min
+B. 150.0 cGy/min
+C. 76.8 cGy/min
+D. 3000.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 120.0 × (100/80)^2 = 120.0 × (1.2500)^2 = 120.0 × 1.5625 = 187.5 cGy/min. Dropping the square and multiplying by the bare ratio 100/80 gives 150.0 cGy/min. Inverting the distances, (80/100)^2, gives 76.8 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (20 cm) as if it were the source distance gives 3000.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q6
-Stem: Dose rate is 180 cGy/min at 90 cm from the source. Inverse square only, what is the rate at 60 cm?
-A. 120 cGy/min
-B. 270 cGy/min
-C. 405 cGy/min
-D. 80 cGy/min
-Answer: C
-Objective: I.10
-Why: I2 = 180 × (90/60)^2 = 180 × (1.5)^2 = 180 × 2.25 = 405 cGy/min. 270 cGy/min is 180 × 1.5, unsquared. 120 cGy/min is 180 × (60/90). 80 cGy/min is 180 × (60/90)^2, which is the rate if the known point and the unknown point are swapped.
+Stem: A brachytherapy-safe survey practice problem uses inverse square only, with the reading treated as a relative rate. The value is 80.0 cGy/min at 50 cm from the source. What is it at 100 cm if only inverse square changes?
+A. 20.0 cGy/min
+B. 40.0 cGy/min
+C. 320.0 cGy/min
+D. 80.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 80.0 × (50/100)^2 = 80.0 × (0.5000)^2 = 80.0 × 0.2500 = 20.0 cGy/min. Dropping the square and multiplying by the bare ratio 50/100 gives 40.0 cGy/min. Inverting the distances, (100/50)^2, gives 320.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (50 cm) as if it were the source distance gives 80.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q7
-Stem: The rate is 1000 cGy/min at 100 cm from the source. Inverse square only, what is the rate at 250 cm?
-A. 400 cGy/min
-B. 160 cGy/min
-C. 250 cGy/min
-D. 6250 cGy/min
-Answer: B
-Objective: I.10
-Why: I2 = 1000 × (100/250)^2 = 1000 × (0.4)^2 = 1000 × 0.16 = 160 cGy/min. 400 cGy/min is 1000 × 0.4, unsquared. 250 cGy/min divides by 4. 6250 cGy/min inverts the distance ratio (1000 / 0.16).
+Stem: An extended SSD electron-cone clearance check is photon inverse-square practice at two distances. The value is 250.0 cGy/min at 100 cm from the source. What is it at 125 cm if only inverse square changes?
+A. 200.0 cGy/min
+B. 390.6 cGy/min
+C. 4000.0 cGy/min
+D. 160.0 cGy/min
+Answer: D
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 250.0 × (100/125)^2 = 250.0 × (0.8000)^2 = 250.0 × 0.6400 = 160.0 cGy/min. Dropping the square and multiplying by the bare ratio 100/125 gives 200.0 cGy/min. Inverting the distances, (125/100)^2, gives 390.6 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (25 cm) as if it were the source distance gives 4000.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q8
-Stem: The same beam-on time delivers 80 cGy at 40 cm from the source. At what distance is the dose 20 cGy? Inverse square only.
-A. 20 cm
-B. 80 cm
-C. 160 cm
-D. 10 cm
-Answer: B
-Objective: I.10
-Why: 80/20 = 4 = (d2/40)^2, so d2/40 = 2 and d2 = 80 cm. Check: 80 × (40/80)^2 = 80 × 0.25 = 20. 20 cm would raise the dose by a factor of 4, to 320 cGy. 160 cm is another factor of 4 farther (5 cGy). 10 cm is a quarter of 40 cm, not double.
+Stem: A total-body setup compares dose rate at 90 cm and 120 cm. The value is 180.0 cGy/min at 90 cm from the source. What is it at 120 cm if only inverse square changes?
+A. 101.3 cGy/min
+B. 135.0 cGy/min
+C. 320.0 cGy/min
+D. 1620.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 180.0 × (90/120)^2 = 180.0 × (0.7500)^2 = 180.0 × 0.5625 = 101.3 cGy/min. Dropping the square and multiplying by the bare ratio 90/120 gives 135.0 cGy/min. Inverting the distances, (120/90)^2, gives 320.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (30 cm) as if it were the source distance gives 1620.0 cGy/min, which is not a point on the beam axis from the source.
 
 ## Inverse Square Calculations
 
 ### Q1
-Stem: Dose rate at 100 cm from the source is 243 cGy/min. A calculation point has SSD = 80 cm and depth = 10 cm. Inverse square only, what is the dose rate at that point?
-A. 300 cGy/min
-B. 380 cGy/min
-C. 243 cGy/min
-D. 197 cGy/min
-Answer: A
+Stem: A single open field is timed at 80 cm SSD and then moved to 100 cm. A timer setting of 1.50 min delivers the prescription at 80 cm from the source. What timer setting delivers that same dose at 100 cm, changing only inverse square and keeping dose rate × time constant in the usual way?
+A. 1.88 min
+B. 0.96 min
+C. 2.93 min
+D. 2.34 min
+Answer: D
 Objective: IV.1
-Why: Source distance is SSD + depth = 80 + 10 = 90 cm, not 80 cm and not the depth alone. I2 = 243 × (100/90)^2 = 243 × (10/9)^2 = 243 × 100/81. 243/81 = 3, so I2 = 300 cGy/min. Check: 300 × (90/100)^2 = 300 × 0.81 = 243. Using SSD alone gives 243 × (100/80)^2 = 380 cGy/min, a skin point. 197 cGy/min is 243 × (90/100)^2, the ratio inverted.
+Why: Dose rate falls with the square of distance, so time must rise with (d2/d1)^2 to keep the same dose. Substitute 1.50 × (100/80)^2 = 1.50 × (1.2500)^2 = 1.50 × 1.5625 = 2.34 min. Using the unsquared ratio (100/80) gives 1.88 min. Inverting the square, as if a larger distance needed less time, gives 0.96 min. Cubing the distance ratio instead of squaring it gives 2.93 min.
 
 ### Q2
-Stem: Dose rate is 200 cGy/min at 80 cm from the source. What is the rate at the skin for SSD = 100 cm if depth is zero? Inverse square only.
-A. 250 cGy/min
-B. 128 cGy/min
-C. 160 cGy/min
-D. 312.5 cGy/min
-Answer: B
-Objective: IV.1
-Why: The skin point is 100 cm from the source. I2 = 200 × (80/100)^2 = 200 × 0.64 = 128 cGy/min. 160 cGy/min is 200 × 0.8, unsquared. 250 cGy/min is 200 × (100/80). 312.5 cGy/min is 200 × (100/80)^2, which moves the point closer.
-
-### Q3
-Stem: 150 cGy is given at 100 cm from the source. The same time is used at a point 80 cm from the source. Inverse square only, what dose is given?
-A. 120 cGy
-B. 187.5 cGy
-C. 96 cGy
-D. 234.4 cGy
-Answer: D
-Objective: IV.1
-Why: D2 = 150 × (100/80)^2 = 150 × 1.5625 = 234.375 cGy, which is 234.4 cGy to one decimal. 187.5 cGy is 150 × 1.25, a linear guess. 120 cGy is 150 × 0.8. 96 cGy is 150 × 0.64, the farther-point factor.
-
-### Q4
-Stem: Dose rate at isocenter, 100 cm from the source, is 288 cGy/min. The point has SSD = 100 cm and depth = 20 cm. Inverse square only, what is the rate at the point?
-A. 288 cGy/min
-B. 240 cGy/min
-C. 200 cGy/min
-D. 415 cGy/min
+Stem: An extended-distance treatment keeps the same dose and changes only distance. A timer setting of 2.00 min delivers the prescription at 100 cm from the source. What timer setting delivers that same dose at 130 cm, changing only inverse square and keeping dose rate × time constant in the usual way?
+A. 2.60 min
+B. 1.18 min
+C. 3.38 min
+D. 4.39 min
 Answer: C
 Objective: IV.1
-Why: Source distance is 100 + 20 = 120 cm. I2 = 288 × (100/120)^2 = 288 × (5/6)^2 = 288 × 25/36. 288/36 = 8, and 8 × 25 = 200 cGy/min. 240 cGy/min is 288 × (100/120), unsquared. 415 cGy/min is about 288 × (120/100)^2. Leaving the depth off the distance keeps 288 cGy/min, which is the skin, not the point at 20 cm.
+Why: Dose rate falls with the square of distance, so time must rise with (d2/d1)^2 to keep the same dose. Substitute 2.00 × (130/100)^2 = 2.00 × (1.3000)^2 = 2.00 × 1.6900 = 3.38 min. Using the unsquared ratio (130/100) gives 2.60 min. Inverting the square, as if a larger distance needed less time, gives 1.18 min. Cubing the distance ratio instead of squaring it gives 4.39 min.
 
-### Q5
-Stem: A reading is 360 cGy/min at an unknown source distance and 90 cGy/min at 200 cm from the source. Inverse square only, what is the unknown distance?
-A. 50 cm
-B. 100 cm
-C. 400 cm
-D. 800 cm
+### Q3
+Stem: The setup is moved closer to the source and the timer must shorten. A timer setting of 3.20 min delivers the prescription at 100 cm from the source. What timer setting delivers that same dose at 80 cm, changing only inverse square and keeping dose rate × time constant in the usual way?
+A. 2.56 min
+B. 2.05 min
+C. 5.00 min
+D. 1.64 min
 Answer: B
 Objective: IV.1
-Why: 360/90 = 4 = (200/d)^2, so 200/d = 2 and d = 100 cm. Check: 360 × (100/200)^2 = 90. 50 cm would be another factor of 4 higher (1440 cGy/min). 400 cm applies the square root on the wrong side. 800 cm forgets the square root entirely (200 × 4).
+Why: Dose rate falls with the square of distance, so time must rise with (d2/d1)^2 to keep the same dose. Substitute 3.20 × (80/100)^2 = 3.20 × (0.8000)^2 = 3.20 × 0.6400 = 2.05 min. Using the unsquared ratio (80/100) gives 2.56 min. Inverting the square, as if a larger distance needed less time, gives 5.00 min. Cubing the distance ratio instead of squaring it gives 1.64 min.
 
-### Q6
-Stem: Dose rate at 100 cm from the source is 144 cGy/min. SSD = 100 cm and depth = 20 cm. Inverse square only, what is the rate at depth?
-A. 100 cGy/min
-B. 120 cGy/min
-C. 144 cGy/min
-D. 207 cGy/min
+### Q4
+Stem: A near-source measurement is repeated at twice the distance. The value is 500.0 cGy/min at 40 cm from the source. What is it at 80 cm if only inverse square changes?
+A. 125.0 cGy/min
+B. 250.0 cGy/min
+C. 2000.0 cGy/min
+D. 500.0 cGy/min
 Answer: A
 Objective: IV.1
-Why: d2 = 100 + 20 = 120 cm. I2 = 144 × (100/120)^2 = 144 × 25/36 = 100 cGy/min. 120 cGy/min is 144 × (100/120). 207 cGy/min is 144 × (120/100)^2. 144 cGy/min is the rate at the skin, where the source distance is still 100 cm.
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 500.0 × (40/80)^2 = 500.0 × (0.5000)^2 = 500.0 × 0.2500 = 125.0 cGy/min. Dropping the square and multiplying by the bare ratio 40/80 gives 250.0 cGy/min. Inverting the distances, (80/40)^2, gives 2000.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (40 cm) as if it were the source distance gives 500.0 cGy/min, which is not a point on the beam axis from the source.
 
-### Q7
-Stem: 100 cGy is delivered at 100 cm from the source in a fixed time. The same time is used at 80 cm. Inverse square only, what dose is delivered?
-A. 80 cGy
-B. 125 cGy
-C. 64 cGy
-D. 156.25 cGy
+### Q5
+Stem: A low dose-rate constancy reading is taken at a greater distance. The value is 2.40 cGy/min at 100 cm from the source. What is it at 150 cm if only inverse square changes?
+A. 1.60 cGy/min
+B. 5.40 cGy/min
+C. 9.60 cGy/min
+D. 1.07 cGy/min
 Answer: D
 Objective: IV.1
-Why: D2 = 100 × (100/80)^2 = 100 × 1.5625 = 156.25 cGy. Check: 156.25 × (80/100)^2 = 156.25 × 0.64 = 100. 125 cGy is 100 × 1.25. 80 cGy and 64 cGy move the point out, not in.
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 2.40 × (100/150)^2 = 2.40 × (0.6667)^2 = 2.40 × 0.4444 = 1.07 cGy/min. Dropping the square and multiplying by the bare ratio 100/150 gives 1.60 cGy/min. Inverting the distances, (150/100)^2, gives 5.40 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (50 cm) as if it were the source distance gives 9.60 cGy/min, which is not a point on the beam axis from the source.
 
-### Q8
-Stem: A stem says the only change is source-to-point distance, from 100 cm to 80 cm, and asks for the dose-rate factor. Which factor is that?
-A. Mayneord F, because every distance change is a PDD correction
-B. (100/80)^2 = 1.5625
-C. 80/100 = 0.80
-D. A TMR looked up at 80 cm depth
+### Q6
+Stem: Doubling the distance from 70 cm is the whole change. The value is 210.0 cGy/min at 70 cm from the source. What is it at 140 cm if only inverse square changes?
+A. 105.0 cGy/min
+B. 52.5 cGy/min
+C. 840.0 cGy/min
+D. 210.0 cGy/min
 Answer: B
 Objective: IV.1
-Why: Inverse square alone multiplies the rate by (d1/d2)^2 = (100/80)^2 = 1.5625. Mayneord F changes a PDD from one SSD to another and does not replace this dose-rate ratio. 0.80 is the unsquared distance ratio, and it points the wrong way. TMR is a tissue ratio at fixed source distance, not a distance correction, and 80 cm is not a depth in this stem.
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 210.0 × (70/140)^2 = 210.0 × (0.5000)^2 = 210.0 × 0.2500 = 52.5 cGy/min. Dropping the square and multiplying by the bare ratio 70/140 gives 105.0 cGy/min. Inverting the distances, (140/70)^2, gives 840.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (70 cm) as if it were the source distance gives 210.0 cGy/min, which is not a point on the beam axis from the source.
+
+### Q7
+Stem: A weekend output spot-check uses two convenient distances. The value is 360.0 cGy/min at 100 cm from the source. What is it at 180 cm if only inverse square changes?
+A. 200.0 cGy/min
+B. 1166.4 cGy/min
+C. 562.5 cGy/min
+D. 111.1 cGy/min
+Answer: D
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 360.0 × (100/180)^2 = 360.0 × (0.5556)^2 = 360.0 × 0.3086 = 111.1 cGy/min. Dropping the square and multiplying by the bare ratio 100/180 gives 200.0 cGy/min. Inverting the distances, (180/100)^2, gives 1166.4 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (80 cm) as if it were the source distance gives 562.5 cGy/min, which is not a point on the beam axis from the source.
+
+### Q8
+Stem: The chamber is brought from 110 cm back to 100 cm. The value is 145.0 cGy/min at 110 cm from the source. What is it at 100 cm if only inverse square changes?
+A. 159.5 cGy/min
+B. 119.8 cGy/min
+C. 17545.0 cGy/min
+D. 175.5 cGy/min
+Answer: D
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 145.0 × (110/100)^2 = 145.0 × (1.1000)^2 = 145.0 × 1.2100 = 175.5 cGy/min. Dropping the square and multiplying by the bare ratio 110/100 gives 159.5 cGy/min. Inverting the distances, (100/110)^2, gives 119.8 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (10 cm) as if it were the source distance gives 17545.0 cGy/min, which is not a point on the beam axis from the source.
 
 ## Inverse Square Quiz (Beginner)
 
 ### Q1
-Stem: Dose rate is 600 cGy/min at 100 cm from the source. Inverse square only, what is the rate at 150 cm?
-A. 400 cGy/min
-B. 266.7 cGy/min
-C. 900 cGy/min
-D. 1350 cGy/min
-Answer: B
-Objective: I.10
-Why: I2 = 600 × (100/150)^2 = 600 × (2/3)^2 = 600 × 4/9 = 2400/9 = 266.7 cGy/min. 400 cGy/min is 600 × 2/3, unsquared. 900 cGy/min is 600 × 1.5. 1350 cGy/min is 600 × (150/100)^2.
+Stem: Beginner drill, open beam, dmax readings only. The value is 100.0 cGy/min at 100 cm from the source. What is it at 200 cm if only inverse square changes?
+A. 50.0 cGy/min
+B. 400.0 cGy/min
+C. 25.0 cGy/min
+D. 100.0 cGy/min
+Answer: C
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 100.0 × (100/200)^2 = 100.0 × (0.5000)^2 = 100.0 × 0.2500 = 25.0 cGy/min. Dropping the square and multiplying by the bare ratio 100/200 gives 50.0 cGy/min. Inverting the distances, (200/100)^2, gives 400.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (100 cm) as if it were the source distance gives 100.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q2
-Stem: The rate is 48 cGy/min at 160 cm from the source. Inverse square only, what is the rate at 80 cm?
-A. 24 cGy/min
-B. 96 cGy/min
-C. 12 cGy/min
-D. 192 cGy/min
-Answer: D
-Objective: I.10
-Why: I2 = 48 × (160/80)^2 = 48 × 4 = 192 cGy/min. 96 cGy/min drops the square. 24 cGy/min and 12 cGy/min treat the closer point as if it were farther.
+Stem: Beginner drill, cobalt-style distances 80 and 160 cm. The value is 125.0 cGy/min at 80 cm from the source. What is it at 160 cm if only inverse square changes?
+A. 31.3 cGy/min
+B. 62.5 cGy/min
+C. 500.0 cGy/min
+D. 125.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 125.0 × (80/160)^2 = 125.0 × (0.5000)^2 = 125.0 × 0.2500 = 31.3 cGy/min. Dropping the square and multiplying by the bare ratio 80/160 gives 62.5 cGy/min. Inverting the distances, (160/80)^2, gives 500.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (80 cm) as if it were the source distance gives 125.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q3
-Stem: Dose rate is 225 cGy/min at 75 cm from the source. Inverse square only, what is the rate at 150 cm?
-A. 112.5 cGy/min
-B. 450 cGy/min
-C. 56.25 cGy/min
-D. 900 cGy/min
-Answer: C
-Objective: I.10
-Why: I2 = 225 × (75/150)^2 = 225 × (0.5)^2 = 225 × 0.25 = 56.25 cGy/min. 112.5 cGy/min is 225 × 0.5. 450 cGy/min doubles the rate. 900 cGy/min is 225 × 4, the closer-point factor.
+Stem: Beginner drill, moving the point closer. The value is 64.0 cGy/min at 100 cm from the source. What is it at 80 cm if only inverse square changes?
+A. 100.0 cGy/min
+B. 80.0 cGy/min
+C. 41.0 cGy/min
+D. 1600.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 64.0 × (100/80)^2 = 64.0 × (1.2500)^2 = 64.0 × 1.5625 = 100.0 cGy/min. Dropping the square and multiplying by the bare ratio 100/80 gives 80.0 cGy/min. Inverting the distances, (80/100)^2, gives 41.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (20 cm) as if it were the source distance gives 1600.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q4
-Stem: 100 cGy is delivered at 50 cm from the source. The same time is used at 100 cm. Inverse square only, what dose is delivered?
-A. 50 cGy
-B. 25 cGy
-C. 200 cGy
-D. 400 cGy
+Stem: Beginner drill, a fourfold distance change. The value is 20.0 cGy/min at 50 cm from the source. What is it at 100 cm if only inverse square changes?
+A. 10.0 cGy/min
+B. 5.0 cGy/min
+C. 80.0 cGy/min
+D. 20.0 cGy/min
 Answer: B
-Objective: I.10
-Why: D2 = 100 × (50/100)^2 = 100 × 0.25 = 25 cGy. 50 cGy forgets the square. 200 cGy and 400 cGy invert the distance ratio.
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 20.0 × (50/100)^2 = 20.0 × (0.5000)^2 = 20.0 × 0.2500 = 5.0 cGy/min. Dropping the square and multiplying by the bare ratio 50/100 gives 10.0 cGy/min. Inverting the distances, (100/50)^2, gives 80.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (50 cm) as if it were the source distance gives 20.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q5
-Stem: The rate is 320 cGy/min at 100 cm from the source. Inverse square only, what is the rate at 80 cm?
-A. 256 cGy/min
-B. 400 cGy/min
-C. 500 cGy/min
-D. 205 cGy/min
-Answer: C
-Objective: I.10
-Why: I2 = 320 × (100/80)^2 = 320 × 1.5625 = 500 cGy/min. Check: 500 × 0.64 = 320. 400 cGy/min is 320 × 1.25, unsquared. 256 cGy/min is 320 × 0.8. 205 cGy/min is 320 × 0.64, the factor for moving out to 125 cm, not in to 80 cm.
+Stem: Beginner drill, a small step out from isocenter. The value is 90.0 cGy/min at 100 cm from the source. What is it at 110 cm if only inverse square changes?
+A. 74.4 cGy/min
+B. 81.8 cGy/min
+C. 108.9 cGy/min
+D. 9000.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 90.0 × (100/110)^2 = 90.0 × (0.9091)^2 = 90.0 × 0.8264 = 74.4 cGy/min. Dropping the square and multiplying by the bare ratio 100/110 gives 81.8 cGy/min. Inverting the distances, (110/100)^2, gives 108.9 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (10 cm) as if it were the source distance gives 9000.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q6
-Stem: Dose rate is 144 cGy/min at 60 cm from the source. Inverse square only, what is the rate at 90 cm?
-A. 96 cGy/min
-B. 64 cGy/min
-C. 216 cGy/min
-D. 324 cGy/min
-Answer: B
-Objective: I.10
-Why: I2 = 144 × (60/90)^2 = 144 × (2/3)^2 = 144 × 4/9 = 64 cGy/min. 96 cGy/min is 144 × 2/3. 216 cGy/min is 144 × 1.5. 324 cGy/min is 144 × (90/60)^2.
+Stem: Beginner drill, exactly double the distance. The value is 300.0 cGy/min at 75 cm from the source. What is it at 150 cm if only inverse square changes?
+A. 75.0 cGy/min
+B. 150.0 cGy/min
+C. 1200.0 cGy/min
+D. 300.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 300.0 × (75/150)^2 = 300.0 × (0.5000)^2 = 300.0 × 0.2500 = 75.0 cGy/min. Dropping the square and multiplying by the bare ratio 75/150 gives 150.0 cGy/min. Inverting the distances, (150/75)^2, gives 1200.0 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (75 cm) as if it were the source distance gives 300.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q7
-Stem: Moving a point from 100 cm to 200 cm from the source, inverse square only, multiplies dose rate by:
-A. 1/2
-B. 1/4
-C. 2
-D. 4
-Answer: B
-Objective: I.10
-Why: (100/200)^2 = 1/4. The unsquared ratio is 1/2. The factors 2 and 4 are the multipliers for moving from 200 cm in to 100 cm.
+Stem: Beginner drill, moving from 100 cm to 40 cm. The value is 45.0 cGy/min at 100 cm from the source. What is it at 40 cm if only inverse square changes?
+A. 281.3 cGy/min
+B. 112.5 cGy/min
+C. 7.2 cGy/min
+D. 125.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 45.0 × (100/40)^2 = 45.0 × (2.5000)^2 = 45.0 × 6.2500 = 281.3 cGy/min. Dropping the square and multiplying by the bare ratio 100/40 gives 112.5 cGy/min. Inverting the distances, (40/100)^2, gives 7.2 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (60 cm) as if it were the source distance gives 125.0 cGy/min, which is not a point on the beam axis from the source.
 
 ### Q8
-Stem: A calculation keeps the unit cGy/min and changes only the source distance from 100 cm to 50 cm. The rate was 40 cGy/min. What is the new rate?
-A. 10 cGy/min
-B. 20 cGy/min
-C. 80 cGy/min
-D. 160 cGy/min
-Answer: D
-Objective: I.10
-Why: 40 × (100/50)^2 = 40 × 4 = 160 cGy/min. The unit stays cGy/min. 80 cGy/min is 40 × 2. 20 cGy/min and 10 cGy/min apply the factor for a farther point.
+Stem: Beginner drill, from an extended distance back toward 100 cm. The value is 80.0 cGy/min at 120 cm from the source. What is it at 100 cm if only inverse square changes?
+A. 115.2 cGy/min
+B. 96.0 cGy/min
+C. 55.6 cGy/min
+D. 2880.0 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 80.0 × (120/100)^2 = 80.0 × (1.2000)^2 = 80.0 × 1.4400 = 115.2 cGy/min. Dropping the square and multiplying by the bare ratio 120/100 gives 96.0 cGy/min. Inverting the distances, (100/120)^2, gives 55.6 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (20 cm) as if it were the source distance gives 2880.0 cGy/min, which is not a point on the beam axis from the source.
 
 ## Inverse Square Quiz (Advanced)
 
 ### Q1
-Stem: Dose rate at 100 cm from the source is 220 cGy/min. The point has SSD = 85 cm and depth = 15 cm. Inverse square only, what is the rate?
-A. 305 cGy/min
-B. 220 cGy/min
-C. 187 cGy/min
-D. 159 cGy/min
-Answer: B
-Objective: IV.1
-Why: Source distance = 85 + 15 = 100 cm, the same distance as the known rate, so the inverse-square factor is (100/100)^2 = 1 and the rate stays 220 cGy/min. 305 cGy/min is 220 × (100/85)^2, which is the skin. 187 cGy/min uses depth 15 cm as the whole distance in a rough ratio. 159 cGy/min is 220 × (85/100)^2.
-
-### Q2
-Stem: Dose rate at 100 cm from the source is 144 cGy/min. SSD = 110 cm and depth = 10 cm. Inverse square only, what is the rate at the point?
-A. 144 cGy/min
-B. 120 cGy/min
-C. 100 cGy/min
-D. 207 cGy/min
-Answer: C
-Objective: IV.1
-Why: d2 = 110 + 10 = 120 cm. I2 = 144 × (100/120)^2 = 144 × 25/36 = 100 cGy/min. 120 cGy/min drops the square. 207 cGy/min is 144 × (120/100)^2. 144 cGy/min would be correct only if the point were 100 cm from the source.
-
-### Q3
-Stem: Dose rate is 400 cGy/min at 100 cm from the source and 25 cGy/min at an unknown distance. Inverse square only, what is that distance?
-A. 200 cm
-B. 400 cm
-C. 1600 cm
-D. 50 cm
-Answer: B
-Objective: IV.1
-Why: 400/25 = 16 = (d/100)^2, so d/100 = 4 and d = 400 cm. Check: 400 × (100/400)^2 = 400 × 1/16 = 25. 200 cm gives a factor of 4, so 100 cGy/min, not 25. 1600 cm multiplies by 16 without the square root. 50 cm is closer and would read 1600 cGy/min.
-
-### Q4
-Stem: Dose rate at 100 cm from the source is 100 cGy/min. SSD = 60 cm and depth = 20 cm. Inverse square only, what is the rate at depth?
-A. 100 cGy/min
-B. 278 cGy/min
-C. 156.25 cGy/min
-D. 64 cGy/min
-Answer: C
-Objective: IV.1
-Why: d2 = 60 + 20 = 80 cm. I2 = 100 × (100/80)^2 = 156.25 cGy/min. 278 cGy/min is 100 × (100/60)^2, the skin at SSD 60 cm. 64 cGy/min is 100 × (80/100)^2, the ratio inverted. 100 cGy/min ignores the shorter source distance.
-
-### Q5
-Stem: A pure dose-rate question changes only the distance from the source. A classmate multiplies by Mayneord F. What is wrong with that step?
-A. Nothing; Mayneord F is the inverse-square dose-rate formula
-B. Mayneord F adjusts a percent depth dose between two SSDs and does not replace I2 = I1 (d1/d2)^2
-C. Mayneord F is a scatter correction and should be used instead of any distance term
-D. Mayneord F converts a TMR into a PDD
-Answer: B
-Objective: IV.1
-Why: Mayneord F is ((SSD2 + dm)/(SSD1 + dm))^2 × ((SSD1 + d)/(SSD2 + d))^2, applied to a PDD. It corrects inverse square inside that percent. It is not the dose rate at a new source distance, it does not correct scatter, and it is not applied to TMR.
-
-### Q6
-Stem: You compute 200 cGy/min at 120 cm from a known 288 cGy/min at 100 cm. Which reverse check confirms it?
-A. 200 × (120/100) = 240, close enough to 288
-B. 200 × (120/100)^2 = 288
-C. 200 × (100/120)^2 = 288
-D. 288 − 120 = 168, so the rate should have been 168
-Answer: B
-Objective: IV.1
-Why: I1 = I2 × (d2/d1)^2 = 200 × (120/100)^2 = 200 × 1.44 = 288 cGy/min. The unsquared check gives 240, which does not recover 288. Multiplying by (100/120)^2 makes the number smaller (138.9). Subtracting the distances is not inverse square.
-
-### Q7
-Stem: Dose rate at 100 cm from the source is 162 cGy/min. SSD = 90 cm and depth = 10 cm. Inverse square only, what is the rate at the point?
-A. 162 cGy/min
-B. 200 cGy/min
-C. 131 cGy/min
-D. 180 cGy/min
-Answer: A
-Objective: IV.1
-Why: Source distance = 90 + 10 = 100 cm, so the factor is 1 and the rate remains 162 cGy/min. Using the SSD alone gives 162 × (100/90)^2 = 162 × 100/81 = 200 cGy/min, which is the skin. 131 cGy/min is 162 × (90/100)^2. 180 cGy/min is 162 × (100/90), unsquared.
-
-### Q8
-Stem: 80 cGy is delivered at 200 cm from the source. The same time is used at 100 cm. Inverse square only, what dose is delivered?
-A. 40 cGy
-B. 160 cGy
-C. 20 cGy
-D. 320 cGy
+Stem: Advanced set. 6 MV, dmax 1.5 cm, original SSD 100 cm. PDD at 10 cm depth is 67% for SSD 100 cm. dmax is 1.5 cm. Estimate the PDD at the same depth for SSD 120 cm with the Mayneord F factor. Report PDD to the nearest 0.1%.
+A. 96.0 %
+B. 67.9 %
+C. 65.3 %
+D. 68.7 %
 Answer: D
 Objective: IV.1
-Why: D2 = 80 × (200/100)^2 = 80 × 4 = 320 cGy. Check: 320 × (100/200)^2 = 80. 160 cGy drops the square. 40 cGy and 20 cGy apply the factor for moving farther away.
+Why: Mayneord F is an inverse-square correction only. Scatter is assumed unchanged. F = [(SSD2+dm)/(SSD1+dm)]^2 × [(SSD1+d)/(SSD2+d)]^2 = [(120+1.5)/(100+1.5)]^2 × [(100+10)/(120+10)]^2 = (1.1970)^2 × (0.8462)^2 = 1.4329 × 0.7160 = 1.0259. PDD2 = 67 × 1.0259 = 68.74%, which rounds to 68.7 %. Keeping only the dmax ratio and dropping [(SSD1+d)/(SSD2+d)]^2 gives 96.0 %. Multiplying the two distance ratios once each, without squaring, gives 67.9 %. Swapping SSD1 and SSD2 reverses the extended-distance correction and gives 65.3 %.
+
+### Q2
+Stem: Advanced set. Cobalt-60 dmax 0.5 cm, from 80 cm SSD to 100 cm SSD. PDD at 10 cm depth is 58% for SSD 80 cm. dmax is 0.5 cm. Estimate the PDD at the same depth for SSD 100 cm with the Mayneord F factor. Report PDD to the nearest 0.1%.
+A. 90.4 %
+B. 60.5 %
+C. 59.2 %
+D. 55.6 %
+Answer: B
+Objective: IV.1
+Why: Mayneord F is an inverse-square correction only. Scatter is assumed unchanged. F = [(SSD2+dm)/(SSD1+dm)]^2 × [(SSD1+d)/(SSD2+d)]^2 = [(100+0.5)/(80+0.5)]^2 × [(80+10)/(100+10)]^2 = (1.2484)^2 × (0.8182)^2 = 1.5586 × 0.6694 = 1.0434. PDD2 = 58 × 1.0434 = 60.52%, which rounds to 60.5 %. Keeping only the dmax ratio and dropping [(SSD1+d)/(SSD2+d)]^2 gives 90.4 %. Multiplying the two distance ratios once each, without squaring, gives 59.2 %. Swapping SSD1 and SSD2 reverses the extended-distance correction and gives 55.6 %.
+
+### Q3
+Stem: Advanced set. 10 MV, dmax 2.5 cm, a large SSD change where F is only a rough inverse-square estimate. PDD at 20 cm depth is 46.5% for SSD 100 cm. dmax is 2.5 cm. Estimate the PDD at the same depth for SSD 140 cm with the Mayneord F factor. Report PDD to the nearest 0.1%.
+A. 89.9 %
+B. 48.5 %
+C. 50.6 %
+D. 42.8 %
+Answer: C
+Objective: IV.1
+Why: Mayneord F is an inverse-square correction only. Scatter is assumed unchanged. F = [(SSD2+dm)/(SSD1+dm)]^2 × [(SSD1+d)/(SSD2+d)]^2 = [(140+2.5)/(100+2.5)]^2 × [(100+20)/(140+20)]^2 = (1.3902)^2 × (0.7500)^2 = 1.9328 × 0.5625 = 1.0872. PDD2 = 46.5 × 1.0872 = 50.55%, which rounds to 50.6 %. Keeping only the dmax ratio and dropping [(SSD1+d)/(SSD2+d)]^2 gives 89.9 %. Multiplying the two distance ratios once each, without squaring, gives 48.5 %. Swapping SSD1 and SSD2 reverses the extended-distance correction and gives 42.8 %.
+
+### Q4
+Stem: Advanced set. The new SSD is shorter than 100 cm, so read the ratio direction carefully. PDD at 8 cm depth is 76.4% for SSD 100 cm. dmax is 1.5 cm. Estimate the PDD at the same depth for SSD 90 cm with the Mayneord F factor. Report PDD to the nearest 0.1%.
+A. 62.1 %
+B. 75.4 %
+C. 75.9 %
+D. 77.4 %
+Answer: B
+Objective: IV.1
+Why: Mayneord F is an inverse-square correction only. Scatter is assumed unchanged. F = [(SSD2+dm)/(SSD1+dm)]^2 × [(SSD1+d)/(SSD2+d)]^2 = [(90+1.5)/(100+1.5)]^2 × [(100+8)/(90+8)]^2 = (0.9015)^2 × (1.1020)^2 = 0.8127 × 1.2145 = 0.9870. PDD2 = 76.4 × 0.9870 = 75.40%, which rounds to 75.4 %. Keeping only the dmax ratio and dropping [(SSD1+d)/(SSD2+d)]^2 gives 62.1 %. Multiplying the two distance ratios once each, without squaring, gives 75.9 %. Swapping SSD1 and SSD2 reverses the extended-distance correction and gives 77.4 %.
+
+### Q5
+Stem: Advanced drill. Same dose, longer distance, timer only. A timer setting of 1.25 min delivers the prescription at 100 cm from the source. What timer setting delivers that same dose at 150 cm, changing only inverse square and keeping dose rate × time constant in the usual way?
+A. 2.81 min
+B. 1.88 min
+C. 0.56 min
+D. 4.22 min
+Answer: A
+Objective: IV.1
+Why: Dose rate falls with the square of distance, so time must rise with (d2/d1)^2 to keep the same dose. Substitute 1.25 × (150/100)^2 = 1.25 × (1.5000)^2 = 1.25 × 2.2500 = 2.81 min. Using the unsquared ratio (150/100) gives 1.88 min. Inverting the square, as if a larger distance needed less time, gives 0.56 min. Cubing the distance ratio instead of squaring it gives 4.22 min.
+
+### Q6
+Stem: Advanced drill. Moving in from 90 cm to 60 cm. A timer setting of 2.40 min delivers the prescription at 90 cm from the source. What timer setting delivers that same dose at 60 cm, changing only inverse square and keeping dose rate × time constant in the usual way?
+A. 1.60 min
+B. 1.07 min
+C. 5.40 min
+D. 0.71 min
+Answer: B
+Objective: IV.1
+Why: Dose rate falls with the square of distance, so time must rise with (d2/d1)^2 to keep the same dose. Substitute 2.40 × (60/90)^2 = 2.40 × (0.6667)^2 = 2.40 × 0.4444 = 1.07 min. Using the unsquared ratio (60/90) gives 1.60 min. Inverting the square, as if a larger distance needed less time, gives 5.40 min. Cubing the distance ratio instead of squaring it gives 0.71 min.
+
+### Q7
+Stem: Advanced survey-style inverse square. No tissue attenuation is included. The value is 18.0 mR/h at 100 cm from the source. What is it at 40 cm if only inverse square changes?
+A. 45.0 mR/h
+B. 2.9 mR/h
+C. 112.5 mR/h
+D. 50.0 mR/h
+Answer: C
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 18.0 × (100/40)^2 = 18.0 × (2.5000)^2 = 18.0 × 6.2500 = 112.5 mR/h. Dropping the square and multiplying by the bare ratio 100/40 gives 45.0 mR/h. Inverting the distances, (40/100)^2, gives 2.9 mR/h and would raise the reading when the detector moves out. Using the gap between the two distances (60 cm) as if it were the source distance gives 50.0 mR/h, which is not a point on the beam axis from the source.
+
+### Q8
+Stem: Advanced long-distance inverse square from 100 cm to 250 cm. The value is 5.00 cGy/min at 100 cm from the source. What is it at 250 cm if only inverse square changes?
+A. 0.80 cGy/min
+B. 2.00 cGy/min
+C. 31.25 cGy/min
+D. 2.22 cGy/min
+Answer: A
+Objective: IV.1
+Why: Inverse square: intensity scales with (d1/d2)^2, and the farther distance gets the smaller value. Substitute 5.00 × (100/250)^2 = 5.00 × (0.4000)^2 = 5.00 × 0.1600 = 0.80 cGy/min. Dropping the square and multiplying by the bare ratio 100/250 gives 2.00 cGy/min. Inverting the distances, (250/100)^2, gives 31.25 cGy/min and would raise the reading when the detector moves out. Using the gap between the two distances (150 cm) as if it were the source distance gives 2.22 cGy/min, which is not a point on the beam axis from the source.
