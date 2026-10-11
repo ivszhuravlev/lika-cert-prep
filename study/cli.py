@@ -7,15 +7,19 @@ import re
 import sys
 import urllib.request
 from pathlib import Path
+from urllib.error import URLError
 
 from study.bank import find_module, load_modules, repo_root
 from study.engine import (
     Progress,
     default_progress_path,
+    explain_messages,
     grade_choice,
     grade_number,
     ordered,
     problems,
+    render_question,
+    render_reveal,
     road_prompt,
 )
 
@@ -27,6 +31,10 @@ def _ask(text: str) -> str:
         return input(text)
     except EOFError:
         return "стоп"
+
+
+def _stopped(raw: str) -> bool:
+    return raw.strip().lower() in {"стоп", "s", "stop", "хватит"}
 
 
 def list_modules() -> int:
@@ -64,7 +72,7 @@ def run_theory(module) -> None:
         print(f"\n— {chunk.lesson} · {labels.get(chunk.kind, chunk.kind)}\n")
         print(chunk.text)
         nxt = _ask("\nДальше — Enter, стоп — s: ").strip().lower()
-        if nxt in {"s", "стоп", "stop"}:
+        if _stopped(nxt):
             return
 
 
@@ -74,15 +82,14 @@ def run_problems(module, progress: Progress) -> None:
         print("Числовых задач с готовым ответом в этом модуле пока нет. Возьми квиз.")
         return
     for item in pool:
-        print(f"\n{item.lesson}\n{item.stem}")
+        print()
+        print(render_question(item, progress, numeric=True))
         raw = _ask("Число: ").strip()
-        if raw.lower() in {"стоп", "s", "stop"}:
+        if _stopped(raw):
             return
         grade = grade_number(item, raw)
         progress.record(item.id, grade.ok)
-        mark = "Верно." if grade.ok else "Не сошлось."
-        print(f"{mark} В банке: {grade.expected}")
-        print(grade.why)
+        print(render_reveal(grade, numeric=True))
 
 
 def run_quiz(module, progress: Progress, *, lesson: str | None = None, limit: int | None = None) -> None:
@@ -95,17 +102,14 @@ def run_quiz(module, progress: Progress, *, lesson: str | None = None, limit: in
         print("Квиза по этому модулю ещё нет.")
         return
     for item in pool:
-        print(f"\n{item.lesson}\n{item.stem}")
-        for letter in "ABCD":
-            print(f"  {letter}. {item.choices[letter]}")
+        print()
+        print(render_question(item, progress, numeric=False))
         raw = _ask("Буква: ").strip()
-        if raw.lower() in {"стоп", "s", "stop"}:
+        if _stopped(raw):
             return
         grade = grade_choice(item, raw)
         progress.record(item.id, grade.ok)
-        mark = "Верно." if grade.ok else "Мимо."
-        print(f"{mark} {grade.expected}")
-        print(grade.why)
+        print(render_reveal(grade, numeric=False))
 
 
 def run_mixed(module, progress: Progress) -> None:
@@ -120,7 +124,7 @@ def run_mixed(module, progress: Progress) -> None:
         print(chunks[0].text)
         run_quiz(module, progress, lesson=lesson, limit=3)
         nxt = _ask("\nДальше — Enter, стоп — s: ").strip().lower()
-        if nxt in {"s", "стоп", "stop"}:
+        if _stopped(nxt):
             return
 
 
@@ -137,31 +141,42 @@ def run_road(module, progress: Progress) -> Path | None:
     return path
 
 
+def ollama_complete(messages: list[dict], *, max_tokens: int = 400) -> str:
+    """Local chat completion. Same shape as the study bot's Ollama client."""
+    payload = {
+        "model": OLLAMA_MODEL,
+        "messages": [
+            {
+                "role": item.get("role", "user"),
+                "content": item.get("content") or item.get("text") or "",
+            }
+            for item in messages
+        ],
+        "stream": False,
+        "options": {"temperature": 0.3, "num_predict": max_tokens},
+    }
+    request = urllib.request.Request(
+        "http://127.0.0.1:11434/api/chat",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=120) as response:
+            body = json.loads(response.read().decode("utf-8"))
+    except (URLError, TimeoutError, OSError) as exc:
+        raise RuntimeError(
+            "Локальная модель не ответила. Проверь, что Ollama запущена на 127.0.0.1:11434."
+        ) from exc
+    text = str(body.get("message", {}).get("content", "")).strip()
+    if not text:
+        raise RuntimeError("Локальная модель вернула пустой ответ")
+    return text
+
+
 def ollama_explain(prompt: str, student: str) -> str:
     """Ask the local model to explain a graded miss. The grade itself is not its job."""
-    body = json.dumps(
-        {
-            "model": OLLAMA_MODEL,
-            "stream": False,
-            "prompt": (
-                prompt
-                + "\n\nСейчас проверка локальной модели, не живой диалог. "
-                + "Ученица уже ответила на вопрос 1 блока 1 так: "
-                + student
-                + ". Оценка уже поставлена банком и она неверная. "
-                + "Дай короткий разбор по-русски, термины по-английски, только из Why этого вопроса. "
-                + "Не выдумывай дозу в Gy."
-            ),
-        }
-    ).encode()
-    request = urllib.request.Request(
-        "http://127.0.0.1:11434/api/generate",
-        data=body,
-        headers={"Content-Type": "application/json"},
-    )
-    with urllib.request.urlopen(request, timeout=120) as response:
-        payload = json.loads(response.read().decode())
-    return payload.get("response", "")
+    return ollama_complete(explain_messages(prompt, student))
 
 
 def voice_check() -> int:
