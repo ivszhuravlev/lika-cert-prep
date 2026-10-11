@@ -723,3 +723,285 @@ D. 1.15 R/h
 Answer: D
 Objective: V.6
 Why: Substitute 4.6 × 2500 / (100)^2 = 11500 / 10000 = 1.150000 R/h, reported as 1.15 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 115.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 1.15 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.29 R/h.
+
+## Strength, points, prescriptions, and directives
+
+### Q1
+Stem: What is 1 U of air-kerma strength?
+A. 1 µGy m²/h, which is the same as 1 cGy cm²/h
+B. 1 mCi of apparent activity
+C. 1 Gy at 1 cm in water
+D. 1 R cm² per mCi per hour
+Answer: A
+Objective: V.1
+Why: One unit of air-kerma strength is 1 µGy m²/h, and that product is the same as 1 cGy cm²/h. Sk is the source specification in TG-43. Apparent activity in mCi is a derived label, not the definition of 1 U. A gray at 1 cm is a dose. The R cm² per mCi per hour quantity is an exposure-rate constant.
+
+### Q2
+Stem: A certificate lists both an apparent activity and an air-kerma strength. Which quantity specifies the source for TG-43 in this bank?
+A. Apparent activity, using one mCi-per-U factor for every nuclide
+B. The exposure-rate constant alone
+C. The half-life alone
+D. Air-kerma strength, Sk
+Answer: D
+Objective: V.1
+Why: TG-43 uses Sk. Apparent activity is a derived label. This bank does not quote one mCi-per-U factor. The exposure-rate constant is the survey route, and the half-life is for decay, not the source specification.
+
+### Q3
+Stem: In an HDR plan, what is the dwell time at one stopping position?
+A. The half-life of Ir-192
+B. The cylinder radius
+C. The dose wanted from that stop, divided by the dose rate at that stop
+D. The number of fractions in the course
+Answer: C
+Objective: V.2
+Why: Dwell time is dose divided by dose rate at that dwell. The afterloader holds the source there for that time. Half-life, radius, and fraction count belong to other parts of the plan.
+
+### Q4
+Stem: An HDR plan was timed on the calibration day, and treatment is several days later. What is done with the dwell times?
+A. They stay at the calibration-day times, because a week of Ir-192 decay is ignored
+B. They are decayed to the treatment date so the weaker source still delivers the prescribed dose
+C. They are replaced by the mean life
+D. They are set equal to the leak-test interval
+Answer: B
+Objective: V.6
+Why: The time used on the treatment day is the time corrected for decay to that date. A weaker source needs a longer dwell for the same dose. Calibration-day times left unchanged underdose. Mean life is the permanent-implant integral, not an HDR dwell. The leak test is a six-month wipe, not a dwell time.
+
+### Q5
+Stem: Where is the ICRU 38 bladder point?
+A. 2 cm superior to the os and 2 cm lateral to the tandem
+B. 5 mm behind the posterior vaginal wall
+C. At the apex of an eye plaque
+D. Center of a 7 cm³ Foley balloon on the anterior film, and the posterior surface of that balloon on the lateral film
+Answer: D
+Objective: V.2
+Why: The ICRU 38 bladder point uses a Foley balloon filled with 7 cm³ of contrast: the center of the balloon on the anterior radiograph, and the posterior surface of the balloon on the lateral radiograph. Two centimeters up and two centimeters lateral is Manchester point A. Five millimeters behind the vaginal wall is the rectal point. The eye-plaque apex is an ocular prescription point.
+
+### Q6
+Stem: Where is the ICRU 38 rectum point?
+A. 5 mm posterior to the posterior vaginal wall, on the midline, at the mid-ovoid level
+B. The center of the Foley balloon
+C. 5 cm from the patient’s midline
+D. The hottest 2 cm³ of the bladder
+Answer: A
+Objective: V.2
+Why: The rectal reference point sits 5 mm behind the posterior vaginal wall, on the midline, at the level of the middle of the ovoids. The Foley balloon defines the bladder point. Five centimeters from the midline is point B. Bladder D2cc is a contoured volume dose, not this film point.
+
+### Q7
+Stem: In the GEC-ESTRO correlates used in this bank, what is HR-CTV D90?
+A. The dose to 90% of the rectum
+B. Manchester point A
+C. The dose that covers 90% of the high-risk clinical target volume
+D. Total reference air kerma
+Answer: C
+Objective: V.2
+Why: HR-CTV D90 is the dose covering 90% of the high-risk CTV, residual disease plus the cervix at brachytherapy. It is the target-coverage correlate in this bank. It is not a rectal dose, not point A, and not TRAK.
+
+### Q8
+Stem: Which organ correlate does this bank hold near 65–75 Gy EQD2?
+A. Bladder D2cc
+B. Rectum D2cc
+C. A single HDR fraction at point A
+D. Patient release to another person
+Answer: B
+Objective: V.2
+Why: In this bank, rectum D2cc is often held near 65–75 Gy EQD2. Bladder D2cc is the higher band, near 80–90 Gy EQD2. One fraction at point A is a physical dose. Five millisieverts is the release criterion, not a rectal EQD2.
+
+### Q9
+Stem: Which organ correlate does this bank hold near 80–90 Gy EQD2?
+A. Rectum D2cc
+B. Vaginal surface dose from a cylinder
+C. A public dose of 5 mSv
+D. Bladder D2cc
+Answer: D
+Objective: V.2
+Why: This bank holds bladder D2cc near 80–90 Gy EQD2. Rectum D2cc is the 65–75 Gy EQD2 band. A cylinder surface dose is not that bladder correlate. Five millisieverts is patient release for another person.
+
+### Q10
+Stem: Which prescription matches the HDR vaginal-cuff course in this bank?
+A. 7 Gy times 3, specified at 0.5 cm from the cylinder surface
+B. 13.5 Gy times 2 to the prostate
+C. 145 Gy with I-125 seeds
+D. 85 Gy to the apex of an eye plaque
+Answer: A
+Objective: V.2
+Why: The vaginal-cuff regimen to memorize is 7 Gy × 3 at 0.5 cm. A prostate HDR boost of 13.5 Gy × 2, I-125 monotherapy of 145 Gy, and an eye plaque of 85 Gy to the apex are different prescriptions.
+
+### Q11
+Stem: Which pair are the cervix HDR fractionations this bank expects you to recognize?
+A. 2 Gy times 25, and 1.8 Gy times 28
+B. 13.5 Gy times 2 only
+C. 7 Gy times 4, or 5.5 Gy times 5
+D. 125 Gy with Pd-103 seeds
+Answer: C
+Objective: V.2
+Why: Cervix HDR in this bank is often 7 Gy × 4 or 5.5 Gy × 5. Daily external-beam fractions are not those HDR schedules. 13.5 Gy × 2 is a prostate HDR boost. 125 Gy is Pd-103 monotherapy.
+
+### Q12
+Stem: Which fractionation is one common prostate HDR boost in this bank?
+A. 7 Gy times 3 at 0.5 cm
+B. 13.5 Gy times 2
+C. 5.5 Gy times 5 to the cervix
+D. 85 Gy to the sclera
+Answer: B
+Objective: V.2
+Why: One common prostate HDR boost here is 13.5 Gy × 2. The 7 Gy × 3 course is vaginal cuff. The 5.5 Gy × 5 course is cervix. The eye-plaque dose is 85 Gy to the apex, not the sclera.
+
+### Q13
+Stem: Which monotherapy doses does this bank pair with permanent prostate seeds?
+A. I-125 125 Gy and Pd-103 145 Gy
+B. Both 85 Gy to the apex
+C. Both 7 Gy times 4
+D. I-125 145 Gy and Pd-103 125 Gy
+Answer: D
+Objective: V.2
+Why: I-125 monotherapy is 145 Gy. Pd-103 monotherapy is 125 Gy. Swapping them is the usual trap. 85 Gy is the eye-plaque apex dose. 7 Gy × 4 is cervix HDR.
+
+### Q14
+Stem: An I-125 eye plaque in this bank is prescribed to which dose and point?
+A. 85 Gy to the apex
+B. 145 Gy to the prostate
+C. 125 Gy to the base of the plaque
+D. 7 Gy times 3 at 0.5 cm
+Answer: A
+Objective: V.2
+Why: The I-125 eye-plaque prescription to memorize is 85 Gy to the tumor apex. 145 Gy is prostate I-125 monotherapy. The plaque point is the apex, not the base. The 7 Gy × 3 course is a vaginal cylinder.
+
+### Q15
+Stem: Which mean photon energy belongs with Ir-192?
+A. About 21 keV
+B. About 28 keV
+C. About 380 keV
+D. 662 keV
+Answer: C
+Objective: V.1
+Why: Ir-192 is remembered at about 380 keV mean, the same as about 0.38 MeV. Pd-103 is about 21 keV, I-125 is about 28 keV, and Cs-137 is 662 keV.
+
+### Q16
+Stem: Which energies match Cs-137 and the two permanent seed nuclides?
+A. Cs-137 about 380 keV, and both seeds at 662 keV
+B. Cs-137 662 keV, I-125 about 28 keV, and Pd-103 about 21 keV
+C. Cs-137 about 21 keV, and I-125 at 662 keV
+D. All three about 380 keV
+Answer: B
+Objective: V.1
+Why: Cs-137 is 662 keV. I-125 is about 28 keV and Pd-103 is about 21 keV. Ir-192, not cesium, is the source near 380 keV. The three nuclides are not one energy.
+
+### Q17
+Stem: Before an HDR fraction, which set must the written directive contain?
+A. Only the linac monitor units
+B. Only a verbal order from the hallway
+C. Only the exposure-rate constant
+D. Radionuclide, treatment site, dose per fraction, number of fractions, and total dose
+Answer: D
+Objective: V.5
+Why: Under 10 CFR 35.40 the HDR written directive, dated and signed by the authorized user before treatment, states the radionuclide, the site, the dose per fraction, the number of fractions, and the total dose. Monitor units, a verbal order, and an exposure-rate constant do not replace that directive.
+
+### Q18
+Stem: Before a permanent seed implant, what does the written directive state?
+A. The radionuclide, the treatment site, and the total source strength
+B. Only the room-survey background
+C. Another patient’s bladder D2cc
+D. A linac wedge angle
+Answer: A
+Objective: V.5
+Why: Before seeds are implanted, the written directive carries the radionuclide, the site, and the total source strength. That is the activity form of the order. A survey background, another patient’s organ dose, and a wedge angle do not authorize the implant.
+
+### Q19
+Stem: For a temporary LDR implant, the written directive can state the dose, or which activity-and-time pair?
+A. The quarterly inventory date only
+B. Point A with no dose
+C. Total source strength and the exposure time
+D. Only the patient’s release reading
+Answer: C
+Objective: V.5
+Why: When an LDR directive is not written as a dose, it states the total source strength and the time the sources are applied. An inventory date, a geometry point without a dose, and a release survey do not replace that order. The teaching set is nuclide, site, and dose, or activity and time.
+
+### Q20
+Stem: Which administration matches the usual teaching form of a medical event?
+A. A leak-test result under 185 Bq
+B. A delivered dose about 20% away from the prescribed dose
+C. A background survey before the implant
+D. An agreement-state license posted on the door
+Answer: B
+Objective: V.5
+Why: In the usual teaching form, a medical event includes a dose that differs by about 20% of the prescribed dose, or by about 50% of one fraction, and also the wrong patient or the wrong site. A leak test under 185 Bq passes. Background and a posted license are not an administration error.
+
+### Q21
+Stem: One HDR fraction delivers about 50% more than that fraction’s written dose. What follows in this bank?
+A. Later fractions are assumed to average it out, so nothing is reported
+B. The half-life in the chart is edited and the log is closed
+C. The case is handled only as a 5 mSv release decision
+D. It is a medical event in the usual teaching form: verbal report in about 24 hours and a written report in about 15 days
+Answer: D
+Objective: V.5
+Why: About 50% of a fraction is the per-fraction teaching threshold. The report is verbal in about 24 hours and written in about 15 days. Hoping later fractions will average the miss does not erase it. Changing the half-life is not the report. Patient release at 5 mSv is a separate rule about dose to another person.
+
+### Q22
+Stem: Brachytherapy is delivered to the wrong patient. Which statement fits the teaching form of 10 CFR 35.3045?
+A. Wrong patient is a medical event
+B. Wrong patient counts only when the dose is also 20% high
+C. Wrong site is ignored when the nuclide was correct
+D. No report is due if the console said the source retracted
+Answer: A
+Objective: V.5
+Why: Wrong patient and wrong site are medical events in this teaching form, not only a percent-dose miss. A correct nuclide in the wrong place is still the wrong site. A retracted-source light does not undo treatment of the wrong person. The clocks remain about 24 hours verbal and about 15 days written.
+
+### Q23
+Stem: What does this bank mean by TRAK?
+A. The dose at Manchester point A
+B. The leak-test activity on the wipe
+C. The sum over sources of reference air-kerma rate times duration
+D. The EQD2 of bladder D2cc
+Answer: C
+Objective: V.6
+Why: Total reference air kerma adds, for every source, the reference air-kerma rate multiplied by how long that source is applied. It describes the application at the reference distance. It is not point A, not a wipe test, and not an organ EQD2.
+
+### Q24
+Stem: What belongs in the HDR emergency kit named in this note?
+A. A linac wedge and a Mayneord worksheet
+B. Long tongs and a shielded container
+C. Only a personnel film badge
+D. A Foley balloon filled to 7 cm³
+Answer: B
+Objective: V.2
+Why: If the source will not return, the kit has long tongs and a shielded container so the applicator can be moved and the source shielded. A wedge worksheet, a badge, and the bladder-point balloon are not that kit. The survey meter stays on, and the patient is surveyed after the source is back in the safe.
+
+### Q25
+Stem: Which pair does this bank name for brachytherapy physics practice and HDR delivery, without a tolerance table?
+A. TG-51 and TG-142
+B. ICRU 83 and QUANTEC
+C. TG-43 and TG-51
+D. TG-56 and TG-59
+Answer: D
+Objective: V.2
+Why: TG-56 is the brachytherapy physics code of practice. TG-59 is the HDR treatment-delivery report. This bank names them and does not attach a tolerance table. TG-51 and TG-142 are external-beam calibration and linac QA. ICRU 83 and QUANTEC are volume and organ-dose reports. TG-43 is the dose formalism, not that delivery pair.
+
+### Q26
+Stem: What is the brachytherapy source-inventory idea in this bank?
+A. A quarterly physical count of each source, its nuclide, its nominal activity, and its location
+B. A daily linac output check
+C. A leak test every 30 years
+D. A count performed only after a source is retired
+Answer: A
+Objective: V.5
+Why: The inventory idea here is quarterly: what is on hand, which nuclide, what nominal activity, and where it sits. Linac output is external-beam QA. The leak test is about every six months and is a wipe, not this count. Waiting until a source is retired leaves it unaccounted for while it is in use.
+
+### Q27
+Stem: Who signs the written directive, who checks the source and the dwells, and who runs the safety program?
+A. The dosimetrist signs the directive, the therapist is the radiation safety officer, and the patient is the authorized user
+B. The radiation safety officer prescribes the dose, and the authorized user only updates the inventory
+C. The authorized user signs the directive, the authorized medical physicist checks the source and the dwells, and the radiation safety officer runs the safety program
+D. Any staff member may sign the directive once the console is armed
+Answer: C
+Objective: V.5
+Why: The authorized user is the physician who signs the written directive. The authorized medical physicist checks source calibration, the plan, and the dwells. The radiation safety officer runs the safety program, including inventory, leak tests, and the reports the license requires. A dosimetrist does not prescribe. Arming the console is not a signature.
+
+### Q28
+Stem: After the afterloader says the HDR source has returned, what survey is still required?
+A. None, if the console light is green
+B. A survey of the patient, compared with background, with the meter already on
+C. A water-tank calibration of a linac
+D. An exit-dose diode on an external beam
+Answer: B
+Objective: V.4
+Why: The source is confirmed home by the unit and by a survey of the patient. The meter is on before the source is sent out, and the reading after return is compared with background. A green light alone is not the survey. A water tank and an exit diode are external-beam checks.
