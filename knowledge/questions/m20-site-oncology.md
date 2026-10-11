@@ -846,6 +846,56 @@ Answer: A
 Objective: III.2
 Why: An adrenal primary sits against the kidney and under the liver, so those two limit abdominal neuroblastoma radiotherapy. Lenses and the cribriform plate belong to cranial and craniospinal fields. Arytenoids and parotids belong to head and neck. Femoral heads and perineal skin belong to vulvar, vaginal, and anal plans. The volume remains the post-chemotherapy, pre-surgery extent at the primary site.
 
+### Q91
+Stem: An oropharyngeal cancer is positive for human papillomavirus. How does that change the outlook compared with a negative tumor of the same site?
+A. The prognosis is more favorable
+B. The prognosis is worse, so the dose is doubled
+C. Radiation is omitted because the virus replaces treatment
+D. The nodal volume moves to the groins
+Answer: A
+Objective: III.2
+Why: HPV-positive oropharyngeal cancer has a more favorable prognosis than HPV-negative disease at the same site. The virus does not cancel treatment, does not double the dose, and does not move the nodes to the groin.
+
+### Q92
+Stem: A malignant tumor of the parotid gland needs a primary treatment. What is the usual first treatment?
+A. Neutron beam alone
+B. Chemotherapy alone
+C. Photon radiotherapy alone
+D. Surgery
+Answer: D
+Objective: III.2
+Why: Surgery is the standard primary treatment for parotid cancer. Radiation is often adjuvant when risk features are present. It is not the usual first treatment by itself, and neither neutrons nor chemotherapy replace resection as the primary step.
+
+### Q93
+Stem: A high-grade soft-tissue sarcoma of the extremity is treated after resection. Which technical rule protects the limb?
+A. A longitudinal strip of limb tissue is left unirradiated
+B. The whole circumference is treated so no strip remains
+C. Daily fractions are kept at 250 cGy or higher
+D. Shielding is removed from the entire field
+Answer: A
+Objective: III.2
+Why: A strip of unirradiated tissue along the limb is left so lymphatic drainage and soft tissue can survive. Treating the full circumference risks severe fibrosis and edema. Large daily fractions and removing all shielding are not the limb-sparing rule.
+
+### Q94
+Stem: A 3 cm non-secreting pituitary adenoma will be irradiated. Which technique is the least desirable?
+A. Opposed lateral fields
+B. Opposed laterals plus a vertex field
+C. Non-coplanar fields
+D. Stereotactic radiosurgery
+Answer: A
+Objective: III.2
+Why: Simple opposed laterals exit through the temporal lobes and do not conform to a 3 cm pituitary target. A vertex field, non-coplanar beams, or radiosurgery spare more of that normal brain. Laterals alone are the weakest of these four.
+
+### Q95
+Stem: Stereotactic body radiotherapy in the chest is most often used for which disease?
+A. Small cell lung cancer as the usual primary course
+B. Early non-small cell lung cancer
+C. Thymoma as the only thoracic target
+D. Mesothelioma of the entire pleura
+Answer: B
+Objective: III.2
+Why: Thoracic stereotactic body radiotherapy is a standard option for early non-small cell lung cancer. It is not the usual primary course for small cell lung cancer, and it is not the treatment of an entire pleural mesothelioma. Thymoma is not the typical stereotactic thoracic target.
+
 ## Oncology Quiz
 
 ### Q1

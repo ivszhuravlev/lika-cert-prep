@@ -60,12 +60,14 @@ A dash means Table III does not give that cell. The 1.2 cm³ cord row and the 10
 
 **TG-101 parallel organs**, critical-volume idea. There is no point maximum. At least the stated volume should stay at or below the threshold dose. A smaller spared volume fails even when the dose inside that smaller volume is under the threshold.
 
-| Organ | Minimum volume at or below the threshold | 1 fx | 3 fx | 5 fx | Endpoint |
+| Organ | Minimum volume at or below the threshold | 1 fx | 5 fx | Endpoint |
 | --- | --- | --- | --- | --- | --- |
-| Lung, both | 1500 cm³ | 7 Gy | 11.6 Gy | 12.5 Gy | basic lung function |
-| Lung, both | 1000 cm³ | 7.4 Gy | 12.4 Gy | 13.5 Gy | pneumonitis |
-| Liver | 700 cm³ | 9.1 Gy | 19.2 Gy | 21 Gy | basic liver function |
-| Renal cortex, both | 200 cm³ | 8.4 Gy | 16 Gy | 17.5 Gy | basic renal function |
+| Lung, both | 1500 cm³ | 7 Gy | 12.5 Gy | basic lung function |
+| Lung, both | 1000 cm³ | 7.4 Gy | 13.5 Gy | pneumonitis |
+| Liver | 700 cm³ | 9.1 Gy | 21 Gy | basic liver function |
+| Renal cortex, both | 200 cm³ | 8.4 Gy | 17.5 Gy | basic renal function |
+
+The three-fraction parallel-tissue thresholds are omitted here. Use Table III for a three-fraction lung, liver, or kidney critical volume rather than filling that column from memory.
 
 SBRT cord limits and the QUANTEC 50 Gy cord limit answer different fractionations. Do not compare a 14 Gy single-fraction point maximum with the 50 Gy conventional Dmax as if they were the same constraint. Do not score a one-fraction optic point dose of 10 Gy against the three-fraction brainstem point maximum of 23.1 Gy, or a five-fraction plexus point dose against the five-fraction cord point maximum of 30 Gy.
 

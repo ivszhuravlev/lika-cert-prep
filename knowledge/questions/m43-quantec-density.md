@@ -206,6 +206,258 @@ Answer: D
 Objective: III.8
 Why: Excess = 33.5 − 30.5 = 3.0 Gy. The five-fraction cord point maximum is a different organ: 33.5 − 30 = 3.5 Gy is the wrong subtraction. Calling the plexus maximum met would be 0 Gy over. Quoting 30.5 Gy reports the five-fraction maximum, not the excess.
 
+## TG-101 plans and added QUANTEC rows
+
+### Q26
+Stem: One-fraction SRS. The optic pathway receives 7.2 Gy to 0.2 cm³ and a point dose of 11.4 Gy. TG-101 lists a one-fraction optic threshold of 8 Gy to 0.2 cm³ and a point maximum of 10 Gy. What fails?
+A. Both the volume dose and the point dose
+B. Only the 0.2 cm³ dose
+C. Only the point dose
+D. Neither, because the one-fraction cord point maximum is 14 Gy
+Answer: C
+Objective: III.8
+Why: 7.2 Gy is under 8 Gy, so the 0.2 cm³ dose passes. The point dose is over 10 Gy by 11.4 − 10 = 1.4 Gy. The cord point maximum is a different organ. 14 − 11.4 = 2.6 Gy under 14 Gy does not clear the optic maximum.
+
+### Q27
+Stem: Three-fraction SRS. The brainstem, excluding medulla, receives 19.0 Gy to 0.5 cm³ and a point dose of 22.0 Gy. TG-101 lists a three-fraction brainstem threshold of 18 Gy to 0.5 cm³ and a point maximum of 23.1 Gy. What fails?
+A. Only the 0.5 cm³ dose
+B. Only the point dose
+C. Both
+D. Neither, because both values are under the five-fraction brainstem point maximum of 31 Gy
+Answer: A
+Objective: III.8
+Why: 19.0 − 18 = 1.0 Gy over the 0.5 cm³ threshold, so the volume fails. 23.1 − 22.0 = 1.1 Gy under the point maximum, so the point dose passes. The five-fraction point maximum of 31 Gy is the wrong fractionation. Both stated doses sit under 31 Gy, which would hide the three-fraction volume miss.
+
+### Q28
+Stem: Five-fraction SBRT. The brachial plexus receives 26.0 Gy to 3 cm³ and a point dose of 32.0 Gy. TG-101 lists a five-fraction plexus threshold of 27 Gy to 3 cm³ and a point maximum of 30.5 Gy. What fails?
+A. Only the 3 cm³ dose
+B. Only the point dose
+C. Both
+D. The point dose, scored on the five-fraction cord point maximum of 30 Gy, by 2 Gy, and the volume also fails
+Answer: B
+Objective: III.8
+Why: 27 − 26.0 = 1.0 Gy under the volume threshold, so the 3 cm³ dose passes. 32.0 − 30.5 = 1.5 Gy over the plexus point maximum, so the point dose fails. 32.0 − 30 = 2.0 Gy uses the cord point maximum, which is a different organ, and the volume does not fail.
+
+### Q29
+Stem: One-fraction plan. Cord: 9.0 Gy to 0.35 cm³ and point dose 13.0 Gy, against limits of 10 Gy and 14 Gy. Optic pathway: 7.5 Gy to 0.2 cm³ and point dose 10.8 Gy, against limits of 8 Gy and 10 Gy. Brachial plexus: 13.0 Gy to 3 cm³ and point dose 16.5 Gy, against limits of 14 Gy and 17.5 Gy. Which statement matches TG-101?
+A. Only the optic point dose fails
+B. The cord, optic, and plexus point doses all fail
+C. Only the plexus point dose fails
+D. Nothing fails, because every point dose is under 14 Gy
+Answer: A
+Objective: III.8
+Why: Cord: 9.0 is under 10 and 13.0 is under 14, so both pass. Optic volume: 7.5 is under 8, so it passes. Optic point: 10.8 − 10 = 0.8 Gy over, so it fails. Plexus: 13.0 is under 14 and 16.5 is under 17.5, so both pass. 14 Gy is the cord point maximum, not a shared cap. The optic point is under 14 Gy and still over its own maximum of 10 Gy.
+
+### Q30
+Stem: Five-fraction plan. The cauda equina receives 31.0 Gy to 5 cm³ and a point dose of 31.5 Gy. TG-101 lists a five-fraction cauda threshold of 30 Gy to 5 cm³ and a point maximum of 32 Gy. What fails?
+A. Only the point dose, because 31.5 Gy is above the five-fraction cord point maximum of 30 Gy
+B. Only the 5 cm³ dose
+C. Both
+D. Neither, because 31.5 Gy is under the three-fraction cauda point maximum of 24 Gy
+Answer: B
+Objective: III.8
+Why: 31.0 − 30 = 1.0 Gy over the 5 cm³ threshold, so the volume fails. 32 − 31.5 = 0.5 Gy under the cauda point maximum, so the point dose passes. The cord point maximum of 30 Gy is a different organ. The three-fraction cauda point maximum is 24 Gy and is the wrong fractionation. 31.5 Gy is not under 24 Gy.
+
+### Q31
+Stem: Three-fraction SRS. The cochlea point dose is 18.6 Gy. TG-101 lists a three-fraction cochlea point maximum of 17.1 Gy and does not list a cochlea volume threshold. By how many Gy does the point dose exceed 17.1 Gy?
+A. 0 Gy, because 18.6 Gy is under the three-fraction brainstem point maximum of 23.1 Gy
+B. 1.5 Gy
+C. 18.6 Gy
+D. 17.1 Gy
+Answer: B
+Objective: III.8
+Why: 18.6 − 17.1 = 1.5 Gy. There is no cochlea volume cell that can pass in place of the point. 23.1 − 18.6 = 4.5 Gy under the brainstem point maximum does not clear the cochlea maximum. Quoting 18.6 Gy reports the point dose. Quoting 17.1 Gy reports the maximum.
+
+### Q32
+Stem: Five-fraction chest plan. The esophagus receives 18.0 Gy to 5 cm³ and a point dose of 36.5 Gy. TG-101 lists a five-fraction esophagus threshold of 19.5 Gy to 5 cm³ and a point maximum of 35 Gy. What fails?
+A. Only the 5 cm³ dose
+B. Only the point dose
+C. Both
+D. Neither, because 36.5 Gy is under the five-fraction trachea point maximum of 40 Gy
+Answer: B
+Objective: III.8
+Why: 19.5 − 18.0 = 1.5 Gy under the volume threshold, so the 5 cm³ dose passes. 36.5 − 35 = 1.5 Gy over the point maximum, so the point dose fails. The trachea point maximum is a different organ.
+
+### Q33
+Stem: Five-fraction plan. The stomach receives 19.0 Gy to 10 cm³ and a point dose of 30.0 Gy. TG-101 lists a five-fraction stomach threshold of 18 Gy to 10 cm³ and a point maximum of 32 Gy. What fails?
+A. Only the 10 cm³ dose
+B. Only the point dose
+C. Both
+D. Neither, because five fractions are scored on the one-fraction stomach point maximum of 12.4 Gy
+Answer: A
+Objective: III.8
+Why: 19.0 − 18 = 1.0 Gy over the volume threshold, so the 10 cm³ dose fails. 32 − 30.0 = 2.0 Gy under the point maximum, so the point dose passes. The one-fraction point maximum is the wrong fractionation. Duodenum uses these same five-fraction doses on a 5 cm³ row, not a looser stomach point maximum.
+
+### Q34
+Stem: Three-fraction plan. Duodenum receives 15.0 Gy to 5 cm³, 10.0 Gy to 10 cm³, and a point dose of 23.0 Gy. TG-101 lists a 5 cm³ threshold of 16.5 Gy, a 10 cm³ threshold of 11.4 Gy with no point maximum on that row, and a point maximum of 22.2 Gy. What fails?
+A. The 10 cm³ dose and the point dose
+B. Only the point dose
+C. Only the 5 cm³ dose
+D. Nothing, because 23.0 Gy is under the three-fraction cord point maximum of 21.9 Gy
+Answer: B
+Objective: III.8
+Why: 16.5 − 15.0 = 1.5 Gy under the 5 cm³ threshold, so that volume passes. 11.4 − 10.0 = 1.4 Gy under the 10 cm³ threshold, so that volume passes. 23.0 − 22.2 = 0.8 Gy over the point maximum, so the point dose fails. 23.0 Gy is above 21.9 Gy, and the cord maximum is the wrong organ.
+
+### Q35
+Stem: Three-fraction plan. Jejunum and ileum receive 16.8 Gy to 5 cm³ and a point dose of 26.0 Gy. TG-101 lists a three-fraction small-bowel threshold of 17.7 Gy to 5 cm³ and a point maximum of 25.2 Gy. What fails?
+A. Only the 5 cm³ dose
+B. Only the point dose
+C. Both
+D. Neither, because the QUANTEC peritoneal bowel correlate is V45 under 195 cm³
+Answer: B
+Objective: III.8
+Why: 17.7 − 16.8 = 0.9 Gy under the volume threshold, so the 5 cm³ dose passes. 26.0 − 25.2 = 0.8 Gy over the point maximum, so the point dose fails. The QUANTEC peritoneal volume is conventional fractionation, not this three-fraction table. Esophagus shares these three-fraction doses. That does not move the jejunum point maximum.
+
+### Q36
+Stem: Three-fraction plan. The great vessels receive 38.0 Gy to 10 cm³ and a point dose of 46.5 Gy. TG-101 lists a three-fraction great-vessel threshold of 39 Gy to 10 cm³ and a point maximum of 45 Gy. What fails?
+A. Only the 10 cm³ dose
+B. Both
+C. Only the point dose
+D. Neither, because 46.5 Gy is under the five-fraction great-vessel point maximum of 53 Gy
+Answer: C
+Objective: III.8
+Why: 39 − 38.0 = 1.0 Gy under the volume threshold, so the 10 cm³ dose passes. 46.5 − 45 = 1.5 Gy over the three-fraction point maximum, so the point dose fails. The five-fraction point maximum of 53 Gy is the wrong fractionation.
+
+### Q37
+Stem: Five-fraction plan. Trachea and large bronchus receive 17.0 Gy to 4 cm³ and a point dose of 38.0 Gy. TG-101 lists a five-fraction threshold of 16.5 Gy to 4 cm³ and a point maximum of 40 Gy. What fails?
+A. Only the 4 cm³ dose
+B. Only the point dose
+C. Both
+D. Neither, because the one-fraction trachea point maximum is 20.2 Gy
+Answer: A
+Objective: III.8
+Why: 17.0 − 16.5 = 0.5 Gy over the volume threshold, so the 4 cm³ dose fails. 40 − 38.0 = 2.0 Gy under the point maximum, so the point dose passes. A five-fraction total is not scored on the one-fraction point maximum.
+
+### Q38
+Stem: One-fraction lung SBRT. 1400 cm³ of lung is kept at or below 7 Gy. TG-101 asks for 1500 cm³ at or below 7 Gy for basic lung function, and for 1000 cm³ at or below 7.4 Gy on the pneumonitis row. Which statement matches those two rows?
+A. Both rows fail
+B. Basic lung function fails, and the 1000 cm³ pneumonitis row is met
+C. Both rows are met, because 1400 is larger than 1000
+D. Basic lung function is met, because 7 Gy is the one-fraction cord volume limit
+Answer: B
+Objective: III.8
+Why: Basic function needs 1500 cm³ at or below 7 Gy. 1500 − 1400 = 100 cm³ short, so that row fails. The pneumonitis row needs 1000 cm³ at or below 7.4 Gy. 1400 cm³ is more than 1000 cm³, and tissue kept at or below 7 Gy is also at or below 7.4 Gy, so that row is met. The cord limit of 7 Gy to 1.2 cm³ is not a lung volume.
+
+### Q39
+Stem: Five-fraction liver SBRT. 700 cm³ of liver is kept at or below 19.0 Gy. TG-101 lists 21 Gy as the five-fraction threshold for that 700 cm³, and this row has no point maximum. Does the critical volume pass?
+A. No. 19.0 Gy is above the one-fraction liver threshold of 9.1 Gy
+B. No. The conventional liver mean of 30–32 Gy is the row for five fractions
+C. Yes. 19.0 Gy is under 21 Gy
+D. No. A five-fraction liver plan is scored on the one-fraction threshold of 9.1 Gy
+Answer: C
+Objective: III.8
+Why: 21 − 19.0 = 2.0 Gy under the five-fraction threshold, so the 700 cm³ critical volume passes. The one-fraction threshold of 9.1 Gy is the wrong fractionation. The QUANTEC mean of 30–32 Gy is conventional fractionation.
+
+### Q40
+Stem: Five-fraction plan. 160 cm³ of renal cortex is kept at or below 17.5 Gy. TG-101 asks for 200 cm³ of renal cortex at or below 17.5 Gy. By how many cm³ is the spared volume short?
+A. 0 cm³
+B. 40 cm³
+C. 160 cm³
+D. 17.5 cm³
+Answer: B
+Objective: III.8
+Why: 200 − 160 = 40 cm³ short, so the critical volume fails. Quoting 160 cm³ reports the spared volume. Quoting 17.5 reports the threshold dose in Gy, not a volume. The conventional kidney mean of 15–18 Gy is a different fractionation.
+
+### Q41
+Stem: One-fraction spine plan. The cord receives 8.0 Gy to 1.2 cm³ and 9.5 Gy to 0.35 cm³, with a point dose of 13.0 Gy. TG-101 lists a 1.2 cm³ threshold of 7 Gy with no point maximum on that row, a 0.35 cm³ threshold of 10 Gy, and a point maximum of 14 Gy. What fails?
+A. Only the 1.2 cm³ dose
+B. The 0.35 cm³ dose and the point dose
+C. Only the point dose
+D. Nothing, because 8.0 Gy is under the 0.35 cm³ limit of 10 Gy
+Answer: A
+Objective: III.8
+Why: 8.0 − 7 = 1.0 Gy over the 1.2 cm³ threshold, so that volume fails. 10 − 9.5 = 0.5 Gy under the 0.35 cm³ threshold, so that volume passes. 14 − 13.0 = 1.0 Gy under the point maximum, so the point dose passes. The 1.2 cm³ row does not borrow a pass from the 0.35 cm³ limit of 10 Gy.
+
+### Q42
+Stem: Conventional fractionation. Esophagus mean dose is 37 Gy, and V35 is 42%. The correlates used here are mean under 34 Gy for grade 3 or higher acute esophagitis, and V35 under 50% for grade 2 or higher. What fails?
+A. Both
+B. Only the mean
+C. Only V35
+D. Neither, because V35 under 50% clears the mean
+Answer: B
+Objective: III.8
+Why: 37 − 34 = 3 Gy over the mean, so the mean fails. 50 − 42 = 8 percentage points under 50, so V35 passes. These are separate parameters. A passing V35 does not clear a mean over 34 Gy. V50 under 40% and V70 under 20% are the other grade 2 volume correlates, and this stem does not give them.
+
+### Q43
+Stem: Conventional prostate plan. Bladder reads V65 = 48%, V70 = 34%, V75 = 26%, and V80 = 12%. The correlate used here is one set: V65 ≤ 50%, V70 ≤ 35%, V75 ≤ 25%, V80 ≤ 15%. Which conclusion matches that set?
+A. The set is met because three bins pass
+B. The set is not met; only V75 is over its limit
+C. V65 fails because 48 is under 50
+D. V80 fails because 12 is under 15
+Answer: B
+Objective: III.8
+Why: V65: 48 ≤ 50, pass. V70: 34 ≤ 35, pass. V75: 26 − 25 = 1 percentage point over, fail. V80: 12 ≤ 15, pass. One failed bin fails the set. The bladder-primary maximum under 65 Gy is a different correlate and is not this prostate volume set.
+
+### Q44
+Stem: Conventional prostate plan. The mean dose to 95% of the penile bulb is 47 Gy. D90 is 53 Gy. This bank records mean dose to 95% of the gland under 50 Gy as D95 under 50 Gy, and it also uses D90 under 50 Gy. What fails?
+A. Both
+B. Only the mean dose to 95% of the gland
+C. Only D90
+D. Neither, because 53 Gy is under the D60–D70 correlate of 70 Gy
+Answer: C
+Objective: III.8
+Why: 50 − 47 = 3 Gy under 50, so the mean dose to 95% of the gland meets this bank’s D95 correlate. 53 − 50 = 3 Gy over, so D90 fails. D60–D70 under 70 Gy is a third summary correlate. Being under 70 Gy does not clear a D90 over 50 Gy.
+
+### Q45
+Stem: Conventional fractionation. Cochlear mean dose is 49 Gy. The correlate used here is a mean of 45 Gy or less. By how many Gy does 49 Gy exceed 45 Gy?
+A. 4 Gy
+B. 0 Gy, because the one-fraction TG-101 cochlea point maximum is 9 Gy and a conventional mean is not scored
+C. 49 Gy
+D. 45 Gy
+Answer: A
+Objective: III.8
+Why: 49 − 45 = 4 Gy over the conventional mean. The TG-101 one-fraction point maximum of 9 Gy is a stereotactic cell, not this conventional mean. Quoting 49 Gy reports the mean. Quoting 45 Gy reports the correlate.
+
+### Q46
+Stem: Conventional fractionation, and the stem does not add chemotherapy. Larynx mean dose is 42 Gy and V50 is 31%. The edema correlates used here are mean under 44 Gy or V50 under 27%. Which parameter fails?
+A. The mean
+B. V50
+C. Both
+D. Neither, because a passing mean clears V50
+Answer: B
+Objective: III.8
+Why: 44 − 42 = 2 Gy under 44, so the mean passes. 31 − 27 = 4 percentage points over, so V50 fails. The two figures are alternate edema parameters. A passing mean does not clear a failing V50 when the stem gives both. Vocal-dysfunction maximum under 66 Gy is a different endpoint.
+
+### Q47
+Stem: Conventional partial-brain plan. Brain Dmax is 66 Gy. The under-3% symptomatic-necrosis correlate used here is Dmax under 60 Gy. By how many Gy does 66 Gy exceed 60 Gy?
+A. 6 Gy
+B. 0 Gy, because 66 Gy is under the 5% point of 72 Gy
+C. 66 Gy
+D. 60 Gy
+Answer: A
+Objective: III.8
+Why: 66 − 60 = 6 Gy over the under-3% correlate. 72 Gy is the summary’s about-5% point and 90 Gy is the about-10% point. Being under 72 Gy does not meet Dmax under 60 Gy. Quoting 66 Gy reports the maximum. Quoting 60 Gy reports the correlate.
+
+### Q48
+Stem: Conventional fractionation. Whole-stomach D100 is 48 Gy. The correlate used here is D100 under 45 Gy. By how many Gy does 48 Gy exceed 45 Gy?
+A. 3 Gy
+B. 0 Gy, because the five-fraction TG-101 stomach point maximum is 32 Gy and this plan is not SBRT
+C. 48 Gy
+D. 45 Gy
+Answer: A
+Objective: III.8
+Why: 48 − 45 = 3 Gy over D100 under 45 Gy. The TG-101 five-fraction point maximum of 32 Gy is a stereotactic cell. A conventional D100 is not scored on that cell. The QUANTEC summary does not give a separate conventional duodenum number to put in its place.
+
+### Q49
+Stem: Conventional plan. Pericardium mean dose is 24 Gy and V30 is 50%. The pericarditis correlates used here are mean under 26 Gy and V30 under 46%. What fails?
+A. Only the mean
+B. Both
+C. Only V30
+D. Neither, because V25 under 10% is the pericarditis limit
+Answer: C
+Objective: III.8
+Why: 26 − 24 = 2 Gy under 26, so the mean passes. 50 − 46 = 4 percentage points over, so V30 fails. A passing mean does not clear a failing V30. V25 under 10% is the summary’s long-term cardiac-mortality correlate, a different endpoint.
+
+### Q50
+Stem: Conventional fractionation, both kidneys. Combined-kidney V12 is 62%, and the bilateral mean dose is 16 Gy. The correlates used here are V12 under 55% and a mean under 15–18 Gy. What fails?
+A. Only V12
+B. Only the mean, because 16 Gy is above 15 Gy
+C. Both
+D. Neither, because 16 Gy is inside 15–18 Gy and that mean replaces V12
+Answer: A
+Objective: III.8
+Why: 62 − 55 = 7 percentage points over, so V12 fails. 16 Gy is inside the 15–18 Gy mean band, so the mean passes. The mean does not replace the volume correlate. Lung V20 ≤ 30% is not this kidney percent.
+
 ## Physical Density of Materials
 
 ### Q1
@@ -257,3 +509,53 @@ D. 4 g/cm²
 Answer: C
 Objective: I.9
 Why: Mass thickness = physical density × thickness = 2.5 g/cm³ × 4 cm = 10 g/cm². That product, not the HU by itself, is what attenuation cares about in this hand estimate. Correct choice: 10 g/cm². 4 / 2.5 = 1.6 would be a division, not mass thickness. 2.5 is the density alone. 4 cm times 1 g/cm³ would be water. This slab is 2.5 g/cm³.
+
+### Q6
+Stem: Which material has a physical density of 0.92 g/cm³ in this lesson?
+A. Lung
+B. Fat
+C. Water
+D. Muscle
+Answer: B
+Objective: I.9
+Why: Fat is 0.92 g/cm³. Lung in this lesson is about 0.25–0.30. Water is 1.00. Muscle stays about 1.04.
+
+### Q7
+Stem: A phantom plastic is stated at 1.19 g/cm³. Which material matches that density in this lesson?
+A. Polystyrene
+B. PMMA
+C. Water
+D. Concrete
+Answer: B
+Objective: I.9
+Why: PMMA is 1.19 g/cm³. Polystyrene is 1.05. Water is 1.00. Concrete is about 2.35.
+
+### Q8
+Stem: A shielding alloy is stated at about 9.4 g/cm³. Which material matches that density in this lesson?
+A. Lead
+B. Cerrobend
+C. Tungsten
+D. Copper
+Answer: B
+Objective: I.9
+Why: Cerrobend is about 9.4 g/cm³. Lead is 11.3. Tungsten is 19.3. Copper is 8.96.
+
+### Q9
+Stem: A hip implant alloy is stated at 4.5 g/cm³. Which material matches that density in this lesson?
+A. Aluminum
+B. Titanium
+C. Steel
+D. Bone
+Answer: B
+Objective: I.9
+Why: Titanium is 4.5 g/cm³. Aluminum is 2.7. Steel is about 7.8. Bone in this lesson stays about 1.85, so the implant is not assigned the bone row.
+
+### Q10
+Stem: Which pairing matches this lesson?
+A. Air about 0.001, lung about 0.25–0.30, concrete about 2.35
+B. Air about 0.25, lung 1.00, concrete 1.85
+C. Lead 9.4, Cerrobend 11.3, tungsten 7.8
+D. Muscle 1.00, water about 1.04, fat 1.85
+Answer: A
+Objective: I.9
+Why: Air stays about 0.001, lung about 0.25–0.30, and concrete is about 2.35. Air is not the lung range. Lead is 11.3, Cerrobend is about 9.4, and tungsten is 19.3. Steel is about 7.8. Muscle stays about 1.04, water is 1.00, and fat is 0.92. Bone stays about 1.85.

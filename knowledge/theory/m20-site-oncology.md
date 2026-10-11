@@ -120,7 +120,7 @@ The margin is tight because the falloff is steep. The dose grid has to be fine e
 
 **Total skin electron irradiation.** Stanford technique uses 6 patient positions. Recognize the technique rather than a single universal skin dose. Details are in the special-procedures module.
 
-**Other regimens worth recognizing so they do not get sorted into the list above**
+**Other regimens.** These are worth recognizing so they do not get sorted into the list above.
 
 - Esophagus, typical combined-modality dose: 50.4 Gy in 28 fractions. Same numbers as long-course rectum, different organs (heart, lungs, cord).
 - Seminoma, typical stage I para-aortic dose: 20 Gy in 10 fractions. A low dose in the abdomen is not automatically palliative bone met coverage.
@@ -138,7 +138,7 @@ The margin is tight because the falloff is steep. The dose grid has to be fine e
 
 **Bladder.** Organ preservation follows a maximal transurethral resection and uses concurrent chemotherapy. Two recognition schedules are about 64 Gy in 32 fractions and 55 Gy in 20 fractions. The technique is 6 MV IMRT or VMAT. Whole-bladder treatment is often simulated with an empty bladder. A partial-bladder boost is often simulated with a full bladder so small bowel is pushed away. Node-negative organ preservation treats the bladder. Pelvic nodes are added for node-positive disease. Inguinal nodes are not the bladder volume. Electrons do not reach the bladder. Small bowel limits the high dose.
 
-**Pancreas.** Conventional chemoradiation is 45–50.4 Gy, commonly 50.4 Gy in 28 fractions of 1.8 Gy, with chemotherapy. The technique is 6 MV IMRT, and motion is handled with a 4DCT or with breath hold. That 50.4 Gy volume includes the gross tumor and the regional nodes at the celiac axis and the superior mesenteric artery. The stereotactic alternative is often 33 Gy in 5 fractions to the gross target only, with no elective nodes. The duodenum limits both. Stomach, small bowel, kidneys, and liver are the other abdominal limits.
+**Pancreas.** Conventional chemoradiation is 45–50.4 Gy, commonly 50.4 Gy in 28 fractions of 1.8 Gy, with chemotherapy. The technique is 6 MV IMRT, and motion is handled with a 4DCT or with breath hold. The 50.4 Gy target is the gross tumor. Regional nodes on that course are the celiac and superior mesenteric stations, not the inguinal nodes. The stereotactic alternative is often 33 Gy in 5 fractions to the gross target only, with no elective nodes. The duodenum limits both. Stomach, small bowel, kidneys, and liver are the other abdominal limits.
 
 **Stomach.** Postoperative chemoradiation is 45 Gy in 25 fractions of 1.8 Gy with 5-FU. A tumor-bed boost can bring the total to 50.4 Gy. The volume covers the preoperative tumor bed, the anastomosis or the residual stomach, and the regional nodes along the celiac axis and the porta hepatis. It does not include inguinal nodes. The technique is 6 MV IMRT or a multi-field arrangement. A simple anterior-posterior pair exits through a kidney. At least one kidney has to stay out of the high dose. Liver, cord, and small bowel are the other limits. A proximal field can also see the heart.
 

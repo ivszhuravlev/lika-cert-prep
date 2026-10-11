@@ -660,13 +660,13 @@ Why: The PDD was measured at SSD 125 cm, so it already carries inverse square fr
 
 ### Q24
 Stem: A 6 MeV electron beam delivers 1.000 cGy/MU at dmax for the open 10 by 10 cm cone at a nominal SSD of 100 cm. The cutout factor for this insert is 0.940. The effective SSD is 75 cm. dmax is 1.2 cm. The cone is stood off so the treatment SSD is 110 cm. The prescription is 250 cGy at dmax. How many MU, to the nearest 0.1 MU?
-A. 300.7 MU
+A. 300.9 MU
 B. 266.0 MU
 C. 319.9 MU
 D. 340.3 MU
 Answer: D
 Objective: IV.3
-Why: The air gap is 110 − 100 = 10 cm. With the effective SSD, the distance ratio from the calibration dmax to the treatment dmax is (75 + 1.2) / (75 + 1.2 + 10) = 76.2 / 86.2 = 0.8843399. Squared, 0.8843399 × 0.8843399 = 0.7814396. Cutout product = 0.7814396 × 0.940 = 0.7345532. The prescription is at dmax, so no further depth factor is applied. MU = 250 / 0.7345532 = 340.34, which rounds to 340.3 MU. Ignoring the air gap and dividing only by the cutout gives 250 / 0.940 = 265.96 MU, reported as 266.0 MU. Keeping the gap and dropping the cutout gives 250 / 0.7814396 = 319.92 MU, reported as 319.9 MU. Using the distance ratio once, without squaring, gives 250 / (0.940 × 0.8843399) = 250 / 0.8312795 = 300.74 MU, reported as 300.7 MU.
+Why: The air gap is 110 − 100 = 10 cm. With the effective SSD, the distance ratio from the calibration dmax to the treatment dmax is (75 + 1.2) / (75 + 1.2 + 10) = 76.2 / 86.2 = 0.8839907. Squared, 0.8839907 × 0.8839907 = 0.7814396. Cutout product = 0.7814396 × 0.940 = 0.7345532. The prescription is at dmax, so no further depth factor is applied. MU = 250 / 0.7345532 = 340.34, which rounds to 340.3 MU. Ignoring the air gap and dividing only by the cutout gives 250 / 0.940 = 265.96 MU, reported as 266.0 MU. Keeping the gap and dropping the cutout gives 250 / 0.7814396 = 319.92 MU, reported as 319.9 MU. Using the distance ratio once, without squaring, gives 250 / (0.940 × 0.8839907) = 250 / 0.8309513 = 300.86 MU, reported as 300.9 MU.
 
 ### Q25
 Stem: A 6 MV arc is treated isocentrically at SAD 100 cm with the open 10 by 10 cm calibration field, on axis. Calibration is 1.000 cGy/MU at dmax for that field at 100 cm. Four equally spaced gantry angles see TMRs of 0.90, 0.82, 0.74, and 0.66. The isocenter prescription is 200 cGy. How many MU, to the nearest 0.1 MU?
