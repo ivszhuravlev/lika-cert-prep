@@ -136,6 +136,16 @@ Answer: A
 Objective: I.6
 Why: Once the source position and the image plane are in the planning model, the system can remove the projection and report true distance. There is no universal 1.44 or 1.25 factor. Pixel size is millimeters, not HU.
 
+### Q6
+Stem: Collimator field size is defined at isocenter, 100 cm from the source. The isocenter is 5 cm anterior to a humerus, and both an AP beam and a PA beam must cover 10 cm of that bone. Which opening, quoted at isocenter, has to be larger?
+A. The PA opening. At the bone the posterior beam has traveled only 95 cm, so it must be opened more at isocenter to still cover 10 cm there
+B. The AP opening. The bone is 105 cm from the anterior source, so the AP collimator setting at isocenter must be larger than 10 cm
+C. They are equal, because opposed fields are defined on the skin and divergence stops at isocenter
+D. The PA opening is the smaller one, because a deeper target always uses the entrance field size with no divergence
+Answer: A
+Objective: I.6
+Why: Field width scales with distance from the source. For a width of 10 cm at the bone, the isocenter opening is 10 × (100 / distance to the bone). The AP source reaches the bone at 105 cm, so the AP opening at isocenter is 10 × 100/105 = 9.52 cm. The PA source reaches the bone at 95 cm, before isocenter, so the PA opening at isocenter is 10 × 100/95 = 10.53 cm. The PA field, quoted at isocenter, is the larger one. Setting the AP opening larger than 10 cm would overshoot the bone after the beam diverges past isocenter. Skin definition and a claim of zero divergence both drop the similar triangles.
+
 ## Magnification Quiz
 
 ### Q1

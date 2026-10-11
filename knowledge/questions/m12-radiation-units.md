@@ -54,6 +54,16 @@ Answer: A
 Objective: I.10
 Why: Effective dose sums equivalent dose in each organ times a tissue weighting factor wT. It is a protection quantity, not a prescription dose. Decay constant, magnification, and HU are unrelated conversions.
 
+### Q6
+Stem: A report lists air kerma as 40 cGy. Which statement about that unit is right?
+A. The centigray is a legitimate unit of kerma, and 40 cGy is 0.40 Gy, not 4000 Gy
+B. One centigray equals 100 Gy, so the report means 4000 Gy
+C. The centigray is absorbed dose only and cannot be used for kerma
+D. The centigray equals 100 Gy of exposure, so the report should be rewritten as 4000 R
+Answer: A
+Objective: I.10
+Why: Kerma and absorbed dose are both expressed in gray, so the centigray is a legitimate kerma unit. 1 cGy = 0.01 Gy, and 40 cGy = 0.40 Gy. Treating the centigray as 100 Gy multiplies by 10,000 and turns 40 cGy into 4000 Gy. Exposure stays in roentgen or C/kg. It is a different quantity from kerma.
+
 ## Unit Conversion Tutorial
 
 ### Q1

@@ -309,41 +309,301 @@ Objective: III.4
 Why: At about C1 the soft tissue lateral and posterior to the mandibular ramus, anterior to the mastoid and the ear, is the parotid. The submandibular gland is farther anterior and inferior, under the mandibular body and above the hyoid. The spinal cord is inside the canal, not on the lateral face. The cricoid is the complete ring in the anterior midline neck, below the thyroid cartilage, not beside the ramus.
 
 ### Q30
-Stem: The axial slice is not in this item. The picture is missing. For a head-first supine scan displayed as if looking from the feet, which orientation rule is applied before any structure is named?
-A. Image left is the patient's left, and anterior is at the bottom
-B. Image left is the patient's left, and anterior is at the top
-C. Image left is the patient's right, and anterior is at the top
-D. Image left is the patient's right, and anterior is at the bottom
+Stem: Head-first supine axial slice through the orbits, viewed from the feet, with anterior at the top. The globe is the landmark. Which structure is anterior inside that globe?
+A. Optic nerve, which leaves the posterior pole and runs through the orbital fat
+B. Cochlea, in the petrous temporal bone lateral to the brainstem
+C. Lens
+D. Midbrain, midline and posterior to the suprasellar cistern
 Answer: C
 Objective: III.4
-Why: On an axial image viewed from the feet, the patient's right is on the image left and anterior is at the top. Naming image left as the patient's left puts the contour on the wrong side. A missing picture does not change that display rule.
+Why: The lens is the small biconvex structure in the anterior globe, behind the cornea and in front of the vitreous. On this display the patient’s right globe is on the image left, and anterior stays at the top. The optic nerve is posterior to the lens: it leaves the back of the globe. The cochlea is in the petrous temporal bone, not in the orbit. The midbrain is intracranial, posterior to the suprasellar cistern.
 
 ### Q31
-Stem: The upper-abdomen slice is not in this item. The picture is missing. Which rule names the organs under the two hemidiaphragms?
-A. The large homogeneous organ in the patient's right upper quadrant is the liver, and the smaller posterolateral organ on the patient's left is the spleen
-B. Image left is the liver, so the liver is on the patient's left
-C. The spleen is the large organ in the patient's right upper quadrant
-D. Both are kidneys, and the right kidney is the higher one
+Stem: Head-first supine axial slice at the skull base, viewed from the feet, with anterior at the top. The pons is the midline landmark, posterior to the clivus and anterior to the fourth ventricle. Which structure is on the patient’s right of the pons, in the petrous temporal bone, and therefore on the image left?
+A. Right cochlea
+B. Left cochlea
+C. Left lens
+D. Pituitary, sitting lateral to the pons inside the petrous bone
 Answer: A
 Objective: III.4
-Why: The liver is the large organ in the patient's right upper quadrant, under the right hemidiaphragm. The spleen is smaller and posterolateral on the patient's left, against the left hemidiaphragm and the ribs. On a feet-up display, image left is the patient's right, which is the liver's side. That display fact is not a reason to call the liver left-sided. The right kidney usually sits lower than the left because the liver occupies the space above it.
+Why: Viewed from the feet, the patient’s right is image left. The cochlea is the spiral in the petrous temporal bone, lateral to the brainstem, anterior to the semicircular canals, and medial to the middle ear. The right cochlea is the petrous structure on the patient’s right. The lens is in the anterior globe. The pituitary is midline in the sella, anterior and superior to the pons, not inside the temporal bone.
 
 ### Q32
-Stem: The male pelvic slice is not in this item. The picture is missing. Which rule places the air-containing structure and the lateral bones relative to the midline gland that surrounds the urethra?
-A. The bladder is immediately posterior to the gland, and the lateral bones are inguinal nodes
-B. The seminal vesicles are the air column immediately posterior to the gland on this low slice
-C. The femoral heads are the air-containing structure, and the rectum is the anterior midline bone
-D. The rectum is the air-containing structure immediately posterior to the gland, and the round lateral bones are the femoral heads
-Answer: D
-Objective: III.4
-Why: The prostate surrounds the urethra and lies posterior to the pubic symphysis. The rectum is immediately posterior and may contain air. The femoral heads are the round bones in the acetabula. They are bone, not nodes. The bladder is anterior and superior. The seminal vesicles are the bow-tie on the slice above the gland, and they are soft tissue, not the air column.
-
-### Q33
-Stem: The neck slice is not in this item. The picture is missing. Which rule separates the parotid, the submandibular gland, and the brachial plexus?
-A. The parotid is under the mandibular body above the hyoid, and the plexus is inside the spinal canal
-B. The parotid wraps the mandibular ramus in front of the mastoid and the ear; the submandibular gland is under the mandibular body; the plexus has left the foramina and sits in the scalene gap
-C. The submandibular gland is at C1 beside the ear, and the parotid is the complete cricoid ring
-D. The two glands are one structure, and the plexus is the cricoid
+Stem: Head-first supine axial slice through the left atrium, viewed from the feet, with anterior at the top. The descending aorta is the round vessel on the patient’s left of the vertebral body, which places it on the image right. Which structure lies anterior to that aorta, between the aorta and the left atrium?
+A. Right ventricle, immediately behind the sternum
+B. Esophagus
+C. IVC, embedded in the posterior liver
+D. Right middle lobe, against the right heart border
 Answer: B
 Objective: III.4
-Why: At about C1 the parotid is lateral and posterior to the mandibular ramus, in front of the mastoid and the ear. The submandibular gland is farther anterior and inferior, under the mandibular body and above the hyoid. The brachial plexus has already left the canal. On a supraclavicular slice it is the soft-tissue bundle between the scalene muscles, posterior to the clavicle, not a structure inside the canal. The cricoid is the complete ring in the anterior midline neck.
+Why: Behind the heart the esophagus lies anterior to the descending aorta and immediately posterior to the left atrium. It is usually slightly to the patient’s right of the descending aorta. That aorta is the left-of-spine vessel, so on this display it is image right. The right ventricle is the anterior chamber behind the sternum. The IVC is the patient’s right-sided vessel and, in the upper abdomen, sits in the posterior liver. The right middle lobe is lung against the right heart border, not the soft tissue between the left atrium and the aorta.
+
+### Q33
+Stem: Head-first supine axial slice of the male pelvis below the prostate apex, viewed from the feet, with anterior at the top. The anal canal is the posterior midline landmark. Which structure is anterior to the anal canal, in the midline, between the crura?
+A. Seminal vesicles, the bow-tie on the slice above the prostate
+B. Femoral heads, the round bones in the acetabula
+C. Penile bulb
+D. Bladder, the fluid-filled organ on this same perineal slice
+Answer: C
+Objective: III.4
+Why: Below the prostate apex and the urogenital diaphragm, the penile bulb is the midline corpus spongiosum between the crura. It lies anterior to the anal canal. Head-first supine keeps anterior at the top. The seminal vesicles are the bow-tie above the prostate, posterior to the bladder. The femoral heads are lateral bones in the acetabula, higher than this perineal slice. The bladder is anterior and superior to the prostate, not the erectile tissue below the apex.
+
+### Q34
+Stem: Head-first supine axial slice through the orbits, viewed from the feet, with anterior at the top. On the image left, a soft-tissue cord runs from the posterior globe through the orbital fat to the orbital apex. A small biconvex density sits in the front of that same globe. Which nerve is the cord, and what is the biconvex density?
+A. Patient’s left optic nerve, and the density is the cochlea
+B. Optic chiasm still inside the orbit, and the density is the pituitary
+C. Patient’s right optic nerve, and the density is the lens
+D. Brainstem, and the density is the hippocampus
+Answer: C
+Objective: III.4
+Why: Viewed from the feet, image left is the patient’s right, so the cord in that orbit is the right optic nerve. The nerve is posterior to the globe and travels through the orbital fat to the apex and the optic canal. The biconvex density in the front of the globe is the lens. The chiasm is intracranial and midline, in the suprasellar cistern, not inside the orbit. The cochlea is in the petrous temporal bone. The brainstem is midline in the posterior fossa, and the hippocampus is medial temporal lobe beside the midbrain.
+
+### Q35
+Stem: Head-first supine axial slice just above the sella, viewed from the feet. A midline soft-tissue band lies in the suprasellar cistern, superior to the pituitary and anterior to the midbrain. The optic nerves reach it from anterolateral. What is the band?
+A. Optic chiasm
+B. Right cochlea
+C. Lens
+D. Pituitary, inside the sella on this same suprasellar slice
+Answer: A
+Objective: III.4
+Why: The optic chiasm is the midline band in the suprasellar cistern. It sits superior to the pituitary, so a sellar mass meets it from below, and it sits anterior to the midbrain. The optic nerves enter from anterolateral and the tracts leave posterolateral. The pituitary is the soft tissue inside the sella, on the next slice down, with the cavernous carotids lateral to it. The cochlea is lateral, in the petrous bone. The lens is in the anterior globe.
+
+### Q36
+Stem: Head-first supine axial slice through the sella, viewed from the feet. The pituitary is the midline soft tissue in the sella, with the sphenoid sinus anterior to it and the pons posterior to it. Which structures are immediately on either side of the pituitary?
+A. The hippocampi, in the medial temporal lobes
+B. The femoral heads
+C. Both lenses
+D. The cavernous sinuses, each containing a cavernous internal carotid artery
+Answer: D
+Objective: III.4
+Why: The cavernous sinuses flank the sella. The cavernous segment of the internal carotid artery runs in each sinus, so the vessels immediately lateral to the pituitary are those carotids. The sphenoid sinus is anterior. The clivus, the basilar artery, and the pons are posterior. The chiasm is superior, on a higher slice. The hippocampi are beside the midbrain, higher and more lateral. The lenses are in the globes. The femoral heads are the round bones in the acetabula.
+
+### Q37
+Stem: Head-first supine axial slice at the midbrain, viewed from the feet, with anterior at the top. The cerebral peduncles are the midline landmark. Which structure is on the patient’s left of the midbrain, in the medial temporal lobe, in the floor of the temporal horn, and therefore on the image right?
+A. Right hippocampus
+B. Left hippocampus
+C. Left lens
+D. Pituitary
+Answer: B
+Objective: III.4
+Why: The hippocampus is the paired medial temporal structure lateral to the ambient cistern and the midbrain, in the floor of the temporal horn. The patient’s left hippocampus is on the patient’s left, which is image right when the slice is viewed from the feet. The right hippocampus is image left. The lens is in the anterior globe. The pituitary is midline in the sella, inferior to the chiasm. The amygdala is the more anterior medial temporal gray matter, in front of the hippocampal head.
+
+### Q38
+Stem: Head-first supine axial slice through the posterior fossa, viewed from the feet. A bulky midline structure lies posterior to the clivus and the basilar artery, and anterior to the fourth ventricle. What is that midline structure, and what lies posterior to the fourth ventricle?
+A. Cerebellum anterior to the ventricle, and the pons posterior to it
+B. Pituitary, and the sphenoid sinus posterior to the ventricle
+C. Pons anterior to the ventricle, and the cerebellum posterior to it
+D. Esophagus, and the descending aorta posterior to the ventricle
+Answer: C
+Objective: III.4
+Why: The pons is the bulky part of the brainstem at this level. It sits posterior to the clivus and the basilar artery and anterior to the fourth ventricle. The cerebellum is posterior to the fourth ventricle and also extends lateral to the midline. The pituitary is in the sella, anterior to the clivus. The esophagus and the descending aorta are thoracic. The midbrain is the higher brainstem slice, at the cerebral peduncles. The medulla is the smaller slice at the foramen magnum and continues as the spinal cord.
+
+### Q39
+Stem: Axial neck slice at the cricoid cartilage, about C6. The cricoid is the complete ring. Soft tissue lies immediately posterior to the trachea, slightly to the patient’s left, in front of the vertebral body. A contour of that posterior soft tissue has been started at the hyoid. Where does this posterior structure begin?
+A. At the hyoid, about C3, with the true vocal cords
+B. At the sternal angle, with the carina
+C. At L1–L2, with the conus
+D. At the lower border of the cricoid, about C6
+Answer: D
+Objective: III.4
+Why: The esophagus begins at the lower border of the cricoid, about C6, where the pharynx ends. On this slice it is the soft tissue immediately posterior to the trachea, usually slightly left of midline, anterior to the vertebral body. The hyoid is about C3, above the larynx, so an esophageal contour that starts there is too high. True-cord level is the thyroid cartilage, about C4–C5, still above the start of the esophagus. The carina is T4–T5. The conus is the end of the spinal cord at about L1–L2.
+
+### Q40
+Stem: The esophagus is followed caudally through the chest. It passes behind the left atrium, anterior to the descending aorta, and then leaves the thorax. At which vertebral level does it pass through the diaphragm?
+A. C6, where it begins
+B. T10
+C. T4–T5, the carina behind the sternal angle
+D. L4, the aortic bifurcation
+Answer: B
+Objective: III.4
+Why: The esophageal hiatus is at about T10, slightly left of midline. The esophagus begins higher, at the cricoid, about C6. The aortic arch and the left main bronchus cross it at about T4–T5, behind the sternal angle, and it lies behind the left atrium in the mid-thorax. The aortic bifurcation at about L4 is in the abdomen, below the diaphragm. The IVC crosses the diaphragm at about T8, and the aorta crosses at about T12.
+
+### Q41
+Stem: At the carina, about T4–T5, the trachea divides. One main bronchus is shorter, wider, and more vertical. The other is longer, more horizontal, and passes under the aortic arch. Which bronchus is the short vertical one, and what lies immediately posterior to the trachea above the carina?
+A. Right main bronchus; the esophagus
+B. Left main bronchus; the right ventricle
+C. Right main bronchus; the lens
+D. Left main bronchus; the spleen
+Answer: A
+Objective: III.4
+Why: The right main bronchus is shorter, wider, and more vertical. The left main bronchus is longer and more horizontal and courses under the aortic arch. From the cricoid at about C6 down to the carina, the trachea is the anterior air column and the esophagus is immediately posterior to it. The right ventricle is the anterior cardiac chamber, inferior to this airway split. The lens is in the globe. The spleen is in the left upper abdomen.
+
+### Q42
+Stem: Axial chest slice at the level of the heart, head-first supine, viewed from the feet. On the patient’s left, lung anterior to the oblique fissure lies against the left heart border. Lung posterior to that fissure lies against the posterior ribs. What is the anterior portion, and is it a separate lobe?
+A. Right middle lobe, counted as a third lobe of the left lung
+B. Left lower lobe, anterior to the fissure
+C. Lingula, which is part of the left upper lobe
+D. Right upper lobe, placed on the patient’s left
+Answer: C
+Objective: III.4
+Why: The left lung has two lobes, upper and lower, separated by the oblique fissure. The lingula is the anteroinferior part of the left upper lobe, against the left heart border. It is not a middle lobe. Posterior to the oblique fissure is the left lower lobe. The right middle lobe is on the patient’s right, anterior and below the horizontal fissure. Viewed from the feet, the patient’s left lung is image right.
+
+### Q43
+Stem: Axial slice through the right hilum. The horizontal fissure is at about this level. Which right-lung region is anterior and below that fissure, against the right heart border, and which region is posterior to the oblique fissure?
+A. Right upper lobe anteriorly, and the lingula posteriorly
+B. Lingula anteriorly, and the left lower lobe posteriorly
+C. Right lower lobe anteriorly, and the right upper lobe posteriorly
+D. Right middle lobe anteriorly, and the right lower lobe posteriorly
+Answer: D
+Objective: III.4
+Why: The right lung has three lobes. Above the horizontal fissure, the anterior lung is the right upper lobe. Below the horizontal fissure, the lung against the right heart border is the right middle lobe. Posterior to the oblique fissure is the right lower lobe. The lingula and the left lower lobe are on the patient’s left. The lower lobe is the posterior region on this slice.
+
+### Q44
+Stem: An adult axial slice at L4 shows the lumbar vertebral canal. The iliac crests are the surface landmark for this level, and the aorta has bifurcated. What neural structure is inside the thecal sac here?
+A. Spinal cord, because the cord continues to the sacrum
+B. Cauda equina
+C. Brachial plexus, between the scalenes
+D. Conus medullaris, which ends at L4
+Answer: B
+Objective: III.4
+Why: In an adult the spinal cord ends as the conus medullaris at about L1–L2. Below the conus, the lumbar and sacral nerve roots form the cauda equina inside the thecal sac. A slice at L4 shows those roots. The thecal sac itself continues to about S2. The brachial plexus is in the supraclavicular fossa, from roots C5 through T1. L4 is also the usual level of the aortic bifurcation and of the iliac crests.
+
+### Q45
+Stem: Two laryngeal landmarks are used as vertebral levels. The shield cartilage, open posteriorly, sits at true-cord level. The only complete ring sits immediately below it. Which levels are those two cartilages, shield then complete ring?
+A. Thyroid cartilage at about C4–C5, and cricoid at about C6
+B. Hyoid at C3, and thyroid cartilage at T4
+C. Cricoid at C3, and thyroid cartilage at L4
+D. Thyroid cartilage at T2–T3, and cricoid at the sternal angle
+Answer: A
+Objective: III.4
+Why: The thyroid cartilage is the shield, open posteriorly, at about C4–C5, and the true vocal cords sit at that cartilage. The cricoid is the complete ring immediately below it, at about C6, with the broad posterior lamina. The trachea and the esophagus begin at the lower border of the cricoid. The hyoid is higher, at about C3. The suprasternal notch is about T2–T3, and the sternal angle is the T4–T5 disc.
+
+### Q46
+Stem: A planning CT is scrolled to the top of the manubrium, at the jugular notch, and then to the manubriosternal joint, where the second costal cartilage meets the sternum. Which vertebral levels are those two surface landmarks, notch then joint?
+A. C6, then C3
+B. L4, then L5
+C. About T2–T3, then the T4–T5 disc
+D. T10, then T8
+Answer: C
+Objective: III.4
+Why: The suprasternal, or jugular, notch is about T2–T3. The sternal angle, the manubriosternal joint, is at the T4–T5 disc, and the carina lies behind it. T10 is the esophageal hiatus. T8 is where the IVC crosses the diaphragm. C6 is the cricoid. L4 is the aortic bifurcation and the iliac crests.
+
+### Q47
+Stem: The umbilicus is marked on a slim adult. Its sensory dermatome is T10. Which vertebral statement belongs on the planning CT?
+A. The umbilicus is vertebral T10, the same number as the dermatome, and that level is the carina
+B. The umbilicus is C6, because the dermatome number is ignored
+C. The umbilicus is the conus, so the cord is contoured to the skin mark
+D. The umbilicus lies about at the L3–L4 disc in a slim adult, and the iliac crests are the reliable landmark for L4
+Answer: D
+Objective: III.4
+Why: Dermatome T10 is the sensory level of the skin around the umbilicus. It is not a vertebral level. Vertebral T10 is the esophageal hiatus. In a slim adult the umbilicus lies about at the L3–L4 disc, and habitus moves it, so it is a soft landmark. The iliac crests mark about L4, which is also the usual level of the aortic bifurcation. The carina is T4–T5. The conus is inside the canal at about L1–L2.
+
+### Q48
+Stem: Axial slice inferior to the prostate apex and the urogenital diaphragm. A midline erectile body contains the urethra. Paired erectile bodies lie lateral to it, along the ischiopubic rami, and do not contain the urethra. What is the midline body, and what are the lateral bodies?
+A. Prostate, and the lateral bodies are femoral heads
+B. Penile bulb, and the lateral bodies are the crura
+C. Seminal vesicles, and the lateral bodies are obturator nodes
+D. Rectum, and the lateral bodies are the seminal vesicles
+Answer: B
+Objective: III.4
+Why: The penile bulb is the proximal corpus spongiosum, midline, inferior to the prostate apex. The urethra runs through it. The crura are the corpora cavernosa, lateral along the ischiopubic rami, and they do not contain the urethra. The prostate is superior to this slice and surrounds the prostatic urethra above the urogenital diaphragm. The seminal vesicles are the bow-tie above the prostate. The rectum and anal canal are posterior to the bulb. The femoral heads are the round bones in the acetabula.
+
+### Q49
+Stem: On a pelvic axial slice, several central loops show folds that cross the full width of the lumen, and the loops change position from day to day. A larger-caliber loop lies on the patient’s left and then reaches the sacral hollow, where it loses its mesentery and becomes a fixed posterior midline structure. Which is the mobile central bowel, and which is the fixed posterior structure?
+A. Small bowel is the mobile central loops; the rectum is the fixed posterior midline structure, reached through the sigmoid
+B. Sigmoid is the central bowel with full-width folds; the aorta is the fixed sacral structure
+C. Rectum is the mobile left-sided loop; small bowel is fixed in the sacral hollow
+D. Both loops are the penile bulb
+Answer: A
+Objective: III.4
+Why: Small-bowel folds, the valvulae conniventes, cross the full lumen. Those loops are mesenteric and mobile, and they sit centrally, including above the bladder. Colonic haustra do not cross the full lumen. The sigmoid is the colon of the left iliac fossa and the pelvic loop that leads to the rectum. In the sacral hollow the rectum is the fixed posterior midline structure, directly behind the prostate on a male slice. The aorta is the round vessel on the patient’s left of the lumbar spine, and it has bifurcated by the mid-pelvis. The penile bulb is erectile tissue inferior to the prostate apex.
+
+### Q50
+Stem: Head-first supine axial slice through the chest, viewed from the feet, with anterior at the top. On the image right, soft tissue lies anterior to the muscle that runs from the sternum and the clavicle toward the humerus. Ribs and lung lie deep to that muscle. Which breast is the soft tissue, and what is the muscle immediately behind it?
+A. Patient’s right breast, anterior to the spleen
+B. Patient’s left breast, anterior to pectoralis minor, with pectoralis major deep to the ribs
+C. Patient’s right breast, because image right is the patient’s right
+D. Patient’s left breast, anterior to pectoralis major
+Answer: D
+Objective: III.4
+Why: Viewed from the feet, image right is the patient’s left. The breast is the soft tissue anterior to pectoralis major. Pectoralis major is the superficial muscle from the clavicle, sternum, and ribs toward the humerus. Pectoralis minor lies deep to it. The chest wall deep to the breast is that muscle, the ribs, and the intercostal muscles. The lung is deep to the ribs. The spleen is the posterolateral organ in the left upper abdomen.
+
+### Q51
+Stem: Axillary nodes lie lateral to the lateral border of pectoralis minor, along the axillary vessels in the low axilla. Which level is that?
+A. Axillary level III
+B. Internal mammary
+C. Axillary level I
+D. Lateral retropharyngeal
+Answer: C
+Objective: III.4
+Why: Axillary level I is lateral to the lateral border of pectoralis minor, along the axillary vessels, out toward the latissimus dorsi. Level II lies behind pectoralis minor, and the interpectoral (Rotter) nodes between pectoralis major and minor are often grouped with level II. Level III is medial to the medial border of pectoralis minor, toward the clavicle, and is still below the clavicle. Internal mammary nodes follow the internal thoracic vessels beside the sternum. Retropharyngeal nodes are medial to the internal carotid artery at the skull base.
+
+### Q52
+Stem: One axillary group lies behind pectoralis minor. The next lies medial to the medial border of pectoralis minor, toward the clavicle. Which levels are those, in that order?
+A. II, then III
+B. I, then I
+C. III, then I
+D. Internal mammary, then hilar
+Answer: A
+Objective: III.4
+Why: Level II is the group behind pectoralis minor. Level III is medial to the medial border of that muscle, the infraclavicular or apical group, still below the clavicle. Level I is lateral to the lateral border, in the low axilla. The supraclavicular fossa is above the clavicle and is not level III. Internal mammary nodes are parasternal. Hilar nodes are at the lung root.
+
+### Q53
+Stem: Nodes follow the internal thoracic vessels in the upper intercostal spaces, just lateral to the sternum, deep to the anterior chest wall and anterior to the pleura. They are outside the axilla. Which chain is this?
+A. Axillary level I
+B. Internal mammary
+C. Para-aortic
+D. Subcarinal
+Answer: B
+Objective: III.4
+Why: Internal mammary nodes lie along the internal thoracic vessels, mostly in the first three intercostal spaces, just lateral to the sternal edge. They are deep to the anterior chest wall and anterior to the pleura, separate from the axillary levels. Axillary level I is lateral to pectoralis minor. Para-aortic nodes are beside the abdominal aorta. Subcarinal nodes sit between the main bronchi under the carina.
+
+### Q54
+Stem: At about C1, a node lies posterior to the nasopharyngeal wall, anterior to the longus colli, and medial to the internal carotid artery. It is called level IIA because it is high in the neck. What is the node?
+A. Level IIA, around the internal jugular vein and lateral to the medial carotid border
+B. Level IA, between the anterior digastric muscles
+C. Axillary level III
+D. Lateral retropharyngeal node, the node of Rouvière
+Answer: D
+Objective: III.4
+Why: The lateral retropharyngeal nodes lie behind the pharyngeal wall and in front of the longus colli, from the skull base toward the hyoid. Their lateral border is the internal carotid artery, so they are medial to the carotid space. The highest of these, at about C1, is the node of Rouvière. Level II is lateral to that border, around the internal jugular vein, from the skull base to the hyoid. IIA is anterior and medial to the spinal accessory nerve. Level IA is submental, between the anterior digastrics. Axillary level III is medial to pectoralis minor.
+
+### Q55
+Stem: Nodes sit in the fossa above the clavicle, at the caudal end of the lateral neck, over the lung apex. A second group sits below the sternal notch, beside the trachea in the superior mediastinum. Which group is supraclavicular?
+A. The nodes below the sternal notch
+B. The nodes inside the lung, along a lobar bronchus
+C. The nodes in the fossa above the clavicle
+D. The nodes at the liver hilum
+Answer: C
+Objective: III.4
+Why: Supraclavicular nodes are the caudal neck, in the fossa above the clavicle. Neck levels IV and VB reach this fossa and stop at the clavicle. Axillary level III is infraclavicular, below the clavicle, and is not this fossa. Nodes below the sternal notch are superior mediastinal. They are sometimes called level VII, and they are not level IV. Nodes along a lobar bronchus are intrapulmonary. Nodes at the liver hilum are porta hepatis. The brachial plexus crosses the same fossa between the scalenes; that bundle is nerve, not the node chain.
+
+### Q56
+Stem: On an axial slice at the carina, one node lies in the space between the two main bronchi, directly under the carina. Another lies more lateral, where the main bronchus and the pulmonary vessels enter the lung. Which is subcarinal, and which is hilar?
+A. The node between the bronchi under the carina is subcarinal; the node at the lung root is hilar
+B. The lateral lung-root node is subcarinal; the midline node is hilar
+C. Both are axillary level II
+D. Both are nodes of Rouvière
+Answer: A
+Objective: III.4
+Why: Subcarinal nodes occupy the mediastinum between the main bronchi, under the carina. That space is the usual station 7. Hilar nodes sit at the lung root, along the main bronchus and the pulmonary vessels, lateral to that midline space. That root is the usual station 10. A node farther out, along a lobar bronchus inside the lung, is intrapulmonary. Axillary nodes are defined by pectoralis minor. The node of Rouvière is at about C1, medial to the internal carotid artery.
+
+### Q57
+Stem: Two upper-abdominal nodal sites are contoured. One cluster is midline, anterior to the aorta at about T12, around the trunk that divides into the left gastric, common hepatic, and splenic arteries. The other is on the patient’s right, at the liver hilum, along the portal vein, the hepatic artery, and the bile duct. Which site is celiac, and which is porta hepatis?
+A. The liver hilum is celiac; the aortic cluster is the penile bulb
+B. Both are hilar lung stations
+C. The aortic cluster is porta hepatis; the liver hilum is the IVC in the posterior liver
+D. The midline cluster on the aorta is celiac; the liver-hilum cluster is porta hepatis
+Answer: D
+Objective: III.4
+Why: The celiac trunk arises from the anterior aorta at about T12 and divides into the left gastric, common hepatic, and splenic arteries. Celiac nodes cluster there, above the para-aortic chain that runs from the renal vessels to the bifurcation. The superior mesenteric artery arises just below the celiac trunk, at about L1. Porta hepatis nodes follow the portal triad in the hepatoduodenal ligament, at the hilum on the patient’s right. The portal vein enters the liver at that hilum. The IVC is the vessel embedded in the posterior liver. Lung hilar nodes are at the lung roots. The penile bulb is perineal.
+
+### Q58
+Stem: Nodes lie on the patient’s left, inferior to the aortic arch and superior to the left pulmonary artery, beside the ligamentum arteriosum. They are central, outside the lung. Which region is this?
+A. Subcarinal nodes, in the midline between the main bronchi
+B. Aortopulmonary window
+C. Intrapulmonary nodes, along a lobar bronchus inside the lung
+D. Supraclavicular nodes, in the fossa above the clavicle
+Answer: B
+Objective: III.4
+Why: The aortopulmonary window is the mediastinal space under the aortic arch and above the left pulmonary artery, on the patient’s left. Nodes there are the usual station 5. Subcarinal nodes are midline, between the bronchi under the carina. A node along a lobar bronchus inside the lung is intrapulmonary, beyond the hilum. Supraclavicular nodes are the caudal neck above the clavicle.
+
+### Q59
+Stem: A pelvic contour includes each femoral head as a round bone in the acetabulum. Where does that contour stop inferiorly?
+A. At the lowest slice that still shows the ischial tuberosity
+B. At the bottom of the lesser trochanter
+C. At the top of the femoral head only, with no shaft
+D. At the penile bulb, because that bulb is the inferior bone
+Answer: B
+Objective: III.4
+Why: The femoral-head contour runs from the top of the head down to the bottom of the lesser trochanter. The ischial tuberosities sit lower and are a different landmark. Stopping at the top of the head drops the neck and the trochanter. The penile bulb is soft tissue anterior to the anal canal, not the inferior end of the femur.

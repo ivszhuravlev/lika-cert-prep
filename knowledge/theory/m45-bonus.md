@@ -124,7 +124,7 @@ E/3 = 4.0 \quad \Rightarrow \quad E = 12 \text{ MeV}
 
 | Phase | Job |
 | --- | --- |
-| I | Safety and dose finding. Small group. The question is what dose can be given, and what the acute toxicity is. |
+| I | Safety and dose finding. Small sequential cohorts. The dose rises until toxicity defines the maximum tolerated dose. |
 | II | Does it show activity? A single-arm or early efficacy signal, with toxicity still watched. Not yet the definitive comparison. |
 | III | Randomized comparison against the standard of care. This is the phase that changes practice if it is positive. |
 | IV | After approval or after the treatment is already in use. Long-term effects, rare effects, effectiveness outside the original trial. |

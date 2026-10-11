@@ -16,6 +16,8 @@ Higher megavoltage photon energy pushes dmax deeper, increases skin sparing, inc
 
 In inverse-planned treatments, 6 MV is the usual energy. The optimizer buys penetration with beam directions instead of with 18 MV, and it avoids the neutron component and the wider penumbra. Deep 3D conformal pelvis fields still sometimes use 10–18 MV laterals to keep the subcutaneous dose down. That is a 3D reason, not an IMRT default.
 
+Percent depth dose depends on energy, depth, field size, SSD, and how much of the field is blocked. An off-axis factor depends on the distance from the central axis.
+
 Electrons are chosen so the 80% or 90% depth covers the distal target and the practical range spares what is behind it. The two depth rules:
 
 - Khan: 90% ≈ E/3.2, 80% ≈ E/2.8
@@ -202,7 +204,7 @@ You can name the classic arrangement for a site and the problem it was built to 
 
 **Core facts**
 
-**Parallel opposed.** Two fields 180° apart, equal weight for a midline target. Simple and homogeneous when the separation is modest. Entrance hot spots grow with separation and with lower energy. Palliative spine, whole brain, and many femur fields are still opposed pairs. Whole brain is typically 30 Gy in 10. A femur met may be 8 Gy once, 20 Gy in 5, or 30 Gy in 10.
+**Parallel opposed.** Two fields 180° apart, equal weight for a midline target. Simple and homogeneous when the separation is modest. Entrance hot spots grow with separation and with lower energy. Palliative spine, whole brain, and many femur fields are still opposed pairs. Whole brain is typically 30 Gy in 10. A femur met may be 8 Gy once, 20 Gy in 5, or 30 Gy in 10. Three or more photon beams that cross in the target generally make the target dose more homogeneous than one beam, which falls from the entrance to the exit.
 
 **Four-field box.** AP, PA, and two laterals. The classic whole pelvis. The laterals spare rectum or bladder relative to a pure AP/PA, depending on weights and energy. A common historical choice was higher energy on the laterals of a large patient. The modern version is often VMAT with the same organs to spare. Recognize the box when a stem describes it.
 

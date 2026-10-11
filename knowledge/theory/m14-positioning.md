@@ -8,7 +8,7 @@ Original notes for MDCB objective II.2.
 
 **What the exam expects**
 
-You choose a reproducible position for the site, you know why arms, bladder, and prone versus supine are in the setup note, and you can tell a reference tattoo from an isocenter. Indexing and laterality are part of positioning. Motion management hardware is the next module; the position it attaches to is this one.
+You choose a reproducible position for the site, you know why arms, bladder, and prone versus supine are in the setup note, and you can tell a reference tattoo from an isocenter. Indexing and laterality are part of positioning. Respiratory motion management is the next module. The indexed device that holds this position is part of the position.
 
 **Core facts**
 
@@ -34,9 +34,35 @@ Couch coordinates and patient coordinates differ by a sign when you move the cou
 
 Bolus and the position interact. Bolus that does not touch the skin is an air gap. The contour correction you think you applied is then wrong, and the skin dose is not the bolus dose. Build the position so the bolus can sit in contact if the plan requires contact.
 
+**Immobilization by site**
+
+The device is named in the setup note with its index. A different device is a different position.
+
+Thermoplastic mask. Brain and head and neck. The mask is molded to the face on a named headrest and locked to the couch. It fixes chin flexion and head rotation. A head-and-neck mask includes the shoulders, pulled down, with the arms at the sides, so the lateral neck beams miss the shoulders. A mask made on one chin position reproduces that chin. Weight loss that leaves the mask bridging the neck has removed the immobilization.
+
+Wing board. Breast, lung, thorax, and upper abdomen. The arms are above the head, hands in indexed grips, so the arms stay out of tangents and laterals. The notch and the grip are part of the geometry. Arms that are merely “up,” in a different notch, are a different setup. A breast board angle is a separate indexed choice from the arm position.
+
+Belly board. Prone pelvis. The opening lets small bowel fall anteriorly, out of a posterior or lateral field. Rectum and some gynecologic plans use it for that reason. It is a prone device. The opening against the couch does not drop bowel.
+
+Vacuum bag. A custom cradle of beads under vacuum, indexed to the couch, for thorax, abdomen, pelvis, extremities, and some frameless stereotactic setups. It reproduces the supported shape from the planning CT. When the vacuum is lost the beads move, and the cradle is no longer that shape. The bag does not stop breathing.
+
+**Prone and supine**
+
+Breast. Supine on a breast board, arm up, is the usual position for whole breast, chest wall, and nodal fields. The heart and lung in the tangents are the supine geometry. Prone, an intact breast falls through the board opening and moves off the chest wall, which can reduce heart and lung in the tangents for a large or pendulous breast. Those two external contours are two plans. A postmastectomy chest wall is the wall itself; the prone opening is built for an intact breast that can drop away from that wall, so supine is the usual chest-wall position.
+
+Pelvis. Supine, with a knee sponge and a foot band, is the stable position used for prostate intensity-modulated and arc plans and for daily soft-tissue imaging. Prone on a belly board is the position that drops small bowel. A supine prostate plan treated prone, or a prone rectal plan treated supine, uses the wrong surface and the wrong bowel.
+
+**Bladder and rectum**
+
+Preparation is part of the position. Prostate protocols in common use scan and treat with a comfortably full bladder, so small bowel is displaced superiorly, and an empty rectum, so gas or stool does not push the gland. There is no universal milliliter volume in this note. The chart’s instruction is the instruction.
+
+A rectal target is the rectum. Copying the prostate “empty rectum” rule onto that chart, without the note, produces a different internal anatomy. Many rectal and gynecologic notes still ask for a full bladder so small bowel stays out of the field. Read the note for that site.
+
+Tattoos on the lasers do not restore filling. If the bladder or the rectum does not match the simulated state, the fraction waits until the preparation matches or a physician decides. Imaging can show the mismatch. It does not make an empty bladder into the full bladder that was planned.
+
 **Traps**
 
-Belly board used supine. Arms down for a tangential breast plan. Tattoos treated as the isocenter with no shift checked. Prone simulation and supine treatment. Full-bladder instructions left off the setup note. Left and right taken from the screen orientation after a flip. An indexed device locked in a different notch because “it still fits.”
+Belly board used supine. Arms down for a tangential breast plan. Tattoos treated as the isocenter with no shift checked. Prone simulation and supine treatment. Full-bladder instructions left off the setup note. A vacuum bag used after it has lost vacuum. A prostate empty-rectum instruction copied onto a rectal target. A prone breast plan treated supine. A chest wall set up as if it falls through a prone breast opening. A wing-board notch changed while the arms are still called “up.” Left and right taken from the screen orientation after a flip. An indexed device locked in a different notch because “it still fits.”
 
 **Sources**
 
@@ -44,4 +70,4 @@ Khan and Gibbons, *The Physics of Radiation Therapy*, setup geometry chapters. A
 
 ## Patient Positioning Mini-Quiz
 
-This quiz checks supine versus prone indications, arm position for breast and thorax, bladder and rectum instructions as part of the position, indexing of the immobilization, and the difference between a reference tattoo and the isocenter. The traps are a belly board in a supine plan, arms in the tangent, treating the tattoo as isocenter, a left-right flip, and a full-bladder scan delivered empty.
+This quiz checks supine versus prone indications, arm position for breast and thorax, bladder and rectum instructions as part of the position, indexing of the immobilization, and the difference between a reference tattoo and the isocenter. Further items assign the thermoplastic mask, wing board, belly board, and vacuum bag to the site each one is built for, and they separate a prostate filling instruction from the prep written for a rectal target. The traps are a belly board in a supine plan, arms in the tangent, treating the tattoo as isocenter, a left-right flip, a full-bladder scan delivered empty, a deflated vacuum bag, and a prone breast plan treated supine.

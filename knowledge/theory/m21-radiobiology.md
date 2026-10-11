@@ -106,6 +106,8 @@ LET is energy deposited per unit track length. As LET rises, RBE rises, the shou
 
 Serial and parallel organs are a planning translation of this biology. A serial organ (cord, brainstem, optic pathway) loses function when a small segment is destroyed, so the high-dose end of the DVH dominates. A parallel organ (lung, liver, kidney, parotid) loses function in proportion to the subunit killed, so mean dose and volume dominate. The number you apply is still the one in QUANTEC, TG-101, or the protocol.
 
+The gestational window of highest risk for radiation-related cognitive injury is about 8-15 weeks, not 0-7 weeks and not after 25 weeks.
+
 **Traps**
 
 - Answering “late S” as the most sensitive phase. Late S is the most resistant. M is the most sensitive.

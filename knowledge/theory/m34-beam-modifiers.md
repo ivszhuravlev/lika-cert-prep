@@ -17,6 +17,9 @@ Other modifiers in the same objective, in one pass:
 - **Bolus** sits on the skin, pulls dmax toward the surface, and raises skin dose. It is tissue-equivalent thickness, not a wedge.
 - **Partial transmission blocks** and **compensators** reduce dose by a measured transmission. A compensator also shapes the distribution for missing tissue or a sloping surface. A compensator is not a density override.
 - **MLCs** shape the aperture. Leaf transmission is small and is not zero. Detail is in the MLC lesson below.
+- A megavoltage block or tray is kept on the order of 20 cm from the skin so contaminant electrons scatter and are absorbed in air before they reach the patient.
+- The wedge transmission used for dose is the one the planning system expects. A factor measured in air is not the same number as a factor measured in phantom at depth.
+- A larger gap from an electron cutout to the skin lowers output, so the monitor units for the same dose go up. Oblique electron incidence from an air gap that is not filled moves dmax toward the surface.
 
 **Formula**
 

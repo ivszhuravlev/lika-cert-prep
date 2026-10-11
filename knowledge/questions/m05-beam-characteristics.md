@@ -54,6 +54,46 @@ Answer: B
 Objective: I.3
 Why: Once emitted, both are photons and both can undergo photoelectric, Compton, and, if the energy allows, pair interactions. Co-60 is approximately monoenergetic at 1.17 and 1.33 MeV and has a physical source size. A 6 MV beam is a bremsstrahlung spectrum from a small target. Neither has a Bragg peak, and neither photon has mass.
 
+### Q6
+Stem: A small sealed source is labeled isotropic for an in-air estimate. What does that label require of the emission?
+A. Equal intensity in every direction
+B. All of the intensity aimed along a single axis
+C. Intensity only in the forward hemisphere
+D. A finite particle range and no sideways emission
+Answer: A
+Objective: I.3
+Why: An isotropic source has equal intensity in all directions. Output confined to one axis, or to the forward hemisphere only, is a directional pattern. A finite range describes how far a charged particle travels, not whether the source emits equally around itself.
+
+### Q7
+Stem: Four beams are compared at the skin: 4 MeV electrons, 6 MV photons, 10 MV photons, and 16 MeV electrons. Which beam has the highest percent surface dose?
+A. 16 MeV electrons, because electron surface dose rises with energy and the photon beams are still in buildup
+B. 10 MV photons, because surface dose rises as photon energy rises
+C. 4 MeV electrons, because electron surface dose is highest at the lowest energy
+D. 6 MV photons, because buildup places the maximum dose on the skin
+Answer: A
+Objective: I.3
+Why: On a clinical electron beam the percent surface dose increases as the energy increases, so 16 MeV is higher at the skin than 4 MeV. Megavoltage photon beams have not reached dmax at the surface. The 6 MV and 10 MV beams are still in buildup, and their percent surface dose is lower than either electron beam.
+
+### Q8
+Stem: For a clinical electron beam, how are the surface most-probable energy and the mean energy at depth related to range?
+A. The most probable energy at the surface comes from the practical range, and the mean energy falls about linearly with depth
+B. The most probable energy at the surface comes from a quadratic in depth, and the mean energy falls as depth squared
+C. Both energies remain equal to the nominal energy at every depth
+D. The mean energy falls linearly, but the most probable energy at the surface does not depend on range
+Answer: A
+Objective: I.3
+Why: The practical range determines the most probable electron energy at the surface. Farther into the phantom, the mean energy decreases about in proportion to depth, a linear fall, not a quadratic one. The nominal energy is not still the energy at every depth.
+
+### Q9
+Stem: What happens to percent depth dose when megavoltage electron energy or megavoltage photon energy is raised, and which depth-dose features belong only to electrons?
+A. Percent depth dose increases with energy for both. A finite range and a high surface dose are electron features
+B. Percent depth dose increases only for photons. Electron percent depth dose falls as energy rises
+C. Both beams gain a finite practical range and a surface dose near the full prescription
+D. Both beams spare the surface the same way, and neither has a finite range
+Answer: A
+Objective: I.3
+Why: A higher energy increases percent depth dose for megavoltage electrons and for photons. Electrons still stop at a practical range and enter with a high surface dose. Photon beams are not stopped at a practical range, and a clean megavoltage photon beam is still building up at the skin.
+
 ## X-Ray Spectrum
 
 ### Q1

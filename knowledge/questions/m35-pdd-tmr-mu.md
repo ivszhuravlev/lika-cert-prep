@@ -117,7 +117,7 @@ Objective: IV.3
 Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 160 / (80/100) = 160 / 0.8000 = 200.00 cGy, reported as 200.0 cGy. Equivalently 160 × 100 / 80 = 200.00 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 160 cGy were already the given dose) and gives 128.0 cGy. Dividing by the percent number 80 instead of by the fraction 0.8000 gives 2.0 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 240.0 cGy.
 
 ### Q4
-Stem: Tutorial. Exit-depth estimate from a tabulated PDD. Given dose at dmax is 250 cGy. PDD at the exit depth is 39%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+Stem: Tutorial. Dose at depth d from a tabulated PDD. Given dose at dmax is 250 cGy. The PDD at depth d is 39%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at depth d as given dose × PDD/100. Do not apply inverse square a second time. What is the dose at depth d?
 A. 641.0 cGy
 B. 250.0 cGy
 C. 48.8 cGy
@@ -127,7 +127,7 @@ Objective: IV.3
 Why: Substitute 250 × (39/100) = 250 × 0.3900 = 97.50 cGy, reported as 97.5 cGy. Applying inverse square again would double-count the distance term that is already inside the PDD. This is still an estimate of dose at depth: the true exit surface has less backscatter than the full-phantom PDD table. Dividing by PDD/100 computes a given dose from a tumor dose and gives 641.0 cGy, which is the reverse of this question. Using the given dose itself as the exit dose gives 250.0 cGy. Halving the result as if two opposed beams each needed half, without being asked, gives 48.8 cGy.
 
 ### Q5
-Stem: Tutorial. Another separation, PDD already includes inverse square. Given dose at dmax is 220 cGy. PDD at the exit depth is 42.5%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+Stem: Tutorial. Dose at depth d for another depth. PDD already includes inverse square. Given dose at dmax is 220 cGy. The PDD at depth d is 42.5%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at depth d as given dose × PDD/100. Do not apply inverse square a second time. What is the dose at depth d?
 A. 517.6 cGy
 B. 220.0 cGy
 C. 46.8 cGy
@@ -199,7 +199,7 @@ Objective: IV.3
 Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 300 / (55/100) = 300 / 0.5500 = 545.45 cGy, reported as 545.5 cGy. Equivalently 300 × 100 / 55 = 545.45 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 300 cGy were already the given dose) and gives 165.0 cGy. Dividing by the percent number 55 instead of by the fraction 0.5500 gives 5.5 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 355.0 cGy.
 
 ### Q4
-Stem: Calculation set. Dose at 22 cm depth from the given dose. Given dose at dmax is 180 cGy. PDD at the exit depth is 36%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+Stem: Calculation set. Dose at depth d from the given dose. Given dose at dmax is 180 cGy. The PDD at depth d is 36%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at depth d as given dose × PDD/100. Do not apply inverse square a second time. What is the dose at depth d?
 A. 64.8 cGy
 B. 500.0 cGy
 C. 180.0 cGy
@@ -209,7 +209,7 @@ Objective: IV.3
 Why: Substitute 180 × (36/100) = 180 × 0.3600 = 64.80 cGy, reported as 64.8 cGy. Applying inverse square again would double-count the distance term that is already inside the PDD. This is still an estimate of dose at depth: the true exit surface has less backscatter than the full-phantom PDD table. Dividing by PDD/100 computes a given dose from a tumor dose and gives 500.0 cGy, which is the reverse of this question. Using the given dose itself as the exit dose gives 180.0 cGy. Halving the result as if two opposed beams each needed half, without being asked, gives 32.4 cGy.
 
 ### Q5
-Stem: Calculation set. A shallower exit depth. Given dose at dmax is 200 cGy. PDD at the exit depth is 51%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+Stem: Calculation set. Dose at depth d, a shallower point. Given dose at dmax is 200 cGy. The PDD at depth d is 51%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at depth d as given dose × PDD/100. Do not apply inverse square a second time. What is the dose at depth d?
 A. 392.2 cGy
 B. 102.0 cGy
 C. 200.0 cGy
@@ -271,7 +271,7 @@ Objective: IV.3
 Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 210 / (64/100) = 210 / 0.6400 = 328.12 cGy, reported as 328.1 cGy. Equivalently 210 × 100 / 64 = 328.12 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 210 cGy were already the given dose) and gives 134.4 cGy. Dividing by the percent number 64 instead of by the fraction 0.6400 gives 3.3 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 274.0 cGy.
 
 ### Q3
-Stem: Quiz. Exit estimate. Do not apply inverse square twice. Given dose at dmax is 240 cGy. PDD at the exit depth is 33.5%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at that depth as given dose × PDD/100. Do not apply inverse square a second time. What is the estimate?
+Stem: Quiz. Dose at depth d. Do not apply inverse square twice. Given dose at dmax is 240 cGy. The PDD at depth d is 33.5%. The PDD already includes inverse square from dmax to that depth. Estimate the dose at depth d as given dose × PDD/100. Do not apply inverse square a second time. What is the dose at depth d?
 A. 80.4 cGy
 B. 716.4 cGy
 C. 240.0 cGy
@@ -329,6 +329,26 @@ D. 160.0 cGy
 Answer: D
 Objective: IV.3
 Why: Given dose is the dmax dose that produces the requested tumor dose after falloff. Substitute 144 / (90/100) = 144 / 0.9000 = 160.00 cGy, reported as 160.0 cGy. Equivalently 144 × 100 / 90 = 160.00 cGy. Multiplying by PDD/100 instead of dividing answers the reverse question (tumor dose if 144 cGy were already the given dose) and gives 129.6 cGy. Dividing by the percent number 90 instead of by the fraction 0.9000 gives 1.6 cGy. Adding the PDD number to the tumor dose, as if percent were cGy, gives 234.0 cGy.
+
+### Q9
+Stem: A parallel-opposed pair treats a patient whose separation is 22 cm. Each beam delivers 160 cGy at its own dmax. For each beam, at this field and SSD, the PDD is 85% at 5 cm, 64% at 11 cm, 52% at 16 cm, and 41% at 22 cm. What dose do the two beams deliver together at the midline, to the nearest 0.1 cGy?
+A. 272.0 cGy
+B. 102.4 cGy
+C. 204.8 cGy
+D. 131.2 cGy
+Answer: C
+Objective: IV.3
+Why: Midline depth is half the separation: 22 / 2 = 11 cm. The PDD at 11 cm is 64%, so each beam contributes 160 × (64/100) = 160 × 0.64 = 102.4 cGy. Both beams give 102.4 + 102.4 = 204.8 cGy. Tissue continues past the midline, so the full-phantom PDD applies. An exit surface would be lower, because backscatter beyond the patient is missing; that is not this point. Counting only one beam leaves 102.4 cGy. Reading the 5 cm row instead of 11 cm gives 160 × 0.85 × 2 = 272.0 cGy. Treating the whole 22 cm separation as the midline depth gives 160 × 0.41 × 2 = 131.2 cGy.
+
+### Q10
+Stem: A point lies 3.0 cm off the central axis. The central-axis dose at that depth is 180 cGy. A measured profile at the same depth lists an off-axis ratio of 1.200 at 2.0 cm and 0.600 at 8.0 cm. What is the dose at the point, to the nearest 0.1 cGy?
+A. 216.0 cGy
+B. 162.0 cGy
+C. 108.0 cGy
+D. 198.0 cGy
+Answer: D
+Objective: IV.3
+Why: The point at 3.0 cm is (3.0 − 2.0) / (8.0 − 2.0) = 1/6 = 0.1667 of the way from 2.0 cm to 8.0 cm. The ratio changes by 0.600 − 1.200 = −0.600. Change on this step = 0.1667 × (−0.600) = −0.100. Off-axis ratio = 1.200 − 0.100 = 1.100. Dose = 180 × 1.100 = 198.0 cGy. Using the 2.0 cm ratio for the whole step gives 180 × 1.200 = 216.0 cGy. Using the 8.0 cm ratio gives 180 × 0.600 = 108.0 cGy. Averaging the two table ratios as if the point were midway, (1.200 + 0.600) / 2 = 0.900, gives 180 × 0.900 = 162.0 cGy.
 
 ## Equivalent Square
 
@@ -586,7 +606,7 @@ C. 581.8 MU
 D. 105.0 MU
 Answer: B
 Objective: IV.3
-Why: The calibration point is dmax for 10×10 at SAD 100 cm, so the 1.000 cGy/MU is already at isocenter distance and TMR carries the depth. Denominator = 1.000 × 0.69 × 1.04 × 1.02 × 0.61 × 1 × 0.98. Stepwise: 1 × 0.69 = 0.69; × 1.04 = 0.7176; × 1.02 = 0.7320; × 0.61 = 0.4465; × 1 = 0.4465; × 0.98 = 0.4376. MU = 240 / 0.4376 = 548.50, reported as 548.5 MU. Putting the PDD in this denominator would treat an SAD setup like an SSD percent-depth setup and double-count inverse square, because TMR is already the SAD depth ratio. Leaving the wedge factor out of the denominator gives 334.6 MU. Leaving Sc and Sp out gives 581.8 MU. Multiplying the dose by the factor product instead of dividing gives 105.0 MU.
+Why: The calibration point is dmax for 10×10 at SAD 100 cm, so the 1.000 cGy/MU is already at isocenter distance and TMR carries the depth. Denominator = 1.000 × 0.69 × 1.04 × 1.02 × 0.61 × 1 × 0.98. Stepwise: 1 × 0.69 = 0.69; × 1.04 = 0.7176; × 1.02 = 0.7320; × 0.61 = 0.4465; × 1 = 0.4465; × 0.98 = 0.4376. MU = 240 / 0.4376 = 548.45, which rounds to 548.5 MU. Putting the PDD in this denominator would treat an SAD setup like an SSD percent-depth setup and double-count inverse square, because TMR is already the SAD depth ratio. Leaving the wedge factor out of the denominator gives 334.6 MU. Leaving Sc and Sp out gives 581.8 MU. Multiplying the dose by the factor product instead of dividing gives 105.0 MU.
 
 ### Q8
 Stem: Quiz. Re-treatment hand check before a new MU set is approved. Sum EQD2, α/β = 3 Gy. Prior course: 25 × 2 Gy. New course: 5 × 4 Gy. Use α/β = 3 Gy for both. What is the sum of the two EQD2 values?
@@ -607,3 +627,63 @@ D. 189.4
 Answer: B
 Objective: IV.1
 Why: The machine is calibrated at SAD 100, so the SSD setup is not at the calibration distance. The inverse-square factor from SAD to SSD+dmax is (100/101.5)^2 = 0.9707. MU = 200 / (0.67 × 0.9707) = 307.5. Dropping that factor gives 200/0.67 = 298.5, which is the trap when the stem says SSD 100 and the calibration was SAD 100. 189.4 multiplies by 0.9707 instead of dividing.
+
+### Q21
+Stem: An isocentric 6 MV beam is calibrated to 1.000 cGy/MU at dmax for a 10 by 10 cm field at SAD 100 cm. The isocenter is 100 cm from the source. The field there is 5 cm by 20 cm, the depth is 12 cm, and the beam is open, on axis, with no wedge and no tray. An abbreviated table at this depth gives equivalent-square side, Sc, Sp, and TMR: 6 cm, 0.940, 0.920, 0.660; 8 cm, 0.970, 0.960, 0.710; 10 cm, 1.000, 1.000, 0.755; 15 cm, 1.030, 1.020, 0.790. The prescription is 220 cGy at the isocenter. How many MU, to the nearest 0.1 MU?
+A. 332.8 MU
+B. 385.4 MU
+C. 145.5 MU
+D. 291.4 MU
+Answer: A
+Objective: IV.3
+Why: The equivalent square of a 5 cm by 20 cm field is 2 × 5 × 20 / (5 + 20) = 200 / 25 = 8.0 cm, so the 8 cm row is the one to use. Sc × Sp × TMR = 0.970 × 0.960 × 0.710. First, 0.970 × 0.960 = 0.9312. Then 0.9312 × 0.710 = 0.661152. The point is at the calibration distance, so the inverse-square term is 1. MU = 220 / 0.661152 = 332.75, which rounds to 332.8 MU. The 6 cm row is 0.940 × 0.920 = 0.8648, then 0.8648 × 0.660 = 0.570768, and 220 / 0.570768 = 385.45 MU, reported as 385.4 MU. The square root of the area is 10 cm, and that row’s TMR of 0.755 gives 220 / 0.755 = 291.39 MU, reported as 291.4 MU. Multiplying the dose by the factor product, 220 × 0.661152 = 145.45, gives 145.5 MU.
+
+### Q22
+Stem: Calibration is 1.000 cGy/MU at dmax for a 10 by 10 cm field at 100 cm from the source. This beam is isocentric at SAD 80 cm, so the calculation point is 80 cm from the source. The field at the isocenter is 4 cm by 12 cm. The depth is 8 cm. The beam is open, on axis, with no wedge and no tray. An abbreviated table at this depth gives equivalent-square side, Sc, Sp, and TMR: 4 cm, 0.960, 0.950, 0.820; 6 cm, 0.978, 0.972, 0.850; 10 cm, 1.000, 1.000, 0.880; 20 cm, 1.040, 1.030, 0.910. The prescription is 180 cGy at the isocenter. How many MU, to the nearest 0.1 MU?
+A. 154.0 MU
+B. 142.6 MU
+C. 222.8 MU
+D. 130.9 MU
+Answer: B
+Objective: IV.3
+Why: The equivalent square of a 4 cm by 12 cm field is 2 × 4 × 12 / (4 + 12) = 96 / 16 = 6.0 cm. The 6 cm row gives Sc 0.978, Sp 0.972, and TMR 0.850. Scatter and depth product: 0.978 × 0.972 = 0.950616, then 0.950616 × 0.850 = 0.808024. Because calibration is at 100 cm and the isocenter is at 80 cm, the output is higher by (100/80)^2 = 1.5625. Denominator = 0.808024 × 1.5625 = 1.26254. MU = 180 / 1.26254 = 142.57, which rounds to 142.6 MU. Dropping the distance term and dividing 180 by 0.808024 gives 222.77 MU, reported as 222.8 MU. The 4 cm row with the same distance term, 0.960 × 0.950 × 0.820 × 1.5625 = 1.1685, gives 180 / 1.1685 = 154.04 MU, reported as 154.0 MU. The 10 cm row, 0.880 × 1.5625 = 1.375, gives 180 / 1.375 = 130.91 MU, reported as 130.9 MU.
+
+### Q23
+Stem: Calibration is 1.000 cGy/MU at dmax for a 10 by 10 cm field at 100 cm from the source. The treatment SSD is 125 cm and dmax is 2.5 cm. The dose wanted at depth is 180 cGy. The PDD at that depth was measured at this 125 cm SSD and is 70%. Sc is 1.05 and Sp is 1.04. The beam is open, with no wedge and no tray. How many MU, to the nearest 0.1 MU?
+A. 235.5 MU
+B. 418.0 MU
+C. 382.8 MU
+D. 144.9 MU
+Answer: C
+Objective: IV.3
+Why: The PDD was measured at SSD 125 cm, so it already carries inverse square from dmax down to the point. The remaining distance correction moves the calibration from 100 cm to dmax, which sits at 125 + 2.5 = 127.5 cm. That factor is (100/127.5)^2. 100/127.5 = 0.784314, and 0.784314 × 0.784314 = 0.615148. PDD as a fraction is 0.700. Then 0.700 × 1.05 = 0.7350, and 0.7350 × 1.04 = 0.7644. Denominator = 0.7644 × 0.615148 = 0.470219. MU = 180 / 0.470219 = 382.80, reported as 382.8 MU. Leaving the distance term out gives 180 / 0.7644 = 235.48 MU, reported as 235.5 MU. Leaving Sc and Sp out gives 180 / (0.700 × 0.615148) = 180 / 0.430604 = 418.02 MU, reported as 418.0 MU. Inverting the distance ratio, (127.5/100)^2 = 1.625625, gives 180 / (0.7644 × 1.625625) = 180 / 1.24263 = 144.85 MU, reported as 144.9 MU.
+
+### Q24
+Stem: A 6 MeV electron beam delivers 1.000 cGy/MU at dmax for the open 10 by 10 cm cone at a nominal SSD of 100 cm. The cutout factor for this insert is 0.940. The effective SSD is 75 cm. dmax is 1.2 cm. The cone is stood off so the treatment SSD is 110 cm. The prescription is 250 cGy at dmax. How many MU, to the nearest 0.1 MU?
+A. 300.7 MU
+B. 266.0 MU
+C. 319.9 MU
+D. 340.3 MU
+Answer: D
+Objective: IV.3
+Why: The air gap is 110 − 100 = 10 cm. With the effective SSD, the distance ratio from the calibration dmax to the treatment dmax is (75 + 1.2) / (75 + 1.2 + 10) = 76.2 / 86.2 = 0.8843399. Squared, 0.8843399 × 0.8843399 = 0.7814396. Cutout product = 0.7814396 × 0.940 = 0.7345532. The prescription is at dmax, so no further depth factor is applied. MU = 250 / 0.7345532 = 340.34, which rounds to 340.3 MU. Ignoring the air gap and dividing only by the cutout gives 250 / 0.940 = 265.96 MU, reported as 266.0 MU. Keeping the gap and dropping the cutout gives 250 / 0.7814396 = 319.92 MU, reported as 319.9 MU. Using the distance ratio once, without squaring, gives 250 / (0.940 × 0.8843399) = 250 / 0.8312795 = 300.74 MU, reported as 300.7 MU.
+
+### Q25
+Stem: A 6 MV arc is treated isocentrically at SAD 100 cm with the open 10 by 10 cm calibration field, on axis. Calibration is 1.000 cGy/MU at dmax for that field at 100 cm. Four equally spaced gantry angles see TMRs of 0.90, 0.82, 0.74, and 0.66. The isocenter prescription is 200 cGy. How many MU, to the nearest 0.1 MU?
+A. 256.4 MU
+B. 303.0 MU
+C. 222.2 MU
+D. 64.1 MU
+Answer: A
+Objective: IV.3
+Why: Equal angles take an ordinary average. Sum of the TMRs = 0.90 + 0.82 + 0.74 + 0.66 = 3.12. Average TMR = 3.12 / 4 = 0.780. The field is the calibration field at isocenter, so scatter and distance factors are 1. MU = 200 / 0.780 = 256.41, which rounds to 256.4 MU. Using only the smallest TMR gives 200 / 0.66 = 303.03 MU, reported as 303.0 MU. Using only the largest TMR gives 200 / 0.90 = 222.22 MU, reported as 222.2 MU. Dividing by the sum instead of the average gives 200 / 3.12 = 64.10 MU, reported as 64.1 MU.
+
+### Q26
+Stem: A cord received 15 fractions of 2.5 Gy. For this plan the cord budget is 52 Gy EQD2, and α/β is 3 Gy. How many EQD2 gray are still available, to the nearest 0.1 Gy?
+A. 17.9 Gy
+B. 10.8 Gy
+C. 41.3 Gy
+D. 14.5 Gy
+Answer: B
+Objective: IV.3
+Why: Physical dose = 15 × 2.5 = 37.5 Gy. EQD2 = 37.5 × (2.5 + 3) / (2 + 3) = 37.5 × 5.5 / 5 = 37.5 × 1.1 = 41.25 Gy. Remaining EQD2 = 52 − 41.25 = 10.75 Gy, which rounds to 10.8 Gy. Subtracting the physical dose from the budget, 52 − 37.5, gives 14.5 Gy and never converts the 2.5 Gy fractions. Stopping at the prior EQD2 reports 41.25 Gy, which rounds to 41.3 Gy, instead of what is left. The prior BED is 37.5 × (1 + 2.5/3) = 37.5 × (11/6) = 68.75 Gy, and the BED matched to 52 Gy in 2 Gy fractions is 52 × (5/3) = 86.67 Gy. Their difference, 86.67 − 68.75 = 17.92 Gy, rounds to 17.9 Gy and is still a BED, not the remaining EQD2.

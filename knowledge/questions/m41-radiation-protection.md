@@ -54,6 +54,66 @@ Answer: C
 Objective: VI.1
 Why: Regulatory and NCRP protection practice uses a linear no-threshold model for stochastic risk: risk is taken as proportional to dose, with no safe cutoff built into the planning. That is why ALARA still applies below the numeric limit. Correct choice: Linear no-threshold. 50 mSv is a limit, not a proof that risk is zero underneath it. Protection programs do not plan on a benefit from small doses. That is not the protection assumption used to set public and occupational limits.
 
+### Q6
+Stem: An unrestricted corridor reads 0.05 mSv in one hour from external radiation. The public hourly limit is 0.02 mSv in any one hour. By how much does this hour exceed that hourly limit?
+A. 0.03 mSv
+B. 0.05 mSv
+C. 0.02 mSv
+D. 0.07 mSv
+Answer: A
+Objective: VI.1
+Why: 0.05 − 0.02 = 0.03 mSv. Correct choice: 0.03 mSv. The 0.05 mSv reading is the measured hour, not the excess. The 0.02 mSv figure is the limit, not the excess. Adding the reading to the limit gives 0.05 + 0.02 = 0.07 mSv.
+
+### Q7
+Stem: A waiting room reads 0.012 mSv in one hour from external sources. The public hourly limit is 0.02 mSv in any one hour. Which comparison fits that hour?
+A. The hour is over 0.02 mSv by 0.008 mSv
+B. The hour is under 0.02 mSv by 0.008 mSv
+C. The hour exceeds the 1 mSv annual public limit
+D. The hour exceeds the 50 mSv occupational TEDE limit
+Answer: B
+Objective: VI.1
+Why: 0.020 − 0.012 = 0.008 mSv, so the hour is under the hourly limit. Correct choice: The hour is under 0.02 mSv by 0.008 mSv. The hour does not sit 0.008 mSv over 0.02 mSv. One hour at 0.012 mSv is under both 1 mSv and 50 mSv. The annual public test is the sum for the year, not this single hour.
+
+### Q8
+Stem: A member of the public receives 1.6 mSv TEDE in a year. The annual public limit is 1 mSv. How far over that annual limit is 1.6 mSv?
+A. 1.6 mSv
+B. 1.0 mSv
+C. 0.6 mSv
+D. 48.4 mSv
+Answer: C
+Objective: VI.1
+Why: 1.6 − 1.0 = 0.6 mSv. Correct choice: 0.6 mSv. The received dose is 1.6 mSv. The limit is 1.0 mSv. The gap to the occupational TEDE limit is 50 − 1.6 = 48.4 mSv, and that occupational gap leaves a public dose that is already over 1 mSv still over the public limit.
+
+### Q9
+Stem: Which pair is the public dose limit in 10 CFR 20.1301?
+A. 50 mSv in a year and 1 mSv in any one hour
+B. 1 mSv in a year and 0.02 mSv in any one hour
+C. 5 mSv in a year and 0.02 mSv in any one hour
+D. 1 mSv in a year and 0.5 mSv in any one hour
+Answer: B
+Objective: VI.1
+Why: 10 CFR 20.1301 limits a member of the public to 1 mSv TEDE in a year and to 0.02 mSv in any one hour from external sources in an unrestricted area. Correct choice: 1 mSv in a year and 0.02 mSv in any one hour. Fifty millisieverts is the adult occupational TEDE limit. Five millisieverts is 0.10 × 50, the minor TEDE limit and the adult TEDE monitoring threshold. The NRC gestation limit is also written as 5 mSv, in a different rule. The hourly public figure is 0.02 mSv. The 0.5 mSv value is the NCRP monthly embryo recommendation.
+
+### Q10
+Stem: This lesson uses 0.02 mSv in a week as an uncontrolled-area design goal and 0.02 mSv in any one hour as a public limit. Which statement keeps those two uses apart?
+A. They are one limit, because both numbers are 0.02 mSv
+B. The weekly figure is the design goal behind a barrier. The hourly figure is the 10 CFR 20.1301 cap in an unrestricted area
+C. The hourly figure is the occupational TEDE limit
+D. The weekly figure replaces the 1 mSv annual public limit
+Answer: B
+Objective: VI.1
+Why: Fifty weeks at 0.02 mSv is 50 × 0.02 = 1.0 mSv, so the weekly design goal lines up with the annual public limit of 1 mSv. Correct choice: The weekly figure is the design goal behind a barrier. The hourly figure is the 10 CFR 20.1301 cap in an unrestricted area. The hourly cap is one hour in an unrestricted area. The occupational TEDE limit is 50 mSv. The weekly design goal is the weekly slice of the 1 mSv annual public limit.
+
+### Q11
+Stem: The adult occupational TEDE limit is 50 mSv in a year. A minor’s annual TEDE limit is 10 percent of that adult limit. The deep-dose monitoring trigger for the minor is a separate 1 mSv figure. Which pairing is correct?
+A. Annual limit 5 mSv, and monitoring when the deep dose is likely to exceed 1 mSv
+B. Annual limit 1 mSv, and monitoring when the deep dose is likely to exceed 5 mSv
+C. Annual limit 50 mSv, and monitoring when the deep dose is likely to exceed 10 mSv
+D. Annual limit 15 mSv, and monitoring when the deep dose is likely to exceed 0.5 mSv
+Answer: A
+Objective: VI.1
+Why: 0.10 × 50 = 5 mSv. That product is the minor’s annual TEDE limit under 10 CFR 20.1207. 10 CFR 20.1502 monitors a minor when the deep dose is likely to exceed 1 mSv. Correct choice: Annual limit 5 mSv, and monitoring when the deep dose is likely to exceed 1 mSv. Swapping the two numbers uses 1 mSv as the limit and 5 mSv as the trigger. Fifty millisieverts is the adult limit. Ten millisieverts is neither minor figure. Fifteen millisieverts is 0.10 × 150, the minor lens limit, and 0.5 mSv is the NCRP monthly embryo recommendation.
+
 ## Radiation Monitoring for Personnel and Patients
 
 ### Q1
@@ -105,6 +165,66 @@ D. The monthly limit is 50 mSv
 Answer: B
 Objective: VI.2
 Why: The monthly embryo/fetus guidance is 0.5 mSv. 0.80 − 0.50 = 0.30 mSv over that monthly value. The gestation cap is 5 mSv, which this single month has not reached, but the month itself is already over. Correct choice: 0.80 mSv exceeds 0.5 mSv. 0.80 is larger than 0.50. 5 mSv is the gestation total, not the month. 50 mSv is the adult annual occupational limit.
+
+### Q6
+Stem: An adult is likely to receive 8 mSv TEDE in the year from external sources and will not enter a high radiation area. Does 10 CFR 20.1502 require individual monitoring for this adult?
+A. No monitor, because 8 mSv is under 50 mSv
+B. A monitor, because every adult is badged at 1 mSv
+C. A monitor, because 8 mSv exceeds 5 mSv
+D. No monitor, because 8 mSv is under 15 mSv
+Answer: C
+Objective: VI.2
+Why: Ten percent of the 50 mSv TEDE limit is 0.10 × 50 = 5 mSv. Then 8 − 5 = 3 mSv over that adult monitoring threshold, so a badge is required. Correct choice: A monitor, because 8 mSv exceeds 5 mSv. Staying under the 50 mSv annual limit does not remove the requirement. The 1 mSv figure is the minor and declared-pregnant deep-dose trigger. Fifteen millisieverts is 0.10 × 150, ten percent of the lens limit, and this estimate is a TEDE.
+
+### Q7
+Stem: An adult is likely to receive 2 mSv TEDE in the year and must enter a high radiation area. Which 10 CFR 20.1502 result fits?
+A. No monitor, because 2 mSv is under 5 mSv and the area adds nothing
+B. A monitor, because the person enters a high radiation area
+C. A monitor only after the recorded dose has already passed 50 mSv
+D. A monitor only if the person is a declared-pregnant worker
+Answer: B
+Objective: VI.2
+Why: The adult TEDE monitoring threshold is 0.10 × 50 = 5 mSv. This estimate is under it by 5 − 2 = 3 mSv. Correct choice: A monitor, because the person enters a high radiation area. Entry into a high radiation area is its own monitoring requirement. The decision is made before the dose reaches 50 mSv. Declared-pregnant monitoring uses a 1 mSv deep-dose trigger over the pregnancy.
+
+### Q8
+Stem: A 17-year-old worker is likely to receive a deep dose of 2.2 mSv in the year. Monitoring of a minor is required when that deep dose is likely to exceed 1 mSv. By how much does 2.2 mSv exceed 1 mSv, and is monitoring required?
+A. 2.2 mSv is under 1 mSv, so monitoring is not required
+B. 2.8 mSv under the 5 mSv adult threshold, so a minor is not monitored
+C. 1.2 mSv over 1 mSv, so monitoring is required
+D. 47.8 mSv under 50 mSv, so monitoring is not required
+Answer: C
+Objective: VI.2
+Why: 2.2 − 1.0 = 1.2 mSv. The minor deep-dose trigger is 1 mSv, and 2.2 mSv is above it, so monitoring is required. Correct choice: 1.2 mSv over 1 mSv, so monitoring is required. The adult threshold is 0.10 × 50 = 5 mSv, and 5.0 − 2.2 = 2.8 mSv under that adult threshold. That adult gap does not apply to the minor. The distance to the adult annual limit is 50 − 2.2 = 47.8 mSv, which is not the monitoring test.
+
+### Q9
+Stem: After a written declaration, the estimated deep dose for the rest of the pregnancy is 0.6 mSv. Declared-pregnant monitoring is required when the deep dose is likely to exceed 1 mSv over the pregnancy. Which comparison is correct?
+A. 0.6 mSv exceeds 1 mSv, so this estimate already meets the monitoring trigger
+B. 0.6 mSv is 0.4 mSv under 1 mSv, so this estimate alone does not meet the 1 mSv monitoring trigger
+C. 0.6 mSv exceeds the 5 mSv gestation limit
+D. 0.6 mSv exceeds the 50 mSv occupational TEDE limit
+Answer: B
+Objective: VI.2
+Why: 1.0 − 0.6 = 0.4 mSv. The estimate is under the 1 mSv declared-pregnant monitoring trigger. Correct choice: 0.6 mSv is 0.4 mSv under 1 mSv, so this estimate alone does not meet the 1 mSv monitoring trigger. The NRC gestation limit is 5 mSv, and 0.6 is under 5. The adult TEDE limit is 50 mSv, and 0.6 is under 50. The NCRP monthly recommendation of 0.5 mSv is a different comparison from this monitoring trigger.
+
+### Q10
+Stem: A declared-pregnant worker is likely to receive 2.5 mSv deep dose over the pregnancy and will not enter a high radiation area. Her adult TEDE estimate for the year is 3 mSv. Which monitoring statement is correct?
+A. No monitoring, because 3 mSv is under 5 mSv
+B. Monitoring is required, because 2.5 mSv exceeds the 1 mSv declared-pregnant trigger
+C. Monitoring is required because 3 mSv exceeds 1 mSv for every adult
+D. No monitoring, because 2.5 mSv is under the 5 mSv gestation limit
+Answer: B
+Objective: VI.2
+Why: The declared-pregnant deep-dose trigger is 1 mSv over the pregnancy. 2.5 − 1.0 = 1.5 mSv over that trigger, so monitoring is required. Correct choice: Monitoring is required, because 2.5 mSv exceeds the 1 mSv declared-pregnant trigger. The adult trigger is 0.10 × 50 = 5 mSv, and 3 mSv is under it by 5 − 3 = 2 mSv. Three millisieverts is not the adult threshold. The 5 mSv gestation limit is the dose ceiling. Staying under 5 mSv does not cancel monitoring once 1 mSv is likely.
+
+### Q11
+Stem: A clinic’s radiation protection program sets ALARA investigational level I and level II in millisieverts. A badge crosses level I and remains under the 50 mSv annual TEDE limit. What is true?
+A. Level I and level II are the same federal doses in every clinic
+B. Crossing level I starts a local review, and the 50 mSv TEDE limit is a separate ceiling
+C. Level II replaces the 50 mSv TEDE limit
+D. Crossing level I means the badge may be stopped for the rest of the year
+Answer: B
+Objective: VI.1
+Why: Investigational levels are written in the local program. This lesson assigns no universal millisievert value to level I or level II. Level I is the lower local threshold and starts a review. Level II is the higher local threshold and starts a formal investigation. Correct choice: Crossing level I starts a local review, and the 50 mSv TEDE limit is a separate ceiling. Neither local level replaces the 50 mSv TEDE limit in 10 CFR 20.1201. Crossing level I is not a reason to stop individual monitoring.
 
 ## Treatment Vault Shielding Requirements
 
@@ -197,6 +317,146 @@ D. A dimensionless transmission; the Gy/week in P and in W cancel
 Answer: D
 Objective: VI.3
 Why: P and W carry the same dose unit, so that unit cancels in the ratio. B is the fraction of the incident radiation the barrier may let through. It is not a dose in Gy/week and it is not the wall thickness. Thickness is the number of tenth-value layers times the TVL, after B is known.
+
+### Q24
+Stem: A primary wall receives the useful beam for one quarter of the workload. The design limit at the protected point is 0.0001 Gy per week. The point is 5 m from the target. The useful-beam workload is 500 Gy per week at 1 m. Occupancy at the protected point is full. What transmission may this primary wall allow?
+A. 0.00002, dimensionless
+B. 0.000004, dimensionless
+C. 0.000005, dimensionless
+D. 50000, dimensionless
+Answer: A
+Objective: VI.3
+Why: Distance squared is 5 × 5 = 25. Design limit times that square is 0.0001 × 25 = 0.0025. One quarter of the workload is 0.25 × 500 = 125 Gy per week aimed at the wall. Full occupancy is 1, so the divisor is 125. Transmission is 0.0025 / 125 = 0.00002. Correct choice: 0.00002, dimensionless. Using 5 m only once gives 0.0001 × 5 = 0.0005, then 0.0005 / 125 = 0.000004. Using the whole 500 Gy per week gives 0.0025 / 500 = 0.000005. Inverting the ratio gives 125 / 0.0025 = 50000, which is greater than 1 and cannot be a required transmission.
+
+### Q25
+Stem: The useful beam delivers 800 Gy per week at 1 m. Head leakage at 1 m is 0.1 percent of that useful beam. What is the leakage workload at 1 m?
+A. 0.8 Gy per week
+B. 8 Gy per week
+C. 80 Gy per week
+D. 0.08 Gy per week
+Answer: A
+Objective: VI.3
+Why: 0.1 percent is 0.1 / 100 = 0.001. Then 0.001 × 800 = 0.8 Gy per week. Correct choice: 0.8 Gy per week. Using 1 percent gives 0.01 × 800 = 8 Gy per week. Using 10 percent gives 0.10 × 800 = 80 Gy per week. Moving the decimal one place further gives 0.0001 × 800 = 0.08 Gy per week.
+
+### Q26
+Stem: A wall is being checked for head leakage only. The design limit at the protected point is 0.0001 Gy per week. The point is 5 m from the target. The useful-beam workload is 250 Gy per week at 1 m. Leakage at 1 m is 0.1 percent of the useful beam. The leakage use factor is 1 and the occupancy is 1. What transmission may that leakage barrier allow?
+A. 0.00001, dimensionless
+B. 0.002, dimensionless
+C. 0.01, dimensionless
+D. 0.04, dimensionless
+Answer: C
+Objective: VI.3
+Why: 0.1 percent of 250 is 0.001 × 250 = 0.25 Gy per week. Distance squared is 5 × 5 = 25. Design limit times that square is 0.0001 × 25 = 0.0025. Divide by the leakage workload at use factor 1 and occupancy 1: 0.0025 / 0.25 = 0.01. Correct choice: 0.01, dimensionless. Using the full 250 Gy per week gives 0.0025 / 250 = 0.00001. Using 5 m only once gives 0.0001 × 5 = 0.0005, then 0.0005 / 0.25 = 0.002. Applying a use factor of 0.25 to the leakage workload gives 0.25 × 0.25 = 0.0625, then 0.0025 / 0.0625 = 0.04.
+
+### Q27
+Stem: Two calculations use the same weekly design limit, the same distance, the same useful-beam workload, and full occupancy. The primary wall uses a use factor of 0.25. The leakage calculation uses 0.1 percent of the useful beam and a use factor of 1. The primary transmission is smaller than the leakage transmission by what factor?
+A. 2.5
+B. 25
+C. 0.00025
+D. 250
+Answer: D
+Objective: VI.3
+Why: The design limit, distance, and occupancy cancel. The primary product of workload and use factor carries 0.25. The leakage product carries 0.001 × 1. The ratio is 0.25 / 0.001 = 250, so the primary wall may transmit 250 times less. Correct choice: 250. Dividing 0.25 by 0.01, as if 0.1 percent were 1 percent, gives 25. Dividing 0.25 by 0.1 gives 2.5. Multiplying 0.25 × 0.001 = 0.00025 is the product of the two factors, not the ratio.
+
+### Q28
+Stem: A secondary-barrier calculation has already included head leakage at 0.1 percent of the useful beam with use factor 1. What still has to be calculated on its own?
+A. Patient scatter, as a term separate from leakage
+B. The same leakage term again with use factor 0.25
+C. The useful beam on a different wall, folded into this leakage term
+D. Wedge transmission from the monitor-unit calculation
+Answer: A
+Objective: VI.3
+Why: Leakage and patient scatter are both secondary, and they stay separate. Use factor 1 on the 0.1 percent leakage workload does not include scatter from the patient. Correct choice: Patient scatter, as a term separate from leakage. Scatter depends on field size and angle, and its fraction has to be given in the problem. The useful beam on another wall is that wall’s primary calculation. A wedge factor belongs in the monitor-unit calculation.
+
+### Q29
+Stem: The useful beam strikes the west wall for one quarter of the workload. The east wall never receives the useful beam. Which description of the east wall is correct?
+A. Primary, with use factor 0.25, because every wall copies the west wall
+B. Secondary, shielded for leakage and patient scatter, with leakage use factor 1
+C. Primary, with use factor 1, because leakage is 0.1 percent of the useful beam
+D. Omitted from shielding, because the west-wall use factor of 0.25 accounts for the whole room
+Answer: B
+Objective: VI.3
+Why: The useful beam never strikes the east wall, so that wall is secondary. Its leakage term uses use factor 1, and the leakage magnitude is 0.1 percent of the useful beam at 1 m. Patient scatter is the other secondary term. Correct choice: Secondary, shielded for leakage and patient scatter, with leakage use factor 1. The west wall is primary, and its useful-beam use factor is 0.25. That 0.25 stays on the west wall.
+
+### Q30
+Stem: A 6 MV wall in ordinary concrete must provide 3 tenth-value layers. Use the teaching tenth-value layer of 35 cm. What thickness is that?
+A. 135 cm
+B. 90 cm
+C. 38 cm
+D. 105 cm
+Answer: D
+Objective: VI.3
+Why: 3 × 35 = 105 cm. Correct choice: 105 cm. Three layers at the 18 MV teaching value would be 3 × 45 = 135 cm. Three layers at 30 cm, the tenth-value layer supplied only inside a different example, would be 3 × 30 = 90 cm. Adding the layer count to the tenth-value layer gives 35 + 3 = 38 cm.
+
+### Q31
+Stem: An 18 MV wall in ordinary concrete must provide 2 tenth-value layers. Use the teaching tenth-value layer of 45 cm. What thickness is that?
+A. 70 cm
+B. 90 cm
+C. 47 cm
+D. 22.5 cm
+Answer: B
+Objective: VI.3
+Why: 2 × 45 = 90 cm. Correct choice: 90 cm. Two layers at the 6 MV teaching value would be 2 × 35 = 70 cm. Adding gives 45 + 2 = 47 cm. Dividing gives 45 / 2 = 22.5 cm.
+
+### Q32
+Stem: Which concrete tenth-value layer matches the teaching value for a 6 MV beam when the problem does not give a measured value?
+A. About 35 cm, within about 34 to 37 cm
+B. About 45 cm, within about 44 to 45 cm
+C. About 6 cm, taken from the 6 MV name
+D. About 30 cm, the tenth-value layer used in one worked primary example
+Answer: A
+Objective: VI.3
+Why: Ordinary concrete at 6 MV is taught here as about 35 cm, and the range carried with that value is 34 to 37 cm. Correct choice: About 35 cm, within about 34 to 37 cm. About 45 cm, range 44 to 45 cm, is the 18 MV teaching value. Six centimeters repeats the beam energy. Thirty centimeters was a tenth-value layer handed to one primary example.
+
+### Q33
+Stem: A problem asks for the teaching concrete tenth-value layer at 18 MV and does not print a measured value. Which value is used?
+A. 35 cm
+B. 30 cm
+C. 18 cm
+D. 45 cm
+Answer: D
+Objective: VI.3
+Why: The teaching concrete tenth-value layer at 18 MV is about 45 cm, with the range 44 to 45 cm. Correct choice: 45 cm. About 35 cm is the 6 MV teaching value. Thirty centimeters was supplied inside one primary-barrier example. Eighteen centimeters repeats the beam energy as a thickness.
+
+### Q34
+Stem: What density of ordinary concrete goes with the teaching tenth-value layers in this lesson?
+A. About 2.35 g/cm³
+B. About 1.00 g/cm³
+C. About 11.3 g/cm³
+D. About 4.70 g/cm³
+Answer: A
+Objective: VI.3
+Why: Ordinary concrete here is about 2.35 g/cm³. Correct choice: About 2.35 g/cm³. Water is about 1.00 g/cm³. Lead is about 11.3 g/cm³ and is a different shield. Twice 2.35 is 4.70, which is not the concrete density. The 35 cm and 45 cm tenth-value layers already belong to this concrete.
+
+### Q35
+Stem: A 6 MV calculation is assigned the teaching concrete tenth-value layer, 35 cm, for 4 tenth-value layers. What thickness is required?
+A. 148 cm
+B. 180 cm
+C. 136 cm
+D. 140 cm
+Answer: D
+Objective: VI.3
+Why: 4 × 35 = 140 cm. Correct choice: 140 cm. Once 35 cm is assigned, the ends of the 34 to 37 cm range are different products: 4 × 34 = 136 cm and 4 × 37 = 148 cm. Four layers at the 18 MV value would be 4 × 45 = 180 cm.
+
+### Q36
+Stem: A leakage barrier may transmit 0.001 of the radiation that hits it. How many tenth-value layers is that transmission?
+A. 1 tenth-value layer
+B. 2 tenth-value layers
+C. 3 tenth-value layers
+D. 4 tenth-value layers
+Answer: C
+Objective: VI.3
+Why: 0.1 × 0.1 × 0.1 = 0.001, so three tenth-value layers transmit 0.001. Correct choice: 3 tenth-value layers. One layer transmits 0.1. Two layers transmit 0.1 × 0.1 = 0.01. Four layers transmit 0.001 × 0.1 = 0.0001.
+
+### Q37
+Stem: After an HDR fraction the console shows the source retracted. Which room checks still belong with radiation protection?
+A. A door interlock that retracts the source if the door opens, and a survey of the patient before release
+B. A new primary-barrier thickness calculated after every fraction
+C. A collar badge left in the maze as the retracted-source test
+D. An hourly leak test of the source in place of the room survey
+Answer: A
+Objective: VI.2
+Why: The HDR door interlock returns the source to the safe if the door opens during treatment. After the fraction, a survey of the patient confirms the source is not still in the applicator. The console message is not that survey. Correct choice: A door interlock that retracts the source if the door opens, and a survey of the patient before release. Shielding thickness is not recomputed as the post-treatment check. A badge integrates occupational dose. It does not show whether this source is retracted. A leak test is a source-integrity check on a schedule of months. Dwell time and the emergency crank stay in the brachytherapy module.
 
 ## Radiation Protection and Personnel Monitoring Quiz
 

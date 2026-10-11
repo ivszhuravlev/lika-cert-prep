@@ -16,6 +16,8 @@ Photons (x-rays and gamma rays) are electromagnetic. No charge, no rest mass, sp
 
 Electrons are light charged particles. They ionize continuously, scatter through large angles, and radiate bremsstrahlung in high-Z material. A clinical electron beam has a practical range and a finite depth where the dose falls to the bremsstrahlung tail. Multiple scattering washes out any sharp Bragg peak. Dose rises to a shallow dmax and then falls.
 
+Percent surface dose on a clinical electron beam rises as the energy rises. Among 4 MeV electrons, 6 MV photons, 10 MV photons, and 16 MeV electrons, the 16 MeV beam has the highest skin dose, because the photon beams are still in buildup. The most probable electron energy at the surface is determined from the practical range. Mean energy then falls about linearly with depth, not as a quadratic. Percent depth dose increases with beam energy for both megavoltage electrons and photons. A finite range and a high surface dose are electron features, not shared with photons.
+
 Protons and heavier ions are charged and much heavier. They scatter little, travel in nearly straight lines, and have a range fixed by energy. Stopping power rises sharply as they slow, producing the Bragg peak near the end of the range. Clinical proton energies are about 150–250 MeV. The clinical RBE used for protons is 1.1. There is essentially no dose beyond the range, apart from a small biologic and physics nuance at the distal end that module 19 treats in more detail. The machine fact for this module: range is finite, exit dose is not a photon-style exponential tail.
 
 Alpha particles are helium nuclei, charge +2, high LET, range of centimeters in air and micrometers in tissue. They are not an external-beam modality.

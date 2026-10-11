@@ -54,6 +54,26 @@ Answer: B
 Objective: III.7
 Why: Answer B. The practical range of a 9 MeV beam is about 9/2 = 4.5 cm of water. The chest wall uses 1.5 cm of that water-equivalent range, leaving about 3.0 cm of water-equivalent range. In lung at relative density 0.25, physical distance is water-equivalent distance divided by density: 3.0/0.25 = 12 cm. Electrons can therefore stream far past the chest wall and reach heart or lung that a water phantom calculation would have called safe. This is why electron energy for a chest wall is chosen from the CT, not from a ruler on the skin. The 2 MeV/cm rule gives the same caution in energy units: 1.5 cm of tissue removes about 3 MeV, leaving about 6 MeV, which is still a multi-centimeter range in water and a much longer range in lung.
 
+### Q6
+Stem: A photon percent depth dose was tabulated for 6 MV, 10 cm depth, 10×10 cm, 100 cm SSD, open field. The plan now uses 18 MV, a deeper point, 110 cm SSD, a 20×20 cm aperture, and a block that covers a third of that aperture. Which statement is correct?
+A. Percent depth dose can change with each of those conditions: energy, depth, SSD, field size, and how much of the field is blocked
+B. Percent depth dose is fixed once the energy is chosen, so depth, SSD, field size, and blocking are ignored
+C. Percent depth dose depends only on the monitor units typed in for the fraction
+D. Blocking and SSD change only the wedge factor and leave percent depth dose the same
+Answer: A
+Objective: III.7
+Why: Answer A. Percent depth dose is a relative depth curve, and the curve moves when the beam or the geometry changes. Higher energy generally raises the percent dose past the buildup. Past dmax, a deeper point sits lower on the curve. A longer SSD changes the inverse-square relationship between dmax and the point (the Mayneord direction). A larger field adds phantom scatter and usually raises the percent depth dose. A block removes scatter, so the open area, not the jaw size alone, is the field the curve should see. Monitor units scale the whole dose. They cancel in a percent. A wedge factor is a separate transmission. It is not a substitute for those five dependencies.
+
+### Q7
+Stem: Two calculation points lie at the same depth in a 6 MV field. One is on the central axis. The other is 8 cm toward the field edge. How is the off-axis factor chosen?
+A. It depends on the distance from the central axis, so the edge point does not automatically receive the central-axis factor
+B. It is 1.00 at every distance, because a flattened beam has no off-axis variation at any depth
+C. It is set by the hinge angle between two beams and does not use the point's position
+D. It is the inverse-square factor from the source to the skin, the same number for every point in the plane
+Answer: A
+Objective: III.7
+Why: Answer A. The off-axis factor (off-axis ratio) compares dose off the central axis with dose on the central axis at the same depth. That ratio changes as the point moves away from the axis: horns, the rounded shoulder, and the penumbra are all position effects. A nominal "flat" beam is flat only inside a stated region and depth. It is not 1.00 out to the edge. A hinge angle arranges two central axes. It is not this factor. Inverse square from source to skin is one number for a flat surface. It does not describe the cross-beam profile.
+
 ## Normalization
 
 ### Q1
@@ -261,6 +281,16 @@ D. Because the strip is the GTV and must be blocked on every sarcoma
 Answer: A
 Objective: III.2
 Why: Answer A. A fully circumferential high-dose shell around a limb scars the draining lymphatics and can produce severe edema distal to the field. The classical planning rule is to keep an unirradiated strip of tissue along the limb, as long as that strip is not part of the target volume. The block is not the GTV. Integral dose is not a reason to treat the opposite leg. Preoperative doses are often about 50 Gy in 25 fractions; postoperative doses are higher, on the order of 60 to 66 Gy, because the microscopic residual is dispersed in a hypoxic surgical bed. The strip rule applies to both.
+
+### Q6
+Stem: One 6 MV photon beam covers a deep target, so the target sits on the slope from the entrance dose down to the exit. A second plan aims three photon beams through the same target from different directions and renormalizes so the target still receives the prescription. What is the usual change inside the target?
+A. The target dose is more homogeneous than with the single beam, because the beams fill in one another's falloff
+B. The tumor dose is reduced relative to the surrounding normal tissue, and that reduction is why the extra beams are added
+C. The target becomes less uniform, because each added beam stacks another copy of the single-beam slope
+D. Homogeneity is unchanged, because the number of photon beams cannot alter the shape of the summed target dose
+Answer: A
+Objective: III.7
+Why: Answer A. A single photon beam is high near dmax and lower at depth, so a thick target sees that gradient. Three or more beams that cross in the target add dose where each individual beam is weak, and the sum inside the target is usually flatter. The prescription is put back on the target by renormalizing. The extra beams are not there to lower tumor dose relative to normal tissue. They do not multiply the single-beam slope inside the overlap, and the summed shape does change when beams are added.
 
 ## Planning Methodology Quiz
 

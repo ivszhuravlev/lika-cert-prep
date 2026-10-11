@@ -158,6 +158,16 @@ Answer: A
 Objective: I.8
 Why: Coincidence localization, positron range, and non-colinearity limit PET resolution to several millimeters, worse than CT. The CT remains the geometric and density data set. PET does not measure electron density.
 
+### Q6
+Stem: FDG PET is registered to the planning CT before a lung volume is drawn. Which description of the PET study is right?
+A. It is a finer anatomic map than the CT, and the uptake numbers are electron density
+B. It shows metabolic activity. The CT remains the anatomic map, and the uptake is not electron density
+C. It replaces the CT anatomy and the density table, because metabolic images are Hounsfield units
+D. It shows electron density directly and adds nothing about metabolism
+Answer: B
+Objective: I.8
+Why: Answer B. FDG PET shows metabolic activity. It is not a better anatomic map than the CT, and the uptake values are not electron density. Dose stays on the planning CT and its density curve.
+
 ## Ultrasound
 
 ### Q1
@@ -341,3 +351,23 @@ D. Planning CT uses kilovoltage x-rays and FDG PET involves 511 keV annihilation
 Answer: D
 Objective: I.8
 Why: Answer D. CT is an x-ray attenuation scan, typically on the order of 80–140 kV. PET detects the 511 keV pair from positron annihilation, which is ionizing. MRI tips nuclear spins with radiofrequency in a magnetic field and does not deliver that imaging dose. None of the three is a 2 Gy treatment fraction.
+
+### Q36
+Stem: A review station displays Hounsfield numbers from −500 through +400. The window level of that display is:
+A. −500
+B. +400
+C. −50
+D. +900
+Answer: C
+Objective: I.8
+Why: Answer C. Window level is the midpoint of the displayed range, not an endpoint. The midpoint is (−500 + 400) / 2 = −50. −500 is the lower end of the gray range and +400 is the upper end. +900 is the width, +400 − (−500), which is how many HU are spread from black to white.
+
+### Q37
+Stem: The same planning CT is reviewed once for aerated lung and once for mediastinal soft tissue. Which gray-window pairing fits those two tasks?
+A. One narrow window centered near +1000 HU for both tissues
+B. A narrow window near +40 HU for lung, and a wide window centered near −700 HU for soft tissue
+C. A lung window one HU wide, because the width setting rewrites the stored numbers used for dose
+D. A wide lung window centered on a large negative number (for example, level −700 and width 1000), and a narrow soft-tissue window near +40
+Answer: D
+Objective: I.8
+Why: Answer D. Lung grayscale uses a wide window centered on a large negative number. One teaching example is level −700 and width 1000. Soft tissue uses a narrow window near +40. Swapping those windows hides the tissue under review. The display window leaves the stored HU, and the density table, unchanged.

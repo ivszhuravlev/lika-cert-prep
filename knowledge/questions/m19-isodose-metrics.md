@@ -297,6 +297,66 @@ Answer: B
 Objective: III.7
 Why: Answer B. In fully modulated proton therapy the high dose in one part of the target may come from only one field's distal end. A range or setup error that moves that spot leaves a hole that the other fields were not asked to fill. Single-field optimization is less conformal and usually more robust, because each field is a complete, if less elegant, dose. A nominal DVH does not display that difference; robust evaluation under shifted density and shifted setup does.
 
+### Q10
+Stem: A proton clinical target is expanded by 5 mm in every direction, the same shell used on the photon plan. The planner marks range uncertainty as finished. One beam is aimed at the target. What is still required?
+A. A prescription rewritten in kilovolts, because proton range is set by tube potential
+B. A range margin along the beam. Range uncertainty is added as a margin on how far the protons travel
+C. Nothing further. A uniform geometric shell is the range margin
+D. A lead shield whose thickness in millimeters is half the beam energy, placed on the distal side
+Answer: B
+Objective: III.7
+Why: Answer B. Proton range uncertainty sits on stopping power, tissue composition, and the path, so it is handled by a proximal and distal range margin along the beam, together with a robust check of that margin. The department protocol sets how many millimeters that margin is. A 5 mm shell copied from a photon PTV is a geometric setup margin. It does not add the range margin. Kilovoltage tube potential is not a proton energy. The electron lead rule is not a proton distal margin.
+
+### Q11
+Stem: A clinical proton course is prescribed as 44 Gy (RBE). No biological factor other than the generic clinical proton value is given. What physical dose does that prescription call for?
+A. 40 Gy
+B. 44 Gy
+C. 48.4 Gy
+D. 88 Gy
+Answer: A
+Objective: III.3
+Why: Answer A. The generic clinical proton RBE is 1.1. RBE-weighted dose is the physical dose times that factor, so the physical dose is the prescribed 44 Gy (RBE) with the factor taken back out. Because 1.1 times 40 equals 44, the physical dose is 40 Gy. Reporting 44 Gy leaves the RBE in the number. Multiplying 44 by 1.1 gives 48.4 Gy and applies the factor a second time. Doubling to 88 Gy uses a factor of 2, which is not the clinical proton value.
+
+### Q12
+Stem: A proton field covers a target that is several centimeters thick along the beam. Which description is the spread-out Bragg peak?
+A. The entrance region, where the dose is lower than the target dose
+B. Photon dose beyond the patient
+C. One unspread spike from a single proton energy
+D. The flat high-dose region made by stacking pristine peaks across the target thickness
+Answer: D
+Objective: I.3
+Why: Answer D. A single proton energy stops in a narrow Bragg peak. A spread-out Bragg peak stacks peaks of different energies and weights so the high-dose region is flat across the thickness that must be covered. That flat high-dose stretch is the SOBP. The entrance region is proximal to it and is lower than the SOBP dose. Tissue beyond the distal falloff does not keep the prescription dose, and one pristine spike is too narrow to be the spread-out region.
+
+### Q13
+Stem: With no extra material in the beam, a proton beam stops at about 15 cm of water. A range shifter of 5 cm water-equivalent thickness is then placed upstream of the patient. What happens to the range in the patient?
+A. It lengthens to about 20 cm
+B. It stays about 15 cm, because a shifter changes only the spot map
+C. It shortens to about 10 cm. The shifter pulls the range shallower
+D. The beam leaves the patient as an 18 MV photon exit dose
+Answer: C
+Objective: III.7
+Why: Answer C. A range shifter is material the protons cross before the skin. They lose energy in that material, so less range remains in the patient. A shifter of 5 cm water-equivalent thickness on a 15 cm water range leaves about 15 minus 5, or 10 cm, in the patient. The peak moves shallower, which is why a shifter is used when the lowest available energy still stops too deep. Adding the 5 cm to the 15 cm points the range the wrong way. The shifter does not turn the beam into photons. Scatter in the shifter can widen the lateral penumbra; that widening does not put the range deeper.
+
+### Q14
+Stem: Where along a clinical proton beam is the linear energy transfer higher?
+A. In the entrance plateau, where the protons are fastest
+B. At the distal end, where the protons are slowing and stopping
+C. It is the same at every depth and is identical to the generic RBE of 1.1
+D. It is the Hounsfield number of the voxel the proton is crossing
+Answer: B
+Objective: I.3
+Why: Answer B. Linear energy transfer is the energy a charged particle loses per unit path. Protons lose more energy per millimeter as they slow down, so LET is higher at the distal end than in the entrance plateau. The prescription still uses the generic RBE of 1.1 unless a protocol states another factor. A higher distal LET is a reason to keep a serial organ off that end. It does not replace 1.1 with the Hounsfield number, and it does not make LET uniform. The entrance is where the protons are fastest and the LET is lower.
+
+### Q15
+Stem: A water voxel reads about 0 on the Hounsfield scale. A planner copies that 0 into the relative stopping-power table for the same voxel. What is wrong with that copy?
+A. Stopping-power ratio and Hounsfield units are different quantities. Water's relative stopping power is 1, and the planning system converts CT numbers to stopping power through a calibration curve
+B. Nothing. The stopping-power ratio is defined to be the Hounsfield number
+C. The voxel should be entered as 1.1, because relative stopping power is the proton RBE
+D. A Hounsfield value of 0 means the protons have already stopped, so the range table can stay empty
+Answer: A
+Objective: I.3
+Why: Answer A. The Hounsfield scale sets water near 0. Relative stopping power is defined so water is 1. Those are different quantities, and a CT number is not a stopping-power ratio. The dose engine integrates stopping power along each ray, using a calibration curve from Hounsfield units to stopping-power ratio. Entering 0 for water assigns water a stopping power of zero, so the engine takes no energy from the protons there and the calculated range runs too deep. The clinical RBE of 1.1 is a biological factor applied to physical dose. It is not the stopping-power ratio. Air, near −1000 Hounsfield units, is another pair that does not match: its relative stopping power is near 0, not −1000.
+
 ## Isodose Chart
 
 ### Q1
@@ -554,6 +614,106 @@ D. The missed 5 cm³ is the entire prescription-isodose volume
 Answer: A
 Objective: III.1
 Why: Answer A. The RTOG conformity index is prescription-isodose volume divided by PTV volume: 50/50 = 1. That equality is size only. Overlap is 45 cm³, so 50 − 45 = 5 cm³ of PTV is missed and 50 − 45 = 5 cm³ of the prescription cloud sits outside the PTV. D90 covers 90% of 50 cm³, which is 45 cm³, so a D90 objective can be met at the same time the cloud is shifted. The ratio 45/50 = 0.90 is the coverage fraction, not the RTOG index, and it is exactly the coverage D90 describes. Paddick’s index is 45² / (50 × 50) = 2025/2500 = 0.81, which records the shift that an index of 1 does not.
+
+### Q24
+Stem: A thoracic plan is reviewed from this dose-volume reading. Combined lungs: volume 2500 cm³, and 900 cm³ receives at least 20 Gy. The lung limit is 30% or less of that volume. Spinal cord: volume 48 cm³, maximum dose 46 Gy. The cord limit is a maximum of 50 Gy. Which conclusion matches those limits?
+A. Both pass, because 900 is less than 2500 and 46 is less than 900
+B. The lungs fail and the cord passes
+C. The cord fails and the lungs pass, because 46 is above 30 and 900 is below 50
+D. Both fail, because each reported value is above 20
+Answer: B
+Objective: III.12
+Why: Answer B. The lung fraction at 20 Gy is 900 divided by 2500, which is 0.36, or 36%. That is 6 percentage points over the 30% limit, so the lungs fail. The cord maximum is 46 Gy against a 50 Gy maximum, 4 Gy under the limit, so the cord passes. Choice A compares the raw cubic centimeters with each other. Choice C applies the lung percent to the cord dose and the cord dose to the lung volume. Choice D treats 20 as the limit for both rows.
+
+### Q25
+Stem: An evaluation sheet lists two structures. Both parotids, reported as one structure: volume 62 cm³, mean dose 29 Gy, limit a mean under 25 Gy. Rectum: volume 100 cm³, and 15 cm³ receives at least 70 Gy, limit under 20% of the rectum. Which conclusion matches those limits?
+A. The parotids fail and the rectum passes
+B. The rectum fails and the parotids pass, because 15 cm³ is a dose and 29 Gy is under 100
+C. Both pass, because 29 is under 62 and 15 is under 100
+D. Both fail, because 29 and 15 are both above 20
+Answer: A
+Objective: III.12
+Why: Answer A. The parotid mean is 29 Gy. The limit is a mean under 25 Gy, and 29 is 4 Gy over that limit, so the parotids fail. The rectum fraction at 70 Gy is 15 divided by 100, which is 0.15, or 15%. That is 5 percentage points under the 20% limit, so the rectum passes. Choice B swaps the two rows. Choice C compares a dose with a volume. Choice D uses 20 as a cutoff for both the parotid mean and the rectal cubic centimeters.
+
+### Q26
+Stem: A prostate plan lists the rectum and the cord. Rectum: volume 80 cm³, and 20 cm³ receives at least 70 Gy. The rectum limit is under 20% of that volume. Spinal cord: volume 18 cm³, maximum dose 11 Gy. The cord limit is a maximum of 50 Gy. The cord sits outside the high-dose region. Which conclusion matches those limits?
+A. Both pass, because 20 cm³ is under 80 cm³ and 11 Gy is under 50 Gy
+B. The cord fails because any cord dose fails a 50 Gy maximum, and the rectum passes because 20 cm³ is under 80 cm³
+C. Both fail, because 20 cm³ and 11 Gy are each above zero
+D. The rectum fails and the cord passes
+Answer: D
+Objective: III.12
+Why: Answer D. The rectum fraction at 70 Gy is 20 divided by 80, which is 0.25, or 25%. The limit is under 20%, and 25% is 5 percentage points over it, so the rectum fails. The cord maximum is 11 Gy against a 50 Gy maximum, so the cord passes. A cold cord does not repair the rectal row. Choice A stops at 20 cm³ being smaller than 80 cm³ and never forms the percent. Choice B treats the cord maximum as a ban on any cord dose. Choice C fails every row that is above zero.
+
+### Q27
+Stem: A second thoracic plan is reviewed from this dose-volume reading. Combined lungs: volume 4000 cm³, and 1000 cm³ receives at least 20 Gy. The lung limit is 30% or less of that volume. Spinal cord: volume 44 cm³, maximum dose 53 Gy. The cord limit is a maximum of 50 Gy. Which conclusion matches those limits?
+A. Both fail
+B. The lungs fail and the cord passes, because 1000 is above 30 and 53 is under 4000
+C. The lungs pass and the cord fails
+D. Both pass, because 25 is under 53
+Answer: C
+Objective: III.12
+Why: Answer C. The lung fraction at 20 Gy is 1000 divided by 4000, which is 0.25, or 25%. That is 5 percentage points under the 30% limit, so the lungs pass. The cord maximum is 53 Gy against a 50 Gy maximum, 3 Gy over the limit, so the cord fails. Choice A fails the lungs on a row that meets 30%. Choice B compares 1000 cm³ with 30 percent and 53 Gy with 4000 cm³. Choice D compares the lung percent with the cord dose.
+
+### Q28
+Stem: Three rows are printed on one evaluation sheet, and each row has its own limit. Spinal cord: volume 30 cm³, maximum 49 Gy, limit a maximum of 50 Gy. Combined lungs: volume 3500 cm³, and 1400 cm³ receives at least 20 Gy, limit 30% or less of that volume. Both parotids, as one structure: volume 48 cm³, mean dose 16 Gy, limit a mean under 25 Gy. Which rows fail?
+A. All three fail
+B. Only the lungs fail
+C. The cord and the lungs fail, and the parotids pass
+D. Only the parotids fail, because 16 Gy is less than 25 Gy
+Answer: B
+Objective: III.12
+Why: Answer B. The cord at 49 Gy is 1 Gy under a 50 Gy maximum, so the cord passes. The lung fraction at 20 Gy is 1400 divided by 3500, which is 0.40, or 40%, and 40% is 10 percentage points over 30%, so the lungs fail. The parotid mean of 16 Gy is 9 Gy under a mean limit of 25 Gy, so the parotids pass. A dose under its limit is a pass. Choice A and choice C fail the cord. Choice D treats the parotid margin under 25 Gy as a failure.
+
+### Q29
+Stem: A head-and-neck plan is prescribed to 66 Gy. The objective list and the dose-volume reading are: spinal cord, volume 40 cm³, maximum 45 Gy, limit a maximum of 50 Gy; both parotids, volume 50 cm³, mean 22 Gy, limit a mean under 25 Gy. The oral cavity is outside the PTV, volume 110 cm³, and it has no objective. The isodose display shows 73 Gy inside the oral cavity. Which finding does that review support?
+A. The parotids fail, because 22 is under 25
+B. The cord fails, because 45 is above 30
+C. The plan is clear. Every objective is met, and a structure with no objective receives no dose
+D. The oral cavity contains 73 Gy and had no objective, while the cord and the parotids meet their limits
+Answer: D
+Objective: III.12
+Why: Answer D. The cord at 45 Gy is 5 Gy under 50 Gy, and the parotid mean of 22 Gy is 3 Gy under 25 Gy, so both objectives are met. The oral cavity had no objective, and the isodose display still shows 73 Gy there, which is 7 Gy above the 66 Gy prescription. An objective constrains only the structure it is attached to. Dose is deposited in a contoured structure whether or not an objective exists. Choice A and choice B turn passing rows into failures. Choice C treats a missing objective as a missing dose.
+
+### Q30
+Stem: A thoracic plan is prescribed to 60 Gy. The objective list and the dose-volume reading are: combined lungs, volume 3200 cm³, 640 cm³ receives at least 20 Gy, limit 30% or less; spinal cord, volume 28 cm³, maximum 42 Gy, limit a maximum of 50 Gy. The brachial plexus is outside the PTV, volume 8 cm³, maximum 69 Gy, and it has no objective. Which finding does that review support?
+A. The plexus contains 69 Gy and had no objective, while the lungs and the cord meet their limits
+B. The lungs fail, because 640 cm³ is greater than 30
+C. The cord fails, because 42 is greater than 30
+D. The plan is clear, because a structure with no objective is left out of the dose calculation
+Answer: A
+Objective: III.12
+Why: Answer A. The lung fraction at 20 Gy is 640 divided by 3200, which is 0.20, or 20%. That is 10 percentage points under the 30% limit, so the lungs pass. The cord at 42 Gy is 8 Gy under 50 Gy, so the cord passes. The plexus maximum is 69 Gy, which is 9 Gy above the 60 Gy prescription, and the plexus had no objective. The objective score stays quiet on that 69 Gy region. Choice B compares cubic centimeters with a percent. Choice C compares the cord dose with the lung percent. Choice D leaves the plexus out of the calculation; the dose grid still scores every contoured voxel.
+
+### Q31
+Stem: A PTV has a volume of 120 cm³. The prescription isodose encloses 90 cm³. The overlap of the PTV and that prescription isodose is 84 cm³. Which reading of the conformity is justified?
+A. The target is fully covered, because the PTV is larger than the prescription cloud
+B. The volumes match, so the overlap of 84 cm³ means the index is 1
+C. The prescription cloud is smaller than the PTV, and 36 cm³ of the PTV lies outside that cloud
+D. The missed PTV is the 6 cm³ of prescription cloud outside the PTV, so coverage is complete
+Answer: C
+Objective: III.1
+Why: Answer C. The conformity comparison of prescription-isodose volume to PTV volume is 90 divided by 120, or 0.75. The prescription cloud is smaller than the target, so the target cannot be fully covered. The PTV outside the prescription isodose is 120 minus 84, which is 36 cm³. The prescription cloud outside the PTV is 90 minus 84, which is 6 cm³. Choice A treats a larger PTV as proof of coverage. Choice B calls unequal volumes a match. Choice D names the spill and calls it the miss. The overlap index that squares 84 and divides by 120 times 90 is 7056 divided by 10800, or 0.65, and that score is pulled down by the uncovered target.
+
+### Q32
+Stem: Two plans use the same PTV volume, 70 cm³, and the same prescription-isodose volume, 84 cm³. In plan A the overlap is 70 cm³. In plan B the overlap is 60 cm³. Which statement is justified?
+A. The plans are equally conformal, because both prescription clouds are 84 cm³ around a 70 cm³ PTV
+B. Plan A covers the whole PTV. Plan B leaves 10 cm³ of PTV outside the prescription isodose. The shared volumes hide that difference
+C. Plan B is more conformal, because its overlap is the smaller number
+D. Both plans miss 14 cm³ of PTV, because 84 minus 70 is 14
+Answer: B
+Objective: III.1
+Why: Answer B. Both plans have the same size comparison, 84 divided by 70, or 1.20. Size does not locate the cloud. Plan A overlap equals the PTV, so the whole 70 cm³ is covered and the 14 cm³ difference sits outside the PTV as spill. Plan B overlap is 60 cm³, so 70 minus 60 is 10 cm³ of PTV outside the prescription isodose, and 84 minus 60 is 24 cm³ of prescription cloud outside the PTV. Choice A stops at the shared volumes. Choice C treats a smaller overlap as a better score. Choice D calls the 14 cm³ volume difference a miss on both plans, including the plan that covers the PTV.
+
+### Q33
+Stem: Plan A reports a near-maximum of 71 Gy, a median of 65 Gy, and a near-minimum of 56 Gy. Plan B reports a near-maximum of 67 Gy, a median of 65 Gy, and a near-minimum of 63 Gy. Which reading matches the ICRU homogeneity comparison?
+A. Plan B is more homogeneous. Its spread from near-maximum to near-minimum is 4 Gy, and Plan A's spread is 15 Gy. Divided by the shared median, those spreads are about 0.06 and about 0.23
+B. Plan A is more homogeneous, because 71 Gy is higher than 67 Gy
+C. The plans match, because both medians are 65 Gy
+D. Homogeneity is the near-minimum alone, so Plan A is the more homogeneous plan
+Answer: A
+Objective: III.1
+Why: Answer A. ICRU homogeneity compares the near-maximum, the near-minimum, and the median. Plan A runs from 56 Gy to 71 Gy, a spread of 15 Gy. Divided by the median, 15 divided by 65 is 0.231. Plan B runs from 63 Gy to 67 Gy, a spread of 4 Gy. Divided by the same median, 4 divided by 65 is 0.062. The smaller result is the more homogeneous plan, so Plan B is more homogeneous. Choice B treats a higher near-maximum as an advantage. Choice C equates equal medians with equal homogeneity. Choice D treats the colder near-minimum as the better score.
 
 ## Target Volume Definitions, Isodose Distributions, and Dose Metrics Quiz
 

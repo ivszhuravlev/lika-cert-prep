@@ -106,6 +106,26 @@ Answer: A
 Objective: II.1
 Why: The MIP is a composite for drawing the motion envelope of a solid tumor in lung. Its voxel values are maxima, not tissue densities, so dose on a MIP is not a real patient dose. The average CT carries a usable density. Deleting the body contour removes the scatter geometry.
 
+### Q6
+Stem: A lumpectomy cavity has a positive margin on the pathology report. The same physician redraws that cavity a few millimeters differently on a second sitting. Breathing and daily setup also move the tissue. What is the planning-target margin for?
+A. Setup variation and internal motion, so the clinical target still receives the dose
+B. The positive surgical margin, drawn as the planning target instead of as clinical disease
+C. The physician's inconsistent drawing, which that margin is defined to hide
+D. Only the wire on the scar, with motion and setup left outside the volume
+Answer: A
+Objective: II.1
+Why: The planning target is the geometric allowance for setup uncertainty and for motion. A positive surgical margin is residual disease, so it is included in the clinical target. Inconsistent drawing is fixed by redrawing the contour. It is not a margin. The scar wire is a marker, not the volume that setup and motion are meant to cover.
+
+### Q7
+Stem: On the treatment couch the patient has gained weight, and the separation through the treated field is larger than the separation on the planning CT. What happens before the beam is turned on?
+A. The dosimetrist tells the radiation oncologist before treatment. The old plan was calculated on the smaller separation and is not delivered while the change is only written down afterward
+B. The planned monitor units are delivered today, and the weight gain is mentioned at the weekly chart check
+C. The separation is ignored, because a weight change alters dose only for beams below 100 kV
+D. The wedge angle is increased by the number of kilograms gained, and treatment proceeds
+Answer: A
+Objective: II.1
+Why: A larger separation lengthens the path, lowers the midplane dose for the same entrance, and can move the hot spots. The calculation on the old contour is no longer the dose this patient will receive. The dosimetrist stops and tells the radiation oncologist before treatment so the physician can order a new scan or a new calculation. Treating first and noting the weight later delivers the outdated plan. Kilovoltage is not the only energy that sees path length, and body weight is not a wedge angle.
+
 ## Corrections for Contour Irregularities
 
 ### Q1

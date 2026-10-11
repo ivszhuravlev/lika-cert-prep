@@ -14,7 +14,7 @@ You can place the 90% depth, the 80% depth, and the practical range from beam en
 
 Electrons deposit dose over a finite range and then stop. The therapeutic depth is the depth of the 80% or 90% isodose, not dmax and not the end of the range. Past the practical range the electron dose is gone. What remains is a bremsstrahlung tail: x-ray contamination from electrons stopping in the scattering foils, jaws, and the patient. That tail is a few percent of dose at dmax on a typical linac and is larger at higher electron energy. The percent for a given machine is commissioning data. Confirm it there, and in the methods of AAPM TG-25 and TG-70.
 
-Two rule-of-thumb families are in common use. Use the one the question names.
+Two rule-of-thumb families are in common use. Use the one the question names. The MDCB exam does not ask you to name Khan versus Bentel; the bank keeps both rules so you can recognize either formula.
 
 Khan:
 

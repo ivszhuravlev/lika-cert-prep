@@ -129,12 +129,12 @@ Why: Course 1 physical = 20×2 = 40 Gy. BED1 = 40×(1+2/2) = 40×2.0000 = 80.00 
 ### Q8
 Stem: Bonus. New activity and distance. Γ is given. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 1500 mCi. Distance is 40 cm. Exposure rate X = Γ A / d². What is X?
 A. 175.88 R/h
-B. 0.00 R/h
+B. 44.0 R/h
 C. 1.10 R/h
 D. 4.40 R/h
 Answer: D
 Objective: V.6
-Why: Substitute 4.69 × 1500 / (40)^2 = 7035 / 1600 = 4.396875 R/h, reported as 4.40 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 175.88 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.00 R/h. Doubling the distance inside the square (a 2× distance error) gives 1.10 R/h.
+Why: Substitute 4.69 × 1500 / (40)^2 = 7035 / 1600 = 4.396875 R/h, reported as 4.40 R/h. Forgetting to square the distance gives 175.88 R/h. Using 46.9 instead of 4.69, a factor-of-ten slip in the constant, gives 44.0 R/h. Doubling the distance inside the square gives 1.10 R/h.
 
 ## Phases of Clinical Trials
 
@@ -187,6 +187,16 @@ D. Phase II, then I, then IV, then III
 Answer: C
 Objective: III.2
 Why: The usual development order is safety (I), activity (II), randomized comparison (III), then surveillance (IV). Correct choice: Phase I, then II, then III, then IV. Dose finding does not follow the definitive randomized trial. That reverses the development path. Safety dose finding comes before the efficacy signal.
+
+### Q6
+Stem: Small groups are treated one after another. Each later group receives a higher dose, and the climb stops when toxicity defines the highest dose that can still be given. What study is that?
+A. A phase I trial: sequential cohorts, with the dose rising until toxicity sets the maximum tolerated dose
+B. A phase III trial, because a maximum tolerated dose is named only by a randomized two-arm efficacy comparison
+C. A phase IV trial, because the endpoint is a long-term side-effect registry after the regimen is already routine
+D. A phase II trial, because any study that records toxicity is an efficacy signal in a single large cohort
+Answer: A
+Objective: III.2
+Why: Phase I finds the dose by treating sequential cohorts and raising the dose until toxicity defines the maximum tolerated dose. A randomized comparison of efficacy against a standard treatment is phase III. A long-term side-effect study after the treatment is already in use is phase IV. Phase II looks for activity once a dose has already been chosen. Recording toxicity does not by itself make a study phase II, and a maximum tolerated dose is not created by randomizing two efficacy arms.
 
 ## Binary Number/Decimal Conversion
 

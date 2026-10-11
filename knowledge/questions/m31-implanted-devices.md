@@ -32,7 +32,7 @@ C. Dependence lowers the risk, because a dependent patient cannot have a clinica
 D. Dependence matters only if the energy is above 18 MV
 Answer: B
 Objective: III.13
-Why: Answer B. TG-203 combines the dose band with whether the patient needs the device to sustain a heartbeat. A malfunction that would be a transient mode change in a non-dependent patient can be a loss of cardiac output in a dependent one. At the same 1.5 Gy (the under-2 Gy band) the dependent patient is managed more aggressively: cardiology involvement, interrogation around the course, and the monitoring the department's policy assigns to that higher category. Dose is not the only axis. Dependence is relevant at 6 MV, not only at high energy.
+Why: Answer B. TG-203 combines the dose band with whether the patient needs the device to sustain a heartbeat. A malfunction that would be a transient mode change in a non-dependent patient can be a loss of cardiac output in a dependent one. At 1.5 Gy the dose band is low, under 2 Gy. Dependence moves that patient up one category, to intermediate. Dose is not the only axis. Dependence is relevant at 6 MV, not only at high energy.
 
 ### Q4
 Stem: A left chest-wall plan would otherwise enter through a pacemaker generator. The device cannot be moved before the start date. Which planning decision agrees with device guidance?
@@ -53,6 +53,86 @@ D. No; interrogation itself reprograms the linac energy
 Answer: B
 Objective: III.13
 Why: Answer B. For many defibrillators a magnet disables shock therapy while it is in place. That might be what cardiology wants for a monitored fraction, or it might leave the patient unprotected from a real arrhythmia. It is a clinical decision documented by the device team, not a setup shortcut. A magnet is not a neutron shield and is not an immobilization device. Interrogation reads and may reprogram the generator; it does not change the treatment machine energy.
+
+### Q6
+Stem: A 6 MV pelvic course is estimated to deliver 1.6 Gy to a pacemaker that sits outside the jaws. The patient is not pacing dependent. Which TG-203 category does this exam assign before any other flag is applied?
+A. Low, because the device dose is under 2 Gy and the patient is not pacing dependent
+B. Intermediate, because every pacemaker dose of 1 Gy or more is the middle band
+C. High, because a cardiac device is high risk at 6 MV even when the dose is under 2 Gy
+D. Exempt, because 1.6 Gy is under the historical TG-34 citation and no category applies
+Answer: A
+Objective: III.13
+Why: Answer A. The dose bands are low under 2 Gy, intermediate from 2 Gy through 5 Gy, and high above 5 Gy. At 1.6 Gy a patient who is not pacing dependent stays low. The energy is 6 MV, so the neutron flag is not raised, and the generator is outside the beam. Intermediate starts at 2 Gy. The historical TG-34 citation of 2 Gy does not erase the category, and a dose under that citation is not a reason to skip the band.
+
+### Q7
+Stem: The same 6 MV plan delivers an estimated 1.6 Gy to the generator, and this patient is pacing dependent. How does dependence change the category?
+A. It does not. Under 2 Gy every patient stays low, dependent or not
+B. It moves the patient up one category, from low to intermediate
+C. It moves the patient two categories, from low to high, because dependence skips the middle band
+D. It lowers the category, because a dependent patient is already monitored and the dose no longer counts
+Answer: B
+Objective: III.13
+Why: Answer B. Read the dose band first. Under 2 Gy is low for a patient who is not dependent. Pacing dependence moves the patient up one category, so this patient is intermediate. There is no skip from low to high at this dose. Dependence does not make the dose smaller. A dose under 2 Gy is not always the low category, and it is not a statement that the device is safe.
+
+### Q8
+Stem: The estimated generator dose is 2 Gy from a 6 MV plan. The patient is not pacing dependent. A colleague says 2 Gy is the low band and is therefore safe. What is wrong with that reading?
+A. Nothing. TG-203 calls every dose of 2 Gy or less the low band, and low means safe for every generator
+B. 2 Gy is already high, so the colleague should have said high rather than low
+C. On this exam 2 Gy is the start of the intermediate band, not the low band, and 2 Gy is not a dose that is always safe
+D. 2 Gy is a neutron fluence, so the band system does not apply at 6 MV
+Answer: C
+Objective: III.13
+Why: Answer C. Low is under 2 Gy. Intermediate runs from 2 Gy through 5 Gy, so 2 Gy itself is intermediate for a patient who is not pacing dependent. The older TG-34 citation of 2 Gy is why the number feels like a universal ceiling. TG-203 replaced that single figure. Calling 2 Gy safe ignores the middle band, ignores a pacing-dependent patient who would move up again, and ignores neutrons if the energy were above 10 MV.
+
+### Q9
+Stem: A 6 MV plan is estimated to deliver 4 Gy to a defibrillator. The patient is pacing dependent. Which category applies?
+A. Low, because 4 Gy is under 2 Gy once dependence is included
+B. Intermediate, because dependence does not change a dose that is already between 2 Gy and 5 Gy
+C. Intermediate, because a defibrillator uses a different band that tops out at 10 Gy
+D. High. The dose is in the intermediate band, and pacing dependence moves the patient up one category
+Answer: D
+Objective: III.13
+Why: Answer D. From 2 Gy through 5 Gy the band is intermediate. A pacing-dependent patient moves up one category, to high. A defibrillator uses the same bands as a pacemaker. Dependence does not pull a 4 Gy estimate under 2 Gy. The generator still has to stay out of the direct beam, and interrogation before and after is still required.
+
+### Q10
+Stem: A 6 MV estimate to the generator is 6 Gy. The patient has an intrinsic rhythm and is not pacing dependent. Which category applies, and what does dependence do at this dose?
+A. High. Above 5 Gy the category is high without dependence. A pacing-dependent patient at 6 Gy is also high. There is no category above high
+B. Intermediate, because 6 Gy is only 1 Gy past 5 Gy and the middle band absorbs that
+C. Low, because the patient is not pacing dependent and dependence is the only way to reach high
+D. High only for a pacemaker. A defibrillator at 6 Gy stays intermediate
+Answer: A
+Objective: III.13
+Why: Answer A. High is a device dose above 5 Gy. Dependence is not required to reach it. If this patient were pacing dependent, the category would stay high. The step up cannot create a fourth band. A defibrillator is classified with the same bands. Six gray is not a safe result and it is not the middle band. The beams still should not enter through the generator, and the device team still interrogates before and after.
+
+### Q11
+Stem: The planning system shows 0.8 Gy to a pacemaker outside a pelvic field. The plan uses 18 MV. The patient is not pacing dependent. A colleague keeps 18 MV because 0.8 Gy is the low band. What is the neutron decision?
+A. Agree. Under 2 Gy is safe at every energy, including 18 MV
+B. Disagree. Above 10 MV the beam produces neutrons, and that neutron exposure is high risk even when the photon estimate is under 2 Gy. Bring the energy to 10 MV or below
+C. Agree if the patient is pacing dependent, because dependence cancels neutrons
+D. Disagree only when the estimate is above 5 Gy. Under 2 Gy, 18 MV is the preferred energy
+Answer: B
+Objective: III.13
+Why: Answer B. The dose band alone would be low: 0.8 Gy, not pacing dependent, and outside the jaws. Neutrons from a beam above 10 MV are a separate flag. TG-203 manages neutron-producing irradiation as high risk, so the low gray value does not license 18 MV. Being outside the field does not stop neutrons. Dependence does not cancel them. The planning rule stays: 10 MV or below, device out of the direct beam, a real estimate, interrogation before and after. Two gray is not always safe, and neither is 0.8 Gy on an 18 MV plan.
+
+### Q12
+Stem: A review sheet says “keep every pacemaker under 2 Gy” and attributes that sentence to TG-34. How should that 2 Gy figure be used on this exam?
+A. As the TG-203 low band, which is safe for a pacing-dependent patient and for an 18 MV beam
+B. As the high-band threshold, so any dose under 5 Gy is low
+C. As the historical TG-34 citation. TG-203 uses low under 2 Gy, intermediate from 2 Gy through 5 Gy, and high above 5 Gy. Two gray is not a dose that is always safe
+D. As a daily fraction limit, so a course may deliver 2 Gy to the generator at every fraction
+Answer: C
+Objective: III.13
+Why: Answer C. TG-34 is the older report, and 2 Gy is the single number reviews still quote from it. TG-203 replaced that habit with three bands plus a step up for pacing dependence, and with high-risk management when the energy is above 10 MV. Two gray is the start of the intermediate band, not a clearance. It is not the top of the low band, it is not the high threshold, and it is not a per-fraction allowance.
+
+### Q13
+Stem: Two patients, neither pacing dependent, are planned at 6 MV with the generators outside the beam. One estimate is 5 Gy. The other is 5.4 Gy. How do the bands differ, and what is still true of both?
+A. Both are low, because 5 Gy is the TG-34 safe dose and 5.4 Gy rounds down
+B. 5 Gy is high and 5.4 Gy is intermediate, because the bands reverse above 5 Gy
+C. Both are high, because intermediate stops at 2 Gy
+D. 5 Gy is intermediate, because that band runs through 5 Gy. 5.4 Gy is high, because high is above 5 Gy. Neither number means the dose is always safe, and both still need the device out of the beam and interrogation before and after
+Answer: D
+Objective: III.13
+Why: Answer D. Intermediate is 2 Gy through 5 Gy, so 5 Gy is still intermediate for a patient who is not pacing dependent. High starts above 5 Gy, so 5.4 Gy is high. A pacing-dependent patient at 5 Gy would move up to high. Rounding 5.4 Gy into the middle band is the wrong direction. Five gray is not a universal safe dose. The behavioral rules do not turn off in either band: stay at 10 MV or below, keep the generator out of the direct beam, and interrogate before and after.
 
 ## Implanted Devices Mini-Quiz
 
@@ -124,7 +204,7 @@ C. The 2 Gy figure applies only when the energy is 18 MV
 D. Defibrillators are exempt from any dose estimate
 Answer: B
 Objective: III.13
-Why: Answer B. Management scales with how dependent the patient is and with the dose that device is expected to receive. Confirm the category in the report for that generator. Two gray is not a universal ceiling, and 5 Gy is not a universal safe dose. Energy above about 10 MV is a separate neutron problem.
+Why: Answer B. Management scales with pacing dependence and with the estimated device dose. The bands are low under 2 Gy, intermediate from 2 Gy through 5 Gy, and high above 5 Gy. Dependence moves the patient up one category. Two gray is the historical TG-34 citation and the start of the intermediate band, not a dose that is always safe, and 5 Gy is not a universal safe dose. Energy above 10 MV adds neutrons and is managed as high risk.
 
 ### Q22
 Stem: Three gold prostate markers are contoured as the gross target, and the energy is raised from 6 MV to 18 MV because the markers are high-Z. Which statement matches their use?

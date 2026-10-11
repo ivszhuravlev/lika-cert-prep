@@ -106,6 +106,16 @@ Answer: A
 Objective: III.5
 Why: Answer A. Multileaf leaves are stepped so that a tongue on one leaf fits a groove on the next. That overlap cuts interleaf leakage, but the overlap region is thicker until both leaves have moved clear. If the sequencer does not keep the junction irradiated long enough, a cold stripe appears along the direction of travel. Sliding-window sequences are designed to synchronize neighboring leaves so this tongue-and-groove effect is minimized. B, C, and D are unrelated machines and beam types.
 
+### Q6
+Stem: The plan goals cannot be met by a flat photon intensity. The planner has to decide how much intensity each part of the field should carry. What is that step?
+A. Intensity modulation, the fluence optimization that builds the intensity profile
+B. Leaf sequencing alone, which invents the profile only after the apertures have already been delivered
+C. A hinge-angle calculation, which sets a different intensity in every pixel from the angle between two central axes
+D. A single wedge factor, which is one transmission number for the whole field
+Answer: A
+Objective: III.5
+Why: Answer A. Building the uneven intensity that meets the target and organ goals is intensity modulation. In inverse planning the optimizer does it by weighting beamlets, and the product is a fluence map. Sequencing is the later translation of that map into leaf motion. It does not choose the profile. A hinge angle is the angle between two beam axes. A wedge factor is one number in the monitor-unit formula, not a map of intensity across the field.
+
 ## Treatment Delivery Systems Mini-Quiz
 
 ### Q1

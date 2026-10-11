@@ -165,3 +165,13 @@ D. Only that the RT Image carries the Hounsfield units
 Answer: A
 Objective: II.1
 Why: Answer A. DICOM makes the objects readable. It does not decide that they are the approved plan. Head-first versus feet-first, the isocenter, the fractionation, and a point dose are checked after the window says complete. Contour color is not that check, and an RT Image is not the Hounsfield volume.
+
+### Q26
+Stem: A CT simulator sends a planning study to the department picture archive. Which statement assigns DICOM and PACS correctly?
+A. DICOM is the scanner operating system, and PACS only prints the schedule
+B. PACS is the communication standard, and DICOM is the operating system that stores the pixels
+C. DICOM is the communication standard so imaging devices and PACS can exchange images. PACS stores the images. DICOM is not an operating system
+D. DICOM and PACS are two names for the same operating system
+Answer: C
+Objective: III.9
+Why: Answer C. DICOM is the communication standard imaging devices and a PACS use when they exchange images. PACS is the picture archive that stores those images. An operating system, such as the one that runs the computer, is a different piece of software. A finished transfer still has to be checked before the study is used for planning.

@@ -67,7 +67,31 @@ Second example. A prostate fiducial is 0.6 cm anterior to its planned position b
 - AAPM TG-147, nonradiographic localization and surface guidance
 - AAPM TG-132, rigid versus deformable registration
 - ICRU 62, for the setup and internal margins that remain after imaging
-- Departmental IGRT and MRI-simulation procedures, for action levels and distortion correction. Confirm the millimeters there.
+- Departmental IGRT and MRI-simulation procedures, for action levels and distortion correction. Confirm the millimeters there. Do not copy TG-142’s ≤2 mm (≤1 mm SRS/SBRT) imaging-to-treatment isocenter test in as a site action level.
+- de Boer and Heijmen, NAL and eNAL, for the offline systematic correction that leaves today’s random residual in place
+- AAPM TG-75 and TG-180, for imaging dose that is not zero and is not a treatment fraction
+
+## What the decision leaves in place
+
+**MDCB:** II.6
+
+**What the exam expects**
+
+Module 18 states the decision: in tolerance and anatomically the same patient, finish localization; otherwise call the physician. This section is what that decision does not finish. NAL does not remove random error. A TG-142 millimeter is not the clinical action level. Cone-beam dose is not zero and is not the prescription. An MR-linac trigger is a concept for deformation, not a couch coordinate and not an automatic replan of every image.
+
+**Core facts**
+
+Action level versus machine geometry. TG-142’s monthly imaging-to-treatment isocenter coincidence is a machine test: ≤2 mm non-SRS, ≤1 mm SRS/SBRT. The clinical action level is a separate rule for this site and this margin. Using 2 mm as every site’s action level invents a patient threshold the report did not write for prostate, breast, or palliation. An in-tolerance result counts only for the surrogate the protocol named. A bone residual inside the level can sit next to a soft-tissue target outside it.
+
+NAL leaves the random error. After an offline NAL or eNAL correction is in the setup, the systematic offset is what those protocols estimated. The random component of today’s setup is still there until an online image moves the couch before beam-on. eNAL updates the systematic estimate for future fractions. It does not adapt the dose distribution, and it does not replace the planning CT with yesterday’s cone-beam.
+
+Cone-beam dose. Each kilovoltage cone-beam adds dose. Over a long daily course that dose accumulates. It remains much smaller than the therapeutic fraction. It is not delivered by the treatment beam, and it is not entered as the prescription. Calling the imaging dose zero undercounts it. Subtracting one therapeutic fraction per cone-beam overcounts it. The Hounsfield numbers of the cone-beam are still not the commissioned density table.
+
+Adaptive trigger. An MR-linac image can start a couch shift or an online replan. The trigger is a protocol concept. Stable shape and a rigid discrepancy go to localization. Deformation, filling that changes the organs, or an organ at risk in the high dose goes to the physician and, when the workflow exists, to adaptation. A bone residual inside an action level does not prove the soft-tissue target is inside that same level. Module 28 is the adapted-plan check.
+
+**Traps**
+
+TG-142’s 2 mm coincidence used as a universal clinical action level. NAL credited with removing today’s random error. Kilovoltage cone-beam dose set to zero, or set equal to a treatment fraction. Every MR-linac fraction replanned, or a deformed anatomy treated because the bone number was in tolerance.
 
 ## Accuracy and Limitations of IGRT Mini-Quiz
 
@@ -81,6 +105,10 @@ Second example. A prostate fiducial is 0.6 cm anterior to its planned position b
 - Assign surface guidance to the surface, and prostate position to rectum and bladder, seen with fiducials or soft-tissue imaging.
 - Place MRI distortion at the edge of the field and near air and metal, and keep dose calculation on a CT density dataset.
 - Keep the planning CT as the reference.
+- Separate a TG-142 isocenter tolerance from a site action level.
+- Leave today’s random residual in place when the only correction is offline NAL.
+- Count cone-beam dose as real and keep it out of the prescription.
+- Use an adaptive trigger for a shape change, and a couch shift for a rigid one.
 
 **Traps**
 

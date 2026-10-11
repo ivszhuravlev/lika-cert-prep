@@ -158,6 +158,166 @@ Answer: A
 Objective: III.6
 Why: Answer A. A Gamma Knife shot is an isocentric exposure: the sources focus through one collimator size at one point for a set time. Dose is shaped by stacking shots of different sizes and weights. That is a different delivery from a single-isocenter linac plan that modulates a multileaf aperture around one point, but both are intracranial stereotactic techniques. Shots are not linac monitor units, helical pitch, or electron cones.
 
+### Q6
+Stem: On a lung stereotactic plan the volume enclosed by the prescription isodose is much larger than the PTV. Which RTOG 0813 and RTOG 0915 metric is that, and what does a value far from 1 mean?
+A. The conformity index. It compares the prescription-isodose volume with the PTV volume, and a value well above 1 means prescription dose is spilled outside the target
+B. R50%. It becomes large only when the 50% cloud is smaller than the PTV
+C. D2cm. It is the dose 2 cm inside the PTV
+D. Lung V20. It is the prescription-isodose volume reported as a chest-wall percent
+Answer: A
+Objective: III.6
+Why: Answer A. The conformity index asks whether the prescription isodose hugs the PTV. Near 1, the prescription volume and the PTV volume are comparable. Well above 1, the prescription dose covers a lot of tissue outside the target. R50% looks at the half-prescription volume, not the prescription volume. D2cm is a dose 2 cm outside the PTV, not inside it. Lung V20 is the portion of lung receiving 20 Gy or more.
+
+### Q7
+Stem: A planner is asked for the intermediate-dose falloff on an RTOG 0813 and RTOG 0915 lung plan. Which description is R50%?
+A. The highest dose 2 cm outside the PTV
+B. The volume enclosed by half the prescription dose, compared with the PTV volume
+C. The portion of lung that receives 20 Gy or more
+D. The chest-wall volume that receives 30 Gy and must stay under 30 cc
+Answer: B
+Objective: III.6
+Why: Answer B. R50% compares the 50% isodose volume with the PTV volume. A large value means the intermediate dose spreads too far for the size of the target. The number a protocol will accept depends on PTV size, so this note does not teach one cutoff for every volume. The highest dose 2 cm outside the PTV is D2cm. Lung at 20 Gy is V20. Chest-wall volume at 30 Gy is the separate V30 constraint.
+
+### Q8
+Stem: The conformity index and R50% look acceptable, but a finger of high dose reaches tissue 2 cm outside the PTV. Which metric is built for that finding?
+A. Lung V20, because every gray beyond the PTV is scored as a lung percent
+B. The conformity index, because it only samples dose 2 cm away
+C. D2cm, the highest dose 2 cm outside the PTV, judged against the prescription dose
+D. The Stanford up-and-down pair, because D2cm is a total-skin uniformity check
+Answer: C
+Objective: III.6
+Why: Answer C. D2cm catches high-dose spill at a fixed 2 cm distance from the PTV. R50% can look fine while a narrow hot finger still reaches that distance, which is why the metrics are not interchangeable. Lung V20 does not describe a point 2 cm from the target. The conformity index compares the whole prescription-isodose volume with the PTV. The Stanford angles belong to total skin electrons.
+
+### Q9
+Stem: Which quantity is lung V20 on an RTOG 0813 and RTOG 0915 stereotactic plan?
+A. The maximum dose to 20% of the spinal cord
+B. The volume of the 20% isodose divided by the PTV volume
+C. The chest-wall volume receiving 30 Gy
+D. The portion of lung that receives 20 Gy or more
+Answer: D
+Objective: III.6
+Why: Answer D. Lung V20 is a lung-sparing check: how much lung is carried to 20 Gy or higher. It sits beside the conformity index, R50%, and D2cm. It is not a cord dose, not the 20% isodose around the target, and not the chest-wall V30. This note does not add a single percent cutoff for V20.
+
+### Q10
+Stem: A peripheral lung stereotactic plan reports 46 cc of chest wall receiving 30 Gy. The chest-wall constraint this course cites is a V30 under 30 cc. What is the finding?
+A. The chest wall exceeds that limit. 46 cc receiving 30 Gy is above 30 cc
+B. The chest wall passes, because the cited limit is a lung percent and cubic centimeters are ignored
+C. The chest wall passes, because 17.5 Gy is the chest-wall limit and 30 Gy was the wrong score
+D. The plan fails a hippocampal constraint, because chest-wall V30 belongs to RTOG 0933
+Answer: A
+Objective: III.6
+Why: Answer A. The numeric chest-wall constraint cited here for these lung stereotactic protocols is V30 under 30 cc. Forty-six cubic centimeters is over that limit. The unit is cubic centimeters of chest wall, not a percent of lung. 17.5 Gy is the single-fraction brachial-plexus limit, not the chest-wall limit. RTOG 0933 is the hippocampal avoidance trial, not a chest-wall trial.
+
+### Q11
+Stem: A single-fraction lung stereotactic plan gives the brachial plexus a maximum of 20 Gy. The RTOG 0915-style single-fraction plexus limit this course cites is 17.5 Gy. Which statement is right?
+A. The plexus is inside the limit, because 17.5 Gy is the chest-wall volume constraint and 20 Gy is under 30 cc
+B. The plexus exceeds the cited single-fraction limit of 17.5 Gy
+C. That 17.5 Gy limit is the whole-brain dose in RTOG 0933, so a lung plan does not use it
+D. A plexus maximum of 20 Gy is the hippocampal D100% limit, so the plan meets RTOG 0933
+Answer: B
+Objective: III.6
+Why: Answer B. For a single fraction, the brachial-plexus limit this exam cites from the RTOG 0915 style is 17.5 Gy. A maximum of 20 Gy is above it. Do not paste 17.5 Gy onto the chest wall. The chest-wall citation is V30 under 30 cc. RTOG 0933 is 30 Gy in 10 fractions to the whole brain, with hippocampal D100% at or below 9 Gy and maximum dose at or below 16 Gy. Those are not plexus numbers, and 17.5 Gy is not a 10-fraction hippocampal limit.
+
+### Q12
+Stem: A lung nodule is contoured on one free-breathing CT. A 4DCT of the same patient shows the nodule moving about a centimeter from superior to inferior. What should the internal target volume represent?
+A. A centimeter expansion of the spinal cord
+B. Only the exhale image, with inhale discarded
+C. The envelope of the target over the breathing phases, the union of where the target sits during the cycle
+D. The highest dose 2 cm outside the PTV
+Answer: C
+Objective: III.6
+Why: Answer C. A 4DCT sorts the cycle into phases. The internal target volume is the union of the target across those phases. It is the motion envelope, not a cord expansion and not a dose metric. Using only exhale leaves the inhale position outside the volume. D2cm is a plan-quality dose, not a target definition.
+
+### Q13
+Stem: The internal target volume of a lung nodule was drawn on the maximum-intensity projection and was never compared with the individual 4DCT phases. What is the limitation?
+A. The projection is a beam spoiler and does not show tumor
+B. The projection replaces Winston-Lutz, so the phases are a couch-rotation test
+C. The projection is the prescription isodose, so the contour is a conformity index
+D. The projection keeps the brightest voxel over the phases and can outline the path, but it can include tissue the tumor never occupied, so the phases still have to be checked
+Answer: D
+Objective: III.6
+Why: Answer D. A maximum-intensity projection helps a lung tumor paint its motion so the internal target volume can be drawn. It is not a substitute for the phases. Extra bright tissue can be pulled in, and a bad window can hide a phase. It is not a spoiler, not an isocenter test, and not the prescription isodose.
+
+### Q14
+Stem: Output for a 5 mm stereotactic cone is measured with a large Farmer-type chamber and with a detector that is small relative to the cone. The Farmer reading at the center is the lower one. Why?
+A. A detector that is large compared with the field averages the peak with the penumbra and underestimates the dose at the center
+B. A large detector overestimates the center, so the lower reading has to be the small detector
+C. The Farmer chamber is the right detector for a cone because a small field has extra lateral equilibrium
+D. The difference is a neutron dose, so the cone should be commissioned at 18 MV
+Answer: A
+Objective: III.6
+Why: Answer A. Small-field dosimetry fails when the detector is too big for the field. Volume averaging pulls the center reading down toward the penumbra. The field is also short of lateral electronic equilibrium, so the output is not a scaled 10 by 10 factor. The small detector is the one that can see the peak. Raising the energy does not repair a chamber that averages the peak with the shoulder of the field.
+
+### Q15
+Stem: Cone-beam imaging of a stereotactic setup shows roll and pitch. The couch can correct only left-right, superior-inferior, and anterior-posterior shifts. What remains uncorrected?
+A. The three translations. A six-degree couch cannot move the patient laterally
+B. The rotations. Six degrees of freedom add pitch, roll, and yaw to the three translations. A translation-only couch leaves the rotation in the setup
+C. Nothing. Roll and pitch are translations
+D. Only the Winston-Lutz ball, which a couch shift is not allowed to change
+Answer: B
+Objective: III.6
+Why: Answer B. Lateral, longitudinal, and vertical are the three translations. Pitch, roll, and yaw are the three rotations that make six degrees of freedom. A couch that cannot apply those rotations leaves a rotational miss. Far from the isocenter that rotation becomes a shift of the target, and a stereotactic margin has little room for it. Winston-Lutz is the isocenter agreement test. It is not the leftover roll on this setup.
+
+### Q16
+Stem: A framed radiosurgery plan is built from the frame. Before treatment one pin is loose. A colleague wants to treat without new images and call the delivery frameless, because no mask was used for localization. What is the distinction?
+A. The frame is cosmetic. The coordinates live in the tattoos, so a loose pin does not matter
+B. Frameless means the frame stays on and imaging is skipped
+C. The frame is the coordinate system, so a slip means those coordinates no longer match the skull. Frameless treatment uses a mask plus imaging at the machine, and it still requires the stereotactic isocenter test
+D. Frameless treatment is total skin electrons in six standing positions
+Answer: C
+Objective: III.6
+Why: Answer C. In a frame-based system the frame defines the coordinates. If it moves relative to the skull, the plan points at the wrong intracranial place. Frameless delivery replaces the frame with a mask and with images that find the skull at treatment. The mask limits motion. The images locate the target. Dropping both the frame and the images leaves no localization. Frameless does not cancel Winston-Lutz. The radiation and mechanical isocenters still have to agree within 1 mm. Six standing positions are the Stanford total-skin technique.
+
+### Q17
+Stem: A Winston-Lutz test shows the radiation center 1.4 mm from the ball at mechanical isocenter. The stereotactic tolerance taught here is 1 mm or less. Lasers the same morning agreed within 1 mm. What follows?
+A. The 1.4 mm result passes, because every technique uses a 2 mm isocenter tolerance
+B. The lasers replace Winston-Lutz, so the 1.4 mm image is discarded
+C. The test passes, because 1.4 mm is under 1 mm
+D. Winston-Lutz fails the 1 mm tolerance. A laser agreement is not that test
+Answer: D
+Objective: III.6
+Why: Answer D. Winston-Lutz images a ball at mechanical isocenter with a small treatment field from several gantry, collimator, and couch angles. For stereotactic work the radiation center and the mechanical center have to agree within 1 mm. 1.4 mm is outside that tolerance. Lasers can agree while the radiation isocenter does not. A daily laser check is not a Winston-Lutz test.
+
+### Q18
+Stem: Whole-brain radiotherapy is 30 Gy in 10 fractions with hippocampal avoidance under RTOG 0933. The hippocampus D100% is 11 Gy and the hottest point in the hippocampus is 15 Gy. Which cited constraint is missed?
+A. D100% at or below 9 Gy. An 11 Gy value misses it. The 15 Gy maximum is still within 16 Gy
+B. The maximum, because 15 Gy is above 16 Gy and D100% is allowed to be 11 Gy
+C. Both, because RTOG 0933 prescribes 9 Gy to the whole brain
+D. Neither, because D100% is allowed to equal the 30 Gy whole-brain prescription
+Answer: A
+Objective: III.6
+Why: Answer A. RTOG 0933 keeps the entire hippocampus to 9 Gy or less, which is what D100% at or below 9 Gy means, and it keeps the hottest hippocampal point at or below 16 Gy. Eleven gray fails the D100% limit. Fifteen gray does not fail the 16 Gy maximum. The 30 Gy in 10 fractions is the whole-brain prescription outside that avoidance, not the hippocampal dose and not a 9 Gy whole-brain prescription.
+
+### Q19
+Stem: The same RTOG 0933 course, 30 Gy in 10 fractions to the whole brain, has a hippocampal maximum of 18 Gy and a hippocampal D100% of 8 Gy. Which statement matches the constraints this exam cites?
+A. Both pass, because the only hippocampal limit is the 30 Gy prescription
+B. D100% of 8 Gy meets the 9 Gy limit, and the 18 Gy maximum exceeds the 16 Gy limit
+C. The maximum passes because 18 Gy is under 16 Gy, and the D100% fails
+D. These two limits are the single-fraction plexus dose of 17.5 Gy, so 18 Gy is a chest-wall result
+Answer: B
+Objective: III.6
+Why: Answer B. D100% at or below 9 Gy is met by 8 Gy. The maximum at or below 16 Gy is missed by 18 Gy. The whole brain is still prescribed 30 Gy in 10 fractions. That prescription is not the hippocampal maximum. 17.5 Gy is the single-fraction brachial-plexus limit from the RTOG 0915 style, and the chest-wall citation is V30 under 30 cc. Do not swap those numbers onto the hippocampus.
+
+### Q20
+Stem: The internal target volume was drawn from the 4DCT phases and already contains the full superior-inferior excursion of a lung tumor. The planner then adds that same excursion again as the planning-target margin. What is double-counted?
+A. Nothing. The planning target volume is required to repeat the breathing motion on top of the internal target volume
+B. The chest-wall V30, because a motion margin is a cubic-centimeter constraint
+C. The breathing motion. The internal target volume is already the envelope. The planning-target margin on it is for setup residual, not a second copy of the excursion
+D. Winston-Lutz. A motion margin replaces the 1 mm isocenter test
+Answer: C
+Objective: III.6
+Why: Answer C. Once the internal target volume holds the union of the target over the breathing cycle, another full excursion in the planning target volume treats the same motion twice and sweeps extra lung into the high dose. The remaining margin is for setup. Image guidance and a Winston-Lutz result within 1 mm are what make that setup margin small. They are not replaced by the margin, and the margin is not the chest-wall constraint.
+
+### Q21
+Stem: A sheet assigns 17.5 Gy to the chest wall, assigns V30 under 30 cc to the brachial plexus, and calls both numbers RTOG 0933. Which assignment matches the citations in this course?
+A. All three assignments are right, because 0933 is the lung stereotactic protocol
+B. 17.5 Gy is the hippocampal maximum, and 30 cc is D100%
+C. Chest-wall V30 under 30 cc is an RTOG 90-05 single-fraction brain constraint
+D. Chest wall is the V30 under 30 cc citation. 17.5 Gy is the single-fraction brachial-plexus citation in the RTOG 0915 style. RTOG 0933 is hippocampal D100% at or below 9 Gy and maximum dose at or below 16 Gy, on whole-brain 30 Gy in 10 fractions
+Answer: D
+Objective: III.6
+Why: Answer D. Keep the three citations apart. RTOG 0813 and RTOG 0915 are where this course places the conformity index, R50%, D2cm, and lung V20, plus chest-wall V30 under 30 cc and the single-fraction plexus limit of 17.5 Gy. RTOG 0933 is the hippocampal avoidance regimen, 30 Gy in 10 fractions, with D100% at or below 9 Gy and maximum dose at or below 16 Gy. RTOG 90-05 is the size-based single-fraction brain schedule, 24 Gy, 18 Gy, and 15 Gy. None of those numbers changes organs with the others.
+
 ## Special Treatment Procedures Quiz
 
 ### Q1

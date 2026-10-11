@@ -41,7 +41,7 @@ You list what a complete simulation data set contains and how you would reject a
 
 **Core facts**
 
-Preparation is part of the data. Bladder filling, rectal emptying, fasting, contrast timing, a vaginal or anal marker, scar wires, and fiducials change the anatomy you plan on. The plan is valid for the anatomy that was scanned. A full-bladder scan planned and then treated empty is a different patient.
+Preparation is part of the data. Bladder filling, rectal emptying, fasting, contrast timing, a vaginal or anal marker, scar wires, and fiducials change the anatomy you plan on. The plan is valid for the anatomy that was scanned. A full-bladder scan planned and then treated empty is a different patient. The planning-target margin covers setup variation and internal motion. A positive surgical margin is disease and belongs in the clinical target, and inconsistent drawing is corrected on the contour, not absorbed into that margin. If the patient has gained weight and the separation over the field is larger than on the planning scan, tell the radiation oncologist before treatment. Do not deliver the old plan and mention the change afterward.
 
 Scan extent. Include the target, the organs that carry a dose constraint, and the entrance and exit of every beam you might use, including arcs and non-coplanar beams. Breast fields need flash beyond the skin. A scan that starts at the clavicle and ends at the xiphoid is not a breast planning scan if the tangents exit into the lung and the heart constraint needs the whole heart. Slice thickness matches the target: thin for SRS, SBRT, and small nodes; thicker only for large palliative fields where partial volume will not hide the volume you are treating.
 

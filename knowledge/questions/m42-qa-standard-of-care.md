@@ -106,6 +106,66 @@ Answer: A
 Objective: VII.2
 Why: Someone compares the setup image with the plan: correct patient, isocenter, shift direction, and any bolus or device that should be visible. A reversed anterior shift is a classic miss. Correct choice: The isocenter and shifts on the approved image match the plan. Sharpness is not the clinical question. The match and the shifts are. Bolus has to be present if it was planned, regardless of window level. Imaging does not rewrite the prescription.
 
+### Q6
+Stem: Weekly image review. The approved cone-beam shift is 0.4 cm anterior. The couch was moved 0.4 cm posterior before the fraction. Monitor units match the plan. What is the status of that fraction?
+A. Not acceptable; the direction is opposite the approved shift, so the isocenter moved the wrong way
+B. Acceptable, because the shift size matches and the monitor units match
+C. Acceptable, because anterior and posterior moves are the same on a parallel-opposed pair
+D. Acceptable if the image window was wide enough to see bone
+Answer: A
+Objective: VII.2
+Why: A 0.4 cm posterior move is not a 0.4 cm anterior move. The isocenter is 0.8 cm from the approved point: 0.4 + 0.4 = 0.8 cm. Matching monitor units does not put the target on the isocenter. Opposed beams do not make a reversed shift harmless, and the window level does not check the sign.
+
+### Q7
+Stem: Chart check of an en face electron boost. The approved source-to-skin distance is 100 cm. The treatment note shows the cone at 105 cm. Monitor units are the ones calculated for 100 cm. How should that fraction be treated?
+A. As delivered correctly, because electron monitor units do not change with distance
+B. As delivered correctly if the cone size matches the plan
+C. As a setup miss; the longer distance changes output, and the 100 cm monitor units do not correct it
+D. As delivered correctly, because 5 cm is inside a 10 cm setup window for electrons
+Answer: C
+Objective: VII.2
+Why: Output falls as the cone moves away from the patient. A pure inverse-square estimate is (100/105)^2. 100/105 = 0.9524, and 0.9524^2 = 0.907, about 9% low. Electron output also depends on the virtual source, which is not the nominal target, so the true change can differ from 9%, and it is still not the approved dose. The cone size does not restore the distance, and there is no 10 cm convenience window.
+
+### Q8
+Stem: Weekly chart check of a lung course approved at 6 MV. Fraction 4 was delivered at 10 MV with the monitor units from the 6 MV plan. The portal image for that fraction was signed. What does the check conclude?
+A. The fraction matches, because the image was signed and the monitor units match
+B. The fraction matches, because 6 MV and 10 MV share one percent depth dose at midplane
+C. The fraction does not match; 10 MV is not the approved energy, and those monitor units are not the approved 6 MV dose
+D. The fraction matches if the separation is over 25 cm, because the higher energy is then preferred
+Answer: C
+Objective: VII.2
+Why: Energy is part of the approved plan. The same monitor units at 10 MV are a different output and a different depth dose from 6 MV. A signed portal image can confirm position and still miss the energy. Separation does not rewrite the prescription.
+
+### Q9
+Stem: The chest-wall plan uses 0.5 cm of bolus every fraction. Today's record shows the bolus was left off. Monitor units match the bolus calculation. What is the chart-check finding?
+A. No finding; bolus is comfort and does not change dose
+B. No finding, because the monitor units already included a bolus factor, so the dose is unchanged
+C. No finding if the source-to-skin distance was 100 cm
+D. A setup miss; without bolus the surface dose is not the dose the plan calculated
+Answer: D
+Objective: VII.2
+Why: Bolus is an accessory in the plan. It pulls buildup to the surface. Monitor units calculated with bolus, delivered without it, underdose the surface and change the depth dose. Agreement on source-to-skin distance does not replace the bolus.
+
+### Q10
+Stem: Three prior courses name the cord "cord", "Spinal Cord", and "SpCord". Which name follows TG-263 so a later chart check can find the organ?
+A. Keep the three nicknames, because each planner may choose a local label
+B. SpinalCord
+C. PTV_4500, because every serial organ carries its limit in the name
+D. Lungs, because the cord is named with the paired-organ rule
+Answer: B
+Objective: VII.2
+Why: TG-263 uses one camel-case name and no space: SpinalCord. Spaces, abbreviations, and nicknames will not match when prior dose is summed. PTV_4500 is a target name, the structure plus an underscore plus the dose in cGy, not the cord. Lungs is the combined lung volume.
+
+### Q11
+Stem: A head-and-neck target is prescribed to 7000 cGy. Which structure name follows TG-263?
+A. PTV 7000
+B. PTV_70Gy
+C. PTV_7000
+D. SpinalCord
+Answer: C
+Objective: VII.2
+Why: The target name is the structure, an underscore, and the dose in cGy, with no unit text and no space: PTV_7000. A space, a gray label, or an organ name is a different string. SpinalCord is the cord, not this target.
+
 ## Record and Verify Systems and EMR
 
 ### Q1
@@ -169,14 +229,14 @@ Objective: VII.4
 Why: The record-and-verify energy has to be the planning energy. The same monitor units at 18 MV are a different depth dose and a different output from 6 MV. A bone match and a wedge label do not clear an energy mismatch. The field stays off until the armed energy is the approved 6 MV.
 
 ### Q21
-Stem: Breast tangents were planned with a collimator angle of 5.7° so the superior border follows a half-beam supraclavicular field. The record-and-verify collimator is 0.0°. The monitor units match. What is the field status?
-A. Not ready; the loaded collimator is not the approved 5.7°
-B. Ready, because monitor units are the only record-and-verify parameter
-C. Ready, because 5.7° is within a 10° convenience tolerance
-D. Ready if the gantry is 0°
-Answer: A
+Stem: Breast tangents were planned with a couch kick of 5.7° so the superior border matches a half-beam supraclavicular field. The superior–inferior length is 20 cm and the SAD is 100 cm. The record-and-verify couch is 0.0°. The collimator matches the plan. The monitor units match. What is the field status?
+A. Ready, because the collimator creates the superior match and a couch of 0° is acceptable
+B. Ready if the gantry is set to 5.7°, because that angle is the posterior lung border and the couch is not part of the superior match
+C. Not ready; the loaded couch is not the approved 5.7° kick, and that kick is what aligns the superior border
+D. Ready, because the monitor units match and a 5.7° difference is inside a 10° convenience tolerance
+Answer: C
 Objective: VII.4
-Why: The collimator angle is an approved plan parameter. 0.0° puts the superior border back on a diverging edge the 5.7° rotation was there to align. Matching monitor units does not apply that angle. There is no 10° tolerance that replaces the approved value, and the gantry angle is a separate parameter.
+Why: The couch kick uses the superior–inferior length. Half of 20 cm is 10 cm. The ratio 10/100 = 0.10, and arctan(0.10) = 5.71°, reported as 5.7°. That angle takes the superior divergence out of the tangent so the border can meet a half-beam supraclavicular field. The collimator does not create that match, so a collimator that agrees with the plan does not clear a couch of 0°. The posterior border is a gantry angle or a half-beam jaw, not this 5.7° kick, so rotating the gantry to 5.7° is the wrong correction. Matching monitor units does not apply the couch angle, and there is no 10° tolerance that replaces the approved value.
 
 ### Q22
 Stem: The approved gantry for a posterior field is 180°. The record-and-verify field is armed at gantry 0°. The monitor units match. What should happen?
@@ -197,6 +257,66 @@ D. Ready, because a 45° wedge has wedge factor 1
 Answer: B
 Objective: VII.4
 Why: The record-and-verify accessory has to match the approved plan. A physical wedge that is not in the plan changes the dose per monitor unit and tilts the distribution. Open-beam monitor units through that wedge underdose the calculation point by about the wedge factor. A 45° angle is not a factor of 1, and an unrecorded edit is not an approved plan change.
+
+### Q24
+Stem: An SAD prostate plan lists the anterior source-to-skin distance as 88 cm with the isocenter at 100 cm from the source. Record and verify shows that anterior skin distance as 92 cm. Energy, gantry, and monitor units match. Is the field ready?
+A. Yes; SAD plans ignore skin distance
+B. Yes, because 4 cm is inside the daily 3% output window
+C. No; the skin is not at the planned distance, so the isocenter is not at the planned depth
+D. Yes if the collimator angle is 0°
+Answer: C
+Objective: VII.4
+Why: At a fixed source-to-axis distance of 100 cm, a skin distance of 92 cm instead of 88 cm means the surface moved. The isocenter depth changed by 92 − 88 = 4 cm. The monitor units were calculated for the planned depth. Energy and gantry do not correct that, and a percent output tolerance is not a skin-distance tolerance. A collimator of 0° is a different parameter.
+
+### Q25
+Stem: Image guidance asks for a couch move of 0.6 cm to the patient's left. The couch was moved 0.6 cm to the patient's right, and the field was then armed. Energy, gantry, and monitor units match. What is the field status?
+A. Ready; equal left and right moves cancel across the course
+B. Not ready; the shift sign is reversed, and the isocenter is 1.2 cm from the approved point
+C. Ready, because the monitor units already contain the shift
+D. Ready if the morning laser check was inside 2 mm
+Answer: B
+Objective: VII.4
+Why: The patient needed 0.6 cm left and received 0.6 cm right. The miss is 0.6 + 0.6 = 1.2 cm. Monitor units, energy, and gantry do not move the couch back. A 2 mm laser tolerance is a machine check. It does not authorize a reversed patient shift.
+
+### Q26
+Stem: An electron boost was approved on a 10×10 cm cone with a measured cutout. Record and verify has a 15×15 cm cone armed. Monitor units match the 10×10 calculation. The energy matches. What is the status?
+A. Ready, because electron cones of one energy share one output
+B. Ready, because a larger cone can only increase coverage and not dose
+C. Not ready; the cone is an accessory, and these monitor units belong to the 10×10 cone
+D. Ready if the cutout factor in the chart is left at 1
+Answer: C
+Objective: VII.4
+Why: Cone size changes electron output. Monitor units computed for the 10×10 cone are the wrong dose per monitor unit on a 15×15 cone. Matching energy does not select the cone. Leaving the cutout factor at 1 without a measurement is not a clearance to treat.
+
+### Q27
+Stem: The approved field uses a 30° wedge, and the monitor units use that wedge factor. Record and verify has a 60° wedge in the path. What should happen?
+A. Treat; any wedge in the path satisfies a wedged plan
+B. Treat, because 60° minus 30° is inside the 1° collimator tolerance
+C. Do not treat; a 60° wedge is not the approved accessory, and the 30° monitor units are not the dose through it
+D. Treat if the wedge is physical rather than dynamic
+Answer: C
+Objective: VII.4
+Why: The accessory has to be the approved wedge. A 60° wedge has a different transmission from a 30° wedge, so the approved monitor units do not deliver the approved dose. The difference 60 − 30 = 30° is not a collimator-angle error, and the 1° tolerance belongs to gantry and collimator readouts. Physical versus dynamic does not turn 60° into 30°.
+
+### Q28
+Stem: A scar boost was planned with 6 MeV electrons. Record and verify is armed for 12 MeV. The cone matches and the monitor units match. What is the field status?
+A. Ready, because both energies treat the skin and the cone is correct
+B. Not ready; 12 MeV is not the approved energy, and the practical range is about twice as deep
+C. Ready, because electron monitor units depend only on the cone
+D. Ready if the gantry is 0°
+Answer: B
+Objective: VII.4
+Why: Energy is part of the plan. Practical range in centimeters is about half the nominal energy in MeV: 6/2 = 3 cm and 12/2 = 6 cm. The same monitor units at 12 MeV cover a deeper volume than the approved boost. The cone and the gantry do not select the energy.
+
+### Q29
+Stem: The approved photon field is open, with no tray. Record and verify requires a blocking tray and a custom block. Monitor units match the open-beam calculation. What is the status?
+A. Ready, because a block only improves conformality and the monitor units can stay open-beam
+B. Not ready; the tray and block are accessories the plan does not have, and open-beam monitor units through them are not the approved dose
+C. Ready if the block is thinner than 8 cm of Cerrobend
+D. Ready, because the tray factor is 1 for every photon energy
+Answer: B
+Objective: VII.4
+Why: A tray and a block change dose per monitor unit. The tray attenuates the beam, and the block removes scatter the open-beam monitor units assumed. Those monitor units do not deliver the approved dose. Block thickness and a guessed tray factor of 1 are not a plan check.
 
 ## Treatment Beam QA Measurement and Analysis (eg IMRT, electron cutout factors)
 
@@ -301,6 +421,66 @@ D. No one, once certified
 Answer: B
 Objective: VII.6
 Why: The clinical plan is directed by the radiation oncologist and the technical calculation is performed with the medical physicist. Certification defines the profession. It does not create an independent prescriber. Correct choice: A qualified medical physicist, with the physician directing the clinical plan. The patient consents. The patient does not supervise the calculation. Scheduling is not technical supervision. Certification does not remove physician and physicist direction.
+
+### Q6
+Stem: Which task is inside the dosimetrist's scope when a physician has already signed the prescription?
+A. Designing the beams and calculating the monitor units
+B. Replacing the total dose because the cord histogram is hot
+C. Signing the annual calibration report as the physicist
+D. Waiving a written directive so an HDR fraction can start
+Answer: A
+Objective: VII.6
+Why: Scope includes treatment planning and monitor-unit calculation inside a signed prescription. Changing the total dose is a new prescription. The calibration signature belongs to the physicist. A written directive is not optional.
+
+### Q7
+Stem: A vaginal-cuff HDR plan needs dwell times. Who may calculate them, and what may that person not do?
+A. The dosimetrist may calculate dwell times under the written directive, and may not choose the prescription dose
+B. The dosimetrist may both calculate the dwell times and write the prescription
+C. Only the vendor may enter dwell times, and the dosimetrist may not plan brachytherapy
+D. The dosimetrist signs the source calibration in place of the physicist, then the dwell times are optional
+Answer: A
+Objective: VII.6
+Why: Brachytherapy planning is in scope. The prescription and the written directive stay with the physician. Source calibration is a physics signature. Calculating the times does not make the dosimetrist the authorized user.
+
+### Q8
+Stem: A plan is ready for signatures. Which pair matches the standard of practice?
+A. The dosimetrist signs the prescription, and the therapist signs the calibration
+B. The physician signs the prescription and the plan approval, and the physicist signs the plan check
+C. The record-and-verify import signs both, so no clinical signature is required
+D. Continuing-education credits from the past year stand in for both signatures
+Answer: B
+Objective: VII.6
+Why: The physician owns the medical order and the plan approval. The physicist owns the technical plan check and the machine calibration. A DICOM transfer is not a signature. Continuing education maintains the CMD credential. It does not sign the chart.
+
+### Q9
+Stem: What does CMD certification require after the exam, and what does it not grant?
+A. Nothing further; the certificate is permanent and includes the right to prescribe
+B. A radioactive-materials license issued by the regulator, renewed as a source inventory
+C. Continuing education on the board's cycle, without transferring the physician's or the physicist's signature
+D. A new TG-51 calibration signed by the dosimetrist each year
+Answer: C
+Objective: VII.6
+Why: Certified Medical Dosimetrist is the MDCB credential. Keeping it takes continuing education. The credential does not create an independent prescriber and does not move the calibration or the prescription onto the dosimetrist.
+
+### Q10
+Stem: The delivered shift was reversed. Editing the prescription would make the cord dose on the histogram match what was delivered. What is the ethical limit?
+A. Edit the prescription so the chart agrees, and leave the event out of the report
+B. Report the mismatch and leave any dose change with the physician
+C. Sign the physicist's plan check so the fraction can be repeated tonight
+D. Delete the image that shows the reversed shift
+Answer: B
+Objective: VII.6
+Why: The ethical limit is an honest record and a prescription the dosimetrist does not rewrite. Hiding the shift is outside scope. A repeated fraction and a dose change are the physician's decision. The physicist's signature is not the dosimetrist's to apply.
+
+### Q11
+Stem: Which set of duties sits with planning inside dosimetry practice?
+A. Prescribing the dose, signing TG-51, and waiving chart checks
+B. Simulation setup, documentation, teaching, and participation in the checks a physicist assigns
+C. Monitor units only, with simulation and education excluded
+D. Source leak tests signed in place of the radiation safety officer
+Answer: B
+Objective: VII.6
+Why: Scope includes simulation, documentation, education, and quality-assurance participation, along with planning and monitor units. Prescribing, the calibration signature, and skipping the chart check are outside that work. A leak-test signature stays with radiation safety, not with the dosimetrist in place of the safety officer.
 
 ## Measurement Equipment (Diodes, ion chambers, TLD, Survey Meters)
 
@@ -498,6 +678,76 @@ Answer: B
 Objective: VII.7
 Why: Process improvement changes the system: a forced field in the EMR, a second check, a clearer shift form. 'Be careful' alone does not do that. Correct choice: Change the checklist so the miss is hard to skip. An exhortation without a process change tends to fail again. Removing the review removes a detection step. Loosening the interlock hides the next error.
 
+### Q6
+Stem: A reversed couch shift is scored as severe, uncommon, and hard to detect. How does a TG-100 failure-mode analysis use that score?
+A. Drop the mode, because uncommon events are not reviewed
+B. Multiply severity, occurrence, and detectability, and fix a high product before adding another generic output test
+C. Add only a daily door-interlock test, because every high score is an interlock problem
+D. Lower the detectability number by agreeing not to review images
+Answer: B
+Objective: VII.7
+Why: The risk priority number is severity × occurrence × detectability. Detectability is scored high when the miss is unlikely to be caught. A high product is where the clinic changes the process, for example with a forced shift check or a second signature. An unrelated interlock test does not catch a reversed shift, and deciding not to look makes detection worse.
+
+### Q7
+Stem: One failure mode is scored severity 8, occurrence 2, and detectability 7. A second mode is scored 4, 4, and 4. Which comparison follows failure-mode and effects analysis?
+A. The first mode ranks higher, with a risk priority number of 112 against 64
+B. The first mode ranks higher because the scores add to 17, which beats 12
+C. The modes are equal because each list has three scores
+D. The second mode ranks higher because occurrence is the only factor and 4 is greater than 2
+Answer: A
+Objective: VII.7
+Why: The risk priority number is the product of the three scores. First mode: 8 × 2 = 16, and 16 × 7 = 112. Second mode: 4 × 4 = 16, and 16 × 4 = 64. The higher product is the earlier process fix. Adding gives 8 + 2 + 7 = 17 against 4 + 4 + 4 = 12, which is a different combination and not the analysis. Occurrence alone would ignore a severe miss that is hard to detect.
+
+### Q8
+Stem: A course prescribed as 5000 cGy was delivered as 6100 cGy. The patient and the site were correct. Which statement fits a medical-event review?
+A. The excess divided by the delivered dose is about 18%, so the 20% line is not met
+B. The excess is 22% of the prescribed total, past the about-20% total-dose line
+C. A medical event on dose requires a single fraction 50% high, and the course total does not count
+D. A voluntary incident system replaces the telephone report to the regulator
+Answer: B
+Objective: VII.7
+Why: The baseline is the prescription. (6100 − 5000) / 5000 = 1100/5000 = 0.22 = 22%, past about 20% of the total prescribed dose. Dividing by the delivered dose instead gives 1100/6100 = 0.180 = 18% and uses the wrong baseline. The absolute difference, 11 Gy, is also well above a 0.5 Sv organ threshold, so that threshold does not remove the event. A 50% single-fraction miss is a separate line. A voluntary learning report does not replace the regulatory report.
+
+### Q9
+Stem: One fraction prescribed as 200 cGy is delivered as 340 cGy. Later fractions stay on the original plan, and the running total is still inside 20% of the course prescription. How does the single-fraction rule apply?
+A. It does not apply, because the course total has not moved by 20%
+B. It applies; this fraction is 70% above the prescribed fraction, past the about-50% line
+C. It applies only when the patient was the wrong person
+D. It does not apply, because the excess divided by the delivered fraction is about 41%, under 50%
+Answer: B
+Objective: VII.7
+Why: The baseline is the prescribed fraction. (340 − 200) / 200 = 140/200 = 0.70 = 70%, past about 50% of that fraction. Dividing by the delivered fraction gives 140/340 = 0.412 = 41% and uses the wrong baseline. The course can still be inside 20% of the total and this fraction can still qualify. Wrong patient is a different medical-event case.
+
+### Q10
+Stem: A medical event is discovered Tuesday afternoon. Which clock matches 10 CFR 35.3045?
+A. A written report within 24 hours and no telephone call
+B. A telephone report within about 15 days and a written report within a year
+C. A telephone report within about 24 hours, and a written report within about 15 days
+D. No regulatory report if the case is also entered in a voluntary learning system
+Answer: C
+Objective: VII.7
+Why: The regulator is told by telephone within about 24 hours of discovery, by the next calendar day, and receives a written report within about 15 days. The referring physician and the patient are notified as well. A voluntary system does not replace that report.
+
+### Q11
+Stem: Patient A's approved plan is delivered to patient B. The monitor units matched patient A's chart. Which description fits 10 CFR 35.3045?
+A. Not a medical event, because the monitor units matched a signed plan
+B. Not a medical event unless patient B's dose also differed by 20% from patient A's prescription
+C. A medical event; the dose went to the wrong patient
+D. A daily output failure, because only a calibration miss can be a medical event
+Answer: C
+Objective: VII.7
+Why: Wrong patient is a medical event even when the beam parameters matched some approved plan. The 20% dose line is for a dose difference on the intended administration. It is not a requirement that the wrong person also fail a percentage test against the other chart. Output constancy is a machine check, not this event.
+
+### Q12
+Stem: A pelvis plan is delivered to the thorax. Energy, monitor units, and the wedge match the pelvis field. What is the regulatory description?
+A. Not a medical event, because the field parameters matched the plan that was loaded
+B. A medical event; the dose went to the wrong site
+C. In tolerance, because a site change is covered by the 2 mm laser allowance
+D. A voluntary near miss only, with no telephone report
+Answer: B
+Objective: VII.7
+Why: Wrong site is a medical event. Matching the pelvis energy, monitor units, and wedge shows the wrong plan was delivered as loaded. It does not make the thorax the prescribed site. A laser tolerance is a machine geometric check. Discovery still starts the telephone report within about 24 hours and the written report within about 15 days.
+
 ## Factors and Limitations of Deliverable Plans
 
 ### Q1
@@ -601,6 +851,146 @@ D. The missing anatomy can be replaced by Mayneord F
 Answer: A
 Objective: VII.9
 Why: Simulation has to cover the targets, the organs at risk, and the beam paths, including flash and exit. A scan that clips the lung is an incomplete data set. Correct choice: The data set does not cover the beams and the relevant anatomy. Modern tangent plans are CT based. Entrance, exit, lung, and heart need to be in the scan. Mayneord F does not invent missing slices.
+
+### Q6
+Stem: Morning checks on an IMRT linac: lasers are 1.8 mm from the isocenter marks, and output is 1.2% from baseline. Which reading matches TG-142?
+A. Both pass; IMRT lasers are allowed 2 mm and output is allowed 3%
+B. Lasers fail the 1.5 mm IMRT tolerance, and output passes the 3% daily window
+C. Output fails, because a laser miss automatically voids the 1% annual calibration
+D. Lasers pass, because they share the 2 mm optical-distance tolerance
+Answer: B
+Objective: VII.9
+Why: Daily IMRT lasers are 1.5 mm. 1.8 mm is over that tolerance and under the 2 mm non-IMRT number, which is the wrong class of machine. Daily output constancy is 3%, and 1.2% is inside it. The annual 1% calibration is a different check, and the optical distance indicator is not the laser tolerance.
+
+### Q7
+Stem: A stereotactic unit's daily laser check is 1.2 mm off the isocenter. Output constancy is 0.8%. What is the laser result?
+A. Pass; SRS lasers use the 2 mm non-IMRT tolerance
+B. Pass; SRS lasers use the 1.5 mm IMRT tolerance
+C. Fail; SRS lasers are held to 1 mm
+D. Pass, because 1.2 mm is inside the 2 mm light-versus-radiation tolerance
+Answer: C
+Objective: VII.9
+Why: The SRS laser tolerance is 1 mm. 1.2 mm fails it. The 2 mm and 1.5 mm numbers belong to non-IMRT and IMRT units. Light-versus-radiation coincidence is a different test. Output at 0.8% does not clear the laser.
+
+### Q8
+Stem: At isocenter the light field edge and the radiation field edge differ by 3 mm. Jaw readout and gantry angle are inside their own tolerances. What fails?
+A. Nothing; light and radiation may differ by 5 mm
+B. The gantry, because a 3 mm light miss is scored as 3°
+C. Light-and-radiation coincidence; the tolerance is 2 mm
+D. Nothing on a monthly check; this comparison is only an annual calibration
+Answer: C
+Objective: VII.9
+Why: Light-field and radiation-field coincidence is 2 mm. A 3 mm difference fails. The jaw and the gantry can pass on the same check. A millimeter is not converted into a degree, and the comparison is not reserved for the TG-51 day.
+
+### Q9
+Stem: A symmetric jaw sits 3 mm from the set position. The collimator angle indicator is 0.4° from the mechanical angle. Which parameter fails?
+A. The collimator angle; 0.4° is over the 1° tolerance
+B. The jaw; jaw position is 2 mm, while 0.4° is inside the 1° angle tolerance
+C. Both, because jaw and angle share a 1 mm rule
+D. Neither; jaws are allowed 5 mm and angles are allowed 2°
+Answer: B
+Objective: VII.9
+Why: Symmetric jaw position is 2 mm, so 3 mm fails. Gantry and collimator angle indicators are 1°, so 0.4° passes. The two tolerances are not interchangeable, and 5 mm or 2° is looser than this report.
+
+### Q10
+Stem: The gantry indicator reads 90.0° when the mechanical check is 91.4°. Output is 1% from baseline. What is the angle result?
+A. Pass; gantry angle is allowed 2°
+B. Pass; 1.4° is covered by the 2 mm laser tolerance
+C. Fail; gantry and collimator angle indicators are held to 1°
+D. Fail only because the output has used up the 1% annual budget
+Answer: C
+Objective: VII.9
+Why: 91.4 − 90.0 = 1.4°, which is past 1°. The laser tolerance is a length, not an angle. Output at 1% is its own check and does not decide the gantry indicator.
+
+### Q11
+Stem: A picket-fence image shows one leaf pair jogged out of an otherwise straight fence. Morning output is inside 3%. What follows?
+A. The MLC is cleared, because output constancy includes leaf position
+B. The fence has found a leaf-position error, and a passing output does not clear it
+C. The fence is a CT-number test, so the simulator density table is rebuilt
+D. A jog is the commissioned tongue-and-groove and is ignored
+Answer: B
+Objective: VII.9
+Why: The picket fence is the MLC leaf-position check. A jog means a leaf is not on the line the plan will use. Daily output does not measure that leaf. The image is not a Hounsfield check, and tongue-and-groove is not a reason to accept a broken fence. Patient-specific IMRT QA remains a separate measurement.
+
+### Q12
+Stem: Monthly photon profile constancy: flatness has moved 1.6% from baseline and symmetry has moved 0.4%. What is the call?
+A. Both pass; flatness and symmetry are allowed 3%, the same as daily output
+B. Flatness fails the 1% tolerance and symmetry passes
+C. Both fail, because symmetry is held to 0.2%
+D. Both pass; 1% is only the annual absolute-dose tolerance and does not apply to profiles
+Answer: B
+Objective: VII.9
+Why: Flatness and symmetry are 1%. 1.6% fails and 0.4% passes. The 3% figure is daily output constancy, not the profile. The annual 1% absolute dose is a calibration comparison, not a reason to ignore a monthly profile.
+
+### Q13
+Stem: Annual radiation-isocenter coincidence is 1.6 mm on a conventional linac and 1.2 mm on an SRS linac. Which machine fails?
+A. The conventional linac only
+B. The SRS linac only
+C. Both
+D. Neither
+Answer: B
+Objective: VII.9
+Why: Conventional radiation isocenter is 2 mm, so 1.6 mm passes. SRS radiation isocenter is 1 mm, so 1.2 mm fails. The two machines do not share one tolerance.
+
+### Q14
+Stem: On an SBRT unit the imaging isocenter and the treatment isocenter differ by 1.4 mm. A conventional linac in the same clinic measures 1.7 mm on the same test. Which unit fails the imaging-to-treatment check?
+A. The SBRT unit only
+B. The conventional linac only
+C. Both
+D. Neither, because both are inside 2 mm and SBRT uses the 2 mm number
+Answer: A
+Objective: VII.9
+Why: Imaging-to-treatment isocenter is at or under 2 mm, and at or under 1 mm for SRS/SBRT. The SBRT result of 1.4 mm fails the 1 mm line. The conventional result of 1.7 mm is inside 2 mm. Using 2 mm for the SBRT unit is the wrong machine class.
+
+### Q15
+Stem: A Winston–Lutz test places the ball 1.3 mm from the center of the radiation field. How is that scored?
+A. Pass; the limit is 2 mm, the same as a conventional radiation isocenter
+B. Fail; Winston–Lutz is at or under 1 mm
+C. Pass; the test only confirms that the door interlock opens
+D. Fail only when the ball is also more than 40 HU from water
+Answer: B
+Objective: VII.9
+Why: Winston–Lutz compares a ball at isocenter with the radiation field over several angles. The offset limit is at or under 1 mm, so 1.3 mm fails. The 2 mm conventional isocenter tolerance is a different check. The test is not a door interlock and not a CT-number test.
+
+### Q16
+Stem: The annual wedge-factor check is 2.7% from the commissioned value. The same day's absolute output is 0.6% from the TG-51 standard. What fails?
+A. Output; annual absolute dose is allowed only 0.2%
+B. The wedge factor; constancy is 2%, and output passes the 1% annual tolerance
+C. Both
+D. Neither; a wedge factor may drift 5% if output is inside 1%
+Answer: B
+Objective: VII.9
+Why: Wedge-factor constancy is 2%, so 2.7% fails. Annual absolute output is about 1%, so 0.6% passes. A passing calibration does not clear the wedge, and 5% is looser than the wedge tolerance.
+
+### Q17
+Stem: Monthly electron energy, taken from the depth of the energy index, has moved 3 mm from baseline. Output constancy that morning is 1.5%. What fails?
+A. Output; electrons are held to 1% every month
+B. Nothing; electron energy may move 5 mm, and 1.5% is inside the 2% monthly output window
+C. Electron energy; the tolerance is 2 mm or 2%
+D. Both, because any energy shift fails output automatically
+Answer: C
+Objective: VII.9
+Why: Monthly electron energy is 2 mm or 2%. A 3 mm shift fails. Monthly output constancy is about 2%, so 1.5% passes and does not decide the energy. A 5 mm allowance is looser than the energy rule.
+
+### Q18
+Stem: The CT simulator's morning water scan reads +40 HU. Lasers meet at the imaging plane and the couch index matches the scale. What has failed?
+A. Nothing; water is defined as +40 HU
+B. The lasers, because a Hounsfield error means the lasers moved
+C. HU constancy; water should sit near 0 HU, and the densities sent to planning will be high
+D. The couch, because Hounsfield units are the couch-travel test
+Answer: C
+Objective: VII.9
+Why: TG-66 holds water near 0 HU, on the order of 5 HU. A reading of +40 is well outside that. Tissue is assigned a density that is too high, and the dose calculation follows. Lasers and the couch can pass on the same morning. They do not measure the CT number.
+
+### Q19
+Stem: Water reads 1 HU and the simulator lasers agree with the imaging plane. The couch index used for shifts is 4 mm longer than the position in the scan. Which TG-66 item failed?
+A. HU constancy
+B. The lasers
+C. The couch; indexed travel does not match the position the plan will use
+D. None; TG-66 does not include the couch, and 4 mm is inside a 1 cm setup habit
+Answer: C
+Objective: VII.9
+Why: Water at 1 HU is near 0, so HU constancy passes. Lasers on the imaging plane pass. Couch indexing is its own TG-66 check. A 4 mm index error moves every shift written from that scan. There is no 1 cm couch allowance in that check.
 
 ## QA and Standard of Care Quiz
 

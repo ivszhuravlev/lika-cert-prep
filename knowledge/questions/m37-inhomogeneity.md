@@ -187,3 +187,83 @@ D. 1.88 cm
 Answer: B
 Objective: IV.4
 Why: Substitute 1.5×1.25 + 12×1 = 1.88 + 12.00 = 13.88 cm, reported as 13.88 cm. The physical depth is 13.50 cm, which would be the answer only if every segment had density 1. Beyond lung, a photon plan that ignores the low density underestimates dose, because the real attenuation is less than the water calculation. The equivalent-path method does not restore lateral electron equilibrium, so small fields in lung still need a better algorithm than this hand factor. Adding physical thicknesses only gives 13.50 cm. Dividing thickness by density instead of multiplying gives 13.20 cm. Keeping only the inhomogeneous segments and dropping unit-density tissue gives 1.88 cm.
+
+### Q9
+Stem: A lung slab is 6.0 cm thick and its mean HU is −750. For this hand calculation, relative density is one plus the quantity HU divided by 1000. What is the water-equivalent thickness of that slab, to the nearest 0.01 cm?
+A. 6.00 cm
+B. 4.50 cm
+C. 1.50 cm
+D. 10.50 cm
+Answer: C
+Objective: IV.4
+Why: Relative density = 1 + (−750 / 1000) = 1 − 0.750 = 0.250. Water-equivalent thickness = 6.0 × 0.250 = 1.50 cm. Using the physical thickness alone gives 6.00 cm. Dropping the leading 1 and using 0.750 as the density gives 6.0 × 0.750 = 4.50 cm. Flipping the sign of the HU, 1 + (750 / 1000) = 1.750, gives 6.0 × 1.750 = 10.50 cm.
+
+### Q10
+Stem: A 6 MV ray to a point beyond lung crosses 3.0 cm of soft tissue, then 10.0 cm of lung whose mean HU is −700, then 2.0 cm of soft tissue. Soft tissue relative density is 1.00. For the lung, relative density is one plus the quantity HU divided by 1000. Dose at dmax on this ray, at the point's source distance, is 250 cGy. TMR values for this field are 0.860 at 6 cm, 0.785 at 8 cm, 0.740 at 10 cm, and 0.620 at 15 cm. What path-length dose reaches the point, to the nearest 0.1 cGy? This estimate does not restore lateral scatter.
+A. 196.3 cGy
+B. 155.0 cGy
+C. 215.0 cGy
+D. 185.0 cGy
+Answer: A
+Objective: IV.4
+Why: Lung density = 1 + (−700 / 1000) = 1 − 0.700 = 0.300. Water-equivalent depth = 3.0 × 1.00 + 10.0 × 0.300 + 2.0 × 1.00 = 3.00 + 3.00 + 2.00 = 8.00 cm. TMR at 8 cm is 0.785. Dose = 250 × 0.785 = 196.25 cGy, reported as 196.3 cGy. The physical depth is 3 + 10 + 2 = 15 cm, and 250 × 0.620 = 155.0 cGy, which is the homogeneous-water result and is low beyond lung. Stopping at 6 cm, as if the last soft tissue were omitted or the lung contributed nothing, gives 250 × 0.860 = 215.0 cGy. Reading 10 cm instead of 8 cm gives 250 × 0.740 = 185.0 cGy.
+
+### Q11
+Stem: An isocentric beam is calibrated to 1.000 cGy/MU at dmax for this field at the isocenter, open and on axis. The ray crosses 5.0 cm of soft tissue at relative density 1.00, 4.0 cm of bone at relative density 1.65, and 3.0 cm of soft tissue at relative density 1.00. The point is to receive 180 cGy. TMR values for this field are 0.760 at 10 cm, 0.700 at 12 cm, 0.640 at 14 cm, and 0.600 at 16 cm. How many MU does the path-length estimate require, to the nearest 0.1 MU?
+A. 257.1 MU
+B. 286.6 MU
+C. 113.0 MU
+D. 236.8 MU
+Answer: B
+Objective: IV.4
+Why: Water-equivalent depth = 5.0 × 1.00 + 4.0 × 1.65 + 3.0 × 1.00 = 5.00 + 6.60 + 3.00 = 14.60 cm. The 14.6 cm point is (14.6 − 14) / (16 − 14) = 0.60 / 2 = 0.30 of the way from 14 cm to 16 cm. TMR change = 0.30 × (0.600 − 0.640) = 0.30 × (−0.040) = −0.012. TMR = 0.640 − 0.012 = 0.628. Scatter and distance match the calibration, so MU = 180 / 0.628 = 286.62, which rounds to 286.6 MU. The physical depth is 5 + 4 + 3 = 12 cm, and 180 / 0.700 = 257.14 MU, reported as 257.1 MU. Dividing the bone thickness by 1.65 instead of multiplying, 4.0 / 1.65 = 2.42 cm, puts the equivalent depth near 10.4 cm; reading the 10 cm row then gives 180 / 0.760 = 236.84 MU, reported as 236.8 MU. Multiplying the dose by the TMR, 180 × 0.628 = 113.04, gives 113.0 MU.
+
+### Q12
+Stem: Missing tissue leaves a 4.0 cm air gap along a fan line. Isodose-shift factors are 0.7 for cobalt-60, 0.6 for 6 MV, and 0.5 for 18 MV. The beam is 6 MV, and the chart is shifted by that energy's factor times the gap. How many centimetres is the shift, to the nearest 0.1 cm?
+A. 4.0 cm
+B. 2.8 cm
+C. 2.0 cm
+D. 2.4 cm
+Answer: D
+Objective: IV.4
+Why: The 6 MV factor is 0.6. Shift = 0.6 × 4.0 = 2.4 cm. Shifting by the whole gap gives 4.0 cm and ignores that scatter does not move as fast as primary attenuation. The cobalt-60 factor gives 0.7 × 4.0 = 2.8 cm. The 18 MV factor gives 0.5 × 4.0 = 2.0 cm. For missing tissue the chart moves downstream, away from the source, by this 2.4 cm; the question asks for that distance.
+
+### Q13
+Stem: The calculation point lies inside lung, not beyond it, in a 3 by 3 cm 6 MV field, and lateral electron equilibrium is lost. A water calculation at the point is 160 cGy. Measured factors at this depth in lung, listed as path-length factor then lateral factor, are 1.18 and 0.99 for 10 by 10, 1.14 and 0.93 for 5 by 5, 1.10 and 0.84 for 3 by 3, and 1.06 and 0.72 for 2 by 2. What dose should the hand calculation report, to the nearest 0.1 cGy?
+A. 176.0 cGy
+B. 115.2 cGy
+C. 134.4 cGy
+D. 160.0 cGy
+Answer: C
+Objective: IV.4
+Why: Inside a small field in lung, electrons leave the field and are not replaced, so the lateral factor is the one that applies. For 3 by 3 cm that factor is 0.84. Dose = 160 × 0.84 = 134.4 cGy. The path-length factor 1.10 would raise the dose, 160 × 1.10 = 176.0 cGy, which is the wrong direction inside the lung. The 2 by 2 cm lateral factor gives 160 × 0.72 = 115.2 cGy. Leaving the water dose unchanged gives 160.0 cGy.
+
+### Q14
+Stem: Contrast fills 5.0 cm of bladder at relative density 1.50, then the ray crosses 6.0 cm of tissue at relative density 1.00. On the treatment day the bladder is water at relative density 1.00. The plan left the contrast in and reports 170 cGy beyond the bladder. TMR values for this field are 0.760 at 11.0 cm and 0.680 at 13.5 cm. With the contrast overridden to water, what path-length dose replaces that report, to the nearest 0.1 cGy?
+A. 170.0 cGy
+B. 152.1 cGy
+C. 172.5 cGy
+D. 190.0 cGy
+Answer: D
+Objective: IV.4
+Why: With contrast left in, water-equivalent depth = 5.0 × 1.50 + 6.0 × 1.00 = 7.50 + 6.00 = 13.50 cm, and the TMR is 0.680. After the override to water, depth = 5.0 × 1.00 + 6.0 × 1.00 = 11.00 cm, and the TMR is 0.760. The reported 170 cGy was built on the longer path, so the overridden dose is 170 × (0.760 / 0.680). The ratio 0.760 / 0.680 = 1.11765. Then 170 × 1.11765 = 190.00 cGy, reported as 190.0 cGy. The same product is 170 × 0.760 = 129.2, and 129.2 / 0.680 = 190.0. Keeping the contrast report gives 170.0 cGy. Inverting the TMR ratio gives 170 × (0.680 / 0.760) = 152.11 cGy, reported as 152.1 cGy. Adding the 2.5 cm of extra water-equivalent path onto the report as if it were cGy gives 172.5 cGy.
+
+### Q15
+Stem: A ray crosses 4.0 cm of soft tissue at relative density 1.00, 8.0 cm of lung at relative density 0.25, and 3.0 cm of soft tissue at relative density 1.00. TMR values for this field are 0.800 at 9 cm, 0.710 at 12 cm, and 0.620 at 15 cm. By what percent does the path-length correction raise the dose above a homogeneous water calculation, to the nearest 0.1 percent?
+A. 29.0 %
+B. 22.5 %
+C. 18.0 %
+D. 129.0 %
+Answer: A
+Objective: IV.4
+Why: Water-equivalent depth = 4.0 × 1.00 + 8.0 × 0.25 + 3.0 × 1.00 = 4.00 + 2.00 + 3.00 = 9.00 cm. Physical depth = 4 + 8 + 3 = 15 cm. TMR at 9 cm is 0.800 and TMR at 15 cm is 0.620. Ratio = 0.800 / 0.620 = 1.2903. The fractional increase is 1.2903 − 1 = 0.2903, and 0.2903 × 100 = 29.03%, reported as 29.0%. Dividing the TMR difference by the equivalent-depth TMR, (0.800 − 0.620) / 0.800 = 0.180 / 0.800 = 0.225, gives 22.5%. Calling the raw TMR difference a percent, 0.800 − 0.620 = 0.180, gives 18.0%. Turning the ratio itself into a percent, 1.2903 × 100, gives 129.0% and never subtracts the original dose.
+
+### Q16
+Stem: An equivalent-path calculation predicts 180 cGy at a point past an air cavity. The point is 1.0 cm beyond the distal edge of the cavity. A measured rebuild-up table for this beam, as a factor on that path-length dose, is 0.85 at 0.0 cm past the cavity, 0.96 at 2.0 cm past the cavity, and 1.00 at 5.0 cm past the cavity. What dose includes rebuild-up, to the nearest 0.1 cGy?
+A. 153.0 cGy
+B. 162.9 cGy
+C. 172.8 cGy
+D. 180.0 cGy
+Answer: B
+Objective: IV.4
+Why: The point at 1.0 cm is (1.0 − 0.0) / (2.0 − 0.0) = 0.50 of the way from 0.0 cm to 2.0 cm. Factor = 0.85 + 0.50 × (0.96 − 0.85) = 0.85 + 0.50 × 0.11 = 0.85 + 0.055 = 0.905. Dose = 180 × 0.905 = 162.9 cGy. Just at the distal edge, 180 × 0.85 = 153.0 cGy. At 2.0 cm past the cavity, 180 × 0.96 = 172.8 cGy. Using the path-length dose with no rebuild-up factor gives 180.0 cGy. Near the cavity the dose is still short of the equivalent-path prediction because electron buildup has to start again.

@@ -1,6 +1,6 @@
 # Module 3 — Radioactivity
 
-Original items. Half-lives used here are the standard therapy values: Ir-192 73.8 days, Co-60 5.26 years, Cs-137 30 years, I-125 59.4 days, Pd-103 17 days, Au-198 2.7 days, I-131 8 days, Y-90 64 hours, Sr-90 28.8 years, Ra-223 11.4 days, Cs-131 9.7 days, Tc-99m 6 hours, F-18 110 minutes, P-32 14.3 days. Arithmetic uses 0.693 and a mean-life factor of 1.44.
+Original items. Half-lives used here are the standard therapy values: Ir-192 73.8 days, Co-60 5.26 years, Cs-137 30 years, I-125 59.4 days, Pd-103 17 days, Au-198 2.7 days, I-131 8 days, Y-90 64 hours, Sr-90 28.8 years, Ru-106 374 days, Ra-223 11.4 days, Cs-131 9.7 days, Tc-99m 6 hours, F-18 110 minutes, P-32 14.3 days. Arithmetic uses 0.693 and a mean-life factor of 1.44.
 
 ## Radioactivity
 
@@ -436,6 +436,106 @@ Answer: A
 Objective: I.7
 Why: Co-60 half-life is 5.26 years, about 63.1 months. λ per month is 0.693/63.1 ≈ 0.0110. The remaining fraction is e^(−0.011) ≈ 0.989, and 150 × 0.989 = 148 cGy/min. 142 cGy/min is several percent, far too much for one month. 75 cGy/min is a half-life. 150 cGy/min ignores decay.
 
+### Q11
+Stem: Cs-131 permanent prostate seeds are identified by which pair?
+A. Half-life 30 years and a 662 keV gamma
+B. Half-life about 9.7 days and photons near 30 keV
+C. Half-life 73.8 days and a mean energy near 0.38 MeV
+D. Half-life about 374 days and a high-energy beta
+Answer: B
+Objective: I.7
+Why: Cs-131 is a permanent seed that decays by electron capture, with photons near 30 keV and a half-life of about 9.7 days. Thirty years and 662 keV is Cs-137. 73.8 days is Ir-192. About 374 days and a beta is Ru-106.
+
+### Q12
+Stem: Which listing is an ophthalmic plaque rather than a permanent photon seed?
+A. I-125, electron capture, about 28 keV
+B. Pd-103, electron capture, about 21 keV
+C. Cs-131, electron capture, about 30 keV
+D. Ru-106, beta, in equilibrium with Rh-106
+Answer: D
+Objective: I.7
+Why: Ru-106 is a beta emitter used as an eye plaque. The short-lived daughter Rh-106 supplies the therapeutic betas. I-125, Pd-103, and Cs-131 are low-energy photon seeds left in place.
+
+### Q13
+Stem: The recall half-life of Ru-106 is about:
+A. 9.7 days
+B. 64 hours
+C. 374 days
+D. 28.8 years
+Answer: C
+Objective: I.7
+Why: Ru-106 is about 374 days. 9.7 days is Cs-131. 64 hours is Y-90. 28.8 years is Sr-90, the other long-lived beta parent used for an eye applicator.
+
+### Q14
+Stem: A teaching approximation for the half-value layer of Co-60 in lead is about:
+A. 12 mm Pb
+B. 6.5 mm Pb
+C. 3 mm Pb
+D. 0.025 mm Pb
+Answer: A
+Objective: I.10
+Why: Co-60 is about 12 mm of lead. Cs-137 is about 6.5 mm. Ir-192 is a few millimeters, about 3–6 mm. I-125 is about 0.025 mm. These are narrow-beam teaching values, not a vault wall.
+
+### Q15
+Stem: The lead half-value layer used in this bank for Cs-137 is about:
+A. 12 mm
+B. 6.5 mm
+C. 0.025 mm
+D. 30 mm
+Answer: B
+Objective: I.10
+Why: Cs-137 is about 6.5 mm Pb. 12 mm is the Co-60 teaching value. 0.025 mm is I-125. 30 mm is several times the cesium layer and is not the recall figure.
+
+### Q16
+Stem: Ir-192 lead shielding estimates in this bank use a half-value layer of about:
+A. 12 mm, the same figure as Co-60
+B. 0.025 mm, the same figure as I-125
+C. 3 to 6 mm
+D. 6.5 cm
+Answer: C
+Objective: I.10
+Why: The Ir-192 spectrum is softer than Cs-137 and Co-60, so the teaching range is about 3–6 mm of lead rather than one sharp line. 12 mm is Co-60. 0.025 mm is I-125. 6.5 cm is the Cs-137 figure with millimeters misread as centimeters.
+
+### Q17
+Stem: I-125 photons are near 28 keV, so the teaching half-value layer in lead is about:
+A. 12 mm Pb
+B. 6.5 mm Pb
+C. 3 mm Pb
+D. 0.025 mm Pb
+Answer: D
+Objective: I.10
+Why: I-125 is about 0.025 mm Pb. The millimeter values belong to the higher-energy sources: a few millimeters for Ir-192, about 6.5 mm for Cs-137, and about 12 mm for Co-60.
+
+### Q18
+Stem: This bank memorizes exposure-rate constants for Ir-192, Cs-137, Co-60, and Ra-226. Which statement matches that list?
+A. I-125 is also given one fixed gamma constant to memorize
+B. I-125 is not given a single memorized gamma constant
+C. Every seed uses the radium constant 8.25 per millicurie
+D. Co-60 is omitted because its constant is the same as Cs-137
+Answer: B
+Objective: I.10
+Why: Module 40 stores Ir-192 4.69, Cs-137 3.26, Co-60 13.07, and Ra-226 8.25. Radium’s 8.25 is per milligram of radium, not per millicurie. No single I-125 gamma constant is memorized here; a stem that needs one has to print it.
+
+### Q19
+Stem: Air-kerma strength is reported in U. In this bank, 1 U equals:
+A. 1 mCi of any nuclide
+B. 1 R/h at 1 cm
+C. 1 µGy m²/h
+D. 1 Gy per decay
+Answer: C
+Objective: I.10
+Why: 1 U = 1 µGy m²/h. It is not a millicurie, and it is not the exposure-rate constant. This set does not memorize one conversion from U to mCi.
+
+### Q20
+Stem: Co-60 is recalled at a half-life of 5.26 years. Which decay constant, in per year, matches that half-life?
+A. 0.01 per year
+B. 0.13 per year
+C. 0.693 per year
+D. 5.26 per year
+Answer: B
+Objective: I.10
+Why: λ = 0.693 / T½ = 0.693 / 5.26 = 0.132 per year, which rounds to 0.13 per year. 0.01 per year is about a monthly fraction, not the yearly constant. 0.693 per year forgets to divide by 5.26. 5.26 per year is the half-life written as if it were λ.
+
 ## Radioactivity Calculation Tutorial
 
 ### Q1
@@ -551,14 +651,14 @@ Objective: I.7
 Why: Mean life = 1.44 × 30 = 43.2 years. 30 years equates mean life with half-life. 20.8 years is 0.693 × 30. 0.023 year^−1 is λ = 0.693/30, not the mean life.
 
 ### Q3
-Stem: Au-198 is a temporary implant nuclide. Its half-life is about:
-A. 2.7 days
-B. 17 days
-C. 59.4 days
-D. 73.8 days
-Answer: A
+Stem: Au-198 seeds (gold grains) are used as which source, and the half-life is about:
+A. A temporary HDR source, 73.8 days
+B. A permanent implant, 2.7 days
+C. A permanent implant, 59.4 days
+D. A temporary interstitial source, 17 days
+Answer: B
 Objective: I.7
-Why: Au-198’s half-life is 2.7 days, with a principal gamma near 412 keV. Seventeen days is Pd-103, 59.4 days is I-125, and 73.8 days is Ir-192.
+Why: Au-198 seeds are a permanent implant. The half-life is 2.7 days and the principal gamma is about 412 keV. 73.8 days is Ir-192, the temporary HDR and temporary-implant nuclide. 59.4 days is I-125, also a permanent seed, but not gold-198. 17 days is Pd-103.
 
 ### Q4
 Stem: A beta-minus decay increases Z by 1 and leaves A unchanged. Which listed source is a pure beta emitter?

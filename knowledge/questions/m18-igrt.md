@@ -114,6 +114,56 @@ Answer: C
 Objective: II.6
 Why: Answer C. 20 cm × 0.0349 = 0.70 cm, about 7 mm at the node. That is a real displacement at the end of a long field. A three-degree-of-freedom couch can apply translations only. The pitch is corrected by a couch that can rotate, within protocol, or the patient is reset. The angle in degrees is not a shift in millimeters.
 
+### Q26
+Stem: A cone-beam CT match uses the anatomy named in the protocol. Bladder filling, rectal volume, and the body contour agree with the planning CT. The rigid shift is inside the departmental action level for this site. What is the appropriate next step?
+A. Complete the localization the policy allows for an in-tolerance shift, and treat, without calling the physician for this shift alone
+B. Call the physician for every cone-beam shift, including a shift inside the action level
+C. Treat on the tattoos and discard the image, because an in-tolerance shift means the cone-beam was optional
+D. Calculate the fraction on the cone-beam CT with the planning-CT density table before treating
+Answer: A
+Objective: II.6
+Why: Answer A. The action level is the clinic’s rule for what the treating team may finish when the anatomy still matches the plan. Inside that level, on the required surrogate, a rigid correction is localization. A nonzero shift is not automatically a physician call. Discarding the image leaves the measured offset unaddressed. A cone-beam is not the commissioned density set for a dose calculation.
+
+### Q27
+Stem: Under the same policy, the cone-beam shows a rectum full of gas, the prostate displaced relative to the pelvic nodes, and a bladder much emptier than the planning CT. One translation can still drive the bony residual inside the site’s action level. What is required?
+A. Treat, because a bone residual inside the action level clears the fraction
+B. Hold the beam and call the physician. A rigid shift that centers the bone does not restore the filling or put both the prostate and the nodes back on the plan
+C. Average the bone shift and the prostate shift until the displayed number is inside the action level, then treat
+D. Change the energy so the filling difference drops out of the match
+Answer: B
+Objective: II.6
+Why: Answer B. The action level limits the rigid correction the team may apply when the patient still matches the plan. Gas, an empty bladder, and a prostate that has moved relative to the nodes are a different geometry from the planning CT. Forcing the bone number under the limit does not repair that. Averaging two surrogates satisfies neither. Energy does not move bowel or bladder.
+
+### Q28
+Stem: A clinic uses a no-action-level (NAL) offline protocol for a palliative course and an online cone-beam correction for stereotactic lung. What does NAL do?
+A. It estimates the systematic setup error from an initial set of images and applies that correction on later fractions, leaving today’s random residual until an online shift
+B. It recalculates monitor units from the cone-beam before every fraction
+C. It is the name for a same-day replan on an MR-linac
+D. It ignores systematic error and corrects only the random error of the current fraction before beam-on
+Answer: A
+Objective: II.6
+Why: Answer A. NAL is offline. The mean of an initial set of setup images estimates the systematic error, and that mean is applied to subsequent fractions with no threshold. The fraction already imaged is not moved for its own random residual before beam-on. Online correction is the move before the beam. NAL does not recompute monitor units, and it is not online plan adaptation. Option D reverses which component NAL targets.
+
+### Q29
+Stem: Extended NAL (eNAL) is added because the setup is drifting over the course. What does the extension change?
+A. The systematic estimate is updated from later images, and the updated correction applies to future fractions
+B. eNAL turns the offline protocol into a same-session adaptive replan
+C. eNAL sets the cone-beam dose to zero
+D. eNAL replaces the planning CT with yesterday’s cone-beam as the match reference
+Answer: A
+Objective: II.6
+Why: Answer A. eNAL keeps the offline correction and refreshes the estimate of the systematic error, so a trend is not frozen at the first measurement. The new correction is for later fractions. It does not reoptimize the dose on the table, it does not cancel imaging dose, and the match reference remains the planning CT.
+
+### Q30
+Stem: Daily kilovoltage cone-beam CT is required for a long fractionated course. Which statement about the imaging dose is correct?
+A. Kilovoltage imaging dose is zero because the beam is not the treatment energy
+B. Each cone-beam deposits dose, the daily scans accumulate, and that dose is separate from the therapeutic prescription
+C. One cone-beam delivers one treatment fraction, so the prescription is reduced by the number of scans
+D. Imaging dose is deposited only when the match exceeds the action level
+Answer: B
+Objective: II.6
+Why: Answer B. A kilovoltage cone-beam is ionizing radiation. Repeating it every fraction adds dose. That dose is small next to a therapeutic fraction, and it is not the prescribed tumor dose, so it is neither ignored as zero nor subtracted from the prescription one scan at a time. The dose is deposited when the scan is acquired, independent of how large the shift is.
+
 ## IGRT Mini-Quiz
 
 ### Q1

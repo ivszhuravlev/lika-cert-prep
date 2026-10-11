@@ -54,6 +54,86 @@ Answer: B
 Objective: IV.1
 Why: Superposition takes incident energy fluence and spreads it with a kernel that is stretched or scaled by local density. Monte Carlo samples particle histories and scores dose. Neither one is a TAR table. Correct choice: Superposition density-scales a kernel; Monte Carlo follows histories. TAR lookups are correction-based tables, not superposition or Monte Carlo. A pencil beam is a kernel convolution, not a history-by-history transport. Monte Carlo is used in lung precisely because it can transport the disequilibrium.
 
+### Q6
+Stem: A 6 MV field is 8.0 cm wide on the skin. The SSD is 100 cm. How wide is the field at 15 cm depth, to the nearest 0.1 cm?
+A. 1.2 cm
+B. 9.2 cm
+C. 8.0 cm
+D. 7.0 cm
+Answer: B
+Objective: IV.1
+Why: Field width grows with distance from the source. The skin is 100 cm from the source and the point at 15 cm depth is 115 cm from the source. Width at depth = 8.0 × (115/100) = 8.0 × 1.15 = 9.20 cm, reported as 9.2 cm. Turning the distance ratio upside down gives 8.0 × (100/115) = 6.96 cm, which rounds to 7.0 cm. Leaving the skin width unchanged gives 8.0 cm. Multiplying by the depth alone, 8.0 × (15/100), gives 1.2 cm.
+
+### Q7
+Stem: The collimator readout is the field size at 100 cm from the source. The SSD is 100 cm. The field at 12 cm depth must be 18.0 cm wide. What readout, to the nearest 0.1 cm, produces that width?
+A. 20.5 cm
+B. 18.0 cm
+C. 16.1 cm
+D. 20.2 cm
+Answer: C
+Objective: IV.1
+Why: The point at 12 cm depth is 112 cm from the source, and the collimator scale is at 100 cm. Readout = 18.0 × (100/112) = 1800/112 = 16.071 cm, which rounds to 16.1 cm. Reversing the distances gives 18.0 × (112/100) = 20.16 cm, reported as 20.2 cm. Copying the deep width onto the readout gives 18.0 cm. Measuring back from the surface toward the source, 18.0 × (100/88), gives 20.45 cm, reported as 20.5 cm.
+
+### Q8
+Stem: An isocentric field is 14.0 cm wide at SAD 100 cm. The patient SSD is 80 cm. How wide is the light field on the skin, to the nearest 0.1 cm?
+A. 17.5 cm
+B. 14.0 cm
+C. 12.6 cm
+D. 11.2 cm
+Answer: D
+Objective: IV.1
+Why: The skin is closer to the source than the isocenter, so the light field is smaller there. Width on the skin = 14.0 × (80/100) = 11.20 cm, reported as 11.2 cm. Inverting the distances gives 14.0 × (100/80) = 17.5 cm. Leaving the isocenter width unchanged gives 14.0 cm. Using a point 10 cm deep instead of the skin, 14.0 × (90/100), gives 12.6 cm.
+
+### Q9
+Stem: At the depth of interest the zero-area TAR is 0.450 and the free-space dose at the point is 120 cGy. Scatter-air ratios at that depth are 0.110 at radius 4 cm, 0.180 at radius 8 cm, and 0.230 at radius 12 cm. The portal is three sectors: 90 degrees out to 8 cm, 180 degrees out to 4 cm, and 90 degrees out to 12 cm. What is the tissue dose at the point, to the nearest 0.1 cGy?
+A. 116.4 cGy
+B. 72.9 cGy
+C. 54.0 cGy
+D. 81.6 cGy
+Answer: B
+Objective: IV.1
+Why: Each sector is weighted by its share of 360 degrees. The 90-degree sector at 8 cm contributes (90/360) × 0.180 = 0.25 × 0.180 = 0.0450. The 180-degree sector at 4 cm contributes (180/360) × 0.110 = 0.50 × 0.110 = 0.0550. The 90-degree sector at 12 cm contributes (90/360) × 0.230 = 0.25 × 0.230 = 0.0575. Field SAR = 0.0450 + 0.0550 + 0.0575 = 0.1575. TAR = 0.450 + 0.1575 = 0.6075. Tissue dose = 0.6075 × 120 = 72.90 cGy, reported as 72.9 cGy. Adding the three SARs to the zero-area TAR without angle weights gives (0.450 + 0.180 + 0.110 + 0.230) × 120 = 0.970 × 120 = 116.4 cGy. Primary only, 0.450 × 120, gives 54.0 cGy. Using the largest SAR for the whole field, (0.450 + 0.230) × 120, gives 81.6 cGy.
+
+### Q10
+Stem: Dose along a spinal cord, sampled every 2 mm, reads 44.0, 46.5, 49.8, 47.2, and 45.0 Gy. A 6 mm dose grid keeps only the first and the fourth of those samples. How many gray does that coarse maximum miss, to the nearest 0.1 Gy?
+A. 5.8 Gy
+B. 2.6 Gy
+C. 49.8 Gy
+D. 3.2 Gy
+Answer: B
+Objective: IV.1
+Why: The samples in order are 44.0, 46.5, 49.8, 47.2, and 45.0 Gy. The true maximum is 49.8 Gy. The coarse grid keeps 44.0 Gy and 47.2 Gy, so its maximum is 47.2 Gy. Missed peak = 49.8 − 47.2 = 2.6 Gy. Subtracting the first sample from the coarse maximum gives 47.2 − 44.0 = 3.2 Gy. Subtracting the first sample from the true peak gives 49.8 − 44.0 = 5.8 Gy. Reporting the true peak itself gives 49.8 Gy, which is the dose, not the amount the grid missed.
+
+### Q11
+Stem: An open field is 8.0 cm by 20.0 cm on the skin. The SSD is 100 cm. What is the equivalent square of that field at 10 cm depth, to the nearest 0.1 cm?
+A. 15.4 cm
+B. 13.9 cm
+C. 12.6 cm
+D. 11.4 cm
+Answer: C
+Objective: IV.1
+Why: Both sides scale with distance from the source. At 10 cm depth the source distance is 110 cm, so each side is multiplied by 110/100 = 1.10. The sides at depth are 8.0 × 1.10 = 8.8 cm and 20.0 × 1.10 = 22.0 cm. Equivalent square = 2 × 8.8 × 22.0 / (8.8 + 22.0) = 387.2 / 30.8 = 12.571 cm, which rounds to 12.6 cm. The same square on the skin, before divergence, is 2 × 8.0 × 20.0 / (8.0 + 20.0) = 320 / 28 = 11.429 cm, reported as 11.4 cm. The arithmetic mean of the diverged sides, (8.8 + 22.0) / 2, is 15.4 cm. The square root of the diverged area, the square root of 8.8 × 22.0 = 193.6, is 13.91 cm, reported as 13.9 cm.
+
+### Q12
+Stem: The calculation point is 112 cm from the source. Along this ray the skin is 97 cm from the source. Dose at dmax at this same source distance is 200 cGy. TMR values for this field are 0.810 at 9 cm, 0.740 at 12 cm, and 0.680 at 15 cm. A flat phantom would have put the skin at 100 cm from the source. What is the dose at the point, to the nearest 0.1 cGy?
+A. 162.0 cGy
+B. 294.1 cGy
+C. 148.0 cGy
+D. 136.0 cGy
+Answer: D
+Objective: IV.1
+Why: Depth is the distance from the real skin to the point: 112 − 97 = 15 cm. The skin is 3 cm closer to the source than the flat-phantom surface at 100 cm, so the point sits under extra tissue. Dose = 200 × 0.680 = 136.0 cGy. The flat-phantom depth would have been 112 − 100 = 12 cm, and 200 × 0.740 = 148.0 cGy. Moving the gap the wrong way, as if the skin were 3 cm farther out at 103 cm, gives depth 9 cm and 200 × 0.810 = 162.0 cGy. Dividing by the TMR, 200 / 0.680 = 294.12 cGy, reported as 294.1 cGy, turns a depth dose back into a dmax dose.
+
+### Q13
+Stem: A corner block leaves two sectors at the depth of interest. The zero-area TAR is 0.400. The TAR at radius 5 cm is 0.580, and the TAR at radius 11 cm is 0.760. One sector is 270 degrees out to 5 cm. The other is 90 degrees out to 11 cm. The free-space dose at the point is 160 cGy. What is the tissue dose, to the nearest 0.1 cGy?
+A. 100.0 cGy
+B. 92.8 cGy
+C. 36.0 cGy
+D. 121.6 cGy
+Answer: A
+Objective: IV.1
+Why: Scatter-air ratio is TAR minus the zero-area TAR. SAR at 5 cm = 0.580 − 0.400 = 0.180. SAR at 11 cm = 0.760 − 0.400 = 0.360. The 270-degree sector is 270/360 = 0.75 of the circle, so it contributes 0.75 × 0.180 = 0.135. The 90-degree sector is 90/360 = 0.25 of the circle, so it contributes 0.25 × 0.360 = 0.090. Field SAR = 0.135 + 0.090 = 0.225. TAR = 0.400 + 0.225 = 0.625. Tissue dose = 0.625 × 160 = 100.0 cGy. Using the 5 cm TAR for the whole portal gives 0.580 × 160 = 92.8 cGy. Using the 11 cm TAR for the whole portal gives 0.760 × 160 = 121.6 cGy. Scatter alone, 0.225 × 160, gives 36.0 cGy.
+
 ## External beam Dose Calculation and Algorithms Quiz
 
 ### Q1

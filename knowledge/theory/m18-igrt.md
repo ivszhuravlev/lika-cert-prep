@@ -68,10 +68,40 @@ Seven millimeters at the end of the field is a real setup change. On a three-deg
 
 **Sources**
 
-- AAPM TG-142, quality assurance of medical accelerators, including imaging geometry
+- AAPM TG-142, quality assurance of medical accelerators, including imaging geometry. Monthly coincidence of imaging and treatment isocenters is ≤2 mm (≤1 mm for SRS/SBRT). That machine test is not a site’s clinical action level.
 - AAPM TG-179, quality assurance for CT-based image guidance
 - AAPM TG-147, nonradiographic localization, including surface imaging
+- AAPM TG-75 and TG-180, management of imaging dose. A cone-beam dose is real. No single patient dose is stated here, because it depends on the protocol.
 - ICRU 62, setup margin and internal margin, which are the uncertainties image guidance is trying to shrink
+- de Boer and Heijmen, the no-action-level (NAL) and extended NAL (eNAL) offline setup protocols
+
+## When the shift is enough
+
+**MDCB:** II.6
+
+**What the exam expects**
+
+You can decide from the image and the departmental policy whether the team finishes localization and treats, or whether the fraction stops for a physician. You can separate online correction from offline NAL and eNAL. You know a kilovoltage cone-beam dose is not zero. You know an MR-linac adaptive trigger is a protocol concept for when a rigid shift is the wrong tool. You do not invent a millimeter action level for a site.
+
+**Core facts**
+
+The departmental IGRT policy names, for each site and technique, what the treating team may correct and what finding stops the fraction for a physician. Physics is included when that policy says so. The clinical rule is not the TG-142 test of imaging-to-treatment isocenter coincidence: ≤2 mm for a non-stereotactic machine and ≤1 mm for SRS/SBRT. A passed monthly isocenter test does not write the prostate action level.
+
+In tolerance. The match is on the anatomy the protocol names. Filling, body shape, and devices agree with the plan. The correction is a rigid shift the couch can apply, and its size is inside the action level for that site. Complete the localization the policy allows and treat. A nonzero shift inside that level is not, by itself, a physician call.
+
+Stop and call. The correction is outside the action level. Or the image shows a change a rigid shift cannot restore: bladder empty on a full-bladder plan, rectum full of gas with the prostate moved off the nodes, a mask bridging the neck, a weight change that puts an organ in the high dose. A bone residual driven under the action level does not clear that image. Lasers on the tattoos do not either. Hold the beam and call the physician. Averaging a bone shift with a soft-tissue shift forces a number under the limit and satisfies neither anatomy.
+
+Online and offline. Online correction acquires the image and applies the shift before that fraction is treated. It addresses today’s setup, systematic and random, within what a rigid couch can do. Offline review looks after the fraction, or before a later one, and changes the setup for future fractions.
+
+NAL, the no-action-level protocol, is offline. The mean setup error from an initial set of images estimates the systematic error, and that correction is applied on later fractions with no threshold. eNAL, extended NAL, repeats the estimate on later images so a drift is caught, and the update applies to future fractions. Neither protocol moves the couch for today’s random residual before beam-on. That step is online correction. Neither protocol replans the dose.
+
+Imaging dose. A kilovoltage cone-beam deposits dose. Daily imaging adds that dose every fraction. It is small beside a therapeutic fraction, and it is not zero. It is not the prescription. It does not appear in the therapeutic dose grid unless the department has a validated way to include it. The dose is deposited when the scan runs, whether or not the shift is large. Skipping a required image does not remove the localization error the image was for.
+
+MR-linac adaptive trigger. The clinic defines what finding starts a replan instead of a couch shift. A pure translation with stable organ shape is localization. A shape change, an organ at risk in the high dose, or a target a rigid shift cannot restore is the kind of finding that triggers adaptation and a physician review. There is no universal millimeter for that trigger in this note. How the adapted plan is checked is module 28.
+
+**Traps**
+
+A TG-142 isocenter tolerance copied in as every site’s action level. A bone residual inside the action level accepted while the protocol’s soft-tissue target is outside it. NAL described as an online shift or as a same-day replan. Cone-beam dose called zero because the beam is kilovoltage, or subtracted one-for-one from the prescription. Every MR-linac image treated as an automatic replan.
 
 ## IGRT Mini-Quiz
 
@@ -85,6 +115,10 @@ Seven millimeters at the end of the field is a real setup change. On a three-deg
 - Estimate the displacement at the end of a long target from a small rotation.
 - State that cone-beam Hounsfield numbers are not the planning density table.
 - Place TG-142 on the imager and the departmental policy on the clinical action level.
+- Decide when an in-tolerance rigid shift is treated and when the image requires a physician.
+- Separate online correction from offline NAL and eNAL.
+- Treat cone-beam dose as real and separate from the prescription.
+- Treat an MR-linac adaptive trigger as a protocol concept, not a universal millimeter.
 
 **Traps**
 

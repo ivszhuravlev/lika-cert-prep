@@ -94,6 +94,56 @@ Answer: D
 Objective: IV.2
 Why: A carbon-fiber couch is in the beam before a posterior entrance. That material generates electron contamination and removes some of the skin sparing, so the dose to the back rises even though no bolus was added. The couch is not a missing-tissue compensator, and 6 MV still has an entrance dose.
 
+### Q24
+Stem: Which description is the wedge angle in this lesson?
+A. The tilt of a chosen isodose curve, often near 10 cm depth, away from the line perpendicular to the central ray
+B. The hinge angle, the angle between the central axes of two beams
+C. The wedge factor, wedged dose divided by open dose at the same monitor units
+D. The angle of the metal wedge measured on the tray with a protractor
+Answer: A
+Objective: IV.2
+Why: The wedge angle is how far a chosen isodose curve is tilted, commonly read near 10 cm depth. An untilted curve stands perpendicular to the central ray, so the wedge angle is that tilt. The hinge angle is the angle between two central axes. The wedge factor is a transmission ratio used in the monitor units. The metal slope is not the definition. A physical wedge, a dynamic wedge, and an enhanced dynamic wedge are named by this isodose tilt, not by a shared piece of metal.
+
+### Q25
+Stem: A Cerrobend block for a 6 MV beam is mounted about 20 cm from the skin instead of against the skin. Why is that gap left?
+A. Contaminant electrons set in motion in the block are scattered and absorbed in the air before they reach the patient
+B. The gap forces the wedge angle to equal the hinge angle
+C. Electrons from the block never reach the skin at any distance, so the gap is only a light-field convenience
+D. The gap raises tumor dose by the inverse square and is opened until the prescription increases
+Answer: A
+Objective: IV.2
+Why: Megavoltage photons knock electrons out of a tray, block, or other modifier. Those electrons have a short range in air. A gap on the order of 20 cm lets most of them scatter and stop before the skin, which preserves the buildup the open beam would have had. Sitting the block on the skin lets that electron spray reach the patient and raises skin dose. The gap is not a hinge-angle setting, and it is not a way to increase the tumor dose. Inverse square from a larger SSD lowers dose rate. It does not raise it.
+
+### Q26
+Stem: The planning system was commissioned with a wedge transmission measured in phantom at the calculation depth. An in-air transmission for the same wedge is also written in the binder. Which number is used for the dose?
+A. The in-phantom factor at the depth the planning system expects. The in-air number is not substituted for it
+B. The in-air factor, because phantom scatter cancels and every wedge transmission is the same number
+C. The wedge angle divided by 90, because the angle is the transmission
+D. Either number, because a wedge factor does not change between air and tissue
+Answer: A
+Objective: IV.2
+Why: Beam hardening and phantom scatter make the wedged-to-open ratio depend on depth and on whether the chamber was in air or in tissue. The monitor-unit calculation has to use the factor measured the way the algorithm was built, here in phantom at depth. An in-air value used in its place mis-sets the monitor units even when the wedge and the energy are right. The wedge angle names the isodose tilt. It is not the transmission. Air and tissue measurements are not interchangeable.
+
+### Q27
+Stem: An electron cutout that had been 5 cm from the skin is moved to 10 cm from the skin. The prescription dose at the calculation point is unchanged. What happens to the monitor units?
+A. They increase, because output falls as the gap from the cutout to the skin grows
+B. They decrease, because the extra air adds buildup and raises dose per monitor unit
+C. They stay the same, because an electron output factor does not depend on the gap
+D. They fall to zero, because electrons stop in 5 cm of air
+Answer: A
+Objective: IV.2
+Why: A larger air gap moves the patient farther from the effective electron source and removes scatter that had come from the cutout and the applicator. Dose per monitor unit at the patient goes down, so the monitor units for the same dose go up. The gap is air, not bolus, and it does not raise output. Electrons of clinical energy cross several centimeters of air. They do not stop in a 5 cm gap. The same larger gap also widens the penumbra, which is a separate reason to keep the stand-off at the distance the output was measured.
+
+### Q28
+Stem: An electron applicator stands off a curved chest wall, so part of the field crosses an air gap and strikes the skin obliquely. The gap is left unfilled. What happens to dmax in that oblique region?
+A. dmax moves toward the surface
+B. dmax moves deeper by about the size of the air gap
+C. dmax is unchanged, because air does not change an electron depth-dose curve
+D. dmax moves to the practical range, about E/2, because obliquity hardens the beam
+Answer: A
+Objective: IV.2
+Why: Oblique electron incidence shortens the depth measured straight into the patient. Dose builds up over a shorter perpendicular distance, surface dose rises, and dmax moves toward the surface. An unfilled air gap on a sloping or curved surface is what makes those rays oblique. Filling the gap with bolus would remove the air, which is a different geometry. The gap does not push dmax deeper, and obliquity does not turn the beam into a harder beam whose peak sits at the practical range.
+
 ## Wedge Factor Calculation Tutorial
 
 ### Q1

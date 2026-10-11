@@ -114,6 +114,86 @@ Answer: D
 Objective: II.2
 Why: A raised shoulder sits in a lateral or anterior neck beam. An arm left on the chest or at the side sits in a tangent or a lateral thorax beam. The position is chosen so the beam path matches the plan. Energy does not follow the arm board.
 
+### Q26
+Stem: A head-and-neck plan uses a thermoplastic mask on a headrest, with the shoulders pulled down and the arms at the sides. A lung plan uses a wing board. What does each device hold?
+A. The mask holds chin flexion, head rotation, and shoulder height for the neck beams; the wing board holds the arms above the head, out of the chest beams
+B. Both devices are prone belly boards
+C. The mask stops respiration, and the wing board selects the photon energy
+D. The wing board is molded to the face, and the mask indexes only the knees
+Answer: A
+Objective: II.2
+Why: A thermoplastic mask is molded to the face and, for head and neck, often includes the shoulders, so the chin and the shoulder height match the scan. Shoulders pulled down stay out of the lateral neck beams. A wing board is an indexed arm support for thorax, breast, and lung, so the arms stay up and out of tangents and laterals. A belly board is a prone pelvic device. Neither device chooses beam energy or stops breathing.
+
+### Q27
+Stem: A vacuum bag was molded and indexed at simulation for a supine thorax. At treatment the bag has lost vacuum and the beads have shifted. The tattoos can still be brought to the lasers. What is the setup now?
+A. The simulated cradle, because the tattoos reach the lasers
+B. A different support under the body, so the contour in the bag is no longer the contour that was scanned
+C. An electron plan, because loss of vacuum changes the particle
+D. Unchanged geometry, because a vacuum bag is only a photograph
+Answer: B
+Objective: II.2
+Why: The bag holds a custom cradle only while it holds vacuum. Once the beads move, the support under the trunk is a different shape from the planning CT, even if the skin marks can be forced to the lasers. The modality stays photons. The bag is immobilization, and any beam that crosses it sees that shape.
+
+### Q28
+Stem: Which pairing matches the device to the site it is built for?
+A. Thermoplastic mask for brain or head and neck; wing board for arms-up breast or lung; belly board for a prone pelvis; vacuum bag for a custom indexed body cradle
+B. Belly board for an arms-up supine breast; wing board under a prone abdomen; mask as a knee rest only
+C. Vacuum bag as a substitute for the bladder instruction; belly board as a headrest
+D. Wing board as the face mask; thermoplastic mask as the couch-top density model
+Answer: A
+Objective: II.2
+Why: The mask immobilizes the head and neck. The wing board holds the arms up for chest and breast. The belly board is prone, with an opening so abdominal contents can fall anteriorly. A vacuum bag is a molded, indexed cradle for the trunk or a limb. Swapping the devices puts the opening, the arms, or the head in the wrong place relative to the plan.
+
+### Q29
+Stem: An intact pendulous left breast was planned prone so the breast falls through the board opening, away from the chest wall. Day 1 is set up supine on a breast board, and the prone shifts are applied. What has changed?
+A. The photograph only; heart, lung, and breast contour remain the prone anatomy
+B. The external contour and the heart and lung geometry are now the supine anatomy, and the plan was calculated on the prone anatomy
+C. Nothing geometric; prone and supine breast boards share one external contour
+D. The prone opening still drops the breast while the patient lies supine
+Answer: B
+Objective: II.2
+Why: Prone breast positioning uses the board opening to change where the breast, heart, and lung sit relative to the tangents. Supine on a breast board is a different external contour and a different organ geometry. The prone shifts were computed on the prone surface. A supine patient does not hang through that opening.
+
+### Q30
+Stem: A postmastectomy chest wall is the target. A prone breast board is available. Why is supine on a breast board, with the arm up, the usual position for that chest wall?
+A. The prone opening is built so an intact breast can fall away from the wall; the chest-wall target is the wall, and it is planned supine
+B. Every postmastectomy plan is prone, because the wall is heavier than an intact breast
+C. Supine positioning removes the need for a reference mark
+D. A wing board changes the chest-wall photons into electrons
+Answer: A
+Objective: II.2
+Why: The prone breast board works by letting an intact breast drop through an opening, which moves that breast off the chest wall. After mastectomy the target is the chest wall, so that opening does not place the target. Supine, arm up, is the usual reproducible position for chest-wall fields. Marks are still required. The arm support does not change the particle.
+
+### Q31
+Stem: A prostate arc plan is simulated supine with a knee sponge for daily soft-tissue imaging. A rectal plan is simulated prone on a belly board so small bowel falls out of a posterior field. Which statement matches those two positions?
+A. Either plan can be treated in the other position once the tattoos are rewritten
+B. The prostate course stays supine, the position that was scanned and that daily imaging will match; the rectal course stays prone, because the belly-board opening is what drops the bowel
+C. The belly board is the supine prostate device, and the knee sponge is used only when the patient is prone
+D. Prone and supine pelves produce the same bowel and bladder geometry
+Answer: B
+Objective: II.2
+Why: Supine prostate setup with a knee support is chosen for reproducibility and for cone-beam matching. The belly board is a prone device: the opening lets small bowel fall anteriorly, away from a posterior rectal field. Each plan’s contour, organs, and beams belong to the position that was scanned. New tattoos do not convert one external surface into the other.
+
+### Q32
+Stem: A prostate protocol scans and treats with a comfortably full bladder and an empty rectum. The tattoos are on the lasers, the bladder is empty, and the rectum is full of gas. What should happen before the beam is turned on?
+A. Treat, because the external marks satisfy the plan
+B. Hold the fraction. The filling is part of the position: an empty bladder lets bowel fall toward the high dose, and rectal gas pushes the prostate off the planned place
+C. Empty the bladder further and proceed, because rectal gas lies outside the target by definition
+D. Change to electrons so filling no longer affects the beams
+Answer: B
+Objective: II.2
+Why: The full bladder displaces small bowel and puts the prostate in the geometry that was planned. Gas or stool in the rectum pushes the gland, usually anteriorly. Lasers on the tattoos do not restore either organ. The fraction waits until the preparation matches the protocol or a physician decides otherwise. Electrons do not replace that anatomy.
+
+### Q33
+Stem: A rectal target was simulated with the preparation written in that chart, including a full bladder to move small bowel. The prostate instruction “empty rectum, then treat once the tattoos match” is applied without the rectal note. What is the mistake?
+A. Prostate and rectum share one filling rule, so the prostate instruction is the rectal plan
+B. The rectum is the target on this plan, and the chart’s preparation is the preparation; an empty-rectum rule copied from prostate is a different internal anatomy
+C. Bladder filling is an instruction for head-and-neck masks only
+D. A full bladder is used to choose 6 MV versus 15 MV
+Answer: B
+Objective: II.2
+Why: Prostate protocols often want an empty rectum so gas does not displace the gland, and a full bladder so bowel stays superior. On a rectal plan the rectum is the target, and the bowel instruction is the one in the note. A full bladder is a common part of that note. Copying the other site’s preparation treats a patient the dose was not calculated on. Photon energy does not follow bladder volume.
+
 ## Patient Positioning Mini-Quiz
 
 ### Q1

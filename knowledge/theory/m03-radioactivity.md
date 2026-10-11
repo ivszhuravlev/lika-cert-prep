@@ -235,7 +235,7 @@ Equilibrium is about a parent decaying into a radioactive daughter.
 
 Secular equilibrium: the parent half-life is vastly longer than the daughter half-life. After several daughter half-lives, daughter activity equals parent activity. The pair then decays, if you can see it decay at all, with the parent half-life. Therapy pair to recall: Sr-90 (28.8 y) and Y-90 (64 h). Historical pair: Ra-226 (1600 y) in equilibrium with its daughters. The useful betas from a Sr-90 eye applicator are the Y-90 betas; the source is stored long enough that secular equilibrium has been reached.
 
-Transient equilibrium: the parent is longer-lived than the daughter, but not vastly longer. The daughter activity rises above the parent activity and then the daughter appears to decay with the parent half-life. The activity ratio approaches λ2/(λ2 − λ1), which is greater than 1. The generator pair is Mo-99 to Tc-99m. Tc-99m half-life is the recall value 6 h. Use 66 h for Mo-99 in the example below; confirm that parent half-life in Khan.
+Transient equilibrium: the parent is longer-lived than the daughter, but not vastly longer. The daughter activity rises above the parent activity and then the daughter appears to decay with the parent half-life. The activity ratio approaches λ2/(λ2 − λ1), which is greater than 1. The generator pair is Mo-99 to Tc-99m. Tc-99m half-life is the recall value 6 h. Mo-99 half-life in this set is 66 h.
 
 No equilibrium: if the daughter half-life is longer than the parent half-life, the daughter grows in and later decays with its own half-life after the parent is gone. The daughter activity does not lock to the parent.
 
@@ -263,7 +263,7 @@ With branching fraction f: multiply A2 by f.
 
 **Worked example**
 
-Given: Mo-99 half-life 66 h (confirm in Khan), Tc-99m recall half-life 6 h, branching ignored first (f = 1). Find the transient-equilibrium activity ratio and the time of maximum Tc-99m activity.
+Given: Mo-99 half-life 66 h, Tc-99m recall half-life 6 h, branching ignored first (f = 1). Find the transient-equilibrium activity ratio and the time of maximum Tc-99m activity.
 
 Formula: λ = 0.693 / T½. Ratio = λ2 / (λ2 − λ1). t_max = ln(λ2/λ1) / (λ2 − λ1).
 
@@ -291,7 +291,7 @@ Secular ratio quoted as greater than 1. Transient pair expected to show equal ac
 
 **Sources**
 
-Khan and Gibbons, *The Physics of Radiation Therapy*. Confirm the Mo-99 half-life and branching fraction in Khan. Recall half-lives for Y-90, Sr-90, and Tc-99m are the exam set listed in the next lesson.
+Khan and Gibbons, *The Physics of Radiation Therapy*. Mo-99 is 66 h in this set. Confirm the branching fraction in Khan. Recall half-lives for Y-90, Sr-90, and Tc-99m are the exam set listed in the next lesson.
 
 ## Modes of Radioactive Decay
 
@@ -367,16 +367,18 @@ These half-lives are the values candidates are expected to recall:
 | Y-90 | 64 h | pure β−, Emax 2.28 MeV |
 | Tc-99m | 6 h | isomeric transition, 140 keV |
 | F-18 | 110 min | β+, annihilation photons 0.511 MeV |
+| Cs-131 | 9.7 d | electron capture, photons about 30 keV; permanent seed |
+| Ru-106 | 374 d | β− to Rh-106; ophthalmic plaque |
 
 Co-60 is a teletherapy gamma source. Because λ per month is 0.01098 (see the decay-constant example), output falls about 1.09% per month. A source whose output is 120 cGy/min today is about 120 × 0.989 = 118.7 cGy/min in one month. The machine uses a timer. There is no monitor unit.
 
 Cs-137 replaced radium for many LDR gynecologic sources. Half-life 30 y means a source is still near its original activity over a single implant, and a decay correction over a few days is negligible. Over 30 years the activity is half.
 
-Ir-192 is the HDR workhorse. Half-life 73.8 days means a source exchanged several times a year, and a decay correction from assay to treatment is routine. Mean photon energy is a few hundred keV, so room shielding is concrete and the door is a real design problem. Confirm a published exposure-rate constant in Khan rather than memorizing an unstated Γ.
+Ir-192 is the HDR workhorse and a temporary implant source. Half-life 73.8 days means a source exchanged several times a year, and a decay correction from assay to treatment is routine. Mean photon energy is a few hundred keV, so room shielding is concrete and the door is a real design problem. Exposure-rate constants for Ir-192 and the other sources in the next paragraph are the module 40 recall values, not a second list.
 
 I-125 (59.4 d) and Pd-103 (17 d) are permanent prostate seed sources. Both are electron-capture, low-energy photon sources. Mean life of I-125 is 1.443 × 59.4 = 85.7 days. Mean life of Pd-103 is 1.443 × 17 = 24.5 days. For the same total dose, the shorter mean life requires a higher initial dose rate. Ratio of mean lives: 85.7 / 24.5 = 3.50. Pd-103 starts about 3.5 times hotter than I-125 for the same total dose, before any prescription difference is applied.
 
-Au-198, 2.7 days, has been used as gold grains. A week is 7 / 2.7 = 2.59 half-lives, so about 17% of the activity remains (2^−2.59 ≈ 0.17).
+Au-198, 2.7 days, is a permanent implant (gold grains), not a temporary source. A week is 7 / 2.7 = 2.59 half-lives, so about 17% of the activity remains (2^−2.59 ≈ 0.17). The principal gamma is 0.412 MeV.
 
 Ra-226, 1600 y, is historical. Filtered radium (0.5 mm platinum) is the source behind the old exposure-rate constant 8.25 R·cm²/(mg·h). Activity was stated in mg-Ra eq. You will see it in older calculation stems. Secular equilibrium with daughters is assumed for an unvented source.
 
@@ -384,7 +386,15 @@ I-131, 8 days, is unsealed thyroid therapy, beta plus a 364 keV gamma. The gamma
 
 Sr-90, 28.8 y, is a pure beta emitter in secular equilibrium with Y-90, 64 h, Emax 2.28 MeV. Ophthalmic applicators use that Y-90 beta. Y-90 microspheres are the daughter nuclide used alone, not in equilibrium, for radioembolization. Y-90 maximum range in tissue is about a centimeter; confirm the range figure in Khan before using it as more than a scale.
 
-Tc-99m, 6 h, 140 keV, is diagnostic, from a Mo-99 generator (transient equilibrium). It is not a therapy source. F-18, 110 min, is the PET positron emitter. A delay of one half-life, 110 minutes, halves the administered activity. A delay of 55 minutes leaves 70.7%, not 50%.
+Tc-99m, 6 h, 140 keV, is diagnostic, from a Mo-99 generator (transient equilibrium, parent half-life 66 h). It is not a therapy source. F-18, 110 min, is the PET positron emitter. A delay of one half-life, 110 minutes, halves the administered activity. A delay of 55 minutes leaves 70.7%, not 50%.
+
+Cs-131, about 9.7 days, is a permanent prostate seed. It decays by electron capture and emits photons near 30 keV, in the same low-energy family as I-125 (~28 keV) and Pd-103 (~21 keV). It is not Cs-137. Cs-137 is the 30-year, 662 keV LDR source.
+
+Ru-106, about 374 days, is a beta emitter used as an ophthalmic plaque. The short-lived daughter Rh-106 supplies the high-energy therapeutic betas. That plaque is a different applicator from Sr-90/Y-90.
+
+Lead half-value layers used for teaching in this set are narrow-beam approximations, not vault thicknesses: Co-60 about 12 mm Pb, Cs-137 about 6.5 mm Pb, Ir-192 about 3–6 mm Pb, and I-125 about 0.025 mm Pb. The iridium range is wide because the gamma spectrum is complex.
+
+Exposure-rate constants are worked in module 40: Ir-192 4.69, Cs-137 3.26, Co-60 13.07, and Ra-226 8.25, in R cm²/(mCi h). Radium’s 8.25 is traditionally per milligram of radium, not per mCi. I-125 is not given a single memorized gamma constant in this bank; use the value printed in the stem. Air-kerma strength is a different quantity: 1 U = 1 µGy m²/h. This set does not memorize one conversion from mCi to U.
 
 **Formulas**
 
@@ -414,7 +424,7 @@ Usual wrong turn: 120 × (1 − 0.0526) = 113.7 cGy/min, which uses the yearly h
 
 **Traps**
 
-Ir-192 half-life quoted in hours or as 74 years. Cs-137 and Cs-131 swapped; the recall value on this list for cesium therapy sources of the older LDR type is Cs-137 at 30 y. I-125 and I-131 swapped: 59.4 days versus 8 days, keV photons versus a 364 keV gamma plus beta. P-32 or Y-90 assigned a gamma because “all therapy sources have one.” F-18 half-life used as 110 hours. Pd-103 used as 17 hours.
+Ir-192 half-life quoted in hours or as 74 years. Cs-137 (30 y, 662 keV) and Cs-131 (9.7 d, about 30 keV, permanent seed) swapped. Au-198 called a temporary implant; the grains are permanent and the half-life is 2.7 days. I-125 and I-131 swapped: 59.4 days versus 8 days, keV photons versus a 364 keV gamma plus beta. P-32 or Y-90 assigned a gamma because “all therapy sources have one.” F-18 half-life used as 110 hours. Pd-103 used as 17 hours. Ru-106 given the Sr-90 half-life, or the Co-60 lead HVL used for I-125.
 
 **Sources**
 
@@ -493,7 +503,7 @@ Khan and Gibbons, *The Physics of Radiation Therapy*. Recall half-life Pd-103 = 
 
 ## Radioactivity Quiz
 
-This quiz checks decay mode against the change in Z and A, the positron threshold 1.022 MeV, annihilation as two 0.511 MeV photons, continuous beta spectra versus discrete gammas, and electron capture versus beta plus. It also checks which nuclide on the recall list is a pure beta emitter, which is an electron-capture seed, and which equilibrium (secular Sr-90/Y-90 versus transient Mo-99/Tc-99m) applies. The traps are ΔA = −2 for alpha, a 0.511 MeV pair threshold, I-125 assigned the I-131 half-life, and a secular ratio of λ2/(λ2−λ1) instead of 1.
+This quiz checks decay mode against the change in Z and A, the positron threshold 1.022 MeV, annihilation as two 0.511 MeV photons, continuous beta spectra versus discrete gammas, and electron capture versus beta plus. It also checks which nuclide on the recall list is a pure beta emitter, which is an electron-capture seed, and which equilibrium (secular Sr-90/Y-90 versus transient Mo-99/Tc-99m, parent 66 h) applies. Au-198 grains are a permanent implant (2.7 d). Cs-131 is the 9.7-day, ~30 keV permanent seed. Ru-106/Rh-106 is the ~374-day beta eye plaque. Teaching lead HVLs are Co-60 about 12 mm, Cs-137 about 6.5 mm, Ir-192 about 3–6 mm, and I-125 about 0.025 mm. The traps are ΔA = −2 for alpha, a 0.511 MeV pair threshold, I-125 assigned the I-131 half-life, Au-198 called temporary, and a secular ratio of λ2/(λ2−λ1) instead of 1.
 
 ## Radioactive Decay Calculation Mini-Quiz
 

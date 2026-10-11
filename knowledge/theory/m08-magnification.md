@@ -78,7 +78,7 @@ You explain why M equals a distance ratio, when a number less than 1 is a real a
 
 **Core facts**
 
-Similar triangles: the beam width grows in proportion to distance from the source. A field that is 10 cm wide at 100 cm is 15 cm wide at 150 cm. That is magnification of the field, and it is also why equivalent-square and blocking trays have to state the distance at which the size is defined.
+Similar triangles: the beam width grows in proportion to distance from the source. A field that is 10 cm wide at 100 cm is 15 cm wide at 150 cm. That is magnification of the field, and it is also why equivalent-square and blocking trays have to state the distance at which the size is defined. Collimator field size is stated at isocenter. If the isocenter lies anterior to the target, the posterior opening, quoted at isocenter, must be larger than the anterior opening to cover the same tissue, because the posterior beam has diverged less at that nearer target than it will at isocenter.
 
 Minification is the operation of going back from the large image to the small object: divide by M. If a journal prints the film at half scale, the print has been minified by an extra factor of 2 on top of geometry. Geometric M does not know about the printer.
 

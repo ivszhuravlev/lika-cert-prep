@@ -74,6 +74,20 @@ EQD2 = 69.96 × (2.12 + 10) / (2 + 10) = 69.96 × 12.12 / 12 = 69.96 × 1.01 = 7
 
 It is about 70 Gy in 2 Gy fractions for a tumor α/β of 10, which is why both schedules are in the same recognition bin. The full BED method is module 21.
 
+**Head and neck, simultaneous integrated boost.** The 35-fraction boost treats three volumes at once: 70 Gy to gross disease, 63 Gy to intermediate-risk disease, and 56 Gy to elective nodes. Per fraction that is 2.0 Gy, 1.8 Gy, and 1.6 Gy. The 33-fraction schedule above is a different boost. Its gross-disease fraction is 2.12 Gy, its intermediate dose is 59.4 Gy, and its elective dose is 54.12 Gy. Do not hang 63 Gy and 56 Gy on those 33 fractions. Postoperative dose at the primary site stays near 60 Gy.
+
+The technique is 6 MV IMRT or VMAT, usually one isocenter, so the low neck does not need a separate supraclavicular match. Eighteen MV is a poor neck energy. Buildup is deeper, superficial nodes are underdosed, and the air column in the larynx adds lateral disequilibrium.
+
+Elective nodes follow the primary:
+
+- Nasopharynx: bilateral levels II–V and the retropharyngeal nodes.
+- Oral cavity: levels I–III, bilateral when the primary approaches midline.
+- Oropharynx: levels II–IV. Midline disease and base of tongue take both necks. A well-lateralized tonsil can take the ipsilateral neck.
+- Hypopharynx, and larynx with subglottic extension: bilateral II–IV plus level VI, the anterior compartment between the carotids.
+- Early glottic cancer on one vocal cord: no elective nodes. Opposed lateral 6 MV photons to about 63 Gy in 28 fractions. The arytenoids limit the posterior edge.
+
+A comprehensive neck is limited by parotid mean dose, cord and brainstem near-maximum, mandible, constrictors, and the brachial plexus in the low neck.
+
 **Breast.** Typical conventional whole-breast dose: 45–50.4 Gy, then a boost to the cavity. Typical hypofractionation: 40 Gy in 15 fractions, or 42.5 Gy in 16 fractions. Boost doses and whether a boost is used are protocol- and risk-dependent. Confirm the boost in the prescription you were given.
 
 The planning problem is a pair of tangents that cover the breast and spare lung and heart, with a non-divergent posterior edge and a match to a supraclavicular field when nodes are treated. Left-sided cases are the cardiac cases. Deep-inspiration breath hold and heart blocking are techniques, not different diseases. Postmastectomy chest wall may be photons, electrons, or both. A photon–electron skin match is hot on the photon side and cold on the electron side.
@@ -89,6 +103,8 @@ That sits in the same high-70s bin as a conventional course. Using the generic t
 EQD2 = 60 × (3 + 10) / (2 + 10) = 60 × 13 / 12 = 65 Gy,
 
 which makes 60 Gy in 20 look like a clear underdose. If the stem does not give α/β, say which value you used. The organs that limit the plan are rectum and bladder, then femoral heads and bowel.
+
+**Prostate bed.** After prostatectomy the target is the fossa, not an intact gland. The volume runs from just below the vesicourethral anastomosis up through the seminal-vesicle bed, between the rectum and the bladder. The recognition dose is about 64–66 Gy at 1.8–2 Gy per fraction. Courses to know are 64.8 Gy in 36 fractions and 66 Gy in 33 fractions. That is lower than an intact course in the high 70s. The postoperative hypofractionated course is 52.5 Gy in 20 fractions. It is not the intact 60 Gy in 20. Rectum and bladder still limit the plan. Elective pelvic nodes, when the risk calls for them, are about 45 Gy to the iliac and obturator nodes. They are not inguinal nodes, and they do not raise the fossa to an intact-gland prescription.
 
 **Cervix.** Typical external beam: 45 Gy to the pelvis, then brachytherapy that brings the high-risk CTV to a high EQD2. The external beam alone is not the treatment. Image-guided brachytherapy goals discussed with ABS and EMBRACE sit in the mid-to-high 80s Gy EQD2 (α/β = 10) to the high-risk CTV. Confirm the goal and the rectal, sigmoid, and bladder EQD2 limits in ABS guidance or the EMBRACE protocol. One worked combination is in the BED lesson: 45 Gy in 25 fractions plus an illustrative 7 Gy × 4 HDR course.
 
@@ -110,6 +126,44 @@ The margin is tight because the falloff is steep. The dose grid has to be fine e
 - Seminoma, typical stage I para-aortic dose: 20 Gy in 10 fractions. A low dose in the abdomen is not automatically palliative bone met coverage.
 - Endometrial pelvic radiation often uses 45 Gy external beam, in the same recognition bin as cervix external beam, with a different brachytherapy applicator and a different boost question.
 
+**Lymphoma, involved site.** After chemotherapy, involved-site radiotherapy treats the nodes that originally contained disease, with a margin, shaped to the post-chemotherapy anatomy. It does not add uninvolved mantle sites. The technique is 6 MV photons, an anterior-posterior pair or IMRT. Favorable early Hodgkin lymphoma is 20 Gy in 10 fractions. Unfavorable early Hodgkin lymphoma is 30 Gy in 15 fractions. Both are about 2 Gy per fraction and sit in the 20–30 Gy band. Diffuse large B-cell lymphoma in complete response is often consolidated at 30 Gy. A mediastinal field is limited by heart, lungs, and breast. A neck field is limited by parotid, thyroid, and cord. An abdominal field is limited by the kidneys.
+
+**Craniospinal irradiation.** Average-risk medulloblastoma is 23.4 Gy to the axis in 13 fractions of 1.8 Gy. High-risk disease is 36 Gy in 20 fractions of 1.8 Gy. The primary is then boosted to about 54 Gy, and that boost stays off the cord so the cord remains at the axis dose. Cranial fields cover the whole intracranial meninges, including the cribriform plate. A lens block that clips the cribriform plate is a geographic miss. Those cranial fields are matched to a posterior spine field whose inferior border covers the thecal sac on MRI. The junction is feathered by moving it through the course, so one cord segment does not hold the match. Spine energy is 6 MV. The canal is posterior, and a higher energy increases exit dose through thyroid, heart, bowel, and kidney. The kidneys limit that exit. A tall patient may also feather a second, spine-to-spine junction.
+
+**Lung, conventional.** Definitive non-small-cell lung cancer with concurrent chemotherapy is 60 Gy in 30 fractions of 2 Gy. The technique is 6 MV IMRT or VMAT on a 4DCT, so motion is inside the volume. The target is the primary and the involved nodes, not a routine elective bath of the uninvolved mediastinum. Lungs (mean dose and the volume above 20 Gy), esophagus, heart, and cord limit the plan. An apical tumor adds the brachial plexus. This course is not peripheral stereotactic lung radiotherapy and it is not limited-stage small-cell radiotherapy.
+
+**Lung, limited-stage small cell.** The twice-daily course is 45 Gy in 30 fractions of 1.5 Gy, two fractions a day at least 6 hours apart, with concurrent chemotherapy. A once-daily alternative is 66 Gy in 33 fractions. Cord, lungs, and esophagus limit the chest plan. The anterior-posterior pair is dropped, or the plan becomes IMRT, before the cord carries the full tumor dose. After a response, prophylactic cranial irradiation is 25 Gy in 10 fractions to the whole brain. It has no spine field. It is a different prescription from palliative whole-brain treatment of 30 Gy in 10. The lenses stay out of those cranial fields when the technique allows.
+
+**Anal canal.** Squamous cell carcinoma is definitive chemoradiation with mitomycin and 5-FU. Capecitabine can stand in for 5-FU. The technique is 6 MV IMRT or VMAT. The volume includes the anal primary, the mesorectum, the pelvic nodes, and the inguinal nodes. A pelvic field that stops at the inguinal ligament misses the groins. Gross disease that is T3, T4, or node-positive is often about 54 Gy in 30 fractions of 1.8 Gy. A node-negative T2 primary is often 50.4 Gy in 28 fractions, with the same drugs and the same nodes. Small bowel and perineal skin limit the plan. Femoral heads limit the groin dose.
+
+**Bladder.** Organ preservation follows a maximal transurethral resection and uses concurrent chemotherapy. Two recognition schedules are about 64 Gy in 32 fractions and 55 Gy in 20 fractions. The technique is 6 MV IMRT or VMAT. Whole-bladder treatment is often simulated with an empty bladder. A partial-bladder boost is often simulated with a full bladder so small bowel is pushed away. Node-negative organ preservation treats the bladder. Pelvic nodes are added for node-positive disease. Inguinal nodes are not the bladder volume. Electrons do not reach the bladder. Small bowel limits the high dose.
+
+**Pancreas.** Conventional chemoradiation is 45–50.4 Gy, commonly 50.4 Gy in 28 fractions of 1.8 Gy, with chemotherapy. The technique is 6 MV IMRT, and motion is handled with a 4DCT or with breath hold. That 50.4 Gy volume includes the gross tumor and the regional nodes at the celiac axis and the superior mesenteric artery. The stereotactic alternative is often 33 Gy in 5 fractions to the gross target only, with no elective nodes. The duodenum limits both. Stomach, small bowel, kidneys, and liver are the other abdominal limits.
+
+**Stomach.** Postoperative chemoradiation is 45 Gy in 25 fractions of 1.8 Gy with 5-FU. A tumor-bed boost can bring the total to 50.4 Gy. The volume covers the preoperative tumor bed, the anastomosis or the residual stomach, and the regional nodes along the celiac axis and the porta hepatis. It does not include inguinal nodes. The technique is 6 MV IMRT or a multi-field arrangement. A simple anterior-posterior pair exits through a kidney. At least one kidney has to stay out of the high dose. Liver, cord, and small bowel are the other limits. A proximal field can also see the heart.
+
+**Soft-tissue sarcoma.** Extremity preoperative dose is 50 Gy in 25 fractions. Postoperative dose is higher: about 60 Gy after a negative margin and about 66 Gy after a positive margin. The technique is 6 MV IMRT or conformal photons along the limb. An untreated longitudinal strip of soft tissue stays outside the high dose so lymph can still drain. Treating the full circumference is what produces severe lymphedema. Weight-bearing bone and the adjacent joint limit the plan. Retroperitoneal sarcoma is often preoperative, about 50 Gy, and there the limits are bowel and kidney.
+
+**Skin, local electrons.** A small skin cancer is not total-skin electron irradiation. The beam is en face electrons. Energy is chosen so the 90% depth covers the deep edge and then stops. Six MeV or 9 MeV fits a superficial lesion. A higher energy treats the tissue under the cancer. Bolus, often about 0.5–1 cm, brings dose to the skin surface. A lead cutout shapes the field. Recognition doses are about 50 Gy in 20 fractions and 60 Gy in 30 fractions. The organ at the deep edge is the limit. For an eyelid, that organ is the lens, and the internal eye shield is coated with wax so lead backscatter does not dose the lid. For a scalp lesion, the limit is the brain.
+
+**Vulva.** Locally advanced squamous cell carcinoma is 6 MV IMRT with concurrent cisplatin. One plan covers the vulva, the inguinal-femoral nodes, and the pelvic nodes when the groins or the primary require them. Elective nodal dose is about 45–50.4 Gy. Gross primary or gross nodal disease is about 60–70 Gy. Deep inguinal nodes lie centimeters under the skin, so a 6 MeV groin field underdoses them. A perineal photon field matched to electron groins leaves a junction in the groin. IMRT removes that match. Superficial groin nodes still need buildup. Femoral heads, small bowel, rectum, bladder, and perineal skin limit the plan.
+
+**Vagina.** External beam to the pelvis is about 45 Gy in 25 fractions. Brachytherapy then raises the vaginal primary above that external-beam dose. Upper vaginal disease drains to the pelvic nodes. Disease in the lower third also drains to the inguinal nodes, and those groins are in the volume. Rectum, bladder, and small bowel limit the plan. Femoral heads limit it when the groins are treated.
+
+**Spine SBRT.** Stereotactic treatment of a vertebral metastasis is a few large fractions, with rigid immobilization and image guidance, using 6 MV IMRT or a dedicated stereotactic unit. A recognizable single-fraction tumor dose is 16–18 Gy. A multi-fraction course is used when cord geometry or prior radiation calls for it. The target is the involved vertebra. The cord has a planning-risk volume, and the ablative dose stays off that volume. The cord is serial. Its limit is the TG-101 spinal-cord cell for that number of fractions. A conventional cord maximum near 45 Gy does not transfer to a single fraction. Prior cord dose is reconciled with that TG-101 cell before the schedule is accepted. In the thorax the esophagus can be the other serial limit. In the lumbar spine the cauda equina and the kidneys matter.
+
+**Pituitary.** A nonfunctioning adenoma, and any adenoma sitting against the optic chiasm, is fractionated 6 MV photons to 45–50.4 Gy at 1.8 Gy per fraction. Functioning adenomas are often taken toward 50.4–54 Gy when the chiasm allows. Single-fraction radiosurgery is the alternative only when a gap separates the target from the chiasm. The chiasm is the organ that makes that choice.
+
+**Meningioma.** Fractionated grade 1 disease is 54 Gy in 30 fractions of 1.8 Gy. High-risk disease, including residual higher-grade meningioma, is carried to about 60 Gy. A small grade 1 tumor away from the optic pathway can be a single fraction of about 12–16 Gy. The technique is 6 MV IMRT, arcs, or radiosurgery. At the skull base the optic nerves, the chiasm, or the brainstem limit the plan. That is why a cavernous-sinus meningioma is fractionated.
+
+**Arteriovenous malformation.** Treatment is single-fraction radiosurgery to the nidus. Feeding arteries and draining veins are not the target. A small nidus is often treated with a margin dose from the high teens into the mid-20s of Gy. A larger nidus gets a lower margin dose. The quantity that limits the plan is the volume of brain receiving 12 Gy. Obliteration is judged about two to three years later.
+
+**Liver SBRT.** A limited number of liver lesions can be treated in 3 to 5 fractions, with motion management and image guidance, at 6 MV. A recognizable schedule, when the liver and the nearby bowel allow it, is 50 Gy in 5 fractions. The liver is parallel. For a Child-Pugh A liver on this fractionation, the mean dose to liver minus target is kept below about 15 Gy, and about 700 cm³ of liver is kept at or below 15 Gy. The conventional whole-liver mean, near 30 Gy, belongs to standard fractionation and does not transfer here. Child-Pugh B function tightens the liver budget. The class A prescription is not copied onto class B. Stomach or duodenum against the lesion can force the tumor dose down before the liver mean is reached.
+
+**Wilms tumor.** Favorable histology treated with flank radiotherapy receives 10.8 Gy in 6 fractions of 1.8 Gy, anterior-posterior 6 MV photons. The flank field crosses the midline far enough to cover the full width of the vertebral bodies, so one side of the growth plate is not treated alone. The contralateral kidney limits that field. Diffuse peritoneal spill changes the volume to the whole abdomen: 10.5 Gy in 7 fractions of 1.5 Gy. Both kidneys and the liver then limit the plan. Bulky gross residual in favorable histology is boosted to a total of 21.6 Gy. Diffuse anaplasia is a higher-dose histology decision and is not assigned the favorable flank number. Age under one year is a separate dose reduction. That infant dose is not 10.8 Gy copied forward.
+
+**Neuroblastoma.** High-risk disease, after induction chemotherapy and resection, receives 21.6 Gy in 12 fractions of 1.8 Gy to the primary site. The volume is the post-chemotherapy, pre-surgery extent. Gross residual disease is boosted to 36 Gy. An adrenal primary is limited by the kidney and the liver. This 21.6 Gy dose is the high-risk dose. It is not the Wilms flank dose.
+
 **Traps**
 
 - 40 Gy in 15 assigned to the wrong site.
@@ -118,12 +172,26 @@ The margin is tight because the falloff is steep. The dose grid has to be fine e
 - Cervix judged on the 45 Gy external beam alone.
 - One SBRT schedule used for both peripheral and central lung.
 - A DVH accepted as proof the rectal contour, the lung grid, or the brain-stem PRV was right.
+- Twenty to 30 Gy involved-site lymphoma read as bone palliation, or a mantle called involved-site.
+- 23.4 Gy craniospinal irradiation read as whole-brain palliation, or the 54 Gy boost drawn down the whole cord.
+- 60 Gy in 30 used for limited-stage small cell, or 45 Gy twice daily used for non-small cell.
+- Prophylactic cranial irradiation of 25 Gy in 10 read as 30 Gy in 10, or given a spine field.
+- Anal canal treated to about 54 Gy without inguinal nodes, or with the short-course rectal schedule, or without mitomycin and 5-FU.
+- Preoperative sarcoma left at 50 Gy after a positive margin, or 66 Gy given before the operation.
+- A superficial skin cancer treated with exiting megavoltage photons, or with a high electron energy and no bolus.
+- Lower-third vagina planned with pelvic nodes and no inguinal nodes.
+- A spine stereotactic cord scored with a conventional maximum near 45 Gy, or with a cord dose substituted for the TG-101 cell.
+- A prostate fossa given an intact high-70s prescription, or given 60 Gy in 20.
+- Liver stereotactic radiotherapy scored by a cord maximum, or by the conventional whole-liver mean near 30 Gy.
+- Wilms flank dose of 10.8 Gy used for high-risk neuroblastoma, or 21.6 Gy used as the favorable-histology flank dose.
+- An infant Wilms dose produced by copying the older child's 10.8 Gy.
 
 **Sources**
 
 - Site protocols cited above (RTOG lung SBRT, ABS and EMBRACE for cervix). Confirm goals and constraints in the named document.
 - QUANTEC for conventional organ tolerances and AAPM TG-101 for stereotactic organ tolerances. Confirm every number in the report.
 - ICRU 50, 62, and 83 for the volumes those doses are prescribed to
+- Regimens added in this overview: HD10 and HD11 for early Hodgkin dose, RTOG 0617 for 60 Gy lung, INT-0096 and CONVERT for limited-stage small cell, BC2001 for bladder preservation, Macdonald INT-0116 for postoperative stomach, NCIC SR2 for preoperative extremity sarcoma, RADICALS-RT for the prostate fossa, RTOG 0631 for single-fraction spine SBRT, TG-101 for the stereotactic cord cell, and the COG Wilms and high-risk neuroblastoma dose tables
 
 ## Oncology Quiz
 
@@ -132,6 +200,7 @@ The margin is tight because the falloff is steep. The dose grid has to be fine e
 **Skills this quiz trains**
 
 - Recognize 30 Gy/10 whole brain, 60 Gy/30 GBM, about 70 Gy definitive head and neck, 45–50.4 Gy plus boost or 40 Gy/15 or 42.5 Gy/16 breast, prostate high 70s or 60 Gy/20, cervix 45 Gy plus brachytherapy to a high EQD2, rectal 50.4 Gy/28 or 25 Gy/5, peripheral lung SBRT 50–54 Gy in 3–5 fractions, bone 8/1, 20/5, and 30/10.
+- Recognize the added site regimens: lymphoma ISRT 20–30 Gy, craniospinal 23.4 or 36 Gy, lung 60 Gy/30, limited-stage small cell 45 Gy twice daily plus cranial prophylaxis 25 Gy/10, anal about 54 Gy with mitomycin and 5-FU, bladder 64 Gy/32 or 55 Gy/20, pancreas and stomach 45–50.4 Gy, sarcoma 50 Gy preoperative or 60–66 Gy postoperative, skin electrons, vulva, vagina, spine SBRT, pituitary, meningioma, arteriovenous-malformation radiosurgery, head-and-neck 70/63/56 Gy, prostate fossa versus intact gland, liver SBRT, Wilms flank, and high-risk neuroblastoma.
 - Separate palliative, preoperative, postoperative, and definitive intent.
 - Name the organ that limits each of those plans.
 - Apply a constraint printed in the stem to the correct metric (mean, volume, near-max) and the correct structure.

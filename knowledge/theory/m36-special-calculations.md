@@ -94,7 +94,7 @@ For an SSD setup, replace SAD with SSD if \(L\) is the field length on the skin.
 
 **Check.** \(\tan(5.71^\circ) \approx 0.100\). In radians the angle is about 0.0997, and \(0.0997 \times (180/\pi) \approx 5.71\). A 10 cm half-field at 100 cm is a 1-in-10 slope.
 
-**Result means.** The edge diverges 5.71° from the central axis. Rotating the collimator by 5.71° lays that edge along a nondivergent match line. Leaving the collimator at 0° keeps a diverging overlap or gap against a half-beam neighbor.
+**Result means.** The edge diverges 5.71° from the central axis. The rotation that lays that edge on a nondivergent match line is 5.71°. Which motion carries the angle depends on the border. On a breast tangent the superior–inferior length is a couch kick, not a collimator angle. Leaving that rotation at 0° keeps a diverging overlap or gap against a half-beam neighbor.
 
 **Wrong turns**
 
@@ -103,9 +103,9 @@ For an SSD setup, replace SAD with SSD if \(L\) is the field length on the skin.
 - Applying a nonzero match angle to a half-beam border.
 - Using this angle as a wedge angle or a hinge angle (module 34).
 
-**Traps.** Name which jaw the rotation follows. Collimator rotation swings the superior–inferior jaws for a supraclav match. Couch kick swings the other pair. The breast lesson does both.
+**Traps.** Name which border the rotation follows. On a breast tangent the couch kick uses the superior–inferior length and takes the superior border out of the supraclavicular field. A gantry angle, or a half-beam jaw, takes the posterior border out of lung. After the couch kick, the collimator only turns that posterior border parallel to the chest wall. The couch does not set the posterior width.
 
-**Sources.** Khan and Gibbons, beam divergence. Bentel, clinical matching of tangent and supraclavicular fields, for the setup this angle serves.
+**Sources.** Khan and Gibbons, beam divergence. Bentel, clinical matching of tangent and supraclavicular fields. The next lesson assigns that match to a couch kick on the field length.
 
 ## Couch/Collimator Divergence Mini-Quiz
 
@@ -120,7 +120,7 @@ For an SSD setup, replace SAD with SSD if \(L\) is the field length on the skin.
 
 **Objectives:** IV.3, III.7
 
-**What the exam expects:** For intact-breast tangents matched to a supraclavicular field, compute the collimator angle that follows supraclavicular divergence. State the assumption. The couch kick that takes posterior divergence out of lung is the same geometry on the other field dimension; the next lesson computes it.
+**What the exam expects:** For intact-breast tangents matched to a supraclavicular field, compute the couch kick that takes superior-border divergence out of that field. The angle uses the superior–inferior length. State the assumption. Posterior divergence into lung is a gantry angle or a half-beam jaw; the next lesson computes it. After the couch kick, the collimator only turns the posterior border parallel to the chest wall (Bentel). The couch does not set the posterior width.
 
 **Formula**
 
@@ -128,11 +128,11 @@ For an SSD setup, replace SAD with SSD if \(L\) is the field length on the skin.
 \theta = \arctan\left(\frac{0.5 \times \text{tangent length}}{\mathrm{SAD}}\right)
 \]
 
-- \(\theta\): collimator angle
+- \(\theta\): couch kick
 - Tangent length: superior–inferior field length of the tangent at isocenter (cm)
 - SAD: source-to-axis distance (cm)
 
-**Assumption.** The supraclavicular field is half-beam blocked inferiorly, so its inferior border is the central axis and does not diverge. The tangent’s superior border does diverge. The collimator is rotated so the tangent’s superior edge lies along that nondivergent match line. This matches geometric borders. It is not a calculation of the hot spot in the match, and it assumes the length used is the superior–inferior length at isocenter.
+**Assumption.** The supraclavicular field is half-beam blocked inferiorly, so its inferior border is the central axis and does not diverge. The tangent’s superior border does diverge. The couch is kicked so the tangent’s superior edge lies along that nondivergent match line. This matches geometric borders. It is not a calculation of the hot spot in the match, and it assumes the length used is the superior–inferior length at isocenter. The collimator rotation after the kick only puts the posterior border back parallel to the chest wall. That collimator turn is not \(\theta\).
 
 ### Worked example
 
@@ -142,36 +142,41 @@ For an SSD setup, replace SAD with SSD if \(L\) is the field length on the skin.
 
 **Check.** \(\tan(5.71^\circ) \approx 0.100\). Half-length 10 cm over 100 cm is the same triangle as the previous lesson, applied to the supraclav match.
 
-**Result means.** Set the collimator near 5.7° so the superior tangent border follows the half-beam supraclavicular border. A collimator left at 0° diverges into or away from the supraclavicular field.
+**Result means.** Set the couch kick near 5.7° so the superior tangent border follows the half-beam supraclavicular border. A couch left at 0° lets that border diverge into or away from the supraclavicular field. This 5.7° is not a collimator angle. A 16 cm posterior width is a gantry angle of about 4.6°, not this couch kick.
 
 **Wrong turns**
 
-- Using the tangent width (the anterior–posterior opening) in the collimator formula. That width belongs to the couch kick.
+- Using the posterior width in the couch-kick formula. That width belongs to the gantry angle, or the divergence is removed with a half-beam jaw.
+- Calling 5.7° a collimator rotation. After the kick, the collimator only brings the posterior border parallel to the chest wall.
 - Forgetting the half: \(\arctan(20/100)\).
-- Applying a skin gap formula and a collimator rotation to the same supraclav match. Half-beam plus collimator rotation is one technique. A skin gap is a different technique.
+- Applying a skin gap formula and a couch kick to the same supraclav match. Half-beam plus couch kick is one technique. A skin gap is a different technique.
 - Khan versus Bentel as if they changed this arctan. They differ on electron coverage rules (module 45). This breast angle is geometry.
 
-**Traps.** Write “half-beam supraclav, diverging tangent” at the top of the solution. If the supraclav is not half-beamed, the assumption is gone and both edges diverge.
+**Traps.** Write “half-beam supraclav, diverging superior tangent border” at the top of the solution. If the supraclav is not half-beamed, the assumption is gone and both edges diverge. The couch kick uses the length. It does not set the posterior width.
 
-**Sources.** Bentel, breast technique (collimator match to a half-beam supraclavicular field). Khan and Gibbons, divergence angle.
+**Sources.** Bentel, breast technique (couch kick to a half-beam supraclavicular field; collimator then parallels the chest wall). Khan and Gibbons, divergence angle.
 
 ## Breast Tangent Calculations
 
 **Objectives:** IV.3
 
-**What the exam expects:** Compute the couch kick that removes posterior divergence from lung, and state the assumption in the same sentence as the angle.
+**What the exam expects:** Compute the gantry angle that makes the posterior edges of opposed tangents coplanar, so those edges do not diverge into lung. A half-beam jaw on the posterior border is the other way to remove that divergence. State central lung distance, anterior flash, and SSD and depth when the isocenter is at mid-separation.
 
 **Formula**
 
 \[
 \phi = \arctan\left(\frac{0.5 \times W}{\mathrm{SAD}}\right)
+\qquad
+G_{\mathrm{lateral}} = G_{\mathrm{medial}} + 180^\circ - 2\phi
 \]
 
-- \(\phi\): couch angle (kick)
-- \(W\): tangent field width at isocenter, the dimension whose posterior edge would otherwise diverge into lung (cm)
+- \(\phi\): divergence of one posterior edge from the central axis. The gantry uses it. This is not a couch kick.
+- \(W\): tangent field width at isocenter, the opening whose posterior edge would otherwise diverge into lung (cm)
 - SAD: source-to-axis distance (cm)
+- \(G_{\mathrm{medial}}\), \(G_{\mathrm{lateral}}\): medial and lateral gantry angles (degrees)
+- \(2\phi\): both posterior edges. The lateral gantry sits \(2\phi\) inside a straight 180° opposition. In this formula \(\phi\) is the \(\theta\) of \(G_{\mathrm{lateral}} = G_{\mathrm{medial}} + 180^\circ - 2\theta\).
 
-**Assumption.** Isocentric tangents. The couch is kicked until the posterior border is parallel to the posterior edge of the breast (a vertical match against lung), so geometric divergence no longer carries that border into lung. The width in the formula is the field opening in that posterior-border direction, defined at isocenter. The kick matches a border. It does not compute a lung DVH. The collimator angle from the previous lesson is a different rotation and stays in the plan.
+**Assumption.** Isocentric tangents. The lateral gantry is set so the posterior edges are coplanar, and geometric divergence no longer carries that border into lung. \(W\) is the posterior-border opening at isocenter. The angle matches a border. It does not compute a lung DVH. The couch kick from the previous lesson uses the superior–inferior length and is a different rotation. After that kick, the collimator only turns the posterior border parallel to the chest wall. The couch does not set the posterior width. A half-beam or asymmetric jaw on the posterior border puts that edge on the central axis, so \(\phi = 0\) and \(G_{\mathrm{lateral}} = G_{\mathrm{medial}} + 180^\circ\).
 
 ### Worked example
 
@@ -183,27 +188,66 @@ For an SSD setup, replace SAD with SSD if \(L\) is the field length on the skin.
 
 **Check.** \(\tan(4.57^\circ) \approx 0.080\). Half-width 8 cm over 100 cm.
 
-**Result means.** A couch kick of about 4.6° makes the posterior tangent edge nondivergent so it does not dive into lung. Using the 20 cm length here would give the collimator angle (5.71°) instead of the couch angle.
+**Result means.** A gantry adjustment of about 4.6° is the divergence of that posterior edge. Using the 20 cm superior–inferior length here would give the couch kick (5.71°) instead of this gantry angle. The couch is not kicked by 4.6°.
+
+### Worked example
+
+**Given.** Medial gantry \(G_{\mathrm{medial}} = 50^\circ\). Posterior width \(W = 20\) cm at SAD = 100 cm. Set the lateral gantry so the posterior edges are coplanar.
+
+**Substitute.** \(\phi = \arctan((0.5 \times 20)/100) = \arctan(0.100) = 5.710593^\circ\). Then \(2\phi = 11.421186^\circ\).
+
+**Arithmetic.** \(G_{\mathrm{lateral}} = 50 + 180 - 11.421186 = 218.578814^\circ\), which rounds to \(218.6^\circ\).
+
+**Check.** A straight opposed pair would be \(50 + 180 = 230^\circ\). The \(11.421186^\circ\) reduction is one \(\phi\) from each posterior edge. \(\tan(5.71^\circ) \approx 0.100\).
+
+**Result means.** Set the lateral gantry to 218.6°. The 5.71° figure is a gantry ingredient here because 20 cm is the posterior width. The same 5.71° on a 20 cm superior–inferior length is the couch kick, and it is not added into this gantry angle.
+
+### Half-beam posterior border
+
+A posterior jaw on the central axis has \(\phi = \arctan(0/\mathrm{SAD}) = 0^\circ\). Then \(G_{\mathrm{lateral}} = G_{\mathrm{medial}} + 180^\circ\). Example: medial gantry 62° gives a lateral gantry of 242°. That posterior border needs no 2φ closure and no couch kick.
+
+### Central lung distance
+
+On the tangent DRR or port, central lung distance is the lung inside the field along the central axis, measured from the posterior border to the chest wall. The usual range is about 2–3 cm. A shorter distance can miss chest wall. A longer distance includes more lung. Central lung distance is a length in centimeters. It is not the gantry angle, not flash, and not a lung DVH.
+
+### Flash
+
+The open beam extends about 1.5–2 cm past the anterior skin so the breast stays inside the field through breathing and small setup changes. Flash is that skin margin. It is not the couch kick and not the central lung distance.
+
+### SSD and depth from separation
+
+For isocentric tangents with the isocenter at mid-separation, depth from skin to isocenter is half the separation, and SSD is SAD minus that depth.
+
+**Given.** Separation = 22 cm. SAD = 100 cm. Isocenter at mid-separation.
+
+**Arithmetic.** Depth \(= 22/2 = 11\) cm. SSD \(= 100 - 11 = 89\) cm.
+
+If the isocenter is not at mid-separation, use the depth along that beam. Half the separation applies only at mid-separation.
 
 **Wrong turns**
 
-- One rotation used for both borders.
-- Sign of the kick reversed so the posterior edge diverges farther into lung. The stem’s diagram decides the sign; the magnitude is the arctan.
-- Skipping the kick because a collimator angle was already set.
-- Treating the result as lung dose in gray.
+- One rotation used for both borders. The couch kick is the superior–inferior length. The gantry angle, or a half-beam jaw, is the posterior width.
+- Sign of the gantry closure reversed: \(G_{\mathrm{lateral}} = G_{\mathrm{medial}} + 180^\circ + 2\phi\) sends the posterior edges farther into lung.
+- Dropping the 2 and subtracting only one \(\phi\), which still leaves one posterior edge diverging.
+- Skipping the gantry closure because a couch kick was already set.
+- Treating \(\phi\), central lung distance, or flash as lung dose in gray.
+- Using the full separation as the depth. For a 22 cm separation that gives depth 22 cm and SSD \(100 - 22 = 78\) cm.
+- Adding depth to SAD. For the same example, \(100 + 11 = 111\) cm is not the SSD.
 
-**Traps.** Label the two angles on a sketch: collimator = superior match, couch = posterior lung border.
+**Traps.** Label three motions on a sketch: couch = superior match from the length, gantry or half-beam jaw = posterior lung border from the width, collimator after the kick = posterior border parallel to the chest wall. The couch does not set the posterior width.
 
-**Sources.** Bentel, tangent beam geometry. Khan and Gibbons, \(\arctan\) divergence.
+**Sources.** Bentel, tangent beam geometry (couch kick, then collimator parallel to the chest wall). Khan and Gibbons, \(\arctan\) divergence and coplanar posterior tangent edges.
 
 ## Breast Tangent Calculation Mini-Quiz
 
 **Skills this quiz checks**
 
-- Collimator angle from tangent length, under the half-beam supraclavicular assumption.
-- Couch kick from tangent width, under the posterior-border assumption.
+- Couch kick from tangent length, under the half-beam supraclavicular assumption.
+- Gantry angle from tangent width, including lateral = medial + 180° − 2φ for coplanar posterior edges.
+- Half-beam posterior border means φ = 0, so the lateral gantry is medial + 180°.
+- Central lung distance about 2–3 cm, anterior flash about 1.5–2 cm, and SSD = SAD − (separation / 2) when the isocenter is at mid-separation.
 - Half the field dimension over SAD, then arctan, in degrees.
-- Refuse to add the two angles or to reuse them as a skin gap.
+- Refuse to add the couch kick and the gantry angle, or to reuse either as a skin gap.
 
 ## Transmission, HVL, Linear Attenuation Coefficient
 

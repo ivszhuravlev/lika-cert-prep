@@ -116,6 +116,88 @@ Answer: A
 Objective: III.11
 Why: The PTV margin is already the geometric allowance. Expanding it again is a new clinical decision, not a hidden ICRU requirement, and it often raises organ dose. It does not turn the volume back into a GTV and it does not replace IGRT.
 
+## Scan length, field of view, and the setup origin
+
+### Q20
+Stem: A planning CT is reconstructed with a field of view that cuts off both lateral skin surfaces. The scan length still covers the superior and inferior borders of the target. What is wrong with the data set?
+A. Nothing is wrong, because scan length and field of view are one setting
+B. The missing lateral tissue is absent from the external contour, so a beam that crosses that side is calculated through air
+C. The field of view reassigns water inside the patient from 0 HU to −1000 HU
+D. Cutting off the lateral skin shortens only the superior-inferior scan and leaves the axial contour intact
+Answer: B
+Objective: II.4
+Why: Field of view is the in-plane reconstruction diameter. Tissue outside it is absent, and the planning system treats the gap as air, so SSD, depth, and scatter move. Scan length is the superior-inferior coverage, and that coverage was adequate here. Water stays 0 HU where it was actually scanned. The clipped skin is an axial-contour error.
+
+### Q21
+Stem: A pelvic planning CT includes the prostate and stops at mid-bladder. Small bowel superior to the bladder is outside the data set. The axial field of view includes the skin. Which requirement failed?
+A. Scan length: anatomy and beam paths superior to the last slice are missing from the calculation
+B. Field of view: the skin was reconstructed, so the axial contour is the failed part
+C. Slice thickness, because a short scan means a thick slice
+D. Couch indexing, which creates the missing superior slices
+Answer: A
+Objective: II.4
+Why: Scan length is how far the slices run superior and inferior. A bladder constraint, and any beam that exits through the top of the bladder, needs those slices. The skin is inside the field of view, so this is not a lateral clip. Slice thickness is the spacing of the slices that exist. An index notch does not restore missing anatomy.
+
+### Q22
+Stem: A 1 cm lung nodule is to be planned for stereotactic treatment. The only CT uses 5 mm slices through the nodule. What problem does that slice thickness create?
+A. None; slice thickness affects only the window of the digitally reconstructed radiograph
+B. Partial-volume averaging: each slice mixes nodule and lung, so the edge used for the target can be misplaced by a large fraction of the nodule
+C. The nodule is forced to a Hounsfield number of exactly 0
+D. 5 mm slices remove respiratory motion from the data set
+Answer: B
+Objective: II.4
+Why: A thick slice assigns one value to a voxel that contains both tumor and lung. On a 1 cm nodule, a 5 mm slice is half the target, so the contoured edge is an average rather than the boundary. Stereotactic targets are scanned with slices that are small relative to the nodule and the margin. Slice thickness does not set water to 0 HU, and it does not freeze breathing. The window is a display choice.
+
+### Q23
+Stem: A 4D CT for a lung simulation is acquired with an external surrogate, and the trace is saved. The phases are never sorted. The tumor is contoured on one unsorted slice. What did that acquisition fail to provide?
+A. Bins from which the range of the target can be combined into an ITV
+B. A replacement for the external skin contour
+C. Proof that slice thickness can be ignored
+D. A measurement of carbon-fiber couch attenuation
+Answer: A
+Objective: II.4
+Why: The surrogate exists so the acquisition can be sorted into phase or amplitude bins. The ITV is the union of the CTV positions in the bins that were scanned. One unsorted slice has no measured excursion. Skin contour, slice thickness, and couch attenuation are separate simulation checks. The maximum-intensity projection can help draw a lung tumor’s envelope later; it is not a substitute for having the bins, and it is not the dose grid.
+
+### Q24
+Stem: The 4D CT scan length is tight to the tumor at end-exhale. At end-inhale the tumor lies partly outside the reconstructed slices. The surrogate trace is regular. What ITV can this data set support?
+A. A complete ITV, because a regular trace fills in the missing slices
+B. An ITV that is short at the inhale extreme, because the clipped phase never entered the union
+C. An ITV equal to the setup margin of the PTV
+D. A complete ITV, because scan length applies only to a 3D CT
+Answer: B
+Objective: II.4
+Why: The ITV includes only anatomy that was scanned. If the inhale position is cut off, that extreme is missing from the union and the internal margin is short in that direction. A clean surrogate trace does not invent the missing slices. The setup margin is the later PTV step. A 4D CT has a scan length, and that length has to cover the excursion.
+
+### Q25
+Stem: The planning CT was acquired on a curved diagnostic couch. Treatment will be on a flat carbon-fiber linac couch. A posterior beam is calculated with no couch in the contour. Which description fits?
+A. The curved top changes the posterior contour relative to the flat treatment couch, and the posterior beam is missing the attenuation of the top it will cross
+B. A curved couch is required for every linac plan, and carbon fiber is defined as air
+C. Couch shape is a billing entry only; a posterior beam never crosses the top
+D. The flat treatment top removes the need for reference marks
+Answer: A
+Objective: II.4
+Why: Radiotherapy simulation uses a flat top so the spine and the posterior surface match the treatment couch. A curved diagnostic table is a different geometry. A posterior beam also traverses the carbon-fiber top. AAPM TG-176 addresses that attenuation. Leaving the top out calculates those rays through air. Carbon fiber is not air, and the couch does not replace tattoos.
+
+### Q26
+Stem: The DICOM origin, the tattooed reference marks, and the treatment isocenter are three different points. The shifts sent to the treatment machine are the vector between which two?
+A. From the reference marks to the treatment isocenter
+B. From the DICOM origin to the corner of the image, independent of the tattoos
+C. From the isocenter back to the DICOM origin, with the marks discarded
+D. A zero vector, because the origin, the marks, and the isocenter are defined as one point
+Answer: A
+Objective: II.7
+Why: The therapists can find the reference marks. The isocenter is the planned point. The shift is that difference, in a stated orientation. The DICOM origin is a coordinate zero in the header. Moving it on import does not move the tattoos, and it is not automatically the isocenter. The three points coincide only when the isocenter was left on the marks and that same point is the origin.
+
+### Q27
+Stem: Head-first supine. +X is patient left, +Y is posterior, and +Z is superior. The reference BB is on the lasers. The planned isocenter is 2.0 cm to the patient’s left of the BB, so ΔX = +2.0 cm, with ΔY = 0 and ΔZ = 0. Which patient translation brings the isocenter onto the lasers?
+A. 2.0 cm toward the patient’s left
+B. 2.0 cm toward the patient’s right
+C. 2.0 cm anterior
+D. 2.0 cm superior
+Answer: B
+Objective: II.7
+Why: ΔX = +2.0 cm means the isocenter is to the patient’s left of the mark. With the mark already on the lasers, the patient is translated by −Δ. −ΔX is 2.0 cm toward the patient’s right, which carries the left-sided isocenter onto the lasers. A further move to the patient’s left carries that point farther off the lasers. Anterior and superior are Y and Z, and both of those deltas are zero.
+
 ## Localization Mini-Quiz
 
 ### Q1

@@ -181,6 +181,7 @@ D(d) = D(d_{\max}) \times \mathrm{TMR}(d, r_d)
 - Leaving PDD as 80 instead of 0.80, which makes given dose \(200/80 = 2.5\) cGy.
 - Using a TMR looked up at the skin field size. TMR field size is at the calculation point.
 - Applying Mayneord to the TMR example.
+- Treating a full-phantom PDD ratio as an exit dose. That product is the dose at depth \(d\). The true exit surface has less backscatter than the phantom, so the exit dose is lower.
 
 **Traps.** Underline “given dose,” “tumor dose,” “dmax,” and “depth” in the stem. Those four nouns decide whether you divide or multiply.
 

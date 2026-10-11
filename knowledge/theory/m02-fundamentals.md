@@ -111,7 +111,7 @@ Isobars: same A, different Z. Different elements, same number of nucleons. Beta 
 
 Isotones: same N, different Z (and therefore different A). Same neutron count.
 
-Isomers: same Z and same A, different nuclear energy state. The metastable state is marked “m”. Tc-99m and Tc-99 are isomers. The decay between them is an isomeric transition, a gamma (or internal conversion), and Z and A do not change.
+Isomers: same Z and same A, different nuclear energy state. The metastable state is marked “m”. Tc-99m and Tc-99 are isomers. The decay between them is an isomeric transition, a gamma (or internal conversion), and Z and A do not change. Internal conversion can be followed by Auger electron emission.
 
 A radionuclide is an unstable nuclear species. A radiopharmaceutical is that nuclide in a chemical form. The exam half-life list is a list of nuclides, not of compounds.
 

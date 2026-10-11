@@ -120,6 +120,38 @@ PTV defined as visible tumor. ITV omitted and motion placed inside the CTV defin
 
 ICRU Reports 50, 62, and 83. AAPM TG-66. Public blueprint II.4, II.7, and III.11.
 
+## Scan length, field of view, and the setup origin
+
+**MDCB:** II.4, II.7
+
+**What the exam expects**
+
+You can say what a simulation data set has to contain before the shifts and the contours are believable: scan length, field of view, slice thickness, a flat indexed couch, a 4D CT that covers the excursion, and a clear separation of DICOM origin, reference marks, and isocenter. Respiratory strategy (gate, hold, compress, track) is module 15. With the marks on the lasers, the couch-move sign is the opposite of the isocenter-minus-mark vector in the shift section above. This section is the acquisition that makes those later steps true.
+
+**Core facts**
+
+Scan length is the superior-inferior extent of the reconstructed slices. It has to include the target, the motion excursion, every beam entrance and exit, and the organs whose constraints will be scored. A pelvis scan that stops mid-bladder cannot support a bladder constraint. A 4D CT that stops on the end-exhale tumor clips the inhale extreme, and the ITV built from those slices is short in that direction.
+
+Field of view is the in-plane reconstruction diameter. It has to include the whole external contour, including an arm that a beam crosses, and the couch top when a beam traverses the top. Tissue outside the field of view is missing. The planning system treats the gap as air, so SSD, depth, and scatter move. Scan length and field of view are different settings. A complete superior-inferior range with the lateral skin cut off is still a clipped contour.
+
+Slice thickness. A thick slice averages the target edge with the tissue around it. On a small nodule that average is a large fraction of the target, so the contoured edge can sit in the wrong place. Stereotactic lung and brain scans use slices that are small relative to the target and the margin. The clinic’s protocol names the thickness for the site. A thick slice does not remove motion, and it does not set the Hounsfield number of water.
+
+4D CT, as a simulation. An external or internal surrogate sorts the acquisition into phase or amplitude bins. The ITV is the union of the CTV positions over the bins that were actually scanned (ICRU 62). For a solid tumor in lung, the maximum-intensity projection can help draw that envelope; the phases still have to be checked. The dose grid is the average CT or a selected phase, not the maximum-intensity projection. A single unsorted slice has no measured excursion. A duplicated diaphragm is a failed sort, and that artifact is not the ITV. Module 15 is where the choice among gating, breath hold, compression, and tracking is made.
+
+Couch top. Radiotherapy simulation uses a flat top matched to the treatment couch, with the immobilization indexed to it. A curved diagnostic table changes the posterior contour and the spine relative to a flat linac top. Posterior and posterior-oblique beams pass through the carbon-fiber top and through indexed devices. That attenuation belongs in the calculation (AAPM TG-176). A beam calculated with the top omitted is a beam calculated through air.
+
+Origin and reference marks. Three points stay distinct. The DICOM origin is a coordinate zero in the image header. The reference marks, tattoos or BBs where the lasers met a stable skin surface, are the external point that can be found again. The treatment isocenter is the point the planner chose. Shifts are the vector from the reference marks to the isocenter. They are zero only when those two points are the same point. Resetting the DICOM origin does not move the tattoos. A new tattoo set is a new reference, and the old shifts do not apply.
+
+With the marks already on the lasers, the patient translation that brings the isocenter to the lasers is the opposite of that vector. Head-first supine DICOM signs are in the shift section: +x patient left, +y posterior, +z superior. Name which object moves.
+
+**Traps**
+
+Field of view confused with scan length. A 4D CT ITV drawn from a scan that clips the inhale extreme. Dose calculated on the maximum-intensity projection. A curved diagnostic couch used as if it were the flat treatment top. Posterior beams calculated with the couch omitted. The DICOM origin treated as the isocenter. The isocenter-minus-mark vector copied onto the couch when the marks are already on the lasers.
+
+**Sources**
+
+ICRU Reports 50, 62, and 83. AAPM TG-66 for simulation lasers, geometry, and the flat indexed couch. AAPM TG-176 for couch-top and immobilization attenuation. AAPM TG-76 for respiratory motion, applied in module 15. Public blueprint II.4 and II.7.
+
 ## Localization Mini-Quiz
 
-This quiz checks GTV, CTV, ITV, PTV, OAR, and PRV; a shift as isocenter minus reference with DICOM signs; and the simulation requirements of full windows, complete organs, and identified markers. The traps are calling the PTV the gross tumor, adding motion on top of an ITV, reading +y as anterior, reversing the couch move when the tattoo starts on the lasers, and contouring one side of a paired organ for a bilateral constraint.
+This quiz checks GTV, CTV, ITV, PTV, OAR, and PRV; a shift as isocenter minus reference with DICOM signs; and the simulation requirements of full windows, complete organs, and identified markers. Further items separate scan length from field of view, ask what a thick slice does to a small target, and ask which patient translation applies when the reference mark is already on the lasers. The traps are calling the PTV the gross tumor, adding motion on top of an ITV, reading +y as anterior, reversing the couch move when the tattoo starts on the lasers, contouring one side of a paired organ for a bilateral constraint, and treating the DICOM origin as the isocenter.

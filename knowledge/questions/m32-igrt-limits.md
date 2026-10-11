@@ -114,6 +114,56 @@ Answer: C
 Objective: II.6
 Why: Answer C. The cameras see the surface they were aimed at. Rectal filling can displace the prostate while the skin trace still passes. Surface guidance can still report that skin position and can hold the beam when the surface leaves tolerance. It does not image the gland.
 
+### Q26
+Stem: According to AAPM TG-142, monthly coincidence of the imaging and treatment isocenters is ≤2 mm on a non-stereotactic machine and ≤1 mm for SRS/SBRT. A palliative site and a prostate site each have their own clinical action levels in the departmental policy. How are the TG-142 numbers used?
+A. As the clinical action level for every site, because 2 mm is the patient-shift limit
+B. As the machine test that the imager and the treatment isocenter agree. The clinical action level remains the site policy
+C. As the PTV margin, so every PTV is expanded by 2 mm
+D. As clearance to set the prostate margin to zero when the monthly test has passed
+Answer: B
+Objective: II.6
+Why: Answer B. TG-142’s imaging coincidence tolerance is a QA result for the machine: the image and the beam share an isocenter within 2 mm, or within 1 mm for stereotactic use. The action level that tells the team when a patient shift is inside their authority, and when to call a physician, is written for the site and the margin. Passing the monthly test does not write those clinical numbers and does not erase the PTV.
+
+### Q27
+Stem: An offline NAL correction, taken from the first set of images, is now in the setup note. Today’s pretreatment image is not used to move the couch. That day’s setup still contains a random residual different from the NAL mean. What does NAL leave in place?
+A. No residual; applying the systematic estimate removes random error before beam-on
+B. Today’s random residual. NAL applies the estimated systematic correction on later fractions and leaves the online shift for a pretreatment image
+C. The systematic error only, because NAL is defined to leave systematic error untouched
+D. A new dose distribution calculated from the mean shift
+Answer: B
+Objective: II.6
+Why: Answer B. NAL produces a correction for the systematic component and applies it to future fractions, with no action threshold. The random component changes from day to day. Without an online image and a couch move before this beam, that random piece remains. NAL is aimed at the systematic error, and it does not reoptimize the plan.
+
+### Q28
+Stem: One planner ignores daily cone-beam dose because the beam is kilovoltage. Another subtracts one therapeutic fraction for every cone-beam. Which description fits the two arguments?
+A. Both match a dose that is real, much smaller than a treatment fraction, and kept out of the prescription unless a validated method adds it
+B. The first undercounts a dose that is not zero. The second treats a localization exposure as if it were a treatment fraction
+C. Both are required by TG-142, which sets cone-beam dose equal to the prescription
+D. Cone-beam dose is deposited only in a phantom, so neither argument describes the patient
+Answer: B
+Objective: II.6
+Why: Answer B. Each kilovoltage cone-beam contributes patient dose, so calling that dose zero is the wrong direction. The contribution is not a megavoltage treatment fraction, so subtracting prescription dose one-for-one is the other wrong direction. TG-142 does not set imaging dose equal to the prescription. The scan dose is delivered to the patient.
+
+### Q29
+Stem: An MR-linac protocol includes an adaptive trigger. One fraction shows a rigid translation and organ shapes that still match the plan. Another shows rectal gas that has deformed the target relative to the rectal wall, and one couch translation cannot restore both. Which decision matches the trigger?
+A. Both fractions get a full online replan, because every MR-linac image is an adaptive trigger
+B. The rigid translation stays a localization correction. The deformation is the finding that triggers physician review and, when the workflow applies, adaptation
+C. Neither fraction is imaged, because an MR-linac shows only the skin surface
+D. The deformed fraction is treated by matching to yesterday’s image
+Answer: B
+Objective: II.6
+Why: Answer B. The adaptive trigger is the protocol’s concept for when a rigid shift is no longer the right tool. A pure translation with stable anatomy is image guidance. A shape change that one couch move cannot undo is the situation the trigger is written for, and it includes a physician decision. An MR-linac image is not automatically a replan. The point of that image is soft tissue. Yesterday’s image is the wrong reference. Module 28 is the check of an adapted plan.
+
+### Q30
+Stem: A bone match is inside the site’s action level. The protocol required a soft-tissue match, and the soft-tissue target is outside that same action level. What limit of “in tolerance” is this?
+A. The action level applies to the surrogate the protocol named. An in-tolerance bone result leaves a soft-tissue miss in place
+B. Bone and soft tissue share one residual, so the bone number is the target number
+C. An action level is only the TG-142 machine test, so the soft-tissue discrepancy is discarded
+D. A soft-tissue miss is removed by setting the PTV margin to zero
+Answer: A
+Objective: II.6
+Why: Answer A. Tolerance means something only for the match the protocol asked for. A bone residual inside the limit can sit beside a target residual outside it when the target moves relative to bone. The action level is not the TG-142 isocenter test. Setting the PTV margin to zero does not remove the miss that is already on the image.
+
 ## Accuracy and Limitations of IGRT Mini-Quiz
 
 ### Q1

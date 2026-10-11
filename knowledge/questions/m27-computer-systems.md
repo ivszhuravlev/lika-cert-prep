@@ -54,6 +54,46 @@ Answer: B
 Objective: III.9
 Why: Answer B. A checksum is a short fingerprint of every byte in the file. If the fingerprint differs, the bytes differ. That can be a truncated transfer, a disk error, or a file that was edited. The safe action is to repeat the transfer and confirm the fingerprints match before the plan is used. A checksum does not score clinical quality, does not read the patient's name as its only input, and a mismatch is a failure, not a successful DICOM store.
 
+### Q6
+Stem: What is the fundamental unit of information in the binary computers used for planning?
+A. A bit, one digit that is either 0 or 1. Binary uses only those two digits
+B. A byte, treated as the fundamental unit and filled with decimal digits 0 through 9
+C. A voxel, defined as one alphabetic character
+D. A Hounsfield number, used as the 0/1 unit inside the processor
+Answer: A
+Objective: III.9
+Why: Answer A. A bit is the fundamental unit: a single binary digit, 0 or 1. Binary is written with those two symbols. A byte is a group of bits, so it is not the fundamental unit. A voxel and a Hounsfield number are image quantities stored by means of bits.
+
+### Q7
+Stem: One byte contains how many bits?
+A. 1
+B. 2
+C. 8
+D. 256
+Answer: C
+Objective: III.9
+Why: Answer C. A byte is eight bits. One bit is a single 0 or 1. Eight bits can stand for 256 different values, because 2 raised to the 8th power is 256. That 256 is a count of values, not the number of bits in the byte.
+
+### Q8
+Stem: The planning workstations and the CT simulator share a network inside one department. That network is a:
+A. Link that, by definition, joins many distant cities
+B. LAN, a network at one local site
+C. Byte, because a network is defined as eight bits
+D. Character code
+Answer: B
+Objective: III.9
+Why: Answer B. A LAN is a local-area network: computers connected at one local site, such as one department. It is not a byte and not a character code. A network that joins distant sites is a wider scope than this in-department connection.
+
+### Q9
+Stem: A clinic computer runs Unix. The same staff also move DICOM studies, use a PACS, and read ASCII text reports. Which of those is the operating system?
+A. DICOM, PACS, and ASCII, with Unix used only as a character code
+B. Unix. DICOM, PACS, and ASCII are not operating systems
+C. PACS, with Unix used as the image-communication standard
+D. DICOM, with Unix used as the picture archive
+Answer: B
+Objective: III.9
+Why: Answer B. Unix is an operating system. DICOM is the standard for exchanging images. PACS is the archive that stores them. ASCII is a character code for text. Those three are not operating systems.
+
 ## Computer Systems Management
 
 ### Q1
@@ -105,6 +145,16 @@ D. Restores are only valid for image files, not for the plan database
 Answer: B
 Objective: III.9
 Why: Answer B. A backup is a hypothesis until a restore succeeds. The drill last month is evidence about the procedure and about the backup that was used then. It is not proof that last night's job finished, that the tape or disk is readable, or that the restored database matches the live one. The operational response to today's failure is the documented downtime procedure, which may include treating only with a verified backup or postponing, according to department policy. Image files and plan databases both need tested restores.
+
+### Q6
+Stem: A new treatment-planning software release is installed, and the commissioned beam data are updated in the same change. What is a prudent dose check before clinical use?
+A. Open the application and accept the vendor announcement as the measurement
+B. Check only a water phantom on the central axis, because tissue differences do not matter after a beam-data update
+C. Calculate dose in heterogeneous tissue and beyond that tissue, and compare it with the prior commissioned result
+D. Skip the calculation check, because a software release cannot change dose
+Answer: C
+Objective: III.9
+Why: Answer C. A software release and a beam-data update can each change the dose the system reports. Before clinical use, a prudent check is the dose calculated in heterogeneities and beyond them. A water-only central-axis check leaves lung, bone, and the dose downstream of them untested. Opening the program and reading the announcement do not make that comparison.
 
 ## Computers Mini-Quiz
 

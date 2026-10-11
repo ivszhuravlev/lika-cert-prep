@@ -126,6 +126,16 @@ Answer: B
 Objective: III.3
 Why: A serial organ loses function when a small segment is destroyed, so the high-dose end dominates for cord, brainstem, and optic pathway. A parallel organ loses function in proportion to the subunit killed, so mean dose and volume dominate for lung, liver, kidney, and parotid. The number you apply is still the one in the named source. Swapping the ends of the DVH answers a different question from the one the organ asks.
 
+### Q7
+Stem: A prenatal consult asks when radiation-related cognitive injury is most likely. Which gestational window is the high-risk teaching interval?
+A. About 8-15 weeks
+B. Weeks 0-7
+C. After 25 weeks
+D. Every week equally, from conception through term
+Answer: A
+Objective: III.3
+Why: The gestational window of highest risk for radiation-related cognitive injury is about 8-15 weeks. Weeks 0-7 come before that window. The period after 25 weeks comes after it. Equal risk in every week would make the dates irrelevant, and this teaching does not do that.
+
 ## BEDs
 
 ### Q1

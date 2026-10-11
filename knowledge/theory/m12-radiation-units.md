@@ -20,7 +20,7 @@ Air kerma. Kinetic energy transferred to charged particles per unit mass of air.
 
 Absorbed dose. Energy imparted per unit mass, any radiation, any medium. SI unit gray, 1 Gy = 1 J/kg. Older unit rad. 1 Gy = 100 rad = 100 cGy. 1 cGy = 1 rad. Prescriptions are written in cGy or Gy. They are not written in roentgen.
 
-Kerma uses the gray as well. Kerma and dose share a unit and are still different quantities, as module 9 separates them.
+Kerma uses the gray as well. Kerma and dose share a unit and are still different quantities, as module 9 separates them. The centigray is a legitimate unit of kerma as well as of absorbed dose, and 1 cGy is 0.01 Gy, not 100 Gy.
 
 Equivalent dose (and the older dose equivalent). Absorbed dose weighted for radiation type. SI unit sievert. Older unit rem. 1 Sv = 100 rem. 1 cSv = 1 rem.
 

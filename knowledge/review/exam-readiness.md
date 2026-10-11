@@ -34,8 +34,8 @@ The photoelectric item that said “per atom” and keyed a factor of 8 now asks
 
 ## Corrected from the calculation review
 
-Breast items that called a posterior width a collimator angle now call it a couch kick. Superior–inferior length is the collimator. Half-beam matches say the superior border needs no collimator rotation, and the couch is what still handles the posterior border. Practice Exam 2 names the 17 cm posterior opening a couch kick. Primary-barrier transmission is dimensionless, not Gy/week.
+Breast superior–inferior length is the couch kick (20 cm at SAD 100 cm is 5.7°). A posterior width is a gantry adjustment or a half-beam jaw (16 cm is 4.6°). After the couch kick, the collimator only parallels the posterior border to the chest wall. Primary-barrier transmission is dimensionless, not Gy/week.
 
-Added: a named collimator item (20 cm length, 5.7°) and a named couch item (16 cm width, 4.6°), a half-beam skin gap of 0 cm, a negative cobalt timer error (set time 2.20 min for 200 cGy), an SAD-calibrated MU with SSD 100 cm (307.5 MU, not 298.5), a cord peak missed by a coarse grid (3.7 Gy), an EQD2 sum of 76 Gy, and a TG-101 three-fraction cord point dose that fails 21.9 Gy.
+Added: a named couch-kick item (20 cm superior–inferior length, 5.7°) and a named gantry item (16 cm posterior width, 4.6°), a half-beam skin gap of 0 cm, a negative cobalt timer error (set time 2.20 min for 200 cGy), an SAD-calibrated MU with SSD 100 cm (307.5 MU, not 298.5), a cord peak missed by a coarse grid (3.7 Gy), an EQD2 sum of 76 Gy, and a TG-101 three-fraction cord point dose that fails 21.9 Gy.
 
 All four independent reviews are in. Remaining holes that this patch does not close: unlabeled CT and ProKnow, a 155-item timed form, multicriteria optimization, and a second pass on the short localization files.

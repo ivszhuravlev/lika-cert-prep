@@ -168,6 +168,16 @@ Answer: A
 Objective: I.1
 Why: Adding a neutron keeps Z and increases A, which is a different isotope. Adding a proton changes the element. Removing one proton and one neutron changes the element and keeps A, which is an isobar. A metastable state of the same nucleus is an isomer.
 
+### Q6
+Stem: A metastable nucleus loses its extra energy by internal conversion. Which emission can come next from the atom?
+A. An Auger electron
+B. A neutron from the nucleus
+C. A rise of Z by 1
+D. Two 511 keV annihilation photons
+Answer: A
+Objective: I.1
+Why: Internal conversion ejects a bound electron and leaves a shell vacancy. That vacancy can relax by Auger electron emission. Z and A stay the same, so this is not beta decay. The nucleus does not emit a neutron, and the event is not positron annihilation.
+
 ## Fundamentals Mini-Quiz
 
 ### Q1

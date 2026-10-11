@@ -1210,6 +1210,7 @@ def main() -> None:
                 continue
             chat_id = int(chat["id"])
             state = session.get(chat_id)
+            print(f"in {chat_id} {text!r}", flush=True)
             try:
                 handle(tg, chat_id, text, state, progress)
             except Exception as exc:

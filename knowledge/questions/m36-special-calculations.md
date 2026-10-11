@@ -256,7 +256,7 @@ C. 10°
 D. 45°
 Answer: A
 Objective: IV.3
-Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may kick the couch for a different border, such as the posterior chest-wall edge. The superior match itself needs no extra collimator rotation when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
+Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. A symmetric superior opening would need a couch kick; this half-beam superior border does not. Posterior divergence into lung is a gantry angle or a half-beam jaw, not a couch kick. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
 
 ## Couch/Collimator Divergence Mini-Quiz
 
@@ -338,32 +338,32 @@ C. 10°
 D. 45°
 Answer: A
 Objective: IV.3
-Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may kick the couch for a different border, such as the posterior chest-wall edge. The superior match itself needs no extra collimator rotation when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
+Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. A symmetric superior opening would need a couch kick; this half-beam superior border does not. Posterior divergence into lung is a gantry angle or a half-beam jaw, not a couch kick. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
 
 ## Breast Tangent Calculation Tutorial
 
 ### Q1
-Stem: Breast tutorial. Couch kick so the posterior borders are coplanar and do not dive into lung. Jaw opening is the transverse width. SAD is 100 cm and the jaw opening that diverges at the posterior chest-wall border of a tangent is 20 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast tutorial. Couch kick so the superior border does not diverge into a half-beam supraclavicular field. Jaw opening is the superior–inferior length. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 20 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 11.3°
 B. 84.3°
 C. 0.10°
 D. 5.7°
 Answer: D
 Objective: IV.3
-Why: Half the opening is 20/2 = 10 cm. The opposite-over-adjacent ratio is 10/100 = 0.1000. θ = arctan(0.1000) = 5.71°, which rounds to 5.7°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(20/100), gives 11.3°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/10) gives 84.3°. Reporting the ratio 0.1000 as though it were already in degrees gives 0.10°.
+Why: This 5.7° is the couch kick. The 20 cm opening is the superior–inferior length, and the kick takes that superior border out of the supraclavicular field. Half the opening is 20/2 = 10 cm. The opposite-over-adjacent ratio is 10/100 = 0.1000. θ = arctan(0.1000) = 5.71°, which rounds to 5.7°. The collimator does not take this length; after the kick it only turns the posterior border parallel to the chest wall. A posterior width of 16 cm is a gantry angle of about 4.6°, a different triangle. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(20/100), gives 11.3°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/10) gives 84.3°. Reporting the ratio 0.1000 as though it were already in degrees gives 0.10°.
 
 ### Q2
-Stem: Breast tutorial. Narrower tangent. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 16 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast tutorial. Gantry angle for the posterior border. Narrower tangent. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 16 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 9.1°
 B. 85.4°
 C. 4.6°
 D. 0.08°
 Answer: C
 Objective: IV.3
-Why: Half the opening is 16/2 = 8 cm. The opposite-over-adjacent ratio is 8/100 = 0.0800. θ = arctan(0.0800) = 4.57°, which rounds to 4.6°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(16/100), gives 9.1°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/8) gives 85.4°. Reporting the ratio 0.0800 as though it were already in degrees gives 0.08°.
+Why: This 4.6° is the gantry adjustment for a 16 cm posterior width. It is not a couch kick. Half the opening is 16/2 = 8 cm. The opposite-over-adjacent ratio is 8/100 = 0.0800. θ = arctan(0.0800) = 4.57°, which rounds to 4.6°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(16/100), gives 9.1°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/8) gives 85.4°. Reporting the ratio 0.0800 as though it were already in degrees gives 0.08°.
 
 ### Q3
-Stem: Breast tutorial. Wider tangent. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 24 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast tutorial. Gantry angle for the posterior border. Wider tangent. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 24 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 6.8°
 B. 13.5°
 C. 83.2°
@@ -383,14 +383,14 @@ Objective: IV.3
 Why: Half the opening is 18/2 = 9 cm. The opposite-over-adjacent ratio is 9/100 = 0.0900. θ = arctan(0.0900) = 5.14°, which rounds to 5.1°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(18/100), gives 10.2°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/9) gives 84.9°. Reporting the ratio 0.0900 as though it were already in degrees gives 0.09°.
 
 ### Q5
-Stem: Breast tutorial. Longer tangent, collimator angle for the superior match. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 22 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast tutorial. Longer tangent, couch kick for the superior match. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 22 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 12.4°
 B. 83.7°
 C. 6.3°
 D. 0.11°
 Answer: C
 Objective: IV.3
-Why: Half the opening is 22/2 = 11 cm. The opposite-over-adjacent ratio is 11/100 = 0.1100. θ = arctan(0.1100) = 6.28°, which rounds to 6.3°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(22/100), gives 12.4°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/11) gives 83.7°. Reporting the ratio 0.1100 as though it were already in degrees gives 0.11°.
+Why: This 6.3° is the couch kick for the superior border. The collimator does not take the superior–inferior length; after the kick it only turns the posterior border parallel to the chest wall. Half the opening is 22/2 = 11 cm. The opposite-over-adjacent ratio is 11/100 = 0.1100. θ = arctan(0.1100) = 6.28°, which rounds to 6.3°. A posterior width would be a gantry angle, not this couch kick. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(22/100), gives 12.4°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/11) gives 83.7°. Reporting the ratio 0.1100 as though it were already in degrees gives 0.11°.
 
 ### Q6
 Stem: Breast tutorial. Mono-isocentric tangents half-beamed to a supraclavicular field. A single-isocenter breast plan puts the superior jaw of the tangents on the central axis (half-beam) to match a supraclavicular field that is also half-beamed. What collimator or couch angle is required to remove superior-border divergence at that match?
@@ -400,10 +400,10 @@ C. 45°
 D. 0°
 Answer: D
 Objective: IV.3
-Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may kick the couch for a different border, such as the posterior chest-wall edge. The superior match itself needs no extra collimator rotation when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
+Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. A symmetric superior opening would need a couch kick; this half-beam superior border does not. Posterior divergence into lung is a gantry angle or a half-beam jaw, not a couch kick. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
 
 ### Q7
-Stem: Breast tutorial. If the collimator is not rotated, how far does the posterior edge walk in a plane 10 cm past isocenter? At isocenter the field edge is 8 cm from the central axis. SAD is 100 cm. How much farther from the central axis is that same edge in a plane 10 cm beyond isocenter? Extra divergence = (half-width at isocenter) × (distance past isocenter) / SAD.
+Stem: Breast tutorial. How far does a diverging posterior edge walk in a plane 10 cm past isocenter? At isocenter the field edge is 8 cm from the central axis. SAD is 100 cm. How much farther from the central axis is that same edge in a plane 10 cm beyond isocenter? Extra divergence = (half-width at isocenter) × (distance past isocenter) / SAD.
 A. 0.80 cm
 B. 1.60 cm
 C. 80.00 cm
@@ -413,7 +413,7 @@ Objective: IV.3
 Why: Similar triangles: half-width grows in proportion to distance from the source. Extra = 8 × 10 / 100 = 80 / 100 = 0.8000 cm, reported as 0.80 cm. The half-width in that deeper plane would be 8 + 0.8000 = 8.8000 cm, which is a different quantity. Using the full field width instead of the half-width gives 1.60 cm. Inverting depth and SAD gives 80.00 cm. Reporting the full half-width at the deeper plane, not the extra divergence alone, gives 8.80 cm.
 
 ### Q8
-Stem: Breast tutorial. Another transverse opening. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 14 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast tutorial. Gantry angle for the posterior border. Another transverse opening. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 14 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 8.0°
 B. 4.0°
 C. 86.0°
@@ -425,7 +425,7 @@ Why: Half the opening is 14/2 = 7 cm. The opposite-over-adjacent ratio is 7/100 
 ## Breast Tangent Calculations
 
 ### Q1
-Stem: Breast calculation. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 12 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast calculation. Gantry angle for the posterior border. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 12 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 6.8°
 B. 86.6°
 C. 3.4°
@@ -435,7 +435,7 @@ Objective: IV.3
 Why: Half the opening is 12/2 = 6 cm. The opposite-over-adjacent ratio is 6/100 = 0.0600. θ = arctan(0.0600) = 3.43°, which rounds to 3.4°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(12/100), gives 6.8°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/6) gives 86.6°. Reporting the ratio 0.0600 as though it were already in degrees gives 0.06°.
 
 ### Q2
-Stem: Breast calculation. Large separation, wide tangent. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 28 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast calculation. Gantry angle for the posterior border. Large separation, wide tangent. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 28 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 15.6°
 B. 82.0°
 C. 8.0°
@@ -445,17 +445,17 @@ Objective: IV.3
 Why: Half the opening is 28/2 = 14 cm. The opposite-over-adjacent ratio is 14/100 = 0.1400. θ = arctan(0.1400) = 7.97°, which rounds to 8.0°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(28/100), gives 15.6°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/14) gives 82.0°. Reporting the ratio 0.1400 as though it were already in degrees gives 0.14°.
 
 ### Q3
-Stem: Breast calculation. Collimator angle for the superior match. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 15 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast calculation. Couch kick for the superior match. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 15 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 8.5°
 B. 85.7°
 C. 0.08°
 D. 4.3°
 Answer: D
 Objective: IV.3
-Why: Half the opening is 15/2 = 7.5 cm. The opposite-over-adjacent ratio is 7.5/100 = 0.0750. θ = arctan(0.0750) = 4.29°, which rounds to 4.3°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(15/100), gives 8.5°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/7.5) gives 85.7°. Reporting the ratio 0.0750 as though it were already in degrees gives 0.08°.
+Why: This 4.3° is the couch kick for the 15 cm superior–inferior length. The collimator does not take that length. After the kick, the collimator only turns the posterior border parallel to the chest wall. Half the opening is 15/2 = 7.5 cm. The opposite-over-adjacent ratio is 7.5/100 = 0.0750. θ = arctan(0.0750) = 4.29°, which rounds to 4.3°. A posterior width is a gantry angle, not this couch kick. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(15/100), gives 8.5°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/7.5) gives 85.7°. Reporting the ratio 0.0750 as though it were already in degrees gives 0.08°.
 
 ### Q4
-Stem: Breast calculation. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 26 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast calculation. Couch kick for the superior border. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 26 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 14.6°
 B. 82.6°
 C. 7.4°
@@ -465,7 +465,7 @@ Objective: IV.3
 Why: Half the opening is 26/2 = 13 cm. The opposite-over-adjacent ratio is 13/100 = 0.1300. θ = arctan(0.1300) = 7.41°, which rounds to 7.4°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(26/100), gives 14.6°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/13) gives 82.6°. Reporting the ratio 0.1300 as though it were already in degrees gives 0.13°.
 
 ### Q5
-Stem: Breast calculation. SAD 80 cm. SAD is 80 cm and the jaw opening that diverges at the posterior border of a tangent is 20 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast calculation. Gantry angle for the posterior border. SAD 80 cm. SAD is 80 cm and the jaw opening that diverges at the posterior border of a tangent is 20 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 14.0°
 B. 82.9°
 C. 7.1°
@@ -495,7 +495,7 @@ Objective: IV.3
 Why: Similar triangles: half-width grows in proportion to distance from the source. Extra = 5 × 12 / 100 = 60 / 100 = 0.6000 cm, reported as 0.60 cm. The half-width in that deeper plane would be 5 + 0.6000 = 5.6000 cm, which is a different quantity. Using the full field width instead of the half-width gives 1.20 cm. Inverting depth and SAD gives 41.67 cm. Reporting the full half-width at the deeper plane, not the extra divergence alone, gives 5.60 cm.
 
 ### Q8
-Stem: Breast calculation. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 18 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast calculation. Gantry angle for the posterior border. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 18 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 5.1°
 B. 10.2°
 C. 84.9°
@@ -504,10 +504,90 @@ Answer: A
 Objective: IV.3
 Why: Half the opening is 18/2 = 9 cm. The opposite-over-adjacent ratio is 9/100 = 0.0900. θ = arctan(0.0900) = 5.14°, which rounds to 5.1°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(18/100), gives 10.2°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/9) gives 84.9°. Reporting the ratio 0.0900 as though it were already in degrees gives 0.09°.
 
+### Q9
+Stem: The medial tangent gantry is 40°. The posterior field width at isocenter is 16 cm and the SAD is 100 cm. What lateral gantry angle makes the posterior edges coplanar, to the nearest 0.1°?
+A. 220.0°
+B. 215.4°
+C. 210.9°
+D. 229.1°
+Answer: C
+Objective: IV.3
+Why: Each posterior edge diverges by θ = arctan((W/2)/SAD). W = 16 cm, so W/2 = 8 cm and θ = arctan(8/100) = arctan(0.0800) = 4.5739212599°. Then 2θ = 9.1478425198°. The lateral gantry for a nondivergent posterior edge is G_lateral = G_medial + 180° − 2θ = 40 + 180 − 9.1478425198 = 210.8521574802°, which rounds to 210.9°. The single-edge angle rounds to 4.6° and is the gantry adjustment for this 16 cm posterior width. It is not a couch kick. A straight opposed pair is 40 + 180 = 220.0° and leaves both posterior edges diverging into lung. Subtracting only one edge, 220 − 4.5739212599 = 215.4260787401°, rounds to 215.4°. Adding 2θ instead of subtracting it, 220 + 9.1478425198 = 229.1478425198°, rounds to 229.1° and aims the posterior edges farther into lung.
+
+### Q10
+Stem: Opposed breast tangents. The medial gantry is 50°. The posterior opening at isocenter is 20 cm and the SAD is 100 cm. What lateral gantry angle puts the posterior borders in one plane, to the nearest 0.1°?
+A. 230.0°
+B. 218.6°
+C. 224.3°
+D. 241.4°
+Answer: B
+Objective: IV.3
+Why: θ = arctan((W/2)/SAD). W = 20 cm, so W/2 = 10 cm and θ = arctan(10/100) = arctan(0.1000) = 5.710593°. Then 2θ = 11.421186°. G_lateral = G_medial + 180° − 2θ = 50 + 180 − 11.421186 = 218.578814°, which rounds to 218.6°. Here 20 cm is the posterior width, so 5.710593° (about 5.7°) is the divergence of one posterior edge and belongs to the gantry. The same 5.7° on a 20 cm superior–inferior length would be the couch kick, and that kick is not this lateral angle. Opposed without the closure is 50 + 180 = 230.0°. One edge only: 230 − 5.710593 = 224.289407°, which rounds to 224.3°. Adding 2θ: 230 + 11.421186 = 241.421186°, which rounds to 241.4°.
+
+### Q11
+Stem: The medial tangent gantry is 62°. The posterior jaw is closed on the central axis. What lateral gantry angle keeps the posterior edges coplanar?
+A. 236.3°
+B. 230.6°
+C. 62.0°
+D. 242.0°
+Answer: D
+Objective: IV.3
+Why: A posterior jaw on the central axis does not diverge, so θ = arctan(0/100) = 0°. G_lateral = G_medial + 180° − 2θ = 62 + 180 − 0 = 242.0°. No couch kick sets this posterior border. 242 − 5.7 = 236.3 applies the rounded 5.7° couch kick of a 20 cm superior–inferior length, arctan(10/100) = 5.710593°, which is the wrong border. Twice that couch angle is 11.421186°, and 242 − 11.421186 = 230.578814°, which rounds to 230.6°, as if the posterior opening were a symmetric 20 cm field. 62.0° copies the medial gantry and does not oppose the beam.
+
+### Q12
+Stem: A couch kick has already taken the superior tangent border out of a half-beam supraclavicular field. What does the collimator rotation do in that technique?
+A. It repeats the couch kick with the superior–inferior length
+B. It turns the posterior border parallel to the chest wall
+C. It removes posterior divergence into lung by the posterior field width
+D. It sets how many centimeters of lung lie on the central axis
+Answer: B
+Objective: IV.3
+Why: After the couch kick, the collimator only turns the posterior border parallel to the chest wall (Bentel). The couch kick itself is the superior match. A 20 cm superior–inferior length at SAD 100 cm is θ = arctan(10/100) = arctan(0.1000) = 5.710593°, about 5.7°, and that angle stays on the couch. The collimator does not receive it, and the couch does not set the posterior width. Posterior divergence into lung is the gantry angle, or a half-beam jaw. Centimeters of lung on the central axis are the central lung distance, usually about 2–3 cm.
+
+### Q13
+Stem: A tangent DRR shows 2.6 cm of lung along the central axis, measured from the posterior border to the chest wall. Which description fits?
+A. Central lung distance of 2.6 cm, inside the usual range of about 2–3 cm
+B. Central lung distance of 2.6 cm, short of a usual range of about 5–6 cm
+C. Anterior flash of 2.6 cm, longer than the usual 1.5–2 cm of flash
+D. A couch kick of 2.6°
+Answer: A
+Objective: IV.3
+Why: Central lung distance is the lung included along the central axis inside the posterior border. The usual range is about 2–3 cm, and 2.6 cm sits in that range. A usual range of 5–6 cm would accept too much lung. Anterior flash is the 1.5–2 cm of beam past the skin, not this lung segment. A couch kick is an angle from the superior–inferior length, θ = arctan((L/2)/SAD), not a 2.6 cm lung measurement.
+
+### Q14
+Stem: Intact-breast tangents are drawn past the anterior skin. How much flash is usual?
+A. 0 cm, with the light field ending on the skin
+B. About 4–5 cm
+C. About 1.5–2 cm
+D. A centimeter margin equal to the couch-kick angle in degrees
+Answer: C
+Objective: IV.3
+Why: Usual anterior flash is about 1.5–2 cm, so the breast stays in the beam when the patient breathes or the setup shifts slightly. A 0 cm flash puts the field edge on the skin. About 4–5 cm is wider than that usual margin. Flash is a length. The couch kick is an angle, so a 5.7° kick is not 5.7 cm of flash.
+
+### Q15
+Stem: Isocentric breast tangents are set at SAD 100 cm with the isocenter at mid-separation. The separation is 22 cm. What is the SSD?
+A. 78 cm
+B. 89 cm
+C. 111 cm
+D. 22 cm
+Answer: B
+Objective: IV.3
+Why: With the isocenter at mid-separation, depth = separation / 2 = 22/2 = 11 cm. SSD = SAD − depth = 100 − 11 = 89 cm. Taking the whole separation as the depth gives 100 − 22 = 78 cm. Adding the depth to the SAD gives 100 + 11 = 111 cm. Reporting the separation itself gives 22 cm.
+
+### Q16
+Stem: Isocentric breast tangents are set at SAD 100 cm with the isocenter at mid-separation. The separation is 26 cm. What is the depth from the skin to the isocenter?
+A. 26 cm
+B. 87 cm
+C. 6.5 cm
+D. 13 cm
+Answer: D
+Objective: IV.3
+Why: Depth = separation / 2 = 26/2 = 13 cm. 26 cm is the full separation from one entrance to the other. SSD = SAD − depth = 100 − 13 = 87 cm, and 87 cm is the SSD. A quarter of the separation is 26/4 = 6.5 cm.
+
 ## Breast Tangent Calculation Mini-Quiz
 
 ### Q1
-Stem: Breast mini-quiz. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 10 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast mini-quiz. Gantry angle for the posterior border. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 10 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 2.9°
 B. 5.7°
 C. 87.1°
@@ -517,7 +597,7 @@ Objective: IV.3
 Why: Half the opening is 10/2 = 5 cm. The opposite-over-adjacent ratio is 5/100 = 0.0500. θ = arctan(0.0500) = 2.86°, which rounds to 2.9°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(10/100), gives 5.7°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/5) gives 87.1°. Reporting the ratio 0.0500 as though it were already in degrees gives 0.05°.
 
 ### Q2
-Stem: Breast mini-quiz. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 32 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast mini-quiz. Gantry angle for the posterior border. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 32 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 9.1°
 B. 17.7°
 C. 80.9°
@@ -537,7 +617,7 @@ Objective: IV.3
 Why: Half the opening is 19/2 = 9.5 cm. The opposite-over-adjacent ratio is 9.5/100 = 0.0950. θ = arctan(0.0950) = 5.43°, which rounds to 5.4°. A half-beam jaw (opening closed to the central axis on the match side) has zero divergence at that border, so the matching angle for that border is 0°. Using the full jaw opening in the arctan, arctan(19/100), gives 10.8°. Flipping the triangle to arctan(SAD / half-opening) = arctan(100/9.5) gives 84.6°. Reporting the ratio 0.0950 as though it were already in degrees gives 0.10°.
 
 ### Q4
-Stem: Breast mini-quiz. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 21 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast mini-quiz. Couch kick for the superior border. SAD is 100 cm and the jaw opening that diverges at the superior border of a symmetric tangent is 21 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 11.9°
 B. 6.0°
 C. 84.0°
@@ -554,10 +634,10 @@ C. 45°
 D. 0°
 Answer: D
 Objective: IV.3
-Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. You still may kick the couch for a different border, such as the posterior chest-wall edge. The superior match itself needs no extra collimator rotation when both fields are half-beamed at one isocenter. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
+Why: With the jaw on the central axis, the match border does not diverge: the edge lies on the central axis, so θ = arctan(0/SAD) = 0°. A symmetric superior opening would need a couch kick; this half-beam superior border does not. Posterior divergence into lung is a gantry angle or a half-beam jaw, not a couch kick. Correct choice: 0°. 5.7° is arctan(0.1), the angle for a symmetric 20 cm field at SAD 100 cm, which is the wrong geometry once the jaw is on the central axis. 10° treats a 0.1 ratio as degrees and also assumes a symmetric full field rather than a half-beam border. 45° is a common wedge or gantry number and is not the divergence of a half-beam match line.
 
 ### Q6
-Stem: Breast mini-quiz. SAD 80 cm. SAD is 80 cm and the jaw opening that diverges at the posterior border of a tangent is 24 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast mini-quiz. Gantry angle for the posterior border. SAD 80 cm. SAD is 80 cm and the jaw opening that diverges at the posterior border of a tangent is 24 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 16.7°
 B. 81.5°
 C. 8.5°
@@ -577,7 +657,7 @@ Objective: IV.3
 Why: Similar triangles: half-width grows in proportion to distance from the source. Extra = 11 × 8 / 100 = 88 / 100 = 0.8800 cm, reported as 0.88 cm. The half-width in that deeper plane would be 11 + 0.8800 = 11.8800 cm, which is a different quantity. Using the full field width instead of the half-width gives 1.76 cm. Inverting depth and SAD gives 137.50 cm. Reporting the full half-width at the deeper plane, not the extra divergence alone, gives 11.88 cm.
 
 ### Q8
-Stem: Breast mini-quiz. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 13 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
+Stem: Breast mini-quiz. Gantry angle for the posterior border. SAD is 100 cm and the jaw opening that diverges at the posterior border of a tangent is 13 cm, symmetric about the central axis. The rotation that follows that divergence is θ = arctan((jaw opening / 2) / SAD). What is θ to the nearest 0.1°?
 A. 7.4°
 B. 86.3°
 C. 0.07°
@@ -592,19 +672,19 @@ A. Couch kick, 5.7°
 B. Collimator, 5.7°
 C. Collimator, 11.3°
 D. No rotation, because a half-beam supraclavicular field still diverges
-Answer: B
+Answer: A
 Objective: IV.3
-Why: The superior–inferior length belongs to the collimator. Half the length is 10 cm. θ = arctan(10/100) = 5.71°, about 5.7°. The couch kick uses the posterior width, not this length. arctan(20/100) = 11.3° forgets the half-field. A half-beam supraclavicular border does not diverge; the tangent collimator is what lines up to it.
+Why: The superior–inferior length belongs to the couch kick. Half the length is 10 cm. θ = arctan(10/100) = 5.71°, about 5.7°. The collimator does not take this length; after the kick it only turns the posterior border parallel to the chest wall. The gantry angle uses the posterior width, not this length. arctan(20/100) = 11.3° forgets the half-field. A half-beam supraclavicular border does not diverge; the tangent couch kick is what lines the superior border up to it.
 
 ### Q21
 Stem: Isocentric tangents have a posterior opening of 16 cm at SAD 100 cm. Which rotation keeps that posterior border out of lung, and what is the angle?
 A. Collimator, 4.6°
-B. Couch kick, 9.1°
-C. Couch kick, 4.6°
-D. Couch kick, 0°, because the collimator angle already covers every border
+B. Gantry angle, 9.1°
+C. Gantry angle, 4.6°
+D. Couch kick, 4.6°
 Answer: C
 Objective: IV.3
-Why: The posterior width belongs to the couch kick. Half the opening is 8 cm. φ = arctan(8/100) = 4.57°, about 4.6°. The collimator is the superior match, a different rotation. arctan(16/100) = 9.1° uses the full opening.
+Why: The posterior width belongs to the gantry angle that makes the posterior edges coplanar. Half the opening is 8 cm. φ = arctan(8/100) = 4.57°, about 4.6°. A half-beam jaw on that border is the other way to keep it out of lung; this 16 cm opening is symmetric, so the edge is not on the central axis and the angle is not 0°. The couch kick uses the superior–inferior length, not this width. The collimator, after the couch kick, only turns the posterior border parallel to the chest wall. arctan(16/100) = 9.1° uses the full opening.
 
 ## Transmission, HVL, Linear Attenuation Coefficient
 

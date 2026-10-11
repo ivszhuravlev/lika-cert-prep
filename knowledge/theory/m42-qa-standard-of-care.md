@@ -76,7 +76,9 @@ Photon beam quality is \(\%dd(10)_x\): the percent depth dose at 10 cm for a 10�
 
 **Traps.** Three reviews, three questions: does the plan match the prescription, does the chart match the plan, does the image match the setup?
 
-**Sources.** AAPM TG-275 (plan and chart review) and the weekly chart-check cadence from TG-40 that items still test. TG-142 does not replace the chart check.
+**Structure names (TG-263).** A chart check can add a prior course only if the organ has one name. TG-263 writes targets as the structure, an underscore, and the dose in cGy with no space and no decimal: PTV_7000 is the planning target prescribed to 7000 cGy. Organs use one camel-case name and no space: SpinalCord, Lungs. Lungs is both lungs together. A unilateral lung is a different name. Three courses that call the cord “cord”, “Spinal Cord”, and “SpCord” will hide a prior dose. The name does not change the dose. It makes the dose findable.
+
+**Sources.** AAPM TG-275 (plan and chart review) and the weekly chart-check cadence from TG-40 that items still test. TG-142 does not replace the chart check. AAPM TG-263 for structure names.
 
 ## Record and Verify Systems and EMR
 
@@ -86,21 +88,22 @@ Photon beam quality is \(\%dd(10)_x\): the percent depth dose at 10 cm for a 10�
 
 ### Worked example
 
-**Given.** Breast tangents were planned with a collimator angle of 5.7° so the superior border follows a half-beam supraclavicular field (module 36). The record-and-verify collimator is 0.0°.
+**Given.** Breast tangents were planned with a couch kick of 5.7° so the superior border matches a half-beam supraclavicular field. The superior–inferior length is 20 cm at SAD 100 cm. The record-and-verify couch is 0.0°. The collimator does not create that superior match. The posterior border is set by the gantry or by a half-beam jaw.
 
-**Arithmetic.** The mismatch is \(5.7^\circ - 0^\circ = 5.7^\circ\). No tolerance of “a couple of degrees” is in play: the approved value is 5.7° and the loaded value is 0°.
+**Arithmetic.** The mismatch is \(5.7^\circ - 0^\circ = 5.7^\circ\). No tolerance of “a couple of degrees” replaces the approved couch angle.
 
-**Check.** \(\tan(5.7^\circ) \approx 0.10\), which is the 10 cm half-field at SAD 100 cm from the breast lesson. A collimator at 0° does not produce that match.
+**Check.** Half the superior–inferior length is \(20/2 = 10\) cm. At SAD 100 cm the ratio is \(10/100 = 0.10\), and \(\arctan(0.10) = 5.71^\circ\), reported as 5.7°. \(\tan(5.7^\circ) \approx 0.10\). That triangle is the couch kick. A couch left at 0° leaves the superior border diverging. Rotating the collimator does not remove that superior divergence.
 
-**Result means.** Treat the mismatch as a setup error. Loading 0° reintroduces the divergence the collimator angle was there to remove. The dosimetrist does not “fix it at the machine” by editing the plan without a new check.
+**Result means.** Treat the mismatch as a setup error. Loading a couch of 0° puts the superior border back on a diverging edge. The posterior lung border is a different border: gantry angle, so the posterior edges are coplanar, or a half-beam jaw. It is not this 5.7° kick, and it is not a collimator rotation. The dosimetrist does not “fix it at the machine” by editing the plan without a new check.
 
 **Wrong turns**
 
 - Assuming the record-and-verify database cannot drift from the exported plan.
 - Overriding an interlock to match an accessory the plan does not have (wedge in the tray, factor not in the MU: module 34).
 - Documenting the change only in a hallway conversation. The EMR has to hold the approved plan.
+- Calling the 5.7° a collimator angle for the superior match, or assigning it to the gantry as the posterior lung border. The couch uses the superior–inferior length. The posterior border is the gantry or a half-beam.
 
-**Traps.** Read every parameter the stem lists, not only MU. Energy 10 MV loaded against 6 MV planned is the same class of error.
+**Traps.** Read every parameter the stem lists, not only MU. Energy 10 MV loaded against 6 MV planned is the same class of error. A couch of 0° against a 5.7° kick is the same class of error.
 
 **Sources.** Clinical record-and-verify practice under TG-142 (accessories and interlocks) and TG-275 (chart contents).
 
@@ -163,6 +166,22 @@ at the same MU, same energy, same cone, at the calibration depth.
 
 **What the exam expects:** The medical dosimetrist does not prescribe. The radiation oncologist prescribes dose, fractionation, and the medical intent. The dosimetrist designs the plan inside that prescription, calculates, documents, and participates in checks. The medical physicist checks the plan and the machine. Changing 2 Gy × 25 into a different fractionation is a prescription change even when the physical total looks similar.
 
+**What the practice includes.** The work is the plan and the record of the plan, inside a prescription someone else wrote.
+
+- Treatment planning: beam arrangement, apertures, weights, and the dose distribution that meets the written prescription.
+- Monitor-unit calculations, including a calculation a second person can check.
+- Brachytherapy planning: source placement, dwell times, and the dose to the target and to organs, still under the written directive.
+- Quality-assurance participation: plan checks, chart checks, and measurements the physicist assigns. Participation is not the signature on the machine calibration.
+- Simulation: immobilization, scan limits, setup marks, and the shifts treatment will reproduce.
+- Documentation: prescription, structures, beams, dose, and the calculation record in the chart.
+- Education: teaching students and staff, and the dosimetrist’s own continuing education.
+
+**Signatures.** The physician signs the prescription and approves the plan as the medical order. The medical physicist signs the plan check and the machine calibration. A dosimetrist’s calculation does not replace either signature.
+
+**CMD.** Certified Medical Dosimetrist (CMD) is the credential from the Medical Dosimetrist Certification Board. Keeping it requires continuing education on the cycle the board sets. The credential shows the person met the exam standard. It does not create an independent prescriber, and it does not move the physician’s or the physicist’s signature onto the dosimetrist.
+
+**Ethical limit.** Do the work you are competent to do, document it honestly, and stop at the edge of the prescription. Do not change a dose so the DVH looks cleaner, do not hide a mismatch, and do not sign a document that belongs to the physician or the physicist. When the request crosses that line, hand it back to the person whose license covers it.
+
 ### Worked example
 
 **Given.** A physician has prescribed 2.0 Gy × 25 fractions. A colleague suggests the dosimetrist “just change it” to 1.8 Gy × 28 fractions so the total looks the same.
@@ -185,7 +204,7 @@ at the same MU, same energy, same cone, at the calibration depth.
 
 **Traps.** Helpful calculation is in scope. Choosing the dose is not.
 
-**Sources.** AAMD Scope of Practice and Practice Standards. The prescription is the physician’s under state medical practice and under the clinic’s standard of care.
+**Sources.** AAMD Scope of Practice and Practice Standards, including the ethical limit on independent prescription. MDCB certification and continuing education for the CMD credential. The prescription is the physician’s under state medical practice and under the clinic’s standard of care. The physicist’s signature covers the plan check and the calibration.
 
 ## Measurement Equipment (Diodes, ion chambers, TLD, Survey Meters)
 
@@ -243,7 +262,7 @@ C_{TP} = \left(\frac{273.2+24.0}{273.2+22.0}\right) \times \left(\frac{760}{750}
 
 **Objectives:** VII.7
 
-**What the exam expects:** RO-ILS (Radiation Oncology Incident Learning System, ASTRO and AAPM) is the voluntary national incident-learning system. It is not a regulator and it is not a punishment log. Near misses are reported. Root-cause analysis asks how the process let the error through. Process improvement changes that step (a forcing function, a checklist, a second calculation) rather than stopping at “be more careful.”
+**What the exam expects:** RO-ILS (Radiation Oncology Incident Learning System, ASTRO and AAPM) is the voluntary national incident-learning system. It is not a regulator and it is not a punishment log. Near misses are reported. Root-cause analysis asks how the process let the error through. Process improvement changes that step (a forcing function, a checklist, a second calculation) rather than stopping at “be more careful.” TG-100 scores that process with failure-mode and effects analysis. A medical event under 10 CFR 35.3045 is a required report, separate from RO-ILS.
 
 The public lesson title spells the acronym ROILS. The system’s name is RO-ILS.
 
@@ -267,6 +286,16 @@ The public lesson title spells the acronym ROILS. The system’s name is RO-ILS.
 **Traps.** Separate three layers: care for the patient and the physician’s dose decision, the clinic’s incident review, and a voluntary RO-ILS submission.
 
 **Sources.** ASTRO/AAPM RO-ILS program description (voluntary incident learning). Standard root-cause and process-improvement practice in the clinic’s quality program.
+
+### Process improvement (TG-100 and FMEA)
+
+TG-100 applies failure-mode and effects analysis to the radiotherapy process. Map the steps from simulation through planning, the plan check, record-and-verify, and treatment. For each step, list how it can fail. Score severity, occurrence, and detectability. Detectability is scored so a failure nobody would notice gets a high number. The risk priority number is the product of the three scores. Work on the high products first: a forcing function, a second check, or a checklist that makes the miss visible. Adding the same output test to every high score is not the method. A near miss that is severe and hard to detect is a reason to change the process, which is the same idea as the RO-ILS example above.
+
+### Medical event (10 CFR 35.3045)
+
+A medical event is a regulatory miss, not a voluntary learning report. For these items, 10 CFR 35.3045 is met when the delivered dose differs from the prescription by about 20% or more of the total dose, or by about 50% or more of a single fraction, or the dose went to the wrong site or the wrong patient. The regulation also requires the absolute dose to clear a threshold, on the order of 0.05 Sv effective dose or 0.5 Sv to an organ, so a trivial absolute error is not automatically an event. On an external-beam course the percentage lines are the ones that decide.
+
+The report is a telephone call to the regulator within about 24 hours of discovery (by the next calendar day) and a written report within about 15 days. The referring physician and the patient are notified as well. A RO-ILS submission does not replace that report, and the regulatory report does not replace the clinic’s root-cause review.
 
 ## Factors and Limitations of Deliverable Plans
 
@@ -306,7 +335,23 @@ The public lesson title spells the acronym ROILS. The system’s name is RO-ILS.
 - Optical distance indicator (ODI): commonly 2 mm.
 - Weekly chart checks (the chart lesson above).
 
-Simulation QA uses the same spirit: lasers, field size, and ODI within the mechanical tolerance before a patient is marked. A failed interlock stops the day even when output is perfect.
+Mechanical and beam checks in the same report, beyond output, the ODI, and the door:
+
+- Lasers (daily): 2 mm, 1.5 mm for IMRT, and 1 mm for SRS. TG-142 puts SBRT on that same 1 mm laser line.
+- Light-field and radiation-field coincidence: 2 mm.
+- Jaw position (symmetric): 2 mm.
+- Gantry angle and collimator angle indicators: 1°.
+- MLC: a picket-fence test. A leaf that is out shows as a jog in the fence line. The fence is the leaf-position check. It does not replace patient-specific IMRT QA.
+- Flatness and symmetry: 1% (monthly profile constancy, and the annual change from baseline).
+- Radiation isocenter, the annual coincidence of the radiation and mechanical isocenters: 2 mm, and 1 mm for SRS.
+- Imaging-to-treatment isocenter: at or under 2 mm, and at or under 1 mm for SRS/SBRT.
+- Winston–Lutz: at or under 1 mm. A small ball at isocenter is imaged through a small field at several angles. The offset of the ball from the field center is the miss.
+- Wedge-factor constancy, the annual transmission check: 2%.
+- Electron energy, monthly: 2 mm or 2% on the depth index (often \(R_{50}\)) against baseline.
+
+A daily output of 2.8% can pass while a 1.8 mm laser on an IMRT unit fails (tolerance 1.5 mm). Name the test and the machine class (non-IMRT, IMRT, SRS/SBRT) before you pick the number. A failed interlock stops the day even when output is perfect.
+
+**CT simulation (TG-66).** The simulator has its own constancy tests. Water is held near 0 HU (constancy on the order of 5 HU, not tens). A drift of tens of HU changes the CT-to-density table and therefore the calculated dose. Air stays near −1000 HU. Lasers have to meet the imaging plane, commonly within about 2 mm. If they do not, every tattoo and every shift written from that scan is biased. Couch travel and indexing are checked so a shift marked on the scan is the shift treatment will use. An index that is off by several millimeters is a failed couch check. Simulation still also confirms field size and the optical distance before a patient is marked.
 
 ### Worked example
 
@@ -323,20 +368,22 @@ Simulation QA uses the same spirit: lasers, field size, and ODI within the mecha
 - Applying the 3% daily window to the annual TG-51 comparison, where the expectation is about 1%.
 - Calling a 15 mm ODI error “within 2 cm” and treating. The tolerance is 2 mm.
 - Skipping the interlock because the output was 2.8%.
+- Using the 3% daily output window as the tolerance for lasers, jaws, flatness, or the wedge factor.
+- Using the non-IMRT laser tolerance (2 mm) on an IMRT unit (1.5 mm) or an SRS unit (1 mm).
 
-**Traps.** Say which check it is (daily, monthly, annual) before you pick 3%, 2%, or 1%.
+**Traps.** Say which check it is (daily, monthly, annual) before you pick 3%, 2%, or 1%. Say which machine class it is before you pick 2 mm, 1.5 mm, or 1 mm.
 
-**Sources.** AAPM TG-142 for linear-accelerator QA tolerances (daily interlock and output constancy, monthly output, annual absolute dose). ODI tolerance of 2 mm is the common mechanical tolerance these items use. Weekly chart review as in TG-40 / TG-275.
+**Sources.** AAPM TG-142 for linear-accelerator QA tolerances (daily interlock and output constancy, monthly output, annual absolute dose, and the mechanical, MLC, imaging, and wedge checks above). ODI tolerance of 2 mm is the common mechanical tolerance these items use. Weekly chart review as in TG-40 / TG-275. AAPM TG-66 for CT-simulator HU constancy, lasers, and couch. Winston–Lutz at or under 1 mm for the SRS isocenter check.
 
 ## QA and Standard of Care Quiz
 
 **Skills this quiz checks**
 
 - TG-51: water, \(N_{D,w}\), \(k_Q\), \(\%dd(10)_x\) for photons, \(R_{50}\) for electrons.
-- TG-142: daily interlock, daily output about 3%, monthly output about 2%, annual TG-51 about 1%, ODI about 2 mm, plus a weekly chart check.
+- TG-142: daily interlock, daily output about 3%, monthly output about 2%, annual TG-51 about 1%, ODI about 2 mm, plus lasers 2 mm (1.5 mm IMRT, 1 mm SRS), light/radiation coincidence 2 mm, jaw 2 mm, gantry and collimator angle 1°, picket fence, flatness and symmetry 1%, radiation isocenter 2 mm (1 mm SRS), imaging-to-treatment isocenter at or under 2 mm (at or under 1 mm for SRS/SBRT), Winston–Lutz at or under 1 mm, wedge factor 2%, electron energy 2 mm or 2%. TG-66: HU constancy, lasers, and couch. Plus a weekly chart check.
 - IMRT QA: gamma and ion chamber are both required; one can pass while the other fails.
 - Electron cutout factor measured for small fields, and placed in the MU denominator.
-- AAMD scope: the dosimetrist does not prescribe.
-- RO-ILS is voluntary incident learning; root cause is the process.
+- AAMD scope: planning, monitor units, brachytherapy planning, QA participation, simulation, documentation, and education. The dosimetrist does not prescribe. The physician and the physicist sign. CMD is kept with continuing education. The ethical limit is the prescription.
+- RO-ILS is voluntary incident learning; root cause is the process. TG-100 ranks failures by severity × occurrence × detectability. A medical event (about 20% of the total dose, about 50% of a fraction, wrong site, or wrong patient) is a telephone report within about 24 hours and a written report within about 15 days.
 - Deliverability: MLC travel, small segments, collision, modulation, gantry speed versus dose rate.
-- Record-and-verify parameters match the plan, including accessories and angles.
+- Record-and-verify parameters match the plan, including accessories, SSD, shift sign, and angles. The breast 5.7° example is a couch kick from a 20 cm superior–inferior length, not a collimator angle.

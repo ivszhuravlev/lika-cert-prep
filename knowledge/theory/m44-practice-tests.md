@@ -62,7 +62,7 @@ Fifteen original items. Calibration, whenever an MU is required: **1.0 cGy/MU at
 
 6. Two photon fields on the skin, lengths 24 cm and 12 cm, both at SSD 100 cm. Skin gap so the geometric edges meet at 5.0 cm depth.
 
-7. Breast tangent length 24 cm at SAD 100 cm. Collimator angle so the superior border follows a half-beam supraclavicular field. State the assumption.
+7. Breast tangent length 24 cm at SAD 100 cm. Couch kick so the superior border follows a half-beam supraclavicular field. State the assumption.
 
 8. A shield is exactly two HVLs thick. Incident dose 80 cGy. Transmitted dose?
 
@@ -150,13 +150,13 @@ Check: \(0.60+0.30 = 0.90\).
 
 Meaning: light fields are 0.90 cm apart on the skin so the geometric edges meet at 5 cm. A zero gap overlaps at depth. Half-beam match borders would have used gap 0 instead of this formula.
 
-**7. Breast collimator**
+**7. Breast couch kick**
 
 \(\theta = \arctan((0.5 \times 24)/100) = \arctan(0.12) = 6.84^\circ\).
 
 Check: \(\tan(6.84^\circ) \approx 0.12\).
 
-Assumption: the supraclavicular field is half-beam blocked inferiorly, so its inferior border does not diverge, and the tangent length is the superior–inferior opening at isocenter. This matches borders. It is not a lung DVH. The couch kick uses the tangent width, not this 24 cm length.
+Assumption: the supraclavicular field is half-beam blocked inferiorly, so its inferior border does not diverge, and the tangent length is the superior–inferior opening at isocenter. The couch kick uses this 24 cm length. The posterior border is a gantry or half-beam adjustment. This matches borders. It is not a lung DVH.
 
 **8. Two HVLs**
 
