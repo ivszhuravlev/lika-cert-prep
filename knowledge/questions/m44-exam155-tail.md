@@ -342,7 +342,7 @@ C. 20%
 D. 10%
 Answer: D
 Objective: VI
-Why: Percent = 5 / 50 × 100 = 10%. Check: 0.10 × 50 = 5 mSv. 1% of 50 mSv would be 0.5 mSv, not the 5 mSv trigger. 5% of 50 mSv would be 2.5 mSv. 20% of 50 mSv would be 10 mSv. The monitoring sentence is the 10% sentence, which is 5 mSv, and the occupational ceiling remains 50 mSv.
+Why: Percent = 5 / 50 × 100 = 10%. Check: 0.10 × 50 = 5 mSv. The 1% choice treats the public annual limit as if it were already the percent. The 5% choice stops at the 5 in 5 mSv and never divides by 50. The 20% choice is the medical-event total-dose percent, which is a different rule. The monitoring sentence is 10% of 50 mSv, which is the 5 mSv badge trigger. The occupational ceiling remains 50 mSv.
 
 ### Q35
 Stem: For a secondary barrier, head leakage at 1 m is what fraction of the useful beam?
@@ -492,7 +492,7 @@ C. at or under 1 mm
 D. at or under 0.5 mm
 Answer: C
 Objective: VII
-Why: The Winston-Lutz result used here is at or under 1 mm. At or under 2 mm matches the ODI and the non-SRS lasers, not this isocenter test. At or under 5 mm is wider than 1 mm. At or under 0.5 mm is tighter than the criterion used here. A Winston-Lutz result of 1.5 mm would fail the 1 mm line even though 1.5 mm is under the 2 mm ODI tolerance.
+Why: The Winston-Lutz result used here is at or under 1 mm. At or under 2 mm matches the ODI and the non-SRS lasers, not this isocenter test. At or under 5 mm is wider than 1 mm. At or under 0.5 mm is tighter than the criterion used here. A result that fails 1 mm still fails this test when it would have passed the 2 mm ODI tolerance. The two checks are not interchangeable.
 
 ### Q50
 Stem: On the total-dose test used here, a medical event is a delivered dose that differs from the prescribed total by about which amount?
