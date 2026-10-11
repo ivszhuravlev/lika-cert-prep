@@ -4,5 +4,6 @@ dist/
 *.log
 agent-tools/
 progress/
+.env
 __pycache__/
 *.pyc
