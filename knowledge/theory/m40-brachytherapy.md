@@ -8,8 +8,8 @@ Nuclides these items name:
 
 | Source | Half-life | Role on the exam | Energy to remember |
 | --- | --- | --- | --- |
-| Ir-192 | 73.8 days | HDR (and LDR) remote afterloading | mean energy about 0.38 MeV |
-| Cs-137 | 30 years | LDR tubes, historical GYN | 0.662 MeV |
+| Ir-192 | 73.8 days | HDR (and LDR) remote afterloading | mean energy about 0.38 MeV (about 380 keV) |
+| Cs-137 | 30 years | LDR tubes, historical GYN | 0.662 MeV (662 keV) |
 | I-125 | 59.4 days | permanent seeds | about 28 keV |
 | Pd-103 | 17.0 days | permanent seeds | about 21 keV |
 | Co-60 | 5.26 years | external beam and some HDR | about 1.25 MeV |
@@ -22,6 +22,10 @@ HDR means a dose rate at the prescription point of at least 12 Gy/h. LDR is roug
 **Objectives:** V.1, I.7
 
 **What the exam expects:** Match the nuclide to the job (HDR Ir-192, LDR Cs-137, I-125 and Pd-103 seeds). Use half-life for remaining activity. Use mean life only when the question is total dose from complete decay. Autoradiography checks whether activity is uniform along a source or a ribbon.
+
+**Core facts**
+
+Energies to memorize, the same numbers as the table: Ir-192 about 380 keV mean, Cs-137 662 keV, I-125 about 28 keV, Pd-103 about 21 keV. Ir-192 is the HDR nuclide. Cs-137 is the historical LDR tube. I-125 and Pd-103 are the permanent seeds. Pd-103 is the softer and the shorter-lived of those two seeds.
 
 **Formulas**
 
@@ -84,6 +88,14 @@ Autoradiography: a film or detector under a wire or a seed ribbon. Uniform black
 
 **Point A** is 2 cm superior to the external cervical os and 2 cm lateral to the uterine canal. It is a geometry point, not a structure you contour on MRI, though modern plans also dose a target volume. **Point B** is 5 cm from the patient’s midline at the same superior level (3 cm lateral to point A) and stands in for the pelvic sidewall lymph nodes in the Manchester system.
 
+ICRU 38 bladder and rectum points are film points, not contoured volumes. The bladder point uses a Foley balloon filled with 7 cm³ of contrast. On the anterior radiograph the point is the center of the balloon. On the lateral radiograph it is the posterior surface of the balloon. The rectum point is 5 mm behind the posterior vaginal wall, on the midline, at the level of the middle of the ovoids.
+
+GEC-ESTRO correlates used in this bank are volume doses. Coverage is HR-CTV D90, the dose that covers 90% of the high-risk clinical target volume (residual gross disease plus the cervix at the time of brachytherapy). Rectum D2cc is often held near 65–75 Gy EQD2. Bladder D2cc is held near 80–90 Gy EQD2. D2cc is the dose to the hottest 2 cm³ of that organ. These are the correlates this bank uses.
+
+Prescriptions to memorize: vaginal cuff HDR is 7 Gy × 3 at 0.5 cm from the cylinder surface. Cervix HDR is often 7 Gy × 4, or 5.5 Gy × 5. One common prostate HDR boost is 13.5 Gy × 2. I-125 monotherapy is 145 Gy. Pd-103 monotherapy is 125 Gy. An I-125 eye plaque is 85 Gy to the apex.
+
+TRAK, total reference air kerma, is the sum over sources of (reference air-kerma rate times duration). It indexes the application at the reference distance. It is not the tumor dose and not point A.
+
 A vaginal cylinder prescribes at a stated depth in tissue from the cylinder surface, often 5 mm. Distance from a central source to that point is cylinder radius plus that depth.
 
 The full TG-43 dose rate is in the calculations lesson. The geometry term alone, for a point source, is
@@ -124,6 +136,8 @@ with \(r_0 = 1\) cm. Anisotropy \(F\) and radial dose \(g(r)\) are still missing
 **Objectives:** V.2, I.5
 
 **What the exam expects:** HDR uses a remote afterloader: the source is driven out of a shielded safe, through transfer tubes, into the applicator, and then retracted. The operator is outside the room. LDR Cs-137 was manual or remote; permanent seeds are implanted and stay. After an HDR fraction the source must be confirmed retracted by the unit **and** by a survey of the patient.
+
+The source steps along the catheter and dwells (stops) at each planned position. Dwell time at a stop is the dose from that stop divided by the dose rate there. The times loaded for treatment are the times decayed to the treatment date. Before the source leaves the safe, check the transfer-tube length against the plan: a long or short tube shifts every dwell even when the times are numerically right. The survey meter is on before the source is sent out. After the source returns, survey the patient and compare the reading with background. The emergency kit has long tongs and a shielded container for a source that will not park. AAPM TG-56 is the brachytherapy physics code of practice. AAPM TG-59 is the HDR treatment-delivery report. Those names are the whole of the tolerance story in this note. There is no tolerance table here.
 
 ### Worked example
 
@@ -176,6 +190,10 @@ with \(r_0 = 1\) cm. Anisotropy \(F\) and radial dose \(g(r)\) are still missing
 **Objectives:** V.6, V.2
 
 **What the exam expects:** An independent check of dwell time from prescription dose and dose rate at the point, plus a decay correction from the calibration date. The second person uses the source strength, the day, and the distance, not a copy of the planner’s MU-style scratch work.
+
+**Core facts**
+
+Dwell time is the dose divided by the dose rate at that dwell. The plan time used on the machine is that time decayed to the treatment date. A source that has decayed since calibration is weaker, so the dwell gets longer if the prescribed dose stays the same. Leaving the calibration-day times in place underdoses. Mean life is not this correction. Mean life is the permanent-implant integral.
 
 **Formulas**
 
@@ -275,6 +293,16 @@ e^{-0.07512} = 0.9276
 
 A sealed-source leak test is due on the regulatory interval (commonly six months for many sources). The usual pass criterion is 185 Bq, which is 0.005 µCi. A higher reading means the source is leaking and is removed from use.
 
+A written directive (10 CFR 35.40) is dated and signed by the authorized user before the treatment, and it names the patient. The teaching contents are the nuclide and the site, plus either the dose or the activity and the time. Before an HDR fraction the directive states the radionuclide, the treatment site, the dose per fraction, the number of fractions, and the total dose. Before a temporary LDR implant it states the radionuclide, the site, and the dose. If that LDR order is written as activity instead of dose, it states the total source strength and the exposure time. Before a permanent seed implant it states the radionuclide, the site, and the total source strength.
+
+A medical event (10 CFR 35.3045), in the usual teaching form, is treatment of the wrong patient, a dose to the wrong site, or a delivered dose that differs from the prescribed dose by the regulatory threshold: about 20% of the prescribed dose, or about 50% of a single fraction. Report it verbally in about 24 hours and in writing in about 15 days.
+
+Patient release (10 CFR 35.75) is allowed when the total effective dose equivalent to any other individual is not likely to exceed 5 mSv.
+
+The authorized user is the physician on the license who signs the written directive and is responsible for the administration. The authorized medical physicist calibrates the source, prepares and checks the plan, and checks the dwells. The radiation safety officer runs the safety program: inventories, leak tests, surveys, and the reports the license requires.
+
+The inventory idea in this bank is quarterly: a physical count of each brachytherapy source, with its nuclide, nominal activity, and location. That count is not the six-month leak test. After an HDR fraction, survey the patient once the source has returned to the safe. Do not treat the console light as that survey.
+
 ### Worked example
 
 **Given.** A leak test measures 300 Bq. The limit in the stem is 185 Bq (0.005 µCi).
@@ -305,12 +333,18 @@ A sealed-source leak test is due on the regulatory interval (commonly six months
 - Require both a retracted-source indicator and a post-treatment patient survey.
 - Read a seed assay against the order and an autoradiograph.
 - Separate NRC states from agreement states without dropping the survey or leak-test requirement.
+- Match Ir-192 about 380 keV, Cs-137 662 keV, I-125 about 28 keV, and Pd-103 about 21 keV.
+- Place the ICRU 38 bladder and rectum points, and use this bank’s GEC-ESTRO correlates: HR-CTV D90, rectum D2cc near 65–75 Gy EQD2, bladder D2cc near 80–90 Gy EQD2.
+- Recognize vaginal cuff 7 Gy × 3 at 0.5 cm, cervix 7 Gy × 4 or 5.5 Gy × 5, prostate HDR 13.5 Gy × 2, I-125 145 Gy, Pd-103 125 Gy, and an I-125 eye plaque of 85 Gy to the apex.
+- State the written-directive contents, the medical-event teaching thresholds (about 20% of the prescribed dose, or about 50% of a fraction) and the report clocks (about 24 hours verbal, about 15 days written), and patient release at 5 mSv.
 
 ## Brachytherapy Calculations
 
 **Objectives:** V.6, V.1
 
 **What the exam expects:** Write the TG-43 dose-rate equation with every symbol, evaluate it at a point, and compute permanent-implant total dose as initial dose rate times 1.443 times half-life. Units of dose rate and half-life have to match.
+
+Air-kerma strength is the source specification in this equation. 1 U = 1 µGy m²/h = 1 cGy cm²/h. A microgray times a square meter is the same product as a centigray times a square centimeter. Apparent activity, in mCi or Ci, is a derived label on some source certificates. This bank does not use a single mCi-per-U factor. If a problem wants activity, the stem gives the activity. Do not multiply a strength in U by a constant written per mCi.
 
 **TG-43**
 
@@ -319,7 +353,7 @@ A sealed-source leak test is due on the regulatory interval (commonly six months
 \]
 
 - \(\dot{D}(r,\theta)\): dose rate at distance \(r\) and angle \(\theta\)
-- \(S_K\): air-kerma strength (U, that is µGy m² h⁻¹)
+- \(S_K\): air-kerma strength, the source specification. 1 U = 1 µGy m² h⁻¹ = 1 cGy cm² h⁻¹. Apparent activity is a derived label, not a second definition of U
 - \(\Lambda\): dose-rate constant (cGy h⁻¹ U⁻¹), converts strength to dose rate at the reference point in water
 - \(G(r,\theta)\): geometry function. For a point source, \(G = 1/r^2\)
 - \(G(r_0,\theta_0)\): geometry function at the reference point, usually \(r_0 = 1\) cm and \(\theta_0 = 90^\circ\) (transverse axis). Call this \(G_0\)
@@ -395,6 +429,9 @@ D = 10.0 \times 1.443 \times 408
 - Compute permanent-implant total dose with 1.443 and a half-life in the dose rate’s time unit.
 - Reject the half-life-only product (the 4080 cGy pattern) and reject mean life on a short HDR decay.
 - Keep mCi and U from being multiplied by the wrong constant.
+- State 1 U as 1 µGy m²/h and as 1 cGy cm²/h, and keep apparent activity as a label rather than a universal mCi-per-U factor.
+- Take dwell time as dose divided by dose rate at the dwell, with the plan time decayed to the treatment date.
+- Define TRAK as the sum over sources of reference air-kerma rate times duration.
 
 ## Exposure Rate Calculation Tutorial
 

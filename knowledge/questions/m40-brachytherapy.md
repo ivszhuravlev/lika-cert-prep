@@ -286,11 +286,11 @@ Why: Units already match, so mean life in days is 1.443 × 60 = 86.5800 days. To
 Stem: Independent check. Γ is stated per mCi, and 10000 mCi is the activity used here. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 10000 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
 A. 469.00 R/h
 B. 4.69 R/h
-C. 0.00 R/h
+C. 4.69 mR/h
 D. 1.17 R/h
 Answer: B
 Objective: V.6
-Why: Substitute 4.69 × 10000 / (100)^2 = 46900 / 10000 = 4.690000 R/h, reported as 4.69 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 469.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.00 R/h. Doubling the distance inside the square (a 2× distance error) gives 1.17 R/h.
+Why: Substitute 4.69 × 10000 / (100)^2 = 46900 / 10000 = 4.690000 R/h, reported as 4.69 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 469.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 4.69 mR/h. Doubling the distance inside the square (a 2× distance error) gives 1.17 R/h.
 
 ## Surveying (background pre and post implant, shielding, bedside dose)
 
@@ -308,11 +308,11 @@ Why: Net = post − background = 0.18 − 0.03 = 0.15 mR/h. A survey that forget
 Stem: Bedside survey estimate. Activity and Γ are given. Distance is 100 cm. The exposure-rate constant Γ is 4.6 R·cm²/(mCi·h). Activity is 5000 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
 A. 2.30 R/h
 B. 230.00 R/h
-C. 0.00 R/h
+C. 2.30 mR/h
 D. 0.58 R/h
 Answer: A
 Objective: V.4
-Why: Substitute 4.6 × 5000 / (100)^2 = 23000 / 10000 = 2.300000 R/h, reported as 2.30 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 230.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.00 R/h. Doubling the distance inside the square (a 2× distance error) gives 0.58 R/h.
+Why: Substitute 4.6 × 5000 / (100)^2 = 23000 / 10000 = 2.300000 R/h, reported as 2.30 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 230.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 2.30 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.58 R/h.
 
 ### Q3
 Stem: A bedside distance of 40 cm. The 100 cm reading is the starting value. Inverse square only. The value is 1.2 mR/h at 100 cm from the source. What is it at 40 cm if only inverse square changes?
@@ -648,11 +648,11 @@ Why: Physical dose = 4 × 7 = 28 Gy. Relative effectiveness = 1 + 7/10 = 1 + 0.7
 Stem: Tutorial. 10 Ci converted already to 10000 mCi, at 100 cm. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 10000 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
 A. 469.00 R/h
 B. 4.69 R/h
-C. 0.00 R/h
+C. 4.69 mR/h
 D. 1.17 R/h
 Answer: B
 Objective: V.6
-Why: Substitute 4.69 × 10000 / (100)^2 = 46900 / 10000 = 4.690000 R/h, reported as 4.69 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 469.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.00 R/h. Doubling the distance inside the square (a 2× distance error) gives 1.17 R/h.
+Why: Substitute 4.69 × 10000 / (100)^2 = 46900 / 10000 = 4.690000 R/h, reported as 4.69 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 469.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 4.69 mR/h. Doubling the distance inside the square (a 2× distance error) gives 1.17 R/h.
 
 ### Q2
 Stem: Tutorial. Same source at 50 cm. The exposure-rate constant Γ is 4.69 R·cm²/(mCi·h). Activity is 10000 mCi. Distance is 50 cm. Exposure rate X = Γ A / d². What is X?
@@ -717,9 +717,9 @@ Why: Substitute 13.07 × 2 / (30)^2 = 26.14 / 900 = 0.029044 R/h, reported as 0.
 ### Q8
 Stem: Tutorial. Γ = 4.60, 2500 mCi, 100 cm. The exposure-rate constant Γ is 4.6 R·cm²/(mCi·h). Activity is 2500 mCi. Distance is 100 cm. Exposure rate X = Γ A / d². What is X?
 A. 115.00 R/h
-B. 0.00 R/h
+B. 1.15 mR/h
 C. 0.29 R/h
 D. 1.15 R/h
 Answer: D
 Objective: V.6
-Why: Substitute 4.6 × 2500 / (100)^2 = 11500 / 10000 = 1.150000 R/h, reported as 1.15 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 115.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 0.00 R/h. Doubling the distance inside the square (a 2× distance error) gives 0.29 R/h.
+Why: Substitute 4.6 × 2500 / (100)^2 = 11500 / 10000 = 1.150000 R/h, reported as 1.15 R/h. If the activity had been given in curies, it would need ×1000 to become mCi before using a per-mCi gamma constant. Moving the point and applying inverse square is the same d² already in this formula. Forgetting to square the distance gives 115.00 R/h. Dividing an extra 1000, as if the activity were still in curies after it was already converted to mCi, gives 1.15 mR/h. Doubling the distance inside the square (a 2× distance error) gives 0.29 R/h.
