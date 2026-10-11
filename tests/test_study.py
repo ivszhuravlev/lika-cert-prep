@@ -4,6 +4,8 @@ from pathlib import Path
 from study.bank import find_module, load_modules, parse_number
 from study.cli import check
 from study.engine import Progress, grade_number, ordered, road_prompt
+from study.telegram_bot import russian
+from study.translate import Translator
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,6 +45,50 @@ class StudyTest(unittest.TestCase):
         for _ in range(3):
             progress.record(item.id, True)
         self.assertNotEqual(ordered(module.items, progress, ear_only=True)[0].id, item.id)
+
+
+class Echo:
+    def complete(self, messages, max_tokens=500):
+        return messages[-1]["content"]
+
+
+class Russian:
+    def complete(self, messages, max_tokens=500):
+        return "Радиоактивность. half-life 73.8"
+
+
+class TranslationTest(unittest.TestCase):
+    def test_english_echo_is_labeled_a_failure(self):
+        import study.telegram_bot as bot
+
+        path = Path("/tmp/lika-ru-echo.json")
+        if path.exists():
+            path.unlink()
+        bot._translator = Translator(Echo(), path)
+        text = "Activity is not dose."
+        self.assertEqual(bot._translator(text), text)
+        self.assertFalse(path.exists())
+        shown = russian({"ru": True}, text)
+        self.assertTrue(shown.startswith("Перевод не получился"))
+        self.assertIn(text, shown)
+
+    def test_cached_english_is_not_served_as_russian(self):
+        import study.telegram_bot as bot
+
+        path = Path("/tmp/lika-ru-bad-cache.json")
+        path.write_text('{"Activity is not dose.": "Activity is not dose."}', encoding="utf-8")
+        bot._translator = Translator(Echo(), path)
+        shown = russian({"ru": True}, "Activity is not dose.")
+        self.assertTrue(shown.startswith("Перевод не получился"))
+
+    def test_real_russian_keeps_the_number(self):
+        path = Path("/tmp/lika-ru-ok.json")
+        if path.exists():
+            path.unlink()
+        translator = Translator(Russian(), path)
+        out = translator("half-life is 73.8 days")
+        self.assertIn("73.8", out)
+        self.assertIn("Радиоактивность", out)
 
 
 if __name__ == "__main__":
