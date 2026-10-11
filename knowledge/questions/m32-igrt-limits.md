@@ -54,6 +54,66 @@ Answer: B
 Objective: II.6
 Why: Answer B. The cameras see the surface they were calibrated to. Correlation between that surface and an internal structure is an assumption, and it breaks if the patient achieves the same chest height with a different internal pose. Surface guidance can coach a breath hold, can beam-hold when the surface leaves tolerance, and can report an anterior shift. None of that is an image of the internal mammary chain or of the heart.
 
+### Q20
+Stem: The planning CT is head-first supine. The cone-beam is feet-first. Registration reports 0 mm on bone. What is the correct use of that match?
+A. Treat; a 0 mm bone result means head-first and feet-first are the same setup
+B. Treat after changing only the left-right sign of a zero shift
+C. Do not treat on that match; a feet-first cone-beam is not the head-first plan, and 0 mm on bone does not make the orientations the same
+D. Treat if the monitor units match, because orientation is outside image guidance
+Answer: C
+Objective: II.6
+Why: Answer C. Head-first supine and feet-first are opposite directions on the couch and in the image frame. A reported 0 mm can be a bone overlay of the wrong orientation. It does not show that the patient is in the planned position. The beam stays off until a cone-beam is acquired in the planned orientation and matched again. Monitor units do not repair the direction of the patient.
+
+### Q21
+Stem: A target is contoured on an MRI slice at the edge of the field, beside a sinus, and copied to the planning CT. The bone match at the center of the head is 1 mm. Which limit does that match leave in place?
+A. None; distortion is largest at the isocenter and zero at the edge
+B. None; a 1 mm bone match certifies every peripheral pixel
+C. None; the MRI pixel values are the electron-density grid
+D. Geometric distortion from the gradients and from the air-tissue interface, which can move the target edge by millimeters
+Answer: D
+Objective: II.6
+Why: Answer D. Gradient nonlinearity grows toward the edge of the field, and susceptibility shifts boundaries at air and metal. The central bone match does not measure that local error. MRI values are not density. The edge has to be checked on the CT before the contour is used for planning.
+
+### Q22
+Stem: A tonsil cone-beam is matched with one clip box that weights the skull base and the dropped shoulders equally. The shoulders sit lower than they did at simulation. Where does that rigid match put the error?
+A. On the tonsil, because the shoulders pull the single transform off the target
+B. Nowhere; the skull and the shoulders cannot move relative to each other
+C. Only on the humeral heads, while the tonsil stays fixed by definition
+D. Into a deformable shift that the couch can deliver
+Answer: A
+Objective: II.6
+Why: Answer A. One rigid correction cannot satisfy two regions that have moved apart. Sharing the match with the dropped shoulders moves the tonsil off the plan in order to improve anatomy that is not the target. The clip box belongs on the stable bones next to the tonsil. The couch still applies a rigid shift, not a warp.
+
+### Q23
+Stem: A six-degree match calls for 3° of roll. The couch can only translate, so the roll is not applied and the translations are. What remains?
+A. No rotational error, because an ignored rotation is deleted from the patient
+B. The roll that was calculated and not delivered
+C. A new planning CT written by the couch move
+D. An energy change of 3 MV
+Answer: B
+Objective: II.6
+Why: Answer B. A rotation you measure and then do not apply is still in the setup, and it grows with distance from the match point. Translations do not cancel it. The couch does not create a new planning CT and it does not change the energy. Re-image after a reset, or apply the rotation only on a couch and a protocol that allow it.
+
+### Q24
+Stem: Rectal gas has moved the prostate 0.6 cm anterior to the plan. The pelvic nodes have stayed with the bone, and the bone residual is 0.1 cm. One couch translation is used to center the prostate. What does that single shift leave unresolved?
+A. The ability to move the prostate by 0.6 cm
+B. Recording the translation in the shift log
+C. The fact that the correction is rigid
+D. The nodes, which did not move with the prostate, so one translation cannot restore both
+Answer: D
+Objective: II.6
+Why: Answer D. The gland and the nodes are no longer one rigid object. Centering the prostate leaves the nodes about 0.6 cm off the bone-based plan, and a bone match leaves the prostate off. The couch can apply the translation, and the log can store it. It cannot undo the deformation between prostate and nodes.
+
+### Q25
+Stem: During a prostate fraction the surface-guidance cameras report the skin within 1 mm. A cone-beam from the same session shows a distended rectum and a shifted gland. What has the surface system failed to show?
+A. The anterior position of the skin it is tracking
+B. A beam-hold when that skin leaves the tolerance
+C. The internal move of the prostate relative to the surface
+D. An anterior coordinate for the skin
+Answer: C
+Objective: II.6
+Why: Answer C. The cameras see the surface they were aimed at. Rectal filling can displace the prostate while the skin trace still passes. Surface guidance can still report that skin position and can hold the beam when the surface leaves tolerance. It does not image the gland.
+
 ## Accuracy and Limitations of IGRT Mini-Quiz
 
 ### Q1

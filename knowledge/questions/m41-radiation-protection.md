@@ -158,6 +158,46 @@ Answer: D
 Objective: VI.3
 Why: (1/2)^n = 0.0625. n = ln(0.0625) / ln(1/2) = 4.0000, so n = 4 HVL. Check: 2^4 = 16, and 1/16 = 0.0625. Reporting the denominator of the transmission fraction as if it were the HVL count gives 16 HVL. Taking half of the true HVL count gives 2.0 HVL. 3.3 HVL confuses one TVL (about 3.3 HVL, transmission 0.1) with this HVL count.
 
+### Q20
+Stem: A secondary barrier is a wall the useful beam does not strike. Which contributions is it designed to shield?
+A. The useful beam alone, with leakage omitted
+B. Head leakage and patient scatter
+C. Only the wedge transmission inside the treatment head
+D. The door’s neutron capture, with patient scatter omitted
+Answer: B
+Objective: VI.3
+Why: Head leakage and patient scatter are the two secondary sources this wall is built for. Leakage leaves the head in all directions while the beam is on. Scatter leaves the patient. The useful beam is the load on a primary barrier. A wedge factor belongs in the monitor-unit calculation.
+
+### Q21
+Stem: Leakage from the treatment head is present whenever the beam is on, including when the gantry points at a different wall. Which use factor is used for that leakage term?
+A. U = 1
+B. U = 0.25, taken from a cardinal primary wall
+C. U = 0, because leakage is excluded from the workload
+D. U equal to the occupancy factor of the corridor
+Answer: A
+Objective: VI.3
+Why: Leakage does not stop when the useful beam is aimed elsewhere, so the leakage use factor is 1. A primary cardinal wall may have U = 0.25 because the useful beam points there only part of the time. Using that 0.25 on leakage makes the required transmission too large and the secondary barrier too thin. Occupancy T is a separate factor from U.
+
+### Q22
+Stem: A survey measures 0.08 mSv in one hour at 30 cm from a source housing. Which posting matches that reading?
+A. High radiation area, because 0.08 mSv in one hour at 30 cm is above 1 mSv in one hour at 30 cm
+B. Very high radiation area, because 0.08 mSv exceeds 5 Gy in one hour at 1 m
+C. Caution, radiation area: 0.08 mSv in one hour at 30 cm is above 0.05 mSv in one hour at 30 cm and below 1 mSv in one hour at 30 cm
+D. No posting, because 0.08 mSv in one hour at 30 cm is below 0.05 mSv in one hour at 30 cm
+Answer: C
+Objective: VI.3
+Why: A caution radiation area is a reading above 0.05 mSv in one hour at 30 cm. A high radiation area begins above 1 mSv in one hour at 30 cm. 0.08 mSv in one hour at 30 cm is above 0.05 and below 1, so the posting is caution, radiation area. Very high radiation area is above 5 Gy in one hour at 1 m.
+
+### Q23
+Stem: Primary transmission is B = P d² / (W U T). P and W are both given in Gy/week. What is B?
+A. A weekly dose, in Gy/week, because P is in Gy/week
+B. A weekly dose per square meter
+C. A concrete thickness in centimeters
+D. A dimensionless transmission; the Gy/week in P and in W cancel
+Answer: D
+Objective: VI.3
+Why: P and W carry the same dose unit, so that unit cancels in the ratio. B is the fraction of the incident radiation the barrier may let through. It is not a dose in Gy/week and it is not the wall thickness. Thickness is the number of tenth-value layers times the TVL, after B is known.
+
 ## Radiation Protection and Personnel Monitoring Quiz
 
 ### Q1

@@ -54,6 +54,66 @@ Answer: A
 Objective: II.2
 Why: A different notch shifts the patient relative to the isocenter by a fixed and easily missed distance. Lasers only report where the patient is; they do not undo a wrong index. Indexing is not a scan and it does not change HU.
 
+### Q20
+Stem: A prostate plan was scanned with a full bladder, as the setup note requires. On treatment the bladder is nearly empty and the tattoos still meet the lasers. What has changed inside the patient?
+A. Nothing that the beams see, because the external marks still match
+B. Small bowel can drop into the high-dose region, and the prostate is no longer in the planned place
+C. The bladder wall is reassigned the Hounsfield number of cortical bone
+D. The beam must be changed from 6 MV to 18 MV to cover the empty bladder
+Answer: B
+Objective: II.2
+Why: Bladder filling is part of the position. An empty bladder lets bowel fall toward the target and moves the prostate relative to the beams that were planned on a full bladder. Lasers on the tattoos do not restore that internal anatomy. The CT numbers and the energy are unchanged.
+
+### Q21
+Stem: A belly board was used so that, prone, small bowel would fall out of a posterior pelvic field. The same board is used with the patient supine. What is the setup now?
+A. The position the belly board is built for
+B. The same bowel geometry, with only the photograph changed
+C. A change of the beam from photons to electrons
+D. The wrong surface against the opening: bowel is no longer dropped out of the posterior beam, and the beams enter the opposite side from the plan
+Answer: D
+Objective: II.2
+Why: A belly board is a prone device. The opening lets bowel fall anteriorly, away from a posterior field. Supine puts that opening on the couch side and treats the opposite external surface from the simulated plan. The modality does not change.
+
+### Q22
+Stem: A lower-extremity plan is simulated feet-first supine because the gantry cannot clear the head. The scan is later opened with the department’s usual head-first orientation. What can that mismatch do?
+A. Reverse superior-inferior, and left-right with it, relative to the patient, while the limb contour still looks familiar
+B. Leave the geometry unchanged, because feet-first and head-first are the same DICOM orientation
+C. Change only the slice thickness
+D. Get corrected by the knee-rest notch, which replaces the orientation
+Answer: A
+Objective: II.2
+Why: Feet-first is a different patient orientation from head-first. Planning one as the other swaps the long axis and can swap laterality. The contour of a limb can still look plausible. An immobilization notch does not rewrite the orientation.
+
+### Q23
+Stem: A perineal setup leaves a deep skin fold closed over the target. Compared with the same skin laid flat, the dose inside the fold is:
+A. Lower, because the fold replaces a compensator
+B. The same, because skin dose is fixed by energy alone
+C. Higher, because skin against skin is self-bolus and removes the air the buildup region needs
+D. Zero until a physical wedge is added
+Answer: C
+Objective: II.2
+Why: A closed fold puts tissue against tissue. Megavoltage skin sparing assumes air beyond the surface. The fold raises the dose on that skin the way bolus does. Opening the fold is a dose decision. A wedge does not create or remove that contact.
+
+### Q24
+Stem: The plan uses 0.5 cm of bolus in contact with a chest-wall scar. At treatment the bolus tents over the scar and leaves an air gap. What does the calculation no longer describe?
+A. Only the billing code for the bolus
+B. The surface dose and the depth of maximum dose in the patient, because the bolus is no longer the entrance surface that was planned
+C. A wedge angle equal to the air-gap thickness
+D. The decay of the photon beam
+Answer: B
+Objective: II.2
+Why: Bolus changes dose when it touches the skin and fills buildup. An air gap puts the scar back toward the skin-sparing region, and the contour correction in the plan is for contact that is not there. The same monitor units do not restore that contact. Air is not a wedge, and a photon beam has no half-life.
+
+### Q25
+Stem: A head-and-neck mask is made with the arms at the sides and the shoulders pulled down. A thorax plan on a wing board puts the arms above the head. Why does each site keep its own arm position?
+A. Every site needs the arms above the head so the mask can be left off
+B. Shoulder height has no effect on a lateral neck beam
+C. Arm position selects 6 MV or 15 MV
+D. Arms down keep the shoulders out of the neck fields, and arms up keep the arms out of tangential and lateral chest beams
+Answer: D
+Objective: II.2
+Why: A raised shoulder sits in a lateral or anterior neck beam. An arm left on the chest or at the side sits in a tangent or a lateral thorax beam. The position is chosen so the beam path matches the plan. Energy does not follow the arm board.
+
 ## Patient Positioning Mini-Quiz
 
 ### Q1

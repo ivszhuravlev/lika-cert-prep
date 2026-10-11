@@ -54,6 +54,66 @@ Answer: A
 Objective: II.5
 Why: Answer A. When both images represent the same physical quantity, as two CTs do, voxels that correspond should have similar intensities, so a sum-of-squared-differences (or a similar mono-modality) metric is appropriate. MRI signal is not HU and is not linear with it, so corresponding tissues do not share a number. Mutual information scores how well one image's intensities predict the other's without assuming they are equal, which is why it is the standard CT-MRI metric. C invents a conversion that does not exist. D is wrong because intensity-based rigid and deformable registration is routine; surfaces are only one of the tools.
 
+### Q20
+Stem: A CT-MRI skull fusion looks acceptable on the blended display. A bony landmark next to the target is still 4 mm apart, and the PTV margin is 3 mm. What does that landmark result mean for drawing the target on the MRI?
+A. Draw it; a blend that looks smooth means the 4 mm gap is only a display artifact
+B. Do not draw it yet; 4 mm at the landmark next to the target is a systematic fusion error and is already larger than the 3 mm PTV
+C. Draw it; the 3 mm PTV was assigned to absorb a measured 4 mm fusion miss
+D. Discard the CT and calculate dose on the MRI so the 4 mm gap is no longer in the dataset
+Answer: B
+Objective: II.5
+Why: Answer B. A color wash can look smooth and still hide a few millimeters. The landmark beside the target is the check that matters. Tissue drawn on the MRI will land 4 mm from the CT voxels, and 4 mm is larger than this entire PTV margin. The margin is not a budget for a known fusion miss. Dose is calculated on the CT, so dropping the CT removes the density dataset.
+
+### Q21
+Stem: A rigid registration applies a 3° rotation and no translation about a point in the neck. A cord point lies 15 cm from that center. Using Δ = rθ with θ = 0.0524 rad, about how far does that point move?
+A. About 8 mm
+B. 3 mm, because a 3° rotation is a 3 mm shift at any distance
+C. 15 mm, which is the distance to the center
+D. 0.05 mm, which is the angle in radians read as millimeters
+Answer: A
+Objective: II.5
+Why: Answer A. Δ = 15 cm × 0.0524 = 0.786 cm, about 8 mm. A rotation that is small at the match point is a large miss at the end of a long target. Degrees are not millimeters, and the radian value is the angle, not the displacement.
+
+### Q22
+Stem: Two bony landmarks are 5.0 cm apart on the planning CT and 6.2 cm apart on the MRI. Which transform can make both distances true at once?
+A. A rigid registration inside a larger clip box
+B. A six-degree-of-freedom rigid registration, because six parameters include stretch
+C. A translation-only registration
+D. None that is rigid; one rigid transform preserves distance, so the 1.2 cm disagreement is distortion, deformation, or a misidentified point
+Answer: D
+Objective: II.5
+Why: Answer D. Rigid registration keeps distances inside the image the same. 5.0 cm on one scan cannot land on 6.2 cm on the other. Adding rotations does not add stretch, and a larger clip box does not change that. Find the bad point or the distortion before anyone contours through the pair.
+
+### Q23
+Stem: A surface registration of a diagnostic scan to the planning CT matches the skin. The target is a node several centimeters deep to that skin. What did the registration actually align?
+A. The node, because skin and a deep node are one rigid body at every site
+B. The Hounsfield numbers of the node
+C. The skin surface that entered the cost function; the node was not a landmark in that match
+D. The monitor units of the plan
+Answer: C
+Objective: II.5
+Why: Answer C. Surface registration solves the extracted surface. A close skin match says nothing reliable about a node deep to it. The transform does not edit CT numbers and it does not set monitor units.
+
+### Q24
+Stem: After a rigid bone match at the center of the head, an MRI contour near the edge of the field of view is copied onto the planning CT. The target sits next to sinus air. What still has to be checked?
+A. The target edge against the CT, because geometric distortion grows toward the periphery and near air, and dose is calculated on the CT
+B. Nothing; gradient nonlinearity is zero across a clinical MRI
+C. Nothing; MRI signal multiplied by 1000 is electron density
+D. Only a warp inside the air cavity, which removes distortion by definition
+Answer: A
+Objective: II.5
+Why: Answer A. Gradient nonlinearity increases away from the center, and susceptibility shifts boundaries at air, bone, and metal. A good central bone match does not certify the edge of the field. The MRI contour is usable after that edge has been checked on the CT. MRI values are not a density table.
+
+### Q25
+Stem: Fusion software solves only the three translations for a long cervicothoracic target. The center of the target is centered on the planning CT. What can remain wrong?
+A. Nothing; three translations already include pitch, roll, and yaw
+B. Nothing; centering one point centers the ends of a long target
+C. The Hounsfield scale of the CT
+D. A residual rotation that swings the superior and inferior ends while the center stays put
+Answer: D
+Objective: II.5
+Why: Answer D. Three translations are left-right, superior-inferior, and anterior-posterior. Pitch, roll, and yaw are the other three degrees of freedom. A solution that centers the middle of a long target can leave a rotation that moves the ends. That residual is geometric. It is not a change in CT number.
+
 ## Image Registration Mini-Quiz
 
 ### Q1

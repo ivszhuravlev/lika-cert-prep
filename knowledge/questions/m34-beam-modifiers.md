@@ -54,6 +54,46 @@ Answer: B
 Objective: IV.2
 Why: By definition the wedge factor is the transmitted fraction: dose with wedge / dose open, same MU and geometry. It is the number in the MU denominator. The MU multiplier is 1 over that factor. Correct choice: Dose with the wedge divided by dose without the wedge. That ratio is greater than 1 and is the MU multiplier, not the wedge factor itself. The angle names the isodose tilt. It is not the transmission. That expression is not a measured transmission.
 
+### Q20
+Stem: A 6 MV beam treats a chest-wall scar with 0.5 cm of tissue-equivalent bolus in contact with the skin. Compared with the same beam and no bolus, the skin dose:
+A. Falls, because bolus filters the beam the way a high-Z flattening filter does
+B. Rises, because the bolus fills buildup and moves dmax toward the surface
+C. Stays the same, because skin dose depends only on the monitor units
+D. Drops to zero once the bolus is 0.5 cm thick
+Answer: B
+Objective: IV.2
+Why: Bolus is tissue-equivalent material on the skin. It uses up part of the buildup region, so the skin under the bolus gets a higher dose and dmax lies shallower in the patient. It is not a high-Z filter, and it does not remove the entrance dose.
+
+### Q21
+Stem: A blocking tray that had been at the usual tray distance is moved until it sits close to the skin. For a megavoltage photon beam, the skin dose:
+A. Falls, because the tray absorbs every contamination electron
+B. Stays the same, because tray distance changes only the wedge angle
+C. Rises, because electrons set in motion in the tray can now reach the skin
+D. Falls by one tenth-value layer for each centimeter the tray moves closer
+Answer: C
+Objective: IV.2
+Why: The tray is a source of electron contamination in a megavoltage beam. At a normal tray distance many of those electrons are lost in air. Close to the skin they add dose in the buildup region, which is why a spoiler is placed near the patient when a higher skin dose is wanted. The tray distance is not the wedge angle, and a plastic tray is not a stack of lead tenth-value layers.
+
+### Q22
+Stem: A 6 MV beam that entered perpendicular to the skin is redirected so the entrance is oblique. The skin dose:
+A. Rises, because obliquity shortens buildup measured perpendicular to the skin and increases the entrance dose
+B. Falls, because a longer oblique path always restores full skin sparing
+C. Stays the same, because skin dose is fixed once the energy is chosen
+D. Falls to the exit dose of an 18 MV beam
+Answer: A
+Objective: IV.2
+Why: At an oblique entrance the buildup distance measured straight into the patient is shorter, and contamination electrons reach the surface more readily. Skin dose goes up. Energy does not freeze the surface dose, and the oblique 6 MV beam is still 6 MV.
+
+### Q23
+Stem: A posterior 6 MV beam passes through a carbon-fiber couch. No bolus is on the patient. Compared with the same posterior beam with the couch out of the path, the skin dose on the back:
+A. Falls, because carbon fiber compensates missing tissue
+B. Is zero, because a 6 MV beam has no entrance dose
+C. Stays the same, because a couch top does not affect a 6 MV beam
+D. Rises; the couch puts material and electron contamination in front of the skin, and no bolus is required for that increase
+Answer: D
+Objective: IV.2
+Why: A carbon-fiber couch is in the beam before a posterior entrance. That material generates electron contamination and removes some of the skin sparing, so the dose to the back rises even though no bolus was added. The couch is not a missing-tissue compensator, and 6 MV still has an entrance dose.
+
 ## Wedge Factor Calculation Tutorial
 
 ### Q1

@@ -158,6 +158,46 @@ Answer: D
 Objective: VII.4
 Why: The EMR holds the clinical record, and the R&V system holds the delivered parameters. Together they are what a later chart review can audit. Correct choice: In the EMR, tied to the delivered R&V record. Email is not the treatment record. The console note is not the legal record. DICOM moves the technical plan. The clinical prescription and delivery record still have to exist in the chart.
 
+### Q20
+Stem: The planning system shows 6 MV for the field. The record-and-verify field is armed for 18 MV. The monitor units match. Is the field ready?
+A. Yes; matching monitor units fix the depth dose
+B. Yes, if the cone-beam bone match is 0 mm
+C. Yes, after the wedge name is cleared
+D. No. The field is not ready. Energy is part of the approved plan, and 18 MV is not the planned 6 MV beam
+Answer: D
+Objective: VII.4
+Why: The record-and-verify energy has to be the planning energy. The same monitor units at 18 MV are a different depth dose and a different output from 6 MV. A bone match and a wedge label do not clear an energy mismatch. The field stays off until the armed energy is the approved 6 MV.
+
+### Q21
+Stem: Breast tangents were planned with a collimator angle of 5.7° so the superior border follows a half-beam supraclavicular field. The record-and-verify collimator is 0.0°. The monitor units match. What is the field status?
+A. Not ready; the loaded collimator is not the approved 5.7°
+B. Ready, because monitor units are the only record-and-verify parameter
+C. Ready, because 5.7° is within a 10° convenience tolerance
+D. Ready if the gantry is 0°
+Answer: A
+Objective: VII.4
+Why: The collimator angle is an approved plan parameter. 0.0° puts the superior border back on a diverging edge the 5.7° rotation was there to align. Matching monitor units does not apply that angle. There is no 10° tolerance that replaces the approved value, and the gantry angle is a separate parameter.
+
+### Q22
+Stem: The approved gantry for a posterior field is 180°. The record-and-verify field is armed at gantry 0°. The monitor units match. What should happen?
+A. Treat; 0° and 180° deliver the same entrance for a parallel-opposed plan
+B. Treat, because the monitor units already include the posterior depth
+C. Do not treat; gantry 0° is an anterior entrance and is not the approved posterior field
+D. Treat after doubling the monitor units to compensate for the flip
+Answer: C
+Objective: VII.4
+Why: Gantry angle selects which side of the patient the beam enters. 0° and 180° are opposite entrances. Matching monitor units at the wrong gantry treats the wrong path through the patient. Doubling the monitor units is not a geometry correction.
+
+### Q23
+Stem: The approved plan is an open 6 MV field with no wedge. The record-and-verify field has a 45° physical wedge in the path. The monitor units match the open-beam calculation. What is the status?
+A. Ready, because a wedge with matching monitor units is an open beam
+B. Not ready; the wedge is an accessory the plan does not have, and the open-beam monitor units would underdose through it
+C. Ready if the wedge factor is typed as 1 at the console without a record
+D. Ready, because a 45° wedge has wedge factor 1
+Answer: B
+Objective: VII.4
+Why: The record-and-verify accessory has to match the approved plan. A physical wedge that is not in the plan changes the dose per monitor unit and tilts the distribution. Open-beam monitor units through that wedge underdose the calculation point by about the wedge factor. A 45° angle is not a factor of 1, and an unrecorded edit is not an approved plan change.
+
 ## Treatment Beam QA Measurement and Analysis (eg IMRT, electron cutout factors)
 
 ### Q1

@@ -54,6 +54,66 @@ Answer: C
 Objective: II.6
 Why: Answer C. An action level is a clinic rule tied to the margin and the consequence of a miss, not a law of physics that is the same for every plan. A 3 mm residual is three times the entire PTV margin of the stereotactic case, so that couch is moved. The same 3 mm sits inside the 5 mm action level of a large palliative field whose margin is 1 cm. B invents a universal tolerance. D reverses the priority: large fields are more forgiving of a small shift, not less.
 
+### Q20
+Stem: Each day’s cone-beam is matched to the previous day’s cone-beam. Those two images agree within 1 mm. The planning CT is not in the match. What can that agreement hide?
+A. A drift of the isocenter away from the anatomy the dose was calculated on
+B. A wrong energy, which the cone-beam match measures directly
+C. A reset of the prescription dose
+D. Nothing; the latest cone-beam replaces the planning CT as the reference
+Answer: A
+Objective: II.6
+Why: Answer A. The reference for a cone-beam match is the planning CT in the simulated orientation. Matching today to yesterday lets a small residual walk the isocenter off the planned anatomy. The image does not read linac energy and it does not rewrite the prescription.
+
+### Q21
+Stem: The approved shift is 0.7 cm to the patient’s left. The couch is moved 0.7 cm to the patient’s right. What is the size of the geometric error?
+A. 0 cm, because both moves are on the left-right axis
+B. 0.7 cm, because the magnitude matched the plan
+C. 1.4 cm, the intended shift and the applied shift added in opposite directions
+D. A change in CT slice thickness only
+Answer: C
+Objective: II.6
+Why: Answer C. The correct move and the opposite move are each 0.7 cm, so the patient is 1.4 cm from the planned position. A matching number with the wrong sign is twice the intended correction. Slice thickness is a scan parameter, not this error.
+
+### Q22
+Stem: A breast plan was simulated in deep-inspiration breath hold. At treatment the surface trace is stable on the free-breathing average, and the beam is delivered at that level. What has the trace confirmed?
+A. That any stable surface is the simulated breath-hold anatomy
+B. The position of the free-breathing surface, which is not the inspiration level the plan used
+C. The monitor units
+D. That respiratory motion has stopped for the rest of the course
+Answer: B
+Objective: II.6
+Why: Answer B. Breath-hold and gating have to reproduce the simulated inspiration level or phase. A stable trace on the free-breathing average is a different chest position from the planning scan. Surface guidance does not check monitor units, and one stable reading does not end motion for later fractions.
+
+### Q23
+Stem: Daily kilovoltage images match three prostatic fiducials to their planned coordinates. Which statement fits that match?
+A. The markers are the GTV, so the gland is covered once the markers agree
+B. The match has also confirmed the energy and the monitor units
+C. Fiducials are invisible on kilovoltage images, so the match cannot be real
+D. The match localizes the markers; the gland is inferred from them, and a marker that has migrated no longer stands for the target
+Answer: D
+Objective: II.6
+Why: Answer D. A fiducial is a surrogate, not the GTV. If a marker migrates, a perfect match to that marker puts the isocenter on the marker and off the gland. High-Z markers are visible on kilovoltage radiographs. Energy and monitor units are record-and-verify parameters, not a result of the image match.
+
+### Q24
+Stem: Machine QA lists a 1 mm geometric tolerance for the imager. A stereotactic plan uses a 2 mm PTV margin and a departmental action level of 1 mm. How are those numbers related?
+A. The imager tolerance is a test that the imaging isocenter agrees with the treatment isocenter; the action level is the clinical rule for this plan
+B. The three numbers are interchangeable labels for one tolerance
+C. The PTV margin is the action level, so a 2 mm residual is inside the rule
+D. Passing the imager QA sets the PTV margin to zero
+Answer: A
+Objective: II.6
+Why: Answer A. A TG-142-style geometry test asks whether the imager and the machine isocenter coincide. The action level is the clinic’s rule for how large a shift must be corrected on this plan. The PTV margin is the volume grown for residual uncertainty. Passing one of those checks does not rewrite the others.
+
+### Q25
+Stem: A nasopharynx match proposes a 2° pitch and no translation. A supraclavicular node is 20 cm inferior to the match point. Using Δ ≈ rθ with 2° = 0.0349 rad, about how far does that pitch move the node, and what can a translation-only couch do?
+A. About 0.3 mm, so the pitch can be ignored on every target length
+B. 20 cm, the full distance to the node
+C. About 7 mm, and a couch that cannot rotate cannot apply that pitch
+D. 2 mm at any distance, because 2° means 2 mm
+Answer: C
+Objective: II.6
+Why: Answer C. 20 cm × 0.0349 = 0.70 cm, about 7 mm at the node. That is a real displacement at the end of a long field. A three-degree-of-freedom couch can apply translations only. The pitch is corrected by a couch that can rotate, within protocol, or the patient is reset. The angle in degrees is not a shift in millimeters.
+
 ## IGRT Mini-Quiz
 
 ### Q1
