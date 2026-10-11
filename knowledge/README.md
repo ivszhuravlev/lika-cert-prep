@@ -21,6 +21,19 @@ Paid DoseGrid notes and quizzes are not copied into this repo.
 | `questions/` | Original multiple-choice items, one file per module |
 | `commute/` | Options for studying by voice during the drive |
 
+## Local run
+
+Telegram is not connected. On the Mac:
+
+```bash
+python3 -m study list
+python3 -m study
+python3 -m study check
+python3 -m study voice-check
+```
+
+`теория` sends a lesson in chunks. `задачи` asks for a number and checks it against the stored solution. `квиз` is four choices. `вместе` is a paragraph, then three questions on that paragraph. `дорога` writes `progress/road-prompt.md`, a prompt to paste into a voice chat. That file contains only items that can be answered without a sheet. Misses are stored in `progress/lika.json` and come back first. A run of three correct answers drops that item from the frequent rotation.
+
 ## How a module file is shaped
 
 Theory: `theory/mNN-slug.md`
