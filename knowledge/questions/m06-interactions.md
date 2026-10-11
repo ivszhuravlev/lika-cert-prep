@@ -25,14 +25,14 @@ Objective: I.4
 Why: Compton interaction is with a loosely bound electron, so the probability per gram tracks electron density, not Z the way the photoelectric effect does. Z^3/E^3 is photoelectric. Z^2 and the 1.022 MeV threshold belong to pair production. Half-life is not an interaction cross section.
 
 ### Q3
-Stem: If Z is doubled and photon energy is unchanged, the photoelectric probability per atom changes by about a factor of:
+Stem: If Z is doubled and photon energy is unchanged, the photoelectric mass attenuation coefficient changes by about a factor of:
 A. 2
 B. 4
 C. 8
 D. 16
 Answer: C
 Objective: I.4
-Why: Photoelectric probability scales approximately as Z^3. 2^3 = 8. A factor of 2 is linear in Z. A factor of 4 is Z^2, the pair-production dependence. A factor of 16 is Z^4.
+Why: The mass attenuation coefficient for the photoelectric effect scales about as Z^3/E^3. Doubling Z multiplies it by 2^3 = 8. A factor of 2 is linear in Z. A factor of 4 is Z^2, which is closer to pair production per atom. A factor of 16 is Z^4, which is the per-atom photoelectric estimate, not the per-gram coefficient this stem asked for.
 
 ### Q4
 Stem: Pair production in the field of a nucleus:
@@ -53,6 +53,16 @@ D. The event must produce a 511 keV pair
 Answer: A
 Objective: I.4
 Why: Coherent scatter is an atomic, no-energy-transfer deflection. It contributes to diagnostic scatter, especially at low energy and higher Z, and it is negligible for absorbed dose at therapy energies. It is not neutron capture and it is not pair production.
+
+### Q6
+Stem: If Z is doubled and photon energy is unchanged, the photoelectric probability per atom changes by about a factor of:
+A. 2
+B. 8, because the mass coefficient goes as Z^3
+C. 4
+D. 16, from a Z^4 per-atom estimate
+Answer: D
+Objective: I.4
+Why: The atomic photoelectric cross section is steeper than the mass coefficient. A usual per-atom estimate is about Z^4, so doubling Z multiplies it by 16. The factor of 8 is 2^3, which belongs to the mass attenuation coefficient, not to this per-atom stem. Z^2 gives 4. Linear Z gives 2. Some tables use Z^5 per atom, which would be 32, and that is not one of these choices.
 
 ## Energy of Photons
 
@@ -146,7 +156,7 @@ C. 2.42 × 10^16 Hz
 D. 1.24 × 10^10 Hz
 Answer: A
 Objective: I.4
-Why: ν = c / λ = 3.00 × 10^8 / 1.24 × 10^(−10) = 2.42 × 10^18 Hz. 3.00 × 10^8 Hz is c, not a frequency of this photon. 2.42 × 10^16 Hz uses λ = 1.24 × 10^(−8) m, a hundred-fold length error. 1.24 × 10^10 Hz inverts c and λ the wrong way in spirit: it is not c/λ.
+Why: ν = c / λ = (3.00 × 10^8) / (1.24 × 10^(−10)) = 2.42 × 10^18 Hz. Written without parentheses, 3.00 × 10^8 / 1.24 × 10^(−10) is not that quotient. 3.00 × 10^8 Hz is c, not a frequency of this photon. 2.42 × 10^16 Hz uses λ = 1.24 × 10^(−8) m. 1.24 × 10^10 Hz is not c/λ.
 
 ### Q5
 Stem: An incident photon has wavelength 0.050 Å and Compton-scatters at 90°. The wavelength increases by 0.0243 Å. What is the scattered wavelength?
@@ -186,7 +196,17 @@ C. 49.6 keV
 D. 6.0 keV
 Answer: A
 Objective: I.4
-Why: λ = 3.00 × 10^8 / 6.00 × 10^18 = 5.00 × 10^(−11) m = 0.500 Å, because 1 Å = 10^(−10) m. E = 12.4 / 0.500 = 24.8 keV. The same result is hν with h = 4.14 × 10^(−15) eV·s: 4.14 × 10^(−15) × 6.00 × 10^18 = 2.48 × 10^4 eV. 12.4 keV uses λ = 1 Å. 49.6 keV doubles the correct energy. 6.0 keV treats the frequency’s leading digit as the energy.
+Why: λ = (3.00 × 10^8) / (6.00 × 10^18) = 5.00 × 10^(−11) m = 0.500 Å, because 1 Å = 10^(−10) m. E = 12.4 / 0.500 = 24.8 keV. Written without parentheses, 3.00 × 10^8 / 6.00 × 10^18 is not that quotient. The same result is hν with h = 4.14 × 10^(−15) eV·s: 4.14 × 10^(−15) × 6.00 × 10^18 = 2.48 × 10^4 eV. 12.4 keV uses λ = 1 Å. 49.6 keV doubles the correct energy. 6.0 keV treats the frequency’s leading digit as the energy.
+
+### Q9
+Stem: A 6.00 MeV photon undergoes pair production in the nuclear field. The kinetic energy shared by the electron and positron is:
+A. 6.00 MeV
+B. 5.49 MeV
+C. 4.98 MeV
+D. 3.96 MeV
+Answer: C
+Objective: I.4
+Why: Pair production spends 1.022 MeV creating the two rest masses. Shared kinetic energy is 6.00 − 1.022 = 4.978 MeV, about 4.98 MeV. 5.49 MeV subtracts only one 511 keV. 3.96 MeV subtracts 1.022 MeV twice. 6.00 MeV forgets the threshold.
 
 ## Interaction of Photons with Matter Quiz
 

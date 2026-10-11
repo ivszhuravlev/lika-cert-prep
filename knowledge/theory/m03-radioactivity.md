@@ -170,7 +170,7 @@ Remaining fraction after n half-lives is 1/2^n:
 | 5 | 0.03125 |
 | 10 | about 0.001 (1/1024) |
 
-Mean life τ = 1/λ = 1.443 T½. It is the average lifetime of a nucleus. In a permanent implant the source is left in place for complete decay, and the total dose equals the initial dose rate times the mean life. Exam arithmetic often rounds 1.443 to 1.44. This set uses 1.443, matching 1/0.693.
+Mean life τ = 1/λ = 1.443 T½. It is the average lifetime of a nucleus. In a permanent implant the source is left in place for complete decay, and the total dose equals the initial dose rate times the mean life. Exam arithmetic often rounds 1.443 to 1.44. When a stem says 1.44, use 1.44: the Cs-137 mean life is 43.2 years. When a stem says 1.443, use 1.443: that mean life is 43.3 years. Do not mix the two in one item.
 
 Effective half-life applies when biologic excretion and physical decay both remove activity from an organ:
 

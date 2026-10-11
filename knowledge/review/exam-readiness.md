@@ -28,4 +28,8 @@ Hand formulas in modules 3, 8, 33, 35, 36, and 40 have real number variants. Pra
 
 Khan is 90% ≈ E/3.2 and 80% ≈ E/2.8. Bentel is 90% ≈ E/4 and 80% ≈ E/3. The question file had those authors swapped, so the keyed answers taught Bentel's rule as Khan's. Fixed in m19 (header, Electrons 101 Q2 rationale and Q3 key, Electrons Quiz Q1 and Q2 keys, bolus item author), m25 (notes and Beam Energy Q4, now named Bentel), m31 (E/2 is not called Khan), m44 (80% E/3 named Bentel), and m45 notes. Internal eye shields are stated as about 9 MeV and below in m19 and m24.
 
-Domain reviewers for physics and calculations may still be reading. The remaining planning gaps (multicriteria optimization, TG-101 items, a second localization set) wait for those reports.
+## Corrected from the physics review
+
+The photoelectric item that said “per atom” and keyed a factor of 8 now asks for the mass attenuation coefficient (Z^3). A separate item asks for the per-atom estimate and keys 16 (Z^4). Wavelength rationales now parenthesize c/λ. The mean-life note says 1.44 gives 43.2 years and 1.443 gives 43.3 years. Added numeric items for I-125 recall, Ir-192 and Co-60 decay, Pd-103 total dose, a non-integer half-life, Mo-99/Tc-99m equilibrium, orthovoltage timer error, pair-production kinetic energy, magnification with depth, Mayneord F, Ptp, roentgen to air dose, HDR versus a linac, proton energy, SGRT, and kV versus MV contrast.
+
+The old items in modules 7 and 9–12 are still mostly keyed A. The added items use other letters. A full reshuffle of those files is still open because their rationales name the letter.

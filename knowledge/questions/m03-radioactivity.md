@@ -262,6 +262,16 @@ Answer: C
 Objective: I.1
 Why: Equilibrium of either kind needs a longer-lived parent so the daughter can be continuously fed. Here the daughter outlives the parent, so the parent disappears and the daughter then follows its own 20-hour half-life. There is no equilibrium activity ratio.
 
+### Q6
+Stem: Mo-99 half-life is 66 h and Tc-99m half-life is 6 h. Ignore branching. At transient equilibrium the daughter-to-parent activity ratio is closest to:
+A. 0.091
+B. 1.00
+C. 1.10
+D. 11
+Answer: C
+Objective: I.1
+Why: λ2/λ1 = 66/6 = 11. The equilibrium ratio is λ2/(λ2−λ1) = 11/(11−1) = 1.10. 0.091 is the parent-to-daughter decay-constant ratio. 1.00 is the secular limit, which needs a much longer parent. 11 is λ2/λ1, not the activity ratio.
+
 ## Modes of Radioactive Decay
 
 ### Q1
@@ -396,6 +406,36 @@ Answer: A
 Objective: I.7
 Why: Ra-223 is an alpha emitter with a half-life of 11.4 days. I-131 is a beta/gamma therapy nuclide (8 days). F-18 is a positron emitter for PET (110 minutes). P-32 is a pure beta emitter (14.3 days).
 
+### Q8
+Stem: A permanent prostate implant is planned with I-125. Which half-life is the recall value?
+A. 8 days
+B. 17 days
+C. 59.4 days
+D. 73.8 days
+Answer: C
+Objective: I.7
+Why: I-125 is recalled at 59.4 days. Seventeen days is Pd-103. 73.8 days is Ir-192. Eight days is I-131. The stem does not give the number, so the recall is the item.
+
+### Q9
+Stem: An Ir-192 HDR source is 10.0 Ci on the assay date. Treatment is 74 days later. Activity is closest to:
+A. 10 Ci
+B. 7.1 Ci
+C. 5.0 Ci
+D. 2.5 Ci
+Answer: C
+Objective: I.7
+Why: The recall half-life of Ir-192 is 73.8 days, so 74 days is one half-life and 10.0 Ci falls to 5.0 Ci. 7.1 Ci is about 0.707 × 10, which is half of one half-life. 2.5 Ci is two half-lives. Leaving the assay unchanged ignores decay.
+
+### Q10
+Stem: A Co-60 unit measures 150 cGy/min today. Output one month later from decay alone is closest to:
+A. 148 cGy/min
+B. 142 cGy/min
+C. 75 cGy/min
+D. 150 cGy/min
+Answer: A
+Objective: I.7
+Why: Co-60 half-life is 5.26 years, about 63.1 months. λ per month is 0.693/63.1 ≈ 0.0110. The remaining fraction is e^(−0.011) ≈ 0.989, and 150 × 0.989 = 148 cGy/min. 142 cGy/min is several percent, far too much for one month. 75 cGy/min is a half-life. 150 cGy/min ignores decay.
+
 ## Radioactivity Calculation Tutorial
 
 ### Q1
@@ -477,6 +517,16 @@ D. A = A0 × e^(+0.693 t / T½)
 Answer: A
 Objective: I.10
 Why: The remaining fraction is one-half raised to the number of half-lives, t/T½. Option B counts mean lives as if they were half-lives. Option C multiplies by the mean-life factor instead of cutting the activity in half. Option D uses a positive exponent, so the activity would grow.
+
+### Q9
+Stem: A permanent Pd-103 implant has an initial dose rate of 8.0 cGy/h. Use a recall half-life of 17 days and total dose = dose rate × 1.44 × half-life, with the half-life in hours. The total dose is:
+A. 4700 cGy
+B. 3264 cGy
+C. 2262 cGy
+D. 196 cGy
+Answer: A
+Objective: I.10
+Why: 17 days × 24 = 408 h. Mean life = 1.44 × 408 = 587.5 h. Total dose = 8.0 × 587.5 = 4700 cGy. 3264 cGy is 8.0 × 408, the half-life instead of the mean life. 196 cGy is 8.0 × 24.5, the mean life in days treated as if the dose rate were per day. 2262 cGy is about half of 4700, one extra factor of one-half.
 
 ## Radioactivity Quiz
 
@@ -621,6 +671,26 @@ D. 8 hours
 Answer: A
 Objective: I.10
 Why: 48 / 12 = 4 = 2^2, so two half-lives passed in 4 hours. T½ = 4 / 2 = 2 hours. Four hours is the clock time. One hour splits the interval into four. Eight hours doubles the clock time instead of dividing by the number of half-lives.
+
+### Q10
+Stem: A source assays 100 mCi. Ten days later it assays 70.7 mCi. The half-life is:
+A. 5 days
+B. 10 days
+C. 20 days
+D. 14.4 days
+Answer: C
+Objective: I.7
+Why: 70.7% is 1/sqrt(2), which is what remains after half of one half-life. Elapsed time 10 days is therefore 0.5 T½, so T½ = 20 days. Five days would leave 25% (two half-lives in 10 days). Ten days is the clock, not the half-life. 14.4 days is 1.44 × 10, a mean-life factor applied to the elapsed time.
+
+### Q11
+Stem: An I-125 seed assays 0.48 mCi. It is implanted one recall half-life later. Activity remaining, and the time after the assay, are closest to:
+A. 0.24 mCi at 59 days
+B. 0.24 mCi at 17 days
+C. 0.12 mCi at 59 days
+D. 0.48 mCi at 8 days
+Answer: A
+Objective: I.7
+Why: The recall half-life of I-125 is 59.4 days, about 59 days. One half-life leaves half of 0.48 mCi, which is 0.24 mCi. Seventeen days is Pd-103. 0.12 mCi is two I-125 half-lives. Eight days is I-131, and it would not leave the assayed activity unchanged.
 
 ### Q9
 Stem: λt = 0.30 and the initial activity is 100 mCi. Use e^(−0.30) = 0.741. What activity remains?

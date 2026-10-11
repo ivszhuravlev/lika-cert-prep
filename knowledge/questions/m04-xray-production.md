@@ -313,3 +313,13 @@ D. The photoelectric effect is the only interaction that can occur below 1 MeV.
 Answer: A
 Objective: I.4
 Why: Compton scatter dominates megavoltage interactions in soft tissue. At low diagnostic energy the photoelectric effect rises steeply with Z, which is why bone and iodine contrast so strongly while soft tissue at the same kV is much less photoelectric. Pair production is negligible in tissue at 6 MV. Coherent scatter deposits essentially no energy. Photoelectric absorption is not the only interaction below 1 MeV; Compton scatter is already important.
+
+### Q20
+Stem: An orthovoltage unit delivers 80 cGy on a 1.00 min setting and 180 cGy on a 2.00 min setting. Dose is proportional to (set time + δ). The setting that delivers a true 1.00 min of beam is:
+A. 0.80 min
+B. 1.00 min
+C. 1.20 min
+D. 1.40 min
+Answer: C
+Objective: I.2
+Why: 80 = R(1+δ) and 180 = R(2+δ), so 180/80 = 2.25 = (2+δ)/(1+δ). Then 2.25 + 2.25δ = 2 + δ, so 0.25 = −1.25δ and δ = −0.20 min. A true 1.00 min of beam needs set time + δ = 1.00, so the setting is 1.20 min. Check: R = 80/0.80 = 100 cGy/min, and 1.20 − 0.20 = 1.00 min. 0.80 min is the beam-on time of the 1.00 setting, not the setting that gives a full minute. 1.40 min overcorrects.

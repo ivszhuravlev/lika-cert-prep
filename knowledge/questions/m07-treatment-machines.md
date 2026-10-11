@@ -261,3 +261,23 @@ D. A mismatch changes the decay constant of the beam
 Answer: A
 Objective: I.5
 Why: Patients are set up to light and lasers. If those disagree with the radiation field or the central axis, the block or MLC edge will not fall where the plan shows it. Light does not measure HVL, and photon beams do not have a decay constant.
+
+### Q20
+Stem: Compared with a linac, a modern HDR unit is:
+A. A 6 MV beam metered in monitor units
+B. A single Ir-192 source, with time set by activity and dwell, not by monitor units
+C. A Co-60 source with dmax at 0.5 cm and a shutter timer
+D. A 200 MeV scanned proton beam
+Answer: B
+Objective: I.5
+Why: HDR uses one Ir-192 source stepped through dwell positions. The timer depends on source activity. Monitor units belong to a linac. Co-60 is a teletherapy gamma unit. A scanned 200 MeV beam is protons, not HDR.
+
+### Q21
+Stem: A clinical proton treatment beam is typically:
+A. 6–18 MeV with exponential attenuation like a photon beam
+B. About 150–250 MeV, a finite range, a Bragg peak, and a clinical RBE of 1.1
+C. Prescribed with the protection weighting factor 2 in place of RBE 1.1
+D. A cobalt spectrum from a 1 cm source
+Answer: B
+Objective: I.3
+Why: Therapy protons are hundreds of MeV so the Bragg peak can be placed in the patient. The clinical RBE used for dose is 1.1. A weighting factor of 2 is a protection quantity for protons, not the prescription RBE. 6–18 MeV is an electron band. Cobalt is not a proton beam.

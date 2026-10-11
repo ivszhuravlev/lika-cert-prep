@@ -219,3 +219,23 @@ D. 20 cm
 Answer: A
 Objective: I.10
 Why: HVL = 0.693 / μ = 0.693 / 0.1155 = 6.0 cm. 8.7 cm is the mean free path, 1/0.1155. 0.080 cm is 0.693 × 0.1155, the product instead of the quotient. 20 cm is about a tenth-value layer (2.30 / 0.1155 ≈ 19.9 cm), not a half-value layer.
+
+### Q20
+Stem: A 6 MV beam has dmax = 1.5 cm and PDD = 67.0% at 10 cm depth for 100 cm SSD. Mayneord’s F to 110 cm SSD gives a PDD closest to:
+A. 66.1%
+B. 67.0%
+C. 67.9%
+D. 73.7%
+Answer: C
+Objective: I.10
+Why: F = [(110+1.5)/(100+1.5)]^2 × [(100+10)/(110+10)]^2 = (111.5/101.5)^2 × (110/120)^2 = 1.207 × 0.840 = 1.014. PDD = 67.0 × 1.014 = 67.9%. Mayneord changes inverse square only, so the shift is small. 66.1% inverts F. 67.0% ignores the SSD change. 73.7% is 67 × 110/100, inverse square of SSD with no depth terms.
+
+### Q21
+Stem: An unsealed chamber is used at 24.0°C and 750 mmHg. The TG-51 reference is 22.0°C and 760 mmHg. Ptp is closest to:
+A. 0.980
+B. 1.006
+C. 1.020
+D. 1.091
+Answer: C
+Objective: I.10
+Why: Ptp = (273.2+24)/(273.2+22) × 760/750 = 297.2/295.2 × 1.0133 = 1.0068 × 1.0133 = 1.020. 0.980 inverts the correction. 1.006 is the temperature ratio alone. 1.091 is not this quotient.

@@ -187,3 +187,13 @@ D. 9.0 cm
 Answer: A
 Objective: I.6
 Why: m = 2, so image = 3.0 × 2 = 6.0 cm. 1.5 cm divides by 2. 9.0 cm multiplies by 3. The image of an object halfway from source to film is twice the object, not the object itself.
+
+### Q20
+Stem: SSD is 100 cm. A node is 10 cm deep. The film is 40 cm beyond the node. The node measures 6.8 cm on the film. True size is closest to:
+A. 4.5 cm
+B. 5.0 cm
+C. 6.8 cm
+D. 9.3 cm
+Answer: B
+Objective: I.6
+Why: Source-to-object distance is SSD plus depth, 110 cm, not the SSD alone. Source-to-film distance is 110 + 40 = 150 cm. Magnification is 150/110 = 1.364. True size is 6.8/1.364 = 5.0 cm. 4.5 cm uses SOD = 100 cm (150/100 = 1.5, 6.8/1.5 = 4.53). 6.8 cm forgets magnification. 9.3 cm multiplies by 1.364 instead of dividing.

@@ -187,3 +187,13 @@ D. 2
 Answer: A
 Objective: I.10
 Why: 150 cGy = 1.50 Gy, not 150 Gy. The ratio 150 / 1.50 = 100, which is the centi prefix. A factor of 10 would be a single decimal slip in the other direction. 1.44 is the mean-life factor and does not convert gray to centigray.
+
+### Q20
+Stem: A survey reads 10.0 R in air under equilibrium. Absorbed dose in air, using 0.876 rad/R, is:
+A. 0.876 cGy
+B. 8.76 cGy
+C. 10.0 cGy
+D. 87.6 cGy
+Answer: B
+Objective: I.10
+Why: 10.0 × 0.876 = 8.76 rad, and 1 rad = 1 cGy, so the air dose is 8.76 cGy. 0.876 cGy drops a factor of 10. 10.0 cGy treats the roentgen as a centigray. 87.6 cGy moves the decimal the other way.

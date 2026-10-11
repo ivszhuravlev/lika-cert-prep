@@ -261,3 +261,23 @@ D. Proof that the scanner pitch was zero
 Answer: A
 Objective: I.8
 Why: Metal saturates the detectors and beam-hardening and photon-starvation streaks assign false HU to nearby tissue. Dose calculated through those false densities can be wrong. The fix is an artifact-reduction reconstruction, a density override, or both, not a belief that every pixel is accurate.
+
+### Q20
+Stem: Surface guidance during treatment tracks the patient by:
+A. kV cone-beam CT
+B. An MV portal image
+C. Optical cameras on the skin, with no ionizing dose and no internal anatomy
+D. Ultrasound of the target
+Answer: C
+Objective: I.8
+Why: SGRT watches the surface with cameras. It adds no dose and it does not see the tumor. Cone-beam CT and MV images do add dose and do see internal anatomy. Ultrasound is a different guidance method.
+
+### Q21
+Stem: A pelvic bone match is hard on an MV portal image and easier on a kV image because:
+A. MV contrast is mostly Compton and kV contrast is still photoelectric
+B. MV photons stop in the patient
+C. The kV detector is the flattening filter
+D. Only the MV beam has a Bragg peak
+Answer: A
+Objective: I.8
+Why: At megavoltage energy Compton scatter dominates and bone-to-soft-tissue contrast falls. Kilovoltage imaging still has photoelectric absorption, so bone is bright. MV photons are not stopped in the patient the way a diagnostic beam can be. A flattening filter is not a detector. A Bragg peak belongs to protons.
