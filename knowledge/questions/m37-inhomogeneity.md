@@ -267,3 +267,13 @@ D. 180.0 cGy
 Answer: B
 Objective: IV.4
 Why: The point at 1.0 cm is (1.0 − 0.0) / (2.0 − 0.0) = 0.50 of the way from 0.0 cm to 2.0 cm. Factor = 0.85 + 0.50 × (0.96 − 0.85) = 0.85 + 0.50 × 0.11 = 0.85 + 0.055 = 0.905. Dose = 180 × 0.905 = 162.9 cGy. Just at the distal edge, 180 × 0.85 = 153.0 cGy. At 2.0 cm past the cavity, 180 × 0.96 = 172.8 cGy. Using the path-length dose with no rebuild-up factor gives 180.0 cGy. Near the cavity the dose is still short of the equivalent-path prediction because electron buildup has to start again.
+
+### Q17
+Stem: A coefficient of equivalent thickness is applied to a slab that is not water. The coefficient turns that slab into an equivalent thickness of which material?
+A. Air
+B. Water
+C. Lung
+D. Compact bone
+Answer: B
+Objective: IV.4
+Why: The coefficient of equivalent thickness replaces the physical thickness of an inhomogeneity with the thickness of water that would attenuate the beam the same way. It is a water-equivalent path, not an air path, a lung path, or a compact-bone path.
