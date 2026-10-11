@@ -281,3 +281,63 @@ D. Only the MV beam has a Bragg peak
 Answer: A
 Objective: I.8
 Why: At megavoltage energy Compton scatter dominates and bone-to-soft-tissue contrast falls. Kilovoltage imaging still has photoelectric absorption, so bone is bright. MV photons are not stopped in the patient the way a diagnostic beam can be. A flattening filter is not a detector. A Bragg peak belongs to protons.
+
+### Q30
+Stem: A target is drawn on MRI, FDG PET shows uptake, and the photon plan is calculated. Which data set supplies the electron density for the monitor units?
+A. The PET SUV grid, because SUV is absorbed dose in gray
+B. The planning CT, through the commissioned HU-to-density curve. MRI pixel values and PET uptake are not electron density
+C. The T2 MRI, rescaled so that water is 0 HU
+D. The fused stack, because CT, MRI, and PET are one density data set after registration
+Answer: B
+Objective: I.8
+Why: Answer B. Dose is calculated on the planning CT because the Hounsfield number is a kV attenuation value that the commissioned curve turns into density. MRI signal is not a Hounsfield number. PET uptake is activity concentration, not density. Fusion does not average the three into one density grid.
+
+### Q31
+Stem: What does each modality detect?
+A. CT detects proton spin, MRI detects 511 keV pairs, and PET measures Hounsfield units directly
+B. CT, MRI, and PET all measure the same kV linear attenuation coefficient
+C. CT measures kilovoltage x-ray attenuation, MRI measures a radiofrequency signal from protons in a magnetic field and deposits no imaging dose, and PET records two coincident 511 keV annihilation photons
+D. PET forms one 1.022 MeV photon with a lead collimator, and CT and MRI are that same coincidence scan
+Answer: C
+Objective: I.8
+Why: Answer C. Each annihilation photon is 0.511 MeV, and 0.511 × 2 = 1.022 MeV for the pair. The scanner records two photons in coincidence, not one photon of 1.022 MeV and not a lead-collimator image. CT is the attenuation map. MRI uses the magnetic field and radiofrequency, so the imaging itself is not an ionizing exposure.
+
+### Q32
+Stem: An F-18 FDG assay is 12.0 mCi. Injection is delayed 220 min. The recall half-life is 110 min. Which statement is right?
+A. 12.0 mCi remains, and that activity is the electron density stored by CT
+B. 6.00 mCi remains, and that value is the MRI pixel used for dose
+C. 3.00 mCi remains, and that activity is entered as the Hounsfield number of the tumor
+D. 3.00 mCi remains. That is activity. It is not a Hounsfield number and not an MRI pixel
+Answer: D
+Objective: I.8
+Why: Answer D. 220/110 = 2 half-lives, so the remaining fraction is (1/2)^2 = 0.250 and 12.0 × 0.250 = 3.00 mCi. 6.00 mCi is one half-life. 12.0 mCi ignores the delay. The 3.00 mCi result is still becquerels of tracer, not the CT number the density table reads and not the MRI gray value.
+
+### Q33
+Stem: MRI gray values are sent through the CT-to-density table, the PET SUV is used as the external contour, and the planning CT is not used. The dosimetric problem is:
+A. There is none. MRI and PET are calibrated in Hounsfield units, and SUV is relative electron density
+B. The density grid is meaningless. MRI signal is not HU, PET uptake is not density, and the planning CT is the data set that has to be converted to electron density
+C. The only repair is to calculate on the PET SUV and keep the CT as a photograph
+D. The pixels average themselves to water at 0 HU, so CT, MRI, and PET can be interchanged
+Answer: B
+Objective: I.8
+Why: Answer B. The monitor-unit calculation needs the planning CT and its density curve. An MRI number run through that curve assigns a nonsense density. An SUV contour is uptake, not the skin surface and not electron density. Averaging the three images does not create water at 0 HU.
+
+### Q34
+Stem: The CT used for PET attenuation correction contains a metal hip and streaks. Which statement is right?
+A. The artifact changes only MRI geometric distortion and leaves PET and the dose calculation untouched
+B. The artifact is removed by storing the metal CT number on the SUV scale
+C. The bad CT can place a false hot or cold spot on the attenuation-corrected PET, and those streak HU values still must not be used as tissue density. Dose stays on the planning CT with an override where the CT is spoiled
+D. The artifact proves that PET collected one 1.022 MeV photon rather than a 511 keV pair
+Answer: C
+Objective: I.8
+Why: Answer C. PET attenuation correction borrows the CT. Metal and a misregistered CT put false activity on the corrected PET. The same false HU values are not electron density, so the photon calculation uses the planning CT with a density override through the metal and the streaks. MRI distortion is a separate geometric problem, and SUV is not a repair for the CT number.
+
+### Q35
+Stem: Which statement separates the ionizing dose of the three imaging methods?
+A. MRI, CT, and FDG PET each deposit a therapeutic absorbed dose of the same order as a 2 Gy fraction
+B. Only MRI ionizes tissue. CT and PET are non-ionizing
+C. PET is non-ionizing because the photons are in coincidence, and CT is non-ionizing below 140 kV
+D. Planning CT uses kilovoltage x-rays and FDG PET involves 511 keV annihilation photons, so both are ionizing. MRI imaging itself is not
+Answer: D
+Objective: I.8
+Why: Answer D. CT is an x-ray attenuation scan, typically on the order of 80–140 kV. PET detects the 511 keV pair from positron annihilation, which is ionizing. MRI tips nuclear spins with radiofrequency in a magnetic field and does not deliver that imaging dose. None of the three is a 2 Gy treatment fraction.

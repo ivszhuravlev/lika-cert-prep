@@ -115,3 +115,63 @@ D. Required, because protons do not lose energy in tissue
 Answer: A
 Objective: I.9
 Why: Photon algorithms need electron density (and composition for the more advanced ones). Protons need relative stopping power. Both curves start from HU, but they are commissioned separately. Water is 0 HU, not 1000, and protons do lose energy, which is the Bragg peak.
+
+### Q30
+Stem: Air, with μ taken as 0, water, and a material with μ = 1.80 μwater have Hounsfield numbers:
+A. 0, +1000, and −1000
+B. −1000, 0, and +800
+C. −1024, +1, and +1800
+D. +1000, 0, and −800
+Answer: B
+Objective: I.9
+Why: Answer B. HU = 1000 × (μ/μwater − 1). Air gives 1000 × (0 − 1) = −1000. Water gives 0. The third voxel gives 1000 × (1.80 − 1) = +800. −1024 is a storage floor, not the definition of air. +1800 is 1000 × 1.80 with water not subtracted. The sign pattern that puts +1000 on air swaps air with the factor-of-two bone case.
+
+### Q31
+Stem: A voxel is stored as −250 HU. Its kV linear-attenuation ratio to water, μ/μwater, is:
+A. −0.250
+B. 1.250
+C. 0.750
+D. 250
+Answer: C
+Objective: I.9
+Why: Answer C. μ/μwater = 1 + HU/1000 = 1 + (−250)/1000 = 0.750. Air, at −1000 HU, has ratio 0. Water, at 0 HU, has ratio 1. A factor-of-two bone case, μ = 2 μwater, is +1000 HU and ratio 2. This voxel is none of those anchors. 1.250 is the ratio for +250 HU. −0.250 is HU/1000 with the water term omitted. 250 drops the formula.
+
+### Q32
+Stem: Cortical bone reads +1400 HU. Which statement is right for a megavoltage photon calculation?
+A. Use 2.40 as the electron density, because 1 + 1400/1000 is the commissioned density of bone
+B. Use 1400 as the mass density in g/cm³
+C. Use 0, because bone and water share the water anchor
+D. The kV attenuation ratio is 1 + 1400/1000 = 2.40, but the electron density has to come from the high-density limb of the CT-density curve. Photoelectric absorption still inflates bone at CT energy
+Answer: D
+Objective: I.9
+Why: Answer D. 1 + 1400/1000 = 2.40 is the kV linear-attenuation ratio to water, whose HU is 0. Air is −1000. That 2.40 is not automatically the relative electron density. Compton scatter dominates at treatment energy, so bone goes through the commissioned curve rather than through HU/1000. Using 1400 g/cm³ reads the Hounsfield number as a density, and 0 is the water anchor.
+
+### Q33
+Stem: A voxel has μ = 0.40 μwater. Its Hounsfield number, set beside air, water, and dense bone, is:
+A. +600, on the same side of the scale as cortical bone
+B. −600, between air at −1000 and water at 0, and far from bone near +1000 and above
+C. −1000, because every reading below water is defined as air
+D. 0, because the scanner stores every tissue as water
+Answer: B
+Objective: I.9
+Why: Answer B. HU = 1000 × (0.40 − 1) = 1000 × (−0.60) = −600. The attenuation ratio is 0.40, which is 1 + (−600)/1000. Air is −1000, water is 0, and μ = 2 μwater is +1000. −600 is a low-density lung-range value. +600 flips the sign and moves the voxel onto the bone side of water.
+
+### Q34
+Stem: List air, water, and a material with μ = 2.20 μwater, in that order:
+A. 0, −1000, and +2200
+B. −1024, +1000, and +2.20
+C. −1000, 0, and +1200
+D. +1200, 0, and −1000
+Answer: C
+Objective: I.9
+Why: Answer C. Air is −1000 and water is 0 by definition. HU = 1000 × (2.20 − 1) = +1200, which is the dense-bone side of the scale. +2200 is 1000 × 2.20 with water not subtracted. −1024 is a digital floor sometimes stored near air, not the physical HU of air. +2.20 drops the factor of 1000. +1000 in that list is what water becomes if the formula never subtracts 1, not this μ = 2.20 voxel.
+
+### Q35
+Stem: A 2.50 cm streak through soft tissue is stored as −1000 HU. For the hand estimate, take air as relative density 0 and soft tissue as relative density 1.0. If the streak is left as air instead of overridden to soft tissue, the water-equivalent thickness of that streak is:
+A. 2.50 cm either way, because −1000 HU is cortical bone
+B. 2.50 cm either way, because −1000 HU is water
+C. 5.00 cm when the air value is kept, because a negative HU doubles the path
+D. 0 cm while it is treated as air, versus 2.50 cm after an override to density 1.0. Keeping the air value under-attenuates, so dose beyond the streak is overestimated
+Answer: D
+Objective: I.9
+Why: Answer D. −1000 HU is air. Water is 0 HU. Dense bone is far above water, near +1000 and higher. Equivalent path is thickness × relative density, so 2.50 × 0 = 0 cm and 2.50 × 1.0 = 2.50 cm. The photon calculation that keeps the air value removes attenuation the tissue would have produced, and the predicted dose downstream is too high. 5.00 cm doubles the thickness. Calling −1000 HU water or bone uses the wrong anchor.

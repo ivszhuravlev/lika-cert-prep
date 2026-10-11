@@ -281,3 +281,63 @@ D. A cobalt spectrum from a 1 cm source
 Answer: B
 Objective: I.3
 Why: Therapy protons are hundreds of MeV so the Bragg peak can be placed in the patient. The clinical RBE used for dose is 1.1. A weighting factor of 2 is a protection quantity for protons, not the prescription RBE. 6–18 MeV is an electron band. Cobalt is not a proton beam.
+
+### Q30
+Stem: Which pairing of machine and dose control is right?
+A. A linac delivers dose by an Ir-192 dwell timer, an HDR unit counts monitor units, and a proton beam is prescribed in roentgen
+B. A linac counts monitor units in the transmission chamber, an HDR unit sets Ir-192 dwell time from activity, and a proton beam sets energy so the Bragg peak falls at the chosen range
+C. A linac, an HDR unit, and a proton beam all decay with the 73.8-day Ir-192 half-life and use a cobalt shutter
+D. A linac, an HDR unit, and a proton beam all use a flattening filter and record the prescription in roentgen
+Answer: B
+Objective: I.5
+Why: Answer B. The linac has no radioactive source. Its transmission chamber integrates monitor units. HDR steps one Ir-192 source, and the timer is scaled to the assayed activity. The clinical proton beam is hundreds of MeV so the Bragg peak can be put at a chosen depth. Monitor units are not an HDR dwell, roentgen is not the prescription unit, and a proton cyclotron or synchrotron does not decay as Ir-192.
+
+### Q31
+Stem: Ignore attenuation and scatter. An HDR point moves from 1.00 cm to 2.00 cm. A linac point moves from 100.0 cm to 101.0 cm. A proton Bragg peak is not produced by either inverse-square step. The HDR factor and the linac factor are closest to:
+A. 0.980 and 0.250
+B. 0.250 and 0.250
+C. 0.250 and 0.980
+D. 1.000 and 1.000
+Answer: C
+Objective: I.5
+Why: Answer C. HDR dose scales by (1.00/2.00)^2 = 0.250. Linac dose scales by (100.0/101.0)^2 = 10000/10201 = 0.9803, which is 0.980 to three decimals. The same 1.00 cm is a factor-of-four change next to an HDR source and about a 2% change at linac distance. The Bragg peak is energy loss in the patient, not this ratio.
+
+### Q32
+Stem: Exit dose and head neutrons compared across an 18 MV linac, a clinical proton beam, and Ir-192 HDR:
+A. The proton beam and the 18 MV beam leave the same exponential exit dose, and the HDR source is the usual head-neutron source
+B. Photoneutrons in the treatment head come from Ir-192, and a proton beam has no Bragg peak
+C. The 18 MV beam, the HDR source, and the proton beam all deposit zero dose beyond 10 cm
+D. The 18 MV linac can produce photoneutrons in the head and still delivers exit dose. The proton beam has a finite range and no useful exit dose past the Bragg peak. HDR is a gamma dwell source, not a linac target and not a proton beam
+Answer: D
+Objective: I.5
+Why: Answer D. Photonuclear neutrons become a head-shielding concern for linac photons above about 10 MV, and the photon beam still exits the patient. Therapy protons stop near the end of range, which is the contrast with exponential photon attenuation. Ir-192, mean energy about 0.38 MeV, is stepped through dwell positions. It is not the high-energy target that makes those linac neutrons, and it is not a scanned proton beam.
+
+### Q33
+Stem: A proton fraction is written 2.20 Gy (RBE) with the clinical RBE of 1.1. The physical absorbed dose to deliver is:
+A. 2.42 Gy
+B. 2.00 Gy
+C. 1.10 Gy
+D. 2.20 R
+Answer: B
+Objective: I.5
+Why: Answer B. Physical dose = 2.20 / 1.1 = 2.00 Gy. Multiplying by 1.1 gives 2.42 Gy and applies the RBE in the wrong direction. Dividing by 2 gives 1.10 Gy and substitutes the protection weighting factor for the clinical RBE. The 6 MV linac fraction and the Ir-192 HDR fraction are not divided by 1.1, and none of these prescriptions is an exposure in roentgen.
+
+### Q34
+Stem: An Ir-192 HDR source is used 7.0 days after assay. The half-life is 73.8 days. A linac has no source decay, and a proton accelerator is not this isotope. The fraction of the assayed HDR activity still present is closest to:
+A. 0.500
+B. 1.000
+C. 0.936
+D. 0.064
+Answer: C
+Objective: I.5
+Why: Answer C. 7.0/73.8 = 0.094851 half-life. 2^(−0.094851) = 0.936 to three decimals. The lost fraction is 1 − 0.936 = 0.064, so 0.064 is what decayed, not what remains. 0.500 would be one full half-life. 1.000 would describe linac output over that week, not Ir-192. The proton beam does not follow this half-life.
+
+### Q35
+Stem: Ignore attenuation. An HDR dose of 3.20 Gy at 2.00 cm is reevaluated at 4.00 cm. How does that inverse-square result sit next to a linac and a proton beam?
+A. 3.20 Gy. A linac is unchanged by distance, and a proton beam falls by the same factor everywhere past the skin
+B. 1.60 Gy. Dose falls in proportion to distance, including from 100 cm to 101 cm on a linac
+C. 12.8 Gy. Dose rises as distance increases, which is also how dose behaves past a Bragg peak
+D. 0.800 Gy. The distance doubled, so the factor is (2.00/4.00)^2 = 0.250. A linac needs the distance to double, such as 100 cm to 200 cm, to get that same factor. A Bragg peak is energy loss, not this step
+Answer: D
+Objective: I.5
+Why: Answer D. 3.20 × (2.00/4.00)^2 = 3.20 × 0.250 = 0.800 Gy. Half of 3.20 is 1.60 Gy, which is linear rather than inverse square. 3.20 × 4 = 12.8 Gy inverts the ratio. (100/200)^2 = 0.250 as well, but that linac change is a meter, not 2 cm. On a 10 × 10 cm 6 MV beam the high dose is near dmax, about 1.5 cm deep, and dose then falls gradually with exit dose. Protons put the high dose at the end of a finite range.

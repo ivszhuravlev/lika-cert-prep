@@ -239,3 +239,63 @@ D. 1.091
 Answer: C
 Objective: I.10
 Why: Ptp = (273.2+24)/(273.2+22) × 760/750 = 297.2/295.2 × 1.0133 = 1.0068 × 1.0133 = 1.020. 0.980 inverts the correction. 1.006 is the temperature ratio alone. 1.091 is not this quotient.
+
+### Q30
+Stem: At one isocentric point the phantom dose is 60.0 cGy, the free-space dose is 80.0 cGy, and the phantom dose at dmax for that same source-to-point distance is 100.0 cGy. Which reading of TAR, TMR, and PDD is right?
+A. TAR = 0.600, TMR = 0.750, PDD = 75.0%
+B. TAR = 0.750, TMR = 0.600. The ratio 60.0/100.0 is a TMR, not a PDD, because PDD holds SSD fixed and places dmax closer to the source
+C. TAR = 1.333, TMR = 1.667, PDD = 166.7%
+D. TAR = 0.600, TMR = 0.600, PDD = 60.0%
+Answer: B
+Objective: I.10
+Why: Answer B. TAR = 60.0/80.0 = 0.750. TMR = 60.0/100.0 = 0.600. PDD is not that second ratio: on a fixed SSD the dmax point is nearer the source than the depth point, so inverse square does not cancel. Swapping the denominators assigns 0.600 to TAR and 0.750 to TMR. Inverting the doses gives 80.0/60.0 = 1.333 and 100.0/60.0 = 1.667, and 100 × (100.0/60.0) = 166.7%. Setting every ratio to 0.600 drops the free-space measurement.
+
+### Q31
+Stem: TAR at the calculation depth is 0.780 and the backscatter factor is 1.040. TMR at that depth is:
+A. 0.8112
+B. 0.780
+C. 0.750
+D. 1.040
+Answer: C
+Objective: I.10
+Why: Answer C. TMR = TAR / BSF = 0.780 / 1.040 = 0.750. The product 0.780 × 1.040 = 0.8112 multiplies instead of dividing. 0.780 leaves the TAR unconverted. 1.040 equals TAR at dmax, the backscatter factor, while TMR at dmax is 1. PDD is a fixed-SSD percent and is not this quotient.
+
+### Q32
+Stem: A 6 MV beam has dmax = 1.5 cm and PDD = 67.0% at 10 cm depth for 100 cm SSD. Mayneord’s F to 80 cm SSD gives a PDD closest to:
+A. 69.6%
+B. 67.0%
+C. 53.6%
+D. 64.5%
+Answer: D
+Objective: I.10
+Why: Answer D. F = [(80+1.5)/(100+1.5)]^2 × [(100+10)/(80+10)]^2 = (81.5/101.5)^2 × (110/90)^2 = 0.644738 × 1.493827 = 0.963127. PDD = 67.0 × 0.963127 = 64.53, closest to 64.5%. Shortening the SSD lowers the PDD. Inverting F gives 67.0/0.963127 = 69.57, closest to 69.6%. Leaving the table at 67.0% ignores the SSD change. 53.6% is 67.0 × 80/100, with no depth terms. TAR and TMR do not take this factor, because they are defined at constant source-to-point distance.
+
+### Q33
+Stem: An isocentric point needs 216 cGy where TMR = 0.720. The dose at dmax, at the same distance from the source, is:
+A. 155.52 cGy
+B. 300 cGy
+C. 216 cGy
+D. 720 cGy
+Answer: B
+Objective: I.10
+Why: Answer B. Dose at dmax = dose at depth / TMR = 216 / 0.720 = 300 cGy. 155.52 cGy is 216 × 0.720, the depth dose if 216 cGy were already at dmax. 216 cGy leaves the TMR unused. 720 cGy divides by 0.300. This is a TMR step at one source-to-point distance. PDD would put dmax closer to the source, and TAR would use the free-space dose in the denominator.
+
+### Q34
+Stem: On a fixed SSD, the dose at dmax is 240 cGy and the dose at the prescription depth is 156 cGy. The PDD is:
+A. 153.8%
+B. 240%
+C. 65.0%
+D. 156%
+Answer: C
+Objective: I.10
+Why: Answer C. PDD = 100 × 156/240 = 65.0%. 100 × 240/156 = 153.8% turns the ratio upside down. 240% and 156% treat a cGy value as the percent. TMR would require both doses at the same source-to-point distance. TAR would put the free-space dose in the denominator. Neither is this fixed-SSD percent.
+
+### Q35
+Stem: Dose in free space at a dmax point is 95.0 cGy and the backscatter factor is 1.050. How do TAR, TMR, and PDD read at that dmax point, and what is the phantom dose?
+A. TAR = 1, TMR = 1.050, PDD = 95.0%, phantom dose = 95.0 cGy
+B. TAR = 1.050, TMR = 1.050, PDD = 105.0%, phantom dose = 95.0 cGy
+C. TAR = 1, TMR = 1, PDD = 100%, phantom dose = 99.75 cGy
+D. TAR = 1.050, TMR = 1, PDD = 100%, phantom dose = 99.75 cGy
+Answer: D
+Objective: I.10
+Why: Answer D. TAR at dmax is the backscatter factor, 1.050. Phantom dose = 95.0 × 1.050 = 99.75 cGy. TMR at dmax is 1 by definition, not 1.050. PDD at dmax is 100%, because PDD normalizes to the phantom dose at dmax, so the percent is 100 even though that phantom dose is 99.75 cGy rather than the free-space 95.0 cGy.

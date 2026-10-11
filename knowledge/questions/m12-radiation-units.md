@@ -197,3 +197,63 @@ D. 87.6 cGy
 Answer: B
 Objective: I.10
 Why: 10.0 × 0.876 = 8.76 rad, and 1 rad = 1 cGy, so the air dose is 8.76 cGy. 0.876 cGy drops a factor of 10. 10.0 cGy treats the roentgen as a centigray. 87.6 cGy moves the decimal the other way.
+
+### Q30
+Stem: Gray, sievert, and roentgen name which quantities?
+A. Gray is exposure, sievert is activity, and roentgen is absorbed dose in tissue for any particle
+B. Gray is absorbed dose, sievert is equivalent or effective dose after weighting, and roentgen is photon exposure in air
+C. All three equal 1 J/kg, so a prescription may be written in any of them
+D. Roentgen is the SI unit that replaced the gray
+Answer: B
+Objective: I.10
+Why: Answer B. Absorbed dose is energy imparted per unit mass, in gray. Equivalent dose and effective dose are weighted protection quantities, in sievert. Exposure is ionization in air by photons, in roentgen or C/kg. A prescription is absorbed dose. It is not renamed into roentgen, and the three units are not one quantity.
+
+### Q31
+Stem: A photon absorbed dose is 3.60 Gy and w_R = 1. Which report keeps gray, sievert, and roentgen apart?
+A. 3.60 R of exposure and 3.60 rem
+B. 360 Sv
+C. 360 cGy of absorbed dose, and 3.60 Sv (360 rem) if the quantity is equivalent dose. It is not 3.60 R
+D. 0.0360 Sv
+Answer: C
+Objective: I.10
+Why: Answer C. 3.60 × 100 = 360 cGy = 360 rad. For photons w_R = 1, so the equivalent dose is 3.60 Sv, and 3.60 × 100 = 360 rem. 360 Sv multiplies the gray by 100 and then calls the result a sievert. 0.0360 Sv divides by 100. 3.60 R would be an exposure, and 3.60 rem is a hundred times smaller than 360 rem.
+
+### Q32
+Stem: A survey reads 4.00 R in air under equilibrium. Using 0.876 rad/R, the absorbed dose in air is:
+A. 4.00 cGy
+B. 0.3504 cGy
+C. 35.04 cGy
+D. 3.504 cGy
+Answer: D
+Objective: I.10
+Why: Answer D. 4.00 × 0.876 = 3.504 rad, and 1 rad = 1 cGy, so the air dose is 3.504 cGy. 4.00 cGy treats the roentgen as a rad. 0.3504 cGy drops a factor of 10. 35.04 cGy moves the decimal the other way. The result is absorbed dose in air. It is not still 4.00 R, and it is not a sievert unless the quantity asked for is equivalent dose.
+
+### Q33
+Stem: An alpha absorbed dose is 0.250 Gy with w_R = 20. The equivalent dose is:
+A. 0.250 Sv
+B. 5.00 Sv
+C. 0.250 R
+D. 20.0 R
+Answer: B
+Objective: I.10
+Why: Answer B. H = 20 × 0.250 = 5.00 Sv, which is 5.00 × 100 = 500 rem. The same 0.250 Gy of photons, w_R = 1, would remain 0.250 Sv, or 25.0 rem. 0.250 R and 20.0 R are exposures. The roentgen is not obtained by multiplying gray by w_R.
+
+### Q34
+Stem: Convert 25.0 R of exposure to C/kg. Use 1 R = 2.58 × 10^(−4) C/kg. Do not report the result as gray or sievert.
+A. 2.58 × 10^(−4) C/kg
+B. 2.58 × 10^(−2) C/kg
+C. 6.45 × 10^(−3) C/kg
+D. 6.45 × 10^(−1) C/kg
+Answer: C
+Objective: I.10
+Why: Answer C. 25.0 × 2.58 × 10^(−4) = 6.45 × 10^(−3) C/kg. That is exposure. It is not 6.45 × 10^(−3) Gy and it is not 6.45 × 10^(−3) Sv. 2.58 × 10^(−4) forgets the factor 25.0. 2.58 × 10^(−2) is 100 R. 6.45 × 10^(−1) is 25.0 × 2.58 × 10^(−2), a factor of 100 too large.
+
+### Q35
+Stem: A 6 MV prescription is 250 cGy to water. A coworker multiplies by 0.876 and records roentgen, then also calls the prescription a sievert. The consistent report is:
+A. 219 R
+B. 250 Sv
+C. 2.50 R
+D. 2.50 Gy of absorbed dose, equal to 250 rad. The factor 0.876 starts from the roentgen and does not apply to a dose already in cGy. For these photons, w_R = 1, so an equivalent dose would be 2.50 Sv only if that quantity was requested
+Answer: D
+Objective: I.10
+Why: Answer D. 250 cGy = 2.50 Gy = 250 rad. 250 × 0.876 = 219, which is the air f-factor applied to a number that is already centigray, and the unit roentgen is still the wrong quantity. 250 Sv treats every centigray as a sievert. 2.50 R renames the gray as exposure. The prescription remains absorbed dose in gray.
