@@ -74,7 +74,7 @@ C. 6.0 times ten to the 24 electrons
 D. 1.1 times ten to the 24 electrons
 Answer: A
 Objective: I.1
-Why: Molecules per gram equal 6.02 times ten to the 23 divided by 18, which is 3.34 times ten to the 22. Ten electrons per molecule gives 3.34 times ten to the 23 electrons per gram. Check: 3.34 times ten to the 23 times 18 divided by 10 returns 6.0 times ten to the 23. The second option forgets the ten electrons. The third multiplies by ten without dividing by 18. The fourth uses 18 electrons per molecule instead of ten.
+Why: Molecules per gram equal 6.02 times ten to the 23 divided by 18, which is 3.34 times ten to the 22. Ten electrons per molecule gives 3.34 times ten to the 23 electrons per gram. Check: 3.34 times ten to the 23 times 18 divided by 10 returns 6.0 times ten to the 23. The second option forgets the ten electrons. The third multiplies by ten without dividing by 18. The fourth inverts the ratio, multiplying by 18 and dividing by ten (6.02 times ten to the 23 times 1.8 is 1.1 times ten to the 24).
 
 ### Q3
 Stem: Which list places electromagnetic radiation in order of increasing photon energy?

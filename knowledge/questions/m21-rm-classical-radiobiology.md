@@ -85,7 +85,7 @@ Objective: III.3
 Why: Reduced sensitivity after a small priming dose is the adaptive response, attributed to induced repair. Damage expressed in unirradiated neighbors through gap junctions and secreted signals is the bystander effect. Both are low-dose laboratory findings that complicate the linear no-threshold model but do not replace it in radiation protection.
 
 ### Q9
-Stem: A cell line has D0 = 2 Gy. What dose along the exponential part of the survival curve lowers survival by one decade?
+Stem: A cell line has a D0 of 2 Gy. What dose along the exponential part of the survival curve lowers survival by one decade?
 A. 2 Gy
 B. 0.74 Gy
 C. 4.6 Gy
@@ -209,7 +209,7 @@ Objective: III.3
 Why: Sublethal damage repair in late-responding tissues takes several hours, and trials with intervals under 4 to 6 hours showed increased late effects, so protocols require at least 6 hours between fractions. One hour or 30 minutes would leave the second fraction interacting with unrepaired damage from the first. A 24-hour interval is conventional once-daily treatment.
 
 ### Q4
-Stem: A spinal cord received 40 Gy in 20 fractions and is to be re-irradiated with 16 Gy in 4 fractions. Using α/β = 3 Gy for the cord, what is the cumulative biologically effective dose?
+Stem: A spinal cord received 40 Gy in 20 fractions and is to be re-irradiated with 16 Gy in 4 fractions. Using an α/β of 3 Gy for the cord, what is the cumulative biologically effective dose?
 A. 104 Gy
 B. 56 Gy
 C. 93.3 Gy

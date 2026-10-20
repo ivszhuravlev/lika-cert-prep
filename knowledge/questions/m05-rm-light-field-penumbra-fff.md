@@ -32,7 +32,7 @@ C. 0.9 cm
 D. 4.0 cm
 Answer: B
 Objective: I.3
-Why: Geometric penumbra equals source diameter times (SSD plus depth minus SCD) divided by SCD: 2.0 times (80 plus 10 minus 45) divided by 45 equals 2.0 times 45 divided by 45, which is 2.0 cm. Check: 45 over 45 is 1, so the penumbra equals the source size. 1.6 cm drops the depth and uses 80 minus 45. 0.9 cm inverts the ratio. 4.0 cm doubles the source size by treating diameter as radius.
+Why: Geometric penumbra equals source diameter times (SSD plus depth minus SCD) divided by SCD: 2.0 times (80 plus 10 minus 45) divided by 45 equals 2.0 times 45 divided by 45, which is 2.0 cm. Check: 45 over 45 is 1, so the penumbra equals the source size. 1.6 cm drops the depth and uses 80 minus 45 over 45. 0.9 cm drops the depth and divides by the SSD instead of the SCD (2.0 times 35 divided by 80). 4.0 cm doubles the source size by treating diameter as radius.
 
 ### Q4
 Stem: Which single change reduces the geometric penumbra of a photon beam?

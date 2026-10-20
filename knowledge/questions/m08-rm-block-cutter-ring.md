@@ -58,11 +58,11 @@ Why: Magnification equals 4.2 divided by 3.0, which is 1.40. True length equals 
 
 ### Q2
 Stem: The main reason a planner places a marker of known size on the patient before a localization film is to:
-A. Determine the magnification of that plane without needing the source distances
+A. Correct the film for inverse-square fall-off
 B. Measure the dose rate at the skin
 C. Mark the isocenter for the laser alignment
-D. Correct the film for inverse-square fall-off
-Answer: A
+D. Determine the magnification of that plane without needing the source distances
+Answer: D
 Objective: I.6
 Why: The ratio of the marker's projected size to its true size is the magnification of the plane the marker lies in, and every length in that plane divides by the same ratio; this replaces the distance ratio when depths or geometry are unknown. A marker does not measure dose or correct inverse square, and laser alignment uses skin marks, not a magnification ring.
 

@@ -705,7 +705,7 @@ Objective: VII
 Why: TG-203 is the cardiac device report with the low, intermediate and high dose bands. TG-142 is linac QA, TG-43 is the brachytherapy dose-rate formalism, and TG-51 is absolute dose calibration in water; the gamma analysis report is TG-218. The first, second and fourth pairings swap those topics.
 
 ### Q71
-Stem: Which pairing of an AAPM task group with its topic is correct?
+Stem: Which pairing of an AAPM task group with the subject it covers is correct?
 A. TG-101 and stereotactic body radiation therapy
 B. TG-218 and CT-simulator quality assurance
 C. TG-66 and IMRT patient-specific QA analysis

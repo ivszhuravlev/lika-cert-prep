@@ -133,3 +133,58 @@ A TG-142 isocenter tolerance copied in as every site’s action level. A bone re
 A left breast deep-inspiration breath-hold plan is monitored with surface guidance, and the surface is within the departmental tolerance for the whole fraction. A prostate plan the same afternoon is also on the surface-guidance system, with an equally quiet surface trace and no cone-beam and no fiducials. Which case has the target tied to the signal the camera can see?
 
 Walk-through: The breast target moves with the chest wall, so the surface is a direct surrogate for that treatment. The prostate moves with rectum and bladder and is invisible to a surface camera. A quiet skin trace does not locate the prostate. That prostate fraction still needs the internal check the protocol names (fiducials or soft-tissue cone-beam).
+
+## CBCT Physics and Named Localization Systems
+
+**Objectives:** II.6, I.8
+
+**What the exam expects**
+
+You can describe how a cone-beam image is formed and reconstructed, and you can choose between a full-fan and a half-fan acquisition. You know what the detector is made of, why a bowtie filter is in the beam, and how kilovoltage and megavoltage cone-beams differ in contrast and dose. You can give a typical dose for one kilovoltage cone-beam and scale it over a course. You can describe the stereoscopic kilovoltage system, transrectal ultrasound, and surface guidance as named tools, and you can run an offline correction protocol with an action level.
+
+**Core facts**
+
+How a cone-beam is made. A kilovoltage x-ray tube and a flat-panel detector are mounted on the gantry at right angles to the treatment head. As the gantry rotates, several hundred two-dimensional projections are acquired through the whole volume at once, and the volume is reconstructed by filtered back projection, the cone-beam (Feldkamp) version of the same algorithm a diagnostic CT uses. Because the whole length of the volume is irradiated in one rotation, the scatter reaching the panel is far larger than in a fan-beam scanner, which lowers contrast, produces cupping, and makes the Hounsfield numbers unreliable for dose calculation. Iterative reconstruction is available on newer systems and reduces noise but does not remove scatter.
+
+Full-fan versus half-fan. In a full-fan scan the detector is centered on the beam axis, every projection covers the whole cross-section, and a rotation of about 200 degrees is enough; the reconstructed diameter is around 25 cm, which fits a head or a neck. In a half-fan scan the detector is shifted sideways so each projection covers roughly one half of the patient, a full 360-degree rotation is needed to see both halves, and the reconstructed diameter grows to around 45 to 50 cm, which fits a pelvis or a thorax. Each mode has its own bowtie filter. The bowtie is thick at the edges and thin in the middle, so it attenuates the beam where the patient is thin, evens out the signal across the panel, cuts skin dose at the periphery, and reduces the scatter that drives cupping. Scanning a pelvis in full-fan mode truncates the anatomy and produces a ring of bright artifact at the edge of the field of view.
+
+The detector. The flat panel is amorphous silicon, a large array of thin-film photodiodes and switches read out electronically. An indirect panel places a cesium iodide or gadolinium oxysulfide scintillator over the silicon; the scintillator converts x-rays to light and the photodiodes convert light to charge. The same panel technology, with a thicker build-up plate, is the electronic portal imaging device on the megavoltage side. Panels are calibrated for dark current, gain, and dead pixels, and a dropped calibration shows as ring artifacts.
+
+Kilovoltage versus megavoltage cone-beam. Kilovoltage photons still interact partly by the photoelectric effect, so bone and soft tissue separate and a kilovoltage cone-beam shows prostate, bladder, and a lung tumor. A megavoltage cone-beam taken with the treatment beam at low monitor units is almost pure Compton interaction, so contrast tracks electron density only, soft-tissue detail is poor, and the dose per scan is several times higher. Its advantages are that it is unaffected by metal streak artifacts from hips or dental work and that it is acquired with the treatment beam through the treatment isocenter. Helical tomotherapy uses a detuned megavoltage fan beam for the same purpose.
+
+Imaging dose. A kilovoltage cone-beam typically deposits on the order of 1 to 3 cGy to the imaged volume; TG-180 quotes organ doses of roughly 0.5 to 5 cGy per scan, with the pelvis at the high end and the head at the low end. Daily imaging over a 35-fraction course adds tens of centigray, about 1 percent of a 70 Gy prescription. TG-180 suggests accounting for imaging dose when it reaches roughly 5 percent of the therapeutic dose, which is unusual for kilovoltage imaging and more likely with daily megavoltage imaging. Protocols that reduce the dose use a lower tube current, a shorter arc, or a smaller field of view, and skip imaging that the protocol does not require. The dose is deposited whether the shift turns out to be large or zero.
+
+Stereoscopic kilovoltage system. The ExacTrac design mounts two kilovoltage tubes in the floor and two flat panels in the ceiling so that two oblique projections through the isocenter are taken at once. An infrared camera tracks reflective body markers for pre-positioning, the stereoscopic pair is fused to digitally reconstructed radiographs to find translations and rotations, and a six-degree-of-freedom robotic couch applies the correction. Images can be taken at any gantry angle during treatment, so the system also catches intrafraction motion. It matches bone or implanted fiducials and does not see soft tissue; cranial radiosurgery and spine stereotactic treatments are its usual applications. The robotic radiosurgery system uses the same geometry inverted, with ceiling tubes and floor panels, and corrects by moving the robot rather than the couch.
+
+Transrectal ultrasound. For prostate brachytherapy the imaging that guides the needles is transrectal ultrasound, a probe in the rectum on a stepper that is mechanically registered to the needle template. The volume study for planning, the live needle placement, and the intraoperative seed or catheter check are all done on the same probe, with no ionizing radiation and in the treatment position. Its limits are operator dependence, probe pressure that deforms the gland, and difficulty seeing seeds once many are in place, which is why a postimplant CT is still done. Transabdominal ultrasound was an early external-beam prostate localization tool with the same probe-pressure problem.
+
+Surface guidance. Three camera pods project a structured light pattern onto the patient and reconstruct the surface many times per second, comparing it with a reference surface from the planning CT body contour or from a surface captured at the first fraction. The system reports six-degree-of-freedom deviations continuously, with no dose, and can hold the beam when the surface leaves tolerance. It is well suited to breast, deep-inspiration breath hold, extremities, and open-face-mask cranial radiosurgery, and it supports tattoo-free setup. It fails when the surface is covered by a blanket or a bolus sheet, loses accuracy on a very large patient, and never sees an internal target that is not locked to the skin.
+
+Correction protocols and action levels. An online protocol images every fraction, applies the shift before the beam, and reduces both systematic and random error. An offline protocol images the first several fractions, usually three to five, averages the measured shifts to estimate the systematic error, and applies that average from the next fraction on without a daily image; it reduces the systematic component only. The action level is the shift below which no correction is applied, so the team does not chase millimeter noise; above it the couch moves and, past a second larger level, the patient is re-imaged or reset. Image guidance shrinks the setup component of the PTV margin; it does not shrink the ITV, which is a motion volume defined at planning.
+
+**Formulas**
+
+Course imaging dose ≈ dose per scan × number of scans; 2 cGy × 35 scans = 70 cGy, and 70 / 7,000 = 1 percent of a 70 Gy prescription.
+
+Offline systematic correction = mean of the first n measured shifts, applied from fraction n + 1.
+
+**Worked example (offline protocol)**
+
+Given: an offline protocol images the first four fractions and the anterior-posterior shifts are +4, +2, +5, and +1 mm, with positive meaning posterior. Mean = (4 + 2 + 5 + 1) / 4 = 12 / 4 = 3 mm posterior. Check: the deviations from 3 are +1, −1, +2, −2 and sum to zero. From fraction five the couch is set 3 mm posterior of the tattoos at every fraction without imaging. The 1 to 2 mm day-to-day scatter around that mean is random and remains in the margin. Had the first-day shift of 4 mm been used alone, the correction would have carried one day's random error into every later fraction.
+
+**Traps**
+
+- Describing cone-beam reconstruction as a simple sum of projections. The projections are filtered before back projection.
+- Choosing full-fan for a pelvis; the field of view truncates the patient.
+- Calling the flat panel a film cassette or an image intensifier. It is an amorphous-silicon array with a scintillator.
+- Saying a megavoltage cone-beam has better soft-tissue contrast, or that a kilovoltage cone-beam has zero dose.
+- Describing the stereoscopic system as a soft-tissue imager. It matches bone and fiducials.
+- Expecting an offline protocol to correct a fraction's random error, or an online protocol to shrink the ITV.
+
+**Sources**
+
+- AAPM TG-179, quality assurance for image-guided radiation therapy using CT-based technologies, for cone-beam geometry and image quality tests.
+- AAPM TG-180, image guidance doses delivered during radiotherapy, for the per-scan dose ranges and the 5 percent accounting threshold.
+- AAPM TG-147, nonradiographic localization, for surface imaging and electromagnetic systems.
+- AAPM TG-142 for imaging-to-treatment isocenter coincidence tolerances.
+- de Boer and Heijmen for the offline no-action-level protocol.
