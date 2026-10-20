@@ -587,3 +587,332 @@ Add courses in the same biological unit. Physical gray add only when the fractio
 **Result means.** A comparison with a conventional cord limit has to be in one system. Adding 65 Gy of mixed physical dose and then calling it EQD2 overstates this particular sum. Half-life does not belong here. Khan versus Bentel does not change EQD2; using the wrong \(\alpha/\beta\) does.
 
 **Wrong turns.** Adding 45 and 20 and comparing the physical 65 Gy to an EQD2 limit. Using \(\alpha/\beta = 10\) Gy for a late-responding organ when the stem said 2. Forgetting to convert the prior course because “it was already delivered.”
+
+## Extended-Distance and Asymmetric Field Geometry
+
+**Objectives:** IV.3
+
+**What the exam expects:** Three geometry conversions that the gap and divergence lessons above do not cover. (1) A collimator setting is defined at 100 cm; a TBI or hemibody field is defined at the treatment distance, so divide the required length by the distance ratio. (2) When the required setting exceeds the 40 cm jaw limit, rotate the collimator 45° and let the diagonal of the square cover the patient: the side needed is the diagonal divided by \(\sqrt{2}\). (3) With asymmetric jaws the center of the open field is off the central axis; the radius from the axis to the field center is the hypotenuse of the two half-differences. The same 100 cm definition is the trap in a gap calculation: a collimator reading at an extended SSD must be projected to the skin before it goes into the gap formula, although, because the projection and the SSD cancel, the reading divided by 100 gives the same answer as the skin length divided by the SSD.
+
+**Formulas**
+
+\[
+\text{setting at 100} = L_{\text{treat}} \times \frac{100}{\mathrm{SPD}}
+\qquad
+\text{side at } 45^\circ = \frac{\text{diagonal}}{\sqrt{2}}
+\qquad
+r = \sqrt{\left(\frac{X_1 - X_2}{2}\right)^2 + \left(\frac{Y_1 - Y_2}{2}\right)^2}
+\]
+
+- \(L_{\text{treat}}\): field length needed at the treatment distance (cm)
+- \(\mathrm{SPD}\): source-to-patient distance where that length is measured (cm)
+- diagonal: the projected length at 100 cm that the rotated square must span
+- \(X_1, X_2, Y_1, Y_2\): asymmetric jaw positions measured from the central axis (cm); \(X_1 + X_2\) is the field width
+- \(r\): distance from the central axis to the center of the open field (cm)
+
+### Worked example: extended distance with and without the diagonal
+
+**Given.** A TBI patient is 180 cm long and is treated at 400 cm from the source.
+
+**Substitute.** Setting at 100 cm \(= 180 \times 100/400 = 45\) cm.
+
+**Arithmetic.** 45 cm exceeds the 40 cm jaw maximum, so rotate the collimator 45°. Side \(= 45/\sqrt{2} = 45/1.414 = 31.8\) cm.
+
+**Check.** A 31.8 cm square has a diagonal of \(31.8 \times 1.414 = 45\) cm at 100 cm, which projects to \(45 \times 4 = 180\) cm at 400 cm. A 150 cm patient at the same distance needs \(150/4 = 37.5\) cm and fits without rotation.
+
+**Result means.** Set 31.8 × 31.8 cm with the collimator at 45°. The corners of the square then extend beyond the patient; the unused corners are not a dose problem in TBI, but the width across the patient at the ends of the diagonal is small, which is why TBI uses the diagonal only when the straight setting will not fit.
+
+### Second pass: radius to the center of an asymmetric field
+
+**Given.** Jaws X1 = 8 cm, X2 = 4 cm, Y1 = 3 cm, Y2 = 11 cm.
+
+**Substitute.** Half-differences: \((8-4)/2 = 2\) cm toward X1, \((11-3)/2 = 4\) cm toward Y2.
+
+**Arithmetic.** \(r = \sqrt{2^2 + 4^2} = \sqrt{20} = 4.47\) cm.
+
+**Check.** The field is 12 × 14 cm; its center is 2 cm off the axis in X and 4 cm in Y, and \(4.47^2 = 20\). Adding the two offsets, 6 cm, is the usual slip.
+
+**Result means.** The off-axis ratio and any point-dose check for the field center must be read 4.47 cm from the central axis, not at the axis.
+
+### Third pass: collimator reading at an extended SSD in a gap
+
+**Given.** Field 1 is 24 cm long on the skin at SSD 100. Field 2 has a collimator reading of 14 cm and is set at SSD 125. Match depth 8 cm.
+
+**Substitute.** Field 2 skin length \(= 14 \times 125/100 = 17.5\) cm. Gap \(= 12 \times 8/100 + 8.75 \times 8/125\).
+
+**Arithmetic.** \(0.96 + 0.56 = 1.52\) cm.
+
+**Check.** The second term is also \(7 \times 8/100 = 0.56\) cm: half the reading over 100 cm. Using 14 cm as if it were already the skin length at SSD 125 gives \(0.96 + 7 \times 8/125 = 1.41\) cm, a gap 1 mm too small.
+
+**Wrong turns**
+
+- Multiplying the patient length by the distance ratio instead of dividing.
+- Multiplying by \(\sqrt{2}\) instead of dividing for the rotated square.
+- Adding the jaw half-differences instead of taking the hypotenuse, or using the full differences.
+- Feeding a collimator reading into the gap formula as a skin length at an SSD other than 100.
+
+**Traps.** Every collimator number is a length at 100 cm until you project it.
+
+**Sources.** Khan and Gibbons, field size definitions and TBI geometry; AAPM Report 17 for TBI technique.
+
+## Orthovoltage Timer Chain
+
+**Objectives:** I.10, IV.3
+
+**What the exam expects:** The timer-error lesson above solved for the end effect. This lesson is the full orthovoltage chain from an in-air exposure rate to a treatment time. The calibration is an exposure rate in R/min at a stated distance. Move it to the treatment SSD with inverse square, convert roentgen to cGy with the f-factor, add backscatter with the BSF to get the surface (dmax) dose rate, then apply PDD to get the dose rate at depth. Time is the prescribed depth dose divided by that rate.
+
+**Formula**
+
+\[
+\dot{D}(d) = \dot{X}_{\text{cal}} \left(\frac{d_{\text{cal}}}{\mathrm{SSD}}\right)^2 \times f \times \mathrm{BSF} \times \frac{\mathrm{PDD}}{100}
+\qquad
+t = \frac{D_{\text{Rx}}}{\dot{D}(d)}
+\]
+
+- \(\dot{X}_{\text{cal}}\): in-air exposure rate at the calibration distance \(d_{\text{cal}}\) (R/min)
+- \(\mathrm{SSD}\): treatment source-to-skin distance (cm)
+- \(f\): roentgen-to-cGy conversion for tissue at this beam quality (cGy/R)
+- \(\mathrm{BSF}\): backscatter factor for the applicator size and quality
+- \(\mathrm{PDD}\): percent depth dose at the prescription depth
+- \(D_{\text{Rx}}\): prescribed dose at depth (cGy)
+
+### Worked example
+
+**Given.** 120 R/min in air at 50 cm. Treatment SSD 55 cm. \(f = 0.94\) cGy/R. BSF = 1.20. PDD at 3 cm = 70%. Prescription 300 cGy at 3 cm.
+
+**Substitute.** \(\dot{D}(3) = 120 \times (50/55)^2 \times 0.94 \times 1.20 \times 0.70\).
+
+**Arithmetic.** \((50/55)^2 = 0.8264\). \(120 \times 0.8264 = 99.17\) R/min. \(\times 0.94 = 93.22\) cGy/min in air. \(\times 1.20 = 111.87\) cGy/min at the surface. \(\times 0.70 = 78.31\) cGy/min at 3 cm. \(t = 300/78.31 = 3.83\) min.
+
+**Check.** \(78.31 \times 3.83 = 300\) cGy. Surface dose during the treatment \(= 111.87 \times 3.83 = 428.6\) cGy, which is also \(300/0.70\).
+
+**Result means.** Set 3.83 min (3 min 50 s), plus any timer-error correction the unit needs. The skin receives 428.6 cGy for 300 cGy at 3 cm, because orthovoltage has no skin sparing and the surface is dmax.
+
+**Wrong turns**
+
+- Dropping inverse square because the applicator "defines the SSD": \(300/(120 \times 0.94 \times 1.20 \times 0.70) = 3.17\) min.
+- Leaving BSF out, which gives 4.60 min and overdoses the patient by 20%.
+- Dividing by BSF, 5.52 min.
+- Treating the roentgen as a cGy.
+
+**Traps.** Write the five factors in order: ISL, f, BSF, PDD, then divide into the prescription. The surface dose is the prescription divided by the PDD.
+
+**Sources.** Khan and Gibbons, orthovoltage dosimetry (exposure, f-factor, BSF).
+
+## Attenuation From Mass Attenuation Coefficient and Two Intensities
+
+**Objectives:** I.10, VI.3
+
+**What the exam expects:** Three turns of the exponential that the HVL lessons above do not ask. (1) The stem gives a mass attenuation coefficient and a density, so the linear coefficient is their product. (2) The stem gives two intensities and the thickness between them, so the HVL is back-solved from the natural log of their ratio. (3) The stem asks for the thickness that transmits 5%, which is \(\log_2 20 = 4.32\) HVL, not 5 HVL and not one TVL.
+
+**Formulas**
+
+\[
+\mu = \left(\frac{\mu}{\rho}\right) \rho
+\qquad
+\mathrm{HVL} = \frac{0.693\, x}{\ln(I_0/I)}
+\qquad
+n_{\text{HVL}} = \log_2\left(\frac{I_0}{I}\right)
+\]
+
+- \(\mu/\rho\): mass attenuation coefficient (cm\(^2\)/g)
+- \(\rho\): density (g/cm\(^3\)); the product has units of cm\(^{-1}\)
+- \(x\): thickness between the two intensity readings (cm)
+- \(n_{\text{HVL}}\): number of half-value layers for a given transmission; 5% needs \(\log_2 20 = 4.32\)
+
+### Worked example: mass attenuation coefficient
+
+**Given.** Lead sheet 0.2 cm thick. \(\mu/\rho = 0.60\) cm\(^2\)/g at this energy. \(\rho = 11.35\) g/cm\(^3\).
+
+**Substitute.** \(\mu = 0.60 \times 11.35 = 6.81\) cm\(^{-1}\). \(\mu x = 6.81 \times 0.2 = 1.362\).
+
+**Arithmetic.** Transmission \(= e^{-1.362} = 0.256\), so 25.6%.
+
+**Check.** HVL \(= 0.693/6.81 = 0.102\) cm, and 0.2 cm is 1.97 HVL; \((1/2)^{1.97} = 0.256\). Forgetting the density, \(e^{-0.60 \times 0.2} = 0.887\), is the usual slip.
+
+**Result means.** The sheet transmits 25.6% and removes 74.4%.
+
+### Second pass: HVL from two readings
+
+**Given.** 250 mR/h falls to 40 mR/h through 1.5 cm of material.
+
+**Substitute.** \(\ln(250/40) = \ln 6.25 = 1.833\). \(\mu = 1.833/1.5 = 1.222\) cm\(^{-1}\).
+
+**Arithmetic.** HVL \(= 0.693/1.222 = 0.567\) cm.
+
+**Check.** 1.5 cm is \(1.5/0.567 = 2.64\) HVL, and \((1/2)^{2.64} = 0.160 = 40/250\).
+
+**Third pass: thickness for 5% transmission.** HVL = 6 mm. \(n = \log_2 20 = 4.32\) HVL, so \(4.32 \times 6 = 25.9\) mm. Check: \((1/2)^{4.32} = 0.050\). Three HVL would transmit 12.5%, five HVL 3.1%, and one TVL (3.32 HVL, 19.9 mm) 10%.
+
+**Wrong turns**
+
+- Using \(\mu/\rho\) as if it were \(\mu\).
+- Dividing the thickness by the intensity ratio (linear attenuation) to get the HVL.
+- Reading "5%" as five half-value layers.
+
+**Traps.** Check the units on the coefficient. cm\(^2\)/g needs a density; cm\(^{-1}\) does not.
+
+**Sources.** Khan and Gibbons, attenuation coefficients; NCRP 151 for TVL-based barrier arithmetic.
+
+## Mixed-Radiation Dose Equivalent
+
+**Objectives:** VI.3, I.10
+
+**What the exam expects:** When several radiation types contribute absorbed dose at the same point, weight each absorbed dose by its own radiation weighting factor and add. The result is an equivalent dose in sievert (1 cGy × w_R = 1 cSv = 10 mSv). The stem supplies the weighting factors; photons and electrons are 1, alpha particles 20, and neutrons depend on energy (ICRP 103 uses a continuous function that peaks near 20 around 1 MeV), so use the number the stem gives rather than a memorized constant.
+
+**Formula**
+
+\[
+H = \sum_i w_{R,i} D_i
+\]
+
+- \(D_i\): absorbed dose from radiation type \(i\) (cGy)
+- \(w_{R,i}\): radiation weighting factor for that type (dimensionless)
+- \(H\): equivalent dose (cSv when \(D\) is in cGy; multiply by 10 for mSv)
+
+### Worked example
+
+**Given.** At a point outside a high-energy treatment room, a survey assigns 0.20 cGy to photons, 0.03 cGy to fast neutrons with \(w_R = 20\), and 0.01 cGy to alpha-emitting contamination with \(w_R = 20\).
+
+**Substitute.** \(H = 0.20 \times 1 + 0.03 \times 20 + 0.01 \times 20\).
+
+**Arithmetic.** \(0.20 + 0.60 + 0.20 = 1.00\) cSv \(= 10\) mSv.
+
+**Check.** The neutron term alone, 0.60 cSv, is three times the photon term even though its absorbed dose is seven times smaller. Summing absorbed doses without weights gives 0.24 cGy, which is 2.4 mSv and is not an equivalent dose.
+
+**Result means.** The equivalent dose is 10 mSv. For a public limit of 1 mSv/yr that is a reportable excess; for an occupational limit of 50 mSv/yr it is a fifth of the annual allowance.
+
+**Wrong turns**
+
+- Adding absorbed doses and calling the sum sievert.
+- Applying the neutron factor to every component.
+- Dropping the alpha term because its absorbed dose is small.
+
+**Traps.** Write each component on its own line with its factor before adding.
+
+**Sources.** ICRP 103 (radiation weighting factors); 10 CFR 20 for the limits; module 12 for the unit conversions.
+
+## Line Source Versus Point Source
+
+**Objectives:** IV.3, I.10
+
+**What the exam expects:** Inverse square is a point-source law. Close to a line source (a linear brachytherapy source or a long applicator), exposure falls roughly as one over the distance, not one over the distance squared, because the far parts of the line contribute less and less as the point moves away. The usual teaching rule: beyond about twice the active length, treat the line as a point and use inverse square.
+
+**Formulas**
+
+\[
+\text{near a line: } \frac{\dot{X}_2}{\dot{X}_1} \approx \frac{r_1}{r_2}
+\qquad
+\text{far from a line (} r \gtrsim 2L \text{): } \frac{\dot{X}_2}{\dot{X}_1} \approx \left(\frac{r_1}{r_2}\right)^2
+\]
+
+- \(r_1, r_2\): perpendicular distances from the source center (cm), both much smaller than the length \(L\) for the near-field rule
+- \(L\): active length of the line source (cm)
+
+### Worked example
+
+**Given.** A 10 cm line source reads 120 mR/h at 0.5 cm from its midpoint. Estimate the rate at 2 cm.
+
+**Substitute.** Both distances are far smaller than 10 cm, so use the near-field rule: \(120 \times (0.5/2) = 30\) mR/h.
+
+**Arithmetic.** \(0.5/2 = 0.25\). \(120 \times 0.25 = 30\) mR/h.
+
+**Check.** Inverse square would give \(120 \times 0.0625 = 7.5\) mR/h, a factor of four lower; the 1/r rule is the correct near-field estimate for a long line. At 20 cm or more (twice the 10 cm length) inverse square takes over.
+
+**Result means.** The rate near a long source falls much more slowly than inverse square predicts. For a 4 cm source, inverse square is a fair approximation from about 8 cm outward.
+
+**Wrong turns**
+
+- Using inverse square at a distance much shorter than the source length.
+- Applying the 1/r rule beyond twice the source length.
+- Using the full length instead of twice the length as the crossover.
+
+**Traps.** Compare the distance to the source length before choosing the rule. TG-43 line-source geometry functions do this exactly; the 1/r and 2L rules are the estimates.
+
+**Sources.** Khan and Gibbons, linear source dose distributions; TG-43U1 line-source geometry factor.
+
+## CSI Angles and the Spine Junction
+
+**Objectives:** IV.3, III.7
+
+**What the exam expects:** In craniospinal irradiation the two rotations use different field lengths. The collimator of the lateral brain fields rotates to match the divergence of the posterior spine field's superior edge, so it uses half the spine field length over the SAD (or SSD). The couch of the lateral brain fields kicks to take the divergence out of the brain fields' inferior edges, so it uses half the brain field length. Both are arctangents. For a long spine that needs two posterior fields, the skin gap between them is set so the geometric edges meet at the anterior surface of the spinal cord: any overlap then falls anterior to the cord in the vertebral body, and the cord itself sits in the matched or slightly cold zone, not in the hot triangle.
+
+**Formulas**
+
+\[
+\theta_{\text{coll}} = \arctan\left(\frac{L_{\text{spine}}/2}{\mathrm{SAD}}\right)
+\qquad
+\theta_{\text{couch}} = \arctan\left(\frac{L_{\text{brain}}/2}{\mathrm{SAD}}\right)
+\]
+
+- \(L_{\text{spine}}\): length of the posterior spine field at isocenter (cm)
+- \(L_{\text{brain}}\): length of each lateral brain field at isocenter (cm)
+- SAD: 100 cm; replace with SSD if the lengths are skin lengths of SSD fields
+
+### Worked example
+
+**Given.** Spine field 36 cm long at isocenter. Lateral brain fields 20 cm long. SAD 100 cm.
+
+**Substitute.** \(\theta_{\text{coll}} = \arctan(18/100)\). \(\theta_{\text{couch}} = \arctan(10/100)\).
+
+**Arithmetic.** \(\arctan(0.18) = 10.2^\circ\). \(\arctan(0.10) = 5.7^\circ\).
+
+**Check.** \(\tan 10.2^\circ = 0.180\), \(\tan 5.7^\circ = 0.100\). Using the full spine length, \(\arctan(0.36) = 19.8^\circ\), doubles the collimator angle.
+
+**Result means.** Rotate the brain-field collimators 10.2° so their inferior edges parallel the spine field's diverging superior edge, and kick the couch 5.7° so the brain fields' inferior edges stop diverging into the spine field. If the spine needs two fields, their gap is calculated to the anterior cord depth.
+
+**Wrong turns**
+
+- Collimator angle from the brain length or couch angle from the spine length.
+- Full length in the arctan.
+- Matching two spine fields at the skin or at the posterior cord, which puts the cord in the overlap.
+
+**Traps.** Say which field's divergence each rotation removes. The collimator follows the spine field; the couch follows the brain field.
+
+**Sources.** Khan and Gibbons, craniospinal matching; Bentel, CSI technique.
+
+## Density Table and Fahrenheit Temperature Correction
+
+**Objectives:** IV.3, I.10
+
+**What the exam expects:** Two reference tables used inside calculations. The relative density table: lung about 0.25 to 0.33, fat about 0.92 to 0.95, water 1.00, muscle about 1.05, trabecular (soft) bone about 1.1 to 1.2, cortical bone about 1.65 to 1.85. The temperature-pressure correction for an open ion chamber, with the temperature possibly given in Fahrenheit: convert to Celsius first, then to kelvin, before forming the ratio against 22 °C and 760 mmHg.
+
+**Formulas**
+
+\[
+T_{\text{C}} = \frac{5}{9}(T_{\text{F}} - 32)
+\qquad
+P_{TP} = \frac{273.2 + T_{\text{C}}}{273.2 + 22.0} \times \frac{760}{P}
+\]
+
+- \(T_{\text{F}}, T_{\text{C}}\): temperature in degrees Fahrenheit and Celsius
+- \(P\): pressure in mmHg; 760 mmHg = 101.33 kPa
+- \(P_{TP}\): factor that multiplies the raw reading
+
+### Worked example
+
+**Given.** The chamber is at 72 °F and 752 mmHg.
+
+**Substitute.** \(T_{\text{C}} = (72 - 32) \times 5/9 = 40 \times 5/9 = 22.2\) °C. \(P_{TP} = (273.2 + 22.2)/(273.2 + 22.0) \times 760/752\).
+
+**Arithmetic.** \(295.4/295.2 = 1.0007\). \(760/752 = 1.0106\). \(P_{TP} = 1.0007 \times 1.0106 = 1.011\).
+
+**Check.** The room is almost exactly at reference temperature, so the correction is nearly all pressure: 8 mmHg below 760 is about 1.1% less air in the cavity, and the reading must go up by about 1.1%. Using 72 as if it were Celsius gives \(345.2/295.2 \times 1.0106 = 1.18\), an 18% error.
+
+**Result means.** Multiply the raw reading by 1.011.
+
+### Second pass: the density table
+
+**Given.** A plan lists lung 0.30, fat 0.95, muscle 1.05, cortical bone 1.10.
+
+**Reasoning.** Cortical bone at 1.10 is wrong; 1.1 is trabecular or soft bone. Cortical bone is 1.65 to 1.85. The other three are within their usual ranges. In an effective-depth sum (module 37) the slip would shorten 2 cm of cortical bone from about 3.7 cm water-equivalent to 2.2 cm.
+
+**Wrong turns**
+
+- Fahrenheit used directly in the kelvin sum.
+- Pressure ratio inverted (P over 760).
+- 1.1 assigned to cortical bone, or 0.3 assigned to fat.
+
+**Traps.** Any temperature above 40 in a US stem is probably Fahrenheit. Convert before you add 273.2.
+
+**Sources.** TG-51 for \(P_{TP}\) and the reference conditions; ICRU 44 tissue densities.

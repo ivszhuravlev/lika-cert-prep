@@ -13,7 +13,7 @@ Nuclides these items name:
 | I-125 | 59.4 days | permanent seeds | about 28 keV |
 | Pd-103 | 17.0 days | permanent seeds | about 21 keV |
 | Co-60 | 5.26 years | external beam and some HDR | about 1.25 MeV |
-| Au-198 | 2.7 days | permanent, historical | — |
+| Au-198 | 2.7 days | permanent, historical | 0.412 MeV |
 
 HDR means a dose rate at the prescription point of at least 12 Gy/h. LDR is roughly 0.4–2 Gy/h. MDR sits between them. Pulsed dose rate delivers LDR-like total doses in short pulses. I-125 and Pd-103 permanent seeds are low dose rate in the tissue sense and are not HDR afterloaders.
 
@@ -26,6 +26,8 @@ HDR means a dose rate at the prescription point of at least 12 Gy/h. LDR is roug
 **Core facts**
 
 Energies to memorize, the same numbers as the table: Ir-192 about 380 keV mean, Cs-137 662 keV, I-125 about 28 keV, Pd-103 about 21 keV. Ir-192 is the HDR nuclide. Cs-137 is the historical LDR tube. I-125 and Pd-103 are the permanent seeds. Pd-103 is the softer and the shorter-lived of those two seeds.
+
+Lead half-value layers, if a source item asks for one, follow the same energy order and are the module 3 teaching values: Co-60 12 mm, Cs-137 6.5 mm, Ir-192 "3–6 mm" with about 3 mm as the narrow-beam figure, Au-198 about 2.5 mm, I-125 0.025 mm, Pd-103 about 0.008 mm, and filtered Ra-226 (mean 0.83 MeV) about 8 mm. Published teaching tables disagree by a millimeter or two: Khan-style tables print Cs-137 5.5 mm, Ir-192 2.5 mm, and Co-60 11 mm, while other review sheets print 6.5, 3–6, and 12 mm, so the defensible statement is Cs-137 5.5–6.5 mm, Ir-192 2.5–6 mm, Co-60 11–12 mm. The exam spaces its options far enough apart (for example 0.025, 2.5, 6, 12 mm) that either figure in a range picks the same letter; this bank keeps 12, 6.5, and 3–6 so that its theory and keys match, and treats 2.5 mm as the Ir-192 answer when both 2.5 mm and 6 mm are offered. A stem that needs an HVL for a shielding calculation prints it, and the printed value wins.
 
 **Formulas**
 
@@ -488,3 +490,188 @@ X = \frac{4.69 \times 10}{100^2} = \frac{46.9}{10000} = 0.00469 \text{ R/h}
 **Traps.** Write \(\Gamma\)’s units above the substitution. If they contain cm², the distance is in cm. A distance of 1 m entered as “1” with a cm-based \(\Gamma\) is wrong by \(100^2\).
 
 **Sources.** Khan and Gibbons, exposure rate constant and inverse square. The numeric constants above are the traditional approximate values; a problem that prints \(\Gamma\) wants that printed value.
+
+## Classical Implant Systems, Radium Equivalence, and Line Sources
+
+**Objectives:** V.2, V.1, V.6
+
+**What the exam expects:** Tell the three classical interstitial systems apart by their distribution rule and their prescription point, convert between millicuries and milligram-radium-equivalent with the ratio of gamma constants, separate active length from physical length, and know what a Sievert integral and an along-and-away table are for. None of this replaces TG-43; it is the vocabulary that still appears in items and in older applicator literature.
+
+**Manchester (Paterson–Parker).** The design goal is a dose that is uniform to within about ±10% over the treated plane, evaluated 0.5 cm from the plane of the sources. To get that, the activity is distributed non-uniformly: more at the periphery, less in the middle. For a planar implant the periphery-to-center split depends on the area. Under 25 cm², two thirds of the activity goes to the periphery and one third to the center. From 25 to 100 cm² the split is half and half. Over 100 cm² only one third is on the periphery and two thirds in the center. Needles are spaced no more than 1 cm apart, and the ends of the plane are closed with crossing needles. If an end cannot be crossed, the effective treated area is reduced by 10% for each uncrossed end before the table is read. The stated (prescribed) dose is 10% above the minimum dose in the plane, so the minimum is about 90% of what is written. A single plane covers a slab up to about 1 cm thick; two parallel planes handle thicknesses up to about 2.5 cm; anything thicker is a volume implant. Volume rules divide the activity into eighths: a cylinder gets four parts in the belt, two in the core, and one at each end; a sphere gets six parts in the shell and two in the core; a cube gets one part on each of six faces and two in the core. The belt needs at least eight needles and the core at least four, and each uncrossed end of a volume implant removes 7.5% of the effective volume. The historical tables are written in milligram-hours of radium per 1000 R, which is why milligram-radium-equivalent survives as a unit.
+
+**Quimby and Memorial.** Quimby used uniformly spaced sources of equal linear activity. The dose is then non-uniform: hottest at the center of the plane and lower at the edges. For a planar Quimby implant the stated dose is the maximum dose in the treatment plane (center), and for a volume implant it is the minimum dose inside the implanted volume. For the same minimum peripheral dose, a Quimby implant needs more total milligram-hours than a Manchester implant. The Memorial system extended Quimby into the computer era: seeds of equal strength on a 1 cm lattice, with nomograms that give total activity from the average dimension of the target. The prostate seed nomograms descend from that work.
+
+**Paris.** Built for Ir-192 wires and ribbons of uniform linear activity. The sources are straight, parallel, equidistant, of equal length, and arranged so their midpoints lie in one central plane perpendicular to the sources, either in a single plane or in two planes forming squares or triangles. Spacing is typically 8–15 mm (the original description allows about 5–20 mm, wider for larger volumes). Nothing is crossed, so each line must be longer than the target: the active length runs about 30–40% beyond the target length so that the end fall-off still covers it. The basal dose is the arithmetic mean of the local minimum dose rates found between adjacent sources in the central plane. The reference isodose, which is the prescription surface, is 85% of the basal dose. For a single plane the treated thickness is roughly half the spacing.
+
+**ICRU 58 vocabulary.** ICRU Report 58 (interstitial reporting) took the Paris idea and gave it names. The mean central dose (MCD) is the mean of the local minimum doses between sources in the central plane, which is the basal dose. The minimum target dose (MTD) is the lowest dose at the periphery of the clinical target volume, which in a Paris implant is the reference dose. The high-dose volume is the tissue enclosed by 150% of the MCD. The low-dose volume is the part of the CTV that receives less than 90% of the prescribed dose. Dose uniformity is reported as the spread of the individual central minima and as the dose homogeneity index, MTD divided by MCD (0.85 in a Paris implant). ICRU 58 also asks for the TRAK, the source description, and the time pattern, and it notes that for interstitial work the PTV is usually taken equal to the CTV because the sources move with the tissue.
+
+**Contrasts to remember.** Manchester: non-uniform activity, uniform dose, prescription 10% above the minimum, needles crossed. Quimby: uniform activity, non-uniform dose, central hot spot, planar prescription at the maximum. Paris: uniform linear activity, uncrossed parallel lines, prescription at 85% of the basal dose. Every modern HDR optimizer produces the same trade-off: push dwell weight to the periphery to flatten the dose (Manchester-like) or leave it uniform and accept a hot center (Quimby-like).
+
+**Milligram-radium-equivalent.** One milligram of Ra-226 in equilibrium with its daughters, filtered by 0.5 mm of platinum, gives an exposure rate of 8.25 R/h at 1 cm, so \(\Gamma_{Ra} = 8.25\) R cm² mg⁻¹ h⁻¹. A source of any nuclide is "N mg-Ra-eq" when it produces the same exposure rate at the same distance as N mg of radium. The conversion is a ratio of gamma constants:
+
+\[
+\text{mg-Ra-eq} = A_{\text{mCi}} \times \frac{\Gamma_{\text{nuclide}}}{8.25}
+\qquad
+A_{\text{mCi}} = \text{mg-Ra-eq} \times \frac{8.25}{\Gamma_{\text{nuclide}}}
+\]
+
+Because \(0.876\) cGy of air kerma corresponds to 1 R, one mg-Ra-eq is \(8.25 \times 0.876 = 7.227\) cGy cm² h⁻¹, that is, 7.227 U of air-kerma strength. Milligram-hours (mg-h) is strength multiplied by time, the integrated quantity the Manchester tables are written in.
+
+### Worked example: mg-Ra-eq
+
+**Given.** A Cs-137 tube is labeled 30 mCi. \(\Gamma_{Cs} = 3.26\) R cm² mCi⁻¹ h⁻¹.
+
+**Substitute.** \(30 \times 3.26 / 8.25 = 97.8 / 8.25 = 11.85\) mg-Ra-eq.
+
+**Check.** The cesium constant is less than half the radium constant, so a millicurie of cesium is worth less than half a milligram of radium: \(11.85 / 30 = 0.395\) mg-Ra-eq per mCi. The inverted ratio, \(30 \times 8.25 / 3.26 = 75.9\), would make a weak emitter look stronger than radium and is the classic wrong turn. In air-kerma strength the tube is \(11.85 \times 7.227 = 85.6\) U.
+
+**Result means.** The tube behaves like 11.85 mg of radium for exposure-rate purposes. An order written as "15 mg-Ra-eq of Cs-137" is \(15 \times 8.25 / 3.26 = 38.0\) mCi.
+
+**Active versus physical length.** The active length is the length of the radioactive material inside the capsule. The physical (overall) length includes the inactive end caps and eyelet, so it is always longer. A typical Cs-137 intracavitary tube has an active length of about 1.4 cm inside a 2.0 cm capsule. Classical radium needles were specified by linear activity, 0.66 mg/cm for full intensity and 0.33 mg/cm for half intensity, over their active length. Ir-192 ribbon seeds are about 3 mm long on 1 cm centers. An HDR Ir-192 source is a cylinder roughly 3.5–5 mm long and under 1 mm in diameter at the end of a drive cable, which is why the first dwell position sits a few millimeters short of the catheter tip. Dose tables and Sievert integrals use the active length; what fits in an applicator, and how far a source center is from the tip, uses the physical length.
+
+**Sievert integral and along-and-away tables.** A line source is treated as a row of point elements. Each element contributes \(\Gamma\,dA / r^2\), reduced by oblique filtration through the capsule wall, \(e^{-\mu t \sec\theta}\), and the contributions are integrated over the active length. The result is the Sievert integral. Because it depends only on the point's position relative to the source center, it is tabulated for a unit strength (1 mg-Ra-eq or 1 U), one active length, and one filtration, as a grid of distance along the source axis versus distance away from it. To use the table for an implant, locate each source's center, express the calculation point as (along, away) for that source, read or interpolate the table, multiply by that source's strength, and add the sources. Far from a source the line behaves like a point: beyond about twice the active length the inverse-square estimate is within a few percent of the integral. Closer in, the dose falls more slowly than \(1/d^2\), approaching \(1/d\) for a point very near a long line, and the point-source shortcut overstates the fall-off.
+
+### Worked example: along-and-away table
+
+**Given.** Two identical Cs-137 tubes of 20 mg-Ra-eq each lie end to end on one axis with their centers 2.0 cm apart. Point P is 1.5 cm from the axis, directly opposite the center of the first tube. The table for this tube, in cGy/h per mg-Ra-eq, reads 2.90 at (along 0, away 1.5 cm) and 1.10 at (along 2.0, away 1.5 cm).
+
+**Substitute.** First tube: \(20 \times 2.90 = 58.0\) cGy/h. Second tube, 2.0 cm along the axis from P's foot: \(20 \times 1.10 = 22.0\) cGy/h. Total \(= 80.0\) cGy/h.
+
+**Check.** A point-source estimate for the second tube is \(20 \times 7.227 / (2.0^2 + 1.5^2) = 144.5 / 6.25 = 23.1\) cGy/h, a little above the table's 22.0 because the table also carries oblique filtration and the finite length. The order of magnitude agrees, so the table reading was taken at the right cell.
+
+**Result means.** Each source needs its own (along, away) pair; using the first tube's coordinates for both would give \(2 \times 58 = 116\) cGy/h, 45% high.
+
+**Wrong turns**
+
+- Giving Quimby the periphery-heavy loading, or Manchester the hot center. It is the other way round.
+- Prescribing a Paris implant to the basal dose instead of 85% of it.
+- Multiplying by \(8.25/\Gamma\) when converting mCi to mg-Ra-eq (the ratio must make a weak gamma emitter worth fewer milligrams).
+- Using the physical length as the active length in a dose table.
+- Applying inverse square to a point closer than about two active lengths from a long source.
+
+**Traps.** When a stem says "stated dose" with Manchester, the minimum in the plane is 10% lower. When it says "reference dose" with Paris, the basal dose is higher by the factor 1/0.85.
+
+**Sources.** Khan and Gibbons, implant systems and radium-equivalent specification; ICRU Report 58 for interstitial reporting terms; Paterson–Parker and Paris descriptions as summarized in standard texts.
+
+## Decay Arithmetic for Permanent Implants and Afterloaders
+
+**Objectives:** V.6, I.7
+
+**What the exam expects:** Four decay calculations beyond the plain exponential: the dose from a decaying implant that is removed before it has fully decayed, the removal time that delivers a prescribed dose, the rescaling of an HDR or applicator treatment time when the source has decayed between planning and treatment, and a half-life or crossing time recovered from two activities. All four use the same two constants: \(\lambda = 0.693 / T_{1/2}\) and the mean life \(T_{avg} = 1.443\, T_{1/2}\).
+
+**Dose from a decaying source over a finite time.** If the dose rate starts at \(\dot{D}_0\) and decays with the source, the dose delivered by time \(t\) is the integral of \(\dot{D}_0 e^{-t/T_{avg}}\):
+
+\[
+D(t) = \dot{D}_0\, T_{avg}\left(1 - e^{-t/T_{avg}}\right)
+\qquad
+\frac{D(t)}{D_{\infty}} = 1 - e^{-t/T_{avg}}
+\]
+
+\(D_\infty = \dot{D}_0 T_{avg}\) is the familiar permanent-implant total. The bracket is the fraction of that total delivered so far. After one half-life it is exactly one half (\(1 - e^{-0.693} = 0.500\)); after two half-lives three quarters; 90% of the total has been delivered after \(2.303\, T_{avg} = 3.32\, T_{1/2}\). Solving for the time that delivers a chosen dose:
+
+\[
+t = -T_{avg} \ln\left(1 - \frac{D}{\dot{D}_0 T_{avg}}\right)
+\]
+
+which only has a solution when \(D\) is less than \(D_\infty\). For a short HDR fraction the bracket is indistinguishable from \(t / T_{avg}\) and \(t = D/\dot{D}\) is exact enough; for a multi-day Ir-192 LDR implant the correction is a few percent and the exam expects it.
+
+### Worked example: I-125 implant removed early
+
+**Given.** An I-125 implant started at 7.0 cGy/h. The prescription assumed complete decay. The seeds are removed (prostatectomy) after 60 days. \(T_{1/2} = 59.4\) d.
+
+**Substitute.** \(T_{avg} = 1.443 \times 59.4 = 85.7\) d \(= 2057\) h. \(D_\infty = 7.0 \times 2057 = 14400\) cGy \(= 144\) Gy. Fraction delivered \(= 1 - e^{-60/85.7} = 1 - e^{-0.700} = 1 - 0.497 = 0.503\). Delivered dose \(= 144 \times 0.503 = 72.5\) Gy.
+
+**Check.** Sixty days is almost exactly one half-life (59.4 d), and one half-life delivers one half of the total: \(144 / 2 = 72\) Gy. The small excess over 72 comes from the extra 0.6 day. Ignoring decay would give \(7.0 \times 24 \times 60 = 10080\) cGy, 101 Gy, which overstates the dose by 39%.
+
+**Result means.** The gland received about 72.5 Gy, not the 144 Gy total and not the 101 Gy that a constant dose rate would give.
+
+### Worked example: removal time for an Ir-192 LDR implant
+
+**Given.** A temporary Ir-192 implant is to deliver 60 Gy. The initial dose rate at the prescription isodose is 50 cGy/h. \(T_{1/2} = 73.8\) d.
+
+**Substitute.** \(T_{avg} = 1.443 \times 73.8 = 106.5\) d \(= 2556\) h. \(D_\infty = 50 \times 2556 = 127800\) cGy. Ratio \(D / D_\infty = 6000 / 127800 = 0.0469\). \(t = -2556 \times \ln(1 - 0.0469) = -2556 \times \ln(0.9531) = 2556 \times 0.0481 = 122.9\) h.
+
+**Check.** Without decay, \(6000 / 50 = 120\) h. The source loses about 1% per day, so over five days the average dose rate is about 2.5% below the starting value and the time should be about 2.5% longer: \(120 \times 1.025 = 123\) h. Agrees.
+
+**Result means.** Schedule removal at about 123 hours, roughly 3 hours later than the no-decay estimate. Removing at 120 h underdoses by about 1.5 Gy.
+
+**Rescaling an HDR or applicator time for decay.** For the same dose from the same geometry, dose rate times time is constant, so
+
+\[
+t_2 = t_1 \frac{A_1}{A_2} = t_1\, e^{\lambda \Delta t}
+\]
+
+where \(\Delta t\) is the time elapsed from the planning (or calibration) date to the treatment date. The later treatment is always longer. Rules of thumb: Ir-192 loses about 1% per day (so a 10-day delay adds about 10% to the time), Co-60 about 1% per month, Cs-137 about 2.3% per year, Sr-90 about 2.4% per year. The afterloader does this from its decay table every day; the independent check reproduces it by hand.
+
+### Worked example: fraction two after ten days
+
+**Given.** Fraction one of a cylinder course ran a total dwell of 300 s. Fraction two is 10 days later on the same Ir-192 source with the same plan.
+
+**Substitute.** \(\lambda \Delta t = 0.693 \times 10 / 73.8 = 0.0939\). \(e^{0.0939} = 1.098\). \(t_2 = 300 \times 1.098 = 329.5\) s, about 330 s.
+
+**Check.** Ten days at about 1%/day is about 10% more time: \(300 \times 1.10 = 330\) s. Dividing instead of multiplying gives 273 s, which would underdose a weaker source, the wrong direction.
+
+**Result means.** The second fraction needs about 330 s of total dwell. If the afterloader still shows 300 s, its decay table or source date is wrong and treatment stops until it is resolved.
+
+**Half-life from two assays.** Two measurements of the same source separated by \(\Delta t\) give
+
+\[
+T_{1/2} = \frac{0.693\, \Delta t}{\ln(A_1 / A_2)}
+\]
+
+For example, a seed batch that reads 4.00 mCi and, 30 days later, 2.82 mCi has \(\ln(4.00/2.82) = \ln 1.418 = 0.3496\), so \(T_{1/2} = 0.693 \times 30 / 0.3496 = 59.5\) d, which identifies I-125. The same algebra gives the decay constant directly as \(\ln(A_1/A_2)/\Delta t\).
+
+**Equal-activity crossing time.** Two sources of different nuclides have equal activity when \(A_1 e^{-\lambda_1 t} = A_2 e^{-\lambda_2 t}\), that is,
+
+\[
+t = \frac{\ln(A_2 / A_1)}{\lambda_2 - \lambda_1}
+\]
+
+with source 2 the one that starts stronger and decays faster. With 10 mCi of I-125 and 25 mCi of Pd-103: \(\lambda_I = 0.693/59.4 = 0.01167\) d⁻¹, \(\lambda_{Pd} = 0.693/17.0 = 0.04077\) d⁻¹, difference 0.02910 d⁻¹, \(\ln 2.5 = 0.916\), so \(t = 0.916 / 0.02910 = 31.5\) d. At that time both read about 6.9 mCi (\(10 e^{-0.367} = 6.93\); \(25 e^{-1.284} = 6.93\)). Some study keys print about 34 days for this problem; the bank uses 31.5 d because the arithmetic above is reproducible and the check closes. The qualitative point is more often tested: the shorter-lived nuclide must start with more activity to deliver the same total dose, and it is the hotter source only until the crossing time.
+
+**Wrong turns**
+
+- Using the half-life instead of the mean life inside the finite-time bracket (\(1 - e^{-t/T_{1/2}}\) overstates the delivered fraction).
+- Rescaling a treatment time downward for a source that has decayed.
+- Taking \(\ln(A_2/A_1)\) with the activities in the wrong order and getting a negative half-life.
+- Forgetting that the crossing-time formula needs the difference of the decay constants, not their ratio.
+
+**Traps.** When the stem says "removed after" or "explanted," the bracket applies. When it says "same plan, later date," the exponential ratio applies. Neither needs TG-43 factors because geometry has not changed.
+
+**Sources.** Khan and Gibbons, decay and dose from temporary and permanent implants; AAPM TG-56 for decay correction practice; the finite-time integral as presented in standard brachytherapy physics texts.
+
+## Site Procedures, Applicators, and HDR Program Numbers
+
+**Objectives:** V.2, V.3, V.5
+
+**What the exam expects:** The LDR prostate workflow from volume study to post-implant CT, the balloon and strut devices used for accelerated partial-breast irradiation and their numbers, the names of the interstitial templates and surface applicators, the point systems beyond Manchester A and B, the HDR QA tolerances a dosimetrist should recognize, who does what in an HDR emergency, and the current medical-event thresholds. Transport labels are mentioned only as vocabulary; the protection module carries the detail.
+
+**LDR prostate workflow.** Candidates have a gland of roughly 20–60 cm³, no severe outlet obstruction, and no pubic-arch interference; a large gland is sometimes downsized with hormonal therapy first. The volume study is transrectal ultrasound (TRUS) in the dorsal lithotomy position with the probe in a stepper, axial images every 5 mm from base to apex, and the template grid (5 mm holes) superimposed. The prostate, urethra (Foley or aerated gel), and anterior rectal wall are contoured; the PTV is the prostate plus about 3–5 mm except 0 mm posteriorly toward the rectum. Loading is peripheral or modified peripheral: most seeds in the outer rows, few or none in the central needles, which keeps the urethra under about 150% while the periphery reaches prescription. Uniform loading, the Quimby pattern, over-doses the urethra. Monotherapy prescriptions are I-125 145 Gy, Pd-103 125 Gy, and Cs-131 115 Gy; as a boost after 45 Gy of external beam they drop to about 110, 100, and 85 Gy. Individual seed strengths are around 0.3–0.6 mCi apparent (about 0.4–0.8 U) for I-125 and higher for Pd-103, and an implant uses about 60–120 seeds depending on gland volume, nuclide, and strength. The seed count is total activity from the nomogram or plan divided by the per-seed strength, and about 10% extra is ordered. At least 10% of the seeds, or ten seeds, whichever is more, are assayed in a well chamber (a third-party assay traceable to the vendor's calibration is acceptable); the mean should agree with the certificate within about 3%, and a disagreement beyond 5% is resolved with the vendor. Preplan goals: V100 at least 95% (often 98–99%), D90 above 100% of prescription, V150 no more than about 50–60%, V200 no more than about 20%; urethra D10 below 150% and D30 below 130%; rectum V100 under 1 cm³. In the operating room the needles go in anterior rows first so that later needles do not shadow the ultrasound image of the ones still to be placed; seeds are delivered either one at a time with a Mick applicator or as pre-loaded strands, which migrate less and hold the periphery better. Fluoroscopy or cone-beam CT confirms the distribution, cystoscopy retrieves any seed in the bladder, and a GM survey of the room, drapes, and waste finds dropped seeds. The base is the hardest region to cover. Post-implant CT is done at about 30 days for I-125 (edema has resolved; TG-137 says 30 ± 7 days), about 16 days for Pd-103 and about 10 days for Cs-131; a same-day CT is acceptable but reads low because of edema. Post-implant D90 of at least 90% of prescription is the usual adequacy threshold, with the same urethral and rectal metrics. Patients leave the same day: the dose to others from I-125 or Pd-103 in the pelvis is far below the 5 mSv release criterion.
+
+**Accelerated partial-breast brachytherapy.** The devices are a single-lumen balloon (MammoSite), multi-lumen balloons (Contura, with a central lumen and four offset lumens plus vacuum ports), and the strut-based SAVI, whose expandable struts around a central catheter give the most catheters and the most freedom to shape dose away from skin and ribs. The balloon is 4–5 cm in diameter (about 35–70 cm³) and must conform to the cavity with no more than about 10% of the PTV volume as air or fluid pockets. The prescription is 34 Gy in 10 fractions, twice daily at least 6 hours apart, over about 5 days, specified at 1 cm from the balloon or device surface. PTV_eval is the 1 cm shell outside the device surface, minus the device volume, trimmed to 5 mm inside the skin surface and excluding the chest wall and pectoralis. Goals: at least 90% of the prescription to at least 90% of PTV_eval; V150 no more than 50 cm³; V200 no more than 10 cm³; maximum skin dose no more than 145% (multi-lumen plans aim lower, about 125%); rib maximum about 145%. The device-to-skin distance should be at least 7 mm; a multi-lumen device can be planned down to about 5 mm. With a single central dwell the balloon surface sits at about 200% of the prescription, because the surface is at 2.5 cm from the center and the prescription at 3.5 cm: \((3.5/2.5)^2 = 1.96\).
+
+**Templates and surface applicators.** The Syed–Neblett template is a perineal acrylic plate with needle holes on concentric rings around a vaginal obturator; needles are driven through it into the cervix, parametria, or vagina and afterloaded, usually with HDR Ir-192 today, when a tandem cannot be placed or disease is bulky or lateral. MUPIT is the same idea with a different plate. The Freiburg flap is a flexible silicone mat of 1 cm spheres that holds parallel catheters 1 cm apart and 5 mm above the skin; it conforms to curved surfaces (scalp, limbs, trunk) and is prescribed at about 3–5 mm depth. The Leipzig applicator is a tungsten-shielded cup, 1–3 cm in diameter, for a single dwell over a small skin lesion, prescribed at about 3 mm depth; the Valencia version adds a flattening filter for a flatter profile. Lesions deeper than about 4–5 mm are better served by electrons or by interstitial catheters.
+
+**Optimization vocabulary.** Geometric optimization sets dwell times inversely to the dose each dwell receives from its neighbors, so end dwells get longer. Dose-point optimization adjusts times by least squares to meet dose points on the applicator surface or at depth. Inverse planning (IPSA, HIPO) minimizes a penalty function over target and organ objectives. Graphical optimization is a manual step after one of those: the planner drags an isodose line on the display, and the system changes the nearby dwell times so the line passes through the new position. It is quick and local, and because every change moves dose somewhere else, the DVH and the hot-spot volumes are re-checked after each drag.
+
+**Special applications.** The Sr-90/Y-90 pterygium applicator is a sealed beta source pressed on the sclera after excision; Y-90 betas have a 2.28 MeV maximum energy, the dose falls to about half within a millimeter, surface dose rates are several cGy per second, and the 28.8-year half-life means the decay-corrected dose rate is updated about once a year. Electronic brachytherapy uses a miniature x-ray tube at about 50 kV (Xoft Axxent, Intrabeam) in a balloon, surface cone, or spherical applicator; there is no radionuclide, so byproduct-material licensing does not apply, the room needs little shielding, and staff can stay nearby, but the output must be verified per tube and the low energy raises the dose to bone and the surface relative to Ir-192. Intravascular brachytherapy treated in-stent coronary restenosis with beta (Sr-90/Y-90, P-32) or gamma (Ir-192) sources, prescribing about 15–20 Gy at 2 mm from the source axis; drug-eluting stents replaced it. Intraluminal HDR for the bronchus or esophagus is prescribed at 1 cm from the catheter axis in a few fractions (for example 7.5 Gy × 3 endobronchial).
+
+**GYN points beyond A and B.** The lymphatic trapezoid (ICRU 38, from Fletcher) is drawn on the AP film: a line from the S1–S2 junction to the top of the symphysis, a second line from the midpoint of that line to the anterior middle of L4, and a trapezoid whose lower corners are 6 cm lateral to the midline at the pelvic-brim level (external iliac nodes), whose upper corners are 2 cm lateral at L4 (low para-aortic nodes), and whose side midpoints stand for the low common iliac nodes. The pelvic-wall points, also ICRU 38, lie on the AP film at the intersection of a horizontal tangent to the top of the acetabula with a vertical tangent to their inner edge, and on the lateral film at the mid-distance between the right and left points; they stand for the distal parametrium and obturator nodes and receive a dose similar to point B. ICRU Report 89 (2016) is the current cervix report: it keeps point A and the ICRU bladder and rectal points for continuity and adds the GEC-ESTRO volumes (GTV-res, HR-CTV, IR-CTV) with D90, D98, and D2cc reporting.
+
+**HDR QA numbers.** Source strength is measured in a well chamber on receipt of each new source (Ir-192 is exchanged about every 3 months); the measured value should agree with the vendor certificate within about 3%, a difference beyond 5% must be resolved with the vendor before clinical use, and the institution treats with its own measured value. The well chamber has an ADCL calibration for that nuclide, renewed every 2 years, and a sweet-spot (position of maximum reading) check. Source positional accuracy is within 1 mm, demonstrated with an autoradiograph or a position check ruler against the dummy marker; the NRC full calibration (at each source exchange and at least quarterly) includes that 1 mm positioning requirement, timer accuracy and linearity, and source strength. Timer accuracy is within 1 s (or 1%), with the transit (end-effect) dose characterized. The step size is selectable, usually 2.5, 5, or 10 mm (newer units allow 1 mm), and the number of dwell positions per channel is finite, so a plan that asks for more positions than the channel allows is rejected. With the source in the safe, the exposure rate at 10 cm from the afterloader surface should not exceed 1 mR/h. Before the first treatment of each day the operator confirms the door interlock, the source-exposed indicator lights, the audio and video links, the area radiation monitor, the emergency stop and retract, the emergency kit, the clock and date, and the decayed source strength in the console. Emergency drills are run at least annually. The authorized user physician and the authorized medical physicist are physically present when a treatment starts; the physicist is the person who retracts the source with the emergency crank if the drive fails, and the physician is the person who removes the applicator from the patient and places it in the shielded container if the source still will not retract (TG-59 roles). The patient is surveyed after every fraction and is not released until the reading is at background.
+
+**Medical events, current form (10 CFR 35.3045).** A medical event is a delivered total dose differing from the written directive by 20% or more, a single fraction differing by 50% or more, a dose outside the prescribed range, or an administration to the wrong patient, with the wrong radionuclide, by the wrong route, or to the wrong site (each dose criterion also requires an absolute threshold, 0.05 Sv effective, 0.5 Sv to an organ, or 0.5 Sv to skin, which brachytherapy doses always exceed). For permanent implants the 2018 rule replaces dose with source strength: a medical event is a total implanted source strength more than 20% off the written directive, or more than 20% of the implanted strength outside the treatment site as documented on the post-implant portion of the directive, which the physician completes within 60 days. Notification goes to the NRC or agreement state by telephone no later than the next calendar day, to the referring physician and the patient within 24 hours, and in writing within 15 days. The old "recordable event" category and its 10% threshold no longer exist.
+
+**Transport labels.** Shipments of sealed sources carry a DOT category label chosen by two readings: the surface dose rate and the transport index (TI), which is the maximum dose rate at 1 m from the package in mrem/h, rounded up to one decimal. White-I is used when the surface is no more than 0.5 mrem/h and the TI is effectively zero; Yellow-II when the surface is no more than 50 mrem/h and the TI no more than 1; Yellow-III when either number is higher (surface up to 200 mrem/h in ordinary shipments, TI up to 10). A seed shipment or an HDR source container arriving with a label is checked for the TI and surveyed on receipt; the package-receipt survey, Type A versus Type B packaging, and the exclusive-use rules belong to the protection module.
+
+**Wrong turns**
+
+- Loading a prostate uniformly: the urethra, which runs through the center, exceeds 150%.
+- Post-implant CT on the day of the implant used as the final dosimetry; edema makes the gland larger and D90 lower than the 30-day result.
+- Prescribing a balloon at the surface instead of 1 cm, or including the balloon volume in PTV_eval.
+- Expecting the physicist to pull the applicator in an HDR emergency; the crank is the physicist's job, the applicator is the physician's.
+- Quoting a 10% "recordable event" threshold; the current rule has only medical events at 20% total and 50% per fraction.
+
+**Traps.** A stem that gives skin-to-balloon distance in millimeters is asking whether the case is plannable (7 mm comfortable, 5 mm with a multi-lumen device, less than that usually not). A stem that gives seeds outside the gland on the post-implant CT is asking about the 20% source-strength rule, not the dose rule.
+
+**Sources.** AAPM TG-56, TG-59, TG-64, TG-137, and TG-128 for prostate and HDR practice; NSABP B-39 and ABS guidance for the balloon and strut numbers; ICRU 38 and ICRU 89 for the GYN points; 10 CFR 35.3045, 35.633, 35.643 and 49 CFR 172 for the regulatory figures.

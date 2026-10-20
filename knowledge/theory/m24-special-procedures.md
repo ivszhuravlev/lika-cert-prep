@@ -169,3 +169,110 @@ Two numeric constraints from this set are the ones to memorize. Chest wall: the 
 Which organ forces compensators or blocks on TBI, how many patient positions does Stanford total skin use, and why is an SRS margin smaller than a conventional brain margin? What does a conformity index far above 1 mean, and what hippocampal limits does RTOG 0933 cite?
 
 Walk-through: Lungs. Six positions. The dose gradient is steep, so a conventional expansion would bathe normal brain that the stereotactic setup is precise enough to spare. The precision has to be real: a frame or image guidance, and Winston-Lutz within 1 mm. A conformity index well above 1 means the prescription isodose is large compared with the PTV. RTOG 0933 is 30 Gy in 10 fractions to the whole brain, with hippocampal D100% at or below 9 Gy and maximum dose at or below 16 Gy.
+
+## TBI Dose Rate, Uniformity, and Energy Rules
+
+**Objectives:** III.6
+
+**What the exam expects**
+
+The TBI lesson above tells you which problems exist. This lesson gives the numbers the exam keys on: the classic midplane dose-rate band, the uniformity target, the in-vivo acceptance window, the energy rule for a thick patient, and how a lung block is sized at an extended distance.
+
+**Core facts**
+
+Dose rate. The classic teaching figure for fractionated TBI is a midplane dose rate of about 5–10 cGy per minute, obtained by treating at 3–4 m or more and by lowering the machine dose rate. Lower dose rate at the lung is associated with less interstitial pneumonitis, which is why the band is quoted. Some programs accept up to about 20 cGy/min with fractionation and lung shielding. The bank's exam figure is 5–10 cGy/min; the protocol is the authority in a clinical stem.
+
+Uniformity. The planning goal is a midplane dose within about plus or minus 10 percent of the prescription dose along the whole body axis, which is the same statement as holding the hottest region under about 110 percent. Compensators over the thinner parts (neck, legs) and lung shielding over the thorax are how the 10 percent is met. The ICRU 50 photon goal of −5/+7 percent is not applied to TBI.
+
+In-vivo dosimetry. Diodes, TLDs, or OSLDs are placed at the prescription point and at representative sites on the first fraction, and the readings are expected to agree with the calculated dose within about plus or minus 5 percent. A reading outside 5 percent triggers a compensator adjustment or a recalculation before the next fraction. The 5 percent is a measurement acceptance window; the 10 percent is the planning uniformity target. Do not swap them.
+
+Energy and separation. For anterior–posterior opposed fields at an extended distance, higher energy flattens the midplane-to-entrance ratio for a thick separation, so among the usual choices 15 MV (or 18 MV) AP/PA gives the most homogeneous dose through the trunk. The practical rule: if the largest separation along the beam is under about 35 cm and the treatment distance is at least 3 m, 6 MV gives acceptable midplane uniformity; thicker separations, or lateral opposed fields that cross the shoulders and pelvis, favor 10–18 MV. Lateral fields are chosen for patient comfort and for keeping the arms as lung compensators, at the cost of a larger separation. A spoiler brings the skin dose back whatever the energy.
+
+Lung blocks. The block has to project onto the lung at the patient, so it is drawn from the simulation film or the DRR and scaled by the ratio of tray distance to patient distance. Divergence is handled the same way as any other block: the block at the tray is smaller than the lung by the ratio of the distances. A partial-transmission block (for example 50 percent transmission) or a full block used for only some of the fractions limits the lung to the protocol dose while the rest of the body receives the prescription. Tissue under a full-transmission block then needs the chest-wall electron boost described in the earlier lesson. In-vivo dosimetry behind the block confirms the lung dose.
+
+**Formulas**
+
+Block scaling at extended distance: block size at the tray = size at the patient × (tray distance / patient distance).
+
+A lung is 22 cm long at the midplane, the midplane is 400 cm from the source, and the shadow tray is 60 cm from the source. Block length = 22 × 60 / 400 = 3.3 cm. Check: 3.3 × 400 / 60 = 22 cm. A block drawn at 22 cm would shadow more than half the body.
+
+**Traps**
+
+- Quoting the in-vivo 5 percent window as the uniformity goal, or the 10 percent uniformity goal as the in-vivo tolerance.
+- Choosing 6 MV AP/PA for a 45 cm separation at 3 m and expecting the midplane to stay within 10 percent.
+- Drawing the lung block at the lung's actual size when it sits on a tray near the head.
+- Treating 5–10 cGy/min as a regulatory limit. It is the classic teaching band; the protocol governs.
+
+**Sources**
+
+- AAPM TG-29, total-body irradiation
+- Khan and Gibbons, TBI chapter, for the energy-separation rule and the in-vivo practice
+- The transplant protocol in a stem, which overrides every number here
+
+## TSET Geometry, IORT, Hemibody, and Electron Arc
+
+**Objectives:** III.6, I.3
+
+**What the exam expects**
+
+You can explain why the Stanford dual fields are angled off the horizontal in terms of x-ray contamination, state the typical IORT single dose and the devices that deliver it, describe hemibody irradiation as a procedure, and give the handful of electron-arc facts the exam uses.
+
+**Core facts**
+
+TSET beam geometry. The bremsstrahlung contamination of a degraded electron beam is largest along the central axis and falls off toward the edges. If one horizontal field were aimed at the patient's center, that photon core would sit on the trunk. The Stanford technique instead uses a dual field at each of the six positions: one beam angled about 15–20 degrees above horizontal and one the same amount below, so the two central axes pass above the head and below the feet. The electron fields overlap to give a flat vertical profile over the standing patient and the x-ray contamination is pushed off the body. Six positions times two angles is twelve fields. The nominal 6 MeV beam reaches the patient at about 3–4 MeV after the scatterer and the air path, dmax moves toward the surface, the 80 percent depth is on the order of 5–10 mm, and the midplane photon dose over a course is kept to about 1 percent of the skin dose. Eyes are shielded with external or internal shields and nails are shielded because nail loss is a known toxicity.
+
+IORT. Intraoperative radiotherapy delivers a single large fraction, typically 10–20 Gy, to an exposed tumor bed with the bowel and skin moved out of the field. Three delivery families exist: electron beams (a dedicated mobile linac or a conventional linac with a cone docked to the wound), low-energy x-rays (a 50 kV source in a spherical applicator placed in the cavity), and HDR brachytherapy applicators laid on the bed. Electron IORT uses rigid cones; a bevelled cone follows a sloping surface and shifts the isodose lines so the penumbra on the bevel side is wider. Energies of 6–12 MeV cover a bed a few centimeters deep, and the dose is prescribed to the 90 percent line. Lucite cones also absorb bremsstrahlung from the scraper edge. The single dose is combined with external beam in most breast and pancreas programs.
+
+Hemibody. Hemibody irradiation treats widespread painful bone metastases in one large field covering either the upper half (above the umbilicus) or the lower half of the body, at an extended source–axis distance so the field covers the length. Classic single doses are about 6 Gy to the upper half (the lung limits it) and 8 Gy to the lower half. Premedication with antiemetics and steroids is standard, and the two halves are separated by about 4–6 weeks for marrow recovery. The calculation is the extended-distance arithmetic from the calculation modules; the procedure name and the two doses are what this lesson adds.
+
+Electron arc. Electron arc therapy treats a curved surface (chest wall, scalp) with a rotating electron beam. The isocenter is placed at depth inside the patient so that the distance from the virtual source to the skin is similar at every angle, and the arc is extended about 10–15 degrees beyond the target edges to make up for the dose falloff at the ends of the arc. The field is narrow in the direction of rotation, about 4–8 cm. Because each point is swept by the beam at different angles (the velocity effect), dmax is deeper than for the same energy in a static field. Lead shielding on the skin at the arc limits is about E/2 plus 1 mm, slightly thicker than the static-field rule, because the obliquely incident electrons are more penetrating at the edge.
+
+**Traps**
+
+- Placing the TSET central axis on the trunk. The photon core goes above the head and below the feet.
+- Quoting IORT as a fractionated course or as a dose of a few gray.
+- Giving the lower hemibody dose to the upper half; the lung sets the upper limit at about 6 Gy.
+- Using the static E/2 lead rule at the edge of an electron arc, or stopping the arc at the target edge.
+
+**Sources**
+
+- AAPM TG-30, total skin electron therapy
+- AAPM TG-48 and TG-72, intraoperative electron beam therapy
+- Khan and Gibbons, electron arc therapy and hemibody irradiation sections
+
+## Stereotactic Tolerances and Prescription Isodose
+
+**Objectives:** III.6
+
+**What the exam expects**
+
+You can give the TG-142 isocenter-coincidence tolerance for a stereotactic machine and for an ordinary machine, the TG-101 dose-grid recommendation, the range of isodose lines stereotactic plans are prescribed to, and why a circular cone has a smaller penumbra than an MLC aperture.
+
+**Core facts**
+
+TG-142 tolerances. TG-142 separates machines used for SRS/SBRT from non-stereotactic machines. The monthly coincidence of the radiation isocenter with the mechanical isocenter, and the coincidence of the imaging isocenter with the treatment isocenter, is 1 mm for an SRS/SBRT machine and 2 mm for a non-SRS machine. The same split appears for laser and couch position tolerances. The 1 mm figure is why Winston-Lutz is checked more often on a stereotactic machine and why a 1.5 mm result that is acceptable for conventional treatment fails for SRS.
+
+TG-101 grid. TG-101 recommends a dose calculation grid of 2 mm or finer for SBRT, with 1 mm preferred for very small targets, because the dose falls by tens of percent over a few millimeters at the target edge and a coarse grid misses the maximum and misreports the conformity indices. The same reasoning places the small-field output factors in the hands of a small detector.
+
+Prescription isodose. Stereotactic plans are prescribed to a line well below the maximum, typically 50–80 percent of the maximum dose. Gamma Knife plans sit near 50 percent; linac SRS and SBRT plans are more often 60–80 percent. Prescribing to a lower line steepens the dose gradient outside the target and sharpens the falloff into the adjacent organ, at the price of a hot center that is intentional. The homogeneity criteria of ICRU 50 and 83 do not apply.
+
+Cones versus MLC. A circular cone is a thick, tapered collimator mounted close to the patient, so the geometric penumbra is small, there is no interleaf leakage and no rounded leaf-end transmission, and the small field is defined by a continuous edge. For a spherical target of a few millimeters, the cone gives a sharper beam edge than a multileaf aperture. An MLC wins when the target is irregular, when several targets share one isocenter, or when the field is too large for the cone set.
+
+**Formulas**
+
+Hot-spot dose from the prescription line: maximum dose = prescription dose / prescription isodose fraction.
+
+An 18 Gy single fraction is prescribed to the 50 percent line: maximum = 18 / 0.50 = 36 Gy. The same 18 Gy to the 80 percent line gives 18 / 0.80 = 22.5 Gy. Check: 36 × 0.50 = 18 and 22.5 × 0.80 = 18.
+
+**Traps**
+
+- Applying the 2 mm non-SRS tolerance to a machine that treats SRS.
+- Calculating an SBRT plan on a 3–4 mm grid and defending the conformity index it reports.
+- Flagging a 200 percent center on a 50 percent prescription as a planning error.
+- Choosing an MLC aperture over a cone for a 6 mm spherical metastasis on the grounds of penumbra.
+
+**Sources**
+
+- AAPM TG-142, quality assurance of medical accelerators, SRS/SBRT versus non-SRS columns
+- AAPM TG-101, stereotactic body radiation therapy, dose grid and small-field dosimetry
+- ICRU 91, prescribing and reporting small photon beam treatments

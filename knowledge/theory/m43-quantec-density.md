@@ -162,3 +162,63 @@ Muscle stays about 1.04 and bone stays about 1.85. Those values were already in 
 **Traps.** If the stem says “lung” and gives no number, use about 0.25–0.30 and show which end you picked. If the stem gives 0.26, use 0.26. If the stem says Cerrobend and gives no number, use about 9.4.
 
 **Sources.** Standard physical-density tables used with CT-to-density commissioning (module 37). QUANTEC is not a density reference; it shares this module only because both are memory items.
+
+## Constraint rows added from review
+
+**Objectives:** III.8
+
+**What the exam expects:** A DVH value appears in the stem and you say pass or fail, or several organs appear and you name the one that is limiting. The QUANTEC lesson above covers the 2010 summary rows. The rows below are the ones that turn up on department templates and MDCB-style items but were not in that lesson: three are QUANTEC rows that the summary table omitted, the rest are RTOG-protocol or common-practice numbers. Each row says where its figure comes from. The stem's own number, when it prints one, always wins over this list. These are conventional-fractionation (about 2 Gy per fraction) rows except the last one.
+
+**Core facts, one row at a time**
+
+Spinal cord PRV. The cord contour is expanded by 5 mm in every direction to a planning organ-at-risk volume (PRV), and the planning limit of Dmax 50 Gy is applied to the PRV, not only to the cord itself; some protocols write cord 45 Gy and PRV 50 Gy, and some expand 7–10 mm where the field arrangement makes it feasible. Source: RTOG head-and-neck protocols and common planning practice; QUANTEC's 50 Gy row is written for the cord contour and does not define a PRV.
+
+Pharyngeal constrictors. Mean dose below 50 Gy, endpoint symptomatic dysphagia and aspiration; this is a separate QUANTEC row from the larynx rows (mean below 44 Gy for edema, mean below 50 Gy for aspiration, Dmax below 66 Gy for vocal dysfunction), and a plan can pass every larynx row and still fail the constrictors. Source: QUANTEC larynx-and-pharynx paper.
+
+Kidneys, bilateral. The full QUANTEC set is mean below 15–18 Gy, V12 below 55%, V20 below 32%, V23 below 30%, and V28 below 20%; it is scored as a set, so one volume bin over its figure fails the kidneys even when the mean passes. Source: QUANTEC kidney paper (the summary lesson above carried only the mean and V12).
+
+Mandible. The planning goal is Dmax below 70 Gy, with the usual protocol reading that no 1 cm³ of mandible exceeds 70 Gy (a few protocols allow 1 cm³ up to 75 Gy); the endpoint is osteoradionecrosis. Source: RTOG head-and-neck protocols; this bank scores Dmax 70 Gy as the goal and the 1 cm³ reading as the acceptable-variation line.
+
+Brachial plexus, conventional fractionation. Dmax at or below 66 Gy, endpoint brachial plexopathy; the Emami TD5/5 figure is 60 Gy and some templates still use it. Source: RTOG head-and-neck and lung protocols; the TG-101 plexus cells (17.5, 24, 30.5 Gy point maximum for 1, 3, 5 fractions) are stereotactic only and must not be used on a 30-fraction plan.
+
+Femoral heads. V50 below 5%, with Dmax below 50 Gy as the stricter alternative some templates write instead; the endpoint is femoral head necrosis and fracture. Source: common planning practice and department templates; the RTOG prostate protocols (0126, 0415 style) print V50 below 10%, so apply whichever figure the stem gives and use V50 below 5% when it is silent.
+
+Lens. Dmax below 7–10 Gy depending on the source: Emami TD5/5 is 10 Gy, most IMRT templates write 5–7 Gy, and QUANTEC-era teaching cards often say 6 Gy; the detectable-opacity threshold taught for radiation protection is about 1–2 Gy, which is not a planning constraint. Source: Emami and common planning practice, not QUANTEC; this bank uses Dmax below 7 Gy when a stem is silent and accepts any figure inside 5–10 Gy that a stem prints.
+
+Eye, globe and retina. Retina Dmax below 45 Gy and globe Dmax below 50 Gy, endpoint retinopathy and blindness. Source: Emami retina TD5/5 of 45 Gy and RTOG head-and-neck template rows of 45–50 Gy; not a QUANTEC row.
+
+Breast and chest-wall tangents, ipsilateral lung. Ipsilateral lung V20 below 15–20% for a whole-breast tangent plan (RTOG 1005 writes V20 at or below 15%, V10 at or below 35%, V5 at or below 50%); chest-wall and regional-nodal plans run up to about 25%. Source: RTOG breast protocols; the bilateral-lung V20 at or below 30% row is the thoracic-radiotherapy row and is the wrong one for a tangent plan, because tangents treat one lung only.
+
+Breast, heart (left-sided). Heart V25 below 10% is the QUANTEC long-term cardiac-mortality row, and mean heart dose below 4–5 Gy is the breast-protocol row (RTOG 1005 writes mean below 4 Gy and V20 below 5%); the Darby data behind the mean-dose row is about a 7% relative increase in major coronary events per gray of mean heart dose. Source: QUANTEC for V25, RTOG breast protocols and common practice for the mean.
+
+Spinal cord, stereotactic, QUANTEC line. QUANTEC's cord paper places less than 1% myelopathy at a maximum cord dose of 13 Gy in a single fraction or 20 Gy in three fractions; TG-101 Table III prints a different pair for the same organ, a point maximum (0.035 cm³) of 14 Gy in one fraction, 21.9 Gy in three, and 30 Gy in five, with 10, 18, and 23 Gy to 0.35 cm³. Source: QUANTEC spinal cord paper and TG-101; a stem that names QUANTEC is scored on 13 and 20 Gy, a stem that names TG-101 on 14 and 21.9 Gy, and a stem that gives neither is a point-maximum question that the printed options will usually settle.
+
+### Worked example
+
+**Given.** Conventional head-and-neck IMRT, 70 Gy in 35 fractions. The DVH reads cord Dmax 44 Gy, cord PRV (cord plus 5 mm) Dmax 51 Gy, pharyngeal constrictor mean 48 Gy, mandible Dmax 71 Gy with 0.3 cm³ above 70 Gy, bilateral parotid mean 24 Gy, brachial plexus Dmax 63 Gy. Name the failing rows.
+
+**Compare, one row at a time.**
+
+- Cord 44 Gy against 50 Gy: inside. Cord PRV 51 Gy against 50 Gy: over by 1 Gy. Fails.
+- Constrictor mean 48 Gy against 50 Gy: inside, by 2 Gy.
+- Mandible Dmax 71 Gy against the 70 Gy goal: over by 1 Gy, so the goal is missed. Volume above 70 Gy is 0.3 cm³ against the 1 cm³ variation line: 0.3 < 1, so the plan is inside the acceptable variation. Record it as a variation, not a pass.
+- Parotid mean 24 Gy against 25 Gy bilateral: inside.
+- Plexus 63 Gy against 66 Gy: inside; against the Emami 60 Gy figure it would be over, which is why the stem must say which figure applies.
+
+**Check.** 51 − 50 = 1 Gy over on the PRV; 71 − 70 = 1 Gy over on the mandible goal with 0.7 cm³ of room under the variation line; every other row is inside its figure.
+
+**Result means.** The limiting structure is the cord PRV, the only row with no allowance left; the mandible is a recorded variation. Reducing the PRV maximum by about 1 Gy, then re-reading every row, is the next planning step. The constrictor mean at 48 Gy has only 2 Gy of room; a re-optimization that fixes the PRV must not push the constrictors past 50 Gy.
+
+**Wrong turns**
+
+- Passing the plan because the cord itself is 44 Gy; the limit was written on the PRV.
+- Scoring the constrictors on the larynx 44 Gy edema row (they would then look like a failure) or dropping them because "larynx passed."
+- Calling 63 Gy a plexus failure against the TG-101 five-fraction point maximum of 30.5 Gy; that cell is for stereotactic plans.
+- Scoring a left-breast tangent plan's ipsilateral lung V20 of 22% as a pass against the bilateral 30% row.
+- Reading mean heart dose 5.5 Gy as a pass because V25 is only 6%; the two rows are different endpoints and the breast template row is the mean.
+- Comparing a single-fraction cord point of 13.5 Gy with the conventional 50 Gy and calling it a pass, or scoring it against 14 Gy when the stem said QUANTEC (13 Gy).
+- Taking a kidney mean of 13 Gy as a pass when V28 is 24%; the V28 bin fails the set.
+
+**Traps.** Write the fractionation and the source the stem names on the first line. The three QUANTEC rows here are constrictors, the kidney volume bins, and the stereotactic cord line; every other row is an RTOG protocol or template figure, and when a stem prints a different template number, the stem wins. "Ipsilateral" and "bilateral" lung are different rows with different figures.
+
+**Sources.** QUANTEC organ papers (larynx and pharynx, kidney, spinal cord), IJROBP 2010. RTOG 1005 and the RTOG head-and-neck protocol family for the mandible, plexus, PRV, and breast template rows. Emami et al. 1991 for the lens and retina TD5/5 figures. Darby et al. 2013 for the mean-heart-dose relation. AAPM TG-101 Table III for the stereotactic cord cells quoted for comparison. The femoral head V50 below 5% is a department-template figure; RTOG prostate protocols print 10%.

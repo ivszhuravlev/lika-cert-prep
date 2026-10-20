@@ -191,3 +191,67 @@ Khan and Gibbons, *The Physics of Radiation Therapy*. Public blueprint I.5.
 ## Linac Accelerator Quiz
 
 This quiz checks beam order from gun to accessory mount, what is removed for electrons (target and flattening filter) and what replaces them (scattering foil and applicator), magnetron or klystron as RF hardware outside the beam, FFF as a peaked high-dose-rate beam, and superficial versus orthovoltage versus megavoltage versus protons. The traps are a flattening filter in electron mode, an FFF beam described as flat, Co-60 metered in monitor units, proton energies in the 6–20 MeV electron range, and dmax at depth for a 100 kV beam.
+
+## RF Engineering of the Linac
+
+**Objectives:** I.5
+
+**What the exam expects**
+
+You explain how microwave power is generated, pulsed, and delivered to the accelerating structure, you distinguish a traveling-wave guide from a standing-wave guide, and you know which control sets the beam energy and which sets the dose rate. You can place the betatron and the microtron in one sentence each.
+
+**Core facts**
+
+Medical linacs run in the S-band at about 3 GHz (2856 MHz on most machines, 2998 MHz on some). The free-space wavelength is c divided by frequency, 3 × 10^8 / 3 × 10^9 = 0.10 m, so the accelerating cavities are about 10 cm across and spaced a fraction of a wavelength apart. The RF is pulsed, typically a few microseconds long at a pulse repetition frequency of about 100 to 400 pulses per second.
+
+The modulator makes those pulses. A pulse-forming network (PFN), a ladder of capacitors and inductors, charges slowly from the high-voltage supply and stores the energy for one pulse. A thyratron, a gas-filled high-voltage switch (hydrogen or deuterium), is triggered to dump the PFN through a pulse transformer in a few microseconds. The same modulator pulse drives the RF source (magnetron or klystron) and the electron gun, so the electrons are injected exactly while RF is present. Low-energy machines use a magnetron, which generates RF directly at a few megawatts. High-energy machines use a klystron, an amplifier that takes a low-power RF driver and raises it to tens of megawatts.
+
+RF travels from the source to the accelerating structure through a rectangular waveguide pressurized with sulfur hexafluoride (SF6). SF6 is a dense, electronegative dielectric gas that suppresses arcing at the high field strengths in the guide. The accelerating structure itself is under high vacuum (ion pumps), because electrons must travel without colliding with gas.
+
+In a traveling-wave structure the RF enters one end, moves down the guide with the electrons, and the leftover power exits the far end into a load (or is fed back). The electrons ride the crest of the wave. These guides are longer for a given energy and were the Varian Clinac 4/6 design and the Elekta design. In a standing-wave structure the RF is reflected from both ends and sets up fixed nodes and antinodes; side-coupled cavities carry the coupling fields off-axis so that every on-axis cavity is accelerating. Standing-wave guides are shorter and give higher energy per meter, and most modern Varian machines use them. Because a standing-wave structure reflects power back toward the source, a circulator (isolator), a ferrite device that passes RF forward but diverts reflected power to a water load, protects the klystron or magnetron. The isolator also stabilizes the frequency pulling of a magnetron.
+
+Beam energy is set by the RF power delivered, by the guide length, and in a standing-wave guide by an energy switch that detunes or shorts one side cavity so that part of the guide decelerates rather than accelerates. Energy also falls with beam loading: more electrons per pulse extract more RF energy, so at fixed RF power raising the gun current lowers the energy. The machine servos compensate. Dose rate is set by the gun current (electrons injected per pulse) and by the pulse repetition frequency. A frequency servo (automatic frequency control) keeps the RF source tuned to the guide as it warms.
+
+Photon mode uses a far higher beam current than electron mode, roughly a hundred to a thousand times higher. Bremsstrahlung conversion in the target is inefficient and the flattening filter removes most of the central fluence, so many electrons are needed per cGy. In electron mode the scattering foil only spreads the beam and almost every electron reaches the patient, so the gun current is turned down sharply; running electron mode at photon current would deliver a dangerous dose rate, and the interlocks on the monitor chambers watch for that.
+
+Historical machines in one line each. Betatron: electrons accelerated in a circular orbit by a changing magnetic flux (transformer action), capable of 20 to 45 MeV but with a low dose rate and a small field, replaced by linacs. Microtron: electrons pass repeatedly through one RF cavity, gaining a fixed energy each lap while a magnet bends them in circles of increasing radius; the energy is selected by which orbit is extracted, giving a narrow energy spread and easy energy switching. Van de Graaff: electrostatic generator, 1 to 2 MV photons, obsolete. Cyclotron: heavy charged particles (protons, and the F-18 for PET) on spiral orbits in a fixed magnetic field with a fixed RF frequency.
+
+**Formulas**
+
+Wavelength: λ = c / f. For 3 GHz, λ = 3 × 10^8 m/s / 3 × 10^9 Hz = 0.10 m.
+
+**Traps**
+
+Placing SF6 inside the vacuum accelerating structure. Describing the thyratron as the RF source or the PFN as a filter. Saying a standing-wave guide is longer than a traveling-wave guide. Saying the gun current sets the energy and the RF power sets the dose rate (it is the reverse at first order). Claiming electron mode uses more beam current than photon mode.
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*, treatment-machines chapter. Karzmark, *Medical Electron Accelerators*. Public blueprint I.5.
+
+## Beam Transport and Head Hardware Numbers
+
+**Objectives:** I.5
+
+**What the exam expects**
+
+You compare the three bending-magnet layouts, you know what fraction of the beam the flattening filter and the jaws remove, and you describe the electronic portal imager in a sentence.
+
+**Core facts**
+
+Bending magnets. A 90° magnet is the simplest but is chromatic: electrons of slightly different energy bend by different amounts and strike the target at different points, broadening the focal spot and shifting the beam. A 270° magnet (Varian) is achromatic: the three-segment path brings electrons of different energy back to the same spot and direction at the target, so the focal spot stays small and the beam axis stays fixed when the energy drifts. A slalom magnet (Elekta) is a compact achromatic design using three smaller magnets in an S-shaped path (about 45°, 135°, and back), which reduces the head height compared with a full 270° loop. Straight-through machines with no bend exist for low-energy single-energy units. An energy slit inside the bend rejects electrons outside the accepted energy window.
+
+Flattening filter. Bremsstrahlung from a MV target is strongly forward-peaked. To make the profile flat at 10 cm depth the conical filter must attenuate the central axis to match the edge, which removes most of the central fluence: the central-axis output drops by a factor of about two to four. That is exactly the factor the dose rate rises by when the filter is removed (FFF). The filter also scatters, adds photoneutrons above 10 MV, and hardens the center more than the edge.
+
+Collimation. The primary collimator is a fixed tungsten cone close to the target, several tenth-value layers thick (about 10 cm of tungsten), and it defines the maximum circular field (about 50 cm diameter at isocenter). The secondary jaws are about 7.5 to 8 cm of tungsten or lead and transmit less than 0.5% of the primary beam; TG-142 requires jaw position accuracy of 2 mm. The MLC leaves transmit more: about 1 to 2% through the leaf body and up to about 3% between leaves (interleaf leakage), controlled by tongue-and-groove design. Head leakage outside the field through the shielding is limited to 0.1% of the central-axis dose at 1 m. When an aperture is shaped by MLC alone, the jaws are kept close to the MLC edge to catch the leaf leakage.
+
+Electronic portal imaging device (EPID). The modern EPID is an amorphous-silicon (a-Si) flat panel: a copper build-up plate converts MV photons to electrons, a gadolinium oxysulfide scintillator converts them to light, and a matrix of a-Si photodiodes with thin-film transistors reads the light out as a digital image, typically 40 × 30 cm at about 0.4 mm pixels. It replaced film and the older camera-mirror and liquid-ion-chamber imagers, gives an image within seconds, and is also used dosimetrically for IMRT QA and in vivo transit dosimetry because its response is reproducible once calibrated. Its energy dependence and field-size dependence are the reasons it is a relative rather than absolute dosimeter.
+
+Electron gun. A diode gun has a cathode and anode only, and the beam current is set by the cathode heater and the pulse voltage. A triode gun adds a grid between them, so the current and the pulse timing can be gated independently; most modern machines use a triode gun, which is what allows fast beam-on and beam-off for gating and dynamic delivery.
+
+**Traps**
+
+Calling the 90° magnet achromatic. Saying the flattening filter removes a few percent of the beam. Quoting MLC leakage as lower than jaw transmission. Describing the EPID as a film cassette or as an ion-chamber array. Confusing the primary collimator (fixed, defines maximum field) with the jaws (movable, define the rectangular field).
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*. AAPM TG-142 for jaw and MLC tolerances. AAPM TG-58 for EPIDs. Public blueprint I.5.

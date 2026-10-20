@@ -75,3 +75,53 @@ AAPM TG-76, *The Management of Respiratory Motion in Radiation Oncology*. ICRU 6
 ## Respiratory Motion Management Mini-Quiz
 
 This quiz checks the TG-76 options (encompass, gate, breath hold, compress, track), ITV versus a second motion margin, MIP versus average CT, DIBH for left-breast heart displacement, and duty cycle as a clock-time divisor. The traps are PTV = ITV + motion + setup, dose on the MIP, gating time multiplied by the duty cycle, a free-breathing plan used for a breath-hold treatment, and end-inhale treated as the most stable phase.
+
+## TG-76 Thresholds, Gating Modes, and Surrogates
+
+**Objectives:** II.3, II.4
+
+**What the exam expects**
+
+You can state the TG-76 motion threshold above which a management technique is considered. You can tell prospective from retrospective acquisition, phase from amplitude gating, and an external surrogate from an internal fiducial. You can explain what a duty cycle trades against residual motion. You know what a maximum-intensity projection is good for and where it fails. You can describe what an infrared marker-block system and an electromagnetic transponder system measure, and you can say when compression or a breath hold is the better fit.
+
+**Core facts**
+
+The threshold. TG-76 recommends considering a respiratory management technique when the target moves more than 5 mm in any direction, provided the patient can tolerate the technique and the department has it commissioned. Below 5 mm the motion is usually absorbed by the margin and no special technique is required. The excursion is measured, not assumed, which is why a 4DCT or a fluoroscopic look is the first step for a thoracic or upper-abdominal target. Nasopharynx, brain, and most head-and-neck sites do not need respiratory management.
+
+Prospective versus retrospective. In a prospective (gated) acquisition the scanner is triggered by the respiratory signal and acquires images only inside a chosen window, so the result is a single phase or a breath-hold data set with fewer images and less imaging dose. In a retrospective acquisition the scanner oversamples every couch position for at least one full breathing cycle while the trace is recorded, and the images are sorted afterward into phase or amplitude bins. A ten-phase 4DCT is retrospective, which is why it produces on the order of a thousand or more images and a higher CT dose, and why it can also deliver a maximum-intensity, average-intensity, and minimum-intensity projection from the same scan.
+
+Phase versus amplitude. Phase-based sorting or gating divides each cycle by time: 0 percent is end-inhale, 50 percent is near end-exhale, and a gate around end-exhale might be the 30 to 70 percent phases. It assumes a regular period and misassigns slices when the patient's rhythm changes. Amplitude-based sorting or gating uses the displacement of the surrogate: the beam is on while the marker lies within a stated window of positions. It is more honest when the period is irregular, and its weakness is baseline drift, because a slowly shifting resting position moves the window off the anatomy it was set on. Both approaches rely on the surrogate following the tumor.
+
+Duty cycle. The duty cycle is the fraction of the breathing cycle during which the beam is enabled. Typical gates run from about 30 to 50 percent. Narrowing the window reduces the residual motion inside the gate and reduces the duty cycle, so beam-on time stretches and the fraction takes longer; a 25 percent duty cycle quadruples the beam time. The planner chooses the window as a trade between residual motion and treatment time, and a patient who cannot hold a steady rhythm for a long fraction may be a better fit for an ITV or compression.
+
+The MIP and its pitfalls. The maximum-intensity projection assigns each voxel the brightest value it took across the phases, so a solid tumor moving through dark lung paints its whole excursion as a bright envelope that can be contoured as the ITV in one step. It fails where the tumor abuts tissue of similar density, at the diaphragm, the chest wall, or the mediastinum, because the bright tumor merges with bright neighbors and part of the excursion disappears; there the ITV underestimates motion and the tumor should be contoured on each phase and the contours combined. A sorting artifact inside the MIP becomes a false ITV. The MIP is never the dose-calculation set.
+
+Compression and breath hold. Abdominal compression is a passive technique: a plate or belt pressed on the upper abdomen limits diaphragm travel for lung and liver stereotactic treatments, typically cutting motion by about half rather than removing it. It suits a patient who cannot follow breathing instructions or hold a breath, and it is uncomfortable, so it is rarely used for long courses. A breath hold is an active technique that needs patient cooperation and reproducible lung volume, held for roughly 15 to 25 seconds at a time. Deep-inspiration breath hold for left-sided breast treatment expands the lungs and pulls the heart inferiorly and posteriorly, away from the tangents, lowering mean heart dose and left anterior descending artery dose. Active breathing control enforces the volume with a spirometer and a valve; a voluntary hold is monitored by surface imaging or a marker block.
+
+External surrogate versus internal fiducial. External surrogates include an infrared reflective marker block on the abdomen, a pressure belt, a spirometer, and the surface camera. They are non-invasive and carry no imaging dose, and they assume a stable relationship between the surface and the tumor. That relationship can have a phase lag, can be different at inhale and exhale, and can drift during a fraction. Internal surrogates include implanted radiopaque fiducials seen on kV imaging or fluoroscopy and implanted electromagnetic transponders. They sit near the tumor and track it directly, at the price of an invasive procedure, a pneumothorax risk for transthoracic lung placement, and the chance of marker migration. At least three markers are needed to detect rotation as well as translation.
+
+Named systems. The infrared marker-block system (Varian RPM is the common example) is a camera that follows reflective dots on a small plastic block placed on the patient's abdomen; the vertical trace it produces is used to sort the 4DCT and to gate the beam, and it is purely an external surrogate. The electromagnetic transponder system (Calypso) implants three small wireless beacons in or near the target, excites them with an array over the patient, and reports their position continuously at several times per second without ionizing radiation; it is used mainly for prostate and is also available for lung. It is a localization and tracking system, not an imaging system, so it cannot show the anatomy around the beacons, and the array in the beam path and the beacons' MRI artifacts are its practical limits. Stereoscopic kV systems and surface-guidance systems are described in the IGRT module.
+
+**Formulas**
+
+Clock time ≈ beam-on time / duty cycle, so a 25 percent duty cycle quadruples a 3-minute beam to 12 minutes.
+
+Percent of excursion left after compression ≈ residual motion / free-breathing motion; a plate that takes 1.6 cm to 0.8 cm leaves 50 percent.
+
+**Worked example**
+
+Given: a lower-lobe tumor moves 1.4 cm on 4DCT. The TG-76 threshold is 5 mm, so a management technique is considered. The patient is deaf and cannot follow coaching, so breath hold and coached gating are poor fits; abdominal compression reduces the excursion to 0.6 cm. The ITV is then drawn with the plate in place from a repeat 4DCT. Because the tumor touches the diaphragm, the MIP would blend the tumor into the dome, so the GTV is contoured on each of the ten phases and the union forms the ITV. Check: 0.6 cm is still above 5 mm, so the residual is covered by the ITV rather than ignored.
+
+**Traps**
+
+- Managing motion at 3 mm because "any motion matters," or ignoring 1.5 cm because "the margin covers it."
+- Calling a 4DCT prospective. The sorting after the scan is what makes it retrospective.
+- Mixing up the two gating modes: phase uses time within the cycle, amplitude uses displacement.
+- Drawing the ITV from the MIP of a tumor sitting on the diaphragm.
+- Treating a marker block or a surface as if it saw the tumor; treating electromagnetic transponders as an imaging device.
+
+**Sources**
+
+- AAPM TG-76, management of respiratory motion in radiation oncology, for the 5 mm threshold, the technique families, and the duty-cycle trade.
+- AAPM TG-147 for nonradiographic localization, including electromagnetic transponders and infrared marker systems.
+- ICRU 62 for the internal margin and the ITV.

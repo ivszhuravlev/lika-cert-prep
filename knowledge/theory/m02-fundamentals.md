@@ -128,3 +128,101 @@ Khan and Gibbons, *The Physics of Radiation Therapy*. Public blueprint objective
 ## Fundamentals Mini-Quiz
 
 This quiz checks whether you can assign Z, A, and N, separate isotope from isobar from isotone from isomer, and separate directly ionizing charged particles from indirectly ionizing photons and neutrons. It also checks a one-step inverse-square ratio. The traps are equating A with Z, calling Tc-99m a different element, calling neutrons directly ionizing, and inverting the distance ratio so the closer point gets the lower dose rate.
+
+## Mass Defect and Binding Energy
+
+**Objectives:** I.1, I.4
+
+**What the exam expects**
+
+You explain why a nucleus weighs less than its parts, convert that missing mass into energy with the 931.5 MeV per atomic mass unit figure, and name the force that holds the nucleus together. You also carry a few constants in your head: the electron is about 1/1836 of a proton mass, and 1 eV is 1.6 × 10^−19 J.
+
+**Core facts**
+
+Add up the masses of the free protons and neutrons that make a nucleus and the sum is larger than the measured nuclear mass. The shortfall is the mass defect. By E = mc^2 the defect is the binding energy that was released when the nucleons came together, and it is the energy you would have to supply to pull them apart again. One atomic mass unit (1 u = 1.66 × 10^−27 kg) is equivalent to about 931.5 MeV.
+
+Binding energy per nucleon is the useful comparison number. It rises steeply through the light nuclei, peaks near 8.8 MeV per nucleon around iron and nickel (A about 56–62), and declines slowly toward uranium. Fission of a heavy nucleus and fusion of light nuclei both move toward the peak and release energy. Typical binding is several MeV per nucleon, which is why nuclear gamma rays and decay energies are MeV while chemical and electron-shell energies are eV to keV.
+
+The strong nuclear force binds nucleons. It is attractive between any two nucleons, is far stronger than the electrostatic repulsion between protons, but acts only over about 10^−15 m, roughly one nucleon diameter. The electromagnetic force binds the orbital electrons to the nucleus and is what shell binding energies describe. Gravity is irrelevant at this scale. Heavy nuclei need extra neutrons because the strong force saturates while proton repulsion keeps adding up across the whole nucleus.
+
+Constants to recall: electron rest mass 9.11 × 10^−31 kg, which is 1/1836 of the proton mass (proton 1.673 × 10^−27 kg, neutron slightly heavier at 1.675 × 10^−27 kg). Electron charge 1.602 × 10^−19 C. One electron-volt is the kinetic energy gained by one electron charge across one volt, so 1 eV = 1.602 × 10^−19 J, 1 keV = 1.6 × 10^−16 J, 1 MeV = 1.6 × 10^−13 J. Dose in gray is joules per kilogram, so a MeV-scale deposition must be converted to joules before it becomes a dose.
+
+**Formulas**
+
+Mass defect: Δm = Z × m_p + N × m_n − M_nucleus
+
+Binding energy: BE = Δm × 931.5 MeV/u
+
+Binding energy per nucleon: BE / A
+
+**Worked example**
+
+Given: a helium-4 nucleus has a measured mass of 4.0015 u. A free proton is 1.00728 u and a free neutron is 1.00866 u. Find the mass defect, total binding energy, and binding energy per nucleon.
+
+Formula: Δm = 2 m_p + 2 m_n − M. BE = Δm × 931.5.
+
+Substitution: 2 × 1.00728 + 2 × 1.00866 = 2.01456 + 2.01732 = 4.03188 u. Δm = 4.03188 − 4.0015 = 0.0304 u.
+
+Arithmetic: BE = 0.0304 × 931.5 = 28.3 MeV. Per nucleon: 28.3 / 4 = 7.1 MeV.
+
+Meaning: a 0.75% mass loss is 28 MeV of binding, about two million times the binding of a hydrogen electron (13.6 eV). That gap is the whole reason nuclear and atomic emissions are easy to tell apart by energy.
+
+Usual wrong turn: reporting the total 28.3 MeV when the stem asked per nucleon, or multiplying by 511 keV (the electron rest energy) instead of 931.5 MeV per u.
+
+**Traps**
+
+Describing the mass defect as the mass of the emitted electrons. Saying the nucleus is held together by the electromagnetic force. Quoting the electron as 1/1836 of a neutron and then treating proton and neutron masses as very different; they differ by about 0.1%. Mixing 1.6 × 10^−19 (joules per eV, or coulombs per electron) with 1.66 × 10^−27 (kilograms per u).
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*, atomic and nuclear structure chapter. Public blueprint I.1 and I.4.
+
+## Avogadro, Planck and the Electromagnetic Spectrum
+
+**Objectives:** I.1, I.2, I.3
+
+**What the exam expects**
+
+You turn grams into numbers of atoms and electrons with Avogadro's number, you use the Planck relation in both directions, and you order the electromagnetic spectrum from radio waves to gamma rays without hesitation.
+
+**Core facts**
+
+Avogadro's number, 6.022 × 10^23, is the number of atoms in one gram-atomic mass. Atoms per gram of an element = 6.022 × 10^23 / A, where A is the atomic (or molecular) mass in grams per mole. Electrons per gram = atoms per gram × Z (or the total electrons per molecule for a compound). Because Z/A is about 0.5 for most light elements and about 1 for hydrogen, hydrogen-rich materials (water, fat) have more electrons per gram than muscle or bone. Compton interactions scale with electrons per gram, which is why fat has a slightly higher electron density per gram than muscle even though its physical density is lower, and why electron density per cubic centimeter (what the dose engine wants) is electrons per gram times physical density.
+
+Water: molecular mass 18, ten electrons per molecule. Electrons per gram = 6.022 × 10^23 × 10 / 18 = 3.34 × 10^23. Electron density of water per cubic centimeter is the same number because the density is 1 g/cm^3. The planning system's relative electron density table is referenced to this value.
+
+Planck's relation: E = hν, with h = 6.626 × 10^−34 J·s = 4.136 × 10^−15 eV·s. Combined with c = λν this gives E = hc/λ, and in exam units E (keV) = 12.4 / λ (Å), equivalently λ (nm) = 1.24 / E (keV). Energy rises with frequency and falls with wavelength.
+
+Electromagnetic spectrum in order of increasing frequency and energy (decreasing wavelength): radio, microwave, infrared, visible (about 700 nm red to 400 nm violet), ultraviolet, x-rays, gamma rays. The ionizing boundary is in the ultraviolet, roughly 10–12 eV, which is the ionization energy of oxygen and hydrogen in tissue. Linac microwaves at about 3 GHz have photon energies of a few tens of micro-electron-volts, so RF leakage is a heating hazard, never an ionization hazard. X-rays and gamma rays overlap in energy; the name follows origin (electron shell or bremsstrahlung versus nucleus), not energy.
+
+**Formulas**
+
+Atoms per gram = N_A / A
+
+Electrons per gram = N_A × Z / A
+
+E = hν = hc/λ; E (keV) = 12.4 / λ (Å)
+
+**Worked example**
+
+Given: a linac waveguide runs at 3.0 GHz. Find the photon energy of that RF in electron-volts and the wavelength.
+
+Formula: E = hν with h = 4.136 × 10^−15 eV·s. λ = c/ν.
+
+Substitution: E = 4.136 × 10^−15 × 3.0 × 10^9. λ = 3.0 × 10^8 / 3.0 × 10^9.
+
+Arithmetic: E = 1.24 × 10^−5 eV, about 12 micro-electron-volts. λ = 0.10 m = 10 cm.
+
+Meaning: the RF that accelerates electrons to 6 MeV carries about a hundred-thousandth of an electron-volt per photon and cannot ionize anything. The 10 cm wavelength is why S-band accelerator cavities are a few centimeters across.
+
+Second example: a 1.24 MeV gamma ray. λ (Å) = 12.4 / 1240 keV = 0.010 Å = 1.0 × 10^−12 m. Check: 12.4 / 0.010 = 1240 keV.
+
+Usual wrong turn: using h in J·s and forgetting to divide by 1.6 × 10^−19 to reach eV, which leaves 2 × 10^−24 "eV" that is really joules. Or using 12.4 with wavelength in nanometers instead of angstroms, a factor-of-ten error.
+
+**Traps**
+
+Multiplying by Avogadro's number instead of dividing when asked for atoms per gram. Forgetting the Z factor for electrons. Ordering the spectrum by wavelength and calling it energy order (they run opposite ways). Claiming microwaves or visible light are ionizing. Assigning x-ray versus gamma by energy.
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*. Attix for electron densities. Public blueprint I.1, I.2 and I.3.

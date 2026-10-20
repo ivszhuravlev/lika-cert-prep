@@ -227,3 +227,107 @@ Khan and Gibbons, *The Physics of Radiation Therapy*. AAPM TG-71 for Sc, Sp, and
 ## Radiation Measurement Quiz
 
 This quiz checks kerma versus dose in the buildup region, Ptp greater than 1 when the air is warm or the pressure is low, and the definitions of PDD, TAR, TMR, TPR, BSF, Sc, and Sp. The traps are making TMR depend on SSD, setting BSF equal to 1 at every energy, obtaining Sp by multiplying Sc,p by Sc, applying Mayneord to a TMR, and using a narrow-beam attenuation factor as if it were PDD.
+
+## Matching the Detector to the Task
+
+**Objectives:** I.10, VII.3
+
+**What the exam expects**
+
+You pick the right instrument for a stated job and you can say why the other instruments fail at that job. The exam does not ask you to operate the device. It asks which one belongs in the water tank, which one belongs at the vault door, which one belongs in the hot lab, and which one goes in the mail to Houston.
+
+**Core facts**
+
+A Farmer-type cylindrical chamber has a collecting volume of about 0.6 cm³ and an active length of a little over 2 cm. It is the reference-dosimetry chamber: TG-51 output calibration in water for photon beams and for electron beams above about 10 MeV, where the beam is flat across its length. Its weakness is size. In a field smaller than about 3 × 3 cm the chamber spans the penumbra and averages over the dose falloff, so the reading is low. Sensitivity scales with volume, so the Farmer gives a large, stable signal at a bias of about 300 V, which puts it on the saturation plateau of the gas-filled detector curve. Raising the bias toward about 1000 V would move a gas detector into the Geiger region, where every event gives the same pulse and dose information is lost.
+
+Small-field and stereotactic work uses a micro-chamber of about 0.01 to 0.02 cm³, a shielded or unshielded diode, a plastic scintillator, or a diamond detector. These are point detectors: small enough that the dose is nearly uniform across the sensitive volume. The trade is a small signal, a larger leakage fraction, and for diodes an energy, temperature and angular dependence that must be corrected. TG-155 and the IAEA TRS-483 code of practice give the detector-specific small-field correction factors; the exam point is that a 0.6 cm³ chamber is the wrong instrument for a 1 × 1 cm field and a diode is the wrong instrument for defining reference output.
+
+A parallel-plate (plane-parallel) chamber has a thin entrance window and a small plate separation. It is the chamber for electron beams below about 10 MeV, where the dose gradient along the beam is steep and a cylindrical cavity would perturb the fluence. It is also the chamber for surface dose and buildup-region measurements, because the effective point of measurement sits at the inner face of the window. Under TG-51 the gradient correction for a parallel-plate chamber is 1, which is one reason it is preferred for low-energy electrons.
+
+A well-type (re-entrant) chamber surrounds the source with gas. The common HDR and LDR well chamber has a collecting volume of roughly 245 cm³, which gives it the sensitivity to assay a single low-dose-rate seed and the geometry to be insensitive to small source-position errors near the sweet spot. It measures the air-kerma strength Sk of a brachytherapy source against an ADCL calibration for that source model. A Farmer chamber in air at a measured distance is the old method and is now a cross-check only. The nuclear-medicine dose calibrator is the same idea, a pressurized well chamber calibrated per radionuclide in activity units.
+
+A Geiger–Müller counter is the instrument for finding radiation, not for measuring dose. It is very sensitive, cheap, and rugged, so it is used to search for a lost seed, to check a package or a patient for contamination, and to confirm that an HDR source has retracted. It has a dead time of about 100 to 300 microseconds, so it saturates at high count rates, and in a pulsed linac beam it can read almost nothing while the dose rate is high. Its reading is energy dependent unless the probe is compensated. A GM is never the instrument for linac output.
+
+An ion-chamber survey meter (a large, often pressurized, air chamber) reads exposure rate or air-kerma rate for area surveys around a brachytherapy patient, an HDR vault door, or a package. It is the right instrument when the number must be in mR/h or mSv/h with reasonable energy independence.
+
+A proportional counter runs at a bias between the ionization plateau and the Geiger region, so the pulse height is proportional to the energy deposited. That lets it discriminate alpha from beta events in a contamination counter. Filled with boron trifluoride (BF3) or helium-3, it detects thermal neutrons through the boron-10 or helium-3 capture reaction. Surrounded by a polyethylene moderating sphere it becomes the rem-ball (rem-meter, Bonner sphere), which is the standard neutron survey meter outside the door of a vault running photon beams above 10 MV. A bubble detector (superheated drops in a gel) is a passive personal neutron dosimeter that is read by counting bubbles and reset by recompression. Activation foils (gold, indium) are the laboratory method.
+
+A thallium-activated sodium iodide, NaI(Tl), scintillator is the detector for wipe tests of sealed sources and for low-level counting. A wipe that must be reported at 0.005 µCi (185 Bq) is about 11,000 disintegrations per minute; a well-shaped NaI counter detects that in seconds, while an ion chamber cannot see it at all. NaI crystals are also the detector in gamma cameras and thyroid probes.
+
+Two-dimensional and array detectors do relative dosimetry. Diode or small-chamber arrays (planar or cylindrical) are the standard patient-specific IMRT and VMAT QA device, compared with the plan by a gamma analysis. Radiochromic film gives the highest spatial resolution for small-field profiles and for brachytherapy checks. The amorphous silicon (a-Si) flat panel is the EPID and the kV imager, and it can also serve as a 2D dosimeter.
+
+The measurement chain is traceable. The clinic's reference chamber and electrometer are calibrated at an Accredited Dosimetry Calibration Laboratory (ADCL), traceable to NIST, and TG-51 states the interval as every two years, with a constancy check against a Sr-90 check source or a redundant chamber in between. Survey meters used for regulatory surveys are calibrated annually and after any repair, with a daily battery and check-source response before use. The independent audit is IROC Houston: a mailed optical or thermoluminescent dosimeter (OSLD, formerly TLD) is irradiated to a stated dose and the institution's output must agree within about 5%, and anthropomorphic phantoms (head-and-neck, lung, prostate) carry TLD and film for end-to-end IMRT and SBRT credentialing.
+
+**Formulas**
+
+GM dead-time correction, non-paralyzable model: true rate n = m / (1 − m τ), where m is the observed count rate and τ the dead time. Fraction of counts lost ≈ m τ.
+
+**Worked example**
+
+Given: a GM probe with 100 microsecond dead time reads 2,000 counts per second. Find the true rate and the fraction lost.
+
+Substitution: m τ = 2,000 × 100 × 10^−6 = 0.20. n = 2,000 / (1 − 0.20) = 2,000 / 0.80 = 2,500 counts per second.
+
+Meaning: the meter is already losing one count in five at a modest rate. At 10,000 counts per second the product m τ would be 1.0 and the simple formula fails; the tube is paralyzed and can read low or zero. That is why a GM reads nothing useful in a linac beam and why a dose-rate survey of an HDR source uses an ion chamber.
+
+**Traps**
+
+GM used for linac output or for an HDR dose-rate survey. Farmer chamber used to define the output of a 1 × 1 cm cone. Diode used as the reference detector for TG-51. Well chamber described as a photon-beam calibration device. Wipe test read with an ion chamber. Rem-ball described as a photon survey meter. Chamber calibration described as annual or as "once at purchase."
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*, dosimeters chapter. AAPM TG-51 and its 2014 addendum (calibration interval, chamber choice). AAPM TG-155 and IAEA TRS-483 (small-field detectors). AAPM TG-56 and TG-40 (well chamber for Sk). 10 CFR 20 and 35 (survey-meter calibration). IROC Houston credentialing program.
+
+## Chamber Corrections and Passive Dosimeters
+
+**Objectives:** I.10, VII.3
+
+**What the exam expects**
+
+You can compute the recombination and polarity corrections from two readings each, you know which direction each moves the dose, and you can describe how TLD, OSL, MOSFET, radiographic film and radiochromic film store and release their signal. The temperature–pressure correction is in the lesson above and is not repeated here.
+
+**Core facts**
+
+The TG-51 photon chain is: dose to water equals the raw electrometer reading, times Ptp, Pion, Ppol and Pelec, times the quality conversion factor kQ, times the absorbed-dose-to-water calibration coefficient N_D,w. Each P factor is a small multiplicative correction near 1. Ptp is the only one that changes day to day. Pion and Ppol are measured at commissioning and checked at the annual calibration; kQ comes from the TG-51 table for the chamber model and the measured %dd(10)x or TPR20,10; N_D,w comes from the ADCL certificate for Co-60.
+
+Pion corrects for ions that recombine before they reach the electrode. In a pulsed linac beam the charge density per pulse drives recombination, so Pion grows with dose per pulse: it is larger for FFF beams, for high dose-rate electron beams and at short SSD. TG-51 measures it by the two-voltage method: take the reading at the normal bias V_H (about 300 V) and at half that bias V_L, and Pion at V_H equals (1 − V_H/V_L) divided by (M_H/M_L − V_H/V_L). Pion is always slightly greater than 1; a Pion above 1.05 means the chamber or bias is unsuitable for that beam. Lowering the bias collects fewer ions, so the lower-voltage reading is the smaller one.
+
+Ppol corrects for the fact that the reading changes a little when the sign of the bias is reversed, because of charge deposited in the stem and cable and asymmetric collection. It is the average of the magnitudes of the two readings divided by the reading at the polarity actually used in the clinic: Ppol = |M+ − M−| / (2 M), where M is the reading, with its sign, at the working polarity. Ppol is normally within 1% of 1 for a Farmer in photons and can be larger for parallel-plate chambers in low-energy electrons. Pelec is the electrometer calibration factor, 1.000 when the chamber and electrometer were calibrated together.
+
+Thermoluminescent dosimeters store dose as electrons trapped in crystal defects. The clinical material is lithium fluoride doped with magnesium and titanium (LiF:Mg,Ti, TLD-100), chosen because its effective atomic number of about 8.2 is close to tissue. Heating the chip releases the trapped electrons as light, and the plot of light output against temperature is the glow curve. The low-temperature peaks fade in hours and are discarded; the dosimetric signal is the high-temperature peak 5 near 210 °C (often integrated with peak 4). TLD is destructive: reading empties the traps, and the chip must be annealed (a standard cycle is 400 °C for one hour followed by 100 °C for two hours, with a short 100 °C pre-read anneal to clean out the shallow traps) before reuse. TLD is linear up to a few gray, supralinear above that, and good to about 3 to 5% with a batch calibration. It is the classic in-vivo and mailed-audit detector and the material in older personnel badges.
+
+Optically stimulated luminescence dosimeters use carbon-doped aluminium oxide (Al2O3:C). The trapped charge is released by a light pulse instead of heat, and only a small fraction of the traps empties on each read, so an OSLD can be read repeatedly. It is cleared by prolonged light exposure (bleaching), has a fast readout and a modest energy dependence at kV energies because its effective atomic number is higher than tissue. OSL is now the dominant badge technology and the IROC mailed-output detector.
+
+A MOSFET dosimeter is a small transistor whose threshold voltage shifts in proportion to the dose absorbed in its gate oxide. It gives an immediate reading, is tiny and can be placed on the skin or in a catheter, but it has a finite life (the total shift is limited), a temperature and energy dependence, and a calibration that drifts with accumulated dose. It is an in-vivo and intracavitary tool, not a calibration tool. Diodes are similar in role: instant reading, no bias, with energy, temperature, dose-rate and angular dependence and a sensitivity that falls with accumulated dose.
+
+Radiographic (silver-halide) film records dose as optical density after chemical processing. The sensitometric or H&D (Hurter–Driffield) curve plots optical density against the logarithm of exposure: a toe, a straight-line region whose slope is the gamma (contrast), and a shoulder where the film saturates. Film is over-responsive to low-energy scatter because of silver, so it exaggerates dose outside the field and at depth. Radiochromic film (Gafchromic) darkens by polymerization without any processing, is close to tissue equivalent, has little energy dependence, is insensitive to room light, and is read with a flatbed scanner after a stabilisation time of about 24 hours for absolute dosimetry (the density keeps rising for several hours after exposure). Its resolution is sub-millimetre, which is why it is the small-field and brachytherapy film. Neither film is the instrument for defining output.
+
+**Formulas**
+
+Pion(V_H) = (1 − V_H/V_L) / (M_H/M_L − V_H/V_L), two-voltage method with V_H/V_L = 2.
+
+Ppol = |M+ − M−| / (2 M_raw), where M_raw is the signed reading at the working polarity.
+
+Dose to water = M_raw × Ptp × Pion × Ppol × Pelec × kQ × N_D,w.
+
+**Worked example**
+
+Given: a Farmer chamber reads 20.10 nC at 300 V and 20.00 nC at 150 V in a 6 MV beam. At 300 V, the reading with reversed polarity has magnitude 20.00 nC. Ptp is 1.020, Pelec is 1.000, kQ is 0.992, N_D,w is 5.00 cGy per nC. Find Pion, Ppol and the dose.
+
+Pion: M_H/M_L = 20.10 / 20.00 = 1.005. Pion = (1 − 2) / (1.005 − 2) = (−1) / (−0.995) = 1.005.
+
+Ppol: (20.10 + 20.00) / (2 × 20.10) = 40.10 / 40.20 = 0.9975.
+
+Corrected charge: 20.10 × 1.020 × 1.005 × 0.9975 = 20.10 × 1.0225 = 20.55 nC. Dose = 20.55 × 0.992 × 5.00 = 101.9 cGy.
+
+Meaning: recombination added half a percent, polarity removed a quarter of a percent, and the weather added two percent. Each is small; together they are the difference between a passing and a failing 2% annual tolerance. Check: the corrections multiply to 1.0225, so the dose is 2.25% above the uncorrected 99.7 cGy.
+
+Usual wrong turn: Pion = M_L / M_H = 0.995, which corrects the wrong way. Or Ppol computed as M+ / M− = 1.005. Or using 300/150 = 2 as a correction factor by itself.
+
+**Traps**
+
+Pion below 1. Pion measured by changing temperature instead of bias. Glow curve attributed to OSL. TLD described as re-readable or OSL as destructive. Radiochromic film read immediately after exposure for an absolute dose. Film gamma confused with gamma analysis of an IMRT QA. MOSFET used for TG-51 output.
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*, dosimeters and film chapters. AAPM TG-51 (Pion, Ppol, Pelec, kQ) and the TG-51 addendum. AAPM TG-191 (TLD and OSLD clinical use). AAPM TG-55 and TG-235 (radiochromic film).

@@ -394,6 +394,8 @@ Ru-106, about 374 days, is a beta emitter used as an ophthalmic plaque. The shor
 
 Lead half-value layers used for teaching in this set are narrow-beam approximations, not vault thicknesses: Co-60 about 12 mm Pb, Cs-137 about 6.5 mm Pb, Ir-192 about 3–6 mm Pb, and I-125 about 0.025 mm Pb. The iridium range is wide because the gamma spectrum is complex.
 
+Published teaching tables do not agree on these figures to the millimeter. Khan-style tables list Cs-137 at 5.5 mm, Ir-192 at 2.5 mm (3 mm in some editions), and Co-60 at 11 mm; other review sheets and older texts list 6.5 mm, 3–6 mm, and 12 mm for the same three nuclides. The spread comes from narrow-beam versus broad-beam geometry and from how the Ir-192 spectrum is averaged, so the honest statement is a range: Co-60 11–12 mm, Cs-137 5.5–6.5 mm, Ir-192 2.5–6 mm. Exam options are spaced roughly a factor of two to ten apart (for example 0.025 mm, 2.5 mm, 6 mm, 12 mm), so either end of a range selects the same letter, and a stem that needs an HVL for arithmetic prints it. This bank keeps Co-60 12 mm, Cs-137 6.5 mm, Ir-192 "3–6 mm" with about 3 mm as the narrow-beam figure, and I-125 0.025 mm, so that the theory, the quiz, and the question keys agree. When an option set offers both a 2.5 mm choice and a 6 mm choice for Ir-192, the 2.5 mm choice is the narrow-beam table value and the 6 mm choice is Cs-137's answer. For the nuclides the table above leaves without a lead figure: filtered Ra-226 has a mean gamma energy of about 0.83 MeV and a lead HVL of about 8 mm; Au-198 (0.412 MeV, 2.7 d) about 2.5 mm, with an exposure-rate constant of about 2.3–2.4 R cm²/(mCi h) (2.38 in most tables); Pd-103 (about 21 keV, 17 d) about 0.008 mm, thinner than I-125's 0.025 mm because the photons are softer. The full seven-row source card is in the "Source table additions" lesson at the end of this module.
+
 Exposure-rate constants are worked in module 40: Ir-192 4.69, Cs-137 3.26, Co-60 13.07, and Ra-226 8.25, in R cm²/(mCi h). Radium’s 8.25 is traditionally per milligram of radium, not per mCi. I-125 is not given a single memorized gamma constant in this bank; use the value printed in the stem. Air-kerma strength is a different quantity: 1 U = 1 µGy m²/h. This set does not memorize one conversion from mCi to U.
 
 **Formulas**
@@ -508,3 +510,51 @@ This quiz checks decay mode against the change in Z and A, the positron threshol
 ## Radioactive Decay Calculation Mini-Quiz
 
 This quiz checks λ = 0.693/T½, A = A0 exp(−λt) with matching time units, fractional half-lives (half of one half-life leaves about 71%, not 50%), mean life = 1.443 T½, and permanent-implant total dose = initial dose rate × mean life. The traps are multiplying by 0.693 instead of dividing, using the half-life where the mean life belongs (answer low by 1.443), converting curies with 3.7×10^10 in the wrong direction, and mixing hours and days in one exponent.
+
+## Source table additions
+
+**Objectives:** I.7, I.10
+
+**What the exam expects:** The brachytherapy source card on the exam has four columns: half-life, photon energy, exposure-rate constant, and lead half-value layer. The Common Radioisotopes lesson covers the first two for the whole recall list. This lesson completes the last two for the seven classical brachytherapy nuclides, states the published range for each lead HVL, and shows how to pick an option when two textbooks disagree.
+
+**Core facts**
+
+| Nuclide | Half-life | Photon energy | Γ, R cm²/(mCi h) | Lead HVL used here | Published range |
+| --- | --- | --- | --- | --- | --- |
+| Ra-226 (filtered) | 1600 y | about 0.83 MeV mean | 8.25 per mg Ra | about 8 mm | 8 mm narrow beam; older broad-beam figures are higher |
+| Co-60 | 5.26 y | 1.17 and 1.33 MeV | 13.07 | 12 mm | 11–12 mm |
+| Cs-137 | 30 y | 0.662 MeV | 3.26 | 6.5 mm | 5.5–6.5 mm |
+| Au-198 | 2.7 d | 0.412 MeV | about 2.38 | about 2.5 mm | 2.5 mm |
+| Ir-192 | 73.8 d | about 0.38 MeV mean | 4.69 | 3–6 mm, 3 mm narrow beam | 2.5–6 mm |
+| I-125 | 59.4 d | about 28 keV | use the stem | 0.025 mm | 0.02–0.03 mm |
+| Pd-103 | 17 d | about 21 keV | use the stem | about 0.008 mm | 0.008 mm |
+
+The lead HVL follows photon energy. Co-60 (1.25 MeV mean) needs the most lead, radium (0.83 MeV) sits between cobalt and cesium, Cs-137 (0.662 MeV) is next, and Au-198 and Ir-192 (about 0.4 MeV) share the 2.5–3 mm neighborhood. The two seed nuclides are three orders of magnitude lower: 0.025 mm for I-125 and 0.008 mm for Pd-103, which is why a thin lead-lined glove or the seed cartridge itself is adequate shielding and why a Pd-103 seed is slightly easier to shield than an I-125 seed.
+
+Why the published figures differ. A half-value layer measured in narrow-beam (good) geometry excludes scatter and gives the smallest number; a broad-beam measurement includes scattered photons and gives a larger number. Ir-192 adds a second effect: its gamma spectrum runs from about 0.3 to 0.6 MeV, and the lead HVL grows as the softer lines are filtered out, so tables that quote the first HVL say 2.5–3 mm while tables that quote an equilibrium or broad-beam value say up to 6 mm. For Cs-137 and Co-60 the difference between 5.5 and 6.5 mm, or between 11 and 12 mm, is a rounding and geometry choice between authors, not a physics disagreement.
+
+How to answer when the options straddle a range. Exam option sets for a lead HVL are spaced far apart, typically one choice per nuclide family: a few hundredths of a millimeter for a seed, 2–3 mm for Au-198 or Ir-192, 5–7 mm for Cs-137, 8 mm for radium, 11–13 mm for Co-60. Either end of a published range lands on the same letter, so memorizing 5.5 or 6.5 mm for cesium does not change the answer. The one place to be careful is Ir-192: if a set offers both 2.5 mm and 6 mm, the 2.5 mm choice is the narrow-beam table value and the 6 mm choice is cesium's answer; pick 2.5 mm. If a calculation stem needs a lead HVL it prints one, and that printed value overrides every figure in this table.
+
+Exposure-rate constants for the historical sources. Radium's 8.25 is per milligram of radium (with 0.5 mm Pt filtration), not per millicurie, and is the number behind mg-Ra-equivalent loading. Au-198 at about 2.38 R cm²/(mCi h) is listed for completeness; some sheets round it to 2.3 or 2.4. The bank does not memorize a Γ for I-125 or Pd-103 because published values differ with the seed model; a stem that needs one prints it.
+
+**Worked example**
+
+Given: a stored Ra-226 source. The stem prints the lead HVL as 8 mm and asks how much lead cuts the exposure rate to one-eighth.
+
+Formula: remaining fraction = 2^(−n), where n is the number of HVLs.
+
+Substitution: 1/8 = 2^(−3), so n = 3. Thickness = 3 × 8 mm = 24 mm.
+
+Check: 8 mm halves the rate (1/2), 16 mm leaves 1/4, 24 mm leaves 1/8. Three halvings.
+
+Meaning: one-eighth is three HVLs, not eight HVLs and not one-eighth of an HVL. The same problem for Co-60 (12 mm) needs 36 mm, and for Cs-137 (6.5 mm) needs 19.5 mm; the HVL scales the thickness, the fraction fixes the count.
+
+Usual wrong turn: 8 × 8 = 64 mm (multiplying the HVL by the denominator), or 8 / 3 = 2.7 mm (dividing instead of multiplying), or using Co-60's 12 mm because "radium is a high-energy source" when the stem printed 8 mm.
+
+**Traps**
+
+Treating the Cs-137 5.5 versus 6.5 mm difference as a trick question; it is two textbooks. Choosing 6 mm for Ir-192 when 2.5 mm is also offered. Quoting the radium Γ with millicuries. Swapping the two seed HVLs, or giving Pd-103 the Cs-131 or I-125 energy. Calling Au-198 a temporary source because it has a short half-life; the grains stay in.
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*, Table of physical characteristics of brachytherapy radionuclides (narrow-beam HVL values 11, 5.5, 2.5, 2.5, 0.025, 0.008 mm). The 12, 6.5, and 3–6 mm figures are the ones this bank's earlier lessons and question keys already use and are kept for consistency. Public blueprint I.7, I.10.

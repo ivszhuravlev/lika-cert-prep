@@ -301,3 +301,89 @@ Ordinary concrete in this note is about 2.35 g/cm³. Lead is about 11.3 g/cm³. 
 - Name the HDR door interlock and the post-treatment in-room survey. Leave dwell time and the emergency crank in module 40.
 - Compute primary-barrier \(B = P d^2 / (WUT)\), square the distance, and keep leakage at 0.1 percent of the useful beam with use factor 1. Keep patient scatter as a separate term.
 - Use a stem TVL when it is given. Otherwise ordinary concrete is about 35 cm at 6 MV (34–37 cm) and about 45 cm at 18 MV (44–45 cm), at about 2.35 g/cm³.
+
+## Transport of Radioactive Material: DOT Labels, Transport Index, and Package Types
+
+**Objectives:** VI.1, VI.2
+
+**What the exam expects:** Read a package label, compute a transport index from a 1 m reading, and say whether a shipment needs a Type A or Type B package. The rules are the Department of Transportation hazardous-materials regulations (49 CFR 173) and the NRC packaging rule (10 CFR 71); the clinic meets them mostly on the receiving end, under 10 CFR 20.1906.
+
+**Transport index.** The transport index (TI) is the maximum dose rate 1 m from any external surface of the package, in mrem per hour, with the measured value rounded up to the next tenth. A gamma reading in mR per hour is taken as mrem per hour for this purpose. A reading of 1.23 mR/h at 1 m therefore gives a TI of 1.3, not 1.2. A surface reading or a half-metre reading is never the TI; a point-source inverse-square estimate from a closer distance only shows why (doubling the distance divides the rate by four).
+
+**Label categories.** Three labels, chosen by the surface dose rate and the TI together, with the more restrictive of the two deciding:
+
+- White-I: surface at most 0.5 mrem/h and no measurable dose rate at 1 m (TI 0).
+- Yellow-II: surface at most 50 mrem/h and TI above 0 but at most 1.
+- Yellow-III: surface at most 200 mrem/h and TI above 1 but at most 10.
+
+Above 200 mrem/h on the surface or a TI above 10, the package may not go by ordinary carrier and must move under exclusive-use arrangements. Whether the source is sealed has nothing to do with the label; the label describes the external radiation field.
+
+**Activity limits and package types.** The shipping tables give two activity limits per nuclide. A1 is the Type A limit for special-form material, which is a sealed, non-dispersible source. A2 is the Type A limit for normal-form, dispersible material such as a liquid or powder, and A2 is never larger than A1. A shipment at or below the relevant limit can travel in a Type A package, which is tested against normal transport conditions (a short drop, water spray, stacking, penetration). Above A1 or A2 the shipment requires a Type B package, which is designed to survive accident conditions (a 9 m drop onto an unyielding surface, a puncture test, a 30 minute fire, immersion) and is certified by the NRC under 10 CFR 71. An excepted or limited-quantity package holds only a small fraction of A1 or A2. A 10 Ci Ir-192 HDR source, well under the roughly 27 Ci A1 for Ir-192, travels Type A; a Gamma Knife Co-60 reload of thousands of curies travels Type B. There is no "Type C" in clinical shipping, and medical use does not change the package type.
+
+**Receipt survey.** Under 10 CFR 20.1906 the licensee monitors a labelled package for surface dose rate and for removable contamination (a wipe) within 3 hours of receipt when it arrives during working hours, and within 3 hours of the start of the next working day when it arrives after hours. The survey applies to every labelled package, not only those with a measurable TI. A surface reading above 200 mrem/h, a 1 m reading above 10 mrem/h, or removable contamination above the limit is reported to the carrier and to the NRC.
+
+**Traps.** Round the TI up. Pick the label from both the surface reading and the TI. Compare a sealed source with A1 and a liquid with A2. Three hours for the receipt survey.
+
+**Sources.** 49 CFR 173 (DOT labels, TI, A1 and A2), 10 CFR 71 (Type A and Type B package certification), 10 CFR 20.1906 (receipt survey). The A1 value for Ir-192 is the teaching value this bank uses.
+
+## Sealed Sources, Contamination, Waste, and Patient Release Rules
+
+**Objectives:** VI.1, VI.2
+
+**What the exam expects:** Convert between microcuries, becquerels, and disintegrations per minute for the leak-test and contamination limits; run the decay-in-storage clock; estimate the dose to a household member from an I-131 patient and apply the 10 CFR 35.75 release rule; place 10 CFR Part 19 among the NRC parts.
+
+**Leak tests.** Sealed sources are wipe-tested for removable activity at intervals of up to six months (10 CFR 35.67). The limit is 0.005 microcurie, which is 185 Bq. One microcurie is 37,000 Bq, so a wipe of 0.003 microcurie is 111 Bq and passes. A source that fails is withdrawn from use, stored or returned, and reported to the NRC within five days. Sources that emit only beta or gamma below a small activity threshold, and sources in storage, are exempt from the routine test.
+
+**Package contamination.** The removable-contamination trigger for a received package is 2,200 disintegrations per minute per 100 square centimetres for beta and gamma emitters (220 dpm per 100 square centimetres for alpha). One becquerel is one disintegration per second, so 2,200 dpm is 2,200 / 60 = 36.7 Bq per 100 square centimetres, about 0.37 Bq per square centimetre. Forgetting the minute-to-second conversion leaves 2,200; multiplying by 60 gives 132,000, which is wrong in the other direction.
+
+**Decay-in-storage.** Under 10 CFR 35.92 a medical licensee may hold waste containing a nuclide with a physical half-life under 120 days until it has decayed. The planning rule is ten half-lives, after which about 1/1,024 of the activity (0.1 percent) remains; for I-131 at 8.0 days that is 80 days. The release criterion is a survey, not the calendar: the bag is monitored with an appropriate meter and no shielding between the meter and the waste, and it may go out as ordinary waste only when the reading is indistinguishable from background, after which the radiation labels are removed or defaced. The 120 day figure is the eligibility cut-off for the nuclide, not a holding time. The 185 Bq wipe limit is a sealed-source rule and does not apply to open waste.
+
+**Patient release.** 10 CFR 35.75 lets a licensee release a patient when the total effective dose to any other individual is not likely to exceed 5 mSv (0.5 rem); written instructions are required when that dose could exceed 1 mSv, and a record is kept when the dose to a breast-feeding infant or child could exceed 1 mSv. NUREG-1556 provides activity-based and dose-rate-based release columns, and for I-131 the matching teaching values are 33 mCi retained activity and 7 mR/h at 1 m. The exposure rate at 1 m follows from the exposure-rate constant: for I-131 at 2.2 R per hour at 1 cm per mCi, 33 mCi gives 2.2 × 33 / 10,000 = 0.00726 R/h, about 7.3 mR/h, which is why the two columns agree. A patient-specific estimate integrates the dose rate over the retention: total dose is the initial dose rate at 1 m times the mean life (1.44 times the effective half-life) times an occupancy factor (0.25 is the usual value for a household member), with the result converted at 1 mR to about 0.01 mSv. Using the half-life instead of the mean life undercounts by about 30 percent; dropping the occupancy factor overcounts by four.
+
+**10 CFR Part 19.** Part 19 is "Notices, Instructions and Reports to Workers; Inspection and Investigations." It requires posting the NRC Form 3 notice to employees, keeping the licence, regulations, and operating procedures available, instructing workers on the risks of radiation and on ALARA, telling a worker of the right to declare a pregnancy, providing dose reports on request and at termination, and protecting the right to request an inspection and to speak with inspectors. It sets no dose limit of its own. Dose limits are Part 20, medical use is Part 35, packaging is Part 71, and labels are DOT rules.
+
+**Radium, historically.** Ra-226 decays to radon-222, a noble gas, so a leaking radium needle filled its storage safe with radon and its alpha-emitting daughters. Radium safes therefore required ventilation to the outdoors and the leak test was a radon-emanation test. Ir-192 and Cs-137 decay to solids and need neither. The fact survives on exams as a distractor key.
+
+**Traps.** 185 Bq equals 0.005 microcurie. 2,200 dpm is 36.7 Bq. Ten half-lives for planning, a background survey for release. Mean life, not half-life, in the release-dose estimate. Part 19 is worker rights, not dose limits.
+
+**Sources.** 10 CFR 35.67 (leak tests), 10 CFR 35.92 (decay-in-storage), 10 CFR 35.75 and NUREG-1556 Volume 9 Appendix U (patient release), 10 CFR 19, 10 CFR 20.1906 and 49 CFR 173.443 (package contamination).
+
+## NCRP 147 versus 151: Design Goals, Occupancy, Workloads, Doors, and Neutrons
+
+**Objectives:** VI.3
+
+**What the exam expects:** Know which shielding report covers which room, quote the two weekly design goals, pick the occupancy factor for a named location, apply the IMRT factor to the right term, lay out a neutron door, and run the primary and leakage barrier formulas with the workload in the same units as the design goal. The vault-shielding lesson above has the formulas; this lesson adds the report boundaries and the table values.
+
+**Which report.** NCRP Report 151 (2005) covers structural shielding for megavoltage photon and electron therapy facilities: linacs, Co-60, and the vaults that hold them. NCRP Report 147 (2004) covers medical x-ray imaging rooms, including CT, and it applies to a CT simulator even when the scanner sits inside a radiation-oncology department, because the shielding problem is kilovoltage scatter and leakage. AAPM TG-108 covers PET and PET/CT, where the source is the injected patient in the uptake room and the scanner room, and the 511 keV annihilation photons need about 1.5 cm of lead per tenth-value layer rather than the millimetre or so that stops diagnostic x-rays; NCRP 147 transmission data do not apply to 511 keV. NCRP Report 49 (1976) is the predecessor of both 147 and 151 and is a legacy citation.
+
+**Design goals.** NCRP 151 and 147 use the same shielding design goals P: 0.1 mSv per week for a controlled area, which is about 5 mSv a year and a fraction of the occupational limit, and 0.02 mSv per week for an uncontrolled area, about 1 mSv a year, the public limit. The 0.02 mSv in any one hour figure from 10 CFR 20.1301 is a separate check on the hourly rate in an unrestricted area, not the weekly P; NCRP 151 handles it through the time-averaged dose-rate check.
+
+**Occupancy.** The occupancy factor T describes the protected point, not the treatment room. The NCRP 151 teaching values: offices, nurse stations, receptionist desks, control rooms, and occupied work areas are 1; patient examination and treatment rooms are 1/2; corridors, staff lounges, and employee rest rooms are 1/5; corridor doors are 1/8; public toilets, vending areas, storage rooms, and unattended waiting rooms are 1/20; outdoor areas with transient traffic, unattended parking, stairways, and janitor closets are 1/40. Attended parking lots are also often taken at 1/40; a parking lot with an attendant booth is designed for the attendant at 1.
+
+**Workload and the IMRT factor.** W is the weekly dose at 1 m from the target, in Gy per week; when P is in mSv, W is converted so that the units match (1 Gy is taken as 1,000 mSv for photons). IMRT delivers the same isocenter dose with several times the monitor units, and head leakage follows monitor units, so the leakage workload is the primary workload times the IMRT factor (commonly 2 to 10, with 3 to 5 typical for conventional IMRT). The primary barrier sees the useful-beam dose at isocenter, which the IMRT factor does not change, and patient scatter also scales with dose to the patient rather than with monitor units. The use factor U is 1 for leakage and scatter and a fraction (a quarter for each of four cardinal gantry angles) for the primary barrier.
+
+**Doors and neutrons.** Above about 10 MV, photoneutrons from the head and the vault become a shielding term. A maze lowers the neutron and capture-gamma fluence at the door; a direct (maze-less) door at 15 to 18 MV must shield neutrons itself. The layered door puts borated polyethylene on the vault side, because hydrogen thermalizes the neutrons and boron captures them with a 0.48 MeV gamma, and lead outside the polyethylene to attenuate those capture gammas and the 2.2 MeV hydrogen-capture gammas from the concrete. Lead first does nothing for the neutrons and leaves the capture gammas outside the gamma shield. Steel in a wall shortens the photon TVL but does little for neutrons; polyethylene and concrete do that work.
+
+**Traps.** NCRP 151 for the vault, 147 for the CT simulator, TG-108 for PET. 0.1 and 0.02 mSv per week. 1/40 is the parking lot. The IMRT factor multiplies leakage only. Polyethylene inside, lead outside.
+
+**Sources.** NCRP Report 151 (design goals, occupancy table, IMRT factor, neutron and door guidance), NCRP Report 147 (imaging rooms including CT), AAPM TG-108 (PET/CT), 10 CFR 20.1301 (hourly check).
+
+## Background Radiation, Collective Dose, Biodosimetry, and Privacy
+
+**Objectives:** VI.1
+
+**What the exam expects:** Quote the NCRP 160 background numbers, compute a collective dose and convert its units, compare a diagnostic dose with background, name the laboratory test that estimates an unbadged whole-body dose, and recognize a HIPAA problem in an otherwise correct clinical act.
+
+**NCRP 160.** NCRP Report 160 (2009) puts the average annual effective dose to a resident of the United States at about 6.2 mSv, split roughly in half between natural background (about 3.1 mSv) and medical exposure (about 3.0 mSv, half of it CT). Radon and thoron decay products inhaled indoors contribute about 2 mSv of the natural half, two thirds of natural background and about a third of the total; cosmic rays, terrestrial gamma rays, and internal emitters such as potassium-40 each contribute a few tenths of a millisievert. The older "3 mSv" figure is the natural component alone or a pre-CT-era total. The public limit of 1 mSv a year applies to licensed operations and has nothing to do with background. Radon dose is delivered by alpha particles to the bronchial epithelium, which is why its equivalent dose to lung is much larger than its contribution to effective dose.
+
+**Collective dose.** Collective effective dose is the sum of individual effective doses over a group, in person-sievert. Two hundred fifty workers averaging 1.2 mSv give 250 × 1.2 = 300 person-mSv, which is 0.30 person-Sv. Dividing back gives the mean dose per person. The mean individual dose and the collective dose are different quantities with different units, and the millisievert-to-sievert conversion is where items go wrong.
+
+**Comparisons.** Teaching values: a chest radiograph about 0.1 mSv, an abdomen or pelvis CT about 8 to 10 mSv, so one abdomen CT is about 80 chest radiographs, about three years of natural background at 3.1 mSv a year, and about one sixth of the 50 mSv occupational limit.
+
+**Biodosimetry.** When a worker is exposed in an accident without a dosimeter, cytogenetic dosimetry estimates the acute whole-body dose from the worker's own blood: lymphocytes are cultured and the frequency of dicentric chromosomes (two centromeres, produced by misrepair of radiation-induced breaks) is read against a laboratory calibration curve. The method detects acute whole-body doses down to roughly 0.1 to 0.2 Gy. A colleague's badge measures the colleague. A thyroid count measures internal iodine. Skin erythema appears only above several grey, days later, and reflects local skin dose. Lymphocyte count depletion over the first days is the clinical triage indicator for higher doses, not the laboratory estimate.
+
+**Privacy.** HIPAA's Privacy Rule protects individually identifiable health information (PHI) and permits use and disclosure without patient authorization for treatment, payment, and health-care operations, under a minimum-necessary standard; the Security Rule requires administrative, physical, and technical safeguards for electronic PHI. Plan approval inside the record-and-verify system and billing the payer are permitted uses. A properly de-identified teaching example (name, record number, dates, and the other identifiers removed) is no longer PHI. A screenshot with the patient's name sent to a personal phone outside the clinic's safeguards is a Privacy and Security Rule violation regardless of clinical intent. The dose numbers themselves are not protected; the identifiers are.
+
+**Traps.** 6.2 mSv total, 3.1 natural, radon about 2. Person-sievert, not sievert. Dicentrics for whole-body dose. HIPAA protects identifiers, and treatment, payment, and operations are permitted uses.
+
+**Sources.** NCRP Report 160 (2009) for background and medical dose; ICRP and IAEA biodosimetry guidance for the dicentric assay; 45 CFR Parts 160 and 164 (HIPAA Privacy and Security Rules).

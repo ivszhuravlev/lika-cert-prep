@@ -387,3 +387,185 @@ A daily output of 2.8% can pass while a 1.8 mm laser on an IMRT unit fails (tole
 - RO-ILS is voluntary incident learning; root cause is the process. TG-100 ranks failures by severity × occurrence × detectability. A medical event (about 20% of the total dose, about 50% of a fraction, wrong site, or wrong patient) is a telephone report within about 24 hours and a written report within about 15 days.
 - Deliverability: MLC travel, small segments, collision, modulation, gantry speed versus dose rate.
 - Record-and-verify parameters match the plan, including accessories, SSD, shift sign, and angles. The breast 5.7° example is a couch kick from a 20 cm superior–inferior length, not a collimator angle.
+
+## Isocenter Tests: Star Shot, Spoke Shot, and Winston–Lutz
+
+**Objectives:** VII.9
+
+**What the exam expects:** Name the film test for each rotation axis, read its result as a radius, and keep it apart from the Winston–Lutz test. The tolerance is the TG-142 radiation-isocenter line: 2 mm for non-IMRT and IMRT machines, 1 mm for SRS and SBRT. Both numbers already appear in the QA cadence lesson; this lesson names the tests that produce them.
+
+**Star shot.** A film (or the EPID) is exposed through a narrow slit, a few millimetres wide and the length of the field, several times while one axis is rotated between exposures: for example at 0°, 60°, and 120°, or every 30°. Each exposure draws a line through the isocenter. If the axis were perfect, every line would pass through one point. In practice they bound a small region, and the result is the radius of the smallest circle that touches all the lines. Which axis is tested depends on what is rotated and where the film is placed.
+
+- Collimator star: the film lies flat on the couch at isocenter height, perpendicular to the beam, and the collimator is rotated between exposures. The lines cross at the collimator rotation axis.
+- Couch star: the film again lies flat at isocenter, the collimator and gantry stay fixed, and the couch is rotated between exposures. The lines cross at the couch rotation axis.
+- Gantry star, often called the spoke shot: the film is held vertically in the plane of gantry rotation (perpendicular to the gantry axis), with the slit set along the gantry axis, and the gantry is rotated between exposures. The lines cross at the gantry rotation axis. The pattern looks like wheel spokes, which gives the name.
+
+The three circles together describe the radiation isocenter, the volume within which the three axes meet. A couch that is sagging under load shows up as a couch star that does not close, and a gantry whose axis walks as it rotates shows up as a large spoke-shot radius. The star shot measures the beam, so it is a radiation-isocenter test; a mechanical pointer and a dial indicator measure the mechanical isocenter, and the TG-142 annual item is the coincidence of the two.
+
+**Winston–Lutz.** A small radiopaque ball is placed at the mechanical isocenter on the lasers or on the couch pointer and imaged through a small field (a cone or a small MLC field) at a set of gantry, collimator, and couch angles. For each image the offset between the ball's shadow and the field center is measured. The maximum offset is the result, and for SRS it must be at or under 1 mm. Winston–Lutz tests the whole chain, lasers to ball to beam, at the angles that will be used, and it is done before SRS sessions as well as annually. The star shot isolates one axis at a time; Winston–Lutz asks whether the three axes and the setup system agree where the beam will go.
+
+### Worked example
+
+**Given.** On an SRS-capable linac, the collimator star gives a radius of 0.4 mm, the couch star 0.7 mm, and the spoke shot 1.2 mm. The machine also treats conventional patients.
+
+**Arithmetic.** The SRS/SBRT tolerance is 1 mm. 0.4 and 0.7 are inside it. 1.2 mm is 0.2 mm over. For the non-SRS class the tolerance is 2 mm, and all three are inside it.
+
+**Check.** \(1.2 - 1.0 = 0.2\) mm over the SRS line. \(2.0 - 1.2 = 0.8\) mm under the conventional line.
+
+**Result means.** Conventional treatments may continue. The SRS program is on hold until the gantry axis is adjusted and the spoke shot repeats under 1 mm. A passing Winston–Lutz from last month does not clear the gantry, because the Winston–Lutz result is a different measurement and the machine has moved since.
+
+**Wrong turns**
+
+- Reading the star-shot radius as a diameter, or reporting the diameter when the tolerance is written as a radius. State which one the stem uses; this bank reports the radius.
+- Testing the couch with a film held vertically, or the gantry with a film lying flat. The film must be perpendicular to the axis being tested.
+- Calling the picket fence an isocenter test. The picket fence is a leaf-position test.
+- Using the Winston–Lutz result to replace the collimator star. Winston–Lutz is a combined test, not an axis-by-axis test.
+
+**Traps.** Rotate one axis, place the film perpendicular to that axis, draw lines, fit a circle, report a radius. Then compare with 1 mm (SRS) or 2 mm (otherwise).
+
+**Sources.** AAPM TG-142 (radiation isocenter ±2 mm, ±1 mm SRS/SBRT; coincidence of radiation and mechanical isocenter). Star-shot and Winston–Lutz methods as described in standard linac acceptance and SRS QA practice (Winston and Lutz, 1988).
+
+## Calibration Intervals, Secondary MU Checks, and the TG-40 to TG-142 Transition
+
+**Objectives:** VII.1, VII.5, VII.9
+
+**What the exam expects:** The intervals and tolerances that surround the TG-142 table rather than being in it: how often the chamber and the survey meter go back for calibration, how far an independent monitor-unit calculation may differ from the planning system, how the dynamic wedge is checked, which document commissions the planning system, and which numbers changed between TG-40 and TG-142.
+
+**Instrument calibration intervals.** The reference ionization chamber and electrometer used for TG-51 carry an absorbed-dose-to-water coefficient from an Accredited Dosimetry Calibration Laboratory (ADCL). The AAPM recommendation this bank uses is recalibration every two years, and after any repair. A well-type chamber for brachytherapy source strength follows the same two-year ADCL cycle. Survey meters (ion-chamber and Geiger–Müller instruments used for area and patient surveys) are calibrated annually and after repair, as a licence condition under 10 CFR 20.1501. A field instrument such as a daily-output device or a diode array is cross-calibrated against the reference chamber locally; it does not go to the ADCL.
+
+**Independent MU verification (TG-114).** Before the first fraction a second calculation, by a different program or by hand, checks the planning-system monitor units. Agreement is judged against an action level that depends on the geometry. For a simple homogeneous point in a conventional field the bank uses 3 percent. Where heterogeneity, small fields, off-axis points, or IMRT make the two algorithms legitimately differ, the action level widens to about 5 percent. A discrepancy past the action level is investigated before treatment; it is not averaged, and it is not "fixed" by changing the delivered MU to the second program's value. The second check catches a wrong input (energy, SSD, depth, wedge factor, prescription point) and a beam-model error at the point; it does not detect an output drift, a leaf-position error, or patient motion, which belong to machine QA, patient-specific QA, and imaging.
+
+**Dynamic wedge.** An enhanced dynamic or virtual wedge is a moving jaw, so its wedge factor and its angle depend on software and jaw motion rather than on a piece of steel. TG-142 lists the dynamic wedge among the IMRT-class monthly checks: wedge-factor constancy at 2 percent, with the full wedge-angle verification (the 60° setting over the full field, plus a spot check of another angle and field size) annually. The physical wedge is different hardware with different checks: placement accuracy at 2 mm monthly and the transmission factor at 2 percent annually, as the QA cadence lesson lists. An omitted wedge factor in an MU calculation is a plan-check item, not a wedge QA item.
+
+**Planning-system commissioning: TG-53 and MPPG 5.a.** AAPM TG-53 (1998) was the comprehensive quality-assurance document for treatment-planning systems, covering acceptance, commissioning, periodic QA, and the whole planning process. AAPM Medical Physics Practice Guideline 5.a (2015, with a later revision) is the current prescription for commissioning and QA of the dose-calculation side of a TPS for photons and electrons: which test geometries to measure, and how close calculation must come. Its teaching tolerances are about 2 percent in the high-dose, low-gradient region on the central axis, a distance criterion of about 2 mm in the penumbra, and 3 to 5 percent in low-dose regions outside the field. When an item asks which document a physicist follows to commission the dose calculation today, the answer is MPPG 5.a; TG-53 is the broader legacy process document. TG-106 covers the beam-data measurement that feeds the model, and TG-119 is the IMRT commissioning test suite.
+
+**IMRT patient-specific QA reminder.** TG-218 criteria as used in this bank: gamma at 3 percent and 2 mm with a 10 percent low-dose threshold, tolerance 95 percent of points, action limit 90 percent, plus an ion-chamber point dose. The IMRT QA lesson above has the worked example. Patient-specific QA is done before the first fraction and does not detect a wrong contour or a wrong margin.
+
+**TG-40 (1994) versus TG-142 (2009).** TG-40 was the first comprehensive radiotherapy QA report: linac, simulator, planning system, brachytherapy, and the chart-check program in one document, with one set of tolerances for every linac. TG-142 replaced its linac section and kept the daily, monthly, and annual structure. What changed, in the figures items still test:
+
+| Check | TG-40 | TG-142 |
+| --- | --- | --- |
+| Annual absolute output | 2% | 1% |
+| Flatness and symmetry | 3% flatness, 2% symmetry (absolute) | 1% change from baseline |
+| Lasers | 2 mm for all | 2 mm non-IMRT, 1.5 mm IMRT, 1 mm SRS/SBRT |
+| Isocenter | 2 mm diameter (mechanical) | ±2 mm radiation isocenter, ±1 mm SRS/SBRT |
+| Machine classes | one class | non-IMRT, IMRT, SRS/SBRT |
+| Imaging and MLC tests | not present | kV/MV planar, CBCT, picket fence, dynamic-wedge checks added |
+
+Daily output constancy at 3 percent and monthly at 2 percent did not change. The weekly chart check and the simulator and TPS sections of TG-40 were not replaced by TG-142; they moved to TG-275 (chart review), TG-66 (CT simulator), and TG-53/MPPG 5.a (planning system). When a stem cites TG-40 numbers, answer with TG-40 numbers and know that TG-142 is the current reference.
+
+**Daily, monthly, annual.** Daily is safety and the few things that drift overnight: door interlock, audio-visual, lasers, ODI, output constancy at 3 percent, and the imaging-to-treatment isocenter check for IGRT machines. Monthly is constancy against baseline: output at 2 percent, profiles at 1 percent, electron energy at 2 mm or 2 percent, mechanical indicators at 1° and 2 mm, the dynamic wedge, and imaging geometry. Annual is the absolute calibration (TG-51 at 1 percent), the full mechanical and dosimetric survey against commissioning (isocenter coincidence, wedge transmission, output versus gantry angle and dose rate, MU linearity, imaging dose), and the beam-quality index. A monthly result inside its tolerance does not satisfy an annual test with a tighter one.
+
+### Worked example
+
+**Given.** An independent calculation returns 206 MU for a field the planning system computed at 200 MU, at a homogeneous point in a conventional field. The clinic's action level for that geometry is 3 percent.
+
+**Arithmetic.** \((206 - 200) / 200 = 6 / 200 = 0.030 = 3.0\%\). The difference sits at the action level. Clinic policy decides whether "at" is "over"; this bank treats a result at the action level as requiring investigation before treatment.
+
+**Check.** \(200 \times 1.03 = 206\). If the point had been in lung with a heterogeneity correction, the action level would be about 5 percent and 3.0 percent would be inside it.
+
+**Result means.** For a homogeneous point, 3.0 percent is the edge of what two algorithms should disagree by; the planner confirms depth, SSD, field size, and the wedge factor before the first fraction. Using 206 MU because the second program said so is not an investigation.
+
+**Wrong turns**
+
+- Dividing by the second-check MU instead of the planning-system MU. \(6 / 206 = 2.9\%\), which quietly moves the result under the line.
+- Applying the 5 percent heterogeneity action level to a homogeneous water-equivalent point.
+- Sending the daily-output diode array to the ADCL, or letting the reference chamber run for five years on one coefficient.
+- Citing TG-53 as the document that sets today's dose-calculation tolerances. That is MPPG 5.a.
+
+**Traps.** Two years for the chamber, one year for the survey meter. Three percent for a simple MU check, about five where heterogeneity makes algorithms disagree. TG-40 numbers when the stem says TG-40; TG-142 otherwise.
+
+**Sources.** AAPM TG-51 and the ADCL calibration recommendation (two years). 10 CFR 20.1501 for survey-meter calibration. AAPM TG-114 for independent MU verification action levels. TG-142 for the dynamic-wedge and the daily, monthly, and annual structure. AAPM TG-53 and MPPG 5.a for the planning system; TG-106 and TG-119 for beam data and IMRT commissioning. TG-218 for IMRT QA.
+
+## Safety Culture: Two Identifiers, Swiss Cheese, FMEA Numbers, Fault Trees, and Staffing
+
+**Objectives:** VII.7, VII.6
+
+**What the exam expects:** Four safety-culture tools with one fact each: the two-identifier rule, the Swiss-cheese model, the TG-100 risk-priority-number scale and its action trigger, and the fault tree. Plus the staffing ratios from the ISCRO "Blue Book" that ASTRO's safety documents carried forward. The incident-reporting lesson above has RO-ILS, root-cause analysis, and the medical-event rules; this lesson adds the numbers and the names.
+
+**Two patient identifiers.** Before any procedure, including simulation, plan approval, and every treatment fraction, the patient is identified with two independent identifiers: full name and date of birth, or name and medical record number. A photograph in the record-and-verify system is a common third check. The room number, the bed, and the appointment time are not identifiers, because they describe where the patient is rather than who the patient is. The rule is the first of The Joint Commission's National Patient Safety Goals, and a wrong-patient treatment is both a medical event (10 CFR 35.3045) and the failure this rule exists to stop.
+
+**Swiss-cheese model.** James Reason's model pictures each defence (the plan check, the independent MU calculation, record-and-verify, pre-treatment imaging, the time-out) as a slice of cheese with holes. No single slice is solid. An error reaches the patient when the holes in every slice line up on the same day. The design lesson is that defences must be independent, so that one cause does not open the same hole in all of them, and that near misses (an error that stopped at slice three) are the data that show where the holes are. Blaming the person at the last slice does not close the holes in the earlier ones.
+
+**TG-100 numbers.** Failure-mode-and-effects analysis scores each failure mode on three scales from 1 to 10: occurrence O (how likely), severity S (how bad for the patient), and detectability D (how likely it goes unnoticed, so a failure nobody would catch scores 10). The risk priority number is the product, \(\mathrm{RPN} = O \times S \times D\), so the scale runs from 1 to 1,000. The TG-100 example sets a working trigger for action at an RPN above about 125 or a severity of 8 or more regardless of RPN; a mode with S = 10 and a low RPN still gets a control because the consequence is catastrophic. The scales are roughly logarithmic in the underlying probabilities, so a step of one is a large change. The process map comes first, the FMEA second, and the fault tree third.
+
+**Fault tree.** A fault-tree analysis starts from one unwanted outcome (the top event, such as wrong dose to the target) and works backward through AND and OR gates to the causes that could produce it, and to the causes of those causes, until the tree reaches the basic events that a quality-management step could prevent or detect. The FMEA lists failure modes forward from the process; the fault tree reasons backward from the harm. TG-100 uses the tree to decide where a check or a forcing function cuts the most branches at once. In the TG-100 IMRT analysis the most frequent root causes were human (procedural slips and communication), followed by missing procedures and inadequate training, which is why the recommended controls are checklists, standardized communication, and independent review rather than more hardware tests.
+
+**Staffing ratios.** The ISCRO "Blue Book" (Inter-Society Council for Radiation Oncology, 1991) gave the staffing guidance that items still quote: about one dosimetrist per 300 patients treated per year, one qualified medical physicist per 400 patients per year, one radiation oncologist per 200 to 250 patients per year, and two therapists per treatment machine (more when the daily load is high). ASTRO's Safety Is No Accident (2012, updated 2019) carries the same structure and adds that complex techniques (IMRT, SRS, brachytherapy) raise the staffing need above the simple ratio. The ratios are per year of new patients, not per day, and they are minimums for a conventional case mix.
+
+### Worked example
+
+**Given.** FMEA of the shift entry at simulation. Occurrence 4, severity 8, detectability 5.
+
+**Arithmetic.** \(\mathrm{RPN} = 4 \times 8 \times 5 = 160\). 160 is above the 125 trigger. Severity 8 also meets the severity-alone trigger.
+
+**Check.** \(4 \times 8 = 32\), \(32 \times 5 = 160\). Lowering detectability to 2 by adding an independent check of the shift against the CT reference point gives \(4 \times 8 \times 2 = 64\), under 125, but S is still 8, so the mode stays on the watch list even after the control is added.
+
+**Result means.** This failure mode gets a control now: a second person compares the entered shift with the simulation record before the first fraction, which attacks D. Severity cannot be changed by a check; occurrence can be lowered by a template or a forcing function in the software. Either way the item is tracked because of its severity.
+
+**Wrong turns**
+
+- Adding O + S + D. The RPN is a product, and the range is 1 to 1,000, not 3 to 30.
+- Scoring detectability high when the failure is easy to detect. High D means hard to detect.
+- Dismissing a mode with RPN 90 and S = 10. Severity alone can trigger action.
+- Using the room number as the second identifier.
+- Quoting the dosimetrist ratio as per day. It is about 300 patients per year.
+
+**Traps.** Two identifiers, both about the person. Cheese slices are independent defences. RPN from 1 to 1,000, act above about 125 or at high severity. Fault tree reasons backward from harm. One dosimetrist per 300 patients a year.
+
+**Sources.** The Joint Commission National Patient Safety Goal 1 (two identifiers). Reason's Swiss-cheese model as used in TG-100 and RO-ILS teaching. AAPM TG-100 for FMEA scales, RPN, the 125 and severity-8 trigger used in its example, and fault-tree analysis. ISCRO Blue Book (1991) and ASTRO Safety Is No Accident for staffing. The ratios are the teaching values this bank uses.
+
+## Source Drift: Lens Limits, Cataract Thresholds, and Penumbra Definitions
+
+**Objectives:** admin, VI.1
+
+**What the exam expects:** Three facts whose "right" number depends on which source and which year the item writer used. Know both values, know which one is current, and know which one this bank keys when the stem does not say.
+
+**Lens of the eye.** The occupational lens limit in NCRP Report 116 and in 10 CFR 20.1201 is 150 mSv per year. ICRP's 2011 statement on tissue reactions lowered its recommended occupational lens limit to 20 mSv per year averaged over five years, with no single year above 50 mSv, after epidemiology showed cataracts at lower doses than the older models assumed. The NRC did not change its regulation, so the U.S. legal limit is still 150 mSv. The bank's rule: "according to NCRP" or "under 10 CFR 20" is 150 mSv; "according to ICRP" or "current international recommendation" is 20 mSv. The public lens figure in NCRP 116 is 15 mSv; question sets that print 50 mSv or 5 mSv for the public lens are using a wrong key, and the bank does not import them.
+
+**Cataract threshold.** Older texts give the threshold for a radiation-induced cataract as about 2 Gy in a single acute exposure and about 5 Gy (sometimes quoted up to 8 Gy) when fractionated, and some practice tests key 2 Gy in one place and 5 Gy in another. ICRP's 2011 review set the threshold at about 0.5 Gy whether the dose is acute or protracted, and that revision is what drove the lens-limit change above. The bank keys 0.5 Gy as the current threshold. When a stem says "classically" or quotes an older text, 2 Gy single and 5 Gy fractionated are the legacy values. A clinical planning constraint for the lens (several grey, module 43) is a different number again; it is a tolerance chosen against cataract risk over years, not the threshold itself.
+
+**Penumbra width.** Physical penumbra is the lateral distance between two isodose lines at a stated depth. The classic definition, used by Khan and by most of the bank (modules 05 and 19), is the 80 percent to 20 percent distance. Some course material and some practice tests use 90 percent to 20 percent, which gives a wider number for the same profile, and at least one test set uses both in different places. Geometric penumbra, from source size and distances, is a third quantity with its own formula (module 36). The bank's rule: compute 80 to 20 when the stem does not specify; compute whatever the stem specifies when it does; never report a geometric-penumbra formula result as a measured 80 to 20 width.
+
+**How to answer a drifting item.** Read the stem for a source cue (NCRP, NRC, ICRP, "classically", "current"). If there is a cue, follow it. If there is none, pick the current value, and expect the legacy value to appear as a distractor. If both values appear as options with no cue, the item is flawed; pick the current value and move on.
+
+**Sources.** NCRP Report 116 and 10 CFR 20.1201 (150 mSv lens, 15 mSv public lens). ICRP 2011 statement on tissue reactions and ICRP Publication 118 (20 mSv lens, 0.5 Gy cataract threshold). Khan for the 80–20 physical penumbra. The drift itself is documented in the review of the practice-test sets this bank was checked against.
+
+## End-to-End Tests, TG-275 Plan Review, and the Task-Group Directory
+
+**Objectives:** VII.9, VII.2, VII.1
+
+**What the exam expects:** Say what an end-to-end test is and why SRS and SBRT programs require one; name the document that defines physics plan and chart review and what it asks the reviewer to look for; and match a dozen task-group numbers to the subject each one governs. Items of the form "which report covers X" are the cheapest marks in the QA domain and the easiest to lose by confusing two neighbouring numbers.
+
+**End-to-end test.** An end-to-end test runs a phantom through the whole clinical chain as if it were a patient: immobilization and CT simulation, contouring of a hidden target, planning with the clinical beam model and grid, export to the record-and-verify system, image guidance and setup in the room, and delivery, with dose measured inside the phantom at the target (ion chamber, film, or a detector array) and the delivered position compared with the planned one. The test checks that every hand-off works together, which the individual TG-142 tests cannot show: the lasers can pass, the Winston–Lutz can pass, and the imaging isocenter can pass, while a wrong coordinate convention between the CT simulator and the planning system or a mis-registered CBCT reference image still moves the dose. TG-101 asks for an end-to-end test at commissioning of an SBRT program and after any change to a link in the chain (new planning software version, new couch, new imaging system), with a localization accuracy of about 1 to 2 mm overall, and TG-142 places the same expectation on SRS programs. The target is a small hidden sphere or a radiopaque marker, the phantom is anthropomorphic or at least has a known target position, and the report states both a positional error and a dose error. A phantom passing an end-to-end test does not replace patient-specific QA, which checks each plan's deliverability, and patient-specific QA does not replace the end-to-end test, which checks the chain. Credentialing phantoms mailed by IROC for clinical trials are an external version of the same test.
+
+**TG-275.** AAPM TG-275 (2020) is the report on the physics plan and chart review: the initial plan check before the first fraction, the weekly chart check during treatment, and the end-of-treatment check. It was built from a failure-mode analysis of the review process and from a survey of what reviewers actually catch, and it ranks the items by risk so that a department can set a prioritized checklist rather than a complete one. High-priority initial-check items include that the prescription in the planning system matches the signed prescription (dose per fraction, number of fractions, total dose, and target), that the plan is on the correct CT and the correct patient, that the isocenter and shifts in the record-and-verify system match the plan and the simulation documents, that the DVH meets the constraints and the constraints are the ones the physician intended, that an independent MU or dose check was done and is within its action level, that the bolus, wedges, and accessories in the plan appear in the delivery parameters, and that the image-guidance instructions (modality, frequency, match structures, tolerance) are written. The weekly check confirms that the delivered fractions, cumulative dose, and any plan changes match the prescription, and that setup images were reviewed. TG-275 also recommends that plan review happens before the plan is scheduled, not between the first-fraction imaging and the beam, and that the reviewer is independent of the planner. It replaced the chart-check section of TG-40; it does not change the TG-142 machine tests.
+
+**Which report.** The list items keep asking, with the one-line answer this bank keys:
+
+- TG-40 (1994): the comprehensive legacy QA report (linac, simulator, TPS, brachy, chart check).
+- TG-51 (1999, 2014 addendum): reference calibration of photon and electron beams in water.
+- TG-53 (1998): the comprehensive legacy TPS QA process; MPPG 5.a (2015) is the current dose-calculation commissioning guideline.
+- TG-66 (2003): CT-simulator QA.
+- TG-100 (2016): risk-based quality management (process map, FMEA, fault tree).
+- TG-101 (2010): SBRT, including the end-to-end test, 2 mm grid, and 1 mm localization.
+- TG-106 (2008): beam-data commissioning measurements.
+- TG-108 (2006): PET and PET/CT shielding.
+- TG-114 (2011): independent MU verification and its action levels.
+- TG-119 (2009): IMRT commissioning test suite.
+- TG-142 (2009): linac QA, replacing the linac part of TG-40; TG-198 (2021) is its implementation guide.
+- TG-203 (2019): cardiac implantable electronic devices, replacing TG-34.
+- TG-218 (2018): IMRT patient-specific QA tolerance and action limits.
+- TG-263 (2018): structure nomenclature.
+- TG-275 (2020): physics plan and chart review.
+
+**Wrong turns**
+
+- Treating a Winston–Lutz pass as an end-to-end test. Winston–Lutz checks beam-to-isocenter alignment in the room; it never sees the CT, the contour, or the planning system.
+- Running the end-to-end test once at commissioning and not after a planning-system upgrade.
+- Calling TG-275 a machine-QA report, or TG-142 a chart-check report.
+- Swapping TG-108 (PET shielding) with NCRP 147 (x-ray imaging rooms) or TG-101 (SBRT) with TG-119 (IMRT commissioning).
+
+**Traps.** End-to-end means phantom through the whole chain, dose and position both reported, repeated after any link changes. TG-275 is plan and chart review, prioritized by risk, independent of the planner, before the first fraction. Know the directory.
+
+**Sources.** AAPM TG-101 and TG-142 for the end-to-end requirement for SBRT and SRS; AAPM TG-275 for plan and chart review; the individual task-group reports listed. IROC phantom credentialing as the external example.

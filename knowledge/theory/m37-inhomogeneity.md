@@ -129,3 +129,55 @@ What the algorithm then does with lateral scatter:
 - Override contrast to fluid or water, metal to the real alloy, and streaks to surrounding tissue.
 - Rank lung performance: pencil beam fails, superposition is better, Monte Carlo is best at the interface.
 - Keep a path-length correction from being described as full lateral transport.
+
+## Lung Rules of Thumb, Composite Paths, and Interface Dose
+
+**Objectives:** IV.4, I.9
+
+**What the exam expects**
+
+You can sanity-check a lung correction with a percent-per-centimeter heuristic before you trust the TMR-ratio arithmetic. You can state the direction of the error when the heterogeneity correction is left off in a lung plan, in terms of what the patient receives. You can build an effective depth through a three-material path that includes soft bone and hard bone. You know which CT findings need an override and which do not. You can contrast the effective-depth method with the TAR-ratio and power-law methods, and you can say what happens at the lung–tumor boundary when the field is small and the energy is high.
+
+**Core facts**
+
+The lung heuristic. For a 6 MV beam, every centimeter of lung the ray crosses instead of soft tissue raises the dose beyond the lung by roughly 3 to 3.5 percent, because the lung at density 0.25–0.30 removes only a quarter to a third of the photons that a centimeter of water would remove. At 18 MV the beam is more penetrating and the per-centimeter gain is smaller, about 2 percent. The number is a sanity check, not a calculation: a plan that shows a 30 percent correction for 3 cm of lung, or a 2 percent correction for 10 cm of lung, has something wrong with its densities. Lung is the site where turning the heterogeneity correction on changes the monitor units most; pelvis and brain plans move by a percent or two, a lung plan by ten to thirty.
+
+Direction of the error when the correction is off. A homogeneous calculation treats the lung as water, so it predicts too little dose beyond the lung and asks for more monitor units to reach the prescription. Those monitor units are delivered into a chest that attenuates less than water. The patient is overdosed beyond the lung, and the mediastinum, cord, or contralateral lung on the exit side gets more than the plan shows. The exam phrasing to keep straight is that the calculated dose is low and the delivered dose is high. A key that says the patient is underdosed when the correction is off has confused the plan's number with the patient's dose. The one place the direction reverses is inside a small field within the lung itself, where lateral electron loss lowers the dose at the field edge; that is an algorithm problem, not the path-length direction.
+
+Composite paths with soft bone. Density values for a hand calculation are lung 0.25, soft tissue 1.00, soft (spongy) bone about 1.1, and hard (cortical) bone about 1.65 relative electron density. A ray through a vertebral body or a pelvis often crosses both bone types. Effective depth is still the sum of thickness times density; bone lengthens the water-equivalent path and lung shortens it, and they can partly cancel on one ray. Soft bone at 1.1 is close enough to water that leaving it at 1.0 changes a 2 cm slab by only 0.2 cm; hard bone at 1.65 changes a 3 cm slab by almost 2 cm, so it is the layer to get right.
+
+What needs an override. Contrast, saturated metal, and metal streak artifacts are overridden because the CT number does not describe the material that will be in the beam at treatment. A calcification does not need an override. It is real tissue, it will be present on every treatment day, and the scanner has sampled it correctly; it is also usually small. Overriding calcifications to water removes real attenuation. The same logic applies to dense surgical clips only when they are small enough to be ignored; a large clip cluster is treated like other metal.
+
+Effective depth versus TAR ratio. The effective-depth (equivalent path length) method looks up the TMR or TAR at the water-equivalent depth and uses that value directly. It corrects primary attenuation only; the scatter contribution is taken as if the field were in water at the shifted depth, and it ignores where the inhomogeneity sits. The isodose-shift method is the graphical version. The TAR-ratio method takes TAR at the effective depth divided by TAR at the physical depth, both for the same field size at the point, so the change in scatter with depth and field size enters the factor; it still ignores the position of the slab relative to the point. The Batho power-law method raises TARs to powers of the densities and does account for position: a lung slab far from the point changes the dose less than a slab just above it. The equivalent-TAR method (ETAR) scales the scatter field size by a weighted average density of the volume around the point, which is the first method that uses the three-dimensional density distribution. None of these transports electrons, so the usual accuracy ranking is equivalent-TAR and power-law below pencil beam, pencil beam below convolution/superposition, and Monte Carlo best.
+
+Interface and rebuild-up. Where a beam leaves lung and enters a tumor or the chest wall, the density rises and the dose has to build up again, because the electrons set in motion in lung travel farther and fewer of them deposit energy per centimeter. The tumor's proximal edge is therefore under the dose a path-length method predicts, and the lung just beyond the distal edge of the tumor is also perturbed. The effect grows with photon energy, since higher-energy electrons travel farther, and it grows as the field shrinks, since a small field in low-density lung loses lateral electron equilibrium. This is why lung stereotactic plans use 6 MV, and no more than 10 MV, and why a pencil beam overstates the periphery dose of a small lung lesion. A convolution/superposition or Monte Carlo calculation shows the interface deficit; a path-length correction cannot.
+
+**Formulas**
+
+Heuristic percent gain beyond lung ≈ (lung thickness in cm) × (3 to 3.5 percent per cm) for 6 MV, about 2 percent per cm for 18 MV.
+
+Corrected MU for a hand check ≈ homogeneous MU / (1 + fractional gain).
+
+Effective depth = Σ (thickness × relative density), with lung 0.25, soft bone 1.1, hard bone 1.65.
+
+**Worked example (heuristic as a check)**
+
+Given: a 6 MV ray crosses 8.0 cm of lung on the way to a mediastinal point. The heuristic at 3 to 3.5 percent per cm predicts 8.0 × 3 = 24 percent to 8.0 × 3.5 = 28 percent more dose than a water calculation. The TMR-ratio method in the earlier lesson, with lung at 0.25 and the same 8 cm, gave 0.800 / 0.620 = 1.29, a 29 percent gain. The two agree within the heuristic's range, so the density table and the TMR lookup pass the sanity check. Had the homogeneous plan called for 250 MU, the corrected hand estimate is 250 / 1.26 = 198 MU for a 26 percent midpoint gain; multiplying instead, 250 × 1.26 = 315 MU, would raise the dose in the wrong direction.
+
+**Worked example (composite path)**
+
+Given: a posterior beam to a para-aortic node crosses 4.0 cm of soft tissue, 2.0 cm of spongy bone at 1.1, 3.0 cm of cortical bone at 1.65, and 6.0 cm of lung at 0.25. Effective depth = 4.0 × 1.00 + 2.0 × 1.1 + 3.0 × 1.65 + 6.0 × 0.25 = 4.00 + 2.20 + 4.95 + 1.50 = 12.65 cm. Physical depth = 4 + 2 + 3 + 6 = 15.0 cm. Check: bone added 2.20 + 4.95 − 5.00 = 2.15 cm of water, lung removed 6.00 − 1.50 = 4.50 cm, net 15.0 − 4.50 + 2.15 = 12.65 cm. The lung wins on this ray and the point gets more dose than a water calculation shows.
+
+**Traps**
+
+- Reading "heterogeneity correction off in lung" as a patient underdose. The plan's number is low; the patient's dose is high.
+- Applying the 6 MV percent-per-centimeter figure to an 18 MV beam.
+- Overriding a calcification or a small clip to water.
+- Describing the effective-depth method as if it included the scatter change that the TAR-ratio method includes, or as if either method knew where the slab was. Only the power-law and ETAR methods do.
+- Choosing 15 or 18 MV for a small lung lesion to "penetrate better." The higher energy makes the interface underdose worse.
+
+**Sources**
+
+- Khan and Gibbons, tissue inhomogeneity corrections: effective depth, TAR ratio, power law, ETAR, and the interface discussion.
+- AAPM TG-65, tissue inhomogeneity corrections for megavoltage photon beams, for the method ranking and the lung energy recommendation.
+- AAPM TG-101 for the energy choice in lung stereotactic treatments.

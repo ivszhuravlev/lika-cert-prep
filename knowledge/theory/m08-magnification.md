@@ -121,3 +121,97 @@ Khan and Gibbons, *The Physics of Radiation Therapy*. Public blueprint I.6.
 ## Magnification Quiz
 
 This quiz checks M = SID/SOD, object size = image size/M, SOD = SSD + depth when the object is not at the skin, and the separation between a geometric magnification greater than 1 and a later minification on a display. The traps are the inverted ratio, multiplying the image by M to “correct” it, using SSD as SOD for a deep object, and scaling dose rate by M instead of by the inverse square.
+
+## Block-Cutter Geometry and Block Shifts
+
+**Objectives:** I.6
+
+**What the exam expects**
+
+You explain why a block cutter reproduces the simulator geometry, and you convert a distance drawn or measured on a film into the matching distance at the block tray and at the isocenter. The same ratio does all three jobs; the exam tests whether you pick the right pair of distances.
+
+**Core facts**
+
+A conventional block cutter is a hot-wire divergent cutter. The wire pivots about a point that stands in for the x-ray source. The film (or a printout of the DRR) is clamped at the same source-to-film distance (SFD) at which it was taken, and the styrofoam block sits at the same source-to-tray distance (STD) that the block will occupy in the treatment head. Because the wire passes through the pivot, the aperture traced on the film is cut with the same divergence the real beam has, and the block edge is automatically focused toward the source. If the film were placed at the wrong distance, the cut block would be the wrong size in the tray even though it matched the film.
+
+Everything in the beam scales with distance from the source. A length L_film measured on the film at SFD corresponds to L_tray = L_film × STD / SFD at the tray and to L_iso = L_film × SAD / SFD at the isocenter plane. The tray is nearer the source than the isocenter, so a tray aperture is always smaller than the field it produces at isocenter: L_iso = L_tray × SAD / STD.
+
+Block shifts follow the same rule. If a physician asks for the block edge to move 2 cm as seen on a film taken at 140 cm, the block in a tray at 65 cm moves 2 × 65/140 = 0.93 cm, and the field edge at isocenter (100 cm) moves 2 × 100/140 = 1.43 cm. Any movement at the tray is magnified toward the patient: a 5 mm positioning error of the block in the tray becomes 5 × 100/65 = 7.7 mm at isocenter. That is why tray slots are indexed and why TG-142 tolerances on block and MLC position are stated at isocenter.
+
+For an SSD setup the same similar-triangle scaling converts a field or block size at the skin to the size at depth: size at depth d = size at surface × (SSD + d) / SSD. A 10 × 10 field at 100 cm SSD is 11 × 11 at 10 cm depth.
+
+**Formulas**
+
+Length at distance r2 = length at distance r1 × r2 / r1 (from the source)
+
+Shift at tray = shift on film × STD / SFD
+
+Shift at isocenter = shift on film × SAD / SFD
+
+Size at depth = size at surface × (SSD + d) / SSD
+
+**Worked example**
+
+Given: a simulator film was taken at SFD 140 cm with the isocenter at 100 cm. The physician draws the block edge 2.8 cm farther from the central axis than the cut block. The block tray is at 65 cm from the source. Find the required block shift at the tray and the resulting field-edge shift at isocenter.
+
+Formula: tray shift = film shift × STD / SFD. Isocenter shift = film shift × SAD / SFD.
+
+Substitution: tray shift = 2.8 × 65 / 140. Isocenter shift = 2.8 × 100 / 140.
+
+Arithmetic: 65/140 = 0.464. Tray shift = 1.3 cm. 100/140 = 0.714. Isocenter shift = 2.0 cm. Check: 1.3 × 100/65 = 2.0 cm, the same isocenter shift from the tray value.
+
+Meaning: a 2.8 cm change on the film is 1.3 cm of block movement and 2.0 cm of anatomy. All three are the same geometric ray, read at three distances.
+
+Usual wrong turn: moving the block 2.8 cm (no scaling), or multiplying by 140/65 and moving it 6.0 cm, which would be the film distance for a tray-plane measurement.
+
+**Traps**
+
+Clamping the film at the tray distance in the cutter. Scaling a tray-plane length by SAD/SFD instead of SAD/STD. Treating a block positioning error as the same size at the patient. Using SSD instead of SSD + d for a field size at depth.
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*, treatment-planning and field-shaping chapters. Bentel, *Radiation Therapy Planning*. Public blueprint I.6.
+
+## Magnification Ring and Distance Scaling
+
+**Objectives:** I.6
+
+**What the exam expects**
+
+You use a marker of known size to find the magnification of a film without knowing the distances, and you scale a measured length or a field size from one source distance to another.
+
+**Core facts**
+
+A magnification ring (or any marker of known dimension, such as a ruler or a seed of known length) is taped to the patient in the plane of interest, usually at the isocenter depth or on the skin at the level of the target. On the film the ring projects larger than life. The ratio of the measured image to the known true size is the magnification of that plane, and every other length lying in that plane divides by the same ratio. The ring is the practical substitute for SID/SOD when the object depth is unknown, when a film was taken on a diagnostic unit with unknown geometry, or when a brachytherapy source film must be reconstructed. If the ring is not in the plane of the object, the magnification it reports is for the wrong plane.
+
+Field-size and length scaling between distances is the same similar-triangle ratio: a field quoted at 100 cm is quoted at any other distance by multiplying by the new distance over 100. A 15 × 15 field at 100 cm SAD is 12 × 12 at an 80 cm source-to-tray plane and 19.5 × 19.5 at 130 cm extended SSD. For total-body or extended-SSD treatments the needed distance is the ratio of the required field to the collimator maximum times 100 cm, and the collimator is rotated 45° so the diagonal (1.41 × the side) becomes the useful length.
+
+**Formulas**
+
+M = measured ring size / true ring size
+
+True length = measured length / M
+
+Size at r2 = size at r1 × r2 / r1
+
+**Worked example**
+
+Given: a 3.0 cm ring at the level of the target projects as 4.2 cm on the film. A node in the same plane measures 5.6 cm on the film. Find the magnification and the true node length.
+
+Formula: M = image / true. True node = measured / M.
+
+Substitution: M = 4.2 / 3.0. True node = 5.6 / M.
+
+Arithmetic: M = 1.40. True node = 5.6 / 1.40 = 4.0 cm. Check: 4.0 × 1.40 = 5.6 cm.
+
+Meaning: the film exaggerates every length in that plane by 40%. The distances were never needed.
+
+Usual wrong turn: multiplying 5.6 by 1.40 to get 7.8 cm, or dividing the ring measurement by the node (4.2/5.6) and using 0.75 as the magnification.
+
+**Traps**
+
+Ring placed on the skin for a mid-plane object. Magnification reported as a number less than 1 for a film beyond the patient. Field at depth scaled by d/SSD rather than (SSD + d)/SSD. Dose rate scaled by the same ratio as length.
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*. Public blueprint I.6.
