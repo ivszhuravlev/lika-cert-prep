@@ -269,3 +269,72 @@ You can name the classic arrangement for a site and the problem it was built to 
 Hinge angle 100°. What wedge angle does the classic formula assign? A photon field abutted to an electron field on the skin: which side is hot?
 
 Walk-through: θ = 90 − 100/2 = 90 − 50 = 40°. Each beam is a 40° wedge if the formula is being followed exactly. The hot side of the skin match is the photon side. The electron side is cold.
+
+## Named Site Techniques: IMN, Off-Cord, and Past-Pointing
+
+**Objectives:** III.7, III.2
+
+**What the exam expects**
+
+You can describe the two ways internal mammary nodes are covered with tangents, say when and why a lung plan comes off the cord, and define past-pointing for a partial arc. These are vocabulary items: the stem names the technique and asks what problem it solves.
+
+**Core facts**
+
+Internal mammary nodes. Standard tangents stop at the medial breast edge and do not cover the internal mammary chain. Two classic solutions exist. Wide (deep) tangents move the posterior border medially and deeper so the first three intercostal spaces are inside the tangent; the price is more ipsilateral lung and, on the left, more heart in the field. The partially-wide or mini-tangent variant deepens only the upper part of the tangent, where the nodes lie, and keeps the lower border shallow with a block or MLC. The alternative is a separate anterior IMN field matched to the medial border of the tangents; it is often a mixed photon–electron field (for example 70 percent electrons and 30 percent photons) so the deep dose to the heart and lung is limited while the surface is covered. The match line between the anterior field and the medial tangent is the junction to watch.
+
+Off-cord at 45 Gy. In a classic AP/PA lung or esophagus plan the spinal cord receives nearly the full dose of every fraction. The accepted plan is to deliver the opposed pair to about 40–45 Gy and then change to an oblique or off-cord arrangement (an anterior field plus a posterior oblique, or opposed obliques) that excludes the cord while the tumor is carried to 60–66 Gy. The 45 Gy point is the conventional cord tolerance used for that switch; QUANTEC places the 0.2 percent myelopathy risk at 50 Gy to the full cord cross-section, and the bank uses 45 Gy as the planning switch point because it leaves a margin below the QUANTEC figure. The second phase is called a cone-down or an off-cord boost. Inverse planning makes the same decision continuously by writing the cord constraint into the whole course.
+
+Past-pointing. In rotation therapy with a full 360-degree arc the dose maximum lands at the isocenter. With a partial arc (for example 180 or 240 degrees) the dose maximum shifts toward the entrance side of the arc, because more of the beams enter from that side. To bring the maximum back onto the tumor the isocenter is placed past the tumor center, on the side away from the arc. That deliberate displacement is past-pointing. It is a 3D-arc and conformal-arc technique; VMAT optimizers remove the need for it by modulating the fluence instead of moving the isocenter.
+
+**Traps**
+
+- Describing wide tangents as a technique that spares the heart. They cover the nodes by including more heart and lung.
+- Coming off the cord at 60 Gy. The switch happens at the cord tolerance, around 45 Gy, not at the tumor dose.
+- Placing the past-pointed isocenter on the arc side of the tumor. It goes away from the arc.
+- Treating past-pointing as a VMAT setting.
+
+**Sources**
+
+- Bentel, treatment planning and dose calculation in radiation oncology, for IMN techniques and arc therapy
+- Khan and Gibbons, rotation therapy section
+- QUANTEC spinal cord summary (module 43), for the 50 Gy figure that the 45 Gy planning habit sits under
+
+## Surface Dose, APBI, and Plan Quality Indices
+
+**Objectives:** III.7, III.12
+
+**What the exam expects**
+
+You can state which setup choices raise the surface dose of a megavoltage photon beam, list the ASTRO suitability criteria for accelerated partial-breast irradiation and the standard brachytherapy schedule, predict where the hot spot sits in each classic field arrangement, and compute a conformation number.
+
+**Core facts**
+
+Surface dose. For a megavoltage photon beam the surface dose rises with field size (more head scatter and more contaminant electrons from the collimator and air), with a blocking tray or any accessory in the beam (the tray is an electron source, and the closer it sits to the skin the worse it is; a 15–20 cm tray-to-skin distance is the usual minimum), and with oblique incidence (the buildup region is compressed along the surface, so the dose at the skin rises as the beam tilts). Surface dose falls as energy rises and as SSD increases, because the contaminant electrons spread and are absorbed in air. Bolus, of course, raises it deliberately. A physical wedge can slightly lower the electron contamination by absorbing it, but the exam items are the three increases: field size, tray, obliquity.
+
+APBI eligibility. The ASTRO consensus statement defines a suitable group for accelerated partial-breast irradiation outside a trial: age 50 or older, invasive ductal carcinoma or low- to intermediate-grade DCIS, tumor 2 cm or smaller for invasive disease (DCIS up to 2.5 cm; later guidance extends suitable tumors to 3 cm), negative margins of at least 2 mm, node-negative disease, no lymphovascular invasion, and estrogen-receptor-positive status. Patients between those limits are cautionary, and young patients, large tumors, positive nodes, or positive margins are unsuitable. The standard brachytherapy APBI schedule is 34 Gy in 10 fractions, twice daily, at least 6 hours apart, over 5 days; the external-beam equivalent is 38.5 Gy in 10 fractions BID. Shorter schedules (30 Gy in 5 fractions every other day, 40 Gy in 15 daily) are now also used.
+
+Hot-spot expectations by technique. Parallel-opposed photon fields put the hot spots near dmax at both entrances; they grow with separation and shrink with higher energy. A four-field box is homogeneous in the center with small hot spots at the field entrances. A wedged pair without the right wedge angle is hot along the thin side where the two entrances stack. Field-in-field breast plans aim to pull the hot spot below about 107–110 percent. An inverse plan's hot spot is expected inside the PTV, typically up to about 107–110 percent of the prescription, and a hot spot outside the target is a plan defect even when the number is small. Stereotactic plans intentionally run 125–200 percent at the center. More beams generally improve conformity and raise the maximum inside the target.
+
+Conformation number. The RTOG conformity index (prescription isodose volume divided by target volume) does not say whether the prescription volume is on the target. The conformation number of van't Riet does: CN = (target volume covered by the prescription isodose / target volume) × (target volume covered by the prescription isodose / total prescription isodose volume). The first factor is coverage, the second is the fraction of prescribed-dose tissue that is target. CN runs from 0 to 1 and 1 is ideal.
+
+**Formulas**
+
+CN = (TV_RI / TV) × (TV_RI / V_RI), where TV is the target volume, V_RI the volume enclosed by the prescription isodose, and TV_RI the part of the target inside that isodose.
+
+The PTV is 100 cc, the prescription isodose encloses 130 cc, and 95 cc of the PTV is inside it. Coverage = 95 / 100 = 0.95. Selectivity = 95 / 130 = 0.731. CN = 0.95 × 0.731 = 0.694. Check: 0.694 / 0.95 = 0.731. The RTOG conformity index for the same plan is 130 / 100 = 1.30 and says nothing about the 5 cc of PTV that was missed.
+
+**Traps**
+
+- Saying surface dose falls as the field opens. It rises.
+- Moving the tray closer to the skin to tighten the penumbra and forgetting the electron contamination.
+- Calling a 45-year-old with a 2.5 cm node-positive tumor suitable for APBI.
+- Quoting 34 Gy in 10 fractions as a once-daily schedule; it is twice daily over 5 days.
+- Treating a 108 percent hot spot outside the PTV as acceptable because the number is small.
+- Reporting the RTOG conformity index as if it measured coverage.
+
+**Sources**
+
+- Khan and Gibbons, skin dose section, for field size, tray, and obliquity
+- ASTRO consensus statement on accelerated partial-breast irradiation (2009, updated 2016), for the suitable, cautionary, and unsuitable groups
+- NSABP B-39 / RTOG 0413, for the 34 Gy brachytherapy and 38.5 Gy external-beam schedules
+- van't Riet et al., for the conformation number; RTOG 0813 and 0915 for the conformity index (module 19)

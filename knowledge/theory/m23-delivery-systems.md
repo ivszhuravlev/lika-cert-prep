@@ -127,3 +127,48 @@ Sliding window does that blocking while the beam is on. Step-and-shoot does the 
 A plan changes from five static step-and-shoot fields to two VMAT arcs. The PTV D98 improves and the 5 Gy isodose now covers most of the axial contour. What happened to conformity of the high dose, and what happened to integral dose? Is the arc delivery beam-off between leaf positions the way step-and-shoot is?
 
 Walk-through: High-dose conformity improved. Integral dose and the low-dose bath increased because more tissue is traversed. VMAT leaves move with the beam on during the arc. That is not step-and-shoot dead time. Monitor units depend on how hard the arcs are modulated.
+
+## IMRT and VMAT Delivery Parameters
+
+**Objectives:** III.5, I.5
+
+**What the exam expects**
+
+You can name the three optimizer families and say what each one trades. You can state why a minimum monitor-unit count is set per segment, define the IMRT factor and say where it belongs in a shielding calculation, and describe the delivery settings a VMAT planner chooses before the optimizer runs: arc length, avoidance sectors, collimator angle, and jaw tracking. You can give the usual exam direction for monitor units in VMAT versus fixed-field IMRT.
+
+**Core facts**
+
+Optimizers. A gradient method follows the slope of the cost function downhill from a starting fluence. It is fast and deterministic, and it stops in the first valley it finds, so it can be trapped in a local minimum when the problem is not convex. Simulated annealing is stochastic: it tries random changes and sometimes accepts a change that makes the cost worse, with a probability that falls as a control parameter called temperature is lowered. That occasional uphill step is how it climbs out of a local minimum. It is slow, and it is the classic textbook contrast to gradient descent. Direct aperture optimization (DAO) does not optimize a fluence map at all. The variables are the leaf positions and the weights of a fixed number of deliverable apertures, so there is no separate leaf-sequencing step and no gap between the optimized fluence and the delivered fluence. DAO plans typically need fewer segments and fewer monitor units for comparable quality. Most VMAT engines are aperture-based for the same reason.
+
+Minimum monitor units per segment. A step-and-shoot segment that fires for a fraction of a monitor unit is delivered while the dose rate and the beam symmetry are still settling, and a tiny aperture is poorly modeled by the planning system. Departments therefore set a floor, commonly on the order of 3 MU per segment (the exact number is a commissioning choice, typically 2–5 MU). Raising the floor removes the smallest segments, simplifies the plan, and lowers the total MU at some cost in modulation.
+
+IMRT factor. The IMRT factor is the monitor units needed to deliver a fraction with modulation divided by the monitor units a conventional open or wedged plan would need for the same prescribed dose. Values of 2–10 are quoted, with about 3–5 as the usual average for a C-arm linac; helical tomotherapy is higher. The patient dose at the isocenter does not change, so the primary-barrier workload does not change. Head leakage and MLC transmission scale with monitor units, so the leakage (and scatter) workload is multiplied by the IMRT factor in the NCRP 151 method. That is the single place the factor enters a shielding calculation.
+
+VMAT and monitor units. The exam direction is that a VMAT plan uses fewer monitor units and less beam-on time than a fixed-field IMRT plan of comparable quality, especially when the comparison is with sliding-window IMRT, because the arc delivers dose from every angle with relatively open apertures instead of sweeping a narrow gap at a few angles. Heavily modulated arcs narrow that gap; the direction is typical, not guaranteed.
+
+Jaw tracking. With jaw tracking the collimator jaws follow the MLC aperture at every control point instead of sitting at the plan's outer field edge. Closed leaves transmit about 1–2 percent and interleaf leakage is higher still; a jaw parked over the closed leaves cuts that transmission to the jaw value. The result is less dose outside the aperture, a smaller low-dose bath, and slightly less MLC-transmission dose inside the patient. It does not change the optimized fluence inside the open aperture.
+
+Collimator angle and offset between arcs. A collimator angle of 0 degrees lines the interleaf leakage and the tongue-and-groove effect up along the direction of leaf travel for the whole arc. Planners rotate the collimator, typically 10–45 degrees, and when two arcs are used they give the arcs different or mirrored angles (for example 30 and 330 degrees) so the leakage lines of one arc do not land on the leakage lines of the other. The offset also lets the leaves cover a target longer than the leaf travel in one arc. A collimator angle near 90 degrees puts leaf motion along the short axis of the field; that is the fixed-field trick from the MLC lesson, not the same idea as the arc offset.
+
+Avoidance sectors. An avoidance sector is a span of gantry angles inside the arc where the beam is held off while the gantry keeps rotating. It is set before optimization to keep the beam from entering through something the planner does not want as an entrance: a contralateral breast, the arms, a shoulder, the couch rails or edge, or an implanted device. A partial arc is the same idea applied to one end of the rotation. Non-coplanar arcs and couch kicks are a separate tool; avoidance sectors are about which coplanar angles are allowed to fire.
+
+**Formulas**
+
+IMRT factor = MU per fraction with modulation / MU per fraction for the conventional delivery of the same dose.
+
+A conventional 4-field plan delivering 200 cGy needs 250 MU. The IMRT plan for the same prescription needs 1,000 MU. The factor is 1,000 / 250 = 4. Check: 4 × 250 = 1,000. The leakage workload used for the secondary barriers is multiplied by 4; the primary workload is not.
+
+**Traps**
+
+- Describing simulated annealing as the fast deterministic method, or gradient descent as the one that escapes local minima.
+- Treating DAO as a leaf sequencer that runs after a fluence optimization. DAO replaces that two-step chain.
+- Multiplying the primary-barrier workload by the IMRT factor. Only leakage and scatter scale with monitor units.
+- Calling a 0-degree collimator the default for a two-arc plan.
+- Treating an avoidance sector as a beam-off pause that stops the gantry. The gantry rotates through; the beam is held.
+- Saying jaw tracking changes the fluence inside the aperture. It only trims transmission outside it.
+
+**Sources**
+
+- Khan and Gibbons, inverse planning chapter, for optimizer families and leaf sequencing
+- NCRP 151, for the IMRT factor applied to the leakage workload
+- Vendor planning-system documentation, for minimum segment MU, jaw tracking, and arc setup options

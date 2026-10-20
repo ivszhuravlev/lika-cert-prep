@@ -220,3 +220,88 @@ I_2 = 300 \left(\frac{100}{90}\right)^2 = 300 \left(\frac{10}{9}\right)^2 = 300 
 - Solve the formula for an unknown distance (square root), not only for an unknown dose rate.
 - Keep Mayneord F out of a pure dose-rate question. Mayneord changes PDD between two SSDs and does not replace scatter.
 - Reverse-check: multiply the new dose rate by the squared distance ratio and recover the original rate.
+
+## Solving Inverse Square for Distance and Time
+
+**Objectives:** I.10, IV.1
+
+**What the exam expects:** Two turns of the same inverse-square ratio that the drills above do not ask. First, the unknown is the distance: a hemibody or total-body protocol caps the dose rate, and you must find how far from the source the midplane has to sit. Second, the unknown is an accumulated exposure: a survey reading is a rate (mR per hour), so after inverse square you still multiply by the time spent, in hours, to get a dose in mR.
+
+**Formulas**
+
+\[
+d_2 = d_1 \sqrt{\frac{I_1}{I_2}}
+\qquad
+X = \dot{X}_1 \left(\frac{d_1}{d_2}\right)^2 \times t
+\]
+
+- \(I_1\): known dose rate at distance \(d_1\) from the source
+- \(I_2\): the dose rate you are allowed (or want) at the unknown distance \(d_2\)
+- \(\dot{X}_1\): exposure rate at \(d_1\), in mR/h
+- \(t\): time at \(d_2\), in hours when the rate is per hour
+- \(X\): accumulated exposure in mR
+
+The square root is the step people drop. A rate that must fall by a factor of 4 needs twice the distance, not four times.
+
+### Worked example: distance for a dose-rate cap
+
+**Given.** A linac delivers 300 cGy/min at 100 cm from the source. A hemibody protocol requires no more than 80 cGy/min at the midplane. Inverse square only.
+
+**Substitute.** \(d_2 = 100 \sqrt{300/80} = 100 \sqrt{3.75}\).
+
+**Arithmetic.** \(\sqrt{3.75} = 1.9365\). \(d_2 = 193.6\) cm.
+
+**Check.** \(300 \times (100/193.6)^2 = 300 \times 0.2667 = 80.0\) cGy/min. Without the root, \(100 \times 3.75 = 375\) cm would drop the rate to \(300/3.75^2 = 21\) cGy/min, far below the cap.
+
+**Result means.** The midplane must be at least 193.6 cm from the source. Any longer distance is also under the cap; the question asks for the shortest acceptable distance. Attenuation and the lower dose rate that a TBI mode may offer are separate adjustments.
+
+### Second pass: exposure rate times time
+
+**Given.** A survey meter reads 60 mR/h at 1.5 m from an implanted patient. A nurse spends 20 minutes at 3 m. Inverse square only.
+
+**Substitute.** Rate at 3 m \(= 60 \times (1.5/3)^2 = 60 \times 0.25 = 15\) mR/h. Time \(= 20/60 = 0.333\) h.
+
+**Arithmetic.** \(X = 15 \times 0.333 = 5.0\) mR.
+
+**Check.** 15 mR in a full hour, so 5 mR in a third of an hour. Leaving the time in minutes, \(15 \times 20 = 300\), is the usual slip and is 60 times too large.
+
+**Result means.** The nurse accumulates about 5 mR. Convert minutes to hours before multiplying a per-hour rate.
+
+**Wrong turns**
+
+- Solving for distance without the square root.
+- Inverting the ratio under the root, which moves the point closer when the rate must fall.
+- Multiplying a per-hour rate by minutes.
+- Applying inverse square to the time instead of the rate.
+
+**Traps.** Underline the unit of the rate. Then write the two distances and decide which one is unknown before touching the square or the root.
+
+**Sources.** Khan and Gibbons, inverse square; TBI and hemibody dose-rate practice as described in AAPM Report 17 and the TBI technique lesson in module 24.
+
+## Spatially Invariant Kernels
+
+**Objectives:** IV.1
+
+**What the exam expects:** Name the assumption that separates convolution from superposition. A convolution algorithm uses one scatter kernel for every point, so the kernel is spatially invariant. That is only true in a homogeneous water-like patient. Superposition lets the kernel change from point to point by scaling it with the density along each ray (radiological distance), which is why it handles lung and bone better. Collapsed cone is a fast superposition that transports along a fixed set of cone axes.
+
+The kernel itself is the dose spread around a single primary interaction site. It is precomputed by Monte Carlo and stored. The quantity it spreads is TERMA, the total energy released per unit mass by the primary photons (module 35 ties TERMA to the primary and scatter split of a TMR).
+
+### Worked example: which model is in use
+
+**Given.** A planner reads a vendor description: “the same dose-spread array is applied at every voxel, and heterogeneities are handled only by changing the path length to each voxel.”
+
+**Reasoning.** One array everywhere is a spatially invariant kernel, so the engine is a convolution. Changing the path length alters where TERMA is deposited, but the kernel is not rescaled by local density, so lateral scatter in lung is still modeled as if it were water.
+
+**Check.** If the description had said “the kernel is scaled by the density between the interaction site and the dose point,” that would be superposition.
+
+**Result means.** A pure convolution engine is a homogeneous-patient model with a path-length patch. Expect it to overestimate dose inside and just beyond low-density lung for small fields.
+
+**Wrong turns**
+
+- Calling superposition “a convolution with a density override.” The difference is whether the kernel is rescaled, not whether densities are read.
+- Saying the kernel is measured. It is calculated by Monte Carlo.
+- Confusing TERMA with KERMA. KERMA is energy transferred to charged particles only; TERMA also includes the energy carried off by scattered photons.
+
+**Traps.** “Spatially invariant” is a property of the kernel, not of the dose grid or the beam.
+
+**Sources.** Ahnesjö and Aspradakis, dose calculations for external photon beams (Phys Med Biol 1999); Khan and Gibbons, convolution–superposition.

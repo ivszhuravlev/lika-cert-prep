@@ -169,3 +169,77 @@ Khan and Gibbons, *The Physics of Radiation Therapy*. ICRP 60 step values and IC
 ## Characteristics of X-Ray and Particle Beams Mini-Quiz
 
 This quiz checks exponential attenuation versus finite range, which particles are directly ionizing, where the Bragg peak does and does not appear, approximate dmax rising from Co-60 to 18 MV, and w_R for photons, protons, alphas, and energy-dependent neutrons. The traps are a Bragg peak on a clinical electron curve, proton treatment energy confused with megavoltage electron energy, w_R = 1 for neutrons, and a 6 MV beam treated as monoenergetic 6 MeV photons.
+
+## Light Field and Penumbra Definitions
+
+**Objectives:** I.3, VII.1
+
+**What the exam expects**
+
+You state the rule that connects the light field to the dose distribution, you name the three penumbra components and the 80–20% definition of the physical penumbra, and you predict which setup change widens or narrows the penumbra.
+
+**Core facts**
+
+The radiation field size is defined at the 50% isodose line: the width between the two points, at the depth of maximum dose, where the dose has fallen to half of the central-axis value. The light field is adjusted at commissioning so that its edge projects onto that 50% line. That is why the light field edge is a 50% edge and not a 90% or 100% edge. A target placed exactly at the light edge receives about half the central-axis dose, and planners add margin so the 90% or 95% line, not the 50% line, covers the target. Light-to-radiation coincidence is checked monthly under TG-142 with a tolerance of 2 mm or 1% per side.
+
+Geometric penumbra is the region at the field edge that sees only part of the finite source. It is set by the source diameter s, the source-to-collimator (diaphragm) distance SCD, and the source-to-point distance (SSD plus depth): P = s × (SSD + d − SCD) / SCD. It grows with a larger source, a longer SSD, a deeper point, and a collimator that sits farther from the patient (smaller SCD). It shrinks when the collimator is brought closer to the patient (larger SCD), which is why SRS cones and electron applicators sharpen the edge, and why a Co-60 source of 1–2 cm has a far wider penumbra than a linac spot of a few millimeters.
+
+Transmission penumbra is the dose at the edge from photons that pass through the tapered tip of the collimator jaw or block. A divergent (focused) jaw face minimizes it; a non-divergent block or a rounded MLC leaf end contributes more.
+
+Physical penumbra is what is actually measured on a profile: the lateral distance between the 80% and 20% isodose lines (some references use 90–10%; the bank uses 80–20% as the standard definition). It includes the geometric and transmission penumbra plus the lateral scatter of photons and electrons in the patient, which is why the physical penumbra widens with depth and with energy even when the geometry is fixed. Typical physical penumbra at 10 cm depth is about 6–8 mm for a 6 MV beam and larger for 18 MV.
+
+**Formulas**
+
+Geometric penumbra: P = s × (SSD + d − SCD) / SCD
+
+- s: source diameter
+- SCD: source-to-collimator distance (distal face of the jaw)
+- SSD + d: source-to-point distance
+
+**Worked example**
+
+Given: a Co-60 unit with a 2.0 cm source, collimator face at 45 cm, SSD 80 cm. Find the geometric penumbra at 10 cm depth.
+
+Formula: P = s × (SSD + d − SCD) / SCD
+
+Substitution: P = 2.0 × (80 + 10 − 45) / 45
+
+Arithmetic: 80 + 10 − 45 = 45. P = 2.0 × 45/45 = 2.0 cm.
+
+Meaning: a 2 cm source at this geometry throws a 2 cm geometric penumbra at 10 cm depth. Repeat with a 0.3 cm linac spot at SCD 50 cm and SSD 100 cm: 0.3 × (100 + 10 − 50)/50 = 0.36 cm. The source size is the dominant difference between cobalt and linac edges.
+
+Usual wrong turn: dropping the depth and using SSD − SCD only (giving 1.56 cm), or inverting the ratio so a larger SCD appears to widen the penumbra.
+
+**Traps**
+
+Placing the light field edge at the 90% line. Calling the 80–20% distance the geometric penumbra. Claiming penumbra decreases with depth. Believing a larger field size changes the geometric penumbra (it does not; it changes the scatter contribution only slightly).
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*, field-shaping chapter. AAPM TG-142 for the light-radiation tolerance. Public blueprint I.3 and VII.1.
+
+## Flattening-Filter-Free Beam Facts
+
+**Objectives:** I.3, I.5
+
+**What the exam expects**
+
+You give the direction and approximate size of each change when the flattening filter is removed: depth dose, surface dose, dose rate, spectrum, profile shape, and head scatter. Module 7 covers the hardware; this lesson is the beam.
+
+**Core facts**
+
+Removing the filter removes the material that hardened the central axis. The FFF spectrum is softer, so the beam is slightly less penetrating. For 6 MV the percent depth dose at 10 cm drops by about 3 percentage points (roughly 67% flattened to about 64% FFF for a 10 × 10 field) and dmax moves a few millimeters shallower. For 10 MV the drop is similar, from about 73% to about 71%. An FFF beam is therefore specified by its own PDD or TPR, not by the flattened beam's quality index.
+
+Surface dose is higher with FFF. The softer spectrum and the loss of the filter's absorption of low-energy photons and contaminant electrons raise the buildup-region dose by several percent of the maximum. Together with the higher dose rate this is why skin reactions are watched in FFF SBRT.
+
+Dose rate rises by a factor of about 2 to 4 because the center of the beam is no longer attenuated. Commercial values are about 1400 MU/min for 6 MV FFF and 2400 MU/min for 10 MV FFF, against 600 MU/min for flattened beams on the same machine. The increased dose per pulse raises ion recombination in the measuring chamber, so Pion must be re-determined for FFF.
+
+The profile is forward-peaked, falling off smoothly from the central axis without horns. Flatness is not a meaningful specification; the beam is characterized by the unflattened profile shape and by symmetry. Head scatter is lower and the collimator scatter factor varies less with field size. Out-of-field leakage per MU is lower, and photoneutron yield per MU drops for high-energy beams because the filter was a high-Z source. The number of monitor units for a given dose is similar to or somewhat larger than the flattened beam's, because output per MU is still calibrated to 1 cGy/MU at reference conditions; the gain is in time, not in MU.
+
+**Traps**
+
+Describing FFF as a harder beam. Quoting a higher PDD for FFF. Saying FFF lowers skin dose. Using the flattened beam's TPR20,10 for an FFF beam. Assuming 2400 MU/min applies to every FFF energy; it is the 10 MV FFF figure.
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*. AAPM TG-51 addendum for FFF reference dosimetry and recombination. Vendor commissioning data for the 1400/2400 MU/min dose rates. Public blueprint I.3 and I.5.

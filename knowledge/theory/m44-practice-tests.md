@@ -415,3 +415,21 @@ At 6°/s, 360° takes 60 s and 600 MU/min can deliver only 600 MU. The plan need
 Check: \(4\times90 = 360\). \(600 \times 1.5 = 900\).
 
 Meaning: the arc is deliverable only if the gantry slows to 4°/s and the leaves can follow. Maximum gantry speed cannot carry 900 MU at a 600 MU/min ceiling. Collision and carriage travel are separate holds even when this speed works.
+
+## Combination items
+
+**Objectives:** admin
+
+**What the exam expects:** You recognize the MDCB "which statements are correct" item on sight and you work it as a set of short true-or-false decisions, not as one four-way guess. The stem lists statements I, II and III (sometimes IV) and the options are combinations such as "I and II only", "I and III only", "II and III only" and "I, II and III". A matching list (nuclide and half-life, task group and topic, report and content) is the same skill in a different shape.
+
+**How to attack a combination item.** Read each statement on its own and mark it true or false before you look at the options. Then go to the statement you are most certain about. If it is false, every option that contains it is gone; if it is true, every option that omits it is gone. One confident decision usually removes two of the four options. Decide the next most certain statement and the item is finished. Do not start from the options: a familiar-looking combination pulls the eye toward it before the statements have been judged.
+
+**Where the writers hide the false statement.** A reversed direction (surface dose rises with electron energy, falls with photon energy), a swapped neighbor (Cs-137 and Cs-131, I-125 and I-131, ICRU 50 and ICRU 62), a right number on the wrong row (the 50 mSv occupational figure on the public row, the 0.25 primary use factor on leakage), or a true threshold stretched into a dominance claim (pair production is allowed above 1.022 MeV, Compton still dominates in tissue). The "all three are correct" option is used often enough that you should not reject it by reflex, and not often enough that it is a safe default.
+
+**Matching items.** When the exam gives four pairings and asks which one is correct, the three wrong pairings are usually built by swapping values between the listed items. Check the pairing you know cold first; if it is right, you are done, and if it is wrong, its true value often reveals which other pairing is also wrong.
+
+**Pacing.** A three-statement item is three recall decisions in the same 90 seconds. Mark, eliminate, choose, move on. Do not re-derive a statement you already judged.
+
+**Bank note.** The combination and matching drills for this lesson live in the question file under the heading `## Combination items`. That heading must match this section name exactly so the paired theory-and-quiz mode links them. Every statement in those items is drawn from the theory notes of modules 2 through 43; the Why line of each item names which statements were true and which were false, so a miss can be sent back to the module that owns the fact.
+
+**Sources.** The MDCB candidate handbook item format description. The question types in the review material (multi-truth and matching items) are the pattern; the facts are the bank's own modules.
