@@ -256,3 +256,23 @@ This quiz checks cathode versus anode, what mA changes versus what kVp changes, 
 ## Production of X-Rays Quiz
 
 This quiz checks bremsstrahlung as a continuum with endpoint equal to kVp, characteristic radiation as discrete shell differences, production efficiency rising with Z and tube voltage, λmin = 12.4/kVp, and HVL1 versus HVL2 for a polyenergetic beam. The traps are a discrete bremsstrahlung spectrum, an efficiency formula fed with kV when it expects volts, homogeneity coefficient inverted, and mA described as a quality control.
+
+## Generator Rectification and What Filtration Changes
+
+**Objectives:** I.2, I.4
+
+The high-voltage generator decides how steady the tube potential is, and the filtration decides what leaves the tube. Items on these two topics are recall with a direction of change attached, so learn the direction for each quantity.
+
+Rectification converts the alternating supply into a potential that always drives electrons from cathode to anode. Half-wave rectification on single-phase power uses only one half of each cycle, so the tube is idle half the time and the potential falls to zero 60 times a second. Full-wave rectification flips the negative half-cycle, giving 120 pulses per second but still a potential that drops to zero between pulses, so the ripple is 100% for both single-phase schemes. Three-phase six-pulse generators overlap three waveforms and the potential never drops below about 87% of the peak (ripple about 13%); twelve-pulse three-phase holds it above about 96% (ripple about 4%). High-frequency generators convert the supply to several kilohertz, rectify and smooth it, and deliver a nearly constant potential with ripple under about 2%; they are small, light, and are what modern CT scanners, simulators and portable units use. Ripple is defined as (Vmax − Vmin)/Vmax. Less ripple means the tube spends more of the exposure near the set kVp, so for the same kVp and mAs the beam has a higher mean energy, a higher output, and a slightly higher HVL, and a shorter exposure time is needed for the same mAs.
+
+Filtration removes the low-energy part of the spectrum that would be absorbed in the patient without reaching the detector. Inherent filtration is the glass or metal envelope, the insulating oil and the window, typically 0.5 to 1 mm aluminum equivalent; added filtration is deliberate aluminum or copper sheet; the total must be at least 2.5 mm Al equivalent above 70 kVp under 21 CFR 1020.30. Adding filtration lowers the number of photons at every energy but removes proportionally more of the soft photons, so the mean energy rises and the HVL increases (beam hardening). The maximum photon energy does not move, because it is set by the kVp. The characteristic lines do not move either, because their energies are fixed by the tungsten shell structure (K-alpha about 59 keV, K-beta about 67 keV); their heights fall along with the rest of the spectrum. Clinically, more filtration means lower patient entrance skin dose, lower subject contrast because the harder beam is less differentially attenuated, and a longer exposure or higher mA to restore detector signal. A lightly filtered diagnostic beam has a mean energy of about one-third of the peak; a heavily filtered or high-kV beam drifts toward about one-half.
+
+Efficiency of bremsstrahlung production rises with target atomic number and with tube potential (roughly 9 × 10⁻¹⁰ × Z × V in volts, as used earlier in this module). At 100 kV in tungsten this is well under 1%, and the remaining 99% of the electron energy appears as heat in the anode, which is the whole reason for rotating anodes, tungsten-rhenium targets and heat-unit ratings. At linac energies the picture inverts: at 6 MV roughly 30 to 50% of the electron energy becomes x-rays, and at 20 MV well over half, so a linac target is thin, water-cooled and does not need to rotate, and the engineering problem becomes the forward-peaked intensity that the flattening filter has to level.
+
+**Traps**
+
+Ripple stated as 50% for full-wave single-phase (it is 100%, only the pulse rate doubles). Filtration said to lower the maximum energy or shift the characteristic lines. Filtration said to increase contrast. Efficiency said to fall with voltage. Rotating anode described as improving efficiency rather than heat handling.
+
+**Sources**
+
+Bushberg, *The Essential Physics of Medical Imaging*, x-ray production and generator chapters. Khan and Gibbons, *The Physics of Radiation Therapy*, production of x-rays chapter. 21 CFR 1020.30 for minimum total filtration.

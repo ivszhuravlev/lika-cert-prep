@@ -206,3 +206,31 @@ Bolus and compensators do not use the hinge-angle formula. Bolus thickness is ch
 - Convert hinge angle to wedge angle with \(90^\circ - \text{hinge}/2\), and recover the 45°/90° and 60°/60° pairs.
 - Estimate dose under an MLC from a stated transmission, and keep that transmission far below a wedge factor.
 - Separate bolus (skin dose, dmax shift), compensator (missing tissue), and partial transmission (a stated fraction) from a wedge.
+
+## Wedge Taxonomy and Electron Skin Collimation
+
+**Objectives:** IV.2, III.7
+
+**What the exam expects:** Name the three wedge families and give one property that belongs to each. Say how the dynamic-wedge factor behaves with field size and why that differs from a physical wedge. List the limits of a dynamic wedge. Know when an electron field needs skin collimation and how thick the lead is.
+
+Three wedge families. An individual physical wedge is a steel or lead wedge for one nominal angle (15, 30, 45, or 60 degrees) mounted externally on the tray by the therapist for each field. It hardens the beam, scatters photons outside the field, and has a measured wedge factor that changes little with field size, rising slightly as the field grows because more wedge scatter reaches the central axis. A universal, or motorized, wedge is a single 60 degree wedge permanently housed inside the treatment head above the collimator jaws (the upper wedge), driven in and out by a motor; intermediate effective angles are produced by delivering part of the monitor units open and the rest through the 60 degree wedge, with the planning system setting the two weights. A dynamic (Varian enhanced dynamic wedge) or virtual (Siemens) wedge has no metal in the beam: one collimator jaw sweeps across the field during beam-on, so points near the fixed jaw are exposed for the whole delivery (the toe, the hot side) and points near the moving jaw's starting position are exposed only briefly (the heel). The angle is a software setting, any value up to 60 degrees is available, the beam is not hardened, and the scatter outside the field is lower than with metal.
+
+Dynamic-wedge factor and field size. Because the dynamic wedge is a timing pattern rather than an attenuator, its wedge factor depends strongly on the field dimension along the wedge direction. As the field grows the jaw must sweep farther and the central axis is covered for a larger share of the monitor units, so the central-axis dose per monitor unit falls: the enhanced-dynamic-wedge factor decreases substantially from a 10 cm to a 20 cm field. A physical wedge factor moves the other way and by only a few percent. The bank uses this direction (dynamic factor falls as the field grows; physical factor rises slightly) because it follows from the mechanism and matches the vendor tables; a source that says only "field-size dependent" gives no direction, and a statement that the dynamic-wedge factor rises with field size reverses the mechanism.
+
+Dynamic-wedge limits. There is a minimum field size in the wedge direction (the moving jaw must have room to sweep and must stop short of the fixed jaw), a maximum field size in that direction set by the jaw travel, a minimum number of monitor units per field so the sweep can be controlled, and the wedge direction is fixed to the moving-jaw axis, so the collimator is rotated to orient the wedge rather than turning a piece of metal. A dynamic wedge still needs its own wedge factor in the monitor-unit calculation, and it needs more monitor units than an open field.
+
+Electron skin collimation. The electron penumbra widens as the air gap between the cutout and the skin grows, because electrons scatter laterally in the air. When the applicator end sits well above an irregular surface (the nose, the ear, the orbit, an extended-SSD setup), the field edge on the skin is blurred and nearby critical structures such as the lens are exposed. Skin collimation restores a sharp edge: a lead or Cerrobend mask cut to the field outline and placed directly on the skin, so the edge is defined at the surface instead of at the applicator. The lead thickness rule is about E/2 millimeters for the beam energy in MeV (Cerrobend about 1.2 times thicker), with a little extra for safety; too thin a shield passes a bremsstrahlung and electron leakage that defeats the purpose. Skin collimation does not change the output factor the way a changed cutout does; it is an edge-defining device.
+
+**Formula**
+
+Lead thickness for electron shielding ≈ E (MeV) / 2 millimeters. For a 12 MeV beam, 12 / 2 = 6 mm of lead; Cerrobend about 1.2 × 6 = 7 mm. Check: 6 mm of lead stops electrons whose practical range in water is about E/2 = 6 cm, because lead is roughly ten times denser.
+
+**Wrong turns**
+
+- Calling the motorized wedge a dynamic wedge. The motorized wedge is metal; the dynamic wedge is a moving jaw.
+- Treating the dynamic-wedge factor as 1.0 because there is no metal. The central axis is covered for part of the delivery.
+- Saying the dynamic-wedge factor is independent of field size, or that it rises as the field grows.
+- Using a dynamic wedge on a field too small or too large in the wedge direction, or with too few monitor units.
+- Adding bolus to sharpen an electron edge. Bolus moves dmax; skin collimation sharpens the edge.
+
+**Sources.** Khan and Gibbons, wedge filters (physical, motorized, dynamic) and electron-beam shielding. Vendor enhanced-dynamic-wedge documentation for the field-size dependence and the delivery limits. AAPM TG-25 and TG-70 for electron shielding thickness.

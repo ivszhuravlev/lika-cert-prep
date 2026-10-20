@@ -675,3 +675,138 @@ with source 2 the one that starts stronger and decays faster. With 10 mCi of I-1
 **Traps.** A stem that gives skin-to-balloon distance in millimeters is asking whether the case is plannable (7 mm comfortable, 5 mm with a multi-lumen device, less than that usually not). A stem that gives seeds outside the gland on the post-implant CT is asking about the 20% source-strength rule, not the dose rule.
 
 **Sources.** AAPM TG-56, TG-59, TG-64, TG-137, and TG-128 for prostate and HDR practice; NSABP B-39 and ABS guidance for the balloon and strut numbers; ICRU 38 and ICRU 89 for the GYN points; 10 CFR 35.3045, 35.633, 35.643 and 49 CFR 172 for the regulatory figures.
+
+## Applicator Families, Loading Patterns, and Implant Classification
+
+**Objectives:** V.2, V.3, V.1
+
+**What the exam expects:** Sort an implant into one of four classes by where the sources sit, name the GYN applicators and what makes each one different, recognize the radium-era tandem loadings by their nicknames, apply the Manchester-era organ limits as fractions of the point A dose, and know the eye-plaque and prostate-candidacy facts that still appear as recall items. Two source-physics facts ride along: low-energy seeds are more anisotropic than Ir-192, and the Pd-103 prescription changed with the 1999 calibration standard.
+
+**Four classes of implant.** Interstitial means the sources are inserted into the tissue itself: prostate seeds, Syed-template needles into the parametria, Ir-192 catheters through a breast or a tongue. Intracavitary means the sources sit in a natural body cavity next to the tumor without piercing tissue: tandem and ovoids in the uterus and vaginal fornices, a vaginal cylinder, a ring applicator, a breast balloon in the surgical cavity. Intraluminal (endoluminal) means a single catheter runs down a tubular organ: endobronchial, esophageal, or biliary HDR. Surface (mold or plaque) means the sources sit on the skin or on an organ surface: a Freiburg flap, a Leipzig cup, an episcleral eye plaque. The class decides the geometry of the dose: an interstitial implant is dosed from inside the volume, so a Manchester or Paris distribution rule applies; an intraluminal line is dosed radially from one axis, so the dose is prescribed at a fixed distance (usually 1 cm) from the catheter axis.
+
+**Why end dwells are weighted up in a line.** A dwell in the middle of a long catheter is surrounded by neighbors, and their contributions add up; the first and last dwells have neighbors on one side only. With equal dwell times the isodose tapers at both ends into a cigar shape and the reference dose does not reach the ends of the target. The planner (or geometric optimization) gives the end dwells longer times, so the isodose becomes a cylinder of roughly constant radius along the treated length. Reversing the weighting, heavy in the middle, makes the taper worse.
+
+**Manchester-era organ limits.** Before volumetric D2cc reporting, bladder and rectal doses were read at the ICRU 38 points and compared with the point A dose as a fraction: bladder at or below about 80% of point A, rectum at or below about 70–80% of point A. The limits are checks on the applicator geometry, not prescription points. A bladder point at 90% of point A means the ovoids are too close to the bladder or the packing is inadequate; the remedy is repacking or re-insertion, not re-prescribing. This bank's volumetric correlates (rectum D2cc near 65–75 Gy EQD2, bladder D2cc near 80–90 Gy EQD2) are the modern equivalents and appear in the planning lesson above.
+
+**Largest ovoids, longest tandem.** The intracavitary rule is to use the largest ovoids and the longest tandem that the anatomy accepts. Larger ovoids move the vaginal mucosa farther from the sources, so for the same point A dose the mucosal surface dose is lower, and the pear-shaped isodose is wider so it covers more of the parametria. A longer tandem reaches the fundus and treats the whole uterine canal. Small ovoids squeezed into a wide vagina are a geometry error even when point A reads correctly.
+
+**Applicator names.** The Fletcher-Suit (Fletcher-Suit-Delclos) applicator is the classical tandem-and-ovoid set: tandems come with 15, 30, and 45 degree curvatures to follow the uterine flexion, the ovoids (colpostats) are cylindrical with removable caps that enlarge their diameter, and the ovoids carry internal tungsten shields on the bladder and rectal sides that cut the dose to those organs by roughly 10–25% at the reference points. The ring applicator fixes the ovoid equivalent as a ring around the cervix at a set angle to the tandem; its geometry is reproducible from fraction to fraction, which is why it is popular for HDR, but the ring itself is unshielded, so organ sparing comes from dwell weighting rather than from tungsten, and the ring dwell positions nearest the tandem are usually left inactive. The Henschke applicator has hemispherical ovoids rigidly attached to the tandem with the ovoid axes parallel to the tandem, a fixed geometry that was easy to afterload. Heyman capsules (and the Simon-Heyman afterloading version) are small capsules packed into a large uterine cavity for endometrial (uterine corpus) carcinoma, where a single tandem cannot cover the whole wall; many capsules fill the cavity and the loading is counted in capsule-hours of radium or its equivalent.
+
+**Radium-era tandem loadings.** Tandems were loaded with radium or Cs-137 tubes in three recognized patterns, written as milligrams from fundus to os. Uniform loading is the same strength in every position, for example 10-10-10 mg. Indian club loading puts the heaviest source at the fundus and lighter ones below, for example 15-10-10 mg, so that the fundal end of the pear is fuller. Dumbbell loading puts heavier sources at both ends with a lighter middle, for example 15-10-15 mg, when both the fundus and the region near the os need more dose. The nicknames describe the shape of the activity profile, not the applicator. HDR dwell optimization reproduces whichever pattern the plan needs.
+
+**Eye plaques.** The COMS (Collaborative Ocular Melanoma Study) plaque is a gold-alloy shell, 12–20 mm in diameter, with a Silastic insert that holds I-125 (or Pd-103) seeds in a fixed pattern; the gold shields the orbit and the dose is prescribed to the tumor apex, 85 Gy over several days, as the planning lesson lists. Ru-106 plaques are beta emitters: a thin ruthenium layer sealed in silver, with a steep fall-off that limits them to thinner tumors, roughly 5–6 mm apical height or less, where the shallow range is an advantage because the dose to the opposite retina and optic nerve is small. A thick tumor needs the photon plaque; a thin one can use either.
+
+**Prostate seed candidacy.** Pubic-arch interference means the pubic bone blocks the anterior-lateral needle paths on the transperineal template, so part of a large gland cannot be reached; it is checked on the volume study (and sometimes CT) before the implant. Glands larger than about 50–60 cm³ are the usual candidates for a few months of hormonal (androgen-deprivation) therapy first, which shrinks the gland by roughly a third and often clears the arch. A large gland also needs more seeds and more needles, so the dosimetric and surgical arguments agree.
+
+**Anisotropy by energy.** The anisotropy function F and the anisotropy factor are farther from 1 for I-125 and Pd-103 than for Ir-192. The low-energy photons (about 21–28 keV) are heavily attenuated by the titanium end welds and by self-absorption in the seed along its axis, so the dose along the seed axis is markedly lower than on the transverse axis; typical anisotropy factors are around 0.93–0.95 for seeds against about 0.98 for Ir-192, whose 380 keV photons pass the capsule ends with little loss. In a seed implant the seeds point in all directions, which is one reason an anisotropy factor (a 1D average) was once accepted; TG-43U1 recommends the full 2D function when orientations are known.
+
+**Pd-103 dose convention.** The monotherapy prescription for Pd-103 is 125 Gy. Before 1999 the same clinical treatment was written as 115 Gy; the number rose when NIST introduced the 1999 air-kerma-strength standard for low-energy seeds and TG-43 parameters were revised, so the same seeds delivered the same dose but the calculated value came out about 8% higher. A 115 Gy figure in an older text is the pre-1999 convention, not a lower dose. The I-125 figure (145 Gy) was likewise 160 Gy in pre-TG-43 (1995) dosimetry.
+
+**Wrong turns**
+
+- Calling a vaginal cylinder interstitial, or a breast balloon interstitial. Nothing is pierced; both are intracavitary.
+- Weighting the middle dwells of an endobronchial line more heavily than the ends.
+- Treating the 80% bladder rule as a prescription point rather than a check on the insertion.
+- Attributing tungsten shielding to the ring applicator; the shields belong to the Fletcher ovoids.
+- Reading "Indian club" as heavy at the os; the club head is at the fundus.
+- Assigning a Ru-106 plaque to a 10 mm thick melanoma.
+- Expecting Ir-192 to be more anisotropic than I-125 because it is a longer source; the energy effect dominates.
+
+**Traps.** When a stem lists "15, 30, 45 degrees" it is describing Fletcher tandem curvatures. When it says "fixed geometry, reproducible, unshielded" it is describing the ring. When it says "capsules packed into an enlarged uterus" it is Heyman.
+
+**Sources.** Khan and Gibbons, intracavitary applicators and radium loadings; Fletcher's textbook descriptions as summarized in standard reviews; COMS protocol and ABS eye-plaque guidance; AAPM TG-43U1 for anisotropy and the 1999 NIST standard; ABS prostate brachytherapy guidance for candidacy.
+
+## Patient Exposure Rate, Timer QA, and Independent Plan Checks
+
+**Objectives:** V.6, V.4, V.3
+
+**What the exam expects:** Compute the exposure rate at a distance from a patient who contains sources, including the body's own attenuation; read a timer linearity test and extract the end effect; name the security and interlock features of an HDR suite; run an inverse permanent-implant calculation (what initial dose rate delivers a prescribed total); compute milligram-hours for a temporary implant; and state how a brachytherapy planning system is checked against TG-43 tables.
+
+**Exposure rate from a patient with body transmission.** The point-source formula of the exposure-rate lesson gains one factor: the fraction of the radiation that gets through the patient's tissue on the way out.
+
+\[
+X = \frac{\Gamma A}{d^2} \times T
+\]
+
+- \(X\): exposure rate at the point of interest
+- \(\Gamma\): exposure rate constant (R cm² per mCi per h, or per mg-Ra-eq per h if the strength is in milligrams)
+- \(A\): total source strength in the patient, in the unit \(\Gamma\) expects
+- \(d\): distance from the implant, in cm when \(\Gamma\) is in cm²
+- \(T\): body transmission factor (typically about 0.5–0.7 for a pelvic Cs-137 or Ir-192 implant at 1 m), given in the stem
+
+### Worked example: exposure at 1 m from an LDR GYN patient
+
+**Given.** A tandem-and-ovoid insertion holds a total of 60 mg-Ra-eq of Cs-137. \(\Gamma_{Ra} = 8.25\) R cm² mg⁻¹ h⁻¹. Body transmission \(T = 0.60\). Distance 1.0 m.
+
+**Substitute.** \(d = 100\) cm. Unshielded point-source rate \(= 8.25 \times 60 / 100^2 = 495 / 10000 = 0.0495\) R/h \(= 49.5\) mR/h. With transmission: \(49.5 \times 0.60 = 29.7\) mR/h.
+
+**Check.** \(29.7 / 0.60 = 49.5\), and \(49.5 \times 10000 / 60 = 8250 = 8.25 \times 1000\), so the constant was applied in the right unit. Halving the distance to 50 cm would give \(29.7 \times 4 = 119\) mR/h.
+
+**Result means.** A visitor at 1 m receives about 30 mR/h, not 50, because the pelvis absorbs 40% of the photons. Dividing by \(T\) (82.5 mR/h) is the sign error; forgetting \(T\) overstates the dose rate and over-restricts visitors. Because the strength is in mg-Ra-eq, the radium constant is the right one even though the nuclide is cesium.
+
+**Timer linearity and end effect.** Dose should be proportional to dwell time. The test exposes a chamber or well for several set times and plots reading against time. A straight line proves linearity (the slope is the dose rate); the line does not pass through the origin because the source delivers dose while it travels to and from the dwell position. That intercept is the end effect, also called the transit dose, and it is expressed as the equivalent number of seconds of dwell. Two readings are enough: slope \(= (R_2 - R_1)/(t_2 - t_1)\), intercept \(= R_1 - \text{slope} \times t_1\), end effect in seconds \(= \text{intercept}/\text{slope}\). The acceptance figure for timer accuracy is about 1% or 1 s; a transit dose of a fraction of a second per dwell matters for short dwells and many positions and the planning system or the afterloader should account for it.
+
+### Worked example: end effect from two readings
+
+**Given.** Well-chamber readings of 41.0 units for a 20 s dwell and 121.0 units for a 60 s dwell.
+
+**Substitute.** Slope \(= (121.0 - 41.0)/(60 - 20) = 80.0/40 = 2.00\) units per second. Intercept \(= 41.0 - 2.00 \times 20 = 41.0 - 40.0 = 1.0\) unit. End effect \(= 1.0 / 2.00 = 0.50\) s.
+
+**Check.** \(2.00 \times 60 + 1.0 = 121.0\), the second reading. A 0.5 s end effect on a 20 s dwell is 2.5% of the dose; on a 2 s dwell it would be 25%, which is why many short dwells need the correction.
+
+**Result means.** Each time the source travels out and back it delivers the equivalent of half a second of dwell. Reporting 1.0 s (the intercept in reading units, not converted) or 2.0 s (the slope) is the common slip.
+
+**Security and interlocks.** An HDR afterloader is secured against unauthorized use by two independent measures, for example a removable console key plus an operator password or access code, or a key-controlled console plus a locked treatment room. The console and the room are secured whenever the unit is unattended. The treatment room door carries an interlock that retracts the source if the door opens and prevents the source from leaving the safe unless the door is closed; after an interlock interruption the unit may be restarted only from the console. When an imaging x-ray unit (C-arm, simulator, or CT) shares the room, an interlock prevents the x-ray tube and the HDR source from being exposed at the same time, so that nobody is in the room for imaging while the source is out and the area radiation monitor reading is not confused by x-ray scatter. A viewing system, an intercom, an independent area radiation monitor with its own power backup, and a visible source-on indicator at the door complete the set.
+
+**Planning-system check against TG-43 tables.** When a brachytherapy TPS is commissioned, and whenever a source model is added, the dose rate it computes at a set of points around a single source is compared with hand values from the published TG-43 (TG-43U1) consensus tables for that source model. The usual acceptance is about 2% at individual points (tighter on the transverse axis, looser along the source axis where the anisotropy table is coarse) and about 5% for the overall agreement of a multi-source plan or for points very close to the source. A larger difference means a wrong source model, a wrong \(\Lambda\), a geometry function set to point when the table is for a line, or a unit mix-up between U and mCi, and treatment waits until it is explained.
+
+### Worked example: single-point TPS check
+
+**Given.** The TPS reports 11.40 cGy/h at 2 cm on the transverse axis; the hand calculation from the TG-43 table gives 11.15 cGy/h.
+
+**Substitute.** Difference \(= 11.40 - 11.15 = 0.25\) cGy/h. Percent \(= 0.25 / 11.15 = 0.0224 = 2.2\%\).
+
+**Check.** \(11.15 \times 1.022 = 11.40\). The per-point tolerance is about 2%, so 2.2% is outside it and the \(g(r)\) value at 2 cm is the first thing to compare.
+
+**Inverse permanent-implant calculation.** The forward formula, \(D = \dot{D}_0 \times 1.443 \times T_{1/2}\), is inverted to find the initial dose rate that delivers a prescribed total:
+
+\[
+\dot{D}_0 = \frac{D}{1.443 \times T_{1/2} \times 24}
+\]
+
+with \(T_{1/2}\) in days, the 24 converting to hours, and \(\dot{D}_0\) in cGy/h when \(D\) is in cGy. Some texts write 1.44 for 1.443; the difference is 0.2% and either is accepted.
+
+### Worked example: I-125 at 145 Gy
+
+**Given.** I-125 monotherapy, 145 Gy, \(T_{1/2} = 59.4\) days.
+
+**Substitute.** Mean life in hours \(= 1.443 \times 59.4 \times 24\). \(1.443 \times 59.4 = 85.71\) d. \(85.71 \times 24 = 2057\) h. \(\dot{D}_0 = 14500 / 2057 = 7.05\) cGy/h.
+
+**Check.** \(7.05 \times 2057 = 14502\) cGy. Omitting 1.443 gives \(14500 / 1425.6 = 10.2\) cGy/h, which would overdose by 44% if the seeds were ordered to that rate. For Pd-103 at 125 Gy the same arithmetic gives \(1.443 \times 17.0 \times 24 = 588.7\) h and \(12500 / 588.7 = 21.2\) cGy/h, three times the I-125 rate, as the shorter half-life requires.
+
+**Result means.** An I-125 implant prescribed to 145 Gy must start at about 7 cGy/h at the prescription isodose. That number drives the total activity ordered.
+
+**Milligram-hours for a temporary implant.** The integrated strength of a temporary LDR implant is the total source strength multiplied by the time in place, in mg-Ra-eq-hours (mg-h). Manchester intracavitary tables were written in mg-h: a classical radium cervix insertion was about 7000–8000 mg-h in two insertions. The quantity is the ancestor of TRAK (reference air-kerma rate times time); since 1 mg-Ra-eq = 7.227 U, mg-h times 7.227 gives the TRAK in cGy cm² (U-hours), the same integrated strength in modern units.
+
+### Worked example: mg-h
+
+**Given.** Tandem loaded 15-10-10 mg-Ra-eq (Indian club) plus two ovoids of 20 mg-Ra-eq each, in place for 48 hours.
+
+**Substitute.** Total strength \(= 15 + 10 + 10 + 20 + 20 = 75\) mg-Ra-eq. \(75 \times 48 = 3600\) mg-h.
+
+**Check.** \(3600 / 75 = 48\) h. Removing the implant 6 hours early would cut it to \(75 \times 42 = 3150\) mg-h, a 12.5% shortfall. Decay of Cs-137 over two days is negligible, so no decay factor is needed here; for Ir-192 ribbons the finite-time integral of the decay lesson would apply.
+
+**Result means.** The insertion is 3600 mg-h. If the order was 3600 mg-h and the loading changed to 60 mg-Ra-eq, the time would become 60 hours.
+
+**Wrong turns**
+
+- Dividing by the transmission factor, or dropping it, in the patient exposure-rate calculation.
+- Reading the end effect as the intercept in dose units without dividing by the dose rate.
+- Treating the door interlock as the security measure; security is the key-and-code pair, the interlock is a radiation-safety control.
+- Using 5% as the per-point tolerance against TG-43 tables; per point is about 2%.
+- Inverting the permanent-implant formula without 1.443, or with the half-life in days against a dose rate in cGy/h.
+- Multiplying mg-Ra-eq by time in days when the tables are in hours.
+
+**Traps.** "Patient contains" plus "transmission" means multiply by \(T\). "Readings at two dwell times" means slope and intercept. "Total dose prescribed, find the initial dose rate" means divide by the mean life in hours.
+
+**Sources.** Khan and Gibbons, exposure around implanted patients and milligram-hours; AAPM TG-56 and TG-59 for HDR timer, transit-dose, interlock, and security practice; 10 CFR 35.610 and 35.615 for the security and interlock requirements; AAPM TG-43U1 and TG-56 for the planning-system comparison tolerances.

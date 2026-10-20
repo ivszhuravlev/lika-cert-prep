@@ -584,3 +584,45 @@ R_p \approx \frac{E}{2}
 **Traps.** Write the three depths (90%, 50%, \(R_p\)) in order on the page. A structure between \(R_{50}\) and \(R_p\) is in the falloff.
 
 **Sources.** Khan and Gibbons; TG-25 and TG-70 for \(E_0 = 2.33 R_{50}\).
+
+## Set-Up Conversions and Parallel-Opposed Pair Arithmetic
+
+**Objectives:** IV.3, IV.1
+
+**What the exam expects:** Five small conversions that appear inside bigger MU problems. (1) Turn a circular field into a square for a table lookup. (2) Estimate the dose effect of a depth error without a table. (3) Measure an electron cut-out factor and put it into the MU equation. (4) Convert between SSD and SAD monitor units for the same midplane point, in both directions. (5) Add the entrance and exit contributions of a parallel-opposed pair at dmax and at midplane.
+
+**Circle to square.** The square with the same area as a circle of diameter \(d\) has side \(s = d\sqrt{\pi/4} = 0.886\,d\). A 12 cm circle becomes a 10.6 cm square; reversed, an 8 cm square matches a 9.0 cm circle (\(8/0.886\)). This is an equal-area statement, not an equal-perimeter one; dividing the circumference by four gives the wrong answer. Equivalent squares in general, whether from \(4A/P\) or from a table, are trusted only for rectangles whose long side is no more than about twice the short side. A 5 by 25 cm field has a 4A/P square of 8.3 cm, but at an elongation of 5 the scatter is not that of an 8.3 cm square; use measured elongated-field factors or a sector integration.
+
+**Depth-error rule.** Beyond dmax a 6 MV beam loses about 2 to 3 percent of dose per centimeter of water; 10 MV loses closer to 2 percent and 18 MV about 1.5 to 2 percent. A point found 1 cm deeper than planned at 6 MV therefore receives about 2 to 3 percent less dose. With a table the exact figure is the TMR ratio: 200 cGy planned with TMR 0.780 at 10 cm becomes \(200 \times 0.757/0.780 = 194.1\) cGy if the point is really at 11 cm with TMR 0.757. The change is relative to the planned TMR, not to 1.000, so subtracting the raw TMR difference as a percentage is wrong.
+
+**Electron cut-out factor.** Measure at dmax, same MU and SSD, with the open cone and then with the insert; the factor is the insert reading divided by the open-cone reading (21.30 nC open and 20.46 nC with the insert give 0.961). It then sits in the denominator of the MU equation alongside the cone factor and the prescription isodose fraction:
+
+\[
+\text{MU} = \frac{D}{\dot D_{\text{ref}} \times \text{cone} \times \text{cut-out} \times (\%\text{IDL}/100)}
+\qquad
+\frac{200}{1.000 \times 1.000 \times 0.961 \times 0.90} = 231.2 \text{ MU}
+\]
+
+Dropping the cut-out factor (222.2 MU) underdoses by the same 4 percent the insert removed. Small inserts also shift dmax shallower and shorten the range, so the factor must be measured at the dmax of the cut-out field when the insert is much smaller than the cone.
+
+**SSD versus SAD for the same midplane point.** The depth, and therefore the TMR, is identical; only the distance from the source to the point changes. With the skin at 100 cm the midplane of a 20 cm separation sits at 110 cm instead of 100 cm:
+
+\[
+\frac{\text{MU}_{\text{SSD}}}{\text{MU}_{\text{SAD}}} = \left(\frac{\text{SAD} + d}{\text{SAD}}\right)^2 = \left(\frac{110}{100}\right)^2 = 1.21
+\]
+
+So 150 MU per field isocentrically becomes about 182 MU per field at SSD. The mirror case is a set-up error: MU calculated isocentrically but delivered with the skin at 100 cm put the point at 110 cm and deliver \((100/110)^2 = 0.826\) of the planned dose, 165.3 cGy for a 200 cGy plan, a 17 percent underdose. The direction check is simple: farther from the source means less dose per MU, so an SSD set-up always needs more MU and an SSD mis-set-up of an SAD plan always underdoses.
+
+**Parallel-opposed pair.** Let each beam deliver 100 percent at its own dmax. The dmax point of one beam also receives the other beam's exit dose, so its total is \(100 + \text{PDD}(\text{sep} - d_{\max})\). The midplane receives \(2 \times \text{PDD}(\text{sep}/2)\). For a 16 cm separation at 6 MV with PDD 78 percent at 8 cm and 60 percent at 14.5 cm, the dmax point gets 160 percent and the midplane 156 percent of the per-beam dmax dose, a hot spot of 2.6 percent. For a thin 10 cm site at 15 MV with midplane PDD 93 percent, the midplane gets 186 percent of the per-beam dmax dose, which is the same as 93 percent of the two-beam total. The ratio \((100 + \text{exit PDD})/(2 \times \text{midplane PDD})\) grows as the patient gets thicker and as the energy drops; that is why large separations are treated with higher energies or with more than two fields.
+
+**Common mistakes**
+
+- Dividing by 0.886 when going from circle to square, or multiplying when going from square to circle.
+- Inverting the TMR ratio so a deeper point appears to receive more dose.
+- Dividing the open-cone reading by the cut-out reading, giving a factor above one.
+- Forgetting to square the distance ratio, or using the full separation instead of the midplane depth as the extra distance.
+- Adding 100 and the exit PDD to answer a midplane question, or doubling the midplane PDD to answer a dmax question.
+
+**Traps.** Read whether the point is at dmax or at midplane before adding anything. For the SSD-SAD pair of questions, write down where the point is from the source in each set-up (100 cm versus 100 + depth) and let inverse square do the rest.
+
+**Sources.** Khan and Gibbons on equivalent squares and parallel-opposed pairs; TG-25 and TG-70 for electron cut-out factor measurement.

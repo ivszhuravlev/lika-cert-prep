@@ -183,7 +183,7 @@ Brachial plexus, conventional fractionation. Dmax at or below 66 Gy, endpoint br
 
 Femoral heads. V50 below 5%, with Dmax below 50 Gy as the stricter alternative some templates write instead; the endpoint is femoral head necrosis and fracture. Source: common planning practice and department templates; the RTOG prostate protocols (0126, 0415 style) print V50 below 10%, so apply whichever figure the stem gives and use V50 below 5% when it is silent.
 
-Lens. Dmax below 7–10 Gy depending on the source: Emami TD5/5 is 10 Gy, most IMRT templates write 5–7 Gy, and QUANTEC-era teaching cards often say 6 Gy; the detectable-opacity threshold taught for radiation protection is about 1–2 Gy, which is not a planning constraint. Source: Emami and common planning practice, not QUANTEC; this bank uses Dmax below 7 Gy when a stem is silent and accepts any figure inside 5–10 Gy that a stem prints.
+Lens. Dmax below 7–10 Gy depending on the source: Emami TD5/5 is 10 Gy, most IMRT templates write 5–7 Gy, and QUANTEC-era teaching cards often say 6 Gy; the detectable-opacity threshold taught for radiation protection is about 0.5 Gy (ICRP 2011; older texts said 2 Gy acute, 5 Gy fractionated), which is not a planning constraint. Source: Emami and common planning practice, not QUANTEC; this bank uses Dmax below 7 Gy when a stem is silent and accepts any figure inside 5–10 Gy that a stem prints.
 
 Eye, globe and retina. Retina Dmax below 45 Gy and globe Dmax below 50 Gy, endpoint retinopathy and blindness. Source: Emami retina TD5/5 of 45 Gy and RTOG head-and-neck template rows of 45–50 Gy; not a QUANTEC row.
 
@@ -222,3 +222,35 @@ Spinal cord, stereotactic, QUANTEC line. QUANTEC's cord paper places less than 1
 **Traps.** Write the fractionation and the source the stem names on the first line. The three QUANTEC rows here are constrictors, the kidney volume bins, and the stereotactic cord line; every other row is an RTOG protocol or template figure, and when a stem prints a different template number, the stem wins. "Ipsilateral" and "bilateral" lung are different rows with different figures.
 
 **Sources.** QUANTEC organ papers (larynx and pharynx, kidney, spinal cord), IJROBP 2010. RTOG 1005 and the RTOG head-and-neck protocol family for the mandible, plexus, PRV, and breast template rows. Emami et al. 1991 for the lens and retina TD5/5 figures. Darby et al. 2013 for the mean-heart-dose relation. AAPM TG-101 Table III for the stereotactic cord cells quoted for comparison. The femoral head V50 below 5% is a department-template figure; RTOG prostate protocols print 10%.
+
+## Tissue Thresholds and Stereotactic Rows: Gonads, Ribs, Brainstem, Lung, Lens, Cord
+
+**Objectives:** III.8
+
+**What the exam expects:** Two kinds of number sit side by side on this module and items mix them deliberately. Tissue-reaction thresholds (the dose at which an effect such as sterility or cataract begins to appear) come from radiobiology and ICRP; planning constraints (the DVH line a protocol scores) come from QUANTEC, TG-101, and RTOG protocols. The rows below add the thresholds and stereotactic rows that the earlier lessons left out, and each says which document owns its figure, because a stem that names QUANTEC cannot be answered with a TG-101 cell or an RTOG line.
+
+**Gonads (thresholds, not planning rows).** Testes: temporary oligospermia or azoospermia begins at about 0.15 Gy, and doses up to about 1 Gy give temporary sterility with recovery that takes months to a few years; permanent sterility follows about 3.5 to 6 Gy, and fractionation lowers rather than raises that threshold because spermatogonial stem cells are killed cumulatively. Leydig (hormone) cells need about 15 to 20 Gy or more, so a man can be sterile and hormonally intact. Ovaries: oocytes are a fixed, non-renewing pool, so permanent failure is age dependent, taught as roughly 5 to 10 Gy fractionated in younger women and falling to 2 to 3 Gy near menopause; a single dose of a few gray can do it at any adult age, and about 20 Gy sterilises essentially everyone. Source: Hall and Giaccia, ICRP 118; these are thresholds for counselling and scatter estimates, not DVH rows.
+
+**Ribs and chest wall.** Conventional fractionation: rib fracture is uncommon below about 50 Gy and rises above it, a few percent in the 50 to 60 Gy region where tangents or an electron boost put full dose on bone. SBRT: the RTOG 0813 and 0915 lung protocols write chest wall V30 below 30 cc, scored on the volume above 30 Gy; the same 30 Gy label on a conventional plan is below any fracture threshold. Example: V30 of 42 cc fails by 12 cc regardless of the rib maximum. Source: RTOG 0813 and 0915 for the SBRT row; the breast and chest-wall late-effects literature for the 50 Gy figure.
+
+**Brainstem, single-fraction radiosurgery.** TG-101 Table III: point maximum (0.035 cc) 15 Gy, with 10 Gy to 0.5 cc, brainstem excluding medulla. QUANTEC brainstem paper: a radiosurgery maximum of 12.5 Gy for under about 5 percent risk, which many programs and most teaching cards use as the conservative figure. A point dose of 13.5 Gy is therefore over the QUANTEC figure by 1.0 Gy and under the TG-101 point maximum by 1.5 Gy; the stem's attribution decides. This bank keys 15 Gy when the stem says TG-101 and 12.5 Gy when it says QUANTEC or "conservative."
+
+**Lung V20 across fractionation.** Three rows carry the same label and very different biology. Conventional (about 2 Gy per fraction): QUANTEC total-lung V20 at or below 30 percent for about 20 percent pneumonitis; the RTOG 0617 dose-escalation protocol allowed up to 37 percent. SBRT (three to five fractions): RTOG 0813 and 0915 write total-lung V20 below 10 percent, alongside the TG-101 critical-volume cells (1,500 cc under 12.5 Gy and 1,000 cc under 13.5 Gy in five fractions). Example: V20 of 12 percent fails an SBRT plan by 2 points and would pass a conventional plan with 18 points to spare. Ranked most permissive to most restrictive: 0617 at 37, QUANTEC at 30, SBRT at 10.
+
+**Lens: threshold versus tolerance versus constraint.** ICRP 2011 cataract threshold: about 0.5 Gy, acute or protracted. Legacy teaching pair: 2 Gy acute and 5 Gy fractionated, and the 5 Gy figure is what older items key as the lens "tolerance"; treat it as historical. Planning constraint: Dmax below 7 Gy in this bank when a stem is silent, inside the 5 to 10 Gy range of Emami and department templates (the earlier lesson has the detail). A lens at 4 Gy can pass a plan while sitting far above the cataract threshold; the two numbers answer different questions.
+
+**Spinal cord, stereotactic: who owns which number.** QUANTEC's cord paper gives 13 Gy in one fraction and 20 Gy in three fractions (under about 1 percent myelopathy) and stops there; it has no five-fraction line. TG-101 Table III gives point maxima (0.035 cc) of 14, 21.9, and 30 Gy for one, three, and five fractions, with 10, 18, and 23 Gy to 0.35 cc. A stem that says "according to QUANTEC" and asks about five fractions is mis-attributed; the only five-fraction cord row is TG-101's 30 Gy, and a 28 Gy point passes it by 2 Gy. The earlier constraint lesson has the one- and three-fraction comparison worked.
+
+**Wrong turns**
+
+- Reading 0.3 Gy to the testes as permanent sterility; permanent needs 3.5 to 6 Gy.
+- Giving one ovarian threshold for every age.
+- Scoring an SBRT chest wall on the conventional 50 Gy fracture figure, or forbidding any 30 Gy to chest wall.
+- Keying brainstem radiosurgery at 12.5 Gy when the stem says TG-101, or at 15 Gy when it says QUANTEC.
+- Passing an SBRT lung V20 of 12 percent against the QUANTEC 30 percent row.
+- Reporting the legacy 5 Gy fractionated lens figure as the current cataract threshold.
+- Citing a QUANTEC five-fraction cord line; there is none.
+
+**Traps.** First line: is this a tissue-reaction threshold or a planning constraint? Second line: what fractionation? Third line: which document does the stem name? Only then compare the number.
+
+**Sources.** Hall and Giaccia, Radiobiology for the Radiologist, and ICRP Publication 118 for gonadal and lens thresholds; ICRP 2011 statement on tissue reactions; QUANTEC brainstem and spinal-cord papers (IJROBP 2010); AAPM TG-101 Table III; RTOG 0813, 0915, and 0617 for the lung and chest-wall rows; Emami et al. 1991 for the lens TD5/5.

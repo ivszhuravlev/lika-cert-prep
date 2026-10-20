@@ -243,3 +243,23 @@ Describing FFF as a harder beam. Quoting a higher PDD for FFF. Saying FFF lowers
 **Sources**
 
 Khan and Gibbons, *The Physics of Radiation Therapy*. AAPM TG-51 addendum for FFF reference dosimetry and recombination. Vendor commissioning data for the 1400/2400 MU/min dose rates. Public blueprint I.3 and I.5.
+
+## Choosing a Skin Beam and Surface Dose Numbers
+
+**Objectives:** I.3
+
+Skin and very superficial lesions can be treated with low-energy x-rays or with electrons, and the exam asks you to compare them on surface dose, depth of fall-off and dose to underlying bone.
+
+Superficial x-rays (about 50 to 150 kVp, HVL of a few millimeters of aluminum) and orthovoltage x-rays (about 150 to 500 kVp, HVL of a few millimeters of copper) have their maximum dose at the surface: the percent surface dose is 100% because there is no buildup region at these energies. The depth dose falls off by attenuation and inverse square, slowly enough that a 2 cm thick lesion is still well covered by orthovoltage, but there is no sharp end to the beam, so tissue well beyond the target keeps receiving dose. Because the photoelectric effect dominates below a few hundred keV, bone absorbs several times more dose per unit mass than soft tissue (the f-factor for bone is up to about 4 at 50 keV against 1 for water), so an orthovoltage field over the scalp or the shin deposits far more dose in bone than the prescription suggests. These beams are prescribed at the surface (Dmax equals the surface dose), they need no bolus, and the small cones give a sharp field edge.
+
+Clinical electron beams (6 to 20 MeV) enter with a surface dose below 100%, rise to a dmax a centimeter or more deep, and then fall off steeply to a practical range of about E/2 cm, with only a few percent of bremsstrahlung tail beyond it. The surface dose rises with energy: about 75% for 6 MeV, around 85% for 9 to 12 MeV, and about 95% for 18 to 20 MeV. The reason is scattering: low-energy electrons are scattered through larger angles in the first millimeters of tissue, so fluence builds up more between the surface and dmax, whereas high-energy electrons travel nearly straight and the dose at the surface is already close to the maximum. Bone dose with electrons is close to soft-tissue dose per gram because collisional stopping power is nearly Z-independent (bone is actually slightly lower per gram because of its lower electron density per gram), so electrons protect bone and the tissue behind the range. The price is the lower surface dose, which is why skin targets treated with electrons get 0.5 to 1 cm of bolus to pull dmax to the surface, and the wider penumbra at depth.
+
+Megavoltage photons behave the opposite way to electrons at the surface. The surface dose for a 10 × 10 cm open field is about 15 to 20% for Co-60, 10 to 15% for 6 MV and under 10% for 18 MV: as the energy rises the secondary electrons are more forward-directed and travel farther, so the buildup region lengthens (dmax 0.5, 1.5, 3.0 to 3.5 cm) and the entrance dose falls. Surface dose rises with field size, with trays or blocks close to the skin, with FFF beams, and with oblique incidence; it is lowest for a small field at high energy with nothing in the beam.
+
+**Traps**
+
+Electron surface dose said to fall with energy (that is the photon behavior). Orthovoltage assigned a buildup region. Bone dose with orthovoltage treated as equal to soft tissue. Electrons for skin prescribed without bolus at 6 MeV and the 75% entrance accepted as adequate. Co-60 given the lowest surface dose because it is "older".
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*, electron beam therapy and dose distribution chapters. AAPM TG-25 and TG-70 for electron percent depth dose characteristics. Standard orthovoltage f-factor tables.

@@ -509,3 +509,80 @@ Walk-through:
 
 1. Near-max D2% = 63 Gy. Median D50% = 60 Gy. Near-min D98% = 57 Gy. HI = (63 − 57) / 60 = 6 / 60 = 0.10.
 2. At least 45 Gy includes the 45 Gy bin and the 50 Gy bin: 30 + 10 = 40 cm³. The 10 cm³ at 20 Gy is below 45 Gy and stays out.
+
+## Electron Beam Specifications and Cut-out Limits
+
+**Objectives:** I.3, III.1
+
+**What the exam expects**
+
+You can say where an electron profile is specified (the reference plane), how electron symmetry is expressed, and which tolerance class applies. You can apply the lateral-equilibrium rule to decide whether a cut-out is "small" and state what a small cut-out does to output and to dmax. You can say why the electron virtual source sits closer than the nominal 100 cm and when that matters most.
+
+**Core facts**
+
+Reference plane. Electron flatness and symmetry are not specified at dmax or at 10 cm as photon profiles are. TG-25 places the reference plane perpendicular to the central axis at the depth of the 95 percent isodose beyond dmax, which is near the therapeutic depth of the beam. In that plane the distance between the 90 percent level and the geometric edge should stay within about 10 mm along the major axes and 20 mm along the diagonals, and no point in the plane should exceed about 105 percent of the central-axis value at the same depth.
+
+Symmetry. Electron symmetry is the difference between mirror-image points on either side of the central axis in the reference plane; the TG-25 criterion is that the pair differ by no more than about 2 percent. TG-142 then treats profiles as a constancy test: the monthly and annual electron profile checks are within 1 percent of the commissioning baseline. The 3 percent symmetry figure that appears in older items is the TG-40 monthly tolerance, superseded by TG-142. The bank uses TG-25 for the definition and TG-142 for the periodic tolerance.
+
+Lateral equilibrium and cut-outs. An electron field is "large" when its width is at least the lateral range of the electrons, which is reached when the smallest field dimension is at least about the practical range, Rp ≈ E/2 cm. Below that width, electrons scattered out of the field are not replaced by electrons scattered in: output at the prescription depth falls, dmax moves toward the surface, the depth-dose curve becomes less penetrating, and the depth of the 90 percent line shortens. A cut-out whose smallest dimension is below E/2 cm needs its own measured cut-out factor and its own depth-dose curve rather than the open-cone data. For 16 MeV the threshold is 8 cm; for 6 MeV it is 3 cm, which is why low-energy small cut-outs are far less troublesome than high-energy ones.
+
+Virtual SSD. Electrons scatter in the foils, monitor chamber, and air, so the beam behaves as if it came from a virtual point source closer to the patient than the photon target at 100 cm. The virtual (or effective) SSD is measured by placing the cone at several air gaps and plotting the square root of the inverse of the reading against the gap; the intercept gives the distance. Typical values are 80 to 95 cm, and the shortfall is largest for low energies and small cones, where scatter in air and from the applicator is a larger share of the fluence. Inverse-square corrections for extended-distance electron treatments must use the virtual SSD plus the depth, not 100 cm plus the depth.
+
+**Formulas**
+
+Output at an extended distance relative to the standard set-up: ratio = ((SSDv + dmax) / (SSDv + dmax + gap))², where SSDv is the virtual SSD and gap is the extra air distance.
+
+Example. Virtual SSD 85 cm, dmax 1.5 cm, air gap 10 cm: (86.5 / 96.5)² = 0.896² = 0.803. The same gap computed from the nominal 100 cm gives (101.5 / 111.5)² = 0.829, which overstates the output by about 3 percent.
+
+Minimum cut-out dimension for full output: smallest side ≥ E/2 cm. Example: 12 MeV → 6 cm; a 5 by 7 cm cut-out fails on the 5 cm side.
+
+**Traps**
+
+- Specifying electron flatness at dmax or at 10 cm; the reference plane is at the depth of the 95 percent isodose.
+- Quoting the 3 percent TG-40 symmetry figure as a TG-142 tolerance.
+- Judging a cut-out by its area or its long side; the smallest dimension is what sets lateral equilibrium.
+- Using 100 cm as the source distance in an electron inverse-square correction.
+
+**Sources**
+
+- AAPM TG-25 and TG-70, clinical electron-beam dosimetry, for the reference plane, flatness and symmetry criteria, virtual SSD, and small-field behaviour
+- AAPM TG-142 for the profile-constancy tolerances
+- Khan and Gibbons, electron beam therapy chapter, for the lateral-equilibrium field-size rule
+
+## Hot-Spot Ladders, Lead Edges, and Penumbra Definitions
+
+**Objectives:** III.12, III.1
+
+**What the exam expects**
+
+You can compute the inhomogeneity index as Dmax over Dmin and place an internal maximum on the ladder of what each technique normally accepts. You can describe the hot spot that forms beside a piece of lead placed on the skin in an electron field, and the hot and cold spots around an air cavity. You can state which two dose levels define the penumbra in a given stem and recognise that the 90–20 version is wider than the 80–20 version on the same profile.
+
+**Core facts**
+
+Inhomogeneity index. The simplest target homogeneity measure is the ratio of the target maximum to the target minimum, Dmax / Dmin; a value of 1.00 is perfectly uniform and larger values are less homogeneous. ICRU 83 reports the near-maximum and near-minimum, D2% and D98%, and the homogeneity index (D2% − D98%) / D50%. Both move in the same direction; the point-based ratio is more sensitive to single hot voxels.
+
+Hot-spot ladder by technique. Conventional and 3D conformal photon plans are expected to keep the maximum at about 107 to 110 percent of the prescription, the ICRU 50 band extended slightly for field-in-field breast plans. Inverse-planned IMRT and VMAT plans trade homogeneity for conformity; internal maxima of about 110 to 115 percent are routine and are accepted when they sit inside the target. Stereotactic radiosurgery and SBRT plans prescribe to a low isodose line, commonly 50 to 80 percent, so the internal maximum is 125 to 200 percent of the prescription by design. The same 113 percent maximum is therefore unremarkable in an IMRT plan and a defect in a four-field box.
+
+Lead on the skin. When a lead or cerrobend shield lies directly on the skin inside an electron field, electrons scatter off the vertical face of the shield into the adjacent open tissue. The result is a hot spot just inside the field beside the shield edge, extending a few millimetres under the surface in a tear-drop shape, while the dose under the shield is low. Mirror the geometry: the hot spot is on the open side of the edge, not under the lead. Coating the shield with a few millimetres of wax or bolus absorbs these scattered electrons and smooths the edge.
+
+Air cavities. Electrons crossing an air cavity (nasal cavity, ethmoid cells, maxillary antrum) lose almost no energy, so the dose beyond the cavity is higher and the range is longer than the water calculation predicts. At the lateral walls of the cavity, scatter out of the tissue into the air is not balanced, so hot spots form in the tissue beside the cavity and cold regions sit behind the tissue columns. Filling the nasal cavity with wax or bolus removes the inhomogeneity for a nose or ethmoid electron treatment.
+
+Penumbra definitions. The classic physical penumbra is the lateral distance between the 80 percent and 20 percent points on a profile at a stated depth. Some texts and some review sheets instead use the 90 percent to 20 percent distance; on the same profile the 90–20 width is always larger than the 80–20 width, because the 90 percent point sits farther inside the field. A stem that gives the dose levels defines the quantity; one that does not should be read as 80–20, which is the definition this bank uses.
+
+**Formulas**
+
+Inhomogeneity index = Dmax / Dmin. Example: Dmax 54.6 Gy, Dmin 49.0 Gy → 54.6 / 49.0 = 1.114. Check: 49.0 × 1.114 = 54.6.
+
+Penumbra width = (position of the lower dose level) − (position of the upper dose level). Example: 90 percent at 4.8 cm, 80 percent at 5.1 cm, 20 percent at 5.9 cm from the axis → 80–20 penumbra 0.8 cm, 90–20 penumbra 1.1 cm.
+
+**Traps**
+
+- Reporting a 113 percent IMRT maximum as a violation of a 107 percent rule written for conventional plans.
+- Placing the lead-edge hot spot under the shield instead of beside it.
+- Mixing the 90–20 and 80–20 definitions, which differ by the 90-to-80 distance.
+
+**Sources**
+
+- ICRU 50, 62, and 83 for dose-uniformity reporting; RTOG stereotactic protocols for the 125 to 200 percent internal maxima
+- Khan and Gibbons, electron beam therapy chapter, for shield-edge scatter and air-cavity effects
+- AAPM TG-25 and TG-70 for internal shielding and bolus practice

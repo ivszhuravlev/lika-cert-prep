@@ -172,3 +172,44 @@ A conventional 4-field plan delivering 200 cGy needs 250 MU. The IMRT plan for t
 - Khan and Gibbons, inverse planning chapter, for optimizer families and leaf sequencing
 - NCRP 151, for the IMRT factor applied to the leakage workload
 - Vendor planning-system documentation, for minimum segment MU, jaw tracking, and arc setup options
+
+## Dynamic MLC QA, Conformal Arcs, and Compensator IMRT
+
+**Objectives:** III.5
+
+**What the exam expects**
+
+You can list the classic commissioning and QA tests for a dynamic MLC and say what each one catches. You can tell a dynamic conformal arc from VMAT in one sentence. You can state which static IMRT technique is faster on the clock and why, give the beam-angle rule that keeps IMRT fields from opposing one another, list what a solid compensator buys and what it risks, and describe how an electron beam's depth dose changes when it hits the skin obliquely.
+
+**Core facts**
+
+Dynamic-MLC test set. Sliding-window and VMAT delivery depend on leaves being where the control point says they are, at the moment the monitor units say they should be. The classic test set checks each assumption separately. The leaf-speed test sweeps a fixed gap across the field at several programmed speeds; a leaf that runs slow or fast leaves a band of higher or lower fluence along its path. The acceleration and deceleration test asks the leaves to change speed mid-sweep and looks for over- or under-exposure at the transitions. The positional-accuracy (gap) test sweeps a narrow gap, usually 5 to 10 mm, and compares the delivered fluence with the expected value; because fluence is proportional to gap width, a 0.5 mm error on a 10 mm gap is a 5 percent dose error, and the same error on a 5 mm gap is 10 percent. The dose-rate stability test delivers the same sweep at several dose rates (for example 100, 300, and 600 MU per minute); leaf motion is tied to accumulated monitor units, not to clock time, so the fluence should not depend on the dose rate. The interrupt test holds the beam part-way through a dynamic field and resumes; the resumed field must match the uninterrupted field, which proves the leaves recover their positions and the remaining monitor units are delivered. TG-142 puts leaf position accuracy for IMRT at 1 mm, lists loss of leaf speed greater than 0.5 cm per second as the monthly action level, and asks for moving-window and segmental IMRT tests at the four cardinal gantry angles.
+
+Dynamic conformal arc versus VMAT. In a dynamic conformal arc (DCA) the MLC reshapes continuously so the aperture matches the beam's-eye-view outline of the target at every gantry angle, while dose rate and gantry speed stay constant. There is no fluence modulation inside the aperture and no inverse optimization; it is a conformal 3D arc with moving leaves. VMAT adds variable dose rate, variable gantry speed, and inverse-planned apertures that do not need to match the target outline. A stem that says the leaves follow the target shape with a constant dose rate is describing DCA.
+
+Sliding window versus step-and-shoot on the clock. Step-and-shoot turns the beam off between segments and waits for the leaves to settle; a field with many segments accumulates a lot of dead time. Sliding window keeps the beam on while the leaves sweep, so there is no inter-segment pause. The usual expectation is that sliding window uses more monitor units but less wall-clock time per field than a heavily segmented step-and-shoot delivery of the same fluence. Both are far slower than a VMAT arc of comparable quality.
+
+Beam separation. IMRT plans typically use 5 to 9 fields. The planning rule is to avoid parallel-opposed pairs: keep each beam's entry path at least about 10 to 15 degrees away from the exit path of any other beam. Opposed beams traverse the same ray, so their fluences along that ray are nearly interchangeable; the pair adds little new freedom to the optimizer while stacking entrance and exit dose on one line. Odd numbers of equispaced beams (5, 7, 9) satisfy the rule automatically.
+
+Compensator IMRT. A modulated field can be delivered with a milled solid compensator (brass, or a tin-filled or steel-filled resin) in place of leaf motion. The compensator has spatial resolution limited only by the milling bit, not by the leaf width, so the fluence is finer than an MLC can produce. Because the beam is open across the whole field at once, the monitor units are lower than a sliding-window delivery and the leakage through closed leaves does not exist. The costs are fabrication time, beam hardening in the thick parts, one physical device per field, and the human error of mounting the wrong compensator or the right one in the wrong orientation; the verification step for a compensator field is to check the device identifier and orientation against the plan, exactly as a block is checked.
+
+Electron obliquity. When an electron beam strikes the skin at an angle rather than along the normal, the depth-dose curve measured perpendicular to the skin changes in three ways. The depth of maximum moves toward the surface, the surface dose rises, and the low-value isodose lines bulge outward and deeper at the edges because of side scatter from the thick side of the slope. The practical range measured along the beam is unchanged. An unfilled air gap on a curved or sloping surface is the everyday cause; bolus that levels the surface removes the obliquity.
+
+**Formulas**
+
+Fractional fluence error in a sliding-gap test ≈ (gap error) / (nominal gap). For a 10 mm gap with a 0.5 mm error, 0.5 / 10 = 0.05, or 5 percent. Check: a 10.5 mm gap exposes each point 5 percent longer than a 10 mm gap.
+
+**Traps**
+
+- Calling the interrupt test a check of output constancy. It checks that leaves and monitor units resume correctly.
+- Describing DCA as modulated because the leaves move. The aperture follows the outline; nothing inside it is modulated.
+- Reversing the clock-time statement. Sliding window spends more MU and less time; step-and-shoot pays dead time between segments.
+- Using parallel-opposed IMRT beams. The rule is a 10 to 15 degree separation from any other beam's exit.
+- Saying compensator IMRT has coarser resolution than an MLC. The milling bit is finer than the leaf.
+- Moving electron dmax deeper under oblique incidence. It moves shallower, and the surface dose rises.
+
+**Sources**
+
+- AAPM TG-142, table of monthly and annual MLC tests for IMRT machines; LoSasso, Chui, and Ling for the sliding-gap and leaf-speed tests
+- Khan and Gibbons, IMRT delivery chapter, for compensator-based IMRT and leaf sequencing
+- Khan and Gibbons, electron beam chapter, for oblique incidence
