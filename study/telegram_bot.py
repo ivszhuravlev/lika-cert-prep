@@ -1258,11 +1258,26 @@ def main() -> None:
     progress = Progress(default_progress_path())
     session = Session(repo_root() / "progress" / "telegram_state.json")
     offset = session.offset
+    contested = False
     while True:
         try:
-            updates = tg.call("getUpdates", {"timeout": 25, "offset": offset})
+            if contested:
+                # Another copy of this bot is long-polling the same token elsewhere.
+                # Telegram hands updates to the newest request, so keep ours short and
+                # frequent: every short poll cuts the other copy off before it can answer.
+                updates = tg.call("getUpdates", {"timeout": 0, "offset": offset})
+                if not updates:
+                    time.sleep(0.4)
+            else:
+                updates = tg.call("getUpdates", {"timeout": 25, "offset": offset})
         except Exception as exc:
-            print(f"poll error: {_public_error(exc, token)}", flush=True)
+            text = _public_error(exc, token)
+            print(f"poll error: {text}", flush=True)
+            if "409" in text and not contested:
+                contested = True
+                print("another poller detected; switching to short polling", flush=True)
+                time.sleep(0.5)
+                continue
             time.sleep(3)
             continue
         for update in updates:
