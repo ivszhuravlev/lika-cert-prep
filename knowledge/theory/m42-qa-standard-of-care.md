@@ -530,3 +530,42 @@ Daily output constancy at 3 percent and monthly at 2 percent did not change. The
 **How to answer a drifting item.** Read the stem for a source cue (NCRP, NRC, ICRP, "classically", "current"). If there is a cue, follow it. If there is none, pick the current value, and expect the legacy value to appear as a distractor. If both values appear as options with no cue, the item is flawed; pick the current value and move on.
 
 **Sources.** NCRP Report 116 and 10 CFR 20.1201 (150 mSv lens, 15 mSv public lens). ICRP 2011 statement on tissue reactions and ICRP Publication 118 (20 mSv lens, 0.5 Gy cataract threshold). Khan for the 80–20 physical penumbra. The drift itself is documented in the review of the practice-test sets this bank was checked against.
+
+## End-to-End Tests, TG-275 Plan Review, and the Task-Group Directory
+
+**Objectives:** VII.9, VII.2, VII.1
+
+**What the exam expects:** Say what an end-to-end test is and why SRS and SBRT programs require one; name the document that defines physics plan and chart review and what it asks the reviewer to look for; and match a dozen task-group numbers to the subject each one governs. Items of the form "which report covers X" are the cheapest marks in the QA domain and the easiest to lose by confusing two neighbouring numbers.
+
+**End-to-end test.** An end-to-end test runs a phantom through the whole clinical chain as if it were a patient: immobilization and CT simulation, contouring of a hidden target, planning with the clinical beam model and grid, export to the record-and-verify system, image guidance and setup in the room, and delivery, with dose measured inside the phantom at the target (ion chamber, film, or a detector array) and the delivered position compared with the planned one. The test checks that every hand-off works together, which the individual TG-142 tests cannot show: the lasers can pass, the Winston–Lutz can pass, and the imaging isocenter can pass, while a wrong coordinate convention between the CT simulator and the planning system or a mis-registered CBCT reference image still moves the dose. TG-101 asks for an end-to-end test at commissioning of an SBRT program and after any change to a link in the chain (new planning software version, new couch, new imaging system), with a localization accuracy of about 1 to 2 mm overall, and TG-142 places the same expectation on SRS programs. The target is a small hidden sphere or a radiopaque marker, the phantom is anthropomorphic or at least has a known target position, and the report states both a positional error and a dose error. A phantom passing an end-to-end test does not replace patient-specific QA, which checks each plan's deliverability, and patient-specific QA does not replace the end-to-end test, which checks the chain. Credentialing phantoms mailed by IROC for clinical trials are an external version of the same test.
+
+**TG-275.** AAPM TG-275 (2020) is the report on the physics plan and chart review: the initial plan check before the first fraction, the weekly chart check during treatment, and the end-of-treatment check. It was built from a failure-mode analysis of the review process and from a survey of what reviewers actually catch, and it ranks the items by risk so that a department can set a prioritized checklist rather than a complete one. High-priority initial-check items include that the prescription in the planning system matches the signed prescription (dose per fraction, number of fractions, total dose, and target), that the plan is on the correct CT and the correct patient, that the isocenter and shifts in the record-and-verify system match the plan and the simulation documents, that the DVH meets the constraints and the constraints are the ones the physician intended, that an independent MU or dose check was done and is within its action level, that the bolus, wedges, and accessories in the plan appear in the delivery parameters, and that the image-guidance instructions (modality, frequency, match structures, tolerance) are written. The weekly check confirms that the delivered fractions, cumulative dose, and any plan changes match the prescription, and that setup images were reviewed. TG-275 also recommends that plan review happens before the plan is scheduled, not between the first-fraction imaging and the beam, and that the reviewer is independent of the planner. It replaced the chart-check section of TG-40; it does not change the TG-142 machine tests.
+
+**Which report.** The list items keep asking, with the one-line answer this bank keys:
+
+- TG-40 (1994): the comprehensive legacy QA report (linac, simulator, TPS, brachy, chart check).
+- TG-51 (1999, 2014 addendum): reference calibration of photon and electron beams in water.
+- TG-53 (1998): the comprehensive legacy TPS QA process; MPPG 5.a (2015) is the current dose-calculation commissioning guideline.
+- TG-66 (2003): CT-simulator QA.
+- TG-100 (2016): risk-based quality management (process map, FMEA, fault tree).
+- TG-101 (2010): SBRT, including the end-to-end test, 2 mm grid, and 1 mm localization.
+- TG-106 (2008): beam-data commissioning measurements.
+- TG-108 (2006): PET and PET/CT shielding.
+- TG-114 (2011): independent MU verification and its action levels.
+- TG-119 (2009): IMRT commissioning test suite.
+- TG-142 (2009): linac QA, replacing the linac part of TG-40; TG-198 (2021) is its implementation guide.
+- TG-203 (2019): cardiac implantable electronic devices, replacing TG-34.
+- TG-218 (2018): IMRT patient-specific QA tolerance and action limits.
+- TG-263 (2018): structure nomenclature.
+- TG-275 (2020): physics plan and chart review.
+
+**Wrong turns**
+
+- Treating a Winston–Lutz pass as an end-to-end test. Winston–Lutz checks beam-to-isocenter alignment in the room; it never sees the CT, the contour, or the planning system.
+- Running the end-to-end test once at commissioning and not after a planning-system upgrade.
+- Calling TG-275 a machine-QA report, or TG-142 a chart-check report.
+- Swapping TG-108 (PET shielding) with NCRP 147 (x-ray imaging rooms) or TG-101 (SBRT) with TG-119 (IMRT commissioning).
+
+**Traps.** End-to-end means phantom through the whole chain, dose and position both reported, repeated after any link changes. TG-275 is plan and chart review, prioritized by risk, independent of the planner, before the first fraction. Know the directory.
+
+**Sources.** AAPM TG-101 and TG-142 for the end-to-end requirement for SBRT and SRS; AAPM TG-275 for plan and chart review; the individual task-group reports listed. IROC phantom credentialing as the external example.
