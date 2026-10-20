@@ -25,7 +25,7 @@ Objective: VI.1
 Why: NCRP 116 sets the occupational effective dose at 50 mSv in a year, with a cumulative guidance of 10 mSv times age in years. The public continuous limit is 1 mSv, the lens is 150 mSv, and the skin and extremities are 500 mSv. Correct choice: 50 mSv. 1 mSv is the annual public limit for continuous exposure, not the occupational limit. 150 mSv is the NCRP 116 annual lens limit. 500 mSv is the NCRP 116 annual skin, hand, and foot limit.
 
 ### Q3
-Stem: A worker is 44 years old. What is the NCRP 116 cumulative effective-dose guidance?
+Stem: A worker is 44 years old. NCRP 116 cumulative effective-dose guidance is 10 mSv times age in years. What is that cumulative guidance?
 A. 44 mSv
 B. 50 mSv
 C. 880 mSv

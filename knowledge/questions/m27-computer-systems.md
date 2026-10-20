@@ -65,7 +65,7 @@ Objective: III.9
 Why: Answer A. A bit is the fundamental unit: a single binary digit, 0 or 1. Binary is written with those two symbols. A byte is a group of bits, so it is not the fundamental unit. A voxel and a Hounsfield number are image quantities stored by means of bits.
 
 ### Q7
-Stem: One byte contains how many bits?
+Stem: Which count is the number of bits in one byte?
 A. 1
 B. 2
 C. 8

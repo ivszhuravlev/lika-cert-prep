@@ -727,7 +727,7 @@ Why: Substitute 4.6 × 2500 / (100)^2 = 11500 / 10000 = 1.150000 R/h, reported a
 ## Strength, points, prescriptions, and directives
 
 ### Q1
-Stem: What is 1 U of air-kerma strength?
+Stem: Which statement defines 1 U of air-kerma strength?
 A. 1 µGy m²/h, which is the same as 1 cGy cm²/h
 B. 1 mCi of apparent activity
 C. 1 Gy at 1 cm in water

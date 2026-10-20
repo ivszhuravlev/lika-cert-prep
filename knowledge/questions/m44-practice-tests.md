@@ -15,7 +15,7 @@ Objective: admin
 Why: The public exam description used for this bank gives 3 hours 50 minutes for 155 questions, in English, based on U.S. practice. Correct choice: 3 hours 50 minutes. Two hours would be a shorter licensing exam than this one. The published time is 3 hours 50 minutes, not a flat 3 hours. Five hours is longer than the published sitting.
 
 ### Q2
-Stem: How many questions are in that sitting, with a few unscored pilot items mixed in?
+Stem: Which count is the number of questions in that sitting, with a few unscored pilot items mixed in?
 A. 100
 B. 155
 C. 140
@@ -764,7 +764,7 @@ Objective: III.8
 Why: The peritoneal correlate is V45 < 195 cc. Room under that value = 195 − 180 = 15 cc, so 180 cc meets it. Loop contours use V15 < 120 cc instead. 180 is less than 195. The 120 cc and 195 cc numbers stay tied to how the volume was drawn.
 
 ### Q27
-Stem: Individual small-bowel loops have V15 = 140 cc. By how many cc does this exceed the loop correlate?
+Stem: Individual small-bowel loops have V15 = 140 cc. The loop correlate is V15 < 120 cc. By how many cc does 140 cc exceed that correlate?
 A. 0 cc
 B. 20 cc
 C. 140 cc

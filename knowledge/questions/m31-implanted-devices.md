@@ -125,7 +125,7 @@ Objective: III.13
 Why: Answer C. TG-34 is the older report, and 2 Gy is the single number reviews still quote from it. TG-203 replaced that habit with three bands plus a step up for pacing dependence, and with high-risk management when the energy is above 10 MV. Two gray is the start of the intermediate band, not a clearance. It is not the top of the low band, it is not the high threshold, and it is not a per-fraction allowance.
 
 ### Q13
-Stem: Two patients, neither pacing dependent, are planned at 6 MV with the generators outside the beam. One estimate is 5 Gy. The other is 5.4 Gy. How do the bands differ, and what is still true of both?
+Stem: Two patients, neither pacing dependent, are planned at 6 MV with the generators outside the beam. One estimate is 5 Gy. The other is 5.4 Gy. How do the bands differ, and which fact is still true of both?
 A. Both are low, because 5 Gy is the TG-34 safe dose and 5.4 Gy rounds down
 B. 5 Gy is high and 5.4 Gy is intermediate, because the bands reverse above 5 Gy
 C. Both are high, because intermediate stops at 2 Gy

@@ -468,40 +468,40 @@ Why: Ru-106 is about 374 days. 9.7 days is Cs-131. 64 hours is Y-90. 28.8 years 
 
 ### Q14
 Stem: A teaching approximation for the half-value layer of Co-60 in lead is about:
-A. 12 mm Pb
-B. 6.5 mm Pb
-C. 3 mm Pb
-D. 0.025 mm Pb
+A. The teaching lead thickness is 12 mm
+B. The teaching lead thickness is 6.5 mm
+C. The teaching lead thickness is 3 mm
+D. The teaching lead thickness is 0.025 mm
 Answer: A
 Objective: I.10
 Why: Co-60 is about 12 mm of lead. Cs-137 is about 6.5 mm. Ir-192 is a few millimeters, about 3–6 mm. I-125 is about 0.025 mm. These are narrow-beam teaching values, not a vault wall.
 
 ### Q15
 Stem: The lead half-value layer used in this bank for Cs-137 is about:
-A. 12 mm
-B. 6.5 mm
-C. 0.025 mm
-D. 30 mm
+A. The teaching lead thickness is 12 mm
+B. The teaching lead thickness is 6.5 mm
+C. The teaching lead thickness is 0.025 mm
+D. The teaching lead thickness is 30 mm
 Answer: B
 Objective: I.10
 Why: Cs-137 is about 6.5 mm Pb. 12 mm is the Co-60 teaching value. 0.025 mm is I-125. 30 mm is several times the cesium layer and is not the recall figure.
 
 ### Q16
 Stem: Ir-192 lead shielding estimates in this bank use a half-value layer of about:
-A. 12 mm, the same figure as Co-60
-B. 0.025 mm, the same figure as I-125
-C. 3 to 6 mm
-D. 6.5 cm
+A. The teaching lead thickness is 12 mm, the same figure as Co-60
+B. The teaching lead thickness is 0.025 mm, the same figure as I-125
+C. The teaching lead thickness is 3 to 6 mm
+D. The teaching lead thickness is 6.5 cm
 Answer: C
 Objective: I.10
 Why: The Ir-192 spectrum is softer than Cs-137 and Co-60, so the teaching range is about 3–6 mm of lead rather than one sharp line. 12 mm is Co-60. 0.025 mm is I-125. 6.5 cm is the Cs-137 figure with millimeters misread as centimeters.
 
 ### Q17
 Stem: I-125 photons are near 28 keV, so the teaching half-value layer in lead is about:
-A. 12 mm Pb
-B. 6.5 mm Pb
-C. 3 mm Pb
-D. 0.025 mm Pb
+A. The teaching lead thickness is 12 mm
+B. The teaching lead thickness is 6.5 mm
+C. The teaching lead thickness is 3 mm
+D. The teaching lead thickness is 0.025 mm
 Answer: D
 Objective: I.10
 Why: I-125 is about 0.025 mm Pb. The millimeter values belong to the higher-energy sources: a few millimeters for Ir-192, about 6.5 mm for Cs-137, and about 12 mm for Co-60.

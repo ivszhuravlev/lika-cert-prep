@@ -221,7 +221,7 @@ Objective: I.10
 Why: 45 × (80/120)^2 = 45 × (2/3)^2 = 45 × 4/9 = 20 cGy/min. 30 cGy/min uses 80/120 without the square. 67.5 cGy/min inverts the ratio and forgets the square. 101 cGy/min is 45 × (120/80)^2, the ratio inverted and squared.
 
 ### Q5
-Stem: A neutral atom of Z = 20 must contain how many electrons, and the symbol A tells you what?
+Stem: A neutral atom of Z = 20 contains which electron count, and the symbol A tells you what?
 A. 20 electrons, and A is the proton number
 B. 20 electrons, and A is the nucleon number
 C. A electrons, and Z is the neutron number

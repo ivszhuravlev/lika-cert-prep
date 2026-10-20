@@ -370,7 +370,7 @@ Objective: III.1
 Why: Answer A. An isodose line joins points of equal dose. On a chart normalized to 100% at dmax (a common SSD presentation) or at isocenter (a common SAD presentation), the 80% line is 80% of that reference dose. It is not a dose in gray until the prescription is attached, it is not a DVH point, and it is not a distance. Two charts with the same beam but different normalization points will print different percentages at the same physical point. The doses in gray are what have to be compared.
 
 ### Q2
-Stem: A wedge is inserted and the isodose lines that were perpendicular to the central axis now tilt. At 10 cm depth the 50% line makes a 30 degree angle with the line drawn perpendicular to the central axis. What is the wedge angle on this definition?
+Stem: A wedge is inserted and the isodose lines that were perpendicular to the central axis now tilt. At 10 cm depth the 50% line makes a 30 degree angle with the line drawn perpendicular to the central axis. Which value is the wedge angle on this definition?
 A. 60 degrees, because the wedge angle is the complement of that tilt
 B. 30 degrees
 C. 120 degrees, the hinge of a wedged pair
@@ -557,7 +557,7 @@ Why: Answer B. Integral dose is mean dose multiplied by mass, when the mean is t
 
 ### Q5
 Stem: A cord is 6 mm in diameter. The dose grid is 4 mm. The cord DVH maximum is under the limit. Why might that DVH still be the wrong number?
-A. A 4 mm voxel averages dose across a large fraction of a 6 mm cord and can hide a peak, and the DVH cannot reveal that the grid was too coarse
+A. A coarse voxel averages dose across a large fraction of the cord and can hide a peak, and the DVH cannot reveal that the grid was too coarse
 B. Dose grids do not affect DVHs
 C. A maximum on a DVH is always the dose to a mathematical point, independent of voxel size
 D. The limit should be compared with the minimum cord dose when the grid is coarse
@@ -590,7 +590,7 @@ Stem: Every structure that has an optimization objective meets its DVH limit. Th
 A. A parotid failure of 24 − 26 = −2 Gy
 B. That the esophagus DVH maximum must equal 60 Gy because that is the prescription
 C. Nothing; a structure with no objective cannot contain dose
-D. A 70 Gy esophagus hotspot the optimizer was not asked to limit, 10 Gy above the prescription, while the parotid objective is still 2 Gy under its own limit
+D. An esophagus hotspot the optimizer was not asked to limit, above the prescription, while the parotid objective is still under its own limit
 Answer: D
 Objective: III.12
 Why: Answer D. An objective constrains only the structure it is attached to. The parotid mean meets its limit: 26 − 24 = 2 Gy under 26 Gy. The esophagus had no objective, so 70 Gy inside it does not turn the objective list red. Relative to the prescription, 70 − 60 = 10 Gy above 60 Gy. That region is visible on the isodose display and on an esophagus DVH if one is computed. Dose is deposited whether or not an objective exists, and a negative parotid margin is not a failure.

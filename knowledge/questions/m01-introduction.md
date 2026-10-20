@@ -5,7 +5,7 @@ Original items written for this bank. They are not retired MDCB questions and no
 ## Hello
 
 ### Q1
-Stem: How many questions are on the CMD examination?
+Stem: Which count is the number of questions on the CMD examination?
 A. 100
 B. 135
 C. 155

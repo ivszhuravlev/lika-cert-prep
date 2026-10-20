@@ -127,7 +127,7 @@ Objective: III.8
 Why: Individual loops use V15 < 120 cc. Excess = 150 − 120 = 30 cc. The peritoneal number is V45 < 195 cc and does not license a loop V15 of 150 cc. Calling the loop constraint met would be 0 cc over. Quoting 150 cc reports the DVH volume. Quoting 120 cc reports the correlate.
 
 ### Q8
-Stem: The peritoneal space has V45 = 210 cc. Individual loops were not contoured. By how many cc does this exceed the peritoneal correlate?
+Stem: The peritoneal space has V45 = 210 cc. Individual loops were not contoured. The peritoneal correlate is V45 < 195 cc. By how many cc does 210 cc exceed that correlate?
 A. 0 cc
 B. 15 cc
 C. 90 cc

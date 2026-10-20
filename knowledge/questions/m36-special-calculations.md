@@ -690,13 +690,13 @@ Why: The posterior width belongs to the gantry angle that makes the posterior ed
 
 ### Q1
 Stem: What does one HVL mean in a narrow beam?
-A. Transmission of 25%
-B. Transmission of 50%
-C. Transmission of 10%
+A. A quarter of the intensity is transmitted
+B. Half of the intensity is transmitted
+C. A tenth of the intensity is transmitted
 D. The beam is fully stopped
 Answer: B
 Objective: IV.3
-Why: One half-value layer transmits half and attenuates half. Two HVL transmit 25%. A tenth-value layer transmits 10%. Correct choice: Transmission of 50%. 25% is two HVL, because (1/2)^2 = 1/4. 10% is about one TVL, roughly 3.3 HVL. An HVL is a half, not a stop. Intensity never hits zero in this exponential model.
+Why: One half-value layer transmits half and attenuates half. Two HVL transmit 25%. A tenth-value layer transmits 10%. Correct choice: half of the intensity is transmitted. 25% is two HVL, because (1/2)^2 = 1/4. 10% is about one TVL, roughly 3.3 HVL. An HVL is a half, not a stop. Intensity never hits zero in this exponential model.
 
 ### Q2
 Stem: Teaching item. Say the transmitted percent, not the attenuated percent. A shield is exactly two HVL thick in a narrow beam. What percent of the incident intensity is transmitted?
@@ -710,13 +710,13 @@ Why: Transmission after n HVL is (1/2)^n. For n = 2, (1/2)^2 = 1/4 = 0.25 = 25%.
 
 ### Q3
 Stem: How is the linear attenuation coefficient related to the HVL in the narrow-beam model used here?
-A. μ = 0.693 / HVL
-B. μ = HVL / 0.693
-C. μ = 2.303 / HVL
-D. μ = HVL
+A. Mu equals the natural log of two, divided by the HVL
+B. Mu equals the HVL divided by the natural log of two
+C. Mu equals the natural log of ten, divided by the HVL
+D. Mu equals the HVL
 Answer: A
 Objective: IV.3
-Why: Because (1/2) = e^(−μ × HVL), take ln of both sides: ln(2) = μ × HVL. ln(2) ≈ 0.693, so μ = 0.693/HVL. Correct choice: μ = 0.693 / HVL. That inverts the relationship. A larger HVL means a smaller μ. 2.303 is ln(10), which belongs with the TVL: μ = 2.303/TVL if 2.303 is used for ln(10). μ and HVL have inverse roles and different units.
+Why: Because (1/2) = e^(−μ × HVL), take ln of both sides: ln(2) = μ × HVL. ln(2) ≈ 0.693, so μ = 0.693/HVL. Correct choice: mu equals the natural log of two, divided by the HVL. Inverting that puts the HVL in the numerator. A larger HVL means a smaller μ. The natural log of ten belongs with the TVL: μ = 2.303/TVL if 2.303 is used for ln(10). μ and HVL have inverse roles and different units.
 
 ### Q4
 Stem: About how many HVL are in one TVL?
