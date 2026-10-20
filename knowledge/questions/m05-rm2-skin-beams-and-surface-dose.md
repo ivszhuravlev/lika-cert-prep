@@ -37,12 +37,12 @@ Why: Low-energy electrons are deflected through large angles in the first millim
 ### Q4
 Stem: For a 10 × 10 cm open field, which ordering of percent surface dose from highest to lowest is correct?
 A. 18 MV photons, 6 MV photons, Co-60, 18 MeV electrons
-B. 18 MeV electrons, 6 MeV electrons, 6 MV photons, 18 MV photons
+B. 6 MV photons, 18 MV photons, 6 MeV electrons, 18 MeV electrons
 C. 6 MeV electrons, 18 MeV electrons, 18 MV photons, 6 MV photons
-D. 6 MV photons, 18 MV photons, 6 MeV electrons, 18 MeV electrons
-Answer: B
+D. 18 MeV electrons, 6 MeV electrons, 6 MV photons, 18 MV photons
+Answer: D
 Objective: I.3
-Why: Electron surface dose rises with energy (about 95% at 18 MeV, about 75% at 6 MeV) and megavoltage photon surface dose falls with energy (roughly 10 to 15% at 6 MV, under 10% at 18 MV) because the secondary electrons become more forward-directed and the buildup region lengthens. Option A reverses the photon trend and puts photons above electrons. Option C reverses both trends within each pair. Option D puts photons above electrons.
+Why: Electron surface dose rises with energy (about 95% at 18 MeV, about 75% at 6 MeV) and megavoltage photon surface dose falls with energy (roughly 10 to 15% at 6 MV, under 10% at 18 MV) because the secondary electrons become more forward-directed and the buildup region lengthens. Option A reverses the photon trend and puts photons above electrons. Option B puts photons above electrons. Option C reverses both trends within each pair.
 
 ### Q5
 Stem: Which change lowers the surface dose of a megavoltage photon field?

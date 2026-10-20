@@ -46,10 +46,10 @@ Why: Momentum conservation confines the recoil electron to angles from 0 to 90 d
 
 ### Q5
 Stem: A fast electron slowing down in water knocks a bound electron free with enough energy to leave its own ionization track. The ejected electron is called a:
-A. Delta ray
+A. Conversion electron
 B. Characteristic electron
 C. Auger electron
-D. Conversion electron
-Answer: A
+D. Delta ray
+Answer: D
 Objective: I.5
 Why: Delta rays are energetic secondary electrons set in motion by hard collisions of a primary charged particle; they carry energy away from the primary track and are the reason restricted stopping power and the Bragg-Gray cut-off energy are defined. Auger electrons come from atomic de-excitation after an inner-shell vacancy. Conversion electrons come from nuclear de-excitation in place of a gamma ray. There is no particle called a characteristic electron.

@@ -7,12 +7,12 @@ Original items. Order-of-magnitude source activities, alpha versus beta bone age
 ### Q1
 Stem: Rank these sources from largest to smallest activity: a new HDR Ir-192 source, a Co-60 teletherapy source, a single I-125 prostate seed, and a Cs-137 tandem-and-ovoid LDR load.
 A. HDR Ir-192, Co-60 teletherapy, Cs-137 LDR load, I-125 seed
-B. Co-60 teletherapy, HDR Ir-192, Cs-137 LDR load, I-125 seed
+B. HDR Ir-192, Cs-137 LDR load, Co-60 teletherapy, I-125 seed
 C. Co-60 teletherapy, Cs-137 LDR load, HDR Ir-192, I-125 seed
-D. HDR Ir-192, Cs-137 LDR load, Co-60 teletherapy, I-125 seed
-Answer: B
+D. Co-60 teletherapy, HDR Ir-192, Cs-137 LDR load, I-125 seed
+Answer: D
 Objective: I.7
-Why: A Co-60 teletherapy head holds on the order of 10 kCi, an HDR source is about 10 Ci, an LDR cesium load is about 100 to 200 mCi, and one I-125 seed is a few tenths of a millicurie. Each step is roughly a factor of a thousand, a hundred, and a few hundred respectively. Option A puts the 10 Ci HDR source above the kilocurie teletherapy source. Options C and D put the millicurie cesium load above a source that is one or more orders of magnitude larger.
+Why: A Co-60 teletherapy head holds on the order of 10 kCi, an HDR source is about 10 Ci, an LDR cesium load is about 100 to 200 mCi, and one I-125 seed is a few tenths of a millicurie. Each step is roughly a factor of a thousand, a hundred, and a few hundred respectively. Option A puts the 10 Ci HDR source above the kilocurie teletherapy source. Options B and C put the millicurie cesium load above a source that is one or more orders of magnitude larger.
 
 ### Q2
 Stem: Which activity is closest to a single newly installed HDR Ir-192 source?

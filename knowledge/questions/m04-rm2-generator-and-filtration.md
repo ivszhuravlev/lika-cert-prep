@@ -27,10 +27,10 @@ Why: Less ripple keeps the tube potential near the set kVp for more of the expos
 ### Q3
 Stem: Two millimeters of aluminum are added to a 100 kVp tungsten tube. Which quantity stays the same?
 A. Half-value layer
-B. Energy of the K-alpha characteristic line
+B. Subject contrast
 C. Entrance skin dose for the same mAs
-D. Subject contrast
-Answer: B
+D. Energy of the K-alpha characteristic line
+Answer: D
 Objective: I.4
 Why: Characteristic line energies are fixed by the tungsten shell binding energies (K-alpha about 59 keV), and the maximum energy is fixed by the kVp; filtration only lowers the heights of all parts of the spectrum, removing proportionally more soft photons. The HVL therefore rises, the entrance skin dose falls because fewer soft photons are absorbed in the first centimeters, and subject contrast falls because a harder beam is less differentially attenuated.
 

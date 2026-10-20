@@ -27,10 +27,10 @@ Why: The 180-degree pulse in spin echo rephases spins dephased by static field i
 ### Q3
 Stem: In an inversion recovery sequence the inversion time is set to about 150 ms. The effect is to:
 A. Null free water, as in FLAIR
-B. Null fat, as in STIR, making marrow edema and bone metastases conspicuous
+B. Shorten the scan by acquiring multiple echoes per excitation
 C. Produce proton-density contrast by removing both T1 and T2 effects
-D. Shorten the scan by acquiring multiple echoes per excitation
-Answer: B
+D. Null fat, as in STIR, making marrow edema and bone metastases conspicuous
+Answer: D
 Objective: II.4
 Why: Inversion recovery nulls whichever tissue has zero longitudinal magnetization at the excitation; fat recovers quickly, so a short inversion time near 150 ms suppresses it (STIR). Free water needs a long inversion time of about 2,000 to 2,500 ms to be nulled (FLAIR). Proton-density contrast comes from long TR and short TE in a spin echo. Multiple echoes per excitation is the fast or turbo spin echo trick, not an inversion effect.
 
