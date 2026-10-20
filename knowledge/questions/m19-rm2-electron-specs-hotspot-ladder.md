@@ -71,10 +71,10 @@ Stem: A PTV prescribed to 50 Gy has a maximum of 54.6 Gy and a minimum of 49.0 G
 A. 1.114
 B. 0.112
 C. 1.092
-D. 0.898
+D. 0.897
 Answer: A
 Objective: III.12
-Why: Dmax/Dmin = 54.6/49.0 = 1.114. Check: 49.0 × 1.114 = 54.6. The value 0.112 is the range divided by the prescription, (54.6 − 49.0)/50, which is a different, difference-based index. The value 1.092 is Dmax divided by the prescription and ignores the minimum. The value 0.898 is Dmin/Dmax, the ratio inverted.
+Why: Dmax/Dmin = 54.6/49.0 = 1.114. Check: 49.0 × 1.114 = 54.6. The value 0.112 is the range divided by the prescription, (54.6 − 49.0)/50, which is a different, difference-based index. The value 1.092 is Dmax divided by the prescription and ignores the minimum. The value 0.897 is Dmin/Dmax, the ratio inverted.
 
 ### Q2
 Stem: A head-and-neck IMRT plan shows a global maximum of 113 percent of the prescription inside the PTV. How should the reviewer judge this number?

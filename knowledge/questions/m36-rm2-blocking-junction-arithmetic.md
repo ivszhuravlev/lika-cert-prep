@@ -12,7 +12,7 @@ C. 25 fractions
 D. 30 fractions
 Answer: C
 Objective: IV.3
-Why: The cord receives the full 1.8 Gy each fraction, so the number of fractions allowed is 45 / 1.8 = 25. Check: 25 × 1.8 = 45.0 Gy, exactly at the limit, so the off-cord fields start at fraction 26. This bank uses the 45 Gy figure stated in the problem; QUANTEC lists about 50 Gy for a 0.2 percent myelopathy risk, so always use the limit the question gives. Dividing by 2.0 Gy gives 22 fractions and 28 fractions results from 50 / 1.8, which applies a different tolerance. Thirty fractions would deliver 54 Gy to the cord.
+Why: The cord receives the full 1.8 Gy each fraction, so the number of fractions allowed is 45 / 1.8 = 25. Check: 25 × 1.8 = 45.0 Gy, exactly at the limit, so the off-cord fields start at fraction 26. This bank uses the 45 Gy figure stated in the problem; QUANTEC lists about 50 Gy for a 0.2 percent myelopathy risk, so always use the limit the question gives. Dividing by 2.0 Gy gives 22.5, rounded down to 22 fractions, and 28 fractions results from 50 / 1.8, which applies a different tolerance. Thirty fractions would deliver 54 Gy to the cord.
 
 ### Q2
 Stem: Same course, 1.8 Gy per fraction with a 45 Gy cord limit, but the plan shows the cord on the 105 percent isodose line. How many full fractions can be delivered before the cord must be blocked?

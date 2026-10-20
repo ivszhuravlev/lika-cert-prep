@@ -5,7 +5,7 @@ Original items. Physical, motorized, and dynamic wedges; dynamic-wedge factor be
 ## Wedge Taxonomy and Electron Skin Collimation
 
 ### Q1
-Stem: A linac has a single 60 degree wedge permanently housed inside the treatment head and driven into the beam by a motor. Intermediate effective wedge angles are produced by delivering part of the monitor units open and the rest through the wedge. What is this device called?
+Stem: A linac has a single 60 degree wedge permanently housed inside the treatment head and driven into and out of the beam by a motor, and the planning system can produce any effective wedge angle up to 60 degrees from it. What is this device called?
 A. An individual physical wedge
 B. A universal, or motorized, wedge
 C. A dynamic wedge

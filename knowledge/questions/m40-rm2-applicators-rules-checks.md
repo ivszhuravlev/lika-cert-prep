@@ -179,12 +179,12 @@ Why: Difference = 11.40 − 11.15 = 0.25 cGy/h; 0.25 / 11.15 = 0.0224, about 2.2
 ### Q7
 Stem: An I-125 permanent prostate implant is prescribed 145 Gy to complete decay. The half-life is 59.4 days. What initial dose rate at the prescription isodose is required?
 A. 10.2 cGy/h
-B. 4.89 cGy/h
+B. 4.88 cGy/h
 C. 7.05 cGy/h
 D. 169 cGy/h
 Answer: C
 Objective: V.6
-Why: Initial dose rate = D / (1.443 × half-life × 24) = 14500 / (1.443 × 59.4 × 24) = 14500 / (85.71 × 24) = 14500 / 2057 = 7.05 cGy/h. Check: 7.05 × 2057 = 14502 cGy. Option A omits the 1.443 (14500 / 1425.6) and would overdose by 44%. Option B applies 1.443 twice. Option D is the dose rate per day (14500 / 85.71) mislabeled as per hour. Some texts write 1.44 instead of 1.443; the result differs by 0.2%.
+Why: Initial dose rate = D / (1.443 × half-life × 24) = 14500 / (1.443 × 59.4 × 24) = 14500 / (85.71 × 24) = 14500 / 2057 = 7.05 cGy/h. Check: 7.05 × 2057 = 14502 cGy. Option A omits the 1.443 (14500 / 1425.6) and would overdose by 44%. Option B applies 1.443 twice (14500 / 2968). Option D is the dose rate per day (14500 / 85.71) mislabeled as per hour. Some texts write 1.44 instead of 1.443; the result differs by 0.2%.
 
 ### Q8
 Stem: An LDR cervix insertion is loaded with a tandem of 15, 10, and 10 mg-Ra-eq and two ovoids of 10 mg-Ra-eq each, and remains in place for 48 hours. How many milligram-hours does the insertion deliver?

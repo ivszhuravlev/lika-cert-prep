@@ -37,9 +37,9 @@ Why: ExacTrac combines an infrared surface tracking system that drives a robotic
 ### Q4
 Stem: Implanted electromagnetic transponders for real-time tracking are used far more often in prostate than in lung because:
 A. Lung tumors do not move enough to justify real-time tracking
-B. The prostate is a well-defined, non-deforming organ with slow intrafraction drift, whereas lung placement is invasive and beacons can migrate
+B. Only two beacons are needed in prostate, while lung requires five
 C. The transponders provide a cone-beam image of the prostate but not of the lung
-D. Only two beacons are needed in prostate, while lung requires five
-Answer: B
+D. The prostate is a well-defined, non-deforming organ with slow intrafraction drift, whereas lung placement is invasive and beacons can migrate
+Answer: D
 Objective: II.6
 Why: Three beacons implanted transperineally in the prostate stay fixed relative to the gland and catch the slow drift from rectal and bladder filling without imaging dose; in lung the bronchoscopic placement carries a pneumothorax risk, beacons can migrate in soft tissue, large patients exceed the array range, and fast respiratory motion is better handled by gating or correlation tracking. Lung tumors can move more than a centimeter. Transponders are not an imaging device. Three beacons are the standard in both sites.

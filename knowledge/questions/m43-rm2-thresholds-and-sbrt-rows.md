@@ -62,7 +62,7 @@ C. Under the QUANTEC figure, over the TG-101 point maximum
 D. Over the QUANTEC 12.5 Gy figure, under the TG-101 15 Gy point maximum
 Answer: D
 Objective: III.8
-Why: TG-101 Table III writes a one-fraction brainstem (not medulla) point maximum of 15 Gy with 10 Gy to 0.5 cubic centimetres; the QUANTEC brainstem paper puts the radiosurgery maximum at 12.5 Gy for under about 5 percent risk, and many programs use 12.5 Gy as the conservative teaching number. 13.5 Gy is 1.0 Gy over 12.5 and 1.5 Gy under 15, so the verdict depends on which figure the stem names. This bank keys TG-101 at 15 Gy when the stem says TG-101 and 12.5 Gy when it says QUANTEC or "conservative"; neither pass-both nor fail-both fits a value between them.
+Why: TG-101 Table III writes a one-fraction brainstem (not medulla) point maximum of 15 Gy with 10 Gy to 0.5 cubic centimetres; the QUANTEC brainstem paper puts the radiosurgery maximum at 12.5 Gy for under about 5 percent risk, and many programs use 12.5 Gy as the conservative teaching number. 13.5 Gy is 1.0 Gy over 12.5 and 1.5 Gy under 15, so the verdict depends on which figure the stem names. This bank keys TG-101 at 15 Gy when the stem says TG-101 and 12.5 Gy when it says QUANTEC or "conservative"; neither pass-both nor fail-both fits a value between them, and option C attaches each verdict to the wrong document.
 
 ### Q7
 Stem: A five-fraction peripheral lung SBRT plan reports total lung V20 of 12 percent. Which statement about the lung V20 row is correct?
@@ -92,7 +92,7 @@ C. Passes against the TG-101 30 Gy point maximum; QUANTEC's cord paper gives no 
 D. Fails, because 28 Gy exceeds the conventional 50 Gy row after conversion
 Answer: C
 Objective: III.8
-Why: QUANTEC's spinal-cord paper gives stereotactic figures only for one fraction (13 Gy) and three fractions (20 Gy); the five-fraction cord point maximum of 30 Gy, with 23 Gy to 0.35 cubic centimetres, comes from TG-101 Table III. 28 Gy is 2 Gy under that point maximum, so the plan passes on the only document that has the row. There is no QUANTEC 25 or 30 Gy five-fraction line to cite. Converting 28 Gy in five fractions with an alpha-beta of 2 gives about 54 Gy in 2 Gy equivalents, which is over 50, but the conventional row is not the constraint applied to stereotactic plans, and the stem asked for a stereotactic verdict.
+Why: QUANTEC's spinal-cord paper gives stereotactic figures only for one fraction (13 Gy) and three fractions (20 Gy); the five-fraction cord point maximum of 30 Gy, with 23 Gy to 0.35 cubic centimetres, comes from TG-101 Table III. 28 Gy is 2 Gy under that point maximum, so the plan passes on the only document that has the row. There is no QUANTEC 25 or 30 Gy five-fraction line to cite. Converting 28 Gy in five fractions with an alpha-beta of 2 gives about 53 Gy in 2 Gy equivalents (28 × (5.6 + 2) / (2 + 2) = 53.2 Gy), which is over 50, but the conventional row is not the constraint applied to stereotactic plans, and the stem asked for a stereotactic verdict.
 
 ### Q10
 Stem: Rank the lung V20 figures used in this bank from most permissive to most restrictive.

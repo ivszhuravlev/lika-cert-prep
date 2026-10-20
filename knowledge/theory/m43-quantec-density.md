@@ -183,7 +183,7 @@ Brachial plexus, conventional fractionation. Dmax at or below 66 Gy, endpoint br
 
 Femoral heads. V50 below 5%, with Dmax below 50 Gy as the stricter alternative some templates write instead; the endpoint is femoral head necrosis and fracture. Source: common planning practice and department templates; the RTOG prostate protocols (0126, 0415 style) print V50 below 10%, so apply whichever figure the stem gives and use V50 below 5% when it is silent.
 
-Lens. Dmax below 7–10 Gy depending on the source: Emami TD5/5 is 10 Gy, most IMRT templates write 5–7 Gy, and QUANTEC-era teaching cards often say 6 Gy; the detectable-opacity threshold taught for radiation protection is about 1–2 Gy, which is not a planning constraint. Source: Emami and common planning practice, not QUANTEC; this bank uses Dmax below 7 Gy when a stem is silent and accepts any figure inside 5–10 Gy that a stem prints.
+Lens. Dmax below 7–10 Gy depending on the source: Emami TD5/5 is 10 Gy, most IMRT templates write 5–7 Gy, and QUANTEC-era teaching cards often say 6 Gy; the detectable-opacity threshold taught for radiation protection is about 0.5 Gy (ICRP 2011; older texts said 2 Gy acute, 5 Gy fractionated), which is not a planning constraint. Source: Emami and common planning practice, not QUANTEC; this bank uses Dmax below 7 Gy when a stem is silent and accepts any figure inside 5–10 Gy that a stem prints.
 
 Eye, globe and retina. Retina Dmax below 45 Gy and globe Dmax below 50 Gy, endpoint retinopathy and blindness. Source: Emami retina TD5/5 of 45 Gy and RTOG head-and-neck template rows of 45–50 Gy; not a QUANTEC row.
 

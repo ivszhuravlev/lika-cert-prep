@@ -59,10 +59,10 @@ Stem: During electron cut-out commissioning, an ion chamber at dmax reads 21.30 
 A. 0.961
 B. 1.041
 C. 0.039
-D. 0.921
+D. 0.923
 Answer: A
 Objective: IV.3
-Why: The cut-out factor is the reading with the insert divided by the reading for the open cone it sits in: 20.46 / 21.30 = 0.9606, reported as 0.961. Check: 21.30 × 0.961 = 20.47 nC. Dividing the other way, 21.30 / 20.46, gives 1.041, a factor above one that would raise rather than lower the output. Reporting 1 − 0.961 = 0.039 gives the fractional loss, not the factor applied in the MU equation. Squaring the ratio, 0.961², gives 0.921 and double-counts the effect.
+Why: The cut-out factor is the reading with the insert divided by the reading for the open cone it sits in: 20.46 / 21.30 = 0.9606, reported as 0.961. Check: 21.30 × 0.961 = 20.47 nC. Dividing the other way, 21.30 / 20.46, gives 1.041, a factor above one that would raise rather than lower the output. Reporting 1 − 0.961 = 0.039 gives the fractional loss, not the factor applied in the MU equation. Squaring the ratio, 0.9606², gives 0.923 and double-counts the effect.
 
 ### Q7
 Stem: An electron prescription is 200 cGy to the 90 percent isodose line at 100 cm SSD. The machine delivers 1.000 cGy per MU at dmax for the open reference cone, the cone factor for this cone is 1.000, and the cut-out factor measured for the insert is 0.961. How many monitor units are required, to the nearest 0.1 MU?
@@ -85,14 +85,14 @@ Objective: IV.3
 Why: Midplane depth is 20 / 2 = 10 cm. In the SSD set-up the point sits at 100 + 10 = 110 cm from the source instead of 100 cm, so the MU ratio is ((SAD + d)/SAD)² = (110/100)² = 1.21. Check: the dose per MU at 110 cm is (100/110)² = 0.826 of that at 100 cm, and 1/0.826 = 1.21. The depth, and therefore the TMR, is the same in both set-ups, so only inverse square changes. Taking 110/100 without squaring gives 1.10. Inverting gives 0.83, which is the dose ratio, not the MU ratio. Using the full separation as the extra distance, (120/100)², gives 1.44.
 
 ### Q9
-Stem: An isocentric parallel-opposed plan at 100 cm SAD calls for 150 MU per field to deliver the midplane dose through a 20 cm separation. If the same fields are instead set up with the skin at 100 cm SSD, how many monitor units per field are needed for the same midplane dose, considering inverse square only?
-A. 182 MU
-B. 165 MU
-C. 124 MU
-D. 216 MU
+Stem: An isocentric parallel-opposed plan at 100 cm SAD calls for 125 MU per field to deliver the midplane dose through a 24 cm separation. If the same fields are instead set up with the skin at 100 cm SSD, how many monitor units per field are needed for the same midplane dose, considering inverse square only?
+A. 157 MU
+B. 140 MU
+C. 100 MU
+D. 192 MU
 Answer: A
 Objective: IV.3
-Why: The midplane point moves from 100 cm to 110 cm from the source, so MU scale by (110/100)² = 1.21: 150 × 1.21 = 181.5 MU, reported as 182 MU. Check: 182 × (100/110)² = 182 × 0.826 = 150.4, equivalent to the original 150 MU at 100 cm. Scaling by 1.10 (not squared) gives 165 MU. Dividing by 1.21 gives 124 MU, which is the dose the point would receive if the MU were left unchanged, not the MU needed. Using (120/100)² gives 216 MU.
+Why: Midplane depth is 24 / 2 = 12 cm, so the point moves from 100 cm to 112 cm from the source and MU scale by (112/100)² = 1.2544: 125 × 1.2544 = 156.8 MU, reported as 157 MU. Check: 157 × (100/112)² = 157 × 0.797 = 125.2, equivalent to the original 125 MU at 100 cm. Scaling by 1.12 (not squared) gives 140 MU. Dividing by 1.2544 gives 100 MU, which is the dose the point would receive if the MU were left unchanged, not the MU needed. Using the full separation as the extra distance, (124/100)², gives 192 MU.
 
 ### Q10
 Stem: Monitor units were calculated for an isocentric set-up delivering 200 cGy to a point at 10 cm depth with the isocenter at 100 cm. The therapists instead set the skin at 100 cm from the source and delivered the planned monitor units. Ignoring small changes in field size and TMR, what dose did the point receive, to the nearest 0.1 cGy?
