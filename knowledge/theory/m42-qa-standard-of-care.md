@@ -569,3 +569,35 @@ Daily output constancy at 3 percent and monthly at 2 percent did not change. The
 **Traps.** End-to-end means phantom through the whole chain, dose and position both reported, repeated after any link changes. TG-275 is plan and chart review, prioritized by risk, independent of the planner, before the first fraction. Know the directory.
 
 **Sources.** AAPM TG-101 and TG-142 for the end-to-end requirement for SBRT and SRS; AAPM TG-275 for plan and chart review; the individual task-group reports listed. IROC phantom credentialing as the external example.
+
+## Imaging QA, Human-Factor Findings, and TG-40 Legacy Numbers
+
+**Objectives:** VII.9, VII.7, VII.5, VII.1
+
+**What the exam expects:** Six facts that the earlier lessons touch only in passing. What TG-100 found about the cause of events. What the Las Vegas phantom is for and which imaging checks are monthly. That a new electron applicator or cut-out is measured, never assumed. That a DVH is only as good as its dose grid and bin width. How CBCT dose is cut without losing the match. And the TG-40 numbers that still appear in old question banks, so you can recognise them as legacy rather than key them as current.
+
+**TG-100 finding.** When the task group and the incident-learning systems it drew on (and RO-ILS since) sorted radiotherapy events by root cause, failures of communication and hand-off, wrong-patient or wrong-site mix-ups, and other human and process errors came out well ahead of hardware faults, planning-algorithm errors, or imaging miscalibration. That is why TG-100 moved quality management toward process mapping, FMEA, fault trees, and independent checks of the information flow, and why a standard machine-QA program alone is not a safety program.
+
+**Las Vegas phantom and monthly imaging QA.** The Las Vegas phantom is an aluminium block drilled with a grid of holes of graded depth and diameter; the number of holes visible on an MV portal image at a fixed exposure scores low-contrast and spatial resolution of the EPID, compared monthly with the commissioning baseline. TG-142's monthly imaging column, for a machine with kV and MV planar imaging and CBCT, is: imaging-to-treatment coordinate coincidence (2 mm, 1 mm SRS/SBRT), scaling or geometric distortion (2 mm), spatial resolution, contrast, and uniformity and noise against baseline for the planar systems, and for CBCT geometric distortion, spatial resolution, contrast, Hounsfield-unit constancy, and uniformity and noise. Daily imaging QA is only collision interlocks, positioning and repositioning (2 mm, 1 mm SRS), and the coincidence check; imaging dose and full MLC transmission are annual. Example: a measured coincidence of 1.4 mm fails an SRS machine (1.4 − 1.0 = 0.4 mm over) and passes a conventional one with 0.6 mm to spare.
+
+**Electron applicators and cut-outs are measured.** Electron output depends on scatter from the applicator walls and, once the insert is small enough to lose lateral equilibrium, on the cut-out itself. A replacement applicator is re-measured at acceptance even when it carries the same nominal size, and every new small or irregular cut-out gets a measured output factor (or a validated calculation that has been checked against measurement for that geometry). Nothing about electron output scales with field area the way a photon table suggests, and a photon field-size table is for a different particle. The cutout lesson above shows the MU arithmetic; this paragraph is the rule that the number in that arithmetic must be measured.
+
+**DVH accuracy.** A DVH is sampled from the dose grid inside the contour and sorted into dose bins, so grid spacing and bin width set its accuracy. A coarse grid smooths the high-dose spike beside a thin serial organ and under-reports Dmax and small-volume metrics such as D0.035cc; wide bins blur the maximum and the steep part of the curve. Finer is better, not "conservative": TG-101 asks for a 2 mm or finer grid on stereotactic plans, and a cord Dmax that moves from 46.8 to 48.1 Gy when the grid and bins are refined is the finer figure, not an average of the two.
+
+**CBCT dose reduction.** Collimate the field of view and scan length to the region needed for the match: a prostate match does not need the iliac crests, and integral dose falls roughly with the irradiated volume. Low-dose presets (lower mAs, fewer projections) for bony matches, kV rather than MV CBCT where soft-tissue contrast permits, and a bow-tie filter all lower dose further. TG-180 asks that imaging dose be recorded and considered in the plan when it is not negligible. Raising mAs or removing the bow-tie filter raises dose.
+
+**TG-40 legacy numbers as named distractors.** TG-40 (1994) wrote one set of absolute tolerances for every linac: symmetry 3 percent (monthly, photons and electrons), lasers 2 mm for the linac and 2 mm for the simulator, annual output 2 percent, mechanical isocenter 2 mm diameter. TG-142 (2009) replaced them with class-specific figures: symmetry and flatness 1 percent change from baseline, lasers 2, 1.5, and 1 mm for non-IMRT, IMRT, and SRS/SBRT machines, annual output 1 percent, radiation isocenter 2 mm (1 mm SRS/SBRT) as a radius. The 2 mm laser figure survives legitimately in TG-66 for CT simulators, which is why "2 mm, from the simulator table" is a well-built distractor on an SRS laser question. When a stem names TG-40, answer with TG-40 numbers; when it names TG-142 or says "current," use TG-142. This bank keys TG-40 symmetry at 3 percent; where an earlier table in this module lists the TG-40 flatness and symmetry pair differently, the 3 percent symmetry figure here is the one to use for a TG-40 stem.
+
+**Wrong turns**
+
+- Naming hardware failure as the leading cause of events; TG-100 found process and communication failures lead.
+- Testing EPID image quality with a Winston–Lutz ball or a picket fence; those are isocenter and MLC tests.
+- Keying imaging coincidence at 2 mm on an SRS machine; the SRS column is 1 mm.
+- Reusing an old applicator factor for a replacement applicator, or an area-scaled factor for a new cut-out.
+- Calling a coarse-grid Dmax "conservative"; coarse grids under-report maxima.
+- Reducing CBCT dose by switching to MV or raising mAs; both raise it.
+- Keying symmetry at 3 percent or SRS lasers at 2 mm on a TG-142 question.
+
+**Traps.** Read which report the stem names. Read the machine class for any laser, isocenter, or coincidence tolerance. For DVH or imaging-dose items, ask what was sampled or irradiated, not just what was contoured.
+
+**Sources.** AAPM TG-100 (2016) and RO-ILS aggregate reports for the root-cause finding; AAPM TG-142 (2009) and TG-198 for the imaging QA columns and the Las Vegas phantom; AAPM TG-70 and TG-106 for electron applicator and cut-out measurement; AAPM TG-101 for grid resolution; AAPM TG-180 for imaging dose; AAPM TG-40 (1994) and TG-66 (CT simulation) for the legacy and simulator tolerances.

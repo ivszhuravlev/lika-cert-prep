@@ -35,14 +35,14 @@ Objective: I.7
 Why: A typical FDG PET dose is 10 to 15 mCi (370 to 555 MBq), and a remnant ablation dose of I-131 is about 100 to 150 mCi, with hyperthyroidism treatments at 10 to 30 mCi. Option B is a thousand times too low for FDG. Option C swaps the two. Option D is in the range of brachytherapy and teletherapy sources, not injected radiopharmaceuticals.
 
 ### Q4
-Stem: A survey of a brachytherapy work surface gives a removable contamination result just at the action level. A check source for the same meter is also present. Approximately how do their activities compare?
-A. The check source is about ten times the contamination limit
+Stem: A semiannual leak test of a Cs-137 tube returns removable activity exactly at the regulatory limit. The 10 µCi check source for the same counter is also on the bench. Approximately how do their activities compare?
+A. The check source is about ten times the leak-test limit
 B. The check source and the limit are about the same, near 10 µCi
-C. The check source is about a thousand times the contamination limit
-D. The contamination limit is larger, because it is quoted per 100 cm²
+C. The check source is about two thousand times the leak-test limit
+D. The leak-test limit is larger, because it is quoted in becquerels
 Answer: C
 Objective: I.10
-Why: The usual removable contamination action level is 0.005 µCi per 100 cm² (2,200 dpm), and a meter check source is in the 1 to 10 µCi range, so the ratio is about a thousand. A ten-fold ratio would make a check source barely above background. The two are not the same, and the area normalization does not make the limit larger than a microcurie-level source.
+Why: The sealed-source leak-test limit is 0.005 µCi (185 Bq, about 11,000 dpm), and 10 µCi divided by 0.005 µCi is 2,000, so a check source is three orders of magnitude above anything a wipe should show. Check: 0.005 × 2,000 = 10. A ten-fold ratio would make a check source barely above background. The two are not the same, and quoting the limit as 185 Bq does not make it larger; 10 µCi is 370,000 Bq.
 
 ### Q5
 Stem: Ra-223 and Sr-89 are both used for painful osseous metastases. Which statement correctly contrasts them?
