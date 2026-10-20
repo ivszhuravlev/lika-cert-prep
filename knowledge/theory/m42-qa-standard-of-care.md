@@ -446,7 +446,7 @@ The three circles together describe the radiation isocenter, the volume within w
 | Check | TG-40 | TG-142 |
 | --- | --- | --- |
 | Annual absolute output | 2% | 1% |
-| Flatness and symmetry | 3% flatness, 2% symmetry (absolute) | 1% change from baseline |
+| Flatness and symmetry | 2% photon flatness, 3% electron flatness, 3% symmetry (absolute, monthly) | 1% change from baseline |
 | Lasers | 2 mm for all | 2 mm non-IMRT, 1.5 mm IMRT, 1 mm SRS/SBRT |
 | Isocenter | 2 mm diameter (mechanical) | ±2 mm radiation isocenter, ±1 mm SRS/SBRT |
 | Machine classes | one class | non-IMRT, IMRT, SRS/SBRT |
@@ -586,7 +586,7 @@ Daily output constancy at 3 percent and monthly at 2 percent did not change. The
 
 **CBCT dose reduction.** Collimate the field of view and scan length to the region needed for the match: a prostate match does not need the iliac crests, and integral dose falls roughly with the irradiated volume. Low-dose presets (lower mAs, fewer projections) for bony matches, kV rather than MV CBCT where soft-tissue contrast permits, and a bow-tie filter all lower dose further. TG-180 asks that imaging dose be recorded and considered in the plan when it is not negligible. Raising mAs or removing the bow-tie filter raises dose.
 
-**TG-40 legacy numbers as named distractors.** TG-40 (1994) wrote one set of absolute tolerances for every linac: symmetry 3 percent (monthly, photons and electrons), lasers 2 mm for the linac and 2 mm for the simulator, annual output 2 percent, mechanical isocenter 2 mm diameter. TG-142 (2009) replaced them with class-specific figures: symmetry and flatness 1 percent change from baseline, lasers 2, 1.5, and 1 mm for non-IMRT, IMRT, and SRS/SBRT machines, annual output 1 percent, radiation isocenter 2 mm (1 mm SRS/SBRT) as a radius. The 2 mm laser figure survives legitimately in TG-66 for CT simulators, which is why "2 mm, from the simulator table" is a well-built distractor on an SRS laser question. When a stem names TG-40, answer with TG-40 numbers; when it names TG-142 or says "current," use TG-142. This bank keys TG-40 symmetry at 3 percent; where an earlier table in this module lists the TG-40 flatness and symmetry pair differently, the 3 percent symmetry figure here is the one to use for a TG-40 stem.
+**TG-40 legacy numbers as named distractors.** TG-40 (1994) wrote one set of absolute tolerances for every linac: symmetry 3 percent (monthly, photons and electrons), lasers 2 mm for the linac and 2 mm for the simulator, annual output 2 percent, mechanical isocenter 2 mm diameter. TG-142 (2009) replaced them with class-specific figures: symmetry and flatness 1 percent change from baseline, lasers 2, 1.5, and 1 mm for non-IMRT, IMRT, and SRS/SBRT machines, annual output 1 percent, radiation isocenter 2 mm (1 mm SRS/SBRT) as a radius. The 2 mm laser figure survives legitimately in TG-66 for CT simulators, which is why "2 mm, from the simulator table" is a well-built distractor on an SRS laser question. When a stem names TG-40, answer with TG-40 numbers; when it names TG-142 or says "current," use TG-142. This bank keys TG-40 symmetry at 3 percent and TG-40 photon flatness at 2 percent, consistent with the table earlier in this module.
 
 **Wrong turns**
 

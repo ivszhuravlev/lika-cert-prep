@@ -82,7 +82,7 @@ C. TG-51; symmetry is not in TG-142
 D. Both documents write 3 percent
 Answer: A
 Objective: VII.9
-Why: TG-40 (1994) set photon and electron symmetry at 3 percent as an absolute figure (photon flatness was tighter, electron flatness 3 percent); TG-142 (2009) replaced the absolute numbers with a 1 percent constancy check against the machine's own baseline profile. Option B reverses the two reports. TG-51 is beam calibration and says nothing about symmetry. Where a stem names TG-40, answer 3 percent; where it names TG-142, answer 1 percent from baseline. The bank's TG-40 table in the earlier lesson lists these as the legacy figures.
+Why: TG-40 (1994) set photon and electron symmetry at 3 percent as an absolute figure (photon flatness was tighter, electron flatness 3 percent); TG-142 (2009) replaced the absolute numbers with a 1 percent constancy check against the machine's own baseline profile. Option B reverses the two reports. TG-51 is beam calibration and says nothing about symmetry. Where a stem names TG-40, answer 3 percent; where it names TG-142, answer 1 percent from baseline. The TG-40 table earlier in this module lists the same legacy figures.
 
 ### Q9
 Stem: A stem asks for the laser-alignment tolerance on an SRS linac and offers 2 mm "from the simulator table." Which answer is correct?
