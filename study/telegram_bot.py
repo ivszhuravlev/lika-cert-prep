@@ -56,7 +56,7 @@ RU_NOTE = (
 EN_NOTE = "Дальше теория, задачи, квиз и вместе на языке банка. Букву и число проверяет банк."
 HOME = (
     "Модуль открыт. Урок начнётся после кнопки режима.\n"
-    "Теория — текст урока, кнопка «Дальше».\n"
+    "Теория — текст модуля большим сообщением. Если не влезает, «Дальше» — продолжение.\n"
     "Задачи — в ответ число.\n"
     "Квиз — в ответ буква A, B, C или D.\n"
     "Вместе — абзац теории, потом вопросы к нему.\n"
@@ -313,6 +313,41 @@ def brief(state: dict, module, lesson: str, line: str) -> str:
     return f"{header(state, module, lesson)}\n\n{line.strip()}"
 
 
+TELEGRAM_LIMIT = 4096
+
+
+def theory_body(state: dict, chunks: list) -> str:
+    """Lesson text in order. A heading is repeated when a message starts mid-lesson."""
+    parts: list[str] = []
+    lesson = None
+    for chunk in chunks:
+        if chunk.lesson != lesson:
+            parts.append(f"## {chunk.lesson}")
+            lesson = chunk.lesson
+        text = russian(state, chunk.text).strip()
+        if text:
+            parts.append(text)
+    return "\n\n".join(parts)
+
+
+def theory_packs(state: dict, module, *, limit: int = TELEGRAM_LIMIT) -> list[list]:
+    """Fill each message up to the Telegram limit. The next message starts only then."""
+    packs: list[list] = []
+    current: list = []
+    for chunk in module.chunks:
+        trial = [*current, chunk]
+        head = header(state, module, trial[0].lesson)
+        body = theory_body(state, trial)
+        if current and len(head) + 2 + len(body) > limit:
+            packs.append(current)
+            current = [chunk]
+        else:
+            current = trial
+    if current:
+        packs.append(current)
+    return packs
+
+
 def body_pages(head: str, body: str, limit: int = 3900) -> list[str]:
     """Split a lesson so each Telegram bubble is one complete piece."""
     text = body.strip() or "Пусто."
@@ -470,14 +505,17 @@ def show_chunk(
     next_button: bool,
     stamp: str,
     preface: str = "",
+    body_text: str | None = None,
+    limit: int = 3900,
+    copy_hint: bool = False,
 ) -> None:
     state["lesson"] = chunk.lesson
     state["item_id"] = ""
-    body = russian(state, chunk.text)
+    body = russian(state, chunk.text) if body_text is None else body_text
     if preface:
         body = preface.strip() + "\n\n" + body
     head = header(state, module, chunk.lesson)
-    pages = body_pages(head, body)
+    pages = body_pages(head, body, limit=limit)
     page = int(state.get("page") or 0)
     if page < 0 or page >= len(pages):
         page = 0
@@ -499,6 +537,11 @@ def show_chunk(
         line = f"{stamp}, часть {page + 1} из {len(pages)}.\nКнопка «Дальше»."
     else:
         line = f"{stamp}.\nКнопка «Дальше»."
+    if copy_hint:
+        line = line.replace(
+            "Кнопка «Дальше».",
+            "Скопируй сообщение выше целиком.\nКнопка «Дальше».",
+        )
     deliver(
         tg,
         chat_id,
@@ -561,18 +604,22 @@ def reshow(tg: Telegram, chat_id: int, state: dict, progress: Progress, preface:
         emit_item(tg, chat_id, state, module, progress, item, preface=preface)
         return True
     if mode == "theory" and module.chunks:
+        packs = theory_packs(state, module)
         index = int(state.get("chunk_at", 0)) - 1
-        if 0 <= index < len(module.chunks):
-            chunk = module.chunks[index]
+        if 0 <= index < len(packs):
+            pack = packs[index]
             show_chunk(
                 tg,
                 chat_id,
                 state,
                 module,
-                chunk,
+                pack[0],
                 next_button=True,
-                stamp=f"Блок {index + 1} из {len(module.chunks)}",
+                stamp=f"Блок {index + 1} из {len(packs)}",
                 preface=preface,
+                body_text=theory_body(state, pack),
+                limit=TELEGRAM_LIMIT,
+                copy_hint=True,
             )
             return True
     return False
@@ -635,8 +682,9 @@ def step_theory(tg: Telegram, chat_id: int, state: dict, module) -> None:
             placeholder=PH_HOME,
         )
         return
+    packs = theory_packs(state, module)
     index = int(state.get("chunk_at", 0))
-    if index >= len(module.chunks):
+    if index >= len(packs):
         lesson = state.get("lesson") or module.chunks[-1].lesson
         text = frame(
             state,
@@ -649,7 +697,7 @@ def step_theory(tg: Telegram, chat_id: int, state: dict, module) -> None:
         state["item_id"] = ""
         deliver(tg, chat_id, text, keyboard=keys(state), placeholder=PH_HOME)
         return
-    chunk = module.chunks[index]
+    pack = packs[index]
     state["chunk_at"] = index + 1
     state["page"] = 0
     show_chunk(
@@ -657,9 +705,12 @@ def step_theory(tg: Telegram, chat_id: int, state: dict, module) -> None:
         chat_id,
         state,
         module,
-        chunk,
+        pack[0],
         next_button=True,
-        stamp=f"Блок {index + 1} из {len(module.chunks)}",
+        stamp=f"Блок {index + 1} из {len(packs)}",
+        body_text=theory_body(state, pack),
+        limit=TELEGRAM_LIMIT,
+        copy_hint=True,
     )
 
 
@@ -885,11 +936,12 @@ def explain_road(tg: Telegram, chat_id: int, state: dict, progress: Progress) ->
 def on_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> None:
     if state.get("mode") == "theory":
         module = current_module(state)
+        packs = theory_packs(state, module) if module is not None else []
         index = int(state.get("chunk_at", 0)) - 1
-        if module is not None and 0 <= index < len(module.chunks):
-            chunk = module.chunks[index]
-            head = header(state, module, chunk.lesson)
-            pages = body_pages(head, russian(state, chunk.text))
+        if module is not None and 0 <= index < len(packs):
+            pack = packs[index]
+            head = header(state, module, pack[0].lesson)
+            pages = body_pages(head, theory_body(state, pack), limit=TELEGRAM_LIMIT)
             if int(state.get("page") or 0) + 1 < len(pages):
                 state["page"] = int(state.get("page") or 0) + 1
                 show_chunk(
@@ -897,9 +949,12 @@ def on_next(tg: Telegram, chat_id: int, state: dict, progress: Progress) -> None
                     chat_id,
                     state,
                     module,
-                    chunk,
+                    pack[0],
                     next_button=True,
-                    stamp=f"Блок {index + 1} из {len(module.chunks)}",
+                    stamp=f"Блок {index + 1} из {len(packs)}",
+                    body_text=theory_body(state, pack),
+                    limit=TELEGRAM_LIMIT,
+                    copy_hint=True,
                 )
                 return
         ask_next(tg, chat_id, state, progress)

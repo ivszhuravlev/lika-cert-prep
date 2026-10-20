@@ -105,31 +105,73 @@ class MenuTest(unittest.TestCase):
         self.say("3")
         sent = self.say("Теория")
         self.assertEqual(len(sent), 2)
-        number, _, mode, lesson = header_of(sent[0]["text"])
-        self.assertEqual((number, mode), ("3", "теория"))
-        self.assertNotEqual(lesson, "урок не выбран")
-        self.assertIn("Блок 1 из", sent[1]["text"])
-        self.assertLess(len(sent[1]["text"]), 500)
-        self.assertIn(["Дальше"], sent[1]["keyboard"])
-        self.assertIn(["К темам"], sent[1]["keyboard"])
-        seen = {lesson}
-        ended = None
-        for _ in range(8):
-            sent = self.say("Дальше")
-            number, _, mode, lesson = header_of(sent[-1]["text"])
-            self.assertEqual((number, mode), ("3", "теория"))
-            self.assertIn(["К темам"], sent[-1]["keyboard"])
-            if any("кончилась" in piece["text"] for piece in sent):
-                ended = sent[-1]
-                break
-            seen.add(lesson)
-            self.assertIn(["Дальше"], sent[-1]["keyboard"])
-            self.assertLess(len(sent[-1]["text"]), 500)
-        self.assertIsNotNone(ended)
-        self.assertGreaterEqual(len(seen), 2)
-        self.assertNotIn(["Дальше"], ended["keyboard"])
+        body, note = sent
+        number, _, mode, lesson = header_of(body["text"])
+        self.assertEqual((number, mode, lesson), ("3", "теория", "Decay Constant"))
+        self.assertIn("0.693", body["text"])
+        self.assertIn("Ir-192", body["text"])
+        self.assertIn("## Common Radioisotopes", body["text"])
+        self.assertLessEqual(len(body["text"]), 4096)
+        self.assertEqual(visible_parts(body["text"]), [body["text"]])
+        self.assertIn("Блок 1 из 1", note["text"])
+        self.assertIn("Скопируй сообщение выше целиком.", note["text"])
+        self.assertLess(len(note["text"]), 500)
+        self.assertIn(["Дальше"], note["keyboard"])
+        self.assertIn(["К темам"], note["keyboard"])
+        sent = self.say("Дальше")
+        self.assertTrue(any("кончилась" in piece["text"] for piece in sent))
+        self.assertNotIn(["Дальше"], sent[-1]["keyboard"])
         self.assertEqual(self.state["mode"], "")
         self.assertEqual(self.state["module"], "m03")
+
+    def test_theory_splits_only_at_the_telegram_limit(self):
+        from study.bank import Chunk, Module
+        from study.telegram_bot import TELEGRAM_LIMIT, theory_body, theory_packs
+
+        piece = "Compute the gap from the given field length. " * 30
+        self.assertGreater(len(piece), 500)
+        self.assertLess(len(piece), 2000)
+        chunks = [Chunk("Gap", "exam", f"P{i:02d} {piece}") for i in range(8)]
+        later = [Chunk("Decay", "exam", f"Q{i:02d} {piece}") for i in range(4)]
+        module = Module("m03", "radioactivity", "Radioactivity", chunks=[*chunks, *later])
+        state = {"mode": "theory"}
+        packs = theory_packs(state, module)
+        self.assertGreater(len(packs), 1)
+        self.assertLess(len(packs), len(module.chunks))
+        self.assertEqual(
+            [chunk.text for pack in packs for chunk in pack],
+            [chunk.text for chunk in module.chunks],
+        )
+        for index, pack in enumerate(packs):
+            head = self.bot.header(state, module, pack[0].lesson)
+            body = theory_body(state, pack)
+            self.assertLessEqual(len(head) + 2 + len(body), TELEGRAM_LIMIT)
+            if index + 1 < len(packs):
+                nxt = packs[index + 1][0]
+                longer = theory_body(state, [*pack, nxt])
+                self.assertGreater(len(head) + 2 + len(longer), TELEGRAM_LIMIT)
+
+        with patch("study.telegram_bot.load_modules", return_value=[module]):
+            self.state = {}
+            self.say("3")
+            sent = self.say("Теория")
+            messages = [sent[0]["text"]]
+            for _ in range(20):
+                sent = self.say("Дальше")
+                if any("кончилась" in part["text"] for part in sent):
+                    break
+                messages.append(sent[0]["text"])
+            else:
+                self.fail("theory did not end")
+        self.assertEqual(len(messages), len(packs))
+        joined = "\n".join(messages)
+        for text in messages:
+            self.assertLessEqual(len(text), TELEGRAM_LIMIT)
+            self.assertEqual(visible_parts(text), [text])
+        self.assertIn("## Gap", messages[0])
+        self.assertLess(joined.find("## Gap"), joined.find("## Decay"))
+        for marker in [f"P{i:02d}" for i in range(8)] + [f"Q{i:02d}" for i in range(4)]:
+            self.assertIn(marker, joined)
 
     def test_problem_number_is_not_a_module_change(self):
         module = self.module("3")
