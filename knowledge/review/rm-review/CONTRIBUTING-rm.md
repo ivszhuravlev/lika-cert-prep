@@ -11,7 +11,7 @@ Source material (read-only, copyrighted, never copy wording, never commit):
   only the first theory file per module). Each new section starts with `## <Lesson name>` and a
   `**Objectives:** <code>` line, then prose paragraphs (no tables longer than ~10 rows, no images).
   Lesson names must be new and unique inside the module.
-- Questions: create a NEW file `knowledge/questions/mNN-rm-<slug>.md` (do not edit existing question
+- Questions: create a NEW file `knowledge/questions/mNN-rm2-<slug>.md` (round 2; do not touch existing mNN-rm-*.md files) (do not edit existing question
   files — another branch is editing them). File starts with `# Module NN. <Title>` and a one-line
   note "Original items." Then `## <Lesson name>` headings that match the theory sections you added
   (so the "Вместе" mode pairs them), then items numbered `### Q1`, `### Q2`, … restarting at Q1 for
