@@ -7,3 +7,4 @@ progress/
 .env
 __pycache__/
 *.pyc
+inbox/
