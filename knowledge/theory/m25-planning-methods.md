@@ -338,3 +338,43 @@ The PTV is 100 cc, the prescription isodose encloses 130 cc, and 95 cc of the PT
 - ASTRO consensus statement on accelerated partial-breast irradiation (2009, updated 2016), for the suitable, cautionary, and unsuitable groups
 - NSABP B-39 / RTOG 0413, for the 34 Gy brachytherapy and 38.5 Gy external-beam schedules
 - van't Riet et al., for the conformation number; RTOG 0813 and 0915 for the conformity index (module 19)
+
+## Technique Trade-offs and Delivery Contingencies
+
+**Objectives:** III.7, III.12
+
+**What the exam expects**
+
+You can state what a VMAT plan typically gains and loses against a fixed-field IMRT plan, explain why a physical wedge on the medial tangent is a contralateral-breast problem and what replaces it, predict the three things that change when beams are added to a conformal plan, handle an IMRT fraction that stopped part-way through, and name the checks that are specific to a vertex field.
+
+**Core facts**
+
+VMAT against fixed-field IMRT. For comparable objectives the arc plan is usually more conformal (the prescription isodose hugs the target from 360 degrees), uses fewer monitor units and less beam-on time, but is often slightly less homogeneous inside the target (a higher D2 or hot spot) and spreads a larger low-dose bath because every angle is an entrance path. The low-dose volume grows because the dose is painted around the full circumference rather than along seven or nine paths; it is not primarily a leakage effect, and jaw tracking trims the leakage part. Which plan is better is a trade between conformity and the volume of tissue under a few gray.
+
+Medial physical wedge and the contralateral breast. A physical wedge scatters photons out of the beam toward the patient's midline. On the medial tangent that scatter lands on the contralateral breast, and the steeper the wedge the more it scatters. Measured contralateral breast doses are highest with physical wedges on the medial field and lowest with open or field-in-field tangents; a dynamic wedge produces far less peripheral scatter because no metal is in the beam. The planning preference is therefore a dynamic wedge or field-in-field subfields medially, and if a physical wedge is unavoidable it goes on the lateral field. Field-in-field also drops the wedge factor out of the monitor-unit calculation, so the fields need fewer MU.
+
+Adding beams. Going from four to nine coplanar fields with the same normalization makes the prescription isodose more conformal, raises the maximum inside the target (conformity and homogeneity trade against each other), and spreads the penumbra and entrance dose of each beam over more of the surrounding tissue. The entrance dose per beam falls, the volume receiving a low dose rises, and the integral dose typically rises or stays about the same; it does not fall because the beams are individually weaker.
+
+Partially delivered IMRT fraction. If the machine faults after some fields of an IMRT fraction have been delivered, the record-and-verify log shows exactly which fields and how many monitor units were given. The physicist reconstructs the delivered dose from those fields, as a partial plan, because the fields contribute very unevenly to different parts of the target and the organs. The fraction of total monitor units delivered is not the fraction of dose at any particular point, and the fraction of fields delivered is not either unless the per-field contributions are given. Once the delivered dose is known, the physician decides whether to deliver the remaining fields when the machine returns, to deliver them on another day, or to design a make-up. The two errors to refuse are repeating the whole fraction without the estimate (which double-doses the fields already given) and crediting the fraction as complete.
+
+Vertex field. A vertex field enters the top of the skull with the couch rotated about 90 degrees and the gantry near horizontal. Two checks are specific to it. First, clearance: with the couch kicked, the gantry head and the imaging arms pass close to the couch end and the patient's shoulders, so the geometry is dry-run in the treatment position before the first fraction, and the table height is recorded because it changes the clearance. Second, the exit path: the beam exits inferiorly through the neck and trunk, so the CT dataset must include the whole entrance and exit path (a scan that clips the vertex calculates the field through air) and the exit dose through the body is reviewed.
+
+**Formulas**
+
+Delivered isocenter dose for a partial fraction = sum of the planned isocenter contributions of the fields that were completed. Nine fields contribute 30, 25, 20, 25, 20, 20, 25, 20, and 15 cGy (total 200 cGy). Fields 1 to 5 completed: 30 + 25 + 20 + 25 + 20 = 120 cGy at the isocenter. The remaining 80 cGy is in fields 6 to 9. Check: 120 + 80 = 200. The naive 5/9 × 200 = 111 cGy assumes equal field weights and is wrong here; and the 120 cGy describes only the isocenter, not the coverage of the PTV, which needs the partial-plan calculation.
+
+**Traps**
+
+- Saying VMAT is more homogeneous and has a smaller low-dose volume. The usual direction is the reverse on both.
+- Putting a steep physical wedge on the medial tangent and ignoring the contralateral breast.
+- Reporting that adding beams lowers the target maximum. Conformity rises and so does the internal maximum.
+- Crediting an interrupted IMRT fraction by the percentage of monitor units delivered.
+- Repeating the whole fraction after a fault because "IMRT cannot be partially credited".
+- Approving a vertex field from the planning screen without a clearance dry run and without the exit path in the CT.
+
+**Sources**
+
+- Khan and Gibbons, IMRT and arc therapy chapters, for the VMAT versus IMRT comparison
+- Published tangent-breast scatter measurements comparing physical wedges, dynamic wedges, and field-in-field (the direction is consistent across them: physical wedge medially is highest)
+- AAPM TG-100 and departmental incident-handling policy, for the partial-fraction workflow
+- Simulation and planning texts (Bentel) for vertex-field geometry and clearance

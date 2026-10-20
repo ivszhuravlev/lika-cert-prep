@@ -181,3 +181,45 @@ Given: a posterior beam to a para-aortic node crosses 4.0 cm of soft tissue, 2.0
 - Khan and Gibbons, tissue inhomogeneity corrections: effective depth, TAR ratio, power law, ETAR, and the interface discussion.
 - AAPM TG-65, tissue inhomogeneity corrections for megavoltage photon beams, for the method ranking and the lung energy recommendation.
 - AAPM TG-101 for the energy choice in lung stereotactic treatments.
+
+## Bone Corrections by Energy
+
+**Objectives:** IV.4, I.9
+
+**What the exam expects**
+
+You can state how much a slab of cortical bone lowers the dose beyond it per centimeter at megavoltage energies, how that changes with beam energy, and why the correction uses electron density rather than physical density. You can run the bone number next to the lung rule from the previous lesson, including on one ray that crosses both. You can say what happens to the dose inside the bone itself at megavoltage and at orthovoltage energies.
+
+**Core facts**
+
+Bone numbers. Cortical bone has a physical density of about 1.8 to 1.85 g per cc, and the bank's recall table uses 1.85. Its electron density relative to water is lower, about 1.65, because bone has fewer electrons per gram than water (less hydrogen). At megavoltage energies Compton scattering dominates, and Compton attenuation scales with electron density, so the correction uses 1.65. Each centimeter of cortical bone adds 1.65 − 1.00 = 0.65 cm of water-equivalent path. Spongy bone at about 1.1 adds only 0.1 cm per cm and is nearly water.
+
+Magnitude by energy. With the bank's 6 MV heuristic of about 3.5 percent per centimeter of water-equivalent path, one centimeter of cortical bone lowers the dose beyond it by about 0.65 × 3.5 ≈ 2.3 percent. At 18 MV, where the per-centimeter figure is about 2 percent, the bone reduction is about 1.3 percent per cm. At Co-60 and low megavoltage energies, where the beam attenuates about 4.5 to 5 percent per cm of water, the reduction is about 3 percent per cm of bone. The direction to keep: the more penetrating the beam, the smaller the per-centimeter bone correction. In all cases the bone effect at megavoltage is "a few percent per centimeter", which is smaller than the lung effect per centimeter (3 to 3.5 percent at 6 MV) because lung departs from water by 0.7 to 0.75 in density while bone departs by only 0.65, and in the opposite direction.
+
+Electron density versus physical density. If a hand calculation uses the physical density ratio (1.85) in place of the electron density ratio (1.65) for a 2 cm slab, it adds 1.7 cm of water instead of 1.3 cm, an excess of 0.4 cm, which at 3.5 percent per cm is a 1.4 percent overcorrection. Planning systems convert CT number to relative electron density (or to mass density with an elemental composition) precisely so that the Compton correction comes out right; the electron-density ratio method is the standard megavoltage correction. At orthovoltage energies the photoelectric effect in calcium makes the attenuation depend on atomic number, and neither density ratio describes it.
+
+Bone and lung on one ray. Effective depth is additive, so a ray that crosses 2 cm of cortical bone (adds 1.3 cm) and 4 cm of lung at 0.25 (removes 3.0 cm) is net 1.7 cm shorter in water-equivalent terms than its physical length. At 3.5 percent per cm the point beyond both receives about 6 percent more than a water calculation shows; the lung wins. Reversing the sign of either term, or forgetting the bone, gives the wrong answer in a predictable way.
+
+Dose inside the bone. At megavoltage energies the absorbed dose within bone mineral is slightly lower than in soft tissue at the same depth, about 0.96 of the water value, because Compton dose per gram follows electrons per gram and bone has fewer. The soft tissue inside bone (marrow, Haversian canals) receives a few percent more than it would in homogeneous soft tissue because electrons set in motion in the surrounding mineral deposit dose there. At orthovoltage energies, photoelectric absorption in high-Z calcium makes the dose to bone several times the soft-tissue dose; that is the historical reason superficial and orthovoltage treatments were limited near bone and why megavoltage removed the problem.
+
+**Formulas**
+
+Extra water-equivalent path from bone = thickness × (relative electron density − 1).
+
+Percent dose change beyond bone ≈ −(extra path in cm) × (percent per cm for the energy).
+
+Worked: 3.0 cm of cortical bone at relative electron density 1.65, 6 MV, 3.5 percent per cm. Extra path = 3.0 × (1.65 − 1.00) = 3.0 × 0.65 = 1.95 cm. Dose change ≈ −1.95 × 3.5 = −6.8, about −7 percent. Check: the water-equivalent depth of the slab is 3.0 × 1.65 = 4.95 cm, which is 1.95 cm more than its physical 3.0 cm. The wrong-method results are −10.5 percent (3.0 × 3.5, treating bone as if every centimeter were an extra centimeter of water), −17 percent (3.0 × 1.65 × 3.5, using the full water-equivalent thickness instead of the excess), and +7 percent (sign reversed, treating bone like lung).
+
+**Traps**
+
+- Using 1.85 (physical density) in a Compton correction when the stem gives or implies electron density; use 1.65.
+- Multiplying the bone thickness by the percent-per-centimeter figure without first subtracting 1 from the density ratio.
+- Treating bone like lung and raising the dose beyond it.
+- Applying the 6 MV percent-per-centimeter figure to Co-60 or to 18 MV. Lower energy, bigger correction.
+- Saying dose inside bone is higher at megavoltage because bone is denser. It is slightly lower; the large bone dose is an orthovoltage effect.
+
+**Sources**
+
+- Khan and Gibbons, tissue inhomogeneity corrections and dose to bone, for the electron-density method and the bone and soft-tissue-in-bone discussion
+- AAPM TG-65, tissue inhomogeneity corrections for megavoltage photon beams
+- ICRU 44 tissue compositions, for the electron density of cortical bone

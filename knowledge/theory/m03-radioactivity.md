@@ -558,3 +558,23 @@ Treating the Cs-137 5.5 versus 6.5 mm difference as a trick question; it is two 
 **Sources**
 
 Khan and Gibbons, *The Physics of Radiation Therapy*, Table of physical characteristics of brachytherapy radionuclides (narrow-beam HVL values 11, 5.5, 2.5, 2.5, 0.025, 0.008 mm). The 12, 6.5, and 3–6 mm figures are the ones this bank's earlier lessons and question keys already use and are kept for consistency. Public blueprint I.7, I.10.
+
+## Activity Magnitude Ladder and Decay Mode Rules
+
+**Objectives:** I.7, I.10
+
+Many activity items do not ask for a calculation. They ask whether you know how big a source is, so the only way to answer is to carry an order-of-magnitude ladder in your head. The rungs below are approximate and each is separated from its neighbors by enough to make a four-option item unambiguous.
+
+A Co-60 teletherapy head holds about 10 kCi (roughly 5,000 to 15,000 Ci when new); this is the largest sealed source a dosimetrist will meet and it is why the head needs a shutter and a 15 to 20 cm uranium or tungsten shield. A Gamma Knife load is on the order of 6 kCi spread across 192 (Perfexion/Icon) or 201 (older models) small Co-60 sources, so each source is only about 30 Ci. An HDR Ir-192 source is nominally 10 Ci when installed and is exchanged near 3 to 4 Ci, about every three months; a PDR source is about ten times smaller, around 1 Ci. An LDR Cs-137 tandem-and-ovoid load is in the 100 to 200 mCi range, and the old radium standard was tens of milligrams. Unsealed therapy: a thyroid remnant ablation dose of I-131 is about 100 to 150 mCi, with hyperthyroidism treatments at 10 to 30 mCi. A diagnostic FDG PET injection is about 10 to 15 mCi (370 to 555 MBq). A single I-125 permanent prostate seed is about 0.3 to 0.5 mCi (air-kerma strength roughly 0.4 to 0.6 U); the whole implant of 60 to 120 seeds totals 30 to 50 mCi. A survey-meter or well-chamber check source is about 1 to 10 µCi. The removable-contamination action level used in most radioactive materials licenses is 0.005 µCi per 100 cm² (2,200 dpm), which is a factor of a thousand below a check source and a factor of a billion below an HDR source.
+
+The ladder also sorts the bone-pain radiopharmaceuticals. Ra-223 (half-life 11.4 days) is an alpha emitter: the alpha range in tissue is under 100 µm, so marrow sparing is good and the activity is tiny, about 50 kBq per kg, or roughly 100 µCi for a 75 kg patient. Sr-89 (50.5 days, pure beta, Emax 1.46 MeV) and Sm-153 (46.3 hours, beta plus a 103 keV gamma usable for imaging) are beta emitters given in millicurie quantities (about 4 mCi of Sr-89; about 1 mCi per kg of Sm-153), with a millimeter-scale range and more marrow toxicity. Ra-223 has a demonstrated survival benefit in castration-resistant prostate cancer with bone metastases; the beta agents are palliative only.
+
+The decay-mode rule for unstable nuclides is a line-of-stability argument. A nucleus with too many neutrons for its proton number (neutron-rich, below and to the right of the stability line on an N versus Z plot) converts a neutron into a proton and emits a beta-minus plus an antineutrino; Z goes up by one, A is unchanged. Reactor-produced nuclides made by neutron activation are neutron-rich, so Co-60, Ir-192, Cs-137, I-131, Sr-89, Sm-153 and Y-90 are all beta-minus emitters. A nucleus with too many protons (proton-rich, above the line) converts a proton into a neutron, either by emitting a positron plus a neutrino (beta-plus, which needs at least 1.022 MeV of transition energy) or by capturing an orbital electron (EC, which has no energy threshold and is the only option when the available energy is below 1.022 MeV); Z goes down by one either way. Cyclotron-produced nuclides are proton-rich, so F-18 is a positron emitter and I-125 and Pd-103 decay by electron capture. Heavy nuclei above about Z = 82 shed mass by alpha emission (A down by four, Z down by two), which is Ra-226 and Ra-223. In all cases the daughter is usually left excited and relaxes by gamma emission or internal conversion, which does not change Z or A.
+
+**Traps**
+
+Gamma Knife quoted as 6 kCi per source instead of in total. HDR source quoted in mCi. I-125 seed activity confused with the whole implant. Ra-223 treated as a beta emitter or given in mCi. Beta-plus assigned to a neutron-rich nucleus. Electron capture described as requiring 1.022 MeV. Gamma emission described as changing Z.
+
+**Sources**
+
+Khan and Gibbons, *The Physics of Radiation Therapy*, radioactive decay and brachytherapy sources chapters. Bushberg, *The Essential Physics of Medical Imaging*, radioactivity and nuclear medicine chapters. NRC 10 CFR 35 and typical license contamination action levels. Vendor source specifications for HDR and Gamma Knife.
