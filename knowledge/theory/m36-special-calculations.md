@@ -916,3 +916,50 @@ P_{TP} = \frac{273.2 + T_{\text{C}}}{273.2 + 22.0} \times \frac{760}{P}
 **Traps.** Any temperature above 40 in a US stem is probably Fahrenheit. Convert before you add 273.2.
 
 **Sources.** TG-51 for \(P_{TP}\) and the reference conditions; ICRU 44 tissue densities.
+
+## Cord-Block Timing, Sector Areas, and Junction Shifts
+
+**Objectives:** IV.3, III.7
+
+**What the exam expects:** Six pieces of arithmetic that sit around blocks and junctions rather than inside a dose equation. (1) Count the fractions a cord can stay in the field before a block or an off-cord field is required. (2) Compute a sector area inside a Clarkson problem. (3) Count junction shifts and fractions per junction position, and find the largest shift the collimator allows. (4) Reduce a partly blocked field to an effective square. (5) Recognize an orthogonal image pair at non-cardinal angles. (6) Reject a calculation point that sits in a steep gradient.
+
+**Cord-block timing.** Fractions allowed on cord equal the cord limit divided by the cord dose per fraction, rounded down. With 1.8 Gy per fraction, the cord on the 100 percent line, and a 45 Gy limit, \(45/1.8 = 25\) fractions fit exactly and the off-cord fields start at fraction 26. If the cord sits on the 105 percent line the cord dose per fraction is \(1.8 \times 1.05 = 1.89\) Gy, \(45/1.89 = 23.8\), and only 23 full fractions are allowed because 24 would give 45.4 Gy. In a 30-fraction course the remaining \(30 - 25 = 5\) fractions are delivered off-cord, often with an electron strip over the posterior neck. The bank uses the limit stated in the problem; QUANTEC's reference figure is about 50 Gy for a 0.2 percent myelopathy risk, and many departments plan to 45 Gy, so a question will always give its own number.
+
+**Sector area.** A sector of angle \(\theta\) and radius \(r\) has area
+
+\[
+A = \frac{\theta}{360}\,\pi r^2
+\qquad
+\frac{10}{360} \times \pi \times 8.0^2 = 5.59 \text{ cm}^2
+\]
+
+Thirty-six such sectors rebuild the full circle of 201 cm², which is the check. In the Clarkson method itself the radius, not the area, drives the lookup: each sector contributes the circular-field scatter-air ratio for its radius weighted by \(\theta/360\), and the sum is the average scatter-air ratio for the irregular field. Arc length, \(\theta/360 \times 2\pi r\), is a length and is never the quantity asked for.
+
+**Junction shifts.** Positions and shifts differ by one: three junction positions require two shifts. A 30-fraction course feathered over three equally weighted positions gives 10 fractions per position, and with 1 cm steps the last position is 2 cm from the first. The collimator sets the ceiling. If the spine field is 36 cm and the jaw opens to 40 cm, the field can grow 4 cm, so three positions allow at most \(4/2 = 2\) cm per step (36, 38, 40 cm). With 37 cm and 1.5 cm steps, \(3/1.5 = 2\) shifts fit (37, 38.5, 40 cm) and a third would need 41.5 cm. Shifting the junction superiorly lengthens the spine field and shortens the cranial field; shifting inferiorly does the reverse, so check which field is near its limit.
+
+**Percent-blocked effective square.** When a fraction \(f\) of a square field of side \(s\) is blocked, the open area is \((1-f)s^2\) and the equal-area square has side
+
+\[
+s_{\text{eff}} = s\sqrt{1-f}
+\qquad
+10\sqrt{0.70} = 8.4 \text{ cm}
+\]
+
+Check: \(8.37^2 = 70\) cm², which is 70 percent of 100 cm². This is a phantom-scatter approximation for the TMR or PDD and \(S_p\) lookup; the collimator scatter factor \(S_c\) still follows the open jaw setting, and an irregular blocked shape is better handled by Clarkson. Multiplying the side by \(1-f\) shrinks the area to \((1-f)^2\), 49 percent here, and is the usual error.
+
+**Orthogonal images.** Two projections are orthogonal when their gantry angles differ by 90 degrees in either direction around the circle. Zero and 90, 45 and 135, and 85 and 355 all qualify, because 355 to 85 is 90 degrees going through zero (355 is the same as minus 5). Opposed angles, 0 and 180, give the same projection and no information along the beam axis. The test is \(|\theta_1 - \theta_2|\) equal to 90 or 270.
+
+**Calculation point near a block edge.** An independent MU check is meaningful only where a millimeter of positional uncertainty does not move the dose by more than the agreement tolerance. Isodose spacing of 10 percent per 2 mm near a block edge means 5 percent per millimeter, larger than the 2 to 3 percent expected of a check. TG-114 advises a point in a low-gradient region, well inside the open field and away from inhomogeneities and field edges, where central-axis or off-axis factors describe the dose.
+
+**Common mistakes**
+
+- Rounding 23.8 fractions up to 24 and crossing the cord limit.
+- Applying a hot-spot percentage to the tolerance instead of to the fraction dose.
+- Counting three shifts for three junction positions.
+- Taking 10 percent of a circle for a 10 degree sector instead of 10/360.
+- Scaling the field side by the unblocked fraction rather than by its square root.
+- Calling 0 and 180 degrees orthogonal.
+
+**Traps.** Cord-block questions sometimes give the total prescription and ask for off-cord fractions, sometimes give the cord percent and ask for on-cord fractions; write both counts down. For junction questions, always list the field lengths at every position and compare each to the collimator limit.
+
+**Sources.** QUANTEC spinal cord summary for the 50 Gy reference; Khan and Gibbons for Clarkson integration and junction feathering; TG-114 for calculation-point selection.

@@ -249,3 +249,27 @@ Skipping a lesson because the title says quiz or tutorial. Those headings are wh
 **Sources**
 
 Public curriculum lesson list used as the heading list. Public MDCB 2023 test specifications for the objective ids.
+
+## Ethics, Law and Professional Standards
+
+**Objectives:** admin
+
+The blueprint reserves a few items for the legal and professional framework a dosimetrist works in. These are recall items with stable vocabulary, so they are cheap points once the terms are sorted.
+
+A tort is a civil wrong that injures another person. Negligence is the unintentional tort: a duty of care existed, the duty was breached, the breach caused harm, and actual damages followed. All four elements must be present. A wrong-site setup that is caught before any beam is delivered is a breach without damages, so it is a reportable event but not negligence in the legal sense. Malpractice is professional negligence, judged against what a reasonably prudent professional with the same training would have done. Intentional torts (assault, battery, false imprisonment, invasion of privacy) require intent, and treating a competent patient against a stated refusal is battery, not negligence.
+
+Informed consent is a process, not a signature. The patient must receive, in understandable language, the nature of the treatment, its expected benefits, its material risks, and the reasonable alternatives including no treatment, and must be competent and free to decline. The treating physician obtains consent; the dosimetrist or therapist may witness the signature but cannot substitute their own explanation for the physician's. Consent obtained under duress, or from a patient who lacks capacity without a legal surrogate, is invalid.
+
+An advance directive is a written statement made while the patient is competent about the care they want if they lose decision-making capacity. The two common forms are a living will (instructions about specific interventions, often resuscitation and life support) and a durable power of attorney for health care (naming a surrogate decision maker). It applies only when the patient can no longer decide; it does not override a competent patient's current wishes.
+
+The American Association of Medical Dosimetrists (AAMD) publishes the Scope of Practice and the Practice Standards for the profession. The scope of practice describes what a medical dosimetrist does: treatment planning, dose calculation, brachytherapy planning and source handling under supervision, plan QA, and participation in simulation and documentation. It also draws the boundary: the dosimetrist does not prescribe, does not alter a prescription, and does not make the final clinical approval of a plan, which belongs to the radiation oncologist with the physicist responsible for the physics. The Practice Standards set the expected level of performance (clinical, quality, and professional standards) and are the document a department or an attorney would hold a dosimetrist against. The MDCB is a separate body that certifies individuals by examination; AAMD is the professional society.
+
+The Joint Review Committee on Education in Radiologic Technology (JRCERT) is the agency that accredits educational programs in radiography, radiation therapy, magnetic resonance, and medical dosimetry. It accredits programs, not people, not hospitals, and not certification examinations. Graduation from a JRCERT-accredited medical dosimetry program is one of the eligibility routes to sit for the MDCB examination.
+
+**Traps**
+
+Negligence without damages. A consent form treated as consent. Advance directive applied to a competent patient. JRCERT described as certifying individuals or accrediting hospitals. AAMD confused with MDCB (society versus certifying board). Dosimetrist signing a prescription.
+
+**Sources**
+
+AAMD Scope of Practice and Practice Standards for the Medical Dosimetrist (current public editions). JRCERT public mission statement. MDCB eligibility criteria. Standard health-law vocabulary from radiologic sciences ethics texts.
